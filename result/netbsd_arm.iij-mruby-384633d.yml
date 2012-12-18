@@ -28,15 +28,11 @@
   :bison: bison
 :make:
   :stdout: ''
-  :stderr: ! 'gmake: *** No targets specified and no makefile found.  Stop.
-
-'
+  :stderr: ''
   :status: failed
 :make_test:
-  :stdout: ! 'gmake: Nothing to be done for `test''.
-
-'
+  :stdout: ''
   :stderr: ''
-  :status: success
+  :status: failed
   :mrubytest_rb: ''
   :mrubytest_mrb: ''

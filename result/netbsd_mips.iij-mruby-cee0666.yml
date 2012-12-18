@@ -28,16 +28,12 @@
   :bison: bison
 :make:
   :stdout: ''
-  :stderr: ! 'gmake: *** No targets specified and no makefile found.  Stop.
-
-'
+  :stderr: ''
   :status: failed
 :make_test:
-  :stdout: ! 'gmake: Nothing to be done for `test''.
-
-'
+  :stdout: ''
   :stderr: ''
-  :status: success
+  :status: failed
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
 :posix_test:
@@ -50,19 +46,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################\n"
-  :stderr: ! 'dir.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.27224/iij-mruby-cee0666/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.3059/iij-mruby-cee0666/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.27224/iij-mruby-cee0666/test/posix/../../bin/mruby:
+    file.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.3059/iij-mruby-cee0666/test/posix/../../bin/mruby:
     not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.27224/iij-mruby-cee0666/test/posix/../../bin/mruby:
+    env: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.3059/iij-mruby-cee0666/test/posix/../../bin/mruby:
     No such file or directory
 
     require.sh: ../../bin/mrbc: not found
