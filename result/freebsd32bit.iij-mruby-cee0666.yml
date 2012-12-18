@@ -1,210 +1,210 @@
 ---
-:date: 2012-12-18 15:06:04.192860488 +09:00
+:date: 2012-12-18 15:55:01.613791828 +09:00
 :id: iij-mruby-cee0666
 :zipball_url: https://github.com/iij/mruby/zipball/cee0666
 :make:
-  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666)
+  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666)
 
     ["default"]
 
     gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g -O3 -Wall
-    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
-    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666''
+    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666''
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c array.c -o array.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c symbol.c -o symbol.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c kernel.c -o kernel.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c init_ext.c -o init_ext.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c st.c -o st.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c string.c -o string.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c gc.c -o gc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c numeric.c -o numeric.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c enum.c -o enum.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c regerror.c -o regerror.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c range.c -o range.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c variable.c -o variable.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c regexec.c -o regexec.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c dump.c -o dump.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c codegen.c -o codegen.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c compar.c -o compar.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c vm.c -o vm.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c object.c -o object.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c hash.c -o hash.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c struct.c -o struct.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c regcomp.c -o regcomp.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c re.c -o re.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c math.c -o math.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c compile.c -o compile.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c load.c -o load.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c etc.c -o etc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c regenc.c -o regenc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c class.c -o class.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c regparse.c -o regparse.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c pool.c -o pool.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c proc.c -o proc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c init.c -o init.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c time.c -o time.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c error.c -o error.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c crc.c -o crc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c cdump.c -o cdump.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c sprintf.c -o sprintf.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c print.c -o print.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c state.c -o state.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
 
     yacc -o ./y.tab.c ./parse.y
@@ -212,8 +212,8 @@
     rake aborted!
 
     Command Failed: [gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g
-    -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
-    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666'']
+    -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666'']
 
     Rakefile:65:in `block in <top (required)>'''
   :stderr: ! 'dump.c: In function ''get_syms_block_size'':
@@ -262,16 +262,16 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666)
+  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666)
 
     ["test"]
 
     gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g -O3 -Wall
-    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
-    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666''
+    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666''
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
 
     ar r ../lib/libmruby_core.a ./array.o ./st.o ./init_ext.o ./print.o ./gc.o ./numeric.o
@@ -284,19 +284,19 @@
     ./ext/syslog/syslog.o  ./y.tab.o
 
     gmake -C mrblib --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g -O3 -Wall
-    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
-    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666''
+    -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666''
 
     cat ./*.rb > mrblib1.rbtmp
 
     cat ./ext/*.rb > mrblib2.rbtmp
 
     gmake -C ../tools/mrbc CC=''gcc'' LL=''gcc'' ALL_CFLAGS=''-Wall -Werror-implicit-function-declaration
-    -g -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
+    -g -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
     LDFLAGS=''''
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -Wall -Werror-implicit-function-declaration
-    -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include
+    -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include
     -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
 
     gcc -o ../../bin/mrbc  ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a
@@ -305,8 +305,8 @@
     rake aborted!
 
     Command Failed: [gmake -C mrblib --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g
-    -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/include''
-    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666'']
+    -O3 -Wall -Werror-implicit-function-declaration -I/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666'']
 
     Rakefile:66:in `block in <top (required)>'''
   :stderr: ! './y.tab.c:19: warning: ''yygrowstack'' declared ''static'' but never
@@ -316,179 +316,179 @@
 
     ../../src/../tools/mrbc/mrbc.o: In function `main'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/tools/mrbc/../../src/../tools/mrbc/mrbc.c:200:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/tools/mrbc/../../src/../tools/mrbc/mrbc.c:200:
     undefined reference to `mrbc_context_new''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/tools/mrbc/../../src/../tools/mrbc/mrbc.c:205:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/tools/mrbc/../../src/../tools/mrbc/mrbc.c:205:
     undefined reference to `mrb_load_file_cxt''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_free'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:105:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:105:
     undefined reference to `HMAC_CTX_cleanup''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_digest'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:212:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:212:
     undefined reference to `HMAC_Final''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_free'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:96:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:96:
     undefined reference to `EVP_MD_CTX_destroy''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_digest_length'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:150:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:150:
     undefined reference to `EVP_MD_CTX_md''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:150:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:150:
     undefined reference to `EVP_MD_size''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_init_copy'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:187:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:187:
     undefined reference to `EVP_MD_CTX_create''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:188:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:188:
     undefined reference to `EVP_MD_CTX_md''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:188:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:188:
     undefined reference to `EVP_DigestInit_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_digest_bang'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:142:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:142:
     undefined reference to `EVP_DigestFinal_ex''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:143:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:143:
     undefined reference to `EVP_MD_CTX_md''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:143:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:143:
     undefined reference to `EVP_DigestInit_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_digest'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:131:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:131:
     undefined reference to `EVP_MD_CTX_copy''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:132:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:132:
     undefined reference to `EVP_DigestFinal_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_block_length'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:121:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:121:
     undefined reference to `EVP_MD_CTX_md''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:121:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:121:
     undefined reference to `EVP_MD_block_size''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_init'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:115:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:115:
     undefined reference to `OpenSSL_add_all_digests''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_update'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:239:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:239:
     undefined reference to `HMAC_Update''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_digest_length'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:225:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:225:
     undefined reference to `EVP_MD_size''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_block_length'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:219:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:219:
     undefined reference to `EVP_MD_block_size''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_update'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:201:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:201:
     undefined reference to `EVP_DigestUpdate''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_reset'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:195:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:195:
     undefined reference to `EVP_MD_CTX_md''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:195:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:195:
     undefined reference to `EVP_DigestInit_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_free'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:105:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:105:
     undefined reference to `HMAC_CTX_cleanup''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_init'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:232:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:232:
     undefined reference to `HMAC_CTX_init''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:233:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:233:
     undefined reference to `HMAC_Init_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_free'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:96:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:96:
     undefined reference to `EVP_MD_CTX_destroy''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_init'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:180:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:180:
     undefined reference to `EVP_MD_CTX_create''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:181:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:181:
     undefined reference to `EVP_DigestInit_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_md_digest'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:131:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:131:
     undefined reference to `EVP_MD_CTX_copy''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:132:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:132:
     undefined reference to `EVP_DigestFinal_ex''
 
     ../../lib/libmruby_core.a(digest.o): In function `lib_hmac_digest'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:212:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:212:
     undefined reference to `HMAC_Final''
 
     ../../lib/libmruby_core.a(digest.o): In function `md_type_md'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:165:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:165:
     undefined reference to `EVP_sha512''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:157:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:157:
     undefined reference to `EVP_md5''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:158:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:158:
     undefined reference to `EVP_ripemd160''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:159:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:159:
     undefined reference to `EVP_sha1''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:161:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:161:
     undefined reference to `EVP_sha256''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/digest/digest.c:164:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/digest/digest.c:164:
     undefined reference to `EVP_sha384''
 
     ../../lib/libmruby_core.a(require.o): In function `mrb_compile'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/require/require.c:227:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/require/require.c:227:
     undefined reference to `mrbc_context_new''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/ext/require/require.c:230:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/ext/require/require.c:230:
     undefined reference to `mrb_load_file_cxt''
 
     ../../lib/libmruby_core.a(compile.o): In function `mrb_compile'':
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/compile.c:42:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/compile.c:42:
     undefined reference to `mrbc_context_new''
 
-    /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/src/compile.c:45:
+    /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/src/compile.c:45:
     undefined reference to `mrb_load_nstring_cxt''
 
     gmake[1]: *** [../../bin/mrbc] Error 1
@@ -506,19 +506,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################"
-  :stderr: ! 'dir.sh: /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
+    file.sh: /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
     not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /usr/home/mruby/mruby-test-tool/tmp/20121218150610-26266-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
+    env: /usr/home/mruby/mruby-test-tool/tmp/20121218155505-28145-build/iij-mruby-cee0666/test/posix/../../bin/mruby:
     No such file or directory
 
     require.sh: ../../bin/mrbc: not found

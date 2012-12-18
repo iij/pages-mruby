@@ -27,16 +27,48 @@
   :make: gmake CFLAGS='-DDISABLE_SOCKET'
   :bison: bison
 :make:
-  :stdout: ''
-  :stderr: ! 'gmake: *** No targets specified and no makefile found.  Stop.
+  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d)
+
+    ["default"]
+
+    make -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g -O3 -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d''
+
+    rake aborted!
+
+    Command Failed: [make -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g
+    -O3 -Wall -Werror-implicit-function-declaration -I/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d'']
+
+    ./Rakefile:65
 
 '
-  :status: failed
+  :stderr: ! "usage: make [-BeikNnqrstWX] [-D variable] [-d flags] [-f makefile]\n
+    \           [-I directory] [-J private] [-j max_jobs] [-m directory] [-T file]\n
+    \           [-V variable] [variable=value] [target ...]\n"
+  :status: success
 :make_test:
-  :stdout: ! 'gmake: Nothing to be done for `test''.
+  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d)
+
+    ["test"]
+
+    make -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g -O3 -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d''
+
+    rake aborted!
+
+    Command Failed: [make -C src --no-print-directory CC=''gcc'' LL=''gcc'' CFLAGS=''-g
+    -O3 -Wall -Werror-implicit-function-declaration -I/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d/include''
+    LDFLAGS='''' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/seilb1.tokyo.iiji.jp/tmp/work.8884/mruby-mruby-384633d'']
+
+    ./Rakefile:65
 
 '
-  :stderr: ''
+  :stderr: ! "usage: make [-BeikNnqrstWX] [-D variable] [-d flags] [-f makefile]\n
+    \           [-I directory] [-J private] [-j max_jobs] [-m directory] [-T file]\n
+    \           [-V variable] [variable=value] [target ...]\n"
   :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
