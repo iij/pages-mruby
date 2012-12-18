@@ -1,0 +1,38 @@
+---
+:date: ''
+:hostname: netbsd_mips
+:id: mruby-mruby-e5f84a1
+:ball_id: mruby-mruby-e5f84a1
+:zipball_url: https://github.com/mruby/mruby/zipball/e5f84a1
+:repository: mruby/mruby
+:commit: e5f84a1
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+:make_test:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
