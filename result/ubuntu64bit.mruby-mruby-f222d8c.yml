@@ -1,0 +1,67 @@
+---
+:date: 2012-12-17 18:02:24.980187017 +09:00
+:id: mruby-mruby-f222d8c
+:zipball_url: https://github.com/mruby/mruby/zipball/f222d8c
+:make:
+  :stdout: ''
+  :stderr: ! 'make: *** No targets specified and no makefile found.  Stop.'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! 'make: Nothing to be done for `test''.'
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:repository: mruby/mruby
+:commit: f222d8c
+:ball_id: mruby-mruby-f222d8c
+:hostname: ubuntu64bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.81
+
+      Copyright (C) 2006  Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.
+
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+
+      PARTICULAR PURPOSE.
+
+
+      This program built for x86_64-pc-linux-gnu'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: make
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: make
+  :bison: bison
