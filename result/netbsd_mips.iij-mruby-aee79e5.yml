@@ -1,11 +1,11 @@
 ---
 :date: ''
-:hostname: netbsd_arm
-:id: iij-mruby-e355358
-:ball_id: iij-mruby-e355358
-:zipball_url: https://github.com/iij/mruby/zipball/e355358
+:hostname: netbsd_mips
+:id: iij-mruby-aee79e5
+:ball_id: iij-mruby-aee79e5
+:zipball_url: https://github.com/iij/mruby/zipball/aee79e5
 :repository: iij/mruby
-:commit: e355358
+:commit: aee79e5
 :env:
   :gcc:
     :stdout: ''
@@ -46,19 +46,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################\n"
-  :stderr: ! 'dir.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.21818/iij-mruby-e355358/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.1048/iij-mruby-aee79e5/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.21818/iij-mruby-e355358/test/posix/../../bin/mruby:
+    file.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.1048/iij-mruby-aee79e5/test/posix/../../bin/mruby:
     not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.21818/iij-mruby-e355358/test/posix/../../bin/mruby:
+    env: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.1048/iij-mruby-aee79e5/test/posix/../../bin/mruby:
     No such file or directory
 
     require.sh: ../../bin/mrbc: not found
