@@ -1,0 +1,38 @@
+---
+:date: ''
+:hostname: netbsd_arm
+:id: mruby-mruby-b24848b
+:ball_id: mruby-mruby-b24848b
+:zipball_url: https://github.com/mruby/mruby/zipball/b24848b
+:repository: mruby/mruby
+:commit: b24848b
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+:make_test:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''

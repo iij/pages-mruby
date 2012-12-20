@@ -1,0 +1,38 @@
+---
+:date: ''
+:hostname: netbsd_arm
+:id: iij-mruby-e711242
+:ball_id: iij-mruby-e711242
+:zipball_url: https://github.com/iij/mruby/zipball/e711242
+:repository: iij/mruby
+:commit: e711242
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+:make_test:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
