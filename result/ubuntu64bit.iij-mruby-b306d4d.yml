@@ -1,0 +1,1041 @@
+---
+:date: 2012-12-31 11:38:01.691536072 +09:00
+:id: iij-mruby-b306d4d
+:zipball_url: https://github.com/iij/mruby/zipball/b306d4d
+:make:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d)\ncd
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g
+    && git clone git://github.com/iij/mruby-mtest.git && git checkout master\nCloning
+    into 'mruby-mtest'...\nD\tresult/.gitkeep\nmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest'\ncd
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g
+    && git clone git://github.com/iij/mruby-dir.git && git checkout master\nCloning
+    into 'mruby-dir'...\nD\tresult/.gitkeep\nmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process'\nmake
+    -C src --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g
+    -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ngcc
+    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c array.c -o array.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c cdump.c -o cdump.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c class.c -o class.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c codegen.c -o codegen.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c compar.c -o compar.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c compile.c -o compile.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c crc.c -o crc.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c dump.c -o dump.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c enum.c -o enum.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c error.c -o error.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c etc.c -o etc.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c gc.c -o gc.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c hash.c -o hash.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c init.c -o init.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c init_ext.c -o init_ext.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c kernel.c -o kernel.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c load.c -o load.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c math.c -o math.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c numeric.c -o numeric.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c object.c -o object.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c pool.c -o pool.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c print.c -o print.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c proc.c -o proc.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c range.c -o range.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c re.c -o re.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c regcomp.c -o regcomp.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c regenc.c -o regenc.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c regerror.c -o regerror.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c regexec.c -o regexec.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c regparse.c -o regparse.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c sprintf.c -o sprintf.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c st.c -o st.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c state.c -o state.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c string.c -o string.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c struct.c -o struct.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c symbol.c -o symbol.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c time.c -o time.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c variable.c -o variable.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c vm.c -o vm.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o\ngcc -Wall
+    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o\ngcc -Wall -Werror-implicit-function-declaration
+    -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o\ngcc -Wall
+    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o\ngcc
+    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o\ngcc -Wall
+    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o\nbison -o
+    ./y.tab.c ./parse.y\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o\nar r ../lib/libmruby_core.a
+    ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./compile.o ./crc.o ./dump.o
+    ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o
+    ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o
+    ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o
+    ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o
+    ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o
+    ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o
+    \ ./y.tab.o\nmake -C mrblib --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison'
+    CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ncat
+    ./*.rb > mrblib1.rbtmp\ncat ./ext/*.rb > mrblib2.rbtmp\nmake -C ../tools/mrbc
+    CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS=''\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o\ngcc
+    -o ../../bin/mrbc  ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm
+    -lcrypto    \n../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp\n../bin/mrbc
+    -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp\ncat init_mrblib.c mrblib1.ctmp
+    mrblib2.ctmp > mrblib.c\ngcc -Wall -Werror-implicit-function-declaration -g -O3
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I../src -I../include -c mrblib.c -o mrblib.o\ncp ../lib/libmruby_core.a
+    ../lib/libmruby.a\nar r ../lib/libmruby.a mrblib.o\n-- MAKE mrbgems --\nGenerate
+    Gem driver: /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.c\nBuild
+    the driver which initializes all gems\ngcc -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -MMD -c /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.c
+    -o /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.o\nar
+    rs /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.o\nmake
+    -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-mtest'\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_mrblib_header.rb
+    'mruby-mtest' > gem_mrblib_header.ctmp\ncat mrblib/mtest_unit.rb > gem_mrblib.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_mruby_mtest -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_mrblib.rb
+    'mruby-mtest' > gem_mrblib_init.ctmp\ncat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp
+    gem_mrblib_init.ctmp > gem_mrblib.c\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ gem_mrblib.c -o gem_mrblib.o\nar rs mrb-mruby-mtest-gem.a gem_mrblib.o\nmake
+    -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-dir'\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ src/dir.c -o src/dir.o\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_mrblib_header.rb
+    'mruby-dir' > gem_mrblib_header.ctmp\ncat mrblib/dir.rb > gem_mrblib.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_mruby_dir -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_mixlib.rb
+    'mruby-dir' > gem_mixlib_init.ctmp\ncat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp
+    gem_mixlib_init.ctmp > gem_mixlib.c\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ gem_mixlib.c -o gem_mixlib.o\nar rs mrb-mruby-dir-gem.a  src/dir.o gem_mixlib.o\nmake
+    -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'pack'\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ src/pack.c -o src/pack.o\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_srclib.rb
+    'pack' > gem_srclib.c\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ gem_srclib.c -o gem_srclib.o\nar rs mrb-pack-gem.a  src/pack.o gem_srclib.o\nmake
+    -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'process'\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ src/process.c -o src/process.o\nruby /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/generate_gem_srclib.rb
+    'process' > gem_srclib.c\ngcc -c -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    \ gem_srclib.c -o gem_srclib.o\nar rs mrb-process-gem.a  src/process.o gem_srclib.o\nmake
+    -C tools/mruby --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g
+    -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ngcc
+    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src/../include
+    -c /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src/../tools/mruby/mruby.c
+    -o /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src/../tools/mruby/mruby.o\ngcc
+    -o /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mruby
+    \ /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src/../tools/mruby/mruby.o
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/lib/libmruby.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/mrb-pack-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/mrb-process-gem.a
+    \  -lm -lcrypto    \nmake -C tools/mirb --no-print-directory CC='gcc' LL='gcc'
+    AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ngcc
+    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o\ngcc
+    -o ../../bin/mirb  ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/mrb-pack-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/mrb-process-gem.a
+    \  -lm -lcrypto"
+  :stderr: ! 'Already on ''master''
+
+    Already on ''master''
+
+    compile.c: In function ''mrb_compile'':
+
+    compile.c:38:7: warning: unused variable ''irep_len'' [-Wunused-variable]
+
+    compile.c: At top level:
+
+    compile.c:20:1: warning: ''replace_stop_with_return'' defined but not used [-Wunused-function]
+
+    regcomp.c: In function ''is_not_included'':
+
+    regcomp.c:2433:13: warning: variable ''c'' set but not used [-Wunused-but-set-variable]
+
+    regcomp.c: In function ''update_string_node_case_fold'':
+
+    regcomp.c:3225:14: warning: variable ''q'' set but not used [-Wunused-but-set-variable]
+
+    regparse.c: In function ''fetch_escaped_value'':
+
+    regparse.c:2392:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    regparse.c: In function ''fetch_name'':
+
+    regparse.c:2605:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    regparse.c: In function ''parse_posix_bracket'':
+
+    regparse.c:3984:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    regparse.c: In function ''fetch_char_property_to_ctype'':
+
+    regparse.c:4037:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    regparse.c: In function ''code_exist_check'':
+
+    regparse.c:4194:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    string.c: In function ''mrb_str_sub'':
+
+    string.c:2411:7: warning: variable ''iter'' set but not used [-Wunused-but-set-variable]
+
+    ext/io/io.c: In function ''rb_io_close'':
+
+    ext/io/io.c:491:11: warning: variable ''fd2'' set but not used [-Wunused-but-set-variable]
+
+    ext/io/io.c:491:7: warning: variable ''fd'' set but not used [-Wunused-but-set-variable]
+
+    ext/io/io.c: In function ''pipe_open'':
+
+    ext/io/io.c:937:16: warning: variable ''write_fd'' set but not used [-Wunused-but-set-variable]
+
+    ext/io/io.c: In function ''mrb_io_s_popen'':
+
+    ext/io/io.c:1509:13: warning: variable ''io'' set but not used [-Wunused-but-set-variable]
+
+    ext/io/io.c: In function ''appendlineOld'':
+
+    ext/io/io.c:552:12: warning: ignoring return value of ''fread'', declared with
+    attribute warn_unused_result [-Wunused-result]
+
+    ext/io/io.c: In function ''appendline'':
+
+    ext/io/io.c:653:12: warning: ignoring return value of ''fread'', declared with
+    attribute warn_unused_result [-Wunused-result]
+
+    ext/require/require.c: In function ''find_file_check'':
+
+    ext/require/require.c:88:11: warning: ignoring return value of ''realpath'', declared
+    with attribute warn_unused_result [-Wunused-result]
+
+    ar: creating ../lib/libmruby_core.a
+
+    ar: creating /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+
+    ar: creating mrb-mruby-mtest-gem.a
+
+    ar: creating mrb-mruby-dir-gem.a
+
+    src/pack.c: In function ''pack_a'':
+
+    src/pack.c:218:16: warning: unused variable ''dlen'' [-Wunused-variable]
+
+    src/pack.c: In function ''unpack_a'':
+
+    src/pack.c:256:16: warning: variable ''dptr0'' set but not used [-Wunused-but-set-variable]
+
+    src/pack.c:255:22: warning: unused variable ''sptr0'' [-Wunused-variable]
+
+    src/pack.c: In function ''pack_h'':
+
+    src/pack.c:284:38: warning: unused variable ''x'' [-Wunused-variable]
+
+    src/pack.c: In function ''unpack_h'':
+
+    src/pack.c:331:20: warning: unused variable ''ch'' [-Wunused-variable]
+
+    src/pack.c:331:17: warning: unused variable ''c'' [-Wunused-variable]
+
+    src/pack.c:330:32: warning: variable ''padding'' set but not used [-Wunused-but-set-variable]
+
+    src/pack.c:330:29: warning: unused variable ''i'' [-Wunused-variable]
+
+    src/pack.c:329:17: warning: unused variable ''l'' [-Wunused-variable]
+
+    src/pack.c: In function ''mrb_pack_unpack'':
+
+    src/pack.c:763:9: warning: pointer targets in passing argument 2 of ''unpack_s''
+    differ in signedness [-Wpointer-sign]
+
+    src/pack.c:156:1: note: expected ''const unsigned char *'' but argument is of
+    type ''const char *''
+
+    src/pack.c:766:9: warning: pointer targets in passing argument 2 of ''unpack_l''
+    differ in signedness [-Wpointer-sign]
+
+    src/pack.c:193:1: note: expected ''const unsigned char *'' but argument is of
+    type ''const char *''
+
+    src/pack.c: In function ''read_tmpl.isra.4'':
+
+    src/pack.c:639:10: warning: ''type'' may be used uninitialized in this function
+    [-Wuninitialized]
+
+    ar: creating mrb-pack-gem.a
+
+    src/process.c: In function ''mrb_f_system'':
+
+    src/process.c:160:16: warning: variable ''chfunc'' set but not used [-Wunused-but-set-variable]
+
+    ar: creating mrb-process-gem.a'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:make_test:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d)\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake:
+    Entering directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process'\nmake:
+    Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process'\nmake
+    -C src --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g
+    -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\nmake:
+    Nothing to be done for `all'.\nmake -C mrblib --no-print-directory CC='gcc' LL='gcc'
+    AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\nmake:
+    Nothing to be done for `all'.\n-- MAKE mrbgems --\nmake -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-mtest'\nar rs mrb-mruby-mtest-gem.a gem_mrblib.o\nmake -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-dir'\nar rs mrb-mruby-dir-gem.a  src/dir.o gem_mixlib.o\nmake -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'pack'\nar rs mrb-pack-gem.a  src/pack.o gem_srclib.o\nmake -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nBuilding
+    Gem 'process'\nar rs mrb-process-gem.a  src/process.o gem_srclib.o\nmake -C tools/mruby
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ngcc
+    -o /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mruby
+    \ /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src/../tools/mruby/mruby.o
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/lib/libmruby.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/mrb-pack-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/mrb-process-gem.a
+    \  -lm -lcrypto    \nmake -C tools/mirb --no-print-directory CC='gcc' LL='gcc'
+    AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\ngcc
+    -o ../../bin/mirb  ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/mrb-pack-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/mrb-process-gem.a
+    \  -lm -lcrypto    \nmake -C test --no-print-directory CC='gcc' LL='gcc' AR='ar'
+    YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto    ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'\n(in
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d)\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake
+    gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    \ MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\nmake
+    gem-test -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto        ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\ncat
+    test/mtest_unit_test.rb > gem_test.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_mruby_mtest_test -ogem_test.ctmp gem_test.rbtmp\necho \"void
+    mrb_mruby_mtest_gem_test_init(mrb_state* mrb) { }\" >> gem_test.ctmp\nmake gem-test
+    -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto        ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\ncat
+    test/dir.rb > gem_test.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_mruby_dir_test -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_mruby_dir_gem_test_init(mrb_state*
+    mrb) { }\" >> gem_test.ctmp\nmake gem-test -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto        ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\ncat
+    test/pack.rb > gem_test.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_pack_test -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_pack_gem_test_init(mrb_state*
+    mrb) { }\" >> gem_test.ctmp\nmake gem-test -C /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src'
+    LDFLAGS='    ' LIBS='-lm -lcrypto        ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d'
+    MAKEFILE_4_GEM='/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/Makefile4gem'\ncat
+    test/process.rb > gem_test.rbtmp\n/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/bin/mrbc
+    -Bgem_mrblib_irep_process_test -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_process_gem_test_init(mrb_state*
+    mrb) { }\" >> gem_test.ctmp\ncat /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/gem_test.ctmp
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/gem_test.ctmp
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/gem_test.ctmp
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/gem_test.ctmp
+    \ >> /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mrbgemtest.ctmp\ngcc
+    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I./../src -I./../include -c driver.c -o driver.o\ncat ./assert.rb ./t/*.rb
+    > mrbtest.rbtmp\n../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp\ncat
+    init_mrbtest.c mrbtest.ctmp ../mrbgems/g/mrbgemtest.ctmp > mrbtest.c\ngcc -Wall
+    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/include
+    \ -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/include
+    -I/home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/src
+    -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest  driver.o
+    mrbtest.o ../lib/libmruby.a /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/gem_init.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/pack/mrb-pack-gem.a
+    /home/mruby/mruby-test-tool/tmp/20121231113805-2650-build/iij-mruby-b306d4d/mrbgems/g/process/mrb-process-gem.a
+    \ -lm -lcrypto    \ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
+    mrubytest.rb\n# exec mrbtest\n./mrbtest\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
+    Running tests:\n\n...\n\nFinished tests in 0.441082s, 6.8015 tests/s, 2.2672 assertions/s.\n\n3
+    tests, 1 assertions, 0 failures, 0 errors, 0 skips\n..............\nTotal: 610\n
+    \  OK: 610\n   KO: 0\nCrash: 0\n Time: 7.296373 seconds\nmrbtest - Embeddable
+    Ruby Test\n\nThis is a very early version, please test and report errors.\nThanks
+    :)\n\n\n# exec mruby test with ruby script\nmrubytest.rb success.\n\n# exec mruby
+    test with mrb file\nmrubytest.mrb success."
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+  :mrubytest_rb: ! "..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    594\n   OK: 594\n   KO: 0\nCrash: 0\n Time: 6.766343 seconds\n"
+  :mrubytest_mrb: ! "..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    594\n   OK: 594\n   KO: 0\nCrash: 0\n Time: 4.601982 seconds\n"
+:posix_test:
+  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.001835 seconds\n\n###################################\n#
+    exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.000471 seconds\n\n###################################\n#
+    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.00071 seconds\n\n###################################\n#
+    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
+    0\n Time: 0.006785 seconds\n\n###################################\n# exec test/posix/io.sh;
+    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
+    0.022034 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 3232 done\nwait 3233 done\nwait 3234 done\n.\nTotal: 6\n   OK:
+    6\n   KO: 0\nCrash: 0\n Time: 0.222874 seconds\n\n###################################\n#
+    exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
+    20\n   KO: 0\nCrash: 0\n Time: 0.049264 seconds\n\n###################################\n#
+    exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
+    0\nCrash: 0\n Time: 0.001096 seconds\n\n###################################\nPOSIX
+    test result: OK\n###################################"
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:repository: iij/mruby
+:commit: b306d4d
+:ball_id: iij-mruby-b306d4d
+:hostname: ubuntu64bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.81
+
+      Copyright (C) 2006  Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.
+
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+
+      PARTICULAR PURPOSE.
+
+
+      This program built for x86_64-pc-linux-gnu'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: make
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
