@@ -1,36 +1,36 @@
 ---
-:date: 2012-12-31 12:40:42.807690328 +09:00
+:date: 2012-12-31 17:46:15.523693193 +09:00
 :id: iij-mruby-87defad
 :zipball_url: https://github.com/iij/mruby/zipball/87defad
 :make:
-  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad)
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad)
 
-    gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/Makefile4gem''
+    gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/Makefile4gem''
 
-    gmake: Entering directory `/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
+    gmake: Entering directory `/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
 
-    gmake: Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
+    gmake: Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
 
     rake aborted!
 
-    Command Failed: [gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/Makefile4gem'']
+    Command Failed: [gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/Makefile4gem'']
 
     Rakefile:46:in `<top (required)>'''
   :stderr: ! 'gmake: *** No rule to make target `gem-flags''.  Stop.'
   :status_info: !ruby/object:Process::Status {}
   :status: failed
 :make_test:
-  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad)
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad)
 
-    gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/Makefile4gem''
+    gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/Makefile4gem''
 
-    gmake: Entering directory `/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
+    gmake: Entering directory `/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
 
-    gmake: Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
+    gmake: Leaving directory `/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest''
 
     rake aborted!
 
-    Command Failed: [gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/mrbgems/Makefile4gem'']
+    Command Failed: [gmake gem-flags -C /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM=''/home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/mrbgems/Makefile4gem'']
 
     Rakefile:46:in `<top (required)>'''
   :stderr: ! 'gmake: *** No rule to make target `gem-flags''.  Stop.'
@@ -46,19 +46,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################"
-  :stderr: ! 'dir.sh: /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/test/posix/../../bin/mruby:
+    file.sh: /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/test/posix/../../bin/mruby:
     not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /home/mruby/mruby-test-tool/tmp/20121231124046-1649-build/iij-mruby-87defad/test/posix/../../bin/mruby:
+    env: /home/mruby/mruby-test-tool/tmp/20121231174619-13428-build/iij-mruby-87defad/test/posix/../../bin/mruby:
     No such file or directory
 
     require.sh: ../../bin/mrbc: not found
