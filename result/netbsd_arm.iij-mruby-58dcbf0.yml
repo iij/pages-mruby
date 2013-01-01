@@ -27,16 +27,16 @@
   :make: gmake CFLAGS='-DDISABLE_SOCKET'
   :bison: bison
 :make:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0)
+  :stdout: ! '(in /home/mruby/arm/tmp/work.24012/iij-mruby-58dcbf0)
 
-    cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g
-    && git clone https://github.com/iij/mruby-mtest.git && cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest
-    && git checkout master
+    cd /home/mruby/arm/tmp/work.24012/iij-mruby-58dcbf0/mrbgems/g && git clone https://github.com/iij/mruby-mtest.git
+    && cd /home/mruby/arm/tmp/work.24012/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest &&
+    git checkout master
 
     rake aborted!
 
-    Command Failed: [cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g
-    && git clone https://github.com/iij/mruby-mtest.git && cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest
+    Command Failed: [cd /home/mruby/arm/tmp/work.24012/iij-mruby-58dcbf0/mrbgems/g
+    && git clone https://github.com/iij/mruby-mtest.git && cd /home/mruby/arm/tmp/work.24012/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest
     && git checkout master]
 
     ./Rakefile:46
@@ -45,63 +45,10 @@
   :stderr: ! 'git: not found
 
 '
-  :status: failed
+  :status: ''
 :make_test:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0)
-
-    cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g
-    && git clone https://github.com/iij/mruby-mtest.git && cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest
-    && git checkout master
-
-    rake aborted!
-
-    Command Failed: [cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g
-    && git clone https://github.com/iij/mruby-mtest.git && cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest
-    && git checkout master]
-
-    ./Rakefile:46
-
-'
-  :stderr: ! 'git: not found
-
-'
-  :status: failed
+  :stdout: ''
+  :stderr: ''
+  :status: ''
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
-:posix_test:
-  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n\n###################################\n#
-    exec test/posix/env.sh; start...\n\n###################################\n# exec
-    test/posix/errno.sh; start...\n\n###################################\n# exec test/posix/file.sh;
-    start...\n\n###################################\n# exec test/posix/io.sh; start...\n\n###################################\n#
-    exec test/posix/process.sh; start...\n\n###################################\n#
-    exec test/posix/require.sh; start...\n\n###################################\n#
-    exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
-    test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
-    \ require.sh  syslog.sh\n###################################\n"
-  :stderr: ! 'dir.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/test/posix/../../bin/mruby:
-    not found
-
-    env: ../../bin/mruby: No such file or directory
-
-    errno.sh: ../../bin/mruby: not found
-
-    file.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/test/posix/../../bin/mruby:
-    not found
-
-    io.sh: ../../bin/mruby: not found
-
-    env: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.22880/iij-mruby-58dcbf0/test/posix/../../bin/mruby:
-    No such file or directory
-
-    require.sh: ../../bin/mrbc: not found
-
-    mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
-
-    require.sh: ../../bin/mrbc: not found
-
-    mv: rename require/mrb1_.mrb to require/mrb1.mrb: No such file or directory
-
-    require.sh: ../../bin/mruby: not found
-
-'
-  :status: failed

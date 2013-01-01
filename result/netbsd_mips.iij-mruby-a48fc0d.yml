@@ -1,0 +1,84 @@
+---
+:date: ''
+:hostname: netbsd_mips
+:id: iij-mruby-a48fc0d
+:ball_id: iij-mruby-a48fc0d
+:zipball_url: https://github.com/iij/mruby/zipball/a48fc0d
+:repository: iij/mruby
+:commit: a48fc0d
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! '(in /home/mruby/mips/iij-mruby-a48fc0d)
+
+    gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' AR=''ar'' YACC=''bison''
+    CFLAGS=''-g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-a48fc0d/include''
+    LDFLAGS='''' LIBS=''-lm'' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/mips/iij-mruby-a48fc0d''
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/mips/iij-mruby-a48fc0d/include -MMD -I. -I./../include -c array.c
+    -o array.o
+
+    rake aborted!
+
+    Command Failed: [gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' AR=''ar''
+    YACC=''bison'' CFLAGS=''-g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/mips/iij-mruby-a48fc0d/include'' LDFLAGS='''' LIBS=''-lm'' ENABLE_GEMS=''false''
+    MRUBY_ROOT=''/home/mruby/mips/iij-mruby-a48fc0d'']
+
+    ./Rakefile:70
+
+'
+  :stderr: ! 'cc1: Permission denied: opening dependency file array.d
+
+    gmake: *** [array.o] Error 1
+
+'
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/mips/iij-mruby-a48fc0d)
+
+    gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' AR=''ar'' YACC=''bison''
+    CFLAGS=''-g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-a48fc0d/include''
+    LDFLAGS='''' LIBS=''-lm'' ENABLE_GEMS=''false'' MRUBY_ROOT=''/home/mruby/mips/iij-mruby-a48fc0d''
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/mips/iij-mruby-a48fc0d/include -MMD -I. -I./../include -c array.c
+    -o array.o
+
+    rake aborted!
+
+    Command Failed: [gmake -C src --no-print-directory CC=''gcc'' LL=''gcc'' AR=''ar''
+    YACC=''bison'' CFLAGS=''-g -O3 -DDISABLE_GEMS -Wall -Werror-implicit-function-declaration
+    -I/home/mruby/mips/iij-mruby-a48fc0d/include'' LDFLAGS='''' LIBS=''-lm'' ENABLE_GEMS=''false''
+    MRUBY_ROOT=''/home/mruby/mips/iij-mruby-a48fc0d'']
+
+    ./Rakefile:70
+
+'
+  :stderr: ! 'cc1: Permission denied: opening dependency file array.d
+
+    gmake: *** [array.o] Error 1
+
+'
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
