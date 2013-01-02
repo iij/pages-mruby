@@ -27,7 +27,7 @@
   :make: gmake CFLAGS='-DDISABLE_SOCKET'
   :bison: bison
 :make:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.3867/iij-mruby-f3f9866)
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-f3f9866)
 
     rake aborted!
 
@@ -39,7 +39,7 @@
   :stderr: ''
   :status: failed
 :make_test:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.3867/iij-mruby-f3f9866)
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-f3f9866)
 
     rake aborted!
 
@@ -62,20 +62,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################\n"
-  :stderr: ! 'dir.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.3867/iij-mruby-f3f9866/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /home/mruby/arm/iij-mruby-f3f9866/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.3867/iij-mruby-f3f9866/test/posix/../../bin/mruby:
-    not found
+    file.sh: /home/mruby/arm/iij-mruby-f3f9866/test/posix/../../bin/mruby: not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.3867/iij-mruby-f3f9866/test/posix/../../bin/mruby:
-    No such file or directory
+    env: /home/mruby/arm/iij-mruby-f3f9866/test/posix/../../bin/mruby: No such file
+    or directory
 
     require.sh: ../../bin/mrbc: not found
 

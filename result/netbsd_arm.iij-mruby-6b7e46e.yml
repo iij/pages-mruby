@@ -27,15 +27,15 @@
   :make: gmake CFLAGS='-DDISABLE_SOCKET'
   :bison: bison
 :make:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e)
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-6b7e46e)
 
-    cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/mrbgems/g
-    && git clone git://github.com/iij/mruby-mtest.git && git checkout master
+    cd /home/mruby/arm/iij-mruby-6b7e46e/mrbgems/g && git clone git://github.com/iij/mruby-mtest.git
+    && git checkout master
 
     rake aborted!
 
-    Command Failed: [cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/mrbgems/g
-    && git clone git://github.com/iij/mruby-mtest.git && git checkout master]
+    Command Failed: [cd /home/mruby/arm/iij-mruby-6b7e46e/mrbgems/g && git clone git://github.com/iij/mruby-mtest.git
+    && git checkout master]
 
     ./Rakefile:46
 
@@ -45,15 +45,15 @@
 '
   :status: failed
 :make_test:
-  :stdout: ! '(in /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e)
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-6b7e46e)
 
-    cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/mrbgems/g
-    && git clone git://github.com/iij/mruby-mtest.git && git checkout master
+    cd /home/mruby/arm/iij-mruby-6b7e46e/mrbgems/g && git clone git://github.com/iij/mruby-mtest.git
+    && git checkout master
 
     rake aborted!
 
-    Command Failed: [cd /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/mrbgems/g
-    && git clone git://github.com/iij/mruby-mtest.git && git checkout master]
+    Command Failed: [cd /home/mruby/arm/iij-mruby-6b7e46e/mrbgems/g && git clone git://github.com/iij/mruby-mtest.git
+    && git checkout master]
 
     ./Rakefile:46
 
@@ -74,20 +74,19 @@
     exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
     test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
     \ require.sh  syslog.sh\n###################################\n"
-  :stderr: ! 'dir.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/test/posix/../../bin/mruby:
+  :stderr: ! 'dir.sh: /home/mruby/arm/iij-mruby-6b7e46e/test/posix/../../bin/mruby:
     not found
 
     env: ../../bin/mruby: No such file or directory
 
     errno.sh: ../../bin/mruby: not found
 
-    file.sh: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/test/posix/../../bin/mruby:
-    not found
+    file.sh: /home/mruby/arm/iij-mruby-6b7e46e/test/posix/../../bin/mruby: not found
 
     io.sh: ../../bin/mruby: not found
 
-    env: /home/mruby/seilb1.tokyo.iiji.jp/tmp/work.15262/iij-mruby-6b7e46e/test/posix/../../bin/mruby:
-    No such file or directory
+    env: /home/mruby/arm/iij-mruby-6b7e46e/test/posix/../../bin/mruby: No such file
+    or directory
 
     require.sh: ../../bin/mrbc: not found
 
