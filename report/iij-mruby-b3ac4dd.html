@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - b3ac4dd)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/b3ac4dd" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit b3ac4dd65fd3ed5ff79c0f4e022640f9ffbb56aa
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 13:47:05 2012 +0900
+
+    remove unnecessary function call on src/ext/io.c:mrb_io_gets
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3628,5 +3641,35 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit b3ac4dd65fd3ed5ff79c0f4e022640f9ffbb56aa
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 13:47:05 2012 +0900
+
+    remove unnecessary function call on src/ext/io.c:mrb_io_gets
+
+diff --git a/src/ext/io/io.c b/src/ext/io/io.c
+index 9d5557e..99f3a3d 100644
+--- a/src/ext/io/io.c
++++ b/src/ext/io/io.c
+@@ -1843,13 +1843,11 @@ mrb_io_getc(mrb_state *mrb, mrb_value klass)
+ static mrb_value
+ mrb_io_gets(mrb_state *mrb, mrb_value klass)
+ {
+-  mrb_value str, b, rs;
++  mrb_value str;
+   mrb_value *argv;
+   int argc;
+-  long limit;
+ 
+-  mrb_get_args(mrb, "&*", &b, &argv, &argc);
+-  prepare_getline_args(mrb, argc, argv, &rs, &limit, klass);
++  mrb_get_args(mrb, "*", &argv, &argc);
+   str = rb_io_getline(mrb, argc, argv, klass);
+   if (mrb_nil_p(str)) {
+     mrb_gv_set(mrb, mrb_intern(mrb, "$_"), mrb_nil_value());
+</pre>
+
   </body>
 </html>

@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - dee0b22)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/mruby/mruby/commit/dee0b22" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
       
         
         
-        
+      <li>
+      <pre>commit dee0b2283c180c4e2584ff27dcb241a80fb7cfc2
+Author: Yuichiro MASUI <masui@masuidrive.jp>
+Date:   Sat Dec 22 01:38:06 2012 +0900
+
+    Add MRUBY_CFLAGS / MRUBY_LDFLAGS to mrbgems
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -2089,5 +2102,416 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit dee0b2283c180c4e2584ff27dcb241a80fb7cfc2
+Author: Yuichiro MASUI <masui@masuidrive.jp>
+Date:   Sat Dec 22 01:38:06 2012 +0900
+
+    Add MRUBY_CFLAGS / MRUBY_LDFLAGS to mrbgems
+
+diff --git a/.gitignore b/.gitignore
+index 7b983f9..9dfce85 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -9,6 +9,9 @@
+ *.sav
+ *.swp
+ *.d
++*.tmp
++*.ctmp
++*.rbtmp
+ *~
+ .DS_Store
+ .ccmalloc
+diff --git a/Rakefile b/Rakefile
+index aec259e..61bf248 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -36,8 +36,13 @@ end
+ LDFLAGS = [ENV['LDFLAGS']]
+ LIBS    = [ENV['LIBS'] || '-lm']
+ 
++if ENABLE_GEMS
++  require './mrbgems/build_tasks'
++  Rake::Task[:load_mrbgems_flags].invoke
++else
++  CFLAGS << "-DDISABLE_GEMS"
++end
+ 
+-CFLAGS << "-DDISABLE_GEMS" unless ENABLE_GEMS
+ CFLAGS << "-Wall" << "-Werror-implicit-function-declaration" << "-I#{MRUBY_ROOT}/include"
+ 
+ if ENV['OS'] == 'Windows_NT'
+@@ -58,10 +63,6 @@ CAT = ENV['CAT'] ||= 'cat'
+ ##############################
+ # generic build targets, rules
+ 
+-if ENABLE_GEMS
+-  require './mrbgems/build_tasks'
+-end
+-
+ task :default => :all
+ 
+ desc "build all targets, install (locally) in-repo"
+diff --git a/doc/mrbgems/c_and_ruby_extension_example/.gitignore b/doc/mrbgems/c_and_ruby_extension_example/.gitignore
+index e6ad3b5..186584e 100644
+--- a/doc/mrbgems/c_and_ruby_extension_example/.gitignore
++++ b/doc/mrbgems/c_and_ruby_extension_example/.gitignore
+@@ -1,3 +1,8 @@
+-gem_mixlib.c
++# mrbgems
++*.tmp
+ *.ctmp
+ *.rbtmp
++gem_mixlib.c
++gem_mrblib.c
++gem_srclib.c
++
+diff --git a/doc/mrbgems/c_and_ruby_extension_example/Makefile b/doc/mrbgems/c_and_ruby_extension_example/Makefile
+index 57912a9..ba89e4b 100644
+--- a/doc/mrbgems/c_and_ruby_extension_example/Makefile
++++ b/doc/mrbgems/c_and_ruby_extension_example/Makefile
+@@ -7,6 +7,11 @@ GEM_OBJECTS := $(patsubst %.c, %.o, $(GEM_C_FILES))
+ 
+ GEM_RB_FILES := $(wildcard $(MRB_DIR)/*.rb)
+ 
++MRUBY_CFLAGS := 
++MRUBY_LDFLAGS := 
++
+ gem-all : $(GEM_OBJECTS) gem-c-and-rb-files
+ 
+ gem-clean : gem-clean-c-and-rb-files
++
++gem-test : gem-test-c-and-rb-files
+diff --git a/doc/mrbgems/c_extension_example/.gitignore b/doc/mrbgems/c_extension_example/.gitignore
+index e1ef5dc..186584e 100644
+--- a/doc/mrbgems/c_extension_example/.gitignore
++++ b/doc/mrbgems/c_extension_example/.gitignore
+@@ -1,3 +1,8 @@
+-gem_srclib.c
++# mrbgems
++*.tmp
+ *.ctmp
+ *.rbtmp
++gem_mixlib.c
++gem_mrblib.c
++gem_srclib.c
++
+diff --git a/doc/mrbgems/c_extension_example/Makefile b/doc/mrbgems/c_extension_example/Makefile
+index 3396699..556b12d 100644
+--- a/doc/mrbgems/c_extension_example/Makefile
++++ b/doc/mrbgems/c_extension_example/Makefile
+@@ -5,6 +5,11 @@ include $(MAKEFILE_4_GEM)
+ GEM_C_FILES := $(wildcard $(SRC_DIR)/*.c)
+ GEM_OBJECTS := $(patsubst %.c, %.o, $(GEM_C_FILES))
+ 
++MRUBY_CFLAGS := 
++MRUBY_LDFLAGS := 
++
+ gem-all : $(GEM_OBJECTS) gem-c-files
+ 
+ gem-clean : gem-clean-c-files
++
++gem-test : gem-test-c-files
+diff --git a/doc/mrbgems/c_extension_example/test/example.c b/doc/mrbgems/c_extension_example/test/example.c
+new file mode 100644
+index 0000000..430e87f
+--- /dev/null
++++ b/doc/mrbgems/c_extension_example/test/example.c
+@@ -0,0 +1,9 @@
++/*
++  if *.c exists in test directory, auto generate this file
++*/
++
++void
++mrb_c_extension_example_gem_test_init(mrb_state *mrb)
++{
++  /* test initializer in C */
++}
+diff --git a/doc/mrbgems/ruby_extension_example/.gitignore b/doc/mrbgems/ruby_extension_example/.gitignore
+index 0e23b7a..186584e 100644
+--- a/doc/mrbgems/ruby_extension_example/.gitignore
++++ b/doc/mrbgems/ruby_extension_example/.gitignore
+@@ -1,3 +1,8 @@
+-gem_mrblib.c
++# mrbgems
++*.tmp
+ *.ctmp
+ *.rbtmp
++gem_mixlib.c
++gem_mrblib.c
++gem_srclib.c
++
+diff --git a/doc/mrbgems/ruby_extension_example/Makefile b/doc/mrbgems/ruby_extension_example/Makefile
+index 9c50267..9036662 100644
+--- a/doc/mrbgems/ruby_extension_example/Makefile
++++ b/doc/mrbgems/ruby_extension_example/Makefile
+@@ -4,6 +4,11 @@ include $(MAKEFILE_4_GEM)
+ 
+ GEM_RB_FILES := $(wildcard $(MRB_DIR)/*.rb)
+ 
++MRUBY_CFLAGS := 
++MRUBY_LDFLAGS := 
++
+ gem-all : gem-rb-files
+ 
+ gem-clean : gem-clean-rb-files
++
++gem-test : gem-test-rb-files
+diff --git a/minirake b/minirake
+index d01ee0d..74afe7e 100755
+--- a/minirake
++++ b/minirake
+@@ -389,7 +389,6 @@ class RakeApp
+       if $show_tasks
+         display_tasks
+       else
+-        p ARGV
+         tasks = []
+         ARGV.each do |task_name|
+           if /^(\w+)=(.*)/.match(task_name)
+diff --git a/mrbgems/Makefile4gem b/mrbgems/Makefile4gem
+index cd3151b..d6022c8 100644
+--- a/mrbgems/Makefile4gem
++++ b/mrbgems/Makefile4gem
+@@ -12,8 +12,19 @@ CC := gcc
+ RM := rm -f
+ AR := ar
+ 
++# mruby compiler
++ifeq ($(OS),Windows_NT)
++MRBC = $(MRUBY_ROOT)/bin/mrbc.exe
++else
++MRBC = $(MRUBY_ROOT)/bin/mrbc
++endif
++
+ SRC_DIR := src
+ MRB_DIR := mrblib
++TEST_DIR := test
++
++GEM_TEST_RB_FILES := $(wildcard $(TEST_DIR)/*.rb)
++GEM_TEST_C_FILES := $(wildcard $(TEST_DIR)/*.c)
+ 
+ # LIBR can be manipulated with command line arguments
+ ifeq ($(strip $(LIBR)),)
+@@ -29,7 +40,7 @@ ifeq ($(strip $(ACTIVE_GEMS)),)
+ endif
+ 
+ MAKEFILE_GEM_LIST := $(MRUBY_ROOT)/mrbgems/g/MakefileGemList
+-include $(MAKEFILE_GEM_LIST)
++-include $(MAKEFILE_GEM_LIST)
+ 
+ # Default rules which are calling the
+ # gem specific gem-all and gem-clean
+@@ -72,20 +83,45 @@ gem_mrblib_init.ctmp :
+ 	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib.rb '$(GEM)' > $@
+ 
+ gem_mrblib_irep.ctmp : gem_mrblib.rbtmp
+-	$(MRUBY_ROOT)/bin/mrbc -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $<
++	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $<
+ 
+ gem_mrblib.rbtmp :
+-	cat $(GEM_RB_FILES) > $@
++		cat $(GEM_RB_FILES) > $@
++
++
++gem_test.ctmp : gem_test.rbtmp $(GEM_TEST_C_FILES)
++	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM))_test -o$@ $<
++ifeq ($(GEM_TEST_C_FILES),)
++		echo "void mrb_$(subst -,_,$(GEM))_gem_test_init(mrb_state* mrb) { }" >> $@
++else
++		cat $(GEM_TEST_C_FILES) >> $@
++endif
++
++gem_test.rbtmp : $(GEM_TEST_RB_FILES)
++ifeq ($(GEM_TEST_RB_FILES),)
++		echo > $@
++else
++		cat $(GEM_TEST_RB_FILES) > $@
++endif
++
++gem-test-c-and-rb-files : gem_test.ctmp
++
++gem-test-c-files : gem_test.ctmp
++
++gem-test-rb-files : gem_test.ctmp
++
+ 
+ gem-clean-c-and-rb-files :
+ 	-$(RM) $(GEM_PACKAGE) gem_mixlib.o gem_mixlib.c gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mixlib_init.ctmp gem_mrblib.rbtmp
+-	-$(RM) gem_srclib.c gem_srclib.o $(GEM_OBJECTS)
++	-$(RM) gem_srclib.c gem_srclib.o $(GEM_OBJECTS) gem_test.ctmp gem_test.rbtmp gem-cflags.tmp gem-ldflags.tmp
+ 
+ gem-clean-c-files :
+-	-$(RM) $(GEM_PACKAGE) gem_srclib.c gem_srclib.o $(GEM_OBJECTS)
++	-$(RM) $(GEM_PACKAGE) gem_srclib.c gem_srclib.o $(GEM_OBJECTS) gem_test.ctmp gem_test.rbtmp gem-cflags.tmp gem-ldflags.tmp
+ 
+ gem-clean-rb-files :
+ 	-$(RM) $(GEM_PACKAGE) gem_mrblib.o gem_mrblib.c gem_mrblib_header.ctmp gem_mrblib_init.ctmp gem_mrblib_irep.ctmp gem_mrblib.rbtmp
++	-$(RM) gem_test.ctmp gem_test.rbtmp gem-cflags.tmp gem-ldflags.tmp
++
+ 
+ %.o : %.c
+ 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GEM_INCLUDE_LIST) $< -o $@
+@@ -93,3 +129,9 @@ gem-clean-rb-files :
+ .PHONY : clean
+ clean : gem-clean
+ 	@echo "Gem '$(GEM)' is clean"
++
++.PHONY : gem-flags
++gem-flags :
++	@echo "$(MRUBY_CFLAGS) -I`pwd`/include" >  gem-cflags.tmp
++	@echo "$(MRUBY_LDFLAGS)" >  gem-ldflags.tmp
++
+diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
+index 3c6c457..4f0d117 100644
+--- a/mrbgems/build_tasks.rb
++++ b/mrbgems/build_tasks.rb
+@@ -5,15 +5,25 @@ GEM_MAKEFILE = "#{MRBGEMS_PATH}/g/Makefile"
+ GEM_MAKEFILE_LIST = "#{MRBGEMS_PATH}/g/MakefileGemList"
+ MAKEFILE_4_GEM = "#{MRUBY_ROOT}/mrbgems/Makefile4gem"
+ 
+-if ENV['OS'] == 'Windows_NT'
+-GEM_MAKE_FLAGS = "#{MAKE_FLAGS} MAKEFILE_4_GEM=\"#{MAKEFILE_4_GEM}\""
+-else
+-GEM_MAKE_FLAGS = "#{MAKE_FLAGS} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'"
++def gem_make_flags
++  if ENV['OS'] == 'Windows_NT'
++    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM=\"#{MAKEFILE_4_GEM}\""
++  else
++    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'"
++  end
+ end
+ 
+ task :mrbgems_all => ["#{GEM_INIT}.a", :mrbgems_generate_gem_makefile_list] do
+   for_each_gem do |path, gemname|
+-    sh "#{MAKE} -C #{path} #{GEM_MAKE_FLAGS}"
++    sh "#{MAKE} -C #{path} #{gem_make_flags}"
++  end
++end
++
++task :load_mrbgems_flags do
++  for_each_gem do |path, gemname|
++    sh "#{MAKE} gem-flags -C #{path} #{gem_make_flags}"
++    CFLAGS << File.read("#{path}/gem-cflags.tmp").chomp
++    LDFLAGS << File.read("#{path}/gem-ldflags.tmp").chomp
+   end
+ end
+ 
+@@ -21,13 +31,30 @@ task :mrbgems_clean do
+   sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
+   sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
+   for_each_gem do |path, gemname|
+-    sh "#{MAKE} clean -C #{path} #{GEM_MAKE_FLAGS}"
++    sh "#{MAKE} gem-clean -C #{path} #{gem_make_flags}"
+   end
+ end
+ 
+ task :mrbgems_prepare_test do
+-  sh "#{CAT} #{for_each_gem{|path, gemname| "#{path}/test/*.rb "}} > #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp"
+-  sh "#{MRUBY_ROOT}/bin/mrbc -Bmrbgemtest_irep -o#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp"
++  for_each_gem do |path, gemname, escaped_gemname|
++    sh "#{MAKE} gem-test -C #{path} #{gem_make_flags}"
++  end
++  open("#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp", 'w') do |f|
++    for_each_gem do |path, gemname, escaped_gemname|
++      f.puts "void mrb_#{escaped_gemname}_gem_test_init(mrb_state *mrb);"
++      f.puts "extern const char gem_mrblib_irep_#{escaped_gemname}_test[];"
++    end
++    f.puts "void mrbgemtest_init(mrb_state* mrb) {"
++    for_each_gem do |path, gemname, escaped_gemname|
++      f.puts "mrb_#{escaped_gemname}_gem_test_init(mrb);"
++    end
++    for_each_gem do |path, gemname, escaped_gemname|
++      f.puts "mrb_load_irep(mrb, gem_mrblib_irep_#{escaped_gemname}_test);"
++    end
++    f.puts "}"
++
++  end
++  sh "#{CAT} #{for_each_gem{|path, gemname| "#{path}/gem_test.ctmp "}} >> #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp"
+ end
+ 
+ file "#{GEM_INIT}.a" => ["#{GEM_INIT}.c", "#{GEM_INIT}.o"] do |t|
+diff --git a/test/Makefile b/test/Makefile
+index f918d67..95690a6 100644
+--- a/test/Makefile
++++ b/test/Makefile
+@@ -52,14 +52,6 @@ ifeq ($(strip $(COMPILE_MODE)),)
+   COMPILE_MODE = debug
+ endif
+ 
+-ifeq ($(COMPILE_MODE),debug)
+-  CFLAGS = -g -O3
+-else ifeq ($(COMPILE_MODE),release)
+-  CFLAGS = -O3
+-else ifeq ($(COMPILE_MODE),small)
+-  CFLAGS = -Os
+-endif
+-
+ ALL_CFLAGS = -Wall -Werror-implicit-function-declaration $(CFLAGS)
+ ifeq ($(OS),Windows_NT)
+   MAKE_FLAGS = CC=$(CC) LL=$(LL) ALL_CFLAGS='$(ALL_CFLAGS)' LDFLAGS='$(LDFLAGS)' 
+@@ -85,7 +77,7 @@ RAKE = ../minirake
+ # generic build targets, rules
+ 
+ .PHONY : test
+-all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB)
++all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB) 
+ 	@echo "# exec mrbtest"
+ 	./$(EXE)
+ 	@echo
+@@ -97,9 +89,14 @@ all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB)
+ 	@echo
+ 
+ # executable constructed using linker from object files
+-$(EXE) : $(OBJS) $(LIBR) $(GEM_ARCHIVE_FILES)
++$(EXE) : generate-mrbgems-test $(OBJS) $(LIBR) $(GEM_ARCHIVE_FILES)
+ 	$(LL) -o $@ $(LDFLAGS) $(OBJS) $(LIBR) $(GEM_ARCHIVE_FILES) $(LIBS)
+ 
++generate-mrbgems-test :
++ifeq ($(ENABLE_GEMS),true)
++	@$(RAKE) mrbgems_prepare_test
++endif
++
+ -include $(OBJS:.o=.d)
+ 
+ # objects compiled from source
+@@ -107,10 +104,7 @@ $(OBJS) : %.o : %.c
+ 	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+ 
+ # Compile C source from merged mruby source
+-$(CLIB) : $(DLIB) $(INIT)
+-ifeq ($(ENABLE_GEMS),true)
+-	@$(RAKE) mrbgems_prepare_test
+-endif
++$(CLIB) : $(DLIB) $(INIT) $(GEMDLIB)
+ 	$(CAT) $(INIT) $(DLIB) $(GEMDLIB) > $@
+ 
+ $(DLIB) : $(RLIB) $(MRBC)
+diff --git a/test/init_mrbtest.c b/test/init_mrbtest.c
+index 569fde3..6b2219b 100644
+--- a/test/init_mrbtest.c
++++ b/test/init_mrbtest.c
+@@ -5,14 +5,15 @@
+ #include "mruby/proc.h"
+ 
+ extern const char mrbtest_irep[];
+-extern const char mrbgemtest_irep[];
++
++void mrbgemtest_init(mrb_state* mrb);
+ 
+ void
+ mrb_init_mrbtest(mrb_state *mrb)
+ {
+   mrb_load_irep(mrb, mrbtest_irep);
+ #ifndef DISABLE_GEMS
+-  mrb_load_irep(mrb, mrbgemtest_irep);
++  mrbgemtest_init(mrb);
+ #endif
+   if (mrb->exc) {
+     mrb_p(mrb, mrb_obj_value(mrb->exc));
+</pre>
+
   </body>
 </html>

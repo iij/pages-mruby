@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 32c0dde)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/32c0dde" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 32c0ddee6a490633171ebc2adaff08221151d5fb
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Wed Nov 14 09:35:19 2012 +0900
+
+    3 times faster String#strip implementation
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3093,5 +3106,94 @@ trap: SIGUSR2: bad trap</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 32c0ddee6a490633171ebc2adaff08221151d5fb
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Wed Nov 14 09:35:19 2012 +0900
+
+    3 times faster String#strip implementation
+
+diff --git a/mrblib/string.rb b/mrblib/string.rb
+index 013e207..bf80796 100644
+--- a/mrblib/string.rb
++++ b/mrblib/string.rb
+@@ -142,45 +142,33 @@ class String
+     self.replace([b, value, a].join(''))
+   end
+ 
++  # for strip family
++  SPACES__ = " \f\n\r\t\v"
++
+   def lstrip
+-    i = 0
+-    while self.isspace(self[i])
+-      i += 1
+-    end
+-    j = 0
+-    ar = []
+-    while i < self.size
+-      ar[j] = self[i]
+-      i += 1
+-      j += 1
+-    end
+-    ar.join('')
++    a = 0
++    z = self.size
++    a += 1 while SPACES__.include?(self[a]) and a <= z
++    self[a..z]
+   end
+ 
+   def rstrip
+-    i = -1
+-    while self.isspace(self[i])
+-      i -= 1
+-    end
+-    j = 0
+-    ar = []
+-    while j < (self.size + i + 1)
+-      ar[j] = self[j]
+-      j += 1
+-    end
+-    ar.join('')
++    a = 0
++    z = self.size
++    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    self[a..z]
+   end
+ 
+   def strip
+-    a = self.lstrip
+-    b = a.rstrip
+-    b
++    a = 0
++    z = self.size
++    a += 1 while SPACES__.include?(self[a]) and a <= z
++    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    self[a..z]
+   end
+ 
+   def strip!
+-    a = self.lstrip
+-    b = a.rstrip
+-    self.replace(b)
++    self.replace(self.strip)
+   end
+ 
+   def %(args)
+@@ -199,11 +187,6 @@ class String
+     end
+     rval
+   end
+-
+-  #private
+-  def isspace(num)
+-    num == ?\s or num == ?\n or num == ?\t or num == ?\r or num == ?\f or num == ?\v
+-  end
+ end
+ 
+ ##
+</pre>
+
   </body>
 </html>

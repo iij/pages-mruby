@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 7cea9d7)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/7cea9d7" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 7cea9d7b945a4b00cef699f47c07654f8b7bd579
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Sat Nov 17 02:16:35 2012 +0900
+
+    int and mrb_int should not be mixed under -DMRB_INT64; may fix #557
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -2062,5 +2075,55 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 7cea9d7b945a4b00cef699f47c07654f8b7bd579
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Sat Nov 17 02:16:35 2012 +0900
+
+    int and mrb_int should not be mixed under -DMRB_INT64; may fix #557
+
+diff --git a/src/array.c b/src/array.c
+index a200de3..ea461e0 100644
+--- a/src/array.c
++++ b/src/array.c
+@@ -772,7 +772,7 @@ mrb_value
+ mrb_ary_first(mrb_state *mrb, mrb_value self)
+ {
+   struct RArray *a = mrb_ary_ptr(self);
+-  int size;
++  mrb_int size;
+ 
+   if (mrb_get_args(mrb, "|i", &size) == 0) {
+     return (a->len > 0)? a->ptr[0]: mrb_nil_value();
+diff --git a/src/numeric.c b/src/numeric.c
+index 5625623..98a60ed 100644
+--- a/src/numeric.c
++++ b/src/numeric.c
+@@ -523,7 +523,8 @@ static mrb_value
+ flo_round(mrb_state *mrb, mrb_value num)
+ {
+   double number, f;
+-  int ndigits = 0, i;
++  mrb_int ndigits = 0;
++  int i;
+ 
+   mrb_get_args(mrb, "|i", &ndigits);
+   number = mrb_float(num);
+diff --git a/src/string.c b/src/string.c
+index 2ac4359..425b79c 100644
+--- a/src/string.c
++++ b/src/string.c
+@@ -2125,7 +2125,7 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
+   mrb_value spat = mrb_nil_value();
+   enum {awk, string, regexp} split_type = string;
+   long beg, end, i = 0;
+-  int lim = -1;
++  mrb_int lim = -1;
+   mrb_value result, tmp;
+ 
+   argc = mrb_get_args(mrb, "|oi", &spat, &lim);
+</pre>
+
   </body>
 </html>

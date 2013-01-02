@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 1d91470)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/1d91470" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit 1d91470db676b2b5f269779dac0fcc8f1b24a711
+Author: mattn <mattn.jp@gmail.com>
+Date:   Fri Dec 28 02:22:26 2012 +0900
+
+    use readline if it's enabled.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1949,5 +1962,65 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 1d91470db676b2b5f269779dac0fcc8f1b24a711
+Author: mattn <mattn.jp@gmail.com>
+Date:   Fri Dec 28 02:22:26 2012 +0900
+
+    use readline if it's enabled.
+
+diff --git a/tools/mirb/mirb.c b/tools/mirb/mirb.c
+index d3903ef..b89c63c 100644
+--- a/tools/mirb/mirb.c
++++ b/tools/mirb/mirb.c
+@@ -12,6 +12,10 @@
+ #include <mruby/proc.h>
+ #include <mruby/data.h>
+ #include <mruby/compile.h>
++#ifdef ENABLE_READLINE
++#include <readline/readline.h>
++#include <readline/history.h>
++#endif
+ 
+ #ifndef ENABLE_STDIO
+ #include <mruby/string.h>
+@@ -143,10 +147,12 @@ print_cmdline(int code_block_open)
+ int
+ main(void)
+ {
+-  int last_char;
+   char ruby_code[1024] = { 0 };
+   char last_code_line[1024] = { 0 };
++#ifndef ENABLE_READLINE
++  int last_char;
+   int char_index;
++#endif
+   mrbc_context *cxt;
+   struct mrb_parser_state *parser;
+   mrb_state *mrb;
+@@ -167,6 +173,7 @@ main(void)
+   cxt->capture_errors = 1;
+ 
+   while (TRUE) {
++#ifndef ENABLE_READLINE
+     print_cmdline(code_block_open);
+ 
+     char_index = 0;
+@@ -180,6 +187,12 @@ main(void)
+     }
+ 
+     last_code_line[char_index] = '\0';
++#else
++    char* line = readline(code_block_open ? "* " : "> ");
++    strncat(last_code_line, line, sizeof(last_code_line)-1);
++    add_history(line);
++    free(line);
++#endif
+ 
+     if ((strcmp(last_code_line, "quit") == 0) || (strcmp(last_code_line, "exit") == 0)) {
+       if (!code_block_open) {
+</pre>
+
   </body>
 </html>

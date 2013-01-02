@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 6a16cad)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/mruby/mruby/commit/6a16cad" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
       
         
         
-        
+      <li>
+      <pre>commit 6a16cad1bf8925498f655e4cac491aa95dbc2963
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 21 23:55:17 2012 +0900
+
+    should save ciidx in exception raised from VM
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1973,5 +1986,44 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 6a16cad1bf8925498f655e4cac491aa95dbc2963
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 21 23:55:17 2012 +0900
+
+    should save ciidx in exception raised from VM
+
+diff --git a/src/vm.c b/src/vm.c
+index bce92c9..b84158d 100644
+--- a/src/vm.c
++++ b/src/vm.c
+@@ -1151,8 +1151,9 @@ mrb_run(mrb_state *mrb, struct RProc *proc, mrb_value self)
+         int eidx;
+ 
+       L_RAISE:
++	ci = mrb->ci;
+ 	mrb_obj_iv_ifnone(mrb, mrb->exc, mrb_intern(mrb, "lastpc"), mrb_voidp_value(pc));
+-        ci = mrb->ci;
++	mrb_obj_iv_set(mrb, mrb->exc, mrb_intern(mrb, "ciidx"), mrb_fixnum_value(ci - mrb->cibase));
+ 	eidx = ci->eidx;
+         if (ci == mrb->cibase) {
+ 	  if (ci->ridx == 0) goto L_STOP;
+@@ -1198,11 +1199,12 @@ mrb_run(mrb_state *mrb, struct RProc *proc, mrb_value self)
+               localjump_error(mrb, "return");
+               goto L_RAISE;
+             }
+-            ci = mrb->ci = mrb->cibase + e->cioff;
++            ci = mrb->cibase + e->cioff;
+ 	    if (ci == mrb->cibase) {
+               localjump_error(mrb, "return");
+               goto L_RAISE;
+ 	    }
++	    mrb->ci = ci;
+             break;
+           }
+         case OP_R_NORMAL:
+</pre>
+
   </body>
 </html>

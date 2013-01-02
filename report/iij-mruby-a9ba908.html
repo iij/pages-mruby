@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - a9ba908)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/a9ba908" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit a9ba9081cb267ed89280f6f6f79a20e85fa8b72c
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Tue Nov 13 10:18:15 2012 +0900
+
+    fix Dir.getwd test on MacOSX (/tmp is a symbolic link!)
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3074,5 +3087,33 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit a9ba9081cb267ed89280f6f6f79a20e85fa8b72c
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Tue Nov 13 10:18:15 2012 +0900
+
+    fix Dir.getwd test on MacOSX (/tmp is a symbolic link!)
+
+diff --git a/test/posix/dir.sh b/test/posix/dir.sh
+index 42bc676..5b35b09 100755
+--- a/test/posix/dir.sh
++++ b/test/posix/dir.sh
+@@ -38,11 +38,11 @@ if Object.const_defined?(:Dir)
+   end
+ 
+   assert('Dir.getwd') do
+-    Dir.getwd == ENV['PWD']
++    File.realpath(Dir.getwd) == File.realpath(ENV['PWD'])
+   end
+ 
+   assert('Dir.pwd') do
+-    Dir.pwd == ENV['PWD']
++    File.realpath(Dir.pwd) == File.realpath(ENV['PWD'])
+   end
+ 
+   assert('Dir.mkdir') do
+</pre>
+
   </body>
 </html>

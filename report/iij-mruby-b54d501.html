@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - b54d501)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/b54d501" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit b54d501366d2fc07b9ec39d5e15a3bdfcc021c63
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 14:21:55 2012 +0900
+
+    add $/
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3582,5 +3595,36 @@ trap: SIGUSR2: bad trap</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit b54d501366d2fc07b9ec39d5e15a3bdfcc021c63
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 14:21:55 2012 +0900
+
+    add $/
+
+diff --git a/src/ext/io/io.c b/src/ext/io/io.c
+index 7d6989d..e63473a 100644
+--- a/src/ext/io/io.c
++++ b/src/ext/io/io.c
+@@ -1050,7 +1050,7 @@ retry:
+ static void
+ prepare_getline_args(mrb_state *mrb, int argc, mrb_value *argv, mrb_value *rsp, long *limit, mrb_value io)
+ {
+-  mrb_value rs = mrb_str_new_cstr(mrb, "\n");
++  mrb_value rs = mrb_gv_get(mrb, mrb_intern(mrb, "$/"));
+   mrb_value lim = mrb_nil_value();
+ 
+   if (argc == 1) {
+@@ -1889,5 +1889,7 @@ mrb_init_io(mrb_state *mrb)
+ 
+   /* TODO: ADD Kernel Module */
+   /* mrb_define_method(mrb, mrb->kernel_module, "open", mrb_io_f_open, ARGS_ANY()); */
++
++  mrb_gv_set(mrb, mrb_intern(mrb, "$/"), mrb_str_new_cstr(mrb, "\n"));
+ }
+ #endif /* ENABLE_IO */
+</pre>
+
   </body>
 </html>

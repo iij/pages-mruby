@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 326a760)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/326a760" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 326a76043ceb4f69de8808edc8324817694e87d0
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Mon Nov 12 14:27:21 2012 +0900
+
+    "mktemp -t" needs a template string on NetBSD/FreeBSD/MacOSX.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3095,5 +3108,28 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 326a76043ceb4f69de8808edc8324817694e87d0
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Mon Nov 12 14:27:21 2012 +0900
+
+    "mktemp -t" needs a template string on NetBSD/FreeBSD/MacOSX.
+
+diff --git a/test/posix/dir.sh b/test/posix/dir.sh
+index 82cd3ef..42bc676 100755
+--- a/test/posix/dir.sh
++++ b/test/posix/dir.sh
+@@ -12,7 +12,7 @@ setup()
+ 
+ setup
+ 
+-TMPDIR=`mktemp -d -t` || exit 1
++TMPDIR=`mktemp -d -t mrbtest.XXXXXX` || exit 1
+ export TMPDIR
+ 
+ cat ../assert.rb - <<EOF | (cd $TMPDIR; $RUBY) | tee $LOG_FILENAME
+</pre>
+
   </body>
 </html>

@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 8729b0b)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/8729b0b" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit 8729b0b96d722c709ac2690cf1fac1a4e099219f
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:45:43 2012 +0900
+
+    remove "fetch_gem" method
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -197,7 +210,7 @@
           <td>0</td>
           <td>0</td>
           <td></td>
-          <td># Running tests:<br/>...<br/>Finished tests in 3.344983s, 0.8969 tests/s, 0.2990 assertions/s.<br/>3 tests, 1 assertions, 0 failures, 0 errors, 0 skips<br/>..............</td>
+          <td># Running tests:<br/>...<br/>Finished tests in 3.347282s, 0.8962 tests/s, 0.2987 assertions/s.<br/>3 tests, 1 assertions, 0 failures, 0 errors, 0 skips<br/>..............</td>
         </tr>
       
         
@@ -408,7 +421,7 @@
             <td>0</td>
             <td>0</td>
             <td></td>
-            <td>wait 15250 done<br/>wait 21281 done<br/>.<br/>POSIX test result: OK</td>
+            <td>wait 23839 done<br/>wait 22318 done<br/>.<br/>POSIX test result: OK</td>
           </tr>
         
           
@@ -3894,7 +3907,7 @@ Thanks :)
 
 ...
 
-Finished tests in 3.344983s, 0.8969 tests/s, 0.2990 assertions/s.
+Finished tests in 3.347282s, 0.8962 tests/s, 0.2987 assertions/s.
 
 3 tests, 1 assertions, 0 failures, 0 errors, 0 skips
 ..............
@@ -3902,7 +3915,7 @@ Total: 608
    OK: 608
    KO: 0
 Crash: 0
- Time: 47.925394 seconds
+ Time: 47.957618 seconds
 
 # exec mruby test with ruby script
 mrubytest.rb success.
@@ -3932,7 +3945,7 @@ Total: 21
    OK: 21
    KO: 0
 Crash: 0
- Time: 0.050237 seconds
+ Time: 0.030356 seconds
 
 ###################################
 # exec test/posix/env.sh; start...
@@ -3941,7 +3954,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.008311 seconds
+ Time: 0.008649 seconds
 
 ###################################
 # exec test/posix/errno.sh; start...
@@ -3950,7 +3963,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.026281 seconds
+ Time: 0.026554 seconds
 
 ###################################
 # exec test/posix/file.sh; start...
@@ -3959,7 +3972,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.053319 seconds
+ Time: 0.035612 seconds
 
 ###################################
 # exec test/posix/io.sh; start...
@@ -3968,19 +3981,19 @@ Total: 18
    OK: 18
    KO: 0
 Crash: 0
- Time: 0.070558 seconds
+ Time: 0.070361 seconds
 
 ###################################
 # exec test/posix/process.sh; start...
-.....wait 9850 done
-wait 15250 done
-wait 21281 done
+.....wait 20832 done
+wait 23839 done
+wait 22318 done
 .
 Total: 6
    OK: 6
    KO: 0
 Crash: 0
- Time: 0.24707 seconds
+ Time: 0.243582 seconds
 
 ###################################
 # exec test/posix/require.sh; start...
@@ -3989,7 +4002,7 @@ Total: 20
    OK: 20
    KO: 0
 Crash: 0
- Time: 0.901736 seconds
+ Time: 0.905776 seconds
 
 ###################################
 # exec test/posix/syslog.sh; start...
@@ -3998,7 +4011,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.031634 seconds
+ Time: 0.029177 seconds
 
 ###################################
 POSIX test result: OK
@@ -5540,5 +5553,34 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 8729b0b96d722c709ac2690cf1fac1a4e099219f
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:45:43 2012 +0900
+
+    remove "fetch_gem" method
+
+diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
+index f7ecfae..04e2d45 100644
+--- a/mrbgems/build_tasks.rb
++++ b/mrbgems/build_tasks.rb
+@@ -138,13 +138,7 @@ def for_each_gem(&block)
+   IO.readlines(ACTIVE_GEMS).map { |line|
+     path = line.chomp
+     if not File.exist?(path)
+-      gempath = File.join MRUBY_ROOT, 'mrbgems', 'g', path
+-      if File.exist? gempath
+-        path = gempath
+-      else
+-        fetch_gem(path)
+-        path = gempath
+-      end
++      path = File.join(MRUBY_ROOT, 'mrbgems', 'g', path)
+     end
+     gemname = File.basename(path)
+     escaped_gemname = gemname.gsub(/-/, '_')
+</pre>
+
   </body>
 </html>

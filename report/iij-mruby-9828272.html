@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 9828272)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/9828272" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit 982827294a744f56373ef8ab50ee9af6725e2c67
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Tue Dec 25 16:44:04 2012 +0900
+
+    fix Rakefile (Ruby1.8)
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -4919,5 +4932,33 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 982827294a744f56373ef8ab50ee9af6725e2c67
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Tue Dec 25 16:44:04 2012 +0900
+
+    fix Rakefile (Ruby1.8)
+
+diff --git a/Rakefile b/Rakefile
+index 999419b..de1c902 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -2,12 +2,7 @@
+ # basic build file for mruby
+ 
+ def default_make
+-  begin
+-    `gmake -v`
+-  rescue
+-    return 'make'
+-  end
+-  return 'gmake'
++  `which gmake` == "" ? 'make' : 'gmake'
+ end
+ 
+ # compiler, linker (gcc), archiver, parser generator
+</pre>
+
   </body>
 </html>

@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - c6574dd)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/c6574dd" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit c6574ddc4c64940170cbc8b65dda63d76a410ad2
+Author: skandhas <skandhas@163.com>
+Date:   Sun Nov 18 13:41:15 2012 +0800
+
+    delete redundant '__send__' definition
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -2062,5 +2075,27 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit c6574ddc4c64940170cbc8b65dda63d76a410ad2
+Author: skandhas <skandhas@163.com>
+Date:   Sun Nov 18 13:41:15 2012 +0800
+
+    delete redundant '__send__' definition
+
+diff --git a/src/kernel.c b/src/kernel.c
+index adb6164..5fcebc4 100644
+--- a/src/kernel.c
++++ b/src/kernel.c
+@@ -1111,7 +1111,6 @@ mrb_init_kernel(mrb_state *mrb)
+   mrb_define_method(mrb, krn, "remove_instance_variable",   mrb_obj_remove_instance_variable,ARGS_REQ(1));    /* 15.3.1.3.41 */
+   mrb_define_method(mrb, krn, "respond_to?",                obj_respond_to,                  ARGS_ANY());     /* 15.3.1.3.43 */
+   mrb_define_method(mrb, krn, "send",                       mrb_f_send,                      ARGS_ANY());     /* 15.3.1.3.44 */
+-  mrb_define_method(mrb, krn, "__send__",                   mrb_f_send,                      ARGS_ANY());     /* 15.3.1.3.4 */
+   mrb_define_method(mrb, krn, "singleton_methods",          mrb_obj_singleton_methods_m,     ARGS_ANY());     /* 15.3.1.3.45 */
+   mrb_define_method(mrb, krn, "to_s",                       mrb_any_to_s,                    ARGS_NONE());    /* 15.3.1.3.46 */
+ 
+</pre>
+
   </body>
 </html>

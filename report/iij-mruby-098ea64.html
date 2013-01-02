@@ -19,19 +19,33 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 098ea64)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/098ea64" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 098ea64c5ede652fa2fdb9f35c1a4d80a07446ea
+Author: Takashi Sogabe <sogabe@iij.ad.jp>
+Date:   Thu Nov 15 12:38:22 2012 +0900
+
+    Add Pack#pack('aA') and Pack#unpack('aA')
+      - NOTE: There are a lot of code to be refactored in mrb_pack_pack()
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3580,5 +3594,144 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 098ea64c5ede652fa2fdb9f35c1a4d80a07446ea
+Author: Takashi Sogabe <sogabe@iij.ad.jp>
+Date:   Thu Nov 15 12:38:22 2012 +0900
+
+    Add Pack#pack('aA') and Pack#unpack('aA')
+      - NOTE: There are a lot of code to be refactored in mrb_pack_pack()
+
+diff --git a/src/ext/pack/pack.c b/src/ext/pack/pack.c
+index 17e9527..e45df46 100644
+--- a/src/ext/pack/pack.c
++++ b/src/ext/pack/pack.c
+@@ -90,6 +90,7 @@ static mrb_value
+ mrb_pack_pack(mrb_state *mrb, mrb_value ary)
+ {
+   static const char nul10[] = "\0\0\0\0\0\0\0\0\0\0";
++  static const char spc10[] = "          ";
+   const char *p, *pend;
+   char ch, type;
+   mrb_value result, from, fmt;
+@@ -178,8 +179,9 @@ modifiers:
+         }
+         break;
+ 
+-      case 'H':		/* hex string (high nibble first) */
+-        from = NEXTFROM;
++      case 'A': case 'a':
++      case 'H':
++	from = NEXTFROM;
+         if (mrb_nil_p(from)) {
+           ptr = "";
+           plen = 0;
+@@ -191,8 +193,25 @@ modifiers:
+ 
+         if (p[-1] == '*')
+           len = plen;
+-        {
+-          int byte = 0;
++
++	switch (type) {
++	case 'a':	/* arbitrary binary string (null padded) */
++	case 'A':	/* arbitrary binary string (ASCII space padded) */
++	  if (plen >= len) {
++	    mrb_str_buf_cat(mrb, result, ptr, len);
++	  } else {
++	    mrb_str_buf_cat(mrb, result, ptr, plen);
++	    len -= plen;
++	    while (len >= 10) {
++	      mrb_str_buf_cat(mrb, result, (type == 'A')?spc10:nul10, 10);
++	      len -= 10;
++	    }
++	    mrb_str_buf_cat(mrb, result, (type == 'A')? spc10:nul10, len);
++	  }
++	  break;
++
++	case 'H': {	/* hex string (high nibble first) */
++	  int byte = 0;
+           long i, j = 0;
+ 
+           if (len > plen) {
+@@ -218,8 +237,10 @@ modifiers:
+           }
+           len = j;
+           goto grow;
+-        }
+-        break;
++	}
++	break;
++      }
++      break;
+ 
+       case 'm':		/* base64 encoded string */
+         from = NEXTFROM;
+@@ -373,6 +394,27 @@ modifiers:
+         mrb_raisef(mrb, E_ARGUMENT_ERROR, "%% is not supported");
+         break;
+ 
++      case 'A':
++	if (len > send - s) len = send - s;
++	{
++	  long end = len;
++	  char *t = s + len - 1;
++
++	  while (t >= s) {
++	    if (*t != ' ' && *t != '\0') break;
++	    t--; len--;
++	  }
++	  UNPACK_PUSH(mrb_str_new(mrb, RSTRING_PTR(str), len));
++	  s += end;
++	}
++	break;
++
++      case 'a':
++	if (len > send - s) len = send - s;
++	UNPACK_PUSH(mrb_str_new(mrb, RSTRING_PTR(str), len));
++	s += len;
++	break;
++      
+       case 'C':
+         {
+           unsigned char u8;
+diff --git a/test/t/pack.rb b/test/t/pack.rb
+index 0171754..c5b4e5d 100644
+--- a/test/t/pack.rb
++++ b/test/t/pack.rb
+@@ -62,4 +62,30 @@ if Array.new.methods.include?(:pack) and String.new.methods.include?(:unpack)
+    str = "\x00\x01\x7F\x80\xFF"
+    ary.pack("C*") == str and str.unpack("C*") == ary
+   end
++
++  # pack "a"
++  assert('["abc"].pack("a")') do
++    ["abc"].pack("a") == "a" and
++    ["abc"].pack("a*") == "abc" and
++    ["abc"].pack("a4") == "abc\0"
++  end
++
++  # upack "a"
++  assert('["abc"].pack("a")') do
++    "abc\0".unpack("a4") == ["abc\0"] and
++    "abc ".unpack("a4") == ["abc "]
++  end
++
++  # pack "A"
++  assert('["abc"].pack("A")') do
++    ["abc"].pack("A") == "a" and
++    ["abc"].pack("A*") == "abc" and
++    ["abc"].pack("A4") == "abc "
++  end
++
++  # upack "A"
++  assert('["abc"].pack("A")') do
++    "abc\0".unpack("A4") == ["abc"] and
++    "abc ".unpack("A4") == ["abc"]
++  end
+ end
+</pre>
+
   </body>
 </html>

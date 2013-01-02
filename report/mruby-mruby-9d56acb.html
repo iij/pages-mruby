@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 9d56acb)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/mruby/mruby/commit/9d56acb" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
       
         
         
-        
+      <li>
+      <pre>commit 9d56acb7092928d4c8c84e7af80eb3be8aaa2e4e
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 28 17:12:22 2012 +0900
+
+    wrong stack position for headless case; close #675
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1949,5 +1962,51 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 9d56acb7092928d4c8c84e7af80eb3be8aaa2e4e
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 28 17:12:22 2012 +0900
+
+    wrong stack position for headless case; close #675
+
+diff --git a/src/codegen.c b/src/codegen.c
+index c6afa01..eefd9f0 100644
+--- a/src/codegen.c
++++ b/src/codegen.c
+@@ -1205,6 +1205,7 @@ codegen(codegen_scope *s, node *tree, int val)
+             pop();
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s->mrb, "===")), 1));
+           }
++	  pop();
+           tmp = new_label(s);
+           genop(s, MKOP_AsBx(OP_JMPIF, cursp(), pos2));
+           pos2 = tmp;
+@@ -1215,7 +1216,6 @@ codegen(codegen_scope *s, node *tree, int val)
+           genop(s, MKOP_sBx(OP_JMP, 0));
+           dispatch_linked(s, pos2);
+         }
+-	pop();			/* pop HEAD */
+         codegen(s, tree->car->cdr, val);
+ 	if (val) pop();
+         tmp = new_label(s);
+@@ -1223,11 +1223,11 @@ codegen(codegen_scope *s, node *tree, int val)
+         pos3 = tmp;
+         if (pos1) dispatch(s, pos1);
+         tree = tree->cdr;
+-	push();			/* push HEAD */
+       }
+-      pop();			/* pop HEAD */
+-      genop(s, MKOP_A(OP_LOADNIL, cursp()));
+-      if (val) push();
++      if (val) {
++	genop(s, MKOP_A(OP_LOADNIL, cursp()));
++	push();
++      }
+       if (pos3) dispatch_linked(s, pos3);
+     }
+     break;
+</pre>
+
   </body>
 </html>

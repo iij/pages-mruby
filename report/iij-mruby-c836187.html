@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - c836187)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/c836187" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit c836187cf27c058b9e8fd98814e9fc26f05640a5
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 28 18:10:26 2012 +0900
+
+    minor cosmetic change after #676
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -2229,5 +2242,32 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit c836187cf27c058b9e8fd98814e9fc26f05640a5
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Fri Dec 28 18:10:26 2012 +0900
+
+    minor cosmetic change after #676
+
+diff --git a/src/codegen.c b/src/codegen.c
+index 60acd4d..ffa13d6 100644
+--- a/src/codegen.c
++++ b/src/codegen.c
+@@ -1205,9 +1205,9 @@ codegen(codegen_scope *s, node *tree, int val)
+             pop();
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s->mrb, "===")), 1));
+           }
+-          else
+-	          pop();
+-
++          else {
++	    pop();
++	  }
+           tmp = new_label(s);
+           genop(s, MKOP_AsBx(OP_JMPIF, cursp(), pos2));
+           pos2 = tmp;
+</pre>
+
   </body>
 </html>

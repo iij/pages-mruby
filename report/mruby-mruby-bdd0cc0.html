@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - bdd0cc0)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/mruby/mruby/commit/bdd0cc0" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
       
         
         
-        
+      <li>
+      <pre>commit bdd0cc01119d6bd0d6f9d4e4ad16f7af56e6834f
+Author: skandhas <skandhas@163.com>
+Date:   Sun Dec 23 15:52:27 2012 +0800
+
+    add test for Module#class_variable_defined?
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1949,5 +1962,35 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit bdd0cc01119d6bd0d6f9d4e4ad16f7af56e6834f
+Author: skandhas <skandhas@163.com>
+Date:   Sun Dec 23 15:52:27 2012 +0800
+
+    add test for Module#class_variable_defined?
+
+diff --git a/test/t/module.rb b/test/t/module.rb
+index 54d4f30..b3b1ccf 100644
+--- a/test/t/module.rb
++++ b/test/t/module.rb
+@@ -46,6 +46,15 @@ assert('Module#class_eval', '15.2.2.4.15') do
+   r.class == Array and r.include?(:method1)
+ end
+ 
++assert('Module#class_variable_defined?', '15.2.2.4.16') do
++  class Test4ClassVariableDefined
++    @@cv = 99
++  end
++
++  Test4ClassVariableDefined.class_variable_defined?(:@@cv) and
++  not Test4ClassVariableDefined.class_variable_defined?(:@@noexisting)
++end
++
+ assert('Module#class_variable_get', '15.2.2.4.17') do
+   class Test4ClassVariableGet
+     @@cv = 99
+</pre>
+
   </body>
 </html>

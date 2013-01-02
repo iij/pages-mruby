@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - f8ebf17)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/f8ebf17" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit f8ebf1747686ac48da45288c27f6464b62462fc4
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 14:02:43 2012 +0900
+
+    add test: IO#gets(nil) and IO#gets("")
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3580,5 +3593,53 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit f8ebf1747686ac48da45288c27f6464b62462fc4
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Wed Nov 14 14:02:43 2012 +0900
+
+    add test: IO#gets(nil) and IO#gets("")
+
+diff --git a/test/posix/io.sh b/test/posix/io.sh
+index 5c3afa3..4e5de0f 100755
+--- a/test/posix/io.sh
++++ b/test/posix/io.sh
+@@ -161,6 +161,33 @@ if Object.const_defined?(:IO)
+     line1 == "a\n" and line1 == line1_ and line2 == "b\n" and line3 == nil
+   end
+ 
++  assert('IO#gets with nil') do
++    io = File.open("$W_FILENAME", "w")
++    io.write("a\nb\n")
++    io.close
++    io = File.open("$W_FILENAME", "r")
++    body = io.gets(nil)
++    io.close
++    $/ = nil
++    io = File.open("$W_FILENAME", "r")
++    body2 = io.gets
++    io.close
++
++    body == "a\nb\n" and body == body2 and $/ == nil
++  end
++
++  assert('IO#gets with empty string (paragrah mode)') do
++    io = File.open("$W_FILENAME", "w")
++    io.write("a\nb\n\nc\n")
++    io.close
++    io = File.open("$W_FILENAME", "r")
++    para1 = io.gets("")
++    para2 = io.gets("")
++    io.close
++
++    para1 == "a\nb\n\n" and para2 == "c\n"
++  end
++
+   assert('IO#getc') do
+     chars = "a\nb\n"
+ 
+</pre>
+
   </body>
 </html>

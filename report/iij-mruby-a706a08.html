@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - a706a08)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/a706a08" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit a706a08e71bd933f0cb703d6ea788fca07d341f7
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:03:00 2012 +0900
+
+    update mrbges/build_tasks
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1443,12 +1456,12 @@ require.sh: ../../bin/mruby: not found
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08)
-gmake gem-flags -C /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/Makefile4gem'
-gmake: Entering directory `/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
-gmake: Leaving directory `/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
+          <td><textarea>(in /home/mruby/mips/iij-mruby-a706a08)
+gmake gem-flags -C /home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-a706a08/mrbgems/Makefile4gem'
+gmake: Entering directory `/home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
+gmake: Leaving directory `/home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
 rake aborted!
-Command Failed: [gmake gem-flags -C /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/Makefile4gem']
+Command Failed: [gmake gem-flags -C /home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-a706a08/mrbgems/Makefile4gem']
 ./Rakefile:46
 </textarea></td>
           <td><textarea>gmake: *** No rule to make target `gem-flags'.  Stop.
@@ -1456,12 +1469,12 @@ Command Failed: [gmake gem-flags -C /home/mruby/seilx.tokyo.iiji.jp/tmp/work.179
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08)
-gmake gem-flags -C /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/Makefile4gem'
-gmake: Entering directory `/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
-gmake: Leaving directory `/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
+          <td><textarea>(in /home/mruby/mips/iij-mruby-a706a08)
+gmake gem-flags -C /home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-a706a08/mrbgems/Makefile4gem'
+gmake: Entering directory `/home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
+gmake: Leaving directory `/home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest'
 rake aborted!
-Command Failed: [gmake gem-flags -C /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/mrbgems/Makefile4gem']
+Command Failed: [gmake gem-flags -C /home/mruby/mips/iij-mruby-a706a08/mrbgems/g/mruby-mtest  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-a706a08/mrbgems/Makefile4gem']
 ./Rakefile:46
 </textarea></td>
           <td><textarea>gmake: *** No rule to make target `gem-flags'.  Stop.
@@ -1499,12 +1512,12 @@ POSIX test result: NG
   fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh  require.sh  syslog.sh
 ###################################
 </textarea></td>
-            <td><textarea>dir.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/test/posix/../../bin/mruby: not found
+            <td><textarea>dir.sh: /home/mruby/mips/iij-mruby-a706a08/test/posix/../../bin/mruby: not found
 env: ../../bin/mruby: No such file or directory
 errno.sh: ../../bin/mruby: not found
-file.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/test/posix/../../bin/mruby: not found
+file.sh: /home/mruby/mips/iij-mruby-a706a08/test/posix/../../bin/mruby: not found
 io.sh: ../../bin/mruby: not found
-env: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.17901/iij-mruby-a706a08/test/posix/../../bin/mruby: No such file or directory
+env: /home/mruby/mips/iij-mruby-a706a08/test/posix/../../bin/mruby: No such file or directory
 require.sh: ../../bin/mrbc: not found
 mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
 require.sh: ../../bin/mrbc: not found
@@ -1819,5 +1832,65 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit a706a08e71bd933f0cb703d6ea788fca07d341f7
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:03:00 2012 +0900
+
+    update mrbges/build_tasks
+
+diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
+index 86019d1..920b374 100644
+--- a/mrbgems/build_tasks.rb
++++ b/mrbgems/build_tasks.rb
+@@ -21,6 +21,7 @@ end
+ 
+ task :load_mrbgems_flags do
+   for_each_gem do |path, gemname|
++    fetch_gem(gemname)
+     sh "#{MAKE} gem-flags -C #{path} #{gem_make_flags}"
+     CFLAGS << File.read("#{path}/gem-cflags.tmp").chomp
+     LDFLAGS << File.read("#{path}/gem-ldflags.tmp").chomp
+@@ -98,16 +99,22 @@ __EOF__
+   end
+ end
+ 
+-def fetch_gem(gempath)
+-  gemname = File.basename(gempath)
++def fetch_gem(gemname)
++  return if File.exist?(gemname)
++  gempath = File.join MRUBY_ROOT, 'mrbgems', 'g', gemname
++  return if File.exist?(gempath)
++
++  db = {}
+   IO.readlines(GEMS_DATABASE).each { |line|
+     name, url, rev = line.split(',').map{|s| s.strip }
+     rev = 'master' unless rev
+-    if name == gemname
+-      sh "cd #{File.dirname gempath} && git clone #{url} && git checkout #{rev}"
+-      break
+-    end
++    db[name] = [url, rev]
+   }
++
++  url, rev = db[gemname]
++  if url && url != ''
++    sh "cd #{File.dirname gempath} && git clone #{url} && git checkout #{rev}"
++  end
+ end
+ 
+ def for_each_gem(&block)
+@@ -118,7 +125,7 @@ def for_each_gem(&block)
+       if File.exist? gempath
+         path = gempath
+       else
+-        fetch_gem(gempath)
++        fetch_gem(path)
+         path = gempath
+       end
+     end
+</pre>
+
   </body>
 </html>

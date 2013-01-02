@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 58dcbf0)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/58dcbf0" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit 58dcbf01a655b51e0721d1af49378ae092a5a98f
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 13:50:22 2012 +0900
+
+    mruby-digest (mrbgems)
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -197,7 +210,7 @@
           <td>0</td>
           <td>0</td>
           <td></td>
-          <td># Running tests:<br/>...<br/>Finished tests in 3.301518s, 0.9087 tests/s, 0.3029 assertions/s.<br/>3 tests, 1 assertions, 0 failures, 0 errors, 0 skips<br/>...........................................</td>
+          <td># Running tests:<br/>...<br/>Finished tests in 3.291718s, 0.9114 tests/s, 0.3038 assertions/s.<br/>3 tests, 1 assertions, 0 failures, 0 errors, 0 skips<br/>...........................................</td>
         </tr>
       
         
@@ -408,7 +421,7 @@
             <td>0</td>
             <td>0</td>
             <td></td>
-            <td>wait 27873 done<br/>wait 18485 done<br/>.<br/>POSIX test result: OK</td>
+            <td>wait 20643 done<br/>wait 22604 done<br/>.<br/>POSIX test result: OK</td>
           </tr>
         
           
@@ -4172,151 +4185,31 @@ gmake gem-flags -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process  MAKEFIL
 gmake: Entering directory `/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process'
 gmake: Leaving directory `/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process'
 gmake -C src --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0'
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c array.c -o array.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c symbol.c -o symbol.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c st.c -o st.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c string.c -o string.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c proc.c -o proc.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c numeric.c -o numeric.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c init_ext.c -o init_ext.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c enum.c -o enum.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c regerror.c -o regerror.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c range.c -o range.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c variable.c -o variable.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c regexec.c -o regexec.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c dump.c -o dump.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c codegen.c -o codegen.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c compar.c -o compar.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c vm.c -o vm.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c object.c -o object.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c hash.c -o hash.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c error.c -o error.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c regcomp.c -o regcomp.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c re.c -o re.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c math.c -o math.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c compile.c -o compile.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c load.c -o load.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c etc.c -o etc.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c regenc.c -o regenc.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c class.c -o class.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c regparse.c -o regparse.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c pool.c -o pool.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c gc.c -o gc.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c kernel.c -o kernel.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c init.c -o init.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c time.c -o time.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c struct.c -o struct.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c crc.c -o crc.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c cdump.c -o cdump.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c print.c -o print.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c state.c -o state.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c sprintf.c -o sprintf.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
-bison -o ./y.tab.c ./parse.y
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
-ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./st.o ./string.o ./proc.o ./numeric.o ./init_ext.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./dump.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./error.o ./regcomp.o ./re.o ./math.o ./compile.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./gc.o ./kernel.o ./init.o ./time.o ./struct.o ./crc.o ./cdump.o ./print.o ./state.o ./sprintf.o ./ext/env/env.o ./ext/enc/ascii.o ./ext/syslog/syslog.o ./ext/errno/errno.o ./ext/require/require.o ./ext/io/file.o ./ext/io/io.o ./ext/socket/socket.o ./ext/random/random.o  ./y.tab.o
+gmake: Nothing to be done for `all'.
 gmake -C mrblib --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0'
-cat ./*.rb > mrblib1.rbtmp
-cat ./ext/*.rb > mrblib2.rbtmp
-gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS=''
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
-gcc -o ../../bin/mrbc  ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto     
-../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
-../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
-cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I../src -I../include -c mrblib.c -o mrblib.o
-cp ../lib/libmruby_core.a ../lib/libmruby.a
-ar r ../lib/libmruby.a mrblib.o
+gmake: Nothing to be done for `all'.
 -- MAKE mrbgems --
-Generate Gem driver: ./mrbgems/gem_init.c
-Build the driver which initializes all gems
-gcc -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -I/home/mruby/mips/iij-mruby-58dcbf0/include -MMD -c ./mrbgems/gem_init.c -o ./mrbgems/gem_init.o
-ar rs ./mrbgems/gem_init.a ./mrbgems/gem_init.o
 gmake -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 Building Gem 'mruby-mtest'
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mrblib_header.rb 'mruby-mtest' > gem_mrblib_header.ctmp
-cat mrblib/mtest_unit.rb > gem_mrblib.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_mtest -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mrblib.rb 'mruby-mtest' > gem_mrblib_init.ctmp
-cat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mrblib_init.ctmp > gem_mrblib.c
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  gem_mrblib.c -o gem_mrblib.o
 ar rs mrb-mruby-mtest-gem.a gem_mrblib.o
 gmake -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 Building Gem 'mruby-dir'
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  src/dir.c -o src/dir.o
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mrblib_header.rb 'mruby-dir' > gem_mrblib_header.ctmp
-cat mrblib/dir.rb > gem_mrblib.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_dir -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mixlib.rb 'mruby-dir' > gem_mixlib_init.ctmp
-cat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mixlib_init.ctmp > gem_mixlib.c
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  gem_mixlib.c -o gem_mixlib.o
 ar rs mrb-mruby-dir-gem.a  src/dir.o gem_mixlib.o
 gmake -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 Building Gem 'mruby-pack'
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  src/pack.c -o src/pack.o
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_srclib.rb 'mruby-pack' > gem_srclib.c
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  gem_srclib.c -o gem_srclib.o
 ar rs mrb-mruby-pack-gem.a  src/pack.o gem_srclib.o
 gmake -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 Building Gem 'mruby-digest'
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  src/digest.c -o src/digest.o
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mrblib_header.rb 'mruby-digest' > gem_mrblib_header.ctmp
-cat mrblib/digest.rb > gem_mrblib.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_digest -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_mixlib.rb 'mruby-digest' > gem_mixlib_init.ctmp
-cat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mixlib_init.ctmp > gem_mixlib.c
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  gem_mixlib.c -o gem_mixlib.o
 ar rs mrb-mruby-digest-gem.a  src/digest.o gem_mixlib.o
 gmake -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 Building Gem 'process'
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  src/process.c -o src/process.o
-ruby /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/generate_gem_srclib.rb 'process' > gem_srclib.c
-gcc -c -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include  gem_srclib.c -o gem_srclib.o
 ar rs mrb-process-gem.a  src/process.o gem_srclib.o
 gmake -C tools/mruby --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0'
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I/home/mruby/mips/iij-mruby-58dcbf0/src -I/home/mruby/mips/iij-mruby-58dcbf0/src/../include -c /home/mruby/mips/iij-mruby-58dcbf0/src/../tools/mruby/mruby.c -o /home/mruby/mips/iij-mruby-58dcbf0/src/../tools/mruby/mruby.o
 gcc -o /home/mruby/mips/iij-mruby-58dcbf0/bin/mruby  /home/mruby/mips/iij-mruby-58dcbf0/src/../tools/mruby/mruby.o /home/mruby/mips/iij-mruby-58dcbf0/lib/libmruby.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/gem_init.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/mrb-mruby-digest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/mrb-process-gem.a   -lm -lcrypto     
 gmake -C tools/mirb --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0'
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
 gcc -o ../../bin/mirb  ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/gem_init.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/mrb-mruby-digest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/mrb-process-gem.a   -lm -lcrypto     
 </textarea></td>
-          <td><textarea>compile.c: In function `mrb_compile':
-compile.c:38: warning: unused variable `irep_len'
-compile.c: At top level:
-compile.c:21: warning: `replace_stop_with_return' defined but not used
-load.c: In function `load_debug_info_irep':
-load.c:249: warning: `plen' might be used uninitialized in this function
-ar: creating ../lib/libmruby_core.a
-ar: creating ./mrbgems/gem_init.a
-ar: creating mrb-mruby-mtest-gem.a
-ar: creating mrb-mruby-dir-gem.a
-src/pack.c: In function `pack_a':
-src/pack.c:218: warning: unused variable `dlen'
-src/pack.c: In function `unpack_a':
-src/pack.c:271: warning: subscript has type `char'
-src/pack.c:255: warning: unused variable `sptr0'
-src/pack.c: In function `pack_h':
-src/pack.c:284: warning: unused variable `x'
-src/pack.c: In function `unpack_h':
-src/pack.c:329: warning: unused variable `l'
-src/pack.c:330: warning: unused variable `i'
-src/pack.c:331: warning: unused variable `c'
-src/pack.c:331: warning: unused variable `ch'
-src/pack.c: In function `read_tmpl':
-src/pack.c:611: warning: subscript has type `char'
-src/pack.c:515: warning: `type' might be used uninitialized in this function
-ar: creating mrb-mruby-pack-gem.a
-ar: creating mrb-mruby-digest-gem.a
-ar: creating mrb-process-gem.a
-/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+          <td><textarea>/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
 /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
 /usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
 /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
@@ -4374,34 +4267,19 @@ gmake gem-flags -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack  MAKE
 gmake gem-flags -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 gmake gem-flags -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process  MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
 gmake gem-test -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto          ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
-cat test/mtest_unit_test.rb > gem_test.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_mtest_test -ogem_test.ctmp gem_test.rbtmp
-echo "void mrb_mruby_mtest_gem_test_init(mrb_state* mrb) { }" >> gem_test.ctmp
+gmake[1]: Nothing to be done for `gem-test'.
 gmake gem-test -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto          ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
-cat test/dir.rb > gem_test.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_dir_test -ogem_test.ctmp gem_test.rbtmp
-echo "void mrb_mruby_dir_gem_test_init(mrb_state* mrb) { }" >> gem_test.ctmp
+gmake[1]: Nothing to be done for `gem-test'.
 gmake gem-test -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto          ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
-cat test/pack.rb > gem_test.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_pack_test -ogem_test.ctmp gem_test.rbtmp
-echo "void mrb_mruby_pack_gem_test_init(mrb_state* mrb) { }" >> gem_test.ctmp
+gmake[1]: Nothing to be done for `gem-test'.
 gmake gem-test -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto          ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
-cat test/digest.rb > gem_test.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_mruby_digest_test -ogem_test.ctmp gem_test.rbtmp
-echo "void mrb_mruby_digest_gem_test_init(mrb_state* mrb) { }" >> gem_test.ctmp
+gmake[1]: Nothing to be done for `gem-test'.
 gmake gem-test -C /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src' LDFLAGS='     ' LIBS='-lm -lcrypto          ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-58dcbf0' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/Makefile4gem'
-cat test/process.rb > gem_test.rbtmp
-/home/mruby/mips/iij-mruby-58dcbf0/bin/mrbc -Bgem_mrblib_irep_process_test -ogem_test.ctmp gem_test.rbtmp
-echo "void mrb_process_gem_test_init(mrb_state* mrb) { }" >> gem_test.ctmp
+gmake[1]: Nothing to be done for `gem-test'.
 cat /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/gem_test.ctmp /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/gem_test.ctmp /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/gem_test.ctmp /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/gem_test.ctmp /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/gem_test.ctmp  >> /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mrbgemtest.ctmp
-gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I./../src -I./../include -c driver.c -o driver.o
-cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
-../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp
 cat init_mrbtest.c mrbtest.ctmp ../mrbgems/g/mrbgemtest.ctmp > mrbtest.c
 gcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-58dcbf0/include -I/home/mruby/mips/iij-mruby-58dcbf0/src -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
 gcc -o mrbtest  driver.o mrbtest.o ../lib/libmruby.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/gem_init.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/mruby-digest/mrb-mruby-digest-gem.a /home/mruby/mips/iij-mruby-58dcbf0/mrbgems/g/process/mrb-process-gem.a  -lm -lcrypto     
-cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
-../bin/mrbc mrubytest.rb
 # exec mrbtest
 ./mrbtest
 mrbtest - Embeddable Ruby Test
@@ -4414,7 +4292,7 @@ Thanks :)
 
 ...
 
-Finished tests in 3.301518s, 0.9087 tests/s, 0.3029 assertions/s.
+Finished tests in 3.291718s, 0.9114 tests/s, 0.3038 assertions/s.
 
 3 tests, 1 assertions, 0 failures, 0 errors, 0 skips
 ...........................................
@@ -4422,7 +4300,7 @@ Total: 608
    OK: 608
    KO: 0
 Crash: 0
- Time: 48.003154 seconds
+ Time: 47.875817 seconds
 
 # exec mruby test with ruby script
 mrubytest.rb success.
@@ -4452,7 +4330,7 @@ Total: 21
    OK: 21
    KO: 0
 Crash: 0
- Time: 0.046665 seconds
+ Time: 0.101923 seconds
 
 ###################################
 # exec test/posix/env.sh; start...
@@ -4461,7 +4339,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.008751 seconds
+ Time: 0.008747 seconds
 
 ###################################
 # exec test/posix/errno.sh; start...
@@ -4470,7 +4348,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.04947 seconds
+ Time: 0.026392 seconds
 
 ###################################
 # exec test/posix/file.sh; start...
@@ -4479,7 +4357,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.183535 seconds
+ Time: 0.163971 seconds
 
 ###################################
 # exec test/posix/io.sh; start...
@@ -4488,19 +4366,19 @@ Total: 18
    OK: 18
    KO: 0
 Crash: 0
- Time: 0.07023 seconds
+ Time: 0.120893 seconds
 
 ###################################
 # exec test/posix/process.sh; start...
-.....wait 19691 done
-wait 27873 done
-wait 18485 done
+.....wait 21928 done
+wait 20643 done
+wait 22604 done
 .
 Total: 6
    OK: 6
    KO: 0
 Crash: 0
- Time: 0.246712 seconds
+ Time: 0.246446 seconds
 
 ###################################
 # exec test/posix/require.sh; start...
@@ -4509,7 +4387,7 @@ Total: 20
    OK: 20
    KO: 0
 Crash: 0
- Time: 0.900699 seconds
+ Time: 0.897384 seconds
 
 ###################################
 # exec test/posix/syslog.sh; start...
@@ -4518,7 +4396,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.028616 seconds
+ Time: 0.027607 seconds
 
 ###################################
 POSIX test result: OK
@@ -6170,5 +6048,1144 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 58dcbf01a655b51e0721d1af49378ae092a5a98f
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 13:50:22 2012 +0900
+
+    mruby-digest (mrbgems)
+
+diff --git a/include/mrbconf.h b/include/mrbconf.h
+index 5ac3c51..6ebcb4c 100644
+--- a/include/mrbconf.h
++++ b/include/mrbconf.h
+@@ -53,7 +53,6 @@
+ //#define DISABLE_IO
+ //#define DISABLE_SOCKET
+ //#define DISABLE_ENV
+-//#define DISABLE_DIGEST	/* requires CommonCrypto or OpenSSL */
+ //#define DISABLE_SYSLOG	/* requires Syslog */
+ //#define DISABLE_ERRNO
+ //#define DISABLE_REQUIRE
+@@ -67,12 +66,6 @@
+ #undef  HAVE_UNISTD_H /* WINDOWS */
+ #define HAVE_UNISTD_H /* LINUX */
+ 
+-#ifdef __APPLE__
+-#define USE_DIGEST_OSX_COMMONCRYPTO
+-#else
+-#define USE_DIGEST_OPENSSL
+-#endif
+-
+ /* end of configuration */
+ 
+ #ifdef MRB_USE_FLOAT
+@@ -140,9 +133,6 @@ typedef short mrb_sym;
+ #ifndef DISABLE_ENV
+ #define ENABLE_ENV
+ #endif
+-#ifndef DISABLE_DIGEST
+-#define ENABLE_DIGEST
+-#endif
+ #ifndef DISABLE_SYSLOG
+ #define ENABLE_SYSLOG
+ #endif
+diff --git a/mrbgems/GEMS.active b/mrbgems/GEMS.active
+index c59d575..352088a 100644
+--- a/mrbgems/GEMS.active
++++ b/mrbgems/GEMS.active
+@@ -1,4 +1,5 @@
+ mruby-mtest
+ mruby-dir
+ mruby-pack
++mruby-digest
+ process
+diff --git a/mrbgems/GEMS.db b/mrbgems/GEMS.db
+index 9de901d..9e7b592 100644
+--- a/mrbgems/GEMS.db
++++ b/mrbgems/GEMS.db
+@@ -2,3 +2,4 @@ mruby-dir, https://github.com/iij/mruby-dir.git
+ mruby-mtest, https://github.com/iij/mruby-mtest.git
+ mruby-syslog, https://github.com/iij/mruby-syslog.git
+ mruby-pack, https://github.com/iij/mruby-pack.git
++mruby-digest, https://github.com/iij/mruby-digest.git
+diff --git a/mrblib/ext/digest.rb b/mrblib/ext/digest.rb
+deleted file mode 100644
+index 7779f54..0000000
+--- a/mrblib/ext/digest.rb
++++ /dev/null
+@@ -1,46 +0,0 @@
+-if Object.const_defined? :Digest
+-module Digest
+-  class Base
+-    def self.digest(data)
+-      self.new.update(data).digest
+-    end
+-    def self.file(path)
+-      self.new.update(File.open(path).read)
+-    end
+-    def self.hexdigest(data)
+-      self.new.update(data).hexdigest
+-    end
+-    def ==(other)
+-      if other.kind_of? String
+-        self.hexdigest == other
+-      else 
+-        self.digest == other.digest
+-      end
+-    end
+-    def file(path)
+-      self.update(File.open(path).read)
+-    end
+-    def hexdigest!
+-      x = self.hexdigest
+-      self.reset
+-      x
+-    end
+-
+-    alias length digest_length
+-    alias size digest_length
+-    alias to_s hexdigest
+-    alias << update
+-  end
+-
+-  class HMAC
+-    def self.digest(data, key, digest)
+-      self.new(key, digest).update(data).digest
+-    end
+-    def self.hexdigest(data, key, digest)
+-      self.new(key, digest).update(data).hexdigest
+-    end
+-
+-    alias << update
+-  end
+-end
+-end
+diff --git a/src/ext/digest/digest.c b/src/ext/digest/digest.c
+deleted file mode 100644
+index 4981e32..0000000
+--- a/src/ext/digest/digest.c
++++ /dev/null
+@@ -1,786 +0,0 @@
+-/*
+-** digest.c - Digest and subclasses
+-**
+-** See Copyright Notice in mruby.h
+-*/
+-
+-#include "mruby.h"
+-#ifdef ENABLE_DIGEST
+-#if defined(USE_DIGEST_OPENSSL)
+-#include <openssl/evp.h>
+-#include <openssl/hmac.h>
+-#include <openssl/sha.h>
+-#elif defined(USE_DIGEST_OSX_COMMONCRYPTO)
+-#include <CommonCrypto/CommonDigest.h>
+-#include <CommonCrypto/CommonHMAC.h>
+-#else
+-#error "define USE_DIGEST_OPENSSL or USE_DIGEST_OSX_COMMONCRYPTO"
+-#endif
+-#include <stdio.h>
+-#include <string.h>
+-#include "mruby/array.h"
+-#include "mruby/class.h"
+-#include "mruby/data.h"
+-#include "mruby/string.h"
+-#include "mruby/variable.h"
+-
+-#include <err.h>
+-
+-#define TYPESYM "__type__"
+-
+-
+-/*
+- * library-independent layer API
+- */
+-enum {
+-	MD_TYPE_MD5,
+-	MD_TYPE_RMD160,
+-	MD_TYPE_SHA1,
+-	MD_TYPE_SHA256,
+-	MD_TYPE_SHA384,
+-	MD_TYPE_SHA512,
+-};
+-
+-struct mrb_md;
+-struct mrb_hmac;
+-
+-static void lib_init(void);
+-static int lib_md_block_length(const struct mrb_md *);
+-static mrb_value lib_md_digest(mrb_state *, const struct mrb_md *);
+-static mrb_value lib_md_digest_bang(mrb_state *, struct mrb_md *);
+-static int lib_md_digest_length(const struct mrb_md *);
+-static void lib_md_free(mrb_state *, void *);
+-static void lib_md_init(mrb_state *, struct mrb_md *, int);
+-static void lib_md_init_copy(mrb_state *, struct mrb_md *, struct mrb_md *);
+-static void lib_md_reset(mrb_state *, struct mrb_md *);
+-static void lib_md_update(mrb_state *, struct mrb_md *, unsigned char *, int);
+-
+-static mrb_value lib_hmac_digest(mrb_state *, const struct mrb_hmac *);
+-static int lib_hmac_block_length(const struct mrb_hmac *);
+-static int lib_hmac_digest_length(const struct mrb_hmac *);
+-static void lib_hmac_free(mrb_state *, void *);
+-static void lib_hmac_init(mrb_state *, struct mrb_hmac *, int, const unsigned char *, int);
+-static void lib_hmac_update(struct mrb_hmac *, unsigned char *, int);
+-
+-
+-#if defined(USE_DIGEST_OPENSSL)
+-/*
+- * OpenSSL Implementation
+- */
+-
+-#define HAVE_MD5
+-#define HAVE_RMD160
+-#define HAVE_SHA1
+-#ifdef SHA256_DIGEST_LENGTH
+-#define HAVE_SHA256
+-#endif
+-#ifdef SHA512_DIGEST_LENGTH
+-#define HAVE_SHA384
+-#define HAVE_SHA512
+-#endif
+-
+-struct mrb_md {
+-  EVP_MD_CTX *ctx;
+-};
+-
+-struct mrb_hmac {
+-  HMAC_CTX ctx;
+-  const EVP_MD *md;
+-};
+-
+-static void
+-lib_md_free(mrb_state *mrb, void *ptr)
+-{
+-  struct mrb_md *md = ptr;
+-
+-  EVP_MD_CTX_destroy(md->ctx);
+-  mrb_free(mrb, md);
+-}
+-
+-static void
+-lib_hmac_free(mrb_state *mrb, void *ptr)
+-{
+-  struct mrb_hmac *hmac = ptr;
+-
+-  HMAC_CTX_cleanup(&hmac->ctx);
+-  mrb_free(mrb, hmac);
+-}
+-
+-static struct mrb_data_type mrb_md_type = { "MD", lib_md_free };
+-static struct mrb_data_type mrb_hmac_type = { "HMAC", lib_hmac_free };
+-
+-static void
+-lib_init(void)
+-{
+-  OpenSSL_add_all_digests();
+-}
+-
+-static int
+-lib_md_block_length(const struct mrb_md *md)
+-{
+-  return EVP_MD_CTX_block_size(md->ctx);
+-}
+-
+-static mrb_value
+-lib_md_digest(mrb_state *mrb, const struct mrb_md *md)
+-{
+-  EVP_MD_CTX ctx;
+-  unsigned int mdlen;
+-  unsigned char mdstr[EVP_MAX_MD_SIZE];
+-
+-  EVP_MD_CTX_copy(&ctx, md->ctx);
+-  EVP_DigestFinal_ex(&ctx, mdstr, &mdlen);
+-  return mrb_str_new(mrb, (char *)mdstr, mdlen);
+-}
+-
+-static mrb_value
+-lib_md_digest_bang(mrb_state *mrb, struct mrb_md *md)
+-{
+-  unsigned int mdlen;
+-  unsigned char mdstr[EVP_MAX_MD_SIZE];
+-
+-  EVP_DigestFinal_ex(md->ctx, mdstr, &mdlen);
+-  EVP_DigestInit_ex(md->ctx, EVP_MD_CTX_md(md->ctx), NULL);
+-  return mrb_str_new(mrb, (char *)mdstr, mdlen);
+-}
+-
+-static int
+-lib_md_digest_length(const struct mrb_md *md)
+-{
+-  return EVP_MD_CTX_size(md->ctx);
+-}
+-
+-const EVP_MD *
+-md_type_md(int type)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	return EVP_md5();
+-  case MD_TYPE_RMD160:	return EVP_ripemd160();
+-  case MD_TYPE_SHA1:	return EVP_sha1();
+-#ifdef HAVE_SHA256
+-  case MD_TYPE_SHA256:	return EVP_sha256();
+-#endif
+-#ifdef HAVE_SHA512
+-  case MD_TYPE_SHA384:	return EVP_sha384();
+-  case MD_TYPE_SHA512:	return EVP_sha512();
+-#endif
+-  default:		return NULL;
+-  }
+-}
+-
+-static void
+-lib_md_init(mrb_state *mrb, struct mrb_md *md, int type)
+-{
+-  const EVP_MD *evpmd;
+-
+-  evpmd = md_type_md(type);
+-  if (!evpmd) {
+-    mrb_raise(mrb, E_NOTIMP_ERROR, "not supported");
+-  }
+-  md->ctx = EVP_MD_CTX_create();
+-  EVP_DigestInit_ex(md->ctx, evpmd, NULL);
+-}
+-
+-static void
+-lib_md_init_copy(mrb_state *mrb, struct mrb_md *mdnew, struct mrb_md *mdold)
+-{
+-  mdnew->ctx = EVP_MD_CTX_create();
+-  EVP_DigestInit_ex(mdnew->ctx, EVP_MD_CTX_md(mdold->ctx), NULL);
+-}
+-
+-static void
+-lib_md_reset(mrb_state *mrb, struct mrb_md *md)
+-{
+-  //EVP_MD_CTX_init(&md->ctx);
+-  EVP_DigestInit_ex(md->ctx, EVP_MD_CTX_md(md->ctx), NULL);
+-}
+-
+-static void
+-lib_md_update(mrb_state *mrb, struct mrb_md *md, unsigned char *str, int len)
+-{
+-  EVP_DigestUpdate(md->ctx, str, len);
+-}
+-
+-static mrb_value
+-lib_hmac_digest(mrb_state *mrb, const struct mrb_hmac *hmac)
+-{
+-  HMAC_CTX ctx;
+-  unsigned int mdlen;
+-  unsigned char mdstr[EVP_MAX_MD_SIZE];
+-
+-  memcpy(&ctx, &hmac->ctx, sizeof(ctx));
+-  HMAC_Final(&ctx, mdstr, &mdlen);
+-  return mrb_str_new(mrb, (char *)mdstr, mdlen);
+-}
+-
+-static int
+-lib_hmac_block_length(const struct mrb_hmac *hmac)
+-{
+-  return EVP_MD_block_size(hmac->md);
+-}
+-
+-static int
+-lib_hmac_digest_length(const struct mrb_hmac *hmac)
+-{
+-  return EVP_MD_size(hmac->md);
+-}
+-
+-static void
+-lib_hmac_init(mrb_state *mrb, struct mrb_hmac *hmac, int type, const unsigned char *key, int keylen)
+-{
+-  hmac->md = md_type_md(type);
+-  HMAC_CTX_init(&hmac->ctx);
+-  HMAC_Init_ex(&hmac->ctx, key, keylen, hmac->md, NULL);
+-}
+-
+-static void
+-lib_hmac_update(struct mrb_hmac *hmac, unsigned char *data, int len)
+-{
+-  HMAC_Update(&hmac->ctx, data, len);
+-}
+-
+-#elif defined(USE_DIGEST_OSX_COMMONCRYPTO)
+-/*
+- * Mac OS X CommonCrypto Implementation
+- */
+-
+-#define HAVE_MD5
+-/* #define HAVE_RMD160 */
+-#define HAVE_SHA1
+-#define HAVE_SHA256
+-#define HAVE_SHA384
+-#define HAVE_SHA512
+-
+-struct mrb_md {
+-  int type;
+-  void *ctx;
+-  int ctx_size;
+-};
+-
+-struct mrb_hmac {
+-  int type;
+-  CCHmacContext ctx;
+-};
+-
+-static int
+-md_ctx_size(int type)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	return sizeof(CC_MD5_CTX);
+-  case MD_TYPE_SHA1:	return sizeof(CC_SHA1_CTX);
+-  case MD_TYPE_SHA256:	return sizeof(CC_SHA256_CTX);
+-  case MD_TYPE_SHA384:	return sizeof(CC_SHA512_CTX);	/* ! */
+-  case MD_TYPE_SHA512:	return sizeof(CC_SHA512_CTX);
+-  default:		return 0;
+-  }
+-}
+-
+-static void
+-lib_md_free(mrb_state *mrb, void *ptr)
+-{
+-  struct mrb_md *md = ptr;
+-
+-  memset(md->ctx, 0, md_ctx_size(md->type));
+-  mrb_free(mrb, md->ctx);
+-  mrb_free(mrb, md);
+-}
+-
+-static void
+-lib_hmac_free(mrb_state *mrb, void *ptr)
+-{
+-  struct mrb_hmac *hmac = ptr;
+-
+-  memset(&hmac->ctx, 0, sizeof(hmac->ctx));
+-  mrb_free(mrb, hmac);
+-}
+-
+-static struct mrb_data_type mrb_md_type = { "MD", lib_md_free };
+-static struct mrb_data_type mrb_hmac_type = { "HMAC", lib_hmac_free };
+-
+-#define MAX_DIGEST_LENGTH	CC_SHA512_DIGEST_LENGTH
+-
+-union ctx_union {
+-  CC_MD5_CTX md5;
+-  CC_SHA1_CTX sha1;
+-  CC_SHA256_CTX sha256;
+-  /* we don't have CC_SHA384_CTX! */
+-  CC_SHA512_CTX sha512;
+-};
+-
+-static void
+-lib_init(void)
+-{
+-}
+-
+-static int
+-md_block_length(int type)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	return CC_MD5_BLOCK_BYTES;
+-  case MD_TYPE_SHA1:	return CC_SHA1_BLOCK_BYTES;
+-  case MD_TYPE_SHA256:	return CC_SHA256_BLOCK_BYTES;
+-  case MD_TYPE_SHA384:	return CC_SHA384_BLOCK_BYTES;
+-  case MD_TYPE_SHA512:	return CC_SHA512_BLOCK_BYTES;
+-  default:		return 0;
+-  }
+-}
+-
+-static int
+-lib_md_block_length(const struct mrb_md *md)
+-{
+-  return md_block_length(md->type);
+-}
+-
+-static void
+-md_init(int type, void *ctxp)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	CC_MD5_Init(ctxp);    break;
+-  case MD_TYPE_SHA1:	CC_SHA1_Init(ctxp);   break;
+-  case MD_TYPE_SHA256:	CC_SHA256_Init(ctxp); break;
+-  case MD_TYPE_SHA384:	CC_SHA384_Init(ctxp); break;
+-  case MD_TYPE_SHA512:	CC_SHA512_Init(ctxp); break;
+-  default:				      break;
+-  }
+-}
+-
+-static void
+-md_final(int type, unsigned char *str, void *ctx)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	CC_MD5_Final(str, ctx);		break;
+-  case MD_TYPE_SHA1:	CC_SHA1_Final(str, ctx);	break;
+-  case MD_TYPE_SHA256:	CC_SHA256_Final(str, ctx);	break;
+-  case MD_TYPE_SHA384:	CC_SHA384_Final(str, ctx);	break;
+-  case MD_TYPE_SHA512:	CC_SHA512_Final(str, ctx);	break;
+-  default:						break;
+-  }
+-}
+-
+-static int
+-md_digest_length(int type)
+-{
+-  switch (type) {
+-  case MD_TYPE_MD5:	return 16;
+-  case MD_TYPE_SHA1:	return 20;
+-  case MD_TYPE_SHA256:	return 32;
+-  case MD_TYPE_SHA384:	return 48;
+-  case MD_TYPE_SHA512:	return 64;
+-  default:		return 0;
+-  }
+-}
+-
+-static mrb_value
+-lib_md_digest(mrb_state *mrb, const struct mrb_md *md)
+-{
+-  union ctx_union ctx;
+-  unsigned char mdstr[MAX_DIGEST_LENGTH];
+-
+-  memcpy(&ctx, md->ctx, md_ctx_size(md->type));
+-  md_final(md->type, mdstr, &ctx);
+-  return mrb_str_new(mrb, (char *)mdstr, md_digest_length(md->type));
+-}
+-
+-static mrb_value
+-lib_md_digest_bang(mrb_state *mrb, struct mrb_md *md)
+-{
+-  unsigned char mdstr[MAX_DIGEST_LENGTH];
+-
+-  md_final(md->type, mdstr, md->ctx);
+-  md_init(md->type, md->ctx);
+-  return mrb_str_new(mrb, (char *)mdstr, md_digest_length(md->type));
+-}
+-
+-static int
+-lib_md_digest_length(const struct mrb_md *md)
+-{
+-  return md_digest_length(md->type);
+-}
+-
+-static void
+-lib_md_init(mrb_state *mrb, struct mrb_md *md, int type)
+-{
+-  int ctxsize;
+-
+-  ctxsize = md_ctx_size(type);
+-  if (ctxsize == 0) {
+-    mrb_raise(mrb, E_NOTIMP_ERROR, "not supported");
+-  }
+-  md->type = type;
+-  md->ctx = mrb_malloc(mrb, ctxsize);
+-  md_init(type, md->ctx);
+-}
+-
+-static void
+-lib_md_init_copy(mrb_state *mrb, struct mrb_md *mdnew, struct mrb_md *mdold)
+-{
+-  lib_md_init(mrb, mdnew, mdold->type);
+-}
+-
+-static void
+-lib_md_reset(mrb_state *mrb, struct mrb_md *md)
+-{
+-  md_init(md->type, md->ctx);
+-}
+-
+-static void
+-lib_md_update(mrb_state *mrb, struct mrb_md *md, unsigned char *data, int len)
+-{
+-  switch (md->type) {
+-  case MD_TYPE_MD5:	CC_MD5_Update(md->ctx, data, len);	break;
+-  case MD_TYPE_SHA1:	CC_SHA1_Update(md->ctx, data, len);	break;
+-  case MD_TYPE_SHA256:	CC_SHA256_Update(md->ctx, data, len);	break;
+-  case MD_TYPE_SHA384:	CC_SHA384_Update(md->ctx, data, len);	break;
+-  case MD_TYPE_SHA512:	CC_SHA512_Update(md->ctx, data, len);	break;
+-  default: break;
+-  }
+-}
+-
+-static int
+-lib_hmac_block_length(const struct mrb_hmac *hmac)
+-{
+-  return md_block_length(hmac->type);
+-}
+-
+-static mrb_value
+-lib_hmac_digest(mrb_state *mrb, const struct mrb_hmac *hmac)
+-{
+-  CCHmacContext ctx;
+-  unsigned char str[MAX_DIGEST_LENGTH];
+-
+-  memcpy(&ctx, &hmac->ctx, sizeof(ctx));
+-  CCHmacFinal(&ctx, str);
+-  return mrb_str_new(mrb, (const char *)str, md_digest_length(hmac->type));
+-}
+-
+-static int
+-lib_hmac_digest_length(const struct mrb_hmac *hmac)
+-{
+-  return md_digest_length(hmac->type);
+-}
+-
+-static void
+-lib_hmac_init(mrb_state *mrb, struct mrb_hmac *hmac, int type, const unsigned char *key, int keylen)
+-{
+-  CCHmacAlgorithm algorithm;
+-
+-  switch (type) {
+-  case MD_TYPE_MD5:    algorithm = kCCHmacAlgMD5;    break;
+-  case MD_TYPE_SHA1:   algorithm = kCCHmacAlgSHA1;   break;
+-  case MD_TYPE_SHA256: algorithm = kCCHmacAlgSHA256; break;
+-  case MD_TYPE_SHA384: algorithm = kCCHmacAlgSHA384; break;
+-  case MD_TYPE_SHA512: algorithm = kCCHmacAlgSHA512; break;
+-  default:					     break;
+-  }
+-  hmac->type = type;
+-  CCHmacInit(&hmac->ctx, algorithm, key, keylen);
+-}
+-
+-static void
+-lib_hmac_update(struct mrb_hmac *hmac, unsigned char *data, int len)
+-{
+-  CCHmacUpdate(&hmac->ctx, data, len);
+-}
+-
+-#endif
+-
+-static void
+-basecheck(mrb_state *mrb, mrb_value self, struct mrb_md **mdp)
+-{
+-  struct RClass *c;
+-  struct mrb_md *md;
+-  mrb_value t;
+-
+-  c = mrb_obj_class(mrb, self);
+-  t = mrb_const_get(mrb, mrb_obj_value(c), mrb_intern(mrb, TYPESYM));
+-  if (mrb_nil_p(t)) {
+-    mrb_raise(mrb, E_NOTIMP_ERROR, "Digest::Base is an abstract class");
+-  }
+-  md = (struct mrb_md *)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (!md) {
+-    mrb_raise(mrb, E_RUNTIME_ERROR, "no md found (BUG?)");
+-  }
+-  if (mdp) *mdp = md;
+-}
+-
+-static mrb_value
+-mrb_digest_block_length(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-
+-  basecheck(mrb, self, &md);
+-  return mrb_fixnum_value(lib_md_block_length(md));
+-}
+-
+-static mrb_value
+-mrb_digest_digest(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-
+-  md = (struct mrb_md *)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (!md) return mrb_nil_value();
+-  return lib_md_digest(mrb, md);
+-}
+-
+-static mrb_value
+-mrb_digest_digest_bang(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-
+-  md = (struct mrb_md *)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (!md) return mrb_nil_value();
+-  return lib_md_digest_bang(mrb, md);
+-}
+-
+-static mrb_value
+-mrb_digest_digest_length(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-
+-  basecheck(mrb, self, &md);
+-  return mrb_fixnum_value(lib_md_digest_length(md));
+-}
+-
+-static mrb_value
+-digest2hexdigest(mrb_state *mrb, mrb_value b)
+-{
+-  mrb_value h;
+-  int i, len;
+-  char *bp, buf[3];
+-
+-  bp = RSTRING_PTR(b);
+-  len = RSTRING_LEN(b);
+-  h = mrb_str_buf_new(mrb, len * 2);
+-  for (i = 0; i < len; i++) {
+-    snprintf(buf, sizeof(buf), "%02x", (unsigned char )bp[i]);
+-    mrb_str_buf_cat(mrb, h, buf, 2);
+-  }
+-  return h;
+-}
+-
+-static mrb_value
+-mrb_digest_hexdigest(mrb_state *mrb, mrb_value self)
+-{
+-  return digest2hexdigest(mrb, mrb_digest_digest(mrb, self));
+-}
+-
+-static mrb_value
+-mrb_digest_init(mrb_state *mrb, mrb_value self)
+-{
+-  struct RClass *c;
+-  struct mrb_md *md;
+-  mrb_value t;
+-
+-  c = mrb_obj_class(mrb, self);
+-  if (!mrb_const_defined(mrb, mrb_obj_value(c), mrb_intern(mrb, TYPESYM))) {
+-    mrb_raise(mrb, E_NOTIMP_ERROR, "Digest::Base is an abstract class");
+-  }
+-  t = mrb_const_get(mrb, mrb_obj_value(c), mrb_intern(mrb, TYPESYM));
+-#if 0
+-  if (lib_md_supported(t)) {
+-    mrb_raise(mrb, E_NOTIMP_ERROR, "unknown algorithm");
+-  }
+-#endif
+-
+-  md = (struct mrb_md*)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (md) {
+-    lib_md_free(mrb, md);
+-  }
+-
+-  md = (struct mrb_md *)mrb_malloc(mrb, sizeof(*md));
+-  lib_md_init(mrb, md, mrb_fixnum(t));
+-  DATA_PTR(self) = md;
+-  DATA_TYPE(self) = &mrb_md_type;
+-  return self;
+-}
+-
+-static mrb_value
+-mrb_digest_init_copy(mrb_state *mrb, mrb_value copy)
+-{
+-  struct mrb_md *m1, *m2;
+-  mrb_value src;
+-
+-  mrb_get_args(mrb, "o", &src);
+-  if (mrb_obj_equal(mrb, copy, src)) return copy;
+-  if (!mrb_obj_is_instance_of(mrb, src, mrb_obj_class(mrb, copy))) {
+-    mrb_raise(mrb, E_TYPE_ERROR, "wrong argument class");
+-  }
+-  if (!DATA_PTR(copy)) {
+-    DATA_PTR(copy) = mrb_malloc(mrb, sizeof(struct mrb_md));
+-    DATA_TYPE(copy) = &mrb_md_type;
+-  }
+-  m1 = DATA_PTR(src);
+-  m2 = DATA_PTR(copy);
+-  lib_md_init_copy(mrb, m2, m1);
+-  return copy;
+-}
+-
+-static mrb_value
+-mrb_digest_reset(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-
+-  md = (struct mrb_md *)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (!md) return mrb_nil_value();
+-  lib_md_reset(mrb, md);
+-  return self;
+-}
+-
+-static mrb_value
+-mrb_digest_update(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_md *md;
+-  int len;
+-  char *str;
+-
+-  md = (struct mrb_md *)mrb_get_datatype(mrb, self, &mrb_md_type);
+-  if (!md) return mrb_nil_value();
+-  mrb_get_args(mrb, "s", &str, &len);
+-  lib_md_update(mrb, md, (unsigned char *)str, len);
+-  return self;
+-}
+-
+-static mrb_value
+-mrb_hmac_block_length(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_hmac *hmac;
+-
+-  hmac = (struct mrb_hmac *)mrb_get_datatype(mrb, self, &mrb_hmac_type);
+-  if (!hmac) return mrb_nil_value();
+-  return mrb_fixnum_value(lib_hmac_block_length(hmac));
+-}
+-
+-static mrb_value
+-mrb_hmac_digest(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_hmac *hmac;
+-
+-  hmac = (struct mrb_hmac *)mrb_get_datatype(mrb, self, &mrb_hmac_type);
+-  if (!hmac) return mrb_nil_value();
+-  return lib_hmac_digest(mrb, hmac);
+-}
+-
+-static mrb_value
+-mrb_hmac_digest_length(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_hmac *hmac;
+-
+-  hmac = (struct mrb_hmac *)mrb_get_datatype(mrb, self, &mrb_hmac_type);
+-  if (!hmac) return mrb_nil_value();
+-  return mrb_fixnum_value(lib_hmac_digest_length(hmac));
+-}
+-
+-static mrb_value
+-mrb_hmac_hexdigest(mrb_state *mrb, mrb_value self)
+-{
+-  return digest2hexdigest(mrb, mrb_hmac_digest(mrb, self));
+-}
+-
+-static mrb_value
+-mrb_hmac_init(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_hmac *hmac;
+-  mrb_value digest, t;
+-  int keylen;
+-  char *key;
+-
+-  mrb_get_args(mrb, "so", &key, &keylen, &digest);
+-  t = mrb_const_get(mrb, digest, mrb_intern(mrb, TYPESYM));
+-  if (mrb_nil_p(t)) {
+-    mrb_raise(mrb, E_RUNTIME_ERROR, "not a digester");
+-  }
+-
+-  hmac = (struct mrb_hmac *)mrb_get_datatype(mrb, self, &mrb_hmac_type);
+-  if (hmac) {
+-    lib_hmac_free(mrb, hmac);
+-  }
+-
+-  hmac = (struct mrb_hmac *)mrb_malloc(mrb, sizeof(*hmac));
+-  lib_hmac_init(mrb, hmac, mrb_fixnum(t), (unsigned char *)key, keylen);
+-  DATA_PTR(self) = hmac;
+-  DATA_TYPE(self) = &mrb_hmac_type;
+-  return self;
+-}
+-
+-static mrb_value
+-mrb_hmac_init_copy(mrb_state *mrb, mrb_value copy)
+-{
+-  mrb_raise(mrb, E_RUNTIME_ERROR, "cannot duplicate HMAC");
+-  return copy;
+-}
+-
+-static mrb_value
+-mrb_hmac_update(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_hmac *hmac;
+-  int len;
+-  char *str;
+-
+-  hmac = (struct mrb_hmac *)mrb_get_datatype(mrb, self, &mrb_hmac_type);
+-  if (!hmac) return mrb_nil_value();
+-  mrb_get_args(mrb, "s", &str, &len);
+-  lib_hmac_update(hmac, (unsigned char *)str, len);
+-  return self;
+-}
+-
+-
+-void
+-mrb_init_digest(mrb_state *mrb)
+-{
+-  struct RClass *b, *d, *h;
+-
+-  lib_init();
+-
+-  d = mrb_define_module(mrb, "Digest");
+-
+-  b = mrb_define_class_under(mrb, d, "Base", mrb->object_class);
+-  mrb_define_method(mrb, b, "block_length", mrb_digest_block_length, ARGS_NONE());
+-  mrb_define_method(mrb, b, "digest", mrb_digest_digest, ARGS_NONE());
+-  mrb_define_method(mrb, b, "digest!", mrb_digest_digest_bang, ARGS_NONE()); /* XXX: can be defined in mrblib... */
+-  mrb_define_method(mrb, b, "digest_length", mrb_digest_digest_length, ARGS_NONE());
+-  //mrb_define_method(mrb, b, "file", mrb_digest_file, ARGS_REQ(1));
+-  mrb_define_method(mrb, b, "hexdigest", mrb_digest_hexdigest, ARGS_NONE());
+-  //mrb_define_method(mrb, b, "hexdigest!", mrb_digest_hexdigest_bang, ARGS_NONE()); /* XXX: can be defined in mrblib... */
+-  mrb_define_method(mrb, b, "initialize", mrb_digest_init, ARGS_NONE());
+-  mrb_define_method(mrb, b, "initialize_copy", mrb_digest_init_copy, ARGS_REQ(1));
+-  mrb_define_method(mrb, b, "reset", mrb_digest_reset, ARGS_NONE());
+-  mrb_define_method(mrb, b, "update", mrb_digest_update, ARGS_REQ(1));
+-
+-#define DEFCLASS(n)						\
+-do {								\
+-  struct RClass *a = mrb_define_class_under(mrb, d, #n, b);	\
+-  MRB_SET_INSTANCE_TT(a, MRB_TT_DATA);				\
+-  mrb_define_const(mrb, a, TYPESYM, mrb_fixnum_value(MD_TYPE_##n));	\
+-} while (0)
+-
+-#ifdef HAVE_MD5
+-  DEFCLASS(MD5);
+-#endif
+-#ifdef HAVE_RMD160
+-  DEFCLASS(RMD160);
+-#endif
+-#ifdef HAVE_SHA1
+-  DEFCLASS(SHA1);
+-#endif
+-#ifdef HAVE_SHA256
+-  DEFCLASS(SHA256);
+-#endif
+-#ifdef HAVE_SHA384
+-  DEFCLASS(SHA384);
+-#endif
+-#ifdef HAVE_SHA512
+-  DEFCLASS(SHA512);
+-#endif
+-
+-  h = mrb_define_class_under(mrb, d, "HMAC", mrb->object_class);
+-  MRB_SET_INSTANCE_TT(h, MRB_TT_DATA);
+-  mrb_define_method(mrb, h, "block_length", mrb_hmac_block_length, ARGS_NONE());
+-  mrb_define_method(mrb, h, "digest", mrb_hmac_digest, ARGS_NONE());
+-  mrb_define_method(mrb, h, "digest_length", mrb_hmac_digest_length, ARGS_NONE());
+-  mrb_define_method(mrb, h, "hexdigest", mrb_hmac_hexdigest, ARGS_NONE());
+-  mrb_define_method(mrb, h, "initialize", mrb_hmac_init, ARGS_REQ(2));
+-  mrb_define_method(mrb, h, "initialize_copy", mrb_hmac_init_copy, ARGS_REQ(1));
+-  mrb_define_method(mrb, h, "update", mrb_hmac_update, ARGS_REQ(1));
+-}
+-
+-#endif /* ENABLE_DIGEST */
+diff --git a/src/init_ext.c b/src/init_ext.c
+index 1f6fc1d..3f5b752 100644
+--- a/src/init_ext.c
++++ b/src/init_ext.c
+@@ -11,7 +11,6 @@ void mrb_init_errno(mrb_state *mrb);
+ void mrb_init_io(mrb_state *mrb);
+ void mrb_init_file(mrb_state *mrb);
+ void mrb_init_socket(mrb_state *mrb);
+-void mrb_init_digest(mrb_state *mrb);
+ void mrb_init_env(mrb_state *mrb);
+ void mrb_init_syslog(mrb_state *mrb);
+ void mrb_init_random(mrb_state *mrb);
+@@ -34,9 +33,6 @@ mrb_init_ext(mrb_state *mrb)
+   mrb_init_socket(mrb); DONE;
+ #endif
+ #endif
+-#ifdef ENABLE_DIGEST
+-  mrb_init_digest(mrb); DONE;
+-#endif
+ #ifdef ENABLE_ENV
+   mrb_init_env(mrb); DONE;
+ #endif
+diff --git a/test/t/digest.rb b/test/t/digest.rb
+deleted file mode 100644
+index fd13fa4..0000000
+--- a/test/t/digest.rb
++++ /dev/null
+@@ -1,203 +0,0 @@
+-##
+-# Digest Test
+-
+-if Object.const_defined?(:Digest)
+-  assert('Digest') do
+-    Digest.class == Module
+-  end
+-
+-  assert('Digest::Base') do
+-    Digest::Base.class == Class
+-  end
+-
+-  assert('Digest::Base#new') do
+-    e1 = nil
+-    begin
+-      Digest::Base.new
+-    rescue NotImplementedError => e
+-      e1 = e
+-    end
+-    e1.class == NotImplementedError
+-  end
+-
+-  assert('Digest::MD5') do
+-    Digest::MD5.class == Class
+-  end
+-
+-  assert('Digest::MD5 superclass') do
+-    Digest::MD5.superclass == Digest::Base
+-  end
+-
+-  assert('Digest::MD5.digest') do
+-    Digest::MD5.digest('ruby') == "X\xE5=\x13$\xEE\xF6&_\xDB\x97\xB0\x8E\xD9\xAA\xDF"
+-  end
+-
+-  #assert('Digest::MD5.file')
+-
+-  assert('Digest::MD5.hexdigest') do
+-    Digest::MD5.hexdigest('ruby') == "58e53d1324eef6265fdb97b08ed9aadf"
+-  end
+-
+-  assert('Digest::MD5#update') do
+-    d = Digest::MD5.new
+-    d.update('ruby')
+-    d.hexdigest == "58e53d1324eef6265fdb97b08ed9aadf"
+-  end
+-
+-  assert('Digest::MD5#update 2') do
+-    d = Digest::MD5.new
+-    d.update('ruby')
+-    d.update('digest')
+-    d.hexdigest == "2ac1b3e3db06239e3244817f281450f1"
+-  end
+-
+-  assert('Digest::MD5#<<') do
+-    a = Digest::MD5.new
+-    b = Digest::MD5.new
+-    a.update('ruby')
+-    b << "r" << "u" << "b" << "y"
+-    a.hexdigest == b.hexdigest
+-  end
+-
+-  assert('Digest::MD5#== with Digest::XXX') do
+-    x1 = Digest::MD5.new.update("ruby")
+-    x2 = Digest::MD5.new.update("ruby")
+-    x3 = Digest::MD5.new.update("RUBY")
+-    (x1 == x2) == true and
+-    (x1 == x3) == false
+-  end
+-
+-  assert('Digest::MD5#== with String') do
+-    Digest::MD5.new.update("ruby") == "58e53d1324eef6265fdb97b08ed9aadf"
+-  end
+-
+-  assert('Digest::MD5#block_length') do
+-    Digest::MD5.new.block_length == 64
+-  end
+-
+-  assert('Digest::MD5#digest') do
+-    Digest::MD5.new.update("ruby").digest == "X\xE5=\x13$\xEE\xF6&_\xDB\x97\xB0\x8E\xD9\xAA\xDF"
+-  end
+-
+-  assert('Digest::MD5#digest!') do
+-    d = Digest::MD5.new.update("ruby")
+-    d.digest!
+-    #d.digest! == "\xD4\x1D\x8C\xD9\x8F\x00\xB2\x04\xE9\x80\t\x98\xEC\xF8B~"
+-    # XXX: mrbtest dumps core!
+-    d.digest! == Digest::MD5.new.digest
+-  end
+-
+-  assert('Digest::MD5#digest_length') do
+-    d = Digest::MD5.new
+-    n = 16
+-    d.digest_length == n and
+-    d.length == n and
+-    d.size == n
+-  end
+-
+-  #assert('Digest::MD5#file')
+-
+-  assert('Digest::MD5#hexdigest') do
+-    d = Digest::MD5.new.update("ruby")
+-    s = "58e53d1324eef6265fdb97b08ed9aadf"
+-    d.hexdigest == s and
+-    d.to_s == s
+-  end
+-
+-  assert('Digest::MD5#hexdigest!') do
+-    d = Digest::MD5.new.update("ruby")
+-    d.hexdigest!
+-    d.hexdigest! == "d41d8cd98f00b204e9800998ecf8427e"
+-  end
+-
+-  assert('Digest::MD5#reset') do
+-    d = Digest::MD5.new.update("ruby")
+-    d.reset
+-    d.hexdigest! == "d41d8cd98f00b204e9800998ecf8427e"
+-  end
+-
+-  if Digest.const_defined? :RMD160
+-    assert('Digest::RMD160#hexdigest') do
+-      d = Digest::RMD160.new.update("ruby")
+-      s = "29d9b710bc50866fa2399c3061cd02c0c8ffa197"
+-      d.hexdigest == s
+-    end
+-  end
+-
+-  if Digest.const_defined? :SHA1
+-    assert('Digest::SHA1#hexdigest') do
+-      d = Digest::SHA1.new.update("ruby")
+-      s = "18e40e1401eef67e1ae69efab09afb71f87ffb81"
+-      d.hexdigest == s
+-    end
+-  end
+-
+-  if Digest.const_defined? :SHA256
+-    assert('Digest::SHA256#hexdigest') do
+-      d = Digest::SHA256.new.update("ruby")
+-      s = "b9138194ffe9e7c8bb6d79d1ed56259553d18d9cb60b66e3ba5aa2e5b078055a"
+-      d.hexdigest == s
+-    end
+-  end
+-
+-  if Digest.const_defined? :SHA384
+-    assert('Digest::SHA384#hexdigest') do
+-      d = Digest::SHA384.new.update("ruby")
+-      s = "635365ef93ebf2c7a4e40b0b497da727ab8c2914eb9f052e6be40476f95d3daf44786790f5f0e843fab419b43022e069"
+-      d.hexdigest == s
+-    end
+-  end
+-
+-  if Digest.const_defined? :SHA512
+-    assert('Digest::SHA512#hexdigest') do
+-      d = Digest::SHA512.new.update("ruby")
+-      s = "423408d7723a3d80baefa804bd50b61a89667efec1713386a7b8efe28e5d13968307a908778cad210d7aa2dfe7db9a2aa86895f9fc1eeefcc99814310b207a6b"
+-      d.hexdigest == s
+-    end
+-  end
+-
+-  assert('Digest::HMAC') do
+-    Digest::HMAC.class == Class
+-  end
+-
+-  assert('Digest::HMAC.digest') do
+-    Digest::HMAC.digest("data", "hash key", Digest::SHA1) == "\xFD \xECC=\xFD\x97\x0E\xEC!FW\xCF\xB5Gl]\x913f"
+-  end
+-
+-  assert('Digest::HMAC.hexdigest') do
+-    Digest::HMAC.hexdigest("data", "hash key", Digest::SHA1) == "fd20ec433dfd970eec214657cfb5476c5d913366"
+-  end
+-
+-  assert('Digest::HMAC#<<') do
+-    a = Digest::HMAC.new('hash key', Digest::SHA1)
+-    b = Digest::HMAC.new('hash key', Digest::SHA1)
+-    a.update('ruby')
+-    b << "r" << "u" << "b" << "y"
+-    a.hexdigest == b.hexdigest
+-  end
+-
+-  assert('Digest::HMAC#block_length') do
+-    d = Digest::HMAC.new("hash key", Digest::SHA1)
+-    d.block_length == 64
+-  end
+-
+-  assert('Digest::HMAC#digest_length') do
+-    d = Digest::HMAC.new("hash key", Digest::SHA1)
+-    d.digest_length == 20
+-  end
+-
+-  # assert('Digest::HMAC#reset')
+-
+-  assert('Digest::HMAC#update') do
+-    d = Digest::HMAC.new("hash key", Digest::SHA1)
+-    d.update('data')
+-    d.hexdigest == "fd20ec433dfd970eec214657cfb5476c5d913366"
+-  end
+-
+-  assert('Digest::HMAC#update 2') do
+-    d = Digest::HMAC.new("hash key", Digest::SHA1)
+-    d.update('ruby')
+-    d.update('digest')
+-    d.hexdigest == "e4be3728777e43deba3aa522a4247ea83b19a1c7"
+-  end
+-end
+</pre>
+
   </body>
 </html>

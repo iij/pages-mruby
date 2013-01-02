@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 8856c89)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/8856c89" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 8856c8924651d0ad9779c9256a1b0d35fb4d748a
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Wed Nov 14 23:56:29 2012 +0900
+
+    should print SCLASS as modules and classes
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1182,5 +1195,27 @@ make: *** [all] Error 2</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 8856c8924651d0ad9779c9256a1b0d35fb4d748a
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Wed Nov 14 23:56:29 2012 +0900
+
+    should print SCLASS as modules and classes
+
+diff --git a/src/class.c b/src/class.c
+index 79daa6f..a3150fa 100644
+--- a/src/class.c
++++ b/src/class.c
+@@ -1223,6 +1223,7 @@ mrb_mod_to_s(mrb_state *mrb, mrb_value klass)
+     switch (mrb_type(v)) {
+       case MRB_TT_CLASS:
+       case MRB_TT_MODULE:
++      case MRB_TT_SCLASS:
+         mrb_str_append(mrb, s, mrb_inspect(mrb, v));
+         break;
+       default:
+</pre>
+
   </body>
 </html>

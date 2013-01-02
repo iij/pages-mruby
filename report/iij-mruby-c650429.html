@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - c650429)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/c650429" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit c65042906894599381efc139420b75044dd55def
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Sat Dec 29 17:09:04 2012 +0900
+
+    update exception test. test fixes with mruby-mtest.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -4916,5 +4929,42 @@ POSIX test result: OK
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit c65042906894599381efc139420b75044dd55def
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Sat Dec 29 17:09:04 2012 +0900
+
+    update exception test. test fixes with mruby-mtest.
+
+diff --git a/test/t/exception.rb b/test/t/exception.rb
+index 8179d8e..2662cfd 100644
+--- a/test/t/exception.rb
++++ b/test/t/exception.rb
+@@ -297,13 +297,18 @@ TEST_INFINITE_RECURSION_MAX = 100000
+ def test_infinite_recursion
+   $test_infinite_recursion += 1
+   if $test_infinite_recursion > TEST_INFINITE_RECURSION_MAX
+-    return $test_infinite_recursion 
++    return $test_infinite_recursion
+   end
+-  test_infinite_recursion 
++  test_infinite_recursion
+ end
+ 
+ assert('Infinite recursion should result in an exception being raised') do
+-  true  # disable this test on iij/mruby - consumes too much time!
++  a = begin
++        test_infinite_recursion
++      rescue
++        :ok
++      end
++  # OK if an exception was caught, otherwise a number will be stored in a
++  a == :ok
+ end
+ 
+-
+</pre>
+
   </body>
 </html>

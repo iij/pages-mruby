@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - b1832da)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/b1832da" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit b1832da2db0d64d5faa159d5d9c6f8b091a9acef
+Author: mattn <mattn.jp@gmail.com>
+Date:   Wed Dec 26 12:25:32 2012 +0900
+
+    replace all slash to backslash in `cd /path/to/folder` for windows.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1949,5 +1962,35 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit b1832da2db0d64d5faa159d5d9c6f8b091a9acef
+Author: mattn <mattn.jp@gmail.com>
+Date:   Wed Dec 26 12:25:32 2012 +0900
+
+    replace all slash to backslash in `cd /path/to/folder` for windows.
+
+diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
+index 6dddef7..dabc259 100644
+--- a/mrbgems/build_tasks.rb
++++ b/mrbgems/build_tasks.rb
+@@ -29,8 +29,13 @@ task :load_mrbgems_flags do
+ end
+ 
+ task :mrbgems_clean do
+-  sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
+-  sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
++  if ENV['OS'] == 'Windows_NT'
++    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems && #{RM_F} *.c *.d *.a *.o"
++    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems\\g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
++  else
++    sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
++    sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
++  end
+   for_each_gem do |path, gemname|
+     sh "#{MAKE} gem-clean -C #{path} #{gem_make_flags}"
+   end
+</pre>
+
   </body>
 </html>

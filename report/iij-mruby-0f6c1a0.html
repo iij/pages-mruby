@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 0f6c1a0)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/0f6c1a0" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 0f6c1a034bef4ec2661930f2f8db550463edf665
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Wed Nov 14 23:55:06 2012 +0900
+
+    zero initialize singleton_class iv
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1182,5 +1195,38 @@ make: *** [all] Error 2</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 0f6c1a034bef4ec2661930f2f8db550463edf665
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Wed Nov 14 23:55:06 2012 +0900
+
+    zero initialize singleton_class iv
+
+diff --git a/src/class.c b/src/class.c
+index e737a12..79daa6f 100644
+--- a/src/class.c
++++ b/src/class.c
+@@ -74,6 +74,7 @@ make_metaclass(mrb_state *mrb, struct RClass *c)
+   }
+   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
+   sc->mt = 0;
++  sc->iv = 0;
+   if (!c->super) {
+     sc->super = mrb->class_class;
+   }
+@@ -763,9 +764,7 @@ mrb_singleton_class_ptr(mrb_state *mrb, struct RClass *c)
+ {
+   struct RClass *sc;
+ 
+-  if (c->tt == MRB_TT_SCLASS) {
+-    return c;
+-  }
++  if (o->c->tt == MRB_TT_SCLASS) return;
+   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
+   sc->mt = 0;
+   sc->super = c;
+</pre>
+
   </body>
 </html>

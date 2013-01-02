@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 38ce951)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/38ce951" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 38ce9516aa4611110b3084699db6c18cf7e99ad9
+Author: skandhas <skandhas@163.com>
+Date:   Mon Nov 12 20:18:40 2012 +0800
+
+    modify Module#class_variables test
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1687,5 +1700,32 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 38ce9516aa4611110b3084699db6c18cf7e99ad9
+Author: skandhas <skandhas@163.com>
+Date:   Mon Nov 12 20:18:40 2012 +0800
+
+    modify Module#class_variables test
+
+diff --git a/test/t/module.rb b/test/t/module.rb
+index bec1d7b..ff8178c 100644
+--- a/test/t/module.rb
++++ b/test/t/module.rb
+@@ -36,9 +36,10 @@ assert('Module#class_variables', '15.2.2.4.19') do
+     @@var1 = 1
+     @@var2 = 2
+   end
+-  class Test4ClassVariables2
+-    @@var3 =2
++  class Test4ClassVariables2 < Test4ClassVariables1
++    @@var3 = 2
+   end
++
+   Test4ClassVariables1.class_variables == [:@@var1, :@@var2] &&
+   Test4ClassVariables2.class_variables == [:@@var3]
+ end
+</pre>
+
   </body>
 </html>

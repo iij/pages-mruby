@@ -48,389 +48,44 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
     -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src'
-    LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c array.c -o
-    array.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c symbol.c -o
-    symbol.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c st.c -o st.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c string.c -o
-    string.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c proc.c -o
-    proc.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c numeric.c
-    -o numeric.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c init_ext.c
-    -o init_ext.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c enum.c -o
-    enum.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c regerror.c
-    -o regerror.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c range.c -o
-    range.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c variable.c
-    -o variable.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c regexec.c
-    -o regexec.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c dump.c -o
-    dump.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c codegen.c
-    -o codegen.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c compar.c -o
-    compar.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c vm.c -o vm.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c object.c -o
-    object.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c hash.c -o
-    hash.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c error.c -o
-    error.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c regcomp.c
-    -o regcomp.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c re.c -o re.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c math.c -o
-    math.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c compile.c
-    -o compile.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c load.c -o
-    load.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c etc.c -o etc.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c regenc.c -o
-    regenc.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c class.c -o
-    class.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c regparse.c
-    -o regparse.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c pool.c -o
-    pool.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c gc.c -o gc.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c kernel.c -o
-    kernel.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c init.c -o
-    init.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c time.c -o
-    time.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c struct.c -o
-    struct.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c crc.c -o crc.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c cdump.c -o
-    cdump.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c print.c -o
-    print.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c state.c -o
-    state.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c sprintf.c
-    -o sprintf.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/env/env.c
-    -o ext/env/env.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/enc/ascii.c
-    -o ext/enc/ascii.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/syslog/syslog.c
-    -o ext/syslog/syslog.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o\ngcc -Wall -Werror-implicit-function-declaration
-    -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/io/file.c
-    -o ext/io/file.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/io/io.c
-    -o ext/io/io.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ext/socket/socket.c
-    -o ext/socket/socket.o\ngcc -Wall -Werror-implicit-function-declaration -g -O3
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o\nbison -o
-    ./y.tab.c ./parse.y\ngcc -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I. -I./../include -c ./y.tab.c
-    -o ./y.tab.o\nar r ../lib/libmruby_core.a ./array.o ./symbol.o ./st.o ./string.o
-    ./proc.o ./numeric.o ./init_ext.o ./enum.o ./regerror.o ./range.o ./variable.o
-    ./regexec.o ./dump.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./error.o
-    ./regcomp.o ./re.o ./math.o ./compile.o ./load.o ./etc.o ./regenc.o ./class.o
-    ./regparse.o ./pool.o ./gc.o ./kernel.o ./init.o ./time.o ./struct.o ./crc.o ./cdump.o
-    ./print.o ./state.o ./sprintf.o ./ext/env/env.o ./ext/enc/ascii.o ./ext/syslog/syslog.o
-    ./ext/errno/errno.o ./ext/require/require.o ./ext/io/file.o ./ext/io/io.o ./ext/socket/socket.o
-    ./ext/random/random.o  ./y.tab.o\ngmake -C mrblib --no-print-directory CC='gcc'
-    LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngmake:
+    Nothing to be done for `all'.\ngmake -C mrblib --no-print-directory CC='gcc' LL='gcc'
+    AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ncat ./*.rb
-    > mrblib1.rbtmp\ncat ./ext/*.rb > mrblib2.rbtmp\ngmake -C ../tools/mrbc CC='gcc'
-    LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS=''\ngcc -Wall -Werror-implicit-function-declaration
-    -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o\ngcc
-    -o ../../bin/mrbc  ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm
-    -lcrypto     \n../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp\n../bin/mrbc
-    -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp\ncat init_mrblib.c mrblib1.ctmp
-    mrblib2.ctmp > mrblib.c\ngcc -Wall -Werror-implicit-function-declaration -g -O3
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I../src -I../include -c mrblib.c -o mrblib.o\ncp ../lib/libmruby_core.a
-    ../lib/libmruby.a\nar r ../lib/libmruby.a mrblib.o\n-- MAKE mrbgems --\nGenerate
-    Gem driver: ./mrbgems/gem_init.c\nBuild the driver which initializes all gems\ngcc
-    -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -MMD -c ./mrbgems/gem_init.c -o ./mrbgems/gem_init.o\nar
-    rs ./mrbgems/gem_init.a ./mrbgems/gem_init.o\ngmake -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngmake: Nothing
+    to be done for `all'.\n-- MAKE mrbgems --\ngmake -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest
     --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
     ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
-    Gem 'mruby-mtest'\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mrblib_header.rb
-    'mruby-mtest' > gem_mrblib_header.ctmp\ncat mrblib/mtest_unit.rb > gem_mrblib.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc
-    -Bgem_mrblib_irep_mruby_mtest -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mrblib.rb
-    'mruby-mtest' > gem_mrblib_init.ctmp\ncat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp
-    gem_mrblib_init.ctmp > gem_mrblib.c\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    Gem 'mruby-mtest'\nar rs mrb-mruby-mtest-gem.a gem_mrblib.o\ngmake -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-dir'\nar rs mrb-mruby-dir-gem.a  src/dir.o gem_mixlib.o\ngmake -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ gem_mrblib.c -o gem_mrblib.o\nar rs mrb-mruby-mtest-gem.a gem_mrblib.o\ngmake
-    -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir --no-print-directory
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
+    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
+    Gem 'mruby-pack'\nar rs mrb-mruby-pack-gem.a  src/pack.o gem_srclib.o\ngmake -C
+    /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest --no-print-directory
     CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
     ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
-    Gem 'mruby-dir'\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ src/dir.c -o src/dir.o\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mrblib_header.rb
-    'mruby-dir' > gem_mrblib_header.ctmp\ncat mrblib/dir.rb > gem_mrblib.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc
-    -Bgem_mrblib_irep_mruby_dir -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mixlib.rb
-    'mruby-dir' > gem_mixlib_init.ctmp\ncat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp
-    gem_mixlib_init.ctmp > gem_mixlib.c\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ gem_mixlib.c -o gem_mixlib.o\nar rs mrb-mruby-dir-gem.a  src/dir.o gem_mixlib.o\ngmake
-    -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack --no-print-directory
-    CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
-    Gem 'mruby-pack'\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ src/pack.c -o src/pack.o\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_srclib.rb
-    'mruby-pack' > gem_srclib.c\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ gem_srclib.c -o gem_srclib.o\nar rs mrb-mruby-pack-gem.a  src/pack.o gem_srclib.o\ngmake
-    -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest --no-print-directory
-    CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
-    Gem 'mruby-digest'\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ src/digest.c -o src/digest.o\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mrblib_header.rb
-    'mruby-digest' > gem_mrblib_header.ctmp\ncat mrblib/digest.rb > gem_mrblib.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc
-    -Bgem_mrblib_irep_mruby_digest -ogem_mrblib_irep.ctmp gem_mrblib.rbtmp\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_mixlib.rb
-    'mruby-digest' > gem_mixlib_init.ctmp\ncat gem_mrblib_header.ctmp gem_mrblib_irep.ctmp
-    gem_mixlib_init.ctmp > gem_mixlib.c\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ gem_mixlib.c -o gem_mixlib.o\nar rs mrb-mruby-digest-gem.a  src/digest.o gem_mixlib.o\ngmake
+    Gem 'mruby-digest'\nar rs mrb-mruby-digest-gem.a  src/digest.o gem_mixlib.o\ngmake
     -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process --no-print-directory CC='gcc'
     LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
@@ -438,35 +93,13 @@
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
     ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\nBuilding
-    Gem 'process'\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    Gem 'process'\nar rs mrb-process-gem.a  src/process.o gem_srclib.o\ngmake -C tools/mruby
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ src/process.c -o src/process.o\nruby /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/generate_gem_srclib.rb
-    'process' > gem_srclib.c\ngcc -c -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    \ gem_srclib.c -o gem_srclib.o\nar rs mrb-process-gem.a  src/process.o gem_srclib.o\ngmake
-    -C tools/mruby --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g
-    -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
-    -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src'
-    LDFLAGS='     ' LIBS='-lm -lcrypto     ' ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngcc
-    -Wall -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src/../include -c /home/mruby/mips/iij-mruby-ad6a17a/src/../tools/mruby/mruby.c
-    -o /home/mruby/mips/iij-mruby-ad6a17a/src/../tools/mruby/mruby.o\ngcc -o /home/mruby/mips/iij-mruby-ad6a17a/bin/mruby
+    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngcc -o /home/mruby/mips/iij-mruby-ad6a17a/bin/mruby
     \ /home/mruby/mips/iij-mruby-ad6a17a/src/../tools/mruby/mruby.o /home/mruby/mips/iij-mruby-ad6a17a/lib/libmruby.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/gem_init.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a
@@ -478,77 +111,15 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto     '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngcc -Wall
-    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I../../src -I../../src/../include
-    -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o\ngcc -o ../../bin/mirb
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a'\ngcc -o ../../bin/mirb
     \ ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/gem_init.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/mrb-mruby-digest-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/mrb-process-gem.a   -lm -lcrypto
     \    \n"
-  :stderr: ! 'compile.c: In function `mrb_compile'':
-
-    compile.c:38: warning: unused variable `irep_len''
-
-    compile.c: At top level:
-
-    compile.c:21: warning: `replace_stop_with_return'' defined but not used
-
-    load.c: In function `load_debug_info_irep'':
-
-    load.c:249: warning: `plen'' might be used uninitialized in this function
-
-    ar: creating ../lib/libmruby_core.a
-
-    ar: creating ./mrbgems/gem_init.a
-
-    ar: creating mrb-mruby-mtest-gem.a
-
-    ar: creating mrb-mruby-dir-gem.a
-
-    src/pack.c: In function `pack_a'':
-
-    src/pack.c:218: warning: unused variable `dlen''
-
-    src/pack.c: In function `unpack_a'':
-
-    src/pack.c:271: warning: subscript has type `char''
-
-    src/pack.c:255: warning: unused variable `sptr0''
-
-    src/pack.c: In function `pack_h'':
-
-    src/pack.c:284: warning: unused variable `x''
-
-    src/pack.c: In function `unpack_h'':
-
-    src/pack.c:329: warning: unused variable `l''
-
-    src/pack.c:330: warning: unused variable `i''
-
-    src/pack.c:331: warning: unused variable `c''
-
-    src/pack.c:331: warning: unused variable `ch''
-
-    src/pack.c: In function `read_tmpl'':
-
-    src/pack.c:611: warning: subscript has type `char''
-
-    src/pack.c:515: warning: `type'' might be used uninitialized in this function
-
-    ar: creating mrb-mruby-pack-gem.a
-
-    ar: creating mrb-mruby-digest-gem.a
-
-    ar: creating mrb-process-gem.a
-
-    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm;
-    link against libcrypto_mdc2.a
+  :stderr: ! '/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented
+    algorithm; link against libcrypto_mdc2.a
 
     /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm;
     link against libcrypto_mdc2.a
@@ -680,24 +251,8 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ncat
-    test/mtest_unit_test.rb > gem_test.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc
-    -Bgem_mrblib_irep_mruby_mtest_test -ogem_test.ctmp gem_test.rbtmp\necho \"void
-    mrb_mruby_mtest_gem_test_init(mrb_state* mrb) { }\" >> gem_test.ctmp\ngmake gem-test
-    -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir --no-print-directory
-    CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ncat
-    test/dir.rb > gem_test.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc -Bgem_mrblib_irep_mruby_dir_test
-    -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_mruby_dir_gem_test_init(mrb_state*
-    mrb) { }\" >> gem_test.ctmp\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ngmake[1]:
+    Nothing to be done for `gem-test'.\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir
     --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
@@ -707,10 +262,8 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ncat
-    test/pack.rb > gem_test.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc -Bgem_mrblib_irep_mruby_pack_test
-    -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_mruby_pack_gem_test_init(mrb_state*
-    mrb) { }\" >> gem_test.ctmp\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ngmake[1]:
+    Nothing to be done for `gem-test'.\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack
     --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
@@ -720,10 +273,8 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ncat
-    test/digest.rb > gem_test.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc -Bgem_mrblib_irep_mruby_digest_test
-    -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_mruby_digest_gem_test_init(mrb_state*
-    mrb) { }\" >> gem_test.ctmp\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ngmake[1]:
+    Nothing to be done for `gem-test'.\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest
     --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
@@ -733,36 +284,38 @@
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
     -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
     -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
-    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ncat
-    test/process.rb > gem_test.rbtmp\n/home/mruby/mips/iij-mruby-ad6a17a/bin/mrbc
-    -Bgem_mrblib_irep_process_test -ogem_test.ctmp gem_test.rbtmp\necho \"void mrb_process_gem_test_init(mrb_state*
-    mrb) { }\" >> gem_test.ctmp\ncat /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/gem_test.ctmp
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ngmake[1]:
+    Nothing to be done for `gem-test'.\ngmake gem-test -C /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process
+    --no-print-directory CC='gcc' LL='gcc' AR='ar' YACC='bison' CFLAGS='-g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
+    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
+    -I/home/mruby/mips/iij-mruby-ad6a17a/src  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
+    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
+    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
+    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
+    -I/home/mruby/mips/iij-mruby-ad6a17a/src' LDFLAGS='     ' LIBS='-lm -lcrypto          '
+    ENABLE_GEMS='true' MRUBY_ROOT='/home/mruby/mips/iij-mruby-ad6a17a' MAKEFILE_4_GEM='/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/Makefile4gem'\ngmake[1]:
+    Nothing to be done for `gem-test'.\ncat /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/gem_test.ctmp
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/gem_test.ctmp /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/gem_test.ctmp
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/gem_test.ctmp /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/gem_test.ctmp
-    \ >> /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mrbgemtest.ctmp\ngcc -Wall -Werror-implicit-function-declaration
+    \ >> /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mrbgemtest.ctmp\ncat init_mrbtest.c
+    mrbtest.ctmp ../mrbgems/g/mrbgemtest.ctmp > mrbtest.c\ngcc -Wall -Werror-implicit-function-declaration
     -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include
     \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include -Wall -Werror-implicit-function-declaration
     -I/home/mruby/mips/iij-mruby-ad6a17a/include -I/home/mruby/mips/iij-mruby-ad6a17a/src
-    -MMD -I./../src -I./../include -c driver.c -o driver.o\ncat ./assert.rb ./t/*.rb
-    > mrbtest.rbtmp\n../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp\ncat
-    init_mrbtest.c mrbtest.ctmp ../mrbgems/g/mrbgemtest.ctmp > mrbtest.c\ngcc -Wall
-    -Werror-implicit-function-declaration -g -O3  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/include
-    \ -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/include  -I/home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/include
-    -Wall -Werror-implicit-function-declaration -I/home/mruby/mips/iij-mruby-ad6a17a/include
-    -I/home/mruby/mips/iij-mruby-ad6a17a/src -MMD -I./../src -I./../include -c mrbtest.c
-    -o mrbtest.o\ngcc -o mrbtest  driver.o mrbtest.o ../lib/libmruby.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/gem_init.a
+    -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest  driver.o
+    mrbtest.o ../lib/libmruby.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/gem_init.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-mtest/mrb-mruby-mtest-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-dir/mrb-mruby-dir-gem.a /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-pack/mrb-mruby-pack-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/mruby-digest/mrb-mruby-digest-gem.a
     /home/mruby/mips/iij-mruby-ad6a17a/mrbgems/g/process/mrb-process-gem.a  -lm -lcrypto
-    \    \ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc mrubytest.rb\n#
-    exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis is a very early
-    version, please test and report errors.\nThanks :)\n\n.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
-    Running tests:\n\n...\n\nFinished tests in 3.301034s, 0.9088 tests/s, 0.3029 assertions/s.\n\n3
+    \    \n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis is a
+    very early version, please test and report errors.\nThanks :)\n\n.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
+    Running tests:\n\n...\n\nFinished tests in 3.291987s, 0.9113 tests/s, 0.3038 assertions/s.\n\n3
     tests, 1 assertions, 0 failures, 0 errors, 0 skips\n...........................................\nTotal:
-    608\n   OK: 608\n   KO: 0\nCrash: 0\n Time: 48.035557 seconds\n\n# exec mruby
+    608\n   OK: 608\n   KO: 0\nCrash: 0\n Time: 47.875017 seconds\n\n# exec mruby
     test with ruby script\nmrubytest.rb success.\n\n# exec mruby test with mrb file\nmrubytest.mrb
     success.\n\n"
   :stderr: ! '/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented
@@ -795,26 +348,26 @@
 '
   :status: success
   :mrubytest_rb: ! "...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    563\n   OK: 563\n   KO: 0\nCrash: 0\n Time: 45.890151 seconds\n"
+    563\n   OK: 563\n   KO: 0\nCrash: 0\n Time: 45.842801 seconds\n"
   :mrubytest_mrb: ! "...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    563\n   OK: 563\n   KO: 0\nCrash: 0\n Time: 45.695268 seconds\n"
+    563\n   OK: 563\n   KO: 0\nCrash: 0\n Time: 45.654426 seconds\n"
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.057351 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.022887 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.008696 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.008604 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.024267 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.055338 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.188809 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.02117 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.070094 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 18134 done\nwait 18700 done\nwait 12668 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.246557 seconds\n\n###################################\n#
+    0.072181 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 20644 done\nwait 19347 done\nwait 16349 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.248695 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.899278 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.902379 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.027688 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.029021 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success

@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - afce2ae)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/afce2ae" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit afce2aee71846147de35a8439061771800ca83c7
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Wed Nov 14 10:25:39 2012 +0900
+
+    fix bugs of strip family and add lstrip! & rstrip!
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -3581,5 +3594,133 @@ trap: SIGUSR2: bad trap</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit afce2aee71846147de35a8439061771800ca83c7
+Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Date:   Wed Nov 14 10:25:39 2012 +0900
+
+    fix bugs of strip family and add lstrip! & rstrip!
+
+diff --git a/mrblib/string.rb b/mrblib/string.rb
+index 858f0fc..5340166 100644
+--- a/mrblib/string.rb
++++ b/mrblib/string.rb
+@@ -142,33 +142,43 @@ class String
+     self.replace([b, value, a].join(''))
+   end
+ 
+-  # for strip family
+-  SPACES__ = " \f\n\r\t\v"
+-
++  LSPACES__ = " \f\n\r\t\v"
+   def lstrip
+     a = 0
+     z = self.size - 1
+-    a += 1 while SPACES__.include?(self[a]) and a <= z
++    a += 1 while LSPACES__.include?(self[a]) and a <= z
+     (z >= 0) ? self[a..z] : ""
+   end
+ 
++  RSPACES__ = " \f\n\r\t\v\0"
+   def rstrip
+     a = 0
+     z = self.size - 1
+-    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    z -= 1 while RSPACES__.include?(self[z]) and a <= z
+     (z >= 0) ? self[a..z] : ""
+   end
+ 
+   def strip
+     a = 0
+     z = self.size - 1
+-    a += 1 while SPACES__.include?(self[a]) and a <= z
+-    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    a += 1 while LSPACES__.include?(self[a]) and a <= z
++    z -= 1 while RSPACES__.include?(self[z]) and a <= z
+     (z >= 0) ? self[a..z] : ""
+   end
+ 
++  def lstrip!
++    s = self.lstrip
++    (s == self) ? nil : self.replace(s)
++  end
++
++  def rstrip!
++    s = self.rstrip
++    (s == self) ? nil : self.replace(s)
++  end
++
+   def strip!
+-    self.replace(self.strip)
++    s = self.strip
++    (s == self) ? nil : self.replace(s)
+   end
+ 
+   def %(args)
+diff --git a/test/t/string.rb b/test/t/string.rb
+index 5868c32..0e04008 100644
+--- a/test/t/string.rb
++++ b/test/t/string.rb
+@@ -439,7 +439,9 @@ end
+ assert('String#strip') do
+   s = "  abc  " 
+   s.strip
+-  "".strip == "" and " \t\r\n\f\v".strip == "" and "abc".strip == "abc" and
++  "".strip == "" and " \t\r\n\f\v".strip == "" and
++  "\0a\0".strip == "\0a" and
++  "abc".strip     == "abc" and
+   "  abc".strip   == "abc" and
+   "abc  ".strip   == "abc" and
+   "  abc  ".strip == "abc" and
+@@ -448,8 +450,10 @@ end
+ 
+ assert('String#lstrip') do
+   s = "  abc  " 
+-  s.rstrip
+-  "".lstrip == "" and " \t\r\n\f\v".lstrip == "" and "abc".lstrip == "abc" and
++  s.lstrip
++  "".lstrip == "" and " \t\r\n\f\v".lstrip == "" and
++  "\0a\0".lstrip == "\0a\0" and
++  "abc".lstrip     == "abc"   and
+   "  abc".lstrip   == "abc"   and
+   "abc  ".lstrip   == "abc  " and
+   "  abc  ".lstrip == "abc  " and
+@@ -459,7 +463,9 @@ end
+ assert('String#rstrip') do
+   s = "  abc  " 
+   s.rstrip
+-  "".rstrip == "" and " \t\r\n\f\v".rstrip == "" and "abc".rstrip == "abc" and
++  "".rstrip == "" and " \t\r\n\f\v".rstrip == "" and
++  "\0a\0".rstrip == "\0a" and
++  "abc".rstrip     == "abc"   and
+   "  abc".rstrip   == "  abc" and
+   "abc  ".rstrip   == "abc"   and
+   "  abc  ".rstrip == "  abc" and
+@@ -468,8 +474,20 @@ end
+ 
+ assert('String#strip!') do
+   s = "  abc  "
+-  s.strip!
+-  s == "abc"
++  t = "abc"
++  s.strip! == "abc" and s == "abc" and t.strip! == nil
++end
++
++assert('String#lstrip!') do
++  s = "  abc  "
++  t = "abc  "
++  s.lstrip! == "abc  " and s == "abc  " and t.lstrip! == nil
++end
++
++assert('String#rstrip!') do
++  s = "  abc  "
++  t = "  abc"
++  s.rstrip! == "  abc" and s == "  abc" and t.rstrip! == nil
+ end
+ 
+ assert('String#bytes') do
+</pre>
+
   </body>
 </html>

@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - ac0233b)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/ac0233b" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit ac0233bcd08358b35edce76171929121f8ee656f
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Sat Nov 17 02:02:08 2012 +0900
+
+    add test for issue#547; close #554
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1912,5 +1925,37 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit ac0233bcd08358b35edce76171929121f8ee656f
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Sat Nov 17 02:02:08 2012 +0900
+
+    add test for issue#547; close #554
+
+diff --git a/test/t/bs_block.rb b/test/t/bs_block.rb
+index bef9a85..cbfb925 100644
+--- a/test/t/bs_block.rb
++++ b/test/t/bs_block.rb
+@@ -388,3 +388,17 @@ assert('BS Block [ruby-core:14395]') do
+   t = Controller.new
+   t.test_for_bug
+ end
++
++assert("BS Block 32") do
++  module TestReturnFromNestedBlock
++    def self.test
++      1.times do
++        1.times do
++          return :ok
++        end
++      end
++      :bad
++    end
++  end
++  TestReturnFromNestedBlock.test == :ok
++end
+</pre>
+
   </body>
 </html>

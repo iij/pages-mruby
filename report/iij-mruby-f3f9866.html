@@ -19,12 +19,16 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - f3f9866)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/f3f9866" target="_blank">commit info on github</a></li>
+      
       
         
         
@@ -33,7 +37,16 @@
         
       
         
-        
+      <li>
+      <pre>commit f3f98668a54a465168180fbd9a703b1cc4fa301c
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:42:23 2012 +0900
+
+    remove mrbgems/g/mruby-*
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1395,7 +1408,7 @@ require.sh: ../../bin/mruby: not found
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/seilx.tokyo.iiji.jp/tmp/work.18172/iij-mruby-f3f9866)
+          <td><textarea>(in /home/mruby/mips/iij-mruby-f3f9866)
 rake aborted!
 undefined method `fetch_gem' for main:Object
 ./Rakefile:46
@@ -1404,7 +1417,7 @@ undefined method `fetch_gem' for main:Object
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/seilx.tokyo.iiji.jp/tmp/work.18172/iij-mruby-f3f9866)
+          <td><textarea>(in /home/mruby/mips/iij-mruby-f3f9866)
 rake aborted!
 undefined method `fetch_gem' for main:Object
 ./Rakefile:46
@@ -1443,12 +1456,12 @@ POSIX test result: NG
   fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh  require.sh  syslog.sh
 ###################################
 </textarea></td>
-            <td><textarea>dir.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.18172/iij-mruby-f3f9866/test/posix/../../bin/mruby: not found
+            <td><textarea>dir.sh: /home/mruby/mips/iij-mruby-f3f9866/test/posix/../../bin/mruby: not found
 env: ../../bin/mruby: No such file or directory
 errno.sh: ../../bin/mruby: not found
-file.sh: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.18172/iij-mruby-f3f9866/test/posix/../../bin/mruby: not found
+file.sh: /home/mruby/mips/iij-mruby-f3f9866/test/posix/../../bin/mruby: not found
 io.sh: ../../bin/mruby: not found
-env: /home/mruby/seilx.tokyo.iiji.jp/tmp/work.18172/iij-mruby-f3f9866/test/posix/../../bin/mruby: No such file or directory
+env: /home/mruby/mips/iij-mruby-f3f9866/test/posix/../../bin/mruby: No such file or directory
 require.sh: ../../bin/mrbc: not found
 mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
 require.sh: ../../bin/mrbc: not found
@@ -1739,5 +1752,36 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit f3f98668a54a465168180fbd9a703b1cc4fa301c
+Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Date:   Mon Dec 31 12:42:23 2012 +0900
+
+    remove mrbgems/g/mruby-*
+
+diff --git a/mrbgems/g/mruby-dir b/mrbgems/g/mruby-dir
+deleted file mode 160000
+index 92ad6dc..0000000
+--- a/mrbgems/g/mruby-dir
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit 92ad6dc8c3ba79324401d99dd066e4962e5eeaaf
+diff --git a/mrbgems/g/mruby-mtest b/mrbgems/g/mruby-mtest
+deleted file mode 160000
+index 282cfaf..0000000
+--- a/mrbgems/g/mruby-mtest
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit 282cfaf1eada1d74299e45d26c66127df3dfed98
+diff --git a/mrbgems/g/mruby-pack b/mrbgems/g/mruby-pack
+deleted file mode 160000
+index e205905..0000000
+--- a/mrbgems/g/mruby-pack
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit e205905d022b661a1dd279f8a8e6ecac19d1e979
+</pre>
+
   </body>
 </html>

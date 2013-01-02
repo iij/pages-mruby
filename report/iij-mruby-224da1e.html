@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 224da1e)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/224da1e" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 224da1e6ecc1d2f47ea3cdbfac294cdbe7cdc3dd
+Author: Masaki Muranaka <monaka@monami-ya.jp>
+Date:   Tue Nov 13 12:59:00 2012 +0900
+
+    Remove a redundant "%".
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1653,5 +1666,28 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 224da1e6ecc1d2f47ea3cdbfac294cdbe7cdc3dd
+Author: Masaki Muranaka <monaka@monami-ya.jp>
+Date:   Tue Nov 13 12:59:00 2012 +0900
+
+    Remove a redundant "%".
+
+diff --git a/src/sprintf.c b/src/sprintf.c
+index 630875a..0e8ac83 100644
+--- a/src/sprintf.c
++++ b/src/sprintf.c
+@@ -671,7 +671,7 @@ retry:
+         tmp = mrb_check_string_type(mrb, val);
+         if (!mrb_nil_p(tmp)) {
+           if (RSTRING_LEN(tmp) != 1 ) {
+-            mrb_raise(mrb, E_ARGUMENT_ERROR, "%%c requires a character");
++            mrb_raise(mrb, E_ARGUMENT_ERROR, "%c requires a character");
+           }
+           c = RSTRING_PTR(tmp)[0];
+           n = 1;
+</pre>
+
   </body>
 </html>

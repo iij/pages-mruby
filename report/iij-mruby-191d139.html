@@ -19,19 +19,32 @@
     </style>
   </head>
   <body>
-    <h1>mruby build & test report</h1>
+    
+    
 
-    
-    
+    <h1>mruby build & test report
+      <span style="font-size:small;">(iij/mruby - 191d139)</span>
+    </h1>
+
     <ul>
       <li><a href="http://github.com/iij/mruby/commit/191d139" target="_blank">commit info on github</a></li>
       
+      
         
         
         
       
         
-        
+      <li>
+      <pre>commit 191d1391c66ddca71bf9e19f5af18478e73428d7
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Mon Nov 12 18:28:33 2012 +0900
+
+    should wrap associ in aref_args; close #529
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
   </ul>
 
     <h2>mrbtest</h2>
@@ -1653,5 +1666,28 @@ mrubytest.mrb success.</textarea></td>
         
       </table>
     
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 191d1391c66ddca71bf9e19f5af18478e73428d7
+Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Date:   Mon Nov 12 18:28:33 2012 +0900
+
+    should wrap associ in aref_args; close #529
+
+diff --git a/src/parse.y b/src/parse.y
+index abec59e..bfea1f6 100644
+--- a/src/parse.y
++++ b/src/parse.y
+@@ -1749,7 +1749,7 @@ aref_args	: none
+ 		    }
+ 		| assocs trailer
+ 		    {
+-		      $$ = new_hash(p, $1);
++		      $$ = cons(new_hash(p, $1), 0);
+ 		    }
+ 		;
+ 
+</pre>
+
   </body>
 </html>
