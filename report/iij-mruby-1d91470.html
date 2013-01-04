@@ -33,18 +33,10 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 1d91470db676b2b5f269779dac0fcc8f1b24a711
-Author: mattn &lt;mattn.jp@gmail.com&gt;
-Date:   Fri Dec 28 02:22:26 2012 +0900
-
-    use readline if it's enabled.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1964,63 +1956,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 1d91470db676b2b5f269779dac0fcc8f1b24a711
-Author: mattn &lt;mattn.jp@gmail.com&gt;
-Date:   Fri Dec 28 02:22:26 2012 +0900
-
-    use readline if it's enabled.
-
-diff --git a/tools/mirb/mirb.c b/tools/mirb/mirb.c
-index d3903ef..b89c63c 100644
---- a/tools/mirb/mirb.c
-+++ b/tools/mirb/mirb.c
-@@ -12,6 +12,10 @@
- #include &lt;mruby/proc.h&gt;
- #include &lt;mruby/data.h&gt;
- #include &lt;mruby/compile.h&gt;
-+#ifdef ENABLE_READLINE
-+#include &lt;readline/readline.h&gt;
-+#include &lt;readline/history.h&gt;
-+#endif
- 
- #ifndef ENABLE_STDIO
- #include &lt;mruby/string.h&gt;
-@@ -143,10 +147,12 @@ print_cmdline(int code_block_open)
- int
- main(void)
- {
--  int last_char;
-   char ruby_code[1024] = { 0 };
-   char last_code_line[1024] = { 0 };
-+#ifndef ENABLE_READLINE
-+  int last_char;
-   int char_index;
-+#endif
-   mrbc_context *cxt;
-   struct mrb_parser_state *parser;
-   mrb_state *mrb;
-@@ -167,6 +173,7 @@ main(void)
-   cxt-&gt;capture_errors = 1;
- 
-   while (TRUE) {
-+#ifndef ENABLE_READLINE
-     print_cmdline(code_block_open);
- 
-     char_index = 0;
-@@ -180,6 +187,12 @@ main(void)
-     }
- 
-     last_code_line[char_index] = '\0';
-+#else
-+    char* line = readline(code_block_open ? &quot;* &quot; : &quot;&gt; &quot;);
-+    strncat(last_code_line, line, sizeof(last_code_line)-1);
-+    add_history(line);
-+    free(line);
-+#endif
- 
-     if ((strcmp(last_code_line, &quot;quit&quot;) == 0) || (strcmp(last_code_line, &quot;exit&quot;) == 0)) {
-       if (!code_block_open) {
-</pre>
+      <pre></pre>
 
   </body>
 </html>
