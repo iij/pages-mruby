@@ -32,19 +32,11 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
         
       <li>
-      <pre>commit 40ea525d1e5a94771a5b1e57f001267dfe8da046
-Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Fri Dec 21 23:52:40 2012 +0900
-
-    should raise error on return in block in top-level; close #664
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1987,28 +1979,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 40ea525d1e5a94771a5b1e57f001267dfe8da046
-Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Fri Dec 21 23:52:40 2012 +0900
-
-    should raise error on return in block in top-level; close #664
-
-diff --git a/src/vm.c b/src/vm.c
-index da6700b..bce92c9 100644
---- a/src/vm.c
-+++ b/src/vm.c
-@@ -1199,6 +1199,10 @@ mrb_run(mrb_state *mrb, struct RProc *proc, mrb_value self)
-               goto L_RAISE;
-             }
-             ci = mrb-&gt;ci = mrb-&gt;cibase + e-&gt;cioff;
-+	    if (ci == mrb-&gt;cibase) {
-+              localjump_error(mrb, &quot;return&quot;);
-+              goto L_RAISE;
-+	    }
-             break;
-           }
-         case OP_R_NORMAL:
-</pre>
+      <pre></pre>
 
   </body>
 </html>
