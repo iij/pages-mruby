@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 9599381ae334ac474d40dc617407d2b05f17a328
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Sun Dec 23 15:25:24 2012 +0800
 
     add mrb_mod_cv_defined and mrb_cv_defined
@@ -1918,7 +1918,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 9599381ae334ac474d40dc617407d2b05f17a328
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Sun Dec 23 15:25:24 2012 +0800
 
     add mrb_mod_cv_defined and mrb_cv_defined
@@ -1948,11 +1948,11 @@ index 71187af..5d46ffc 100644
 +mrb_mod_cv_defined(mrb_state *mrb, struct RClass * c, mrb_sym sym)
 +{
 +  while (c) {
-+    if (c->iv) {
-+      iv_tbl *t = c->iv;
++    if (c-&gt;iv) {
++      iv_tbl *t = c-&gt;iv;
 +      if (iv_get(mrb, t, sym, NULL)) return TRUE;
 +    }
-+    c = c->super;
++    c = c-&gt;super;
 +  }
 +
 +  return FALSE;

@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 982827294a744f56373ef8ab50ee9af6725e2c67
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Tue Dec 25 16:44:04 2012 +0900
 
     fix Rakefile (Ruby1.8)
@@ -4935,7 +4935,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 982827294a744f56373ef8ab50ee9af6725e2c67
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Tue Dec 25 16:44:04 2012 +0900
 
     fix Rakefile (Ruby1.8)
@@ -4954,7 +4954,7 @@ index 999419b..de1c902 100644
 -    return 'make'
 -  end
 -  return 'gmake'
-+  `which gmake` == "" ? 'make' : 'gmake'
++  `which gmake` == &quot;&quot; ? 'make' : 'gmake'
  end
  
  # compiler, linker (gcc), archiver, parser generator

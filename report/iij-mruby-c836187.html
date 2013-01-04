@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit c836187cf27c058b9e8fd98814e9fc26f05640a5
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 28 18:10:26 2012 +0900
 
     minor cosmetic change after #676
@@ -2245,7 +2245,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit c836187cf27c058b9e8fd98814e9fc26f05640a5
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 28 18:10:26 2012 +0900
 
     minor cosmetic change after #676
@@ -2256,7 +2256,7 @@ index 60acd4d..ffa13d6 100644
 +++ b/src/codegen.c
 @@ -1205,9 +1205,9 @@ codegen(codegen_scope *s, node *tree, int val)
              pop();
-             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s->mrb, "===")), 1));
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s-&gt;mrb, &quot;===&quot;)), 1));
            }
 -          else
 -	          pop();

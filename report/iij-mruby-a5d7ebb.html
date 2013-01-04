@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit a5d7ebbad04ce2f09aa1b603e471b3f161b5cc63
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Nov 16 11:34:16 2012 +0900
 
     prepare metaclass of metaclass when retrieving by singleton_class(); close #540
@@ -1928,7 +1928,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit a5d7ebbad04ce2f09aa1b603e471b3f161b5cc63
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Nov 16 11:34:16 2012 +0900
 
     prepare metaclass of metaclass when retrieving by singleton_class(); close #540
@@ -1938,7 +1938,7 @@ index a3150fa..d95a057 100644
 --- a/src/class.c
 +++ b/src/class.c
 @@ -64,26 +64,38 @@ mrb_name_class(mrb_state *mrb, struct RClass *c, mrb_sym name)
-                  mrb_intern(mrb, "__classid__"), mrb_symbol_value(name));
+                  mrb_intern(mrb, &quot;__classid__&quot;), mrb_symbol_value(name));
  }
  
 +#define make_metaclass(mrb, c) prepare_singleton_class((mrb), (struct RBasic*)(c))
@@ -1950,45 +1950,45 @@ index a3150fa..d95a057 100644
 -  struct RClass *sc;
 +  struct RClass *sc, *c;
  
--  if (c->c->tt == MRB_TT_SCLASS) {
+-  if (c-&gt;c-&gt;tt == MRB_TT_SCLASS) {
 -    return;
 -  }
-+  if (o->c->tt == MRB_TT_SCLASS) return;
-   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
-   sc->mt = 0;
-   sc->iv = 0;
--  if (!c->super) {
--    sc->super = mrb->class_class;
-+  if (o->tt == MRB_TT_CLASS) {
++  if (o-&gt;c-&gt;tt == MRB_TT_SCLASS) return;
+   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb-&gt;class_class);
+   sc-&gt;mt = 0;
+   sc-&gt;iv = 0;
+-  if (!c-&gt;super) {
+-    sc-&gt;super = mrb-&gt;class_class;
++  if (o-&gt;tt == MRB_TT_CLASS) {
 +    c = (struct RClass*)o;
-+    if (!c->super) {
-+      sc->super = mrb->class_class;
++    if (!c-&gt;super) {
++      sc-&gt;super = mrb-&gt;class_class;
 +    }
 +    else {
-+      sc->super = c->super->c;
++      sc-&gt;super = c-&gt;super-&gt;c;
 +    }
    }
 -  else {
-+  else if (o->tt == MRB_TT_SCLASS) {
++  else if (o-&gt;tt == MRB_TT_SCLASS) {
 +    c = (struct RClass*)o;
-+    make_metaclass(mrb, c->super);
-     sc->super = c->super->c;
++    make_metaclass(mrb, c-&gt;super);
+     sc-&gt;super = c-&gt;super-&gt;c;
    }
--  c->c = sc;
+-  c-&gt;c = sc;
 -  mrb_field_write_barrier(mrb, (struct RBasic*)c, (struct RBasic*)sc);
--  mrb_field_write_barrier(mrb, (struct RBasic*)sc, (struct RBasic*)sc->super);
+-  mrb_field_write_barrier(mrb, (struct RBasic*)sc, (struct RBasic*)sc-&gt;super);
 +  else {
-+    sc->super = o->c;
++    sc-&gt;super = o-&gt;c;
 +  }
-+  o->c = sc;
++  o-&gt;c = sc;
 +  mrb_field_write_barrier(mrb, (struct RBasic*)o, (struct RBasic*)sc);
 +  mrb_field_write_barrier(mrb, (struct RBasic*)sc, (struct RBasic*)o);
-+  mrb_obj_iv_set(mrb, (struct RObject*)sc, mrb_intern(mrb, "__attached__"), mrb_obj_value(o));
++  mrb_obj_iv_set(mrb, (struct RObject*)sc, mrb_intern(mrb, &quot;__attached__&quot;), mrb_obj_value(o));
  }
  
  struct RClass*
 @@ -179,7 +191,6 @@ mrb_vm_define_class(mrb_state *mrb, mrb_value outer, mrb_value super, mrb_sym id
-         mrb_raisef(mrb, E_TYPE_ERROR, "superclass mismatch for class %s", mrb_sym2name(mrb, id));
+         mrb_raisef(mrb, E_TYPE_ERROR, &quot;superclass mismatch for class %s&quot;, mrb_sym2name(mrb, id));
        }
      }
 -
@@ -2004,10 +2004,10 @@ index a3150fa..d95a057 100644
 -{
 -  struct RClass *sc;
 -
--  if (o->c->tt == MRB_TT_SCLASS) return;
--  sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
--  sc->mt = 0;
--  sc->super = c;
+-  if (o-&gt;c-&gt;tt == MRB_TT_SCLASS) return;
+-  sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb-&gt;class_class);
+-  sc-&gt;mt = 0;
+-  sc-&gt;super = c;
 -  mrb_field_write_barrier(mrb, (struct RBasic*)sc, (struct RBasic*)c);
 -
 -  return sc;
@@ -2020,17 +2020,17 @@ index a3150fa..d95a057 100644
      break;
    }
    obj = mrb_object(v);
--  obj->c = mrb_singleton_class_ptr(mrb, obj->c);
+-  obj-&gt;c = mrb_singleton_class_ptr(mrb, obj-&gt;c);
 +  prepare_singleton_class(mrb, obj);
-   return mrb_obj_value(obj->c);
+   return mrb_obj_value(obj-&gt;c);
  }
  
  void
  mrb_define_singleton_method(mrb_state *mrb, struct RObject *o, const char *name, mrb_func_t func, int aspec)
  {
--  o->c = mrb_singleton_class_ptr(mrb, o->c);
+-  o-&gt;c = mrb_singleton_class_ptr(mrb, o-&gt;c);
 +  prepare_singleton_class(mrb, (struct RBasic*)o);
-   mrb_define_method_id(mrb, o->c, mrb_intern(mrb, name), func, aspec);
+   mrb_define_method_id(mrb, o-&gt;c, mrb_intern(mrb, name), func, aspec);
  }
  
 @@ -944,15 +941,14 @@ mrb_value
@@ -2040,15 +2040,15 @@ index a3150fa..d95a057 100644
 -  mrb_value superclass;
  
    c = mrb_class_ptr(klass);
--  if (c->super)
--    superclass = mrb_obj_value(mrb_class_real(c->super));
+-  if (c-&gt;super)
+-    superclass = mrb_obj_value(mrb_class_real(c-&gt;super));
 -  else
 -    superclass = mrb_nil_value();
 -
 -  return superclass;
-+  c = c->super;
-+  while (c && c->tt == MRB_TT_ICLASS) {
-+    c = c->super;
++  c = c-&gt;super;
++  while (c &amp;&amp; c-&gt;tt == MRB_TT_ICLASS) {
++    c = c-&gt;super;
 +  }
 +  if (!c) return mrb_nil_value();
 +  return mrb_obj_value(c);
@@ -2061,14 +2061,14 @@ index d467a34..adb6164 100644
 +++ b/src/kernel.c
 @@ -287,7 +287,8 @@ mrb_singleton_class_clone(mrb_state *mrb, mrb_value obj)
  
-     clone->super = klass->super;
-     if (klass->iv) {
--      clone->iv = klass->iv;
+     clone-&gt;super = klass-&gt;super;
+     if (klass-&gt;iv) {
+-      clone-&gt;iv = klass-&gt;iv;
 +      mrb_iv_copy(mrb, mrb_obj_value(clone), mrb_obj_value(klass));
-+      mrb_obj_iv_set(mrb, (struct RObject*)clone, mrb_intern(mrb, "__attached__"), obj);
++      mrb_obj_iv_set(mrb, (struct RObject*)clone, mrb_intern(mrb, &quot;__attached__&quot;), obj);
      }
-     if (klass->mt) {
-       clone->mt = kh_copy(mt, mrb, klass->mt);
+     if (klass-&gt;mt) {
+       clone-&gt;mt = kh_copy(mt, mrb, klass-&gt;mt);
 </pre>
 
   </body>

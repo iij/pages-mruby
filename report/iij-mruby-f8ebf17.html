@@ -37,10 +37,10 @@
         
       <li>
       <pre>commit f8ebf1747686ac48da45288c27f6464b62462fc4
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Wed Nov 14 14:02:43 2012 +0900
 
-    add test: IO#gets(nil) and IO#gets("")
+    add test: IO#gets(nil) and IO#gets(&quot;&quot;)
 
 </pre>
       <a href="#commitlog">commit log</a>
@@ -3596,48 +3596,48 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit f8ebf1747686ac48da45288c27f6464b62462fc4
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Wed Nov 14 14:02:43 2012 +0900
 
-    add test: IO#gets(nil) and IO#gets("")
+    add test: IO#gets(nil) and IO#gets(&quot;&quot;)
 
 diff --git a/test/posix/io.sh b/test/posix/io.sh
 index 5c3afa3..4e5de0f 100755
 --- a/test/posix/io.sh
 +++ b/test/posix/io.sh
 @@ -161,6 +161,33 @@ if Object.const_defined?(:IO)
-     line1 == "a\n" and line1 == line1_ and line2 == "b\n" and line3 == nil
+     line1 == &quot;a\n&quot; and line1 == line1_ and line2 == &quot;b\n&quot; and line3 == nil
    end
  
 +  assert('IO#gets with nil') do
-+    io = File.open("$W_FILENAME", "w")
-+    io.write("a\nb\n")
++    io = File.open(&quot;$W_FILENAME&quot;, &quot;w&quot;)
++    io.write(&quot;a\nb\n&quot;)
 +    io.close
-+    io = File.open("$W_FILENAME", "r")
++    io = File.open(&quot;$W_FILENAME&quot;, &quot;r&quot;)
 +    body = io.gets(nil)
 +    io.close
 +    $/ = nil
-+    io = File.open("$W_FILENAME", "r")
++    io = File.open(&quot;$W_FILENAME&quot;, &quot;r&quot;)
 +    body2 = io.gets
 +    io.close
 +
-+    body == "a\nb\n" and body == body2 and $/ == nil
++    body == &quot;a\nb\n&quot; and body == body2 and $/ == nil
 +  end
 +
 +  assert('IO#gets with empty string (paragrah mode)') do
-+    io = File.open("$W_FILENAME", "w")
-+    io.write("a\nb\n\nc\n")
++    io = File.open(&quot;$W_FILENAME&quot;, &quot;w&quot;)
++    io.write(&quot;a\nb\n\nc\n&quot;)
 +    io.close
-+    io = File.open("$W_FILENAME", "r")
-+    para1 = io.gets("")
-+    para2 = io.gets("")
++    io = File.open(&quot;$W_FILENAME&quot;, &quot;r&quot;)
++    para1 = io.gets(&quot;&quot;)
++    para2 = io.gets(&quot;&quot;)
 +    io.close
 +
-+    para1 == "a\nb\n\n" and para2 == "c\n"
++    para1 == &quot;a\nb\n\n&quot; and para2 == &quot;c\n&quot;
 +  end
 +
    assert('IO#getc') do
-     chars = "a\nb\n"
+     chars = &quot;a\nb\n&quot;
  
 </pre>
 

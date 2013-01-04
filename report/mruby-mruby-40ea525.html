@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 40ea525d1e5a94771a5b1e57f001267dfe8da046
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 21 23:52:40 2012 +0900
 
     should raise error on return in block in top-level; close #664
@@ -1988,7 +1988,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 40ea525d1e5a94771a5b1e57f001267dfe8da046
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 21 23:52:40 2012 +0900
 
     should raise error on return in block in top-level; close #664
@@ -2000,9 +2000,9 @@ index da6700b..bce92c9 100644
 @@ -1199,6 +1199,10 @@ mrb_run(mrb_state *mrb, struct RProc *proc, mrb_value self)
                goto L_RAISE;
              }
-             ci = mrb->ci = mrb->cibase + e->cioff;
-+	    if (ci == mrb->cibase) {
-+              localjump_error(mrb, "return");
+             ci = mrb-&gt;ci = mrb-&gt;cibase + e-&gt;cioff;
++	    if (ci == mrb-&gt;cibase) {
++              localjump_error(mrb, &quot;return&quot;);
 +              goto L_RAISE;
 +	    }
              break;

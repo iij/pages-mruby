@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 3f54c90529610b8fab40221ae9367a4672dbbb6c
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Sun Dec 23 15:46:12 2012 +0800
 
     add mrb_mod_cvar_defined
@@ -1965,7 +1965,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 3f54c90529610b8fab40221ae9367a4672dbbb6c
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Sun Dec 23 15:46:12 2012 +0800
 
     add mrb_mod_cvar_defined
@@ -1981,16 +1981,16 @@ index 8d14319..0ed18e1 100644
 +/* 15.2.2.4.16 */
 +/*
 + *  call-seq:
-+ *     obj.class_variable_defined?(symbol)    -> true or false
++ *     obj.class_variable_defined?(symbol)    -&gt; true or false
 + *
-+ *  Returns <code>true</code> if the given class variable is defined
-+ *  in <i>obj</i>.
++ *  Returns &lt;code&gt;true&lt;/code&gt; if the given class variable is defined
++ *  in &lt;i&gt;obj&lt;/i&gt;.
 + *
 + *     class Fred
 + *       @@foo = 99
 + *     end
-+ *     Fred.class_variable_defined?(:@@foo)    #=> true
-+ *     Fred.class_variable_defined?(:@@bar)    #=> false
++ *     Fred.class_variable_defined?(:@@foo)    #=&gt; true
++ *     Fred.class_variable_defined?(:@@bar)    #=&gt; false
 + */
 +
 +static mrb_value
@@ -1998,7 +1998,7 @@ index 8d14319..0ed18e1 100644
 +{
 +  mrb_value sym;
 +  mrb_sym id;
-+  mrb_get_args(mrb, "o", &sym);
++  mrb_get_args(mrb, &quot;o&quot;, &amp;sym);
 +
 +  id = mrb_sym_value(mrb,sym);
 +  check_cv_name(mrb, id);
@@ -2012,13 +2012,13 @@ index 8d14319..0ed18e1 100644
  /*
   *  call-seq:
 @@ -1616,6 +1646,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, cls, "superclass", mrb_class_superclass, ARGS_NONE());      /* 15.2.3.3.4 */
-   mrb_define_method(mrb, cls, "new", mrb_instance_new, ARGS_ANY());                  /* 15.2.3.3.3 */
-   mrb_define_method(mrb, cls, "inherited", mrb_bob_init, ARGS_REQ(1));
-+  mrb_define_method(mrb, mod, "class_variable_defined?", mrb_mod_cvar_defined, ARGS_REQ(1));  /* 15.2.2.4.16 */
-   mrb_define_method(mrb, mod, "class_variable_get", mrb_mod_cvar_get, ARGS_REQ(1));  /* 15.2.2.4.17 */
-   mrb_define_method(mrb, mod, "class_variable_set", mrb_mod_cvar_set, ARGS_REQ(2));  /* 15.2.2.4.18 */
-   mrb_define_method(mrb, mod, "extend_object", mrb_mod_extend_object, ARGS_REQ(1));  /* 15.2.2.4.25 */
+   mrb_define_method(mrb, cls, &quot;superclass&quot;, mrb_class_superclass, ARGS_NONE());      /* 15.2.3.3.4 */
+   mrb_define_method(mrb, cls, &quot;new&quot;, mrb_instance_new, ARGS_ANY());                  /* 15.2.3.3.3 */
+   mrb_define_method(mrb, cls, &quot;inherited&quot;, mrb_bob_init, ARGS_REQ(1));
++  mrb_define_method(mrb, mod, &quot;class_variable_defined?&quot;, mrb_mod_cvar_defined, ARGS_REQ(1));  /* 15.2.2.4.16 */
+   mrb_define_method(mrb, mod, &quot;class_variable_get&quot;, mrb_mod_cvar_get, ARGS_REQ(1));  /* 15.2.2.4.17 */
+   mrb_define_method(mrb, mod, &quot;class_variable_set&quot;, mrb_mod_cvar_set, ARGS_REQ(2));  /* 15.2.2.4.18 */
+   mrb_define_method(mrb, mod, &quot;extend_object&quot;, mrb_mod_extend_object, ARGS_REQ(1));  /* 15.2.2.4.25 */
 </pre>
 
   </body>

@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit c65042906894599381efc139420b75044dd55def
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Sat Dec 29 17:09:04 2012 +0900
 
     update exception test. test fixes with mruby-mtest.
@@ -4932,7 +4932,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit c65042906894599381efc139420b75044dd55def
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Sat Dec 29 17:09:04 2012 +0900
 
     update exception test. test fixes with mruby-mtest.
@@ -4944,7 +4944,7 @@ index 8179d8e..2662cfd 100644
 @@ -297,13 +297,18 @@ TEST_INFINITE_RECURSION_MAX = 100000
  def test_infinite_recursion
    $test_infinite_recursion += 1
-   if $test_infinite_recursion > TEST_INFINITE_RECURSION_MAX
+   if $test_infinite_recursion &gt; TEST_INFINITE_RECURSION_MAX
 -    return $test_infinite_recursion 
 +    return $test_infinite_recursion
    end

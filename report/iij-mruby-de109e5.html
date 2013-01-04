@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit de109e5900105984afbb3f0313c2e224516c14f9
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Mon Nov 19 12:06:42 2012 +0900
 
     fix the issue String#split may return incorrect value on some platform.
@@ -3849,7 +3849,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit de109e5900105984afbb3f0313c2e224516c14f9
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Mon Nov 19 12:06:42 2012 +0900
 
     fix the issue String#split may return incorrect value on some platform.
@@ -3860,28 +3860,28 @@ index 4483c4d..2432bb6 100644
 +++ b/src/string.c
 @@ -6,25 +6,26 @@
  
- #include "mruby.h"
+ #include &quot;mruby.h&quot;
  
-+#include <ctype.h>
-+#include <limits.h>
- #include <stdarg.h>
-+#include <stdio.h>
- #include <string.h>
- #include "mruby/string.h"
--#include <ctype.h>
--#include <limits.h>
- #include "mruby/range.h"
- #include "mruby/array.h"
- #include "mruby/class.h"
--#include <stdio.h>
-+#include "mruby/variable.h"
++#include &lt;ctype.h&gt;
++#include &lt;limits.h&gt;
+ #include &lt;stdarg.h&gt;
++#include &lt;stdio.h&gt;
+ #include &lt;string.h&gt;
+ #include &quot;mruby/string.h&quot;
+-#include &lt;ctype.h&gt;
+-#include &lt;limits.h&gt;
+ #include &quot;mruby/range.h&quot;
+ #include &quot;mruby/array.h&quot;
+ #include &quot;mruby/class.h&quot;
+-#include &lt;stdio.h&gt;
++#include &quot;mruby/variable.h&quot;
  #ifdef ENABLE_REGEXP
- #include "re.h"
- #include "regex.h"
+ #include &quot;re.h&quot;
+ #include &quot;regex.h&quot;
 -#endif //ENABLE_REGEXP
 +#endif
  
- const char mrb_digitmap[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+ const char mrb_digitmap[] = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;;
  
  #ifdef ENABLE_REGEXP
  static mrb_value get_pat(mrb_state *mrb, mrb_value pat, mrb_int quote);
@@ -3891,13 +3891,13 @@ index 4483c4d..2432bb6 100644
  #ifndef ENABLE_REGEXP
  static mrb_value mrb_str_subseq(mrb_state *mrb, mrb_value str, int beg, int len);
 @@ -2137,7 +2138,7 @@ static const char isspacetable[256] = {
-  *  <code>$;</code> is <code>nil</code> (which is the default), <i>str</i> is
+  *  &lt;code&gt;$;&lt;/code&gt; is &lt;code&gt;nil&lt;/code&gt; (which is the default), &lt;i&gt;str&lt;/i&gt; is
   *  split on whitespace as if ` ' were specified.
   *
-- *  If the <i>limit</i> parameter is omitted, trailing null fields are
-+ *  If the <i>limit</i> parameter is omitted or zero, trailing null fields are
-  *  suppressed. If <i>limit</i> is a positive number, at most that number of
-  *  fields will be returned (if <i>limit</i> is <code>1</code>, the entire
+- *  If the &lt;i&gt;limit&lt;/i&gt; parameter is omitted, trailing null fields are
++ *  If the &lt;i&gt;limit&lt;/i&gt; parameter is omitted or zero, trailing null fields are
+  *  suppressed. If &lt;i&gt;limit&lt;/i&gt; is a positive number, at most that number of
+  *  fields will be returned (if &lt;i&gt;limit&lt;/i&gt; is &lt;code&gt;1&lt;/code&gt;, the entire
   *  string is returned as the only entry in an array). If negative, there is no
 @@ -2162,42 +2163,34 @@ static mrb_value
  mrb_str_split_m(mrb_state *mrb, mrb_value str)
@@ -3914,15 +3914,15 @@ index 4483c4d..2432bb6 100644
 +  if (RSTRING_LEN(str) == 0)
 +    return mrb_ary_new_capa(mrb, 0);
 +
-   argc = mrb_get_args(mrb, "|oi", &spat, &lim);
+   argc = mrb_get_args(mrb, &quot;|oi&quot;, &amp;spat, &amp;lim);
 -  if (argc == 2) {
 +  if (argc == 0) {
-+    spat = mrb_gv_get(mrb, mrb_intern(mrb, "$;"));
++    spat = mrb_gv_get(mrb, mrb_intern(mrb, &quot;$;&quot;));
 +  } else if (argc == 2) {
      if (lim == 1) {
 -      if (RSTRING_LEN(str) == 0)
 -        return mrb_ary_new_capa(mrb, 0);
-       return mrb_ary_new_from_values(mrb, 1, &str);
+       return mrb_ary_new_from_values(mrb, 1, &amp;str);
      }
      i = 1;
    }
@@ -3942,11 +3942,11 @@ index 4483c4d..2432bb6 100644
 -      }
 -      else {
 -#endif //ENABLE_REGEXP
--        if (RSTRING_LEN(spat) == 1 && RSTRING_PTR(spat)[0] == ' '){
+-        if (RSTRING_LEN(spat) == 1 &amp;&amp; RSTRING_PTR(spat)[0] == ' '){
 -            split_type = awk;
 -        }
 -#ifdef ENABLE_REGEXP
-+      if (RSTRING_LEN(spat) == 1 && RSTRING_PTR(spat)[0] == ' ') {
++      if (RSTRING_LEN(spat) == 1 &amp;&amp; RSTRING_PTR(spat)[0] == ' ') {
 +        split_type = awk;
        }
 -#endif //ENABLE_REGEXP
@@ -3956,7 +3956,7 @@ index 4483c4d..2432bb6 100644
 @@ -2205,73 +2198,72 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
        split_type = regexp;
  #else
-       mrb_raise(mrb, E_TYPE_ERROR, "Regexp Class not supported");
+       mrb_raise(mrb, E_TYPE_ERROR, &quot;Regexp Class not supported&quot;);
 -#endif //ENABLE_REGEXP
 +#endif
      }
@@ -3976,11 +3976,11 @@ index 4483c4d..2432bb6 100644
 -
 -    end = beg;
      int ai = mrb_gc_arena_save(mrb);
--    while (ptr < eptr) {
+-    while (ptr &lt; eptr) {
 -      mrb_gc_arena_restore(mrb, ai);
 -      c = (unsigned char)*ptr++;
 +    end = beg;
-+    while (n < len) {
++    while (n &lt; len) {
 +      spc = ascii_isspace(RSTRING_PTR(str)[n++]);
        if (skip) {
 -	if (ascii_isspace(c)) {
@@ -3989,21 +3989,21 @@ index 4483c4d..2432bb6 100644
 -	else {
 -	  end = ptr - bptr;
 -	  skip = 0;
--	  if (lim >= 0 && lim <= i) break;
+-	  if (lim &gt;= 0 &amp;&amp; lim &lt;= i) break;
 -	}
 -      }
 -      else if (ascii_isspace(c)) {
 -	mrb_ary_push(mrb, result, mrb_str_subseq(mrb, str, beg, end-beg));
 -	skip = 1;
 -	beg = ptr - bptr;
--	if (lim >= 0) ++i;
+-	if (lim &gt;= 0) ++i;
 +        if (spc) {
 +          beg = n;
 +        }
 +        else {
 +          end = n;
 +          skip = 0;
-+          if (lim > 0 && lim <= i) break;
++          if (lim &gt; 0 &amp;&amp; lim &lt;= i) break;
 +        }
        }
        else {
@@ -4031,33 +4031,33 @@ index 4483c4d..2432bb6 100644
  
      if (slen == 0) {
        int ai = mrb_gc_arena_save(mrb);
--      while (ptr < eptr) {
-+      while (n < len) {
+-      while (ptr &lt; eptr) {
++      while (n &lt; len) {
 +	mrb_ary_push(mrb, result, mrb_str_subseq(mrb, str, n, 1));
          mrb_gc_arena_restore(mrb, ai);
 -	mrb_ary_push(mrb, result, mrb_str_subseq(mrb, str, ptr-temp, 1));
 -	ptr++;
--	if (lim >= 0 && lim <= ++i) break;
+-	if (lim &gt;= 0 &amp;&amp; lim &lt;= ++i) break;
 +        n += 1;
-+	if (lim > 0 && lim <= ++i) break;
++	if (lim &gt; 0 &amp;&amp; lim &lt;= ++i) break;
        }
      }
      else {
        char *sptr = RSTRING_PTR(spat);
 -
        int ai = mrb_gc_arena_save(mrb);
--      while (ptr < eptr &&
--	     (end = mrb_memsearch(sptr, slen, ptr, eptr - ptr)) >= 0) {
-+      while (n < len) {
+-      while (ptr &lt; eptr &amp;&amp;
+-	     (end = mrb_memsearch(sptr, slen, ptr, eptr - ptr)) &gt;= 0) {
++      while (n &lt; len) {
 +        end = mrb_memsearch(sptr, slen, RSTRING_PTR(str) + n, len - n);
-+        if (end < 0) break;
++        if (end &lt; 0) break;
 +        mrb_ary_push(mrb, result, mrb_str_subseq(mrb, str, n, end));
          mrb_gc_arena_restore(mrb, ai);
 -	mrb_ary_push(mrb, result, mrb_str_subseq(mrb, str, ptr - temp, end));
 -	ptr += end + slen;
--	if (lim >= 0 && lim <= ++i) break;
+-	if (lim &gt;= 0 &amp;&amp; lim &lt;= ++i) break;
 +	n += end + slen;
-+	if (lim > 0 && lim <= ++i) break;
++	if (lim &gt; 0 &amp;&amp; lim &lt;= ++i) break;
        }
      }
 -    beg = ptr - temp;
@@ -4068,7 +4068,7 @@ index 4483c4d..2432bb6 100644
 @@ -2287,13 +2279,10 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
        mrb_gc_arena_restore(mrb, ai);
        regs = RMATCH_REGS(mrb_backref_get(mrb));
-       if (start == end && BEG(0) == END(0)) {
+       if (start == end &amp;&amp; BEG(0) == END(0)) {
 -        if (!ptr) {
 -          mrb_ary_push(mrb, result, mrb_str_new_empty(mrb, str));
 -          break;
@@ -4085,21 +4085,21 @@ index 4483c4d..2432bb6 100644
              tmp = mrb_str_subseq(mrb, str, BEG(idx), END(idx)-BEG(idx));
          mrb_ary_push(mrb, result, tmp);
        }
--      if (lim >= 0 && lim <= ++i) break;
-+      if (lim > 0 && lim <= ++i) break;
+-      if (lim &gt;= 0 &amp;&amp; lim &lt;= ++i) break;
++      if (lim &gt; 0 &amp;&amp; lim &lt;= ++i) break;
      }
 -#else
--    mrb_raise(mrb, E_TYPE_ERROR, "Regexp Class not supported");
+-    mrb_raise(mrb, E_TYPE_ERROR, &quot;Regexp Class not supported&quot;);
  #endif //ENABLE_REGEXP
    }
--  if (RSTRING_LEN(str) > 0 && (lim >= 0 || RSTRING_LEN(str) > beg || lim < 0)) {
+-  if (RSTRING_LEN(str) &gt; 0 &amp;&amp; (lim &gt;= 0 || RSTRING_LEN(str) &gt; beg || lim &lt; 0)) {
 -    if (RSTRING_LEN(str) == beg)
 -        tmp = mrb_str_new_empty(mrb, str);
 -    else
 -        tmp = mrb_str_subseq(mrb, str, beg, RSTRING_LEN(str)-beg);
 -    mrb_ary_push(mrb, result, tmp);
 -  }
--  if (lim < 0) {
+-  if (lim &lt; 0) {
 +
 +  if (RSTRING_LEN(str) == beg)
 +    tmp = mrb_str_new_empty(mrb, str);
@@ -4109,14 +4109,14 @@ index 4483c4d..2432bb6 100644
 +
 +  if (lim == 0) {
      long len;
-     while ((len = RARRAY_LEN(result)) > 0 &&
+     while ((len = RARRAY_LEN(result)) &gt; 0 &amp;&amp;
             (tmp = RARRAY_PTR(result)[len-1], RSTRING_LEN(tmp) == 0))
 @@ -3182,4 +3169,6 @@ mrb_init_string(mrb_state *mrb)
-   mrb_define_method(mrb, s, "upcase!",         mrb_str_upcase_bang,     ARGS_REQ(1));              /* 15.2.10.5.43 */
-   mrb_define_method(mrb, s, "inspect",         mrb_str_inspect,         ARGS_NONE());              /* 15.2.10.5.46(x) */
-   mrb_define_method(mrb, s, "bytes",           mrb_str_bytes,           ARGS_NONE());
+   mrb_define_method(mrb, s, &quot;upcase!&quot;,         mrb_str_upcase_bang,     ARGS_REQ(1));              /* 15.2.10.5.43 */
+   mrb_define_method(mrb, s, &quot;inspect&quot;,         mrb_str_inspect,         ARGS_NONE());              /* 15.2.10.5.46(x) */
+   mrb_define_method(mrb, s, &quot;bytes&quot;,           mrb_str_bytes,           ARGS_NONE());
 +
-+  mrb_gv_set(mrb, mrb_intern(mrb, "$;"), mrb_nil_value());
++  mrb_gv_set(mrb, mrb_intern(mrb, &quot;$;&quot;), mrb_nil_value());
  }
 diff --git a/test/t/string.rb b/test/t/string.rb
 index 0e04008..084b1f7 100644
@@ -4131,9 +4131,9 @@ index 0e04008..084b1f7 100644
  assert('String#split', '15.2.10.5.35') do
 -  # without RegExp behavior is actually unspecified
 -  'abc abc abc'.split == ['abc', 'abc', 'abc'] and
--    'a,b,c,,d'.split(',') == ["a", "b", "c", "", "d"] and
+-    'a,b,c,,d'.split(',') == [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;&quot;, &quot;d&quot;] and
 -    'abc abc abc'.split(nil) == ['abc', 'abc', 'abc'] and
--    'abc'.split("") == ['a', 'b', 'c']
+-    'abc'.split(&quot;&quot;) == ['a', 'b', 'c']
 +  ''.split(//)               == []                          and
 +  ''.split(/x/)              == []                          and
 +  'abc'.split(//)            == ['a', 'b', 'c']             and

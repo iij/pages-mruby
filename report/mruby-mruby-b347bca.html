@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit b347bcac61c1006f06e3ce32bd776750c68da1ec
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Thu Jan 3 11:58:17 2013 +0800
 
     Adapter mrbgems documentation to rake system
@@ -1837,7 +1837,7 @@ Crash: 0
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit b347bcac61c1006f06e3ce32bd776750c68da1ec
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Thu Jan 3 11:58:17 2013 +0800
 
     Adapter mrbgems documentation to rake system
@@ -1877,7 +1877,7 @@ index 0eaaad6..6d5a023 100644
 +A remote GIT repository location for a GEM is also supported:
 +
 +```
-+conf.gem :git => 'https://github.com/masuidrive/mrbgems-example.git', :branch => 'master'
++conf.gem :git =&gt; 'https://github.com/masuidrive/mrbgems-example.git', :branch =&gt; 'master'
 +```
  
 -Every activated GEM has to be listed in *GEMS.active*. You have to point to
@@ -1889,20 +1889,20 @@ index 0eaaad6..6d5a023 100644
  
 @@ -28,70 +35,74 @@ The maximal GEM structure looks like this:
  ```
- +- GEM_NAME         <- Name of GEM
+ +- GEM_NAME         &lt;- Name of GEM
     |
--   +- include/      <- Header files for C extension
+-   +- include/      &lt;- Header files for C extension
 -   |
-    +- mrblib/       <- Source for Ruby extension
+    +- mrblib/       &lt;- Source for Ruby extension
     |
-    +- src/          <- Source for C extension
+    +- src/          &lt;- Source for C extension
     |
-    +- test/         <- Test code (Ruby)
+    +- test/         &lt;- Test code (Ruby)
     |
--   +- Makefile      <- Makefile for GEM
-+   +- mrbgem.rake   <- GEM Specification
+-   +- Makefile      &lt;- Makefile for GEM
++   +- mrbgem.rake   &lt;- GEM Specification
     |
-    +- README.md     <- Readme for GEM
+    +- README.md     &lt;- Readme for GEM
  ```
  
  The folder *mrblib* contains pure Ruby files to extend mruby. The folder *src*
@@ -1979,10 +1979,10 @@ index 0eaaad6..6d5a023 100644
  ```
  void
  mrb_c_extension_example_gem_init(mrb_state* mrb) {
--  _class_cextension = mrb_define_module(mrb, "CExtension");
--  mrb_define_class_method(mrb, _class_cextension, "c_method", mrb_c_method, ARGS_NONE());
-+  struct RClass *class_cextension = mrb_define_module(mrb, "CExtension");
-+  mrb_define_class_method(mrb, class_cextension, "c_method", mrb_c_method, ARGS_NONE());
+-  _class_cextension = mrb_define_module(mrb, &quot;CExtension&quot;);
+-  mrb_define_class_method(mrb, _class_cextension, &quot;c_method&quot;, mrb_c_method, ARGS_NONE());
++  struct RClass *class_cextension = mrb_define_module(mrb, &quot;CExtension&quot;);
++  mrb_define_class_method(mrb, class_cextension, &quot;c_method&quot;, mrb_c_method, ARGS_NONE());
  }
  ```
  
@@ -1994,10 +1994,10 @@ index 0eaaad6..6d5a023 100644
  ```
 @@ -105,7 +116,7 @@ this target with the necessary rules!
     |  |
-    |  +- example.rb        <- Test code for C extension
+    |  +- example.rb        &lt;- Test code for C extension
     |
--   +- Makefile             <- Build rules for C extension
-+   +- mrbgem.rake          <- GEM specification
+-   +- Makefile             &lt;- Build rules for C extension
++   +- mrbgem.rake          &lt;- GEM specification
     |
     +- README.md
  ```
@@ -2022,10 +2022,10 @@ index 0eaaad6..6d5a023 100644
  
 @@ -141,7 +144,7 @@ this target with the necessary rules!
     |  |
-    |  +- example.rb        <- Test code for Ruby extension
+    |  +- example.rb        &lt;- Test code for Ruby extension
     |
 -   +- Makefile
-+   +- mrbgem.rake          <- GEM specification
++   +- mrbgem.rake          &lt;- GEM specification
     |
     +- README.md
  ```
@@ -2045,10 +2045,10 @@ index 0eaaad6..6d5a023 100644
  See C and Ruby example.
 @@ -180,6 +176,6 @@ See C and Ruby example.
     |  |
-    |  +- example.rb        <- Test code for C and Ruby extension
+    |  +- example.rb        &lt;- Test code for C and Ruby extension
     |
 -   +- Makefile
-+   +- mrbgem.rake          <- GEM specification
++   +- mrbgem.rake          &lt;- GEM specification
     |
     +- README.md
 </pre>

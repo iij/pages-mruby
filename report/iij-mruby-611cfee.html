@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 611cfee3c2ff1a06760cbe4d0d1415f65087b505
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Mon Nov 12 20:43:10 2012 +0800
 
     modify aspec
@@ -1669,7 +1669,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 611cfee3c2ff1a06760cbe4d0d1415f65087b505
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Mon Nov 12 20:43:10 2012 +0800
 
     modify aspec
@@ -1679,14 +1679,14 @@ index 4df422e..e737a12 100644
 --- a/src/class.c
 +++ b/src/class.c
 @@ -1440,7 +1440,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, mod, "const_get", mrb_mod_const_get, ARGS_REQ(1));          /* 15.2.2.4.21 */
-   mrb_define_method(mrb, mod, "const_set", mrb_mod_const_set, ARGS_REQ(2));          /* 15.2.2.4.23 */
-   mrb_define_method(mrb, mod, "define_method", mod_define_method, ARGS_REQ(1));
--  mrb_define_method(mrb, mod, "class_variables", mrb_mod_class_variables, ARGS_ANY()); /* 15.2.2.4.19 */
-+  mrb_define_method(mrb, mod, "class_variables", mrb_mod_class_variables, ARGS_NONE()); /* 15.2.2.4.19 */
+   mrb_define_method(mrb, mod, &quot;const_get&quot;, mrb_mod_const_get, ARGS_REQ(1));          /* 15.2.2.4.21 */
+   mrb_define_method(mrb, mod, &quot;const_set&quot;, mrb_mod_const_set, ARGS_REQ(2));          /* 15.2.2.4.23 */
+   mrb_define_method(mrb, mod, &quot;define_method&quot;, mod_define_method, ARGS_REQ(1));
+-  mrb_define_method(mrb, mod, &quot;class_variables&quot;, mrb_mod_class_variables, ARGS_ANY()); /* 15.2.2.4.19 */
++  mrb_define_method(mrb, mod, &quot;class_variables&quot;, mrb_mod_class_variables, ARGS_NONE()); /* 15.2.2.4.19 */
  
-   mrb_define_method(mrb, mod, "===", mrb_mod_eqq, ARGS_REQ(1));
-   mrb_undef_method(mrb, cls, "append_features");
+   mrb_define_method(mrb, mod, &quot;===&quot;, mrb_mod_eqq, ARGS_REQ(1));
+   mrb_undef_method(mrb, cls, &quot;append_features&quot;);
 </pre>
 
   </body>

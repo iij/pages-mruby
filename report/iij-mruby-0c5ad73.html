@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 0c5ad73f4641f45a15da3fba72f662e1cc1c8ea4
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Wed Nov 14 14:09:05 2012 +0900
 
     support paragraph mode of IO#gets
@@ -3643,7 +3643,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 0c5ad73f4641f45a15da3fba72f662e1cc1c8ea4
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Wed Nov 14 14:09:05 2012 +0900
 
     support paragraph mode of IO#gets
@@ -3656,8 +3656,8 @@ index 99f3a3d..7d6989d 100644
        return mrb_nil_value();
    } else if (limit == 0) {
      return mrb_str_new(mrb, 0, 0);
--  } else if (limit < 0) {
-+  } else if (RSTRING_LEN(rs) > 0 && limit < 0) {
+-  } else if (limit &lt; 0) {
++  } else if (RSTRING_LEN(rs) &gt; 0 &amp;&amp; limit &lt; 0) {
      return rb_io_getline_fast(mrb, fptr, '\n');
    }
  

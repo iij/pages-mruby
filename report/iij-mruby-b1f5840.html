@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit b1f5840aefe0c4edac9dc3f238bdb757521eb67c
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Tue Nov 13 16:50:41 2012 +0900
 
     fix the issue String#slice with Range may return broken String.
@@ -1669,7 +1669,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit b1f5840aefe0c4edac9dc3f238bdb757521eb67c
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Tue Nov 13 16:50:41 2012 +0900
 
     fix the issue String#slice with Range may return broken String.
@@ -1679,13 +1679,13 @@ index 6fe7964..085d5b1 100644
 --- a/src/range.c
 +++ b/src/range.c
 @@ -286,7 +286,7 @@ mrb_range_beg_len(mrb_state *mrb, mrb_value range, mrb_int *begp, mrb_int *lenp,
-     if (end > len) end = len;
+     if (end &gt; len) end = len;
    }
-   if (end < 0) end += len;
--  if (!r->excl) end++;  /* include end point */
-+  if (!r->excl && end < len) end++;  /* include end point */
+   if (end &lt; 0) end += len;
+-  if (!r-&gt;excl) end++;  /* include end point */
++  if (!r-&gt;excl &amp;&amp; end &lt; len) end++;  /* include end point */
    len = end - beg;
-   if (len < 0) len = 0;
+   if (len &lt; 0) len = 0;
  
 diff --git a/test/t/string.rb b/test/t/string.rb
 index 26b7df5..1e921c6 100644

@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 320a931965796dbc2892f34ebc36e71db5126e57
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Fri Dec 28 16:48:33 2012 +0800
 
     fix correct stack postion for headless case
@@ -1965,7 +1965,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 320a931965796dbc2892f34ebc36e71db5126e57
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Fri Dec 28 16:48:33 2012 +0800
 
     fix correct stack postion for headless case
@@ -1976,7 +1976,7 @@ index eefd9f0..60acd4d 100644
 +++ b/src/codegen.c
 @@ -1205,7 +1205,9 @@ codegen(codegen_scope *s, node *tree, int val)
              pop();
-             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s->mrb, "===")), 1));
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s-&gt;mrb, &quot;===&quot;)), 1));
            }
 -	  pop();
 +          else

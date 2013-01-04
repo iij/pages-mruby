@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 098ea64c5ede652fa2fdb9f35c1a4d80a07446ea
-Author: Takashi Sogabe <sogabe@iij.ad.jp>
+Author: Takashi Sogabe &lt;sogabe@iij.ad.jp&gt;
 Date:   Thu Nov 15 12:38:22 2012 +0900
 
     Add Pack#pack('aA') and Pack#unpack('aA')
@@ -3597,7 +3597,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 098ea64c5ede652fa2fdb9f35c1a4d80a07446ea
-Author: Takashi Sogabe <sogabe@iij.ad.jp>
+Author: Takashi Sogabe &lt;sogabe@iij.ad.jp&gt;
 Date:   Thu Nov 15 12:38:22 2012 +0900
 
     Add Pack#pack('aA') and Pack#unpack('aA')
@@ -3610,8 +3610,8 @@ index 17e9527..e45df46 100644
 @@ -90,6 +90,7 @@ static mrb_value
  mrb_pack_pack(mrb_state *mrb, mrb_value ary)
  {
-   static const char nul10[] = "\0\0\0\0\0\0\0\0\0\0";
-+  static const char spc10[] = "          ";
+   static const char nul10[] = &quot;\0\0\0\0\0\0\0\0\0\0&quot;;
++  static const char spc10[] = &quot;          &quot;;
    const char *p, *pend;
    char ch, type;
    mrb_value result, from, fmt;
@@ -3625,7 +3625,7 @@ index 17e9527..e45df46 100644
 +      case 'H':
 +	from = NEXTFROM;
          if (mrb_nil_p(from)) {
-           ptr = "";
+           ptr = &quot;&quot;;
            plen = 0;
 @@ -191,8 +193,25 @@ modifiers:
  
@@ -3637,12 +3637,12 @@ index 17e9527..e45df46 100644
 +	switch (type) {
 +	case 'a':	/* arbitrary binary string (null padded) */
 +	case 'A':	/* arbitrary binary string (ASCII space padded) */
-+	  if (plen >= len) {
++	  if (plen &gt;= len) {
 +	    mrb_str_buf_cat(mrb, result, ptr, len);
 +	  } else {
 +	    mrb_str_buf_cat(mrb, result, ptr, plen);
 +	    len -= plen;
-+	    while (len >= 10) {
++	    while (len &gt;= 10) {
 +	      mrb_str_buf_cat(mrb, result, (type == 'A')?spc10:nul10, 10);
 +	      len -= 10;
 +	    }
@@ -3654,7 +3654,7 @@ index 17e9527..e45df46 100644
 +	  int byte = 0;
            long i, j = 0;
  
-           if (len > plen) {
+           if (len &gt; plen) {
 @@ -218,8 +237,10 @@ modifiers:
            }
            len = j;
@@ -3669,17 +3669,17 @@ index 17e9527..e45df46 100644
        case 'm':		/* base64 encoded string */
          from = NEXTFROM;
 @@ -373,6 +394,27 @@ modifiers:
-         mrb_raisef(mrb, E_ARGUMENT_ERROR, "%% is not supported");
+         mrb_raisef(mrb, E_ARGUMENT_ERROR, &quot;%% is not supported&quot;);
          break;
  
 +      case 'A':
-+	if (len > send - s) len = send - s;
++	if (len &gt; send - s) len = send - s;
 +	{
 +	  long end = len;
 +	  char *t = s + len - 1;
 +
-+	  while (t >= s) {
-+	    if (*t != ' ' && *t != '\0') break;
++	  while (t &gt;= s) {
++	    if (*t != ' ' &amp;&amp; *t != '\0') break;
 +	    t--; len--;
 +	  }
 +	  UNPACK_PUSH(mrb_str_new(mrb, RSTRING_PTR(str), len));
@@ -3688,7 +3688,7 @@ index 17e9527..e45df46 100644
 +	break;
 +
 +      case 'a':
-+	if (len > send - s) len = send - s;
++	if (len &gt; send - s) len = send - s;
 +	UNPACK_PUSH(mrb_str_new(mrb, RSTRING_PTR(str), len));
 +	s += len;
 +	break;
@@ -3701,34 +3701,34 @@ index 0171754..c5b4e5d 100644
 --- a/test/t/pack.rb
 +++ b/test/t/pack.rb
 @@ -62,4 +62,30 @@ if Array.new.methods.include?(:pack) and String.new.methods.include?(:unpack)
-    str = "\x00\x01\x7F\x80\xFF"
-    ary.pack("C*") == str and str.unpack("C*") == ary
+    str = &quot;\x00\x01\x7F\x80\xFF&quot;
+    ary.pack(&quot;C*&quot;) == str and str.unpack(&quot;C*&quot;) == ary
    end
 +
-+  # pack "a"
-+  assert('["abc"].pack("a")') do
-+    ["abc"].pack("a") == "a" and
-+    ["abc"].pack("a*") == "abc" and
-+    ["abc"].pack("a4") == "abc\0"
++  # pack &quot;a&quot;
++  assert('[&quot;abc&quot;].pack(&quot;a&quot;)') do
++    [&quot;abc&quot;].pack(&quot;a&quot;) == &quot;a&quot; and
++    [&quot;abc&quot;].pack(&quot;a*&quot;) == &quot;abc&quot; and
++    [&quot;abc&quot;].pack(&quot;a4&quot;) == &quot;abc\0&quot;
 +  end
 +
-+  # upack "a"
-+  assert('["abc"].pack("a")') do
-+    "abc\0".unpack("a4") == ["abc\0"] and
-+    "abc ".unpack("a4") == ["abc "]
++  # upack &quot;a&quot;
++  assert('[&quot;abc&quot;].pack(&quot;a&quot;)') do
++    &quot;abc\0&quot;.unpack(&quot;a4&quot;) == [&quot;abc\0&quot;] and
++    &quot;abc &quot;.unpack(&quot;a4&quot;) == [&quot;abc &quot;]
 +  end
 +
-+  # pack "A"
-+  assert('["abc"].pack("A")') do
-+    ["abc"].pack("A") == "a" and
-+    ["abc"].pack("A*") == "abc" and
-+    ["abc"].pack("A4") == "abc "
++  # pack &quot;A&quot;
++  assert('[&quot;abc&quot;].pack(&quot;A&quot;)') do
++    [&quot;abc&quot;].pack(&quot;A&quot;) == &quot;a&quot; and
++    [&quot;abc&quot;].pack(&quot;A*&quot;) == &quot;abc&quot; and
++    [&quot;abc&quot;].pack(&quot;A4&quot;) == &quot;abc &quot;
 +  end
 +
-+  # upack "A"
-+  assert('["abc"].pack("A")') do
-+    "abc\0".unpack("A4") == ["abc"] and
-+    "abc ".unpack("A4") == ["abc"]
++  # upack &quot;A&quot;
++  assert('[&quot;abc&quot;].pack(&quot;A&quot;)') do
++    &quot;abc\0&quot;.unpack(&quot;A4&quot;) == [&quot;abc&quot;] and
++    &quot;abc &quot;.unpack(&quot;A4&quot;) == [&quot;abc&quot;]
 +  end
  end
 </pre>

@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 32c0ddee6a490633171ebc2adaff08221151d5fb
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Wed Nov 14 09:35:19 2012 +0900
 
     3 times faster String#strip implementation
@@ -3109,7 +3109,7 @@ trap: SIGUSR2: bad trap</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 32c0ddee6a490633171ebc2adaff08221151d5fb
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Wed Nov 14 09:35:19 2012 +0900
 
     3 times faster String#strip implementation
@@ -3123,7 +3123,7 @@ index 013e207..bf80796 100644
    end
  
 +  # for strip family
-+  SPACES__ = " \f\n\r\t\v"
++  SPACES__ = &quot; \f\n\r\t\v&quot;
 +
    def lstrip
 -    i = 0
@@ -3132,7 +3132,7 @@ index 013e207..bf80796 100644
 -    end
 -    j = 0
 -    ar = []
--    while i < self.size
+-    while i &lt; self.size
 -      ar[j] = self[i]
 -      i += 1
 -      j += 1
@@ -3140,7 +3140,7 @@ index 013e207..bf80796 100644
 -    ar.join('')
 +    a = 0
 +    z = self.size
-+    a += 1 while SPACES__.include?(self[a]) and a <= z
++    a += 1 while SPACES__.include?(self[a]) and a &lt;= z
 +    self[a..z]
    end
  
@@ -3151,14 +3151,14 @@ index 013e207..bf80796 100644
 -    end
 -    j = 0
 -    ar = []
--    while j < (self.size + i + 1)
+-    while j &lt; (self.size + i + 1)
 -      ar[j] = self[j]
 -      j += 1
 -    end
 -    ar.join('')
 +    a = 0
 +    z = self.size
-+    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    z -= 1 while SPACES__.include?(self[z]) and a &lt;= z
 +    self[a..z]
    end
  
@@ -3168,8 +3168,8 @@ index 013e207..bf80796 100644
 -    b
 +    a = 0
 +    z = self.size
-+    a += 1 while SPACES__.include?(self[a]) and a <= z
-+    z -= 1 while SPACES__.include?(self[z]) and a <= z
++    a += 1 while SPACES__.include?(self[a]) and a &lt;= z
++    z -= 1 while SPACES__.include?(self[z]) and a &lt;= z
 +    self[a..z]
    end
  

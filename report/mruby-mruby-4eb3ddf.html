@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 4eb3ddfd305bef84d1537b535d85923194732c19
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Tue Dec 25 12:07:54 2012 +0800
 
     add mrb_mod_remove_cvar
@@ -1965,7 +1965,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 4eb3ddfd305bef84d1537b535d85923194732c19
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Tue Dec 25 12:07:54 2012 +0800
 
     add mrb_mod_remove_cvar
@@ -1981,9 +1981,9 @@ index 0ed18e1..db334cf 100644
 +/* 15.2.2.4.39 */
 +/*
 + *  call-seq:
-+ *     remove_class_variable(sym)    -> obj
++ *     remove_class_variable(sym)    -&gt; obj
 + *
-+ *  Removes the definition of the <i>sym</i>, returning that
++ *  Removes the definition of the &lt;i&gt;sym&lt;/i&gt;, returning that
 + *  constant's value.
 + *
 + *     class Dummy
@@ -1994,7 +1994,7 @@ index 0ed18e1..db334cf 100644
 + *       p class_variables
 + *     end
 + *
-+ *  <em>produces:</em>
++ *  &lt;em&gt;produces:&lt;/em&gt;
 + *
 + *     99
 + *     [:@@var]
@@ -2007,7 +2007,7 @@ index 0ed18e1..db334cf 100644
 +  mrb_value sym, val;
 +  mrb_sym id;
 +
-+  mrb_get_args(mrb, "o", &sym);
++  mrb_get_args(mrb, &quot;o&quot;, &amp;sym);
 +
 +  id = mrb_sym_value(mrb,sym);
 +  check_cv_name(mrb, id);
@@ -2017,11 +2017,11 @@ index 0ed18e1..db334cf 100644
 +  if (!mrb_undef_p(val)) return val;
 +
 +  if (mrb_cv_defined(mrb, mod, id)){
-+    mrb_name_error(mrb, id, "cannot remove %s for %s",
++    mrb_name_error(mrb, id, &quot;cannot remove %s for %s&quot;,
 +        mrb_sym2name(mrb, id), mrb_class_name(mrb, mrb_class_ptr(mod)));
 +  }
 +
-+  mrb_name_error(mrb, id, "class variable %s not defined for %s",
++  mrb_name_error(mrb, id, &quot;class variable %s not defined for %s&quot;,
 +      mrb_sym2name(mrb, id), mrb_class_name(mrb, mrb_class_ptr(mod)));
 +
 + /* not reached */
@@ -2032,13 +2032,13 @@ index 0ed18e1..db334cf 100644
  check_const_name(mrb_state *mrb, mrb_sym id)
  {
 @@ -1659,6 +1709,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, mod, "included_modules", mrb_mod_included_modules, ARGS_NONE()); /* 15.2.2.4.30 */
-   mrb_define_method(mrb, mod, "instance_methods", mrb_mod_instance_methods, ARGS_ANY());  /* 15.2.2.4.33 */
-   mrb_define_method(mrb, mod, "module_eval", mrb_mod_module_eval, ARGS_ANY());            /* 15.2.2.4.35 */
-+  mrb_define_method(mrb, mod, "remove_class_variable", mrb_mod_remove_cvar, ARGS_REQ(1)); /* 15.2.2.4.39 */
+   mrb_define_method(mrb, mod, &quot;included_modules&quot;, mrb_mod_included_modules, ARGS_NONE()); /* 15.2.2.4.30 */
+   mrb_define_method(mrb, mod, &quot;instance_methods&quot;, mrb_mod_instance_methods, ARGS_ANY());  /* 15.2.2.4.33 */
+   mrb_define_method(mrb, mod, &quot;module_eval&quot;, mrb_mod_module_eval, ARGS_ANY());            /* 15.2.2.4.35 */
++  mrb_define_method(mrb, mod, &quot;remove_class_variable&quot;, mrb_mod_remove_cvar, ARGS_REQ(1)); /* 15.2.2.4.39 */
  
-   mrb_define_method(mrb, mod, "to_s", mrb_mod_to_s, ARGS_NONE());
-   mrb_define_method(mrb, mod, "inspect", mrb_mod_to_s, ARGS_NONE());
+   mrb_define_method(mrb, mod, &quot;to_s&quot;, mrb_mod_to_s, ARGS_NONE());
+   mrb_define_method(mrb, mod, &quot;inspect&quot;, mrb_mod_to_s, ARGS_NONE());
 </pre>
 
   </body>

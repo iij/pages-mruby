@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit b1832da2db0d64d5faa159d5d9c6f8b091a9acef
-Author: mattn <mattn.jp@gmail.com>
+Author: mattn &lt;mattn.jp@gmail.com&gt;
 Date:   Wed Dec 26 12:25:32 2012 +0900
 
     replace all slash to backslash in `cd /path/to/folder` for windows.
@@ -2245,7 +2245,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit b1832da2db0d64d5faa159d5d9c6f8b091a9acef
-Author: mattn <mattn.jp@gmail.com>
+Author: mattn &lt;mattn.jp@gmail.com&gt;
 Date:   Wed Dec 26 12:25:32 2012 +0900
 
     replace all slash to backslash in `cd /path/to/folder` for windows.
@@ -2258,17 +2258,17 @@ index 6dddef7..dabc259 100644
  end
  
  task :mrbgems_clean do
--  sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
--  sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
+-  sh &quot;cd #{MRUBY_ROOT}/mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
+-  sh &quot;cd #{MRUBY_ROOT}/mrbgems/g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
 +  if ENV['OS'] == 'Windows_NT'
-+    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems && #{RM_F} *.c *.d *.a *.o"
-+    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems\\g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
++    sh &quot;cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
++    sh &quot;cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems\\g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
 +  else
-+    sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
-+    sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
++    sh &quot;cd #{MRUBY_ROOT}/mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
++    sh &quot;cd #{MRUBY_ROOT}/mrbgems/g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
 +  end
    for_each_gem do |path, gemname|
-     sh "#{MAKE} gem-clean -C #{path} #{gem_make_flags}"
+     sh &quot;#{MAKE} gem-clean -C #{path} #{gem_make_flags}&quot;
    end
 </pre>
 

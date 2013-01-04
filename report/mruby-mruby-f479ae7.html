@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit f479ae79a2e9ca195db381a658edf9166155e6df
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Fri Jan 4 05:52:35 2013 +0800
 
     Add documentation for compilation process
@@ -1631,7 +1631,7 @@ Crash: 0
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit f479ae79a2e9ca195db381a658edf9166155e6df
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Fri Jan 4 05:52:35 2013 +0800
 
     Add documentation for compilation process
@@ -1673,8 +1673,8 @@ index 0000000..e68c0d6
 +  conf.ld = ENV['LD'] || 'gcc'
 +  conf.ar = ENV['AR'] || 'ar'
 +
-+  conf.cflags << (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
-+  conf.ldflags << (ENV['LDFLAGS'] || %w(-lm))
++  conf.cflags &lt;&lt; (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
++  conf.ldflags &lt;&lt; (ENV['LDFLAGS'] || %w(-lm))
 +end
 +```
 +
@@ -1720,8 +1720,8 @@ index 0000000..e68c0d6
 +    conf.cflags = %w(-g -O3 -Wall -Werror-implicit-function-declaration -Di386_MARK)
 +    conf.ldflags = %w(-s -static)
 +  else
-+    conf.cflags << %w(-g -O3 -Wall -Werror-implicit-function-declaration -arch i386)
-+    conf.ldflags << %w(-arch i386)
++    conf.cflags &lt;&lt; %w(-g -O3 -Wall -Werror-implicit-function-declaration -arch i386)
++    conf.ldflags &lt;&lt; %w(-arch i386)
 +  end
 +end
 +```
@@ -1738,15 +1738,15 @@ index 0000000..e68c0d6
 +   |
 +   +-  host
 +       |
-+       +- bin          <- Binaries (mirb, mrbc and mruby)
++       +- bin          &lt;- Binaries (mirb, mrbc and mruby)
 +       |
-+       +- lib          <- Libraries (libmruby.a and libmruby_core.a)
++       +- lib          &lt;- Libraries (libmruby.a and libmruby_core.a)
 +       |
 +       +- mrblib
 +       |
 +       +- src
 +       |
-+       +- test         <- mrbtest tool
++       +- test         &lt;- mrbtest tool
 +       |
 +       +- tools
 +          |
@@ -1785,15 +1785,15 @@ index 0000000..e68c0d6
 +   |
 +   +-  host
 +   |   |
-+   |   +- bin           <- Native Binaries
++   |   +- bin           &lt;- Native Binaries
 +   |   |
-+   |   +- lib           <- Native Libraries
++   |   +- lib           &lt;- Native Libraries
 +   |   |
 +   |   +- mrblib
 +   |   |
 +   |   +- src
 +   |   |
-+   |   +- test          <- Native mrbtest tool
++   |   +- test          &lt;- Native mrbtest tool
 +   |   |
 +   |   +- tools
 +   |      |
@@ -1804,15 +1804,15 @@ index 0000000..e68c0d6
 +   |      +- mruby 
 +   +- i386
 +      |
-+      +- bin            <- Cross-compiled Binaries
++      +- bin            &lt;- Cross-compiled Binaries
 +      |
-+      +- lib            <- Cross-compiled Libraries
++      +- lib            &lt;- Cross-compiled Libraries
 +      |
 +      +- mrblib
 +      |
 +      +- src
 +      |
-+      +- test           <- Cross-compiled mrbtest tool
++      +- test           &lt;- Cross-compiled mrbtest tool
 +      |
 +      +- tools
 +         |

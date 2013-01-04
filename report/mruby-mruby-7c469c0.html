@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 7c469c0b9dadd1de09fed18c3e5cc551012c38c1
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Sat Dec 29 05:37:55 2012 +0900
 
     Rebuild CRuby based building script without Makefile
@@ -1841,7 +1841,7 @@ Crash: 0
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 7c469c0b9dadd1de09fed18c3e5cc551012c38c1
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Sat Dec 29 05:37:55 2012 +0900
 
     Rebuild CRuby based building script without Makefile
@@ -1878,9 +1878,9 @@ index c8b252d..0000000
 -#   2. Change to a build directory outside source tree, eg - `build` subdir
 -#   3. Create build Makefiles or project files.
 -#        `cmake ..`  (UNIX-like system)
--#        `cmake -G "MSYS Makefiles" ..`
--#        `cmake -G "Visual Studio 10" ..`
--#        `cmake -G "NMake Makefiles" ..`
+-#        `cmake -G &quot;MSYS Makefiles&quot; ..`
+-#        `cmake -G &quot;Visual Studio 10&quot; ..`
+-#        `cmake -G &quot;NMake Makefiles&quot; ..`
 -#      ** to cross-compile: add -DCMAKE_TOOLCHAIN_FILE=/path/to/toolchain/file
 -#      ** to set install dir: add -DCMAKE_INSTALL_PREFIX=/path/to/installdir
 -#  4a. Build: `make`  (to make noisy, add `VERBOSE=1`)
@@ -1893,9 +1893,9 @@ index c8b252d..0000000
 -# Default build mode is Release With Debug Info unless specified
 -if(NOT CMAKE_BUILD_TYPE)
 -  set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING
--      "Choose build type: empty Debug Release RelWithDebInfo MinSizeRel"
+-      &quot;Choose build type: empty Debug Release RelWithDebInfo MinSizeRel&quot;
 -      FORCE)
--  message(STATUS "Build type not set, defaulting to 'RelWithDebInfo'")
+-  message(STATUS &quot;Build type not set, defaulting to 'RelWithDebInfo'&quot;)
 -endif()
 -
 -project(mruby C)
@@ -1906,22 +1906,22 @@ index c8b252d..0000000
 -# with an MSVC or Xcode IDE where it's OK.
 -if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR AND NOT (MSVC_IDE OR XCODE))
 -  message(FATAL_ERROR
--          "\nIn-source builds are not allowed as CMake would overwrite the "
--          "Makefiles distributed with mruby. Delete any created 'CMakeFiles' "
--          "subdirectory and 'CMakeCache.txt' file from the current directory, "
--          "change to the 'build' subdirectory, and re-run CMake from there.")
+-          &quot;\nIn-source builds are not allowed as CMake would overwrite the &quot;
+-          &quot;Makefiles distributed with mruby. Delete any created 'CMakeFiles' &quot;
+-          &quot;subdirectory and 'CMakeCache.txt' file from the current directory, &quot;
+-          &quot;change to the 'build' subdirectory, and re-run CMake from there.&quot;)
 -endif()
 -
 -if(COMMAND cmake_policy)
 -  cmake_policy(SET CMP0003 NEW)  # don't split absolute link paths
--  cmake_policy(SET CMP0012 NEW)  # recognize number & boolean literals
+-  cmake_policy(SET CMP0012 NEW)  # recognize number &amp; boolean literals
 -  cmake_policy(SET CMP0015 NEW)  # convert relative link paths to absolute
 -endif(COMMAND cmake_policy)
 -
 -# Match original Makefile's default in-tree install.
 -if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 -  set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR} CACHE PATH
--    "Install path prefix prepended to install directories."
+-    &quot;Install path prefix prepended to install directories.&quot;
 -    FORCE
 -    )
 -endif()
@@ -1932,20 +1932,20 @@ index c8b252d..0000000
 -# Version of mruby, useful for versoning .so and .dll files.
 -# TODO automate by parsing src/version.h -or- extract git info?
 -set(MRUBY_VERSION 1.0.0dev)
--string(REGEX MATCH "^[0-9]+[.][0-9]+" MRUBY_SOVERSION ${MRUBY_VERSION})
--string(REPLACE "." "" MRUBY_DLL_SHORTVER ${MRUBY_SOVERSION})
+-string(REGEX MATCH &quot;^[0-9]+[.][0-9]+&quot; MRUBY_SOVERSION ${MRUBY_VERSION})
+-string(REPLACE &quot;.&quot; &quot;&quot; MRUBY_DLL_SHORTVER ${MRUBY_SOVERSION})
 -
 -# Search in the `cmake` directory for custom CMake helper modules.
--list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+-list(APPEND CMAKE_MODULE_PATH &quot;${CMAKE_SOURCE_DIR}/cmake/modules&quot;)
 -include(IntrospectSystem)
 -
 -# Search for C header files in these directories.
--include_directories("${CMAKE_SOURCE_DIR}/include" "${CMAKE_SOURCE_DIR}/src")
+-include_directories(&quot;${CMAKE_SOURCE_DIR}/include&quot; &quot;${CMAKE_SOURCE_DIR}/src&quot;)
 -
 -# TODO re-enable (and implement) if needed
 -# On some 64-bit platforms, libraries should be installed into `lib64'
 -# instead of `lib'.  Set this to 64 to do that.
--#set(LIB_SUFFIX "" CACHE STRING "Suffix for 'lib' directories, e.g. '64'")
+-#set(LIB_SUFFIX &quot;&quot; CACHE STRING &quot;Suffix for 'lib' directories, e.g. '64'&quot;)
 -
 -# build the components
 -add_subdirectory(src)
@@ -1956,24 +1956,24 @@ index c8b252d..0000000
 -# install the header files
 -install(FILES include/mruby.h DESTINATION include)
 -install(FILES include/mrbconf.h DESTINATION include)
--install(DIRECTORY include/mruby DESTINATION include FILES_MATCHING PATTERN "*.h")
+-install(DIRECTORY include/mruby DESTINATION include FILES_MATCHING PATTERN &quot;*.h&quot;)
 -
 -# TODO refactor once proper versioning scheme implemented
 -# archive packaging
--set(CPACK_GENERATOR "TGZ;ZIP")
+-set(CPACK_GENERATOR &quot;TGZ;ZIP&quot;)
 -string(TOLOWER ${CMAKE_SYSTEM_NAME} MRUBY_HOST)
 -if(CMAKE_C_COMPILER_VERSION)
--  string(REPLACE "." "" MRUBY_GCC_VERSION ${CMAKE_C_COMPILER_VERSION})
+-  string(REPLACE &quot;.&quot; &quot;&quot; MRUBY_GCC_VERSION ${CMAKE_C_COMPILER_VERSION})
 -endif()
 -
 -# TODO add build info suffix for non-Windows builds?
 -if(MINGW)
--  set(MRUBY_BUILD "-mingw${MRUBY_GCC_VERSION}")
+-  set(MRUBY_BUILD &quot;-mingw${MRUBY_GCC_VERSION}&quot;)
 -elseif(MSVC)
--  set(MRUBY_BUILD "-msvc${MSVC_VERSION}")
+-  set(MRUBY_BUILD &quot;-msvc${MSVC_VERSION}&quot;)
 -endif()
 -set(CPACK_PACKAGE_FILE_NAME
--  "${CMAKE_PROJECT_NAME}-${MRUBY_VERSION}-${MRUBY_HOST}${MRUBY_BUILD}"
+-  &quot;${CMAKE_PROJECT_NAME}-${MRUBY_VERSION}-${MRUBY_HOST}${MRUBY_BUILD}&quot;
 -  )
 -include(CPack)
 -
@@ -2030,15 +2030,15 @@ index 61bf248..da42755 100644
 -  require './mrbgems/build_tasks'
 -  Rake::Task[:load_mrbgems_flags].invoke
 -else
--  CFLAGS << "-DDISABLE_GEMS"
+-  CFLAGS &lt;&lt; &quot;-DDISABLE_GEMS&quot;
 -end
 -
--CFLAGS << "-Wall" << "-Werror-implicit-function-declaration" << "-I#{MRUBY_ROOT}/include"
+-CFLAGS &lt;&lt; &quot;-Wall&quot; &lt;&lt; &quot;-Werror-implicit-function-declaration&quot; &lt;&lt; &quot;-I#{MRUBY_ROOT}/include&quot;
 -
 -if ENV['OS'] == 'Windows_NT'
--  MAKE_FLAGS = "--no-print-directory CC=#{CC} LL=#{LL} AR=#{AR} YACC=#{YACC} CFLAGS=\"#{CFLAGS.join(' ')}\" LDFLAGS=\"#{LDFLAGS.join(' ')}\" LIBS=\"#{LIBS.join(' ')}\" ENABLE_GEMS=\"#{ENABLE_GEMS}\" MRUBY_ROOT=\"#{MRUBY_ROOT}\""
+-  MAKE_FLAGS = &quot;--no-print-directory CC=#{CC} LL=#{LL} AR=#{AR} YACC=#{YACC} CFLAGS=\&quot;#{CFLAGS.join(' ')}\&quot; LDFLAGS=\&quot;#{LDFLAGS.join(' ')}\&quot; LIBS=\&quot;#{LIBS.join(' ')}\&quot; ENABLE_GEMS=\&quot;#{ENABLE_GEMS}\&quot; MRUBY_ROOT=\&quot;#{MRUBY_ROOT}\&quot;&quot;
 -else
--  MAKE_FLAGS = "--no-print-directory CC='#{CC}' LL='#{LL}' AR='#{AR}' YACC='#{YACC}' CFLAGS='#{CFLAGS.join(' ')}' LDFLAGS='#{LDFLAGS.join(' ')}' LIBS='#{LIBS.join(' ')}' ENABLE_GEMS='#{ENABLE_GEMS}' MRUBY_ROOT='#{MRUBY_ROOT}'"
+-  MAKE_FLAGS = &quot;--no-print-directory CC='#{CC}' LL='#{LL}' AR='#{AR}' YACC='#{YACC}' CFLAGS='#{CFLAGS.join(' ')}' LDFLAGS='#{LDFLAGS.join(' ')}' LIBS='#{LIBS.join(' ')}' ENABLE_GEMS='#{ENABLE_GEMS}' MRUBY_ROOT='#{MRUBY_ROOT}'&quot;
 -end
 +load 'tasks/rules.rake'
 +load 'src/mruby_core.rake'
@@ -2054,80 +2054,80 @@ index 61bf248..da42755 100644
  ##############################
 -# internal variables
 +# generic build targets, rules
-+task :default => :all
++task :default =&gt; :all
  
 -CP = ENV['CP'] ||= 'cp'
 -RM_F = ENV['RM_F'] ||= 'rm -f'
 -CAT = ENV['CAT'] ||= 'cat'
 +binfiles = [exefile('bin/mruby'), exefile('bin/mirb'), exefile('bin/mrbc')]
  
-+desc "build all targets, install (locally) in-repo"
-+task :all => binfiles + MRuby.targets.map { |t| [exefile("#{t.build_dir}/bin/mruby"), exefile("#{t.build_dir}/bin/mirb"), exefile("#{t.build_dir}/bin/mrbc")] }.flatten
++desc &quot;build all targets, install (locally) in-repo&quot;
++task :all =&gt; binfiles + MRuby.targets.map { |t| [exefile(&quot;#{t.build_dir}/bin/mruby&quot;), exefile(&quot;#{t.build_dir}/bin/mirb&quot;), exefile(&quot;#{t.build_dir}/bin/mrbc&quot;)] }.flatten
  
 -##############################
 -# generic build targets, rules
-+file exefile('bin/mruby') => exefile('build/host/bin/mruby') do |t|
++file exefile('bin/mruby') =&gt; exefile('build/host/bin/mruby') do |t|
 +  FileUtils.cp t.prerequisites.first, t.name
 +end
  
--task :default => :all
-+file exefile('bin/mirb') => exefile('build/host/bin/mirb') do |t|
+-task :default =&gt; :all
++file exefile('bin/mirb') =&gt; exefile('build/host/bin/mirb') do |t|
 +  FileUtils.cp t.prerequisites.first, t.name
 +end
  
--desc "build all targets, install (locally) in-repo"
+-desc &quot;build all targets, install (locally) in-repo&quot;
 -task :all do
--  sh "#{MAKE} -C src #{MAKE_FLAGS}"
--  sh "#{MAKE} -C mrblib #{MAKE_FLAGS}"
+-  sh &quot;#{MAKE} -C src #{MAKE_FLAGS}&quot;
+-  sh &quot;#{MAKE} -C mrblib #{MAKE_FLAGS}&quot;
 -  if ENABLE_GEMS
--    puts "-- MAKE mrbgems --"
+-    puts &quot;-- MAKE mrbgems --&quot;
 -    Rake::Task['mrbgems_all'].invoke
 -  end
--  sh "#{MAKE} -C tools/mruby #{MAKE_FLAGS}"
--  sh "#{MAKE} -C tools/mirb #{MAKE_FLAGS}"
-+file exefile('bin/mrbc') => exefile('build/host/bin/mrbc') do |t|
+-  sh &quot;#{MAKE} -C tools/mruby #{MAKE_FLAGS}&quot;
+-  sh &quot;#{MAKE} -C tools/mirb #{MAKE_FLAGS}&quot;
++file exefile('bin/mrbc') =&gt; exefile('build/host/bin/mrbc') do |t|
 +  FileUtils.cp t.prerequisites.first, t.name
  end
  
--desc "sh all mruby tests"
--task :test => [:all] do
--  sh "#{MAKE} -C test #{MAKE_FLAGS}"
-+desc "run all mruby tests"
-+task :test => MRuby.targets.map { |t| exefile("#{t.build_dir}/test/mrbtest") } do
-+  sh "#{filename exefile('build/host/test/mrbtest')}"
-+  if MRuby.targets.count > 1
-+    puts "\nYou should run #{MRuby.targets.map{ |t| t.name == 'host' ? nil : "#{t.build_dir}/test/mrbtest" }.compact.join(', ')} on target device."
+-desc &quot;sh all mruby tests&quot;
+-task :test =&gt; [:all] do
+-  sh &quot;#{MAKE} -C test #{MAKE_FLAGS}&quot;
++desc &quot;run all mruby tests&quot;
++task :test =&gt; MRuby.targets.map { |t| exefile(&quot;#{t.build_dir}/test/mrbtest&quot;) } do
++  sh &quot;#{filename exefile('build/host/test/mrbtest')}&quot;
++  if MRuby.targets.count &gt; 1
++    puts &quot;\nYou should run #{MRuby.targets.map{ |t| t.name == 'host' ? nil : &quot;#{t.build_dir}/test/mrbtest&quot; }.compact.join(', ')} on target device.&quot;
 +  end
  end
  
- desc "clean all built and in-repo installed artifacts"
+ desc &quot;clean all built and in-repo installed artifacts&quot;
  task :clean do
--  sh "#{MAKE} clean -C src #{MAKE_FLAGS}"
--  sh "#{MAKE} clean -C mrblib #{MAKE_FLAGS}"
+-  sh &quot;#{MAKE} clean -C src #{MAKE_FLAGS}&quot;
+-  sh &quot;#{MAKE} clean -C mrblib #{MAKE_FLAGS}&quot;
 -  if ENABLE_GEMS
--    puts "-- MAKE mrbgems --"
+-    puts &quot;-- MAKE mrbgems --&quot;
 -    Rake::Task['mrbgems_clean'].invoke
 +  MRuby.targets.each do |t|
 +    FileUtils.rm_rf t.build_dir
    end
--  sh "#{MAKE} clean -C tools/mruby #{MAKE_FLAGS}"
--  sh "#{MAKE} clean -C tools/mirb #{MAKE_FLAGS}"
--  sh "#{MAKE} clean -C test #{MAKE_FLAGS}"
+-  sh &quot;#{MAKE} clean -C tools/mruby #{MAKE_FLAGS}&quot;
+-  sh &quot;#{MAKE} clean -C tools/mirb #{MAKE_FLAGS}&quot;
+-  sh &quot;#{MAKE} clean -C test #{MAKE_FLAGS}&quot;
 -end
 -
--desc "show build config summary"
+-desc &quot;show build config summary&quot;
 -task :showconfig do
--  puts "  CC = #{CC}"
--  puts "  LL = #{LL}"
--  puts "  AR = #{AR}"
--  puts "  YACC = #{YACC}"
--  puts "  MAKE = #{MAKE}"
--  puts ""
--  puts "  CFLAGS = #{CFLAGS.join(' ')}"
--  puts "  LDFLAGS = #{LDFLAGS.join(' ')}"
--  puts "  LIBS = #{LIBS.join(' ')}"
--  puts ""
--  puts "  ENABLE_GEMS = #{ENABLE_GEMS}"
+-  puts &quot;  CC = #{CC}&quot;
+-  puts &quot;  LL = #{LL}&quot;
+-  puts &quot;  AR = #{AR}&quot;
+-  puts &quot;  YACC = #{YACC}&quot;
+-  puts &quot;  MAKE = #{MAKE}&quot;
+-  puts &quot;&quot;
+-  puts &quot;  CFLAGS = #{CFLAGS.join(' ')}&quot;
+-  puts &quot;  LDFLAGS = #{LDFLAGS.join(' ')}&quot;
+-  puts &quot;  LIBS = #{LIBS.join(' ')}&quot;
+-  puts &quot;&quot;
+-  puts &quot;  ENABLE_GEMS = #{ENABLE_GEMS}&quot;
 +  FileUtils.rm_f binfiles
  end
 diff --git a/build/.gitkeep b/build/.gitkeep
@@ -2151,8 +2151,8 @@ index 0000000..93ccc1a
 +  # conf.cat = 'cat'
 +  # conf.git = 'git'
 +
-+  conf.cflags << (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
-+  conf.ldflags << (ENV['LDFLAGS'] || %w(-lm))
++  conf.cflags &lt;&lt; (ENV['CFLAGS'] || %w(-g -O3 -Wall -Werror-implicit-function-declaration))
++  conf.ldflags &lt;&lt; (ENV['LDFLAGS'] || %w(-lm))
 +  # conf.cxxflags = []
 +  # conf.objccflags = []
 +  # conf.asmflags = []
@@ -2160,7 +2160,7 @@ index 0000000..93ccc1a
 +  # conf.gem 'doc/mrbgems/ruby_extension_example'
 +  # conf.gem 'doc/mrbgems/c_extension_example'
 +  # conf.gem 'doc/mrbgems/c_and_ruby_extension_example'
-+  # conf.gem :git => 'git@github.com:masuidrive/mrbgems-example.git', :branch => 'master'
++  # conf.gem :git =&gt; 'git@github.com:masuidrive/mrbgems-example.git', :branch =&gt; 'master'
 +end
 +
 +=begin
@@ -2180,12 +2180,12 @@ index 0000000..93ccc1a
 +    conf.cflags = %w(-g -O3 -Wall -Werror-implicit-function-declaration -Di386_MARK)
 +    conf.ldflags = %w(-s -static)
 +  else
-+    conf.cflags << %w(-g -O3 -Wall -Werror-implicit-function-declaration -arch i386)
-+    conf.ldflags << %w(-arch i386)
++    conf.cflags &lt;&lt; %w(-g -O3 -Wall -Werror-implicit-function-declaration -arch i386)
++    conf.ldflags &lt;&lt; %w(-arch i386)
 +  end
-+  # conf.cxxflags << []
-+  # conf.objccflags << []
-+  # conf.asmflags << []
++  # conf.cxxflags &lt;&lt; []
++  # conf.objccflags &lt;&lt; []
++  # conf.asmflags &lt;&lt; []
 +
 +  # conf.gem 'doc/mrbgems/ruby_extension_example'
 +  # conf.gem 'doc/mrbgems/c_extension_example'
@@ -2325,10 +2325,10 @@ index 888c51e..0000000
 -SET(CMAKE_SYSTEM_NAME Linux)
 -
 -# We show CMAKE the compiler, the rest will be guessed by the Toolchain
--SET(CMAKE_C_COMPILER "$ENV{OPENWRT_TOOLCHAIN}/bin/$ENV{OPENWRT_TARGETCC}")
+-SET(CMAKE_C_COMPILER &quot;$ENV{OPENWRT_TOOLCHAIN}/bin/$ENV{OPENWRT_TARGETCC}&quot;)
 -
 -# We define an own release flag so that we can adapt the optimal C_FLAGS
--SET(CMAKE_C_FLAGS_OPENWRT "$ENV{OPENWRT_TARGETFLAGS}")
+-SET(CMAKE_C_FLAGS_OPENWRT &quot;$ENV{OPENWRT_TARGETFLAGS}&quot;)
 diff --git a/cmake/Toolchain-Ubuntu-gnueabi.cmake.sample b/cmake/Toolchain-Ubuntu-gnueabi.cmake.sample
 deleted file mode 100644
 index bf29a5c..0000000
@@ -2445,12 +2445,12 @@ index 559b884..0000000
 -
 -# initial system defaults
 -if(CMAKE_COMPILER_IS_GNUCC)
--  set(MRUBY_DEFAULT_CFLAGS "-std=gnu99 -Wall -Werror-implicit-function-declaration -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-pointer-sign -Wno-missing-field-initializers -Wformat=2 -Wstrict-aliasing=2 -Wdisabled-optimization -Wpointer-arith -Wdeclaration-after-statement -Wbad-function-cast -Wcast-align -Wredundant-decls")
--  set(CMAKE_C_FLAGS "${MRUBY_DEFAULT_CFLAGS}")
--  set(CMAKE_C_FLAGS_DEBUG "-O3 -ggdb")
--  set(CMAKE_C_FLAGS_MINSIZEREL "-Os -DNDEBUG")
--  set(CMAKE_C_FLAGS_RELWITHDEBINFO "-O3 -g")
--  set(CMAKE_C_FLAGS_RELEASE "-O3 -DNDEBUG")
+-  set(MRUBY_DEFAULT_CFLAGS &quot;-std=gnu99 -Wall -Werror-implicit-function-declaration -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-pointer-sign -Wno-missing-field-initializers -Wformat=2 -Wstrict-aliasing=2 -Wdisabled-optimization -Wpointer-arith -Wdeclaration-after-statement -Wbad-function-cast -Wcast-align -Wredundant-decls&quot;)
+-  set(CMAKE_C_FLAGS &quot;${MRUBY_DEFAULT_CFLAGS}&quot;)
+-  set(CMAKE_C_FLAGS_DEBUG &quot;-O3 -ggdb&quot;)
+-  set(CMAKE_C_FLAGS_MINSIZEREL &quot;-Os -DNDEBUG&quot;)
+-  set(CMAKE_C_FLAGS_RELWITHDEBINFO &quot;-O3 -g&quot;)
+-  set(CMAKE_C_FLAGS_RELEASE &quot;-O3 -DNDEBUG&quot;)
 -
 -  set(MRUBY_LIBS m)
 -else()
@@ -2550,12 +2550,12 @@ index 0000000..9309436
 +  # spec.mruby_cflags = ''
 +  # spec.mruby_ldflags = ''
 +  # spec.mruby_libs = ''
-+  # spec.mruby_includes = ["#{spec.dir}/include"]
++  # spec.mruby_includes = [&quot;#{spec.dir}/include&quot;]
 + 
-+  # spec.rbfiles = Dir.glob("#{dir}/mrblib/*.rb")
-+  # spec.objs = Dir.glob("#{dir}/src/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
-+  # spec.test_rbfiles = Dir.glob("#{dir}/test/*.rb")
-+  # spec.test_objs = Dir.glob("#{dir}/test/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
++  # spec.rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
++  # spec.objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  # spec.test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
++  # spec.test_objs = Dir.glob(&quot;#{dir}/test/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +  # spec.test_preload = 'test/assert.rb'
 +end
 diff --git a/doc/mrbgems/c_and_ruby_extension_example/mrblib/example.rb b/doc/mrbgems/c_and_ruby_extension_example/mrblib/example.rb
@@ -2566,7 +2566,7 @@ index 0c2d3c7..d3899c3 100644
 -class RubyExtension
 +module CRubyExtension
    def CRubyExtension.ruby_method
-     puts "A Ruby Extension"
+     puts &quot;A Ruby Extension&quot;
    end
 diff --git a/doc/mrbgems/c_extension_example/.gitignore b/doc/mrbgems/c_extension_example/.gitignore
 index 186584e..4c2f448 100644
@@ -2621,12 +2621,12 @@ index 0000000..289f87d
 +  # spec.mruby_cflags = ''
 +  # spec.mruby_ldflags = ''
 +  # spec.mruby_libs = ''
-+  # spec.mruby_includes = ["#{spec.dir}/include"]
++  # spec.mruby_includes = [&quot;#{spec.dir}/include&quot;]
 +
-+  # spec.rbfiles = Dir.glob("#{dir}/mrblib/*.rb")
-+  # spec.objs = Dir.glob("#{dir}/src/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
-+  # spec.test_rbfiles = Dir.glob("#{dir}/test/*.rb")
-+  # spec.test_objs = Dir.glob("#{dir}/test/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
++  # spec.rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
++  # spec.objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  # spec.test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
++  # spec.test_objs = Dir.glob(&quot;#{dir}/test/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +  # spec.test_preload = 'test/assert.rb'
 +end
 diff --git a/doc/mrbgems/c_extension_example/test/example.c b/doc/mrbgems/c_extension_example/test/example.c
@@ -2637,7 +2637,7 @@ index 430e87f..ab41033 100644
 -/*
 -  if *.c exists in test directory, auto generate this file
 -*/
-+#include <mruby.h>
++#include &lt;mruby.h&gt;
  
  void
 -mrb_c_extension_example_gem_test_init(mrb_state *mrb)
@@ -2697,12 +2697,12 @@ index 0000000..80a2991
 +  # spec.mruby_cflags = ''
 +  # spec.mruby_ldflags = ''
 +  # spec.mruby_libs = ''
-+  # spec.mruby_includes = ["#{spec.dir}/include"]
++  # spec.mruby_includes = [&quot;#{spec.dir}/include&quot;]
 + 
-+  # spec.rbfiles = Dir.glob("#{dir}/mrblib/*.rb")
-+  # spec.objs = Dir.glob("#{dir}/src/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
-+  # spec.test_rbfiles = Dir.glob("#{dir}/test/*.rb")
-+  # spec.test_objs = Dir.glob("#{dir}/test/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).pathmap("#{build_dir}/%X.o") }
++  # spec.rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
++  # spec.objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  # spec.test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
++  # spec.test_objs = Dir.glob(&quot;#{dir}/test/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +  # spec.test_preload = 'test/assert.rb'
 +end
 diff --git a/ext/.gitkeep b/ext/.gitkeep
@@ -2725,43 +2725,43 @@ index 74afe7e..00a2e64 100755
 +  def ext(newext='')
 +    return self.dup if ['.', '..'].include? self
 +    if newext != ''
-+      newext = (newext =~ /^\./) ? newext : ("." + newext)
++      newext = (newext =~ /^\./) ? newext : (&quot;.&quot; + newext)
 +    end
-+    self.chomp(File.extname(self)) << newext
++    self.chomp(File.extname(self)) &lt;&lt; newext
 +  end
 +
-+  def pathmap(spec=nil, &block)
++  def pathmap(spec=nil, &amp;block)
 +    return self if spec.nil?
 +    result = ''
 +    spec.scan(/%\{[^}]*\}-?\d*[sdpfnxX%]|%-?\d+d|%.|[^%]+/) do |frag|
 +      case frag
 +      when '%f'
-+        result << File.basename(self)
++        result &lt;&lt; File.basename(self)
 +      when '%n'
-+        result << File.basename(self).ext
++        result &lt;&lt; File.basename(self).ext
 +      when '%d'
-+        result << File.dirname(self)
++        result &lt;&lt; File.dirname(self)
 +      when '%x'
-+        result << File.extname(self)
++        result &lt;&lt; File.extname(self)
 +      when '%X'
-+        result << self.ext
++        result &lt;&lt; self.ext
 +      when '%p'
-+        result << self
++        result &lt;&lt; self
 +      when '%s'
-+        result << (File::ALT_SEPARATOR || File::SEPARATOR)
++        result &lt;&lt; (File::ALT_SEPARATOR || File::SEPARATOR)
 +      when '%-'
 +        # do nothing
 +      when '%%'
-+        result << "%"
++        result &lt;&lt; &quot;%&quot;
 +      when /%(-?\d+)d/
-+        result << pathmap_partial($1.to_i)
++        result &lt;&lt; pathmap_partial($1.to_i)
 +      when /^%\{([^}]*)\}(\d*[dpfnxX])/
 +        patterns, operator = $1, $2
-+        result << pathmap('%' + operator).pathmap_replace(patterns, &block)
++        result &lt;&lt; pathmap('%' + operator).pathmap_replace(patterns, &amp;block)
 +      when /^%/
-+        fail ArgumentError, "Unknown pathmap specifier #{frag} in '#{spec}'"
++        fail ArgumentError, &quot;Unknown pathmap specifier #{frag} in '#{spec}'&quot;
 +      else
-+        result << frag
++        result &lt;&lt; frag
 +      end
 +    end
 +    result
@@ -2771,7 +2771,7 @@ index 74afe7e..00a2e64 100755
  module MiniRake
    class Task
 @@ -43,7 +91,8 @@ module MiniRake
-       puts "Invoke #{name} (already=[#{@already_invoked}], needed=[#{needed?}])" if $trace
+       puts &quot;Invoke #{name} (already=[#{@already_invoked}], needed=[#{needed?}])&quot; if $trace
        return if @already_invoked
        @already_invoked = true
 -      @prerequisites.each { |n| Task[n].invoke }
@@ -2792,20 +2792,20 @@ index 74afe7e..00a2e64 100755
      # Class Methods ----------------------------------------------------
 @@ -107,15 +157,12 @@ module MiniRake
        # added to the existing task.
-       def define_task(args, &block)
+       def define_task(args, &amp;block)
          task_name, deps = resolve_args(args)
 -        deps = [deps] if (Symbol === deps) || (String === deps)
 -        deps = deps.collect {|d| d.to_s }
--        lookup(task_name).enhance(deps, &block)
-+        lookup(task_name).enhance([deps].flatten, &block)
+-        lookup(task_name).enhance(deps, &amp;block)
++        lookup(task_name).enhance([deps].flatten, &amp;block)
        end
  
        # Define a rule for synthesizing tasks.  
-       def create_rule(args, &block)
+       def create_rule(args, &amp;block)
          pattern, deps = resolve_args(args)
--        fail "Too many dependents specified in rule #{pattern}: #{deps.inspect}" if deps.size > 1
+-        fail &quot;Too many dependents specified in rule #{pattern}: #{deps.inspect}&quot; if deps.size &gt; 1
          pattern = Regexp.new(Regexp.quote(pattern) + '$') if String === pattern
-         RULES << [pattern, deps, block]
+         RULES &lt;&lt; [pattern, deps, block]
        end
 @@ -136,6 +183,7 @@ module MiniRake
          RULES.each do |pattern, extensions, block|
@@ -2816,11 +2816,11 @@ index 74afe7e..00a2e64 100755
              when String
                source = task_name.sub(/\.[^.]*$/, ext)
 @@ -145,7 +193,7 @@ module MiniRake
-               fail "Don't know how to handle rule dependent: #{ext.inspect}"
+               fail &quot;Don't know how to handle rule dependent: #{ext.inspect}&quot;
              end
              if File.exist?(source)
--              task = FileTask.define_task({task_name => [source]}, &block)
-+              task = FileTask.define_task({task_name => [source]+deps}, &block)
+-              task = FileTask.define_task({task_name =&gt; [source]}, &amp;block)
++              task = FileTask.define_task({task_name =&gt; [source]+deps}, &amp;block)
                task.source = source
                return task
              end
@@ -2832,7 +2832,7 @@ index 74afe7e..00a2e64 100755
 +      prerequisites = @prerequisites.collect{ |n| n.is_a?(Proc) ? n.call(name) : n }.flatten
 +      latest_prereq = prerequisites.collect{|n| Task[n].timestamp}.max
        return false if latest_prereq.nil?
-       timestamp < latest_prereq
+       timestamp &lt; latest_prereq
      end
 @@ -191,55 +240,58 @@ module MiniRake
        File.new(name.to_s).mtime
@@ -2843,13 +2843,13 @@ index 74afe7e..00a2e64 100755
 -Rake = MiniRake
 +  module DSL
 +    # Declare a basic task.
-+    def task(args, &block)
-+      MiniRake::Task.define_task(args, &block)
++    def task(args, &amp;block)
++      MiniRake::Task.define_task(args, &amp;block)
 +    end
  
 +    # Declare a file task.
-+    def file(args, &block)
-+      MiniRake::FileTask.define_task(args, &block)
++    def file(args, &amp;block)
++      MiniRake::FileTask.define_task(args, &amp;block)
 +    end
  
 -######################################################################
@@ -2859,7 +2859,7 @@ index 74afe7e..00a2e64 100755
 +    def directory(dir)
 +      path = []
 +      Sys.split_all(dir).each do |p| 
-+        path << p
++        path &lt;&lt; p
 +        FileTask.define_task(File.join(path)) do |t|
 +          Sys.makedirs(t.name)
 +        end
@@ -2867,21 +2867,21 @@ index 74afe7e..00a2e64 100755
 +    end
  
 -# Declare a basic task.
--def task(args, &block)
--  MiniRake::Task.define_task(args, &block)
+-def task(args, &amp;block)
+-  MiniRake::Task.define_task(args, &amp;block)
 -end
 +    # Declare a rule for auto-tasks.
-+    def rule(args, &block)
-+      MiniRake::Task.create_rule(args, &block)
++    def rule(args, &amp;block)
++      MiniRake::Task.create_rule(args, &amp;block)
 +    end
  
 -# Declare a file task.
--def file(args, &block)
--  MiniRake::FileTask.define_task(args, &block)
+-def file(args, &amp;block)
+-  MiniRake::FileTask.define_task(args, &amp;block)
 -end
 +    # Write a message to standard out if $verbose is enabled.
 +    def log(msg)
-+      print "  " if $trace && $verbose
++      print &quot;  &quot; if $trace &amp;&amp; $verbose
 +      puts msg if $verbose
 +    end
  
@@ -2890,20 +2890,20 @@ index 74afe7e..00a2e64 100755
 -def directory(dir)
 -  path = []
 -  Sys.split_all(dir).each do |p| 
--    path << p
+-    path &lt;&lt; p
 -    FileTask.define_task(File.join(path)) do |t|
 -      Sys.makedirs(t.name)
 +    # Run the system command +cmd+.
 +    def sh(cmd)
 +      puts cmd
-+      system(cmd) or fail "Command Failed: [#{cmd}]"
++      system(cmd) or fail &quot;Command Failed: [#{cmd}]&quot;
      end
 -  end
 -end
  
 -# Declare a rule for auto-tasks.
--def rule(args, &block)
--  MiniRake::Task.create_rule(args, &block)
+-def rule(args, &amp;block)
+-  MiniRake::Task.create_rule(args, &amp;block)
 +    def desc(text)
 +    end
 +  end
@@ -2911,7 +2911,7 @@ index 74afe7e..00a2e64 100755
  
 -# Write a message to standard out if $verbose is enabled.
 -def log(msg)
--  print "  " if $trace && $verbose
+-  print &quot;  &quot; if $trace &amp;&amp; $verbose
 -  puts msg if $verbose
 -end
 +Rake = MiniRake
@@ -2920,7 +2920,7 @@ index 74afe7e..00a2e64 100755
 -# Run the system command +cmd+.
 -def sh(cmd)
 -  log cmd
--  system(cmd) or fail "Command Failed: [#{cmd}]"
+-  system(cmd) or fail &quot;Command Failed: [#{cmd}]&quot;
 -end
  
 -def desc(text)
@@ -2991,58 +2991,58 @@ index d9f7d37..0000000
 -all : gem-info gem-all
 -
 -gem-info:
--	@echo "Building Gem '$(GEM)'"
+-	@echo &quot;Building Gem '$(GEM)'&quot;
 -
 -# Building target for C and Ruby files
 -gem-c-and-rb-files : gem_mixlib.o
 -	$(AR) rs $(GEM_PACKAGE) $(GEM_OBJECTS) $^
 -
 -gem_mixlib.c : gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mixlib_init.ctmp
--	cat $^ > $@
+-	cat $^ &gt; $@
 -
 -gem_mixlib_init.ctmp :
--	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mixlib.rb '$(GEM)' > $@
+-	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mixlib.rb '$(GEM)' &gt; $@
 -
 -# Building target for C files
 -gem-c-files : gem_srclib.o
--	$(AR) rs $(GEM_PACKAGE) $(GEM_OBJECTS) $<
+-	$(AR) rs $(GEM_PACKAGE) $(GEM_OBJECTS) $&lt;
 -
 -gem_srclib.c :
--	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_srclib.rb '$(GEM)' > $@
+-	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_srclib.rb '$(GEM)' &gt; $@
 -
 -# Building target for Ruby Files
 -gem-rb-files : gem_mrblib.o
--	$(AR) rs $(GEM_PACKAGE) $<
+-	$(AR) rs $(GEM_PACKAGE) $&lt;
 -
 -gem_mrblib.c : gem_mrblib_header.ctmp gem_mrblib_irep.ctmp gem_mrblib_init.ctmp
--	cat $^ > $@
+-	cat $^ &gt; $@
 -
 -gem_mrblib_header.ctmp :
--	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib_header.rb '$(GEM)' > $@
+-	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib_header.rb '$(GEM)' &gt; $@
 -
 -gem_mrblib_init.ctmp :
--	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib.rb '$(GEM)' > $@
+-	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib.rb '$(GEM)' &gt; $@
 -
 -gem_mrblib_irep.ctmp : gem_mrblib.rbtmp
--	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $<
+-	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $&lt;
 -
 -gem_mrblib.rbtmp :
--		cat $(GEM_RB_FILES) > $@
+-		cat $(GEM_RB_FILES) &gt; $@
 -
 -
 -gem_test.ctmp : gem_test.rbtmp $(GEM_TEST_C_FILES)
--	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM))_test -o$@ $<
+-	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM))_test -o$@ $&lt;
 -ifeq ($(GEM_TEST_C_FILES),)
--		echo "void mrb_$(subst -,_,$(GEM))_gem_test_init(mrb_state* mrb) { }" >> $@
+-		echo &quot;void mrb_$(subst -,_,$(GEM))_gem_test_init(mrb_state* mrb) { }&quot; &gt;&gt; $@
 -else
--		cat $(GEM_TEST_C_FILES) >> $@
+-		cat $(GEM_TEST_C_FILES) &gt;&gt; $@
 -endif
 -
 -gem_test.rbtmp : $(GEM_TEST_RB_FILES)
 -ifeq ($(GEM_TEST_RB_FILES),)
--		echo > $@
+-		echo &gt; $@
 -else
--		cat $(GEM_TEST_RB_FILES) > $@
+-		cat $(GEM_TEST_RB_FILES) &gt; $@
 -endif
 -
 -gem-test-c-and-rb-files : gem_test.ctmp
@@ -3065,17 +3065,17 @@ index d9f7d37..0000000
 -
 -
 -%.o : %.c
--	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GEM_CFLAGS_LIST) $< -o $@
+-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GEM_CFLAGS_LIST) $&lt; -o $@
 -
 -.PHONY : clean
 -clean : gem-clean
--	@echo "Gem '$(GEM)' is clean"
+-	@echo &quot;Gem '$(GEM)' is clean&quot;
 -
 -.PHONY : gem-flags
 -gem-flags :
--	@echo "$(MRUBY_CFLAGS) -I`pwd`/include" >  gem-cflags.tmp
--	@echo "$(MRUBY_LDFLAGS)" >  gem-ldflags.tmp
--	@echo "$(MRUBY_LIBS)" >  gem-libs.tmp
+-	@echo &quot;$(MRUBY_CFLAGS) -I`pwd`/include&quot; &gt;  gem-cflags.tmp
+-	@echo &quot;$(MRUBY_LDFLAGS)&quot; &gt;  gem-ldflags.tmp
+-	@echo &quot;$(MRUBY_LIBS)&quot; &gt;  gem-libs.tmp
 -
 diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
 deleted file mode 100644
@@ -3085,82 +3085,82 @@ index dabc259..0000000
 @@ -1,127 +0,0 @@
 -MRBGEMS_PATH = File.dirname(__FILE__)
 -
--GEM_INIT = "#{MRBGEMS_PATH}/gem_init"
--GEM_MAKEFILE = "#{MRBGEMS_PATH}/g/Makefile"
--GEM_MAKEFILE_LIST = "#{MRBGEMS_PATH}/g/MakefileGemList"
--MAKEFILE_4_GEM = "#{MRUBY_ROOT}/mrbgems/Makefile4gem"
+-GEM_INIT = &quot;#{MRBGEMS_PATH}/gem_init&quot;
+-GEM_MAKEFILE = &quot;#{MRBGEMS_PATH}/g/Makefile&quot;
+-GEM_MAKEFILE_LIST = &quot;#{MRBGEMS_PATH}/g/MakefileGemList&quot;
+-MAKEFILE_4_GEM = &quot;#{MRUBY_ROOT}/mrbgems/Makefile4gem&quot;
 -
 -def gem_make_flags
 -  if ENV['OS'] == 'Windows_NT'
--    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM=\"#{MAKEFILE_4_GEM}\""
+-    &quot;#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM=\&quot;#{MAKEFILE_4_GEM}\&quot;&quot;
 -  else
--    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'"
+-    &quot;#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'&quot;
 -  end
 -end
 -
--task :mrbgems_all => ["#{GEM_INIT}.a", :mrbgems_generate_gem_makefile_list] do
+-task :mrbgems_all =&gt; [&quot;#{GEM_INIT}.a&quot;, :mrbgems_generate_gem_makefile_list] do
 -  for_each_gem do |path, gemname|
--    sh "#{MAKE} -C #{path} #{gem_make_flags}"
+-    sh &quot;#{MAKE} -C #{path} #{gem_make_flags}&quot;
 -  end
 -end
 -
 -task :load_mrbgems_flags do
 -  for_each_gem do |path, gemname|
--    sh "#{MAKE} gem-flags -C #{path} #{gem_make_flags}"
--    CFLAGS << File.read("#{path}/gem-cflags.tmp").chomp
--    LDFLAGS << File.read("#{path}/gem-ldflags.tmp").chomp
--    LIBS << File.read("#{path}/gem-libs.tmp").chomp
+-    sh &quot;#{MAKE} gem-flags -C #{path} #{gem_make_flags}&quot;
+-    CFLAGS &lt;&lt; File.read(&quot;#{path}/gem-cflags.tmp&quot;).chomp
+-    LDFLAGS &lt;&lt; File.read(&quot;#{path}/gem-ldflags.tmp&quot;).chomp
+-    LIBS &lt;&lt; File.read(&quot;#{path}/gem-libs.tmp&quot;).chomp
 -  end
 -end
 -
 -task :mrbgems_clean do
 -  if ENV['OS'] == 'Windows_NT'
--    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems && #{RM_F} *.c *.d *.a *.o"
--    sh "cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems\\g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
+-    sh &quot;cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
+-    sh &quot;cd #{MRUBY_ROOT.gsub('/', '\\')}\\mrbgems\\g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
 -  else
--    sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
--    sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
+-    sh &quot;cd #{MRUBY_ROOT}/mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
+-    sh &quot;cd #{MRUBY_ROOT}/mrbgems/g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
 -  end
 -  for_each_gem do |path, gemname|
--    sh "#{MAKE} gem-clean -C #{path} #{gem_make_flags}"
+-    sh &quot;#{MAKE} gem-clean -C #{path} #{gem_make_flags}&quot;
 -  end
 -end
 -
 -task :mrbgems_prepare_test do
 -  for_each_gem do |path, gemname, escaped_gemname|
--    sh "#{MAKE} gem-test -C #{path} #{gem_make_flags}"
+-    sh &quot;#{MAKE} gem-test -C #{path} #{gem_make_flags}&quot;
 -  end
--  open("#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp", 'w') do |f|
+-  open(&quot;#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp&quot;, 'w') do |f|
 -    for_each_gem do |path, gemname, escaped_gemname|
--      f.puts "void mrb_#{escaped_gemname}_gem_test_init(mrb_state *mrb);"
--      f.puts "extern const char gem_mrblib_irep_#{escaped_gemname}_test[];"
+-      f.puts &quot;void mrb_#{escaped_gemname}_gem_test_init(mrb_state *mrb);&quot;
+-      f.puts &quot;extern const char gem_mrblib_irep_#{escaped_gemname}_test[];&quot;
 -    end
--    f.puts "void mrbgemtest_init(mrb_state* mrb) {"
+-    f.puts &quot;void mrbgemtest_init(mrb_state* mrb) {&quot;
 -    for_each_gem do |path, gemname, escaped_gemname|
--      f.puts "mrb_#{escaped_gemname}_gem_test_init(mrb);"
+-      f.puts &quot;mrb_#{escaped_gemname}_gem_test_init(mrb);&quot;
 -    end
 -    for_each_gem do |path, gemname, escaped_gemname|
--      f.puts "mrb_load_irep(mrb, gem_mrblib_irep_#{escaped_gemname}_test);"
+-      f.puts &quot;mrb_load_irep(mrb, gem_mrblib_irep_#{escaped_gemname}_test);&quot;
 -    end
--    f.puts "}"
+-    f.puts &quot;}&quot;
 -
 -  end
--  sh "#{CAT} #{for_each_gem{|path, gemname| "#{path}/gem_test.ctmp "}} >> #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp"
+-  sh &quot;#{CAT} #{for_each_gem{|path, gemname| &quot;#{path}/gem_test.ctmp &quot;}} &gt;&gt; #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp&quot;
 -end
 -
--file "#{GEM_INIT}.a" => ["#{GEM_INIT}.c", "#{GEM_INIT}.o"] do |t|
--  sh "#{AR} rs #{t.name} #{GEM_INIT}.o"
+-file &quot;#{GEM_INIT}.a&quot; =&gt; [&quot;#{GEM_INIT}.c&quot;, &quot;#{GEM_INIT}.o&quot;] do |t|
+-  sh &quot;#{AR} rs #{t.name} #{GEM_INIT}.o&quot;
 -end
 -
--rule ".o" => [".c"] do |t|
--  puts "Build the driver which initializes all gems"
--  sh "#{CC} #{CFLAGS.join(' ')} -I#{MRUBY_ROOT}/include -MMD -c #{t.source} -o #{t.name}"
+-rule &quot;.o&quot; =&gt; [&quot;.c&quot;] do |t|
+-  puts &quot;Build the driver which initializes all gems&quot;
+-  sh &quot;#{CC} #{CFLAGS.join(' ')} -I#{MRUBY_ROOT}/include -MMD -c #{t.source} -o #{t.name}&quot;
 -end
 -
--file "#{GEM_INIT}.c" do |t|
--  puts "Generate Gem driver: #{t.name}"
+-file &quot;#{GEM_INIT}.c&quot; do |t|
+-  puts &quot;Generate Gem driver: #{t.name}&quot;
 -  open(t.name, 'w') do |f|
--    f.puts <<__EOF__
+-    f.puts &lt;&lt;__EOF__
 -/*
 - * This file contains a list of all
 - * initializing methods which are
@@ -3171,19 +3171,19 @@ index dabc259..0000000
 - *   All manual changes will get lost.
 - */
 -
--#include "mruby.h"
+-#include &quot;mruby.h&quot;
 -
--#{for_each_gem{|path, gemname, escaped_gemname| "void GENERATED_TMP_mrb_%s_gem_init(mrb_state*);" % [escaped_gemname]}}
+-#{for_each_gem{|path, gemname, escaped_gemname| &quot;void GENERATED_TMP_mrb_%s_gem_init(mrb_state*);&quot; % [escaped_gemname]}}
 -
 -void
 -mrb_init_mrbgems(mrb_state *mrb) {
--#{for_each_gem{|path, gemname, escaped_gemname| "  GENERATED_TMP_mrb_%s_gem_init(mrb);" % [escaped_gemname]}}
+-#{for_each_gem{|path, gemname, escaped_gemname| &quot;  GENERATED_TMP_mrb_%s_gem_init(mrb);&quot; % [escaped_gemname]}}
 -}
 -__EOF__
 -  end
 -end
 -
--def for_each_gem(&block)
+-def for_each_gem(&amp;block)
 -  IO.readlines(ACTIVE_GEMS).map { |line|
 -    path = line.chomp
 -    if not File.exist?(path)
@@ -3198,15 +3198,15 @@ index dabc259..0000000
 -
 -task :mrbgems_generate_gem_makefile_list do
 -  open(GEM_MAKEFILE_LIST, 'w') do |f|
--    f.puts <<__EOF__
--GEM_LIST := #{for_each_gem{|path, gemname| "#{path}/mrb-#{gemname}-gem.a "}}
+-    f.puts &lt;&lt;__EOF__
+-GEM_LIST := #{for_each_gem{|path, gemname| &quot;#{path}/mrb-#{gemname}-gem.a &quot;}}
 -
 -GEM_ARCHIVE_FILES := #{MRUBY_ROOT}/mrbgems/gem_init.a
 -GEM_ARCHIVE_FILES += $(GEM_LIST)
 -
--GEM_CFLAGS_LIST := #{for_each_gem{|path, gemname| "#{File.read("#{path}/gem-cflags.tmp").chomp} "}}
--GEM_LDFLAGS_LIST := #{for_each_gem{|path, gemname| "#{File.read("#{path}/gem-ldflags.tmp").chomp} "}}
--GEM_LIBS_LIST := #{for_each_gem{|path, gemname| "#{File.read("#{path}/gem-libs.tmp").chomp} "}}
+-GEM_CFLAGS_LIST := #{for_each_gem{|path, gemname| &quot;#{File.read(&quot;#{path}/gem-cflags.tmp&quot;).chomp} &quot;}}
+-GEM_LDFLAGS_LIST := #{for_each_gem{|path, gemname| &quot;#{File.read(&quot;#{path}/gem-ldflags.tmp&quot;).chomp} &quot;}}
+-GEM_LIBS_LIST := #{for_each_gem{|path, gemname| &quot;#{File.read(&quot;#{path}/gem-libs.tmp&quot;).chomp} &quot;}}
 -__EOF__
 -  end
 -end
@@ -3227,7 +3227,7 @@ index 39bc7b7..0000000
 -
 -gemname = ARGV.shift.gsub('-', '_')
 -
--puts <<__EOF__
+-puts &lt;&lt;__EOF__
 -void mrb_#{gemname}_gem_init(mrb_state*);
 -
 -void
@@ -3235,8 +3235,8 @@ index 39bc7b7..0000000
 -{
 -  mrb_#{gemname}_gem_init(mrb);
 -  mrb_load_irep(mrb, gem_mrblib_irep_#{gemname});
--  if (mrb->exc) {
--    mrb_p(mrb, mrb_obj_value(mrb->exc));
+-  if (mrb-&gt;exc) {
+-    mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
 -    exit(0);
 -  }
 -}
@@ -3251,13 +3251,13 @@ index 6d610d8..0000000
 -
 -gemname = ARGV.shift.gsub('-', '_')
 -
--puts <<__EOF__
+-puts &lt;&lt;__EOF__
 -void
 -GENERATED_TMP_mrb_#{gemname}_gem_init(mrb_state *mrb)
 -{
 -  mrb_load_irep(mrb, gem_mrblib_irep_#{gemname});
--  if (mrb->exc) {
--    mrb_p(mrb, mrb_obj_value(mrb->exc));
+-  if (mrb-&gt;exc) {
+-    mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
 -    exit(0);
 -  }
 -}
@@ -3270,7 +3270,7 @@ index 74008a3..0000000
 @@ -1,18 +0,0 @@
 -#!/usr/bin/env ruby
 -
--puts <<__EOF__
+-puts &lt;&lt;__EOF__
 -/*
 - * This file is loading the irep
 - * Ruby GEM code.
@@ -3279,11 +3279,11 @@ index 74008a3..0000000
 - *   This file was generated!
 - *   All manual changes will get lost.
 - */
--#include "mruby.h"
--#include "mruby/irep.h"
--#include "mruby/dump.h"
--#include "mruby/string.h"
--#include "mruby/proc.h"
+-#include &quot;mruby.h&quot;
+-#include &quot;mruby/irep.h&quot;
+-#include &quot;mruby/dump.h&quot;
+-#include &quot;mruby/string.h&quot;
+-#include &quot;mruby/proc.h&quot;
 -
 -__EOF__
 \ No newline at end of file
@@ -3297,7 +3297,7 @@ index 7a0d437..0000000
 -
 -gemname = ARGV.shift.gsub('-', '_')
 -
--puts <<__EOF__
+-puts &lt;&lt;__EOF__
 -/*
 - * This file is loading the irep
 - * Ruby GEM code.
@@ -3306,7 +3306,7 @@ index 7a0d437..0000000
 - *   This file was generated!
 - *   All manual changes will get lost.
 - */
--#include "mruby.h"
+-#include &quot;mruby.h&quot;
 -
 -void mrb_#{gemname}_gem_init(mrb_state*);
 -
@@ -3325,47 +3325,47 @@ index a0386f0..0000000
 @@ -1,60 +0,0 @@
 -# transform mruby's standard lib into a C library
 -
--file(GLOB MRBLIB_SRC_RB "*.rb")
+-file(GLOB MRBLIB_SRC_RB &quot;*.rb&quot;)
 -
 -if(CMAKE_CROSSCOMPILING)
 -  # create native tools and `mrblib.ctmp` required to build `mrblib.c`
 -  include(ExternalProject)
 -  ExternalProject_Add(mruby-native
--    DOWNLOAD_COMMAND ""
--    SOURCE_DIR "${CMAKE_SOURCE_DIR}"
--    CONFIGURE_COMMAND "${CMAKE_COMMAND}" "${CMAKE_SOURCE_DIR}"
--    INSTALL_COMMAND ""
--    BINARY_DIR "${CMAKE_BINARY_DIR}/native"
+-    DOWNLOAD_COMMAND &quot;&quot;
+-    SOURCE_DIR &quot;${CMAKE_SOURCE_DIR}&quot;
+-    CONFIGURE_COMMAND &quot;${CMAKE_COMMAND}&quot; &quot;${CMAKE_SOURCE_DIR}&quot;
+-    INSTALL_COMMAND &quot;&quot;
+-    BINARY_DIR &quot;${CMAKE_BINARY_DIR}/native&quot;
 -    )
 -
 -  # aggregate mruby's standard library as a single C file
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrblib.c"
--    DEPENDS mruby-native init_mrblib.c "${CMAKE_BINARY_DIR}/native/mrblib/mrblib.ctmp"
--    COMMAND "${CMAKE_BINARY_DIR}/native/tools/xpcat/xpcat"
--            -o "${CMAKE_CURRENT_BINARY_DIR}/mrblib.c"
--            "${CMAKE_CURRENT_SOURCE_DIR}/init_mrblib.c"
--            "${CMAKE_BINARY_DIR}/native/mrblib/mrblib.ctmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.c&quot;
+-    DEPENDS mruby-native init_mrblib.c &quot;${CMAKE_BINARY_DIR}/native/mrblib/mrblib.ctmp&quot;
+-    COMMAND &quot;${CMAKE_BINARY_DIR}/native/tools/xpcat/xpcat&quot;
+-            -o &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.c&quot;
+-            &quot;${CMAKE_CURRENT_SOURCE_DIR}/init_mrblib.c&quot;
+-            &quot;${CMAKE_BINARY_DIR}/native/mrblib/mrblib.ctmp&quot;
 -    )
 -else()
 -  # generate a single rb file from all existing ones
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp&quot;
 -    DEPENDS xpcat
--    COMMAND xpcat -o "${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp" ${MRBLIB_SRC_RB}
+-    COMMAND xpcat -o &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp&quot; ${MRBLIB_SRC_RB}
 -    )
 -
 -  # mruby compile and generate C byte array representation
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp"
--    DEPENDS mrbc "${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp"
--    COMMAND mrbc -Bmrblib_irep -o"${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp"
--                 "${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp&quot;
+-    DEPENDS mrbc &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp&quot;
+-    COMMAND mrbc -Bmrblib_irep -o&quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp&quot;
+-                 &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.rbtmp&quot;
 -    )
 -
 -  # aggregate mruby's standard library as a single C file
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrblib.c"
--    DEPENDS xpcat init_mrblib.c "${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp"
--    COMMAND xpcat -o "${CMAKE_CURRENT_BINARY_DIR}/mrblib.c"
--                     "${CMAKE_CURRENT_SOURCE_DIR}/init_mrblib.c"
--                     "${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.c&quot;
+-    DEPENDS xpcat init_mrblib.c &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp&quot;
+-    COMMAND xpcat -o &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.c&quot;
+-                     &quot;${CMAKE_CURRENT_SOURCE_DIR}/init_mrblib.c&quot;
+-                     &quot;${CMAKE_CURRENT_BINARY_DIR}/mrblib.ctmp&quot;
 -    )
 -endif()
 -
@@ -3373,7 +3373,7 @@ index a0386f0..0000000
 -# generate final static libmruby archive library
 -add_library(libmruby_static STATIC
 -  mrblib.c
--  $<TARGET_OBJECTS:mruby_object>
+-  $&lt;TARGET_OBJECTS:mruby_object&gt;
 -  )
 -set_target_properties(libmruby_static PROPERTIES OUTPUT_NAME mruby)
 -
@@ -3454,19 +3454,19 @@ index 57ce138..0000000
 -
 -# Compile C source from merged mruby source
 -$(CLIB) : $(RLIB) $(MRBC)
--	$(MRBC) -Bmrblib_irep -o$(DLIB) $(RLIB); $(CAT) init_$(TARGET).c $(DLIB) > $@
+-	$(MRBC) -Bmrblib_irep -o$(DLIB) $(RLIB); $(CAT) init_$(TARGET).c $(DLIB) &gt; $@
 -
 -$(MRBC) : $(LIBR0)
 -	$(MAKE) -C ../tools/mrbc $(MAKE_FLAGS)
 -
 -# merge mruby sources
 -$(RLIB) : $(MRBS)
--	$(CAT) $(MRBS) > $@
+-	$(CAT) $(MRBS) &gt; $@
 -
 -# clean up
 -.PHONY : clean
 -clean :
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(MRBC) $(MLIB) $(CLIB) $(RLIB) $(DLIB) $(DEPLIB) $(LIBR)
 diff --git a/mrblib/mrblib.rake b/mrblib/mrblib.rake
 new file mode 100644
@@ -3477,14 +3477,14 @@ index 0000000..5dab4ce
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  self.libmruby << "#{build_dir}/#{dir}/mrblib.o"
++  self.libmruby &lt;&lt; &quot;#{build_dir}/#{dir}/mrblib.o&quot;
 +
-+  file "#{build_dir}/#{dir}/mrblib.o" => "#{build_dir}/#{dir}/mrblib.c"
-+  file "#{build_dir}/#{dir}/mrblib.c" => [mrbcfile] + Dir.glob("#{dir}/*.rb") do |t|
++  file &quot;#{build_dir}/#{dir}/mrblib.o&quot; =&gt; &quot;#{build_dir}/#{dir}/mrblib.c&quot;
++  file &quot;#{build_dir}/#{dir}/mrblib.c&quot; =&gt; [mrbcfile] + Dir.glob(&quot;#{dir}/*.rb&quot;) do |t|
 +    mrbc, *rbfiles = t.prerequisites
 +    FileUtils.mkdir_p File.dirname(t.name)
 +    open(t.name, 'w') do |f|
-+      f.puts File.read("#{dir}/init_mrblib.c")
++      f.puts File.read(&quot;#{dir}/init_mrblib.c&quot;)
 +      compile_mruby f, rbfiles, 'mrblib_irep'
 +    end
 +  end
@@ -3498,10 +3498,10 @@ index 4a6aeee..0000000
 -# build the core mruby C files
 -
 -find_package(BISON)
--bison_target(mruby parse.y "${CMAKE_CURRENT_BINARY_DIR}/parse.c")
+-bison_target(mruby parse.y &quot;${CMAKE_CURRENT_BINARY_DIR}/parse.c&quot;)
 -
--file(GLOB MRUBY_SRC_C "*.c")
--list(APPEND MRUBY_SRC_C "${CMAKE_CURRENT_BINARY_DIR}/parse.c")
+-file(GLOB MRUBY_SRC_C &quot;*.c&quot;)
+-list(APPEND MRUBY_SRC_C &quot;${CMAKE_CURRENT_BINARY_DIR}/parse.c&quot;)
 -
 -add_library(mruby_object OBJECT ${MRUBY_SRC_C} ${BISON_mruby_OUTPUTS})
 -
@@ -3563,7 +3563,7 @@ index de9a4e6..0000000
 -
 -# objects compiled from source
 -$(OBJS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# parser compile
 -$(OBJY) : $(YC) $(LDEF)
@@ -3574,12 +3574,12 @@ index de9a4e6..0000000
 -	$(YACC) -o $(YC) $(YSRC)
 -
 -$(LDEF) : $(KWD)
--	gperf -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word -k'1,3,$$' $(KWD) > $(LDEF)
+-	gperf -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word -k'1,3,$$' $(KWD) &gt; $(LDEF)
 -
 -# clean up
 -.PHONY : clean #cleandep
 -clean :
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(TARGET) $(OBJS) $(OBJY) $(YC)
 -	-$(RM_F) $(OBJS:.o=.d) $(OBJY:.o=.d)
 -	-$(RM_F) $(patsubst %.c,%.o,$(EXCEPT1)) $(patsubst %.c,%.d,$(EXCEPT1))
@@ -3593,21 +3593,21 @@ index b510635..5223aac 100644
 +/* ANSI-C code produced by gperf version 3.0.4 */
 +/* Command-line: gperf -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word -k'1,3,$' src/keywords  */
  
- #if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
-       && ('%' == 37) && ('&' == 38) && ('\'' == 39) && ('(' == 40) \
+ #if !((' ' == 32) &amp;&amp; ('!' == 33) &amp;&amp; ('&quot;' == 34) &amp;&amp; ('#' == 35) \
+       &amp;&amp; ('%' == 37) &amp;&amp; ('&amp;' == 38) &amp;&amp; ('\'' == 39) &amp;&amp; ('(' == 40) \
 @@ -28,13 +28,13 @@
- #error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gnu-gperf@gnu.org>."
+ #error &quot;gperf generated tables don't work with this execution character set. Please report a bug to &lt;bug-gnu-gperf@gnu.org&gt;.&quot;
  #endif
  
--#line 1 "./keywords"
-+#line 1 "src/keywords"
+-#line 1 &quot;./keywords&quot;
++#line 1 &quot;src/keywords&quot;
  
  struct kwtable {const char *name; int id[2]; enum mrb_lex_state_enum state;};
  const struct kwtable *mrb_reserved_word(const char *, unsigned int);
  static const struct kwtable *reserved_word(const char *, unsigned int);
  #define mrb_reserved_word(str, len) reserved_word(str, len)
--#line 8 "./keywords"
-+#line 8 "src/keywords"
+-#line 8 &quot;./keywords&quot;
++#line 8 &quot;src/keywords&quot;
  struct kwtable;
  
  #define TOTAL_KEYWORDS 40
@@ -3619,7 +3619,7 @@ index b510635..5223aac 100644
 -__inline
 -#else
 -#ifdef __cplusplus
-+#if (defined (__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || defined(__cplusplus) || defined(__GNUC_STDC_INLINE__)
++#if (defined (__STDC_VERSION__) &amp;&amp; __STDC_VERSION__ &gt;= 199901L) || defined(__cplusplus) || defined(__GNUC_STDC_INLINE__)
  inline
 -#endif
 +#elif defined(__GNUC__)
@@ -3639,137 +3639,137 @@ index b510635..5223aac 100644
 @@ -110,87 +108,87 @@ mrb_reserved_word (register const char *str, register unsigned int len)
    static const struct kwtable wordlist[] =
      {
-       {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""},
--#line 18 "./keywords"
-+#line 18 "src/keywords"
-       {"break", {keyword_break, keyword_break}, EXPR_MID},
--#line 23 "./keywords"
-+#line 23 "src/keywords"
-       {"else", {keyword_else, keyword_else}, EXPR_BEG},
--#line 33 "./keywords"
-+#line 33 "src/keywords"
-       {"nil", {keyword_nil, keyword_nil}, EXPR_END},
--#line 26 "./keywords"
-+#line 26 "src/keywords"
-       {"ensure", {keyword_ensure, keyword_ensure}, EXPR_BEG},
--#line 25 "./keywords"
-+#line 25 "src/keywords"
-       {"end", {keyword_end, keyword_end}, EXPR_END},
--#line 42 "./keywords"
-+#line 42 "src/keywords"
-       {"then", {keyword_then, keyword_then}, EXPR_BEG},
--#line 34 "./keywords"
-+#line 34 "src/keywords"
-       {"not", {keyword_not, keyword_not}, EXPR_ARG},
--#line 27 "./keywords"
-+#line 27 "src/keywords"
-       {"false", {keyword_false, keyword_false}, EXPR_END},
--#line 40 "./keywords"
-+#line 40 "src/keywords"
-       {"self", {keyword_self, keyword_self}, EXPR_END},
--#line 24 "./keywords"
-+#line 24 "src/keywords"
-       {"elsif", {keyword_elsif, keyword_elsif}, EXPR_VALUE},
--#line 37 "./keywords"
-+#line 37 "src/keywords"
-       {"rescue", {keyword_rescue, modifier_rescue}, EXPR_MID},
--#line 43 "./keywords"
-+#line 43 "src/keywords"
-       {"true", {keyword_true, keyword_true}, EXPR_END},
--#line 46 "./keywords"
-+#line 46 "src/keywords"
-       {"until", {keyword_until, modifier_until}, EXPR_VALUE},
--#line 45 "./keywords"
-+#line 45 "src/keywords"
-       {"unless", {keyword_unless, modifier_unless}, EXPR_VALUE},
--#line 39 "./keywords"
-+#line 39 "src/keywords"
-       {"return", {keyword_return, keyword_return}, EXPR_MID},
--#line 21 "./keywords"
-+#line 21 "src/keywords"
-       {"def", {keyword_def, keyword_def}, EXPR_FNAME},
--#line 16 "./keywords"
-+#line 16 "src/keywords"
-       {"and", {keyword_and, keyword_and}, EXPR_VALUE},
--#line 22 "./keywords"
-+#line 22 "src/keywords"
-       {"do", {keyword_do, keyword_do}, EXPR_BEG},
--#line 49 "./keywords"
-+#line 49 "src/keywords"
-       {"yield", {keyword_yield, keyword_yield}, EXPR_ARG},
--#line 28 "./keywords"
-+#line 28 "src/keywords"
-       {"for", {keyword_for, keyword_for}, EXPR_VALUE},
--#line 44 "./keywords"
-+#line 44 "src/keywords"
-       {"undef", {keyword_undef, keyword_undef}, EXPR_FNAME},
--#line 35 "./keywords"
-+#line 35 "src/keywords"
-       {"or", {keyword_or, keyword_or}, EXPR_VALUE},
--#line 30 "./keywords"
-+#line 30 "src/keywords"
-       {"in", {keyword_in, keyword_in}, EXPR_VALUE},
--#line 47 "./keywords"
-+#line 47 "src/keywords"
-       {"when", {keyword_when, keyword_when}, EXPR_VALUE},
--#line 38 "./keywords"
-+#line 38 "src/keywords"
-       {"retry", {keyword_retry, keyword_retry}, EXPR_END},
--#line 29 "./keywords"
-+#line 29 "src/keywords"
-       {"if", {keyword_if, modifier_if}, EXPR_VALUE},
--#line 19 "./keywords"
-+#line 19 "src/keywords"
-       {"case", {keyword_case, keyword_case}, EXPR_VALUE},
--#line 36 "./keywords"
-+#line 36 "src/keywords"
-       {"redo", {keyword_redo, keyword_redo}, EXPR_END},
--#line 32 "./keywords"
-+#line 32 "src/keywords"
-       {"next", {keyword_next, keyword_next}, EXPR_MID},
--#line 41 "./keywords"
-+#line 41 "src/keywords"
-       {"super", {keyword_super, keyword_super}, EXPR_ARG},
--#line 31 "./keywords"
-+#line 31 "src/keywords"
-       {"module", {keyword_module, keyword_module}, EXPR_VALUE},
--#line 17 "./keywords"
-+#line 17 "src/keywords"
-       {"begin", {keyword_begin, keyword_begin}, EXPR_BEG},
--#line 11 "./keywords"
-+#line 11 "src/keywords"
-       {"__LINE__", {keyword__LINE__, keyword__LINE__}, EXPR_END},
--#line 12 "./keywords"
-+#line 12 "src/keywords"
-       {"__FILE__", {keyword__FILE__, keyword__FILE__}, EXPR_END},
--#line 10 "./keywords"
-+#line 10 "src/keywords"
-       {"__ENCODING__", {keyword__ENCODING__, keyword__ENCODING__}, EXPR_END},
--#line 14 "./keywords"
-+#line 14 "src/keywords"
-       {"END", {keyword_END, keyword_END}, EXPR_END},
--#line 15 "./keywords"
-+#line 15 "src/keywords"
-       {"alias", {keyword_alias, keyword_alias}, EXPR_FNAME},
--#line 13 "./keywords"
-+#line 13 "src/keywords"
-       {"BEGIN", {keyword_BEGIN, keyword_BEGIN}, EXPR_END},
-       {""},
--#line 20 "./keywords"
-+#line 20 "src/keywords"
-       {"class", {keyword_class, keyword_class}, EXPR_CLASS},
-       {""}, {""},
--#line 48 "./keywords"
-+#line 48 "src/keywords"
-       {"while", {keyword_while, modifier_while}, EXPR_VALUE}
+       {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;}, {&quot;&quot;},
+-#line 18 &quot;./keywords&quot;
++#line 18 &quot;src/keywords&quot;
+       {&quot;break&quot;, {keyword_break, keyword_break}, EXPR_MID},
+-#line 23 &quot;./keywords&quot;
++#line 23 &quot;src/keywords&quot;
+       {&quot;else&quot;, {keyword_else, keyword_else}, EXPR_BEG},
+-#line 33 &quot;./keywords&quot;
++#line 33 &quot;src/keywords&quot;
+       {&quot;nil&quot;, {keyword_nil, keyword_nil}, EXPR_END},
+-#line 26 &quot;./keywords&quot;
++#line 26 &quot;src/keywords&quot;
+       {&quot;ensure&quot;, {keyword_ensure, keyword_ensure}, EXPR_BEG},
+-#line 25 &quot;./keywords&quot;
++#line 25 &quot;src/keywords&quot;
+       {&quot;end&quot;, {keyword_end, keyword_end}, EXPR_END},
+-#line 42 &quot;./keywords&quot;
++#line 42 &quot;src/keywords&quot;
+       {&quot;then&quot;, {keyword_then, keyword_then}, EXPR_BEG},
+-#line 34 &quot;./keywords&quot;
++#line 34 &quot;src/keywords&quot;
+       {&quot;not&quot;, {keyword_not, keyword_not}, EXPR_ARG},
+-#line 27 &quot;./keywords&quot;
++#line 27 &quot;src/keywords&quot;
+       {&quot;false&quot;, {keyword_false, keyword_false}, EXPR_END},
+-#line 40 &quot;./keywords&quot;
++#line 40 &quot;src/keywords&quot;
+       {&quot;self&quot;, {keyword_self, keyword_self}, EXPR_END},
+-#line 24 &quot;./keywords&quot;
++#line 24 &quot;src/keywords&quot;
+       {&quot;elsif&quot;, {keyword_elsif, keyword_elsif}, EXPR_VALUE},
+-#line 37 &quot;./keywords&quot;
++#line 37 &quot;src/keywords&quot;
+       {&quot;rescue&quot;, {keyword_rescue, modifier_rescue}, EXPR_MID},
+-#line 43 &quot;./keywords&quot;
++#line 43 &quot;src/keywords&quot;
+       {&quot;true&quot;, {keyword_true, keyword_true}, EXPR_END},
+-#line 46 &quot;./keywords&quot;
++#line 46 &quot;src/keywords&quot;
+       {&quot;until&quot;, {keyword_until, modifier_until}, EXPR_VALUE},
+-#line 45 &quot;./keywords&quot;
++#line 45 &quot;src/keywords&quot;
+       {&quot;unless&quot;, {keyword_unless, modifier_unless}, EXPR_VALUE},
+-#line 39 &quot;./keywords&quot;
++#line 39 &quot;src/keywords&quot;
+       {&quot;return&quot;, {keyword_return, keyword_return}, EXPR_MID},
+-#line 21 &quot;./keywords&quot;
++#line 21 &quot;src/keywords&quot;
+       {&quot;def&quot;, {keyword_def, keyword_def}, EXPR_FNAME},
+-#line 16 &quot;./keywords&quot;
++#line 16 &quot;src/keywords&quot;
+       {&quot;and&quot;, {keyword_and, keyword_and}, EXPR_VALUE},
+-#line 22 &quot;./keywords&quot;
++#line 22 &quot;src/keywords&quot;
+       {&quot;do&quot;, {keyword_do, keyword_do}, EXPR_BEG},
+-#line 49 &quot;./keywords&quot;
++#line 49 &quot;src/keywords&quot;
+       {&quot;yield&quot;, {keyword_yield, keyword_yield}, EXPR_ARG},
+-#line 28 &quot;./keywords&quot;
++#line 28 &quot;src/keywords&quot;
+       {&quot;for&quot;, {keyword_for, keyword_for}, EXPR_VALUE},
+-#line 44 &quot;./keywords&quot;
++#line 44 &quot;src/keywords&quot;
+       {&quot;undef&quot;, {keyword_undef, keyword_undef}, EXPR_FNAME},
+-#line 35 &quot;./keywords&quot;
++#line 35 &quot;src/keywords&quot;
+       {&quot;or&quot;, {keyword_or, keyword_or}, EXPR_VALUE},
+-#line 30 &quot;./keywords&quot;
++#line 30 &quot;src/keywords&quot;
+       {&quot;in&quot;, {keyword_in, keyword_in}, EXPR_VALUE},
+-#line 47 &quot;./keywords&quot;
++#line 47 &quot;src/keywords&quot;
+       {&quot;when&quot;, {keyword_when, keyword_when}, EXPR_VALUE},
+-#line 38 &quot;./keywords&quot;
++#line 38 &quot;src/keywords&quot;
+       {&quot;retry&quot;, {keyword_retry, keyword_retry}, EXPR_END},
+-#line 29 &quot;./keywords&quot;
++#line 29 &quot;src/keywords&quot;
+       {&quot;if&quot;, {keyword_if, modifier_if}, EXPR_VALUE},
+-#line 19 &quot;./keywords&quot;
++#line 19 &quot;src/keywords&quot;
+       {&quot;case&quot;, {keyword_case, keyword_case}, EXPR_VALUE},
+-#line 36 &quot;./keywords&quot;
++#line 36 &quot;src/keywords&quot;
+       {&quot;redo&quot;, {keyword_redo, keyword_redo}, EXPR_END},
+-#line 32 &quot;./keywords&quot;
++#line 32 &quot;src/keywords&quot;
+       {&quot;next&quot;, {keyword_next, keyword_next}, EXPR_MID},
+-#line 41 &quot;./keywords&quot;
++#line 41 &quot;src/keywords&quot;
+       {&quot;super&quot;, {keyword_super, keyword_super}, EXPR_ARG},
+-#line 31 &quot;./keywords&quot;
++#line 31 &quot;src/keywords&quot;
+       {&quot;module&quot;, {keyword_module, keyword_module}, EXPR_VALUE},
+-#line 17 &quot;./keywords&quot;
++#line 17 &quot;src/keywords&quot;
+       {&quot;begin&quot;, {keyword_begin, keyword_begin}, EXPR_BEG},
+-#line 11 &quot;./keywords&quot;
++#line 11 &quot;src/keywords&quot;
+       {&quot;__LINE__&quot;, {keyword__LINE__, keyword__LINE__}, EXPR_END},
+-#line 12 &quot;./keywords&quot;
++#line 12 &quot;src/keywords&quot;
+       {&quot;__FILE__&quot;, {keyword__FILE__, keyword__FILE__}, EXPR_END},
+-#line 10 &quot;./keywords&quot;
++#line 10 &quot;src/keywords&quot;
+       {&quot;__ENCODING__&quot;, {keyword__ENCODING__, keyword__ENCODING__}, EXPR_END},
+-#line 14 &quot;./keywords&quot;
++#line 14 &quot;src/keywords&quot;
+       {&quot;END&quot;, {keyword_END, keyword_END}, EXPR_END},
+-#line 15 &quot;./keywords&quot;
++#line 15 &quot;src/keywords&quot;
+       {&quot;alias&quot;, {keyword_alias, keyword_alias}, EXPR_FNAME},
+-#line 13 &quot;./keywords&quot;
++#line 13 &quot;src/keywords&quot;
+       {&quot;BEGIN&quot;, {keyword_BEGIN, keyword_BEGIN}, EXPR_END},
+       {&quot;&quot;},
+-#line 20 &quot;./keywords&quot;
++#line 20 &quot;src/keywords&quot;
+       {&quot;class&quot;, {keyword_class, keyword_class}, EXPR_CLASS},
+       {&quot;&quot;}, {&quot;&quot;},
+-#line 48 &quot;./keywords&quot;
++#line 48 &quot;src/keywords&quot;
+       {&quot;while&quot;, {keyword_while, modifier_while}, EXPR_VALUE}
      };
  
 @@ -208,5 +206,5 @@ mrb_reserved_word (register const char *str, register unsigned int len)
      }
    return 0;
  }
--#line 50 "./keywords"
-+#line 50 "src/keywords"
+-#line 50 &quot;./keywords&quot;
++#line 50 &quot;src/keywords&quot;
  
 diff --git a/src/mruby_core.rake b/src/mruby_core.rake
 new file mode 100644
@@ -3780,25 +3780,25 @@ index 0000000..bc84ed6
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  lex_def = "#{dir}/lex.def"
-+  objs = Dir.glob("src/*.{c}").map { |f| f.pathmap("#{build_dir}/%X.o") } + ["#{build_dir}/#{dir}/y.tab.o"]
-+  self.libmruby << objs
++  lex_def = &quot;#{dir}/lex.def&quot;
++  objs = Dir.glob(&quot;src/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) } + [&quot;#{build_dir}/#{dir}/y.tab.o&quot;]
++  self.libmruby &lt;&lt; objs
 +
-+  file "#{build_dir}/lib/libmruby_core.a" => objs do |t|
++  file &quot;#{build_dir}/lib/libmruby_core.a&quot; =&gt; objs do |t|
 +    archive t.name, 'r', t.prerequisites
 +  end
 +
 +  # Parser
-+  file "#{build_dir}/#{dir}/y.tab.c" => ["#{dir}/parse.y"] do |t|
++  file &quot;#{build_dir}/#{dir}/y.tab.c&quot; =&gt; [&quot;#{dir}/parse.y&quot;] do |t|
 +    run_yacc t.name, t.prerequisites.first
 +  end
 +
-+  file "#{build_dir}/#{dir}/y.tab.o" => ["#{build_dir}/#{dir}/y.tab.c", lex_def] do |t|
++  file &quot;#{build_dir}/#{dir}/y.tab.o&quot; =&gt; [&quot;#{build_dir}/#{dir}/y.tab.c&quot;, lex_def] do |t|
 +    compile_c t.name, t.prerequisites.first, [], dir
 +  end
 +
 +  # Lexical analyzer
-+  file lex_def => "#{dir}/keywords" do |t|
++  file lex_def =&gt; &quot;#{dir}/keywords&quot; do |t|
 +    run_gperf t.name, t.prerequisites.first
 +  end
 +end
@@ -3809,7 +3809,7 @@ index 0000000..5b785d2
 +++ b/tasks/libmruby.rake
 @@ -0,0 +1,5 @@
 + MRuby.each_target do
-+  file "#{build_dir}/lib/libmruby.a" => libmruby.flatten do |t|
++  file &quot;#{build_dir}/lib/libmruby.a&quot; =&gt; libmruby.flatten do |t|
 +    archive t.name, 'r', t.prerequisites
 +  end
 +end
@@ -3823,13 +3823,13 @@ index 0000000..356e403
 +
 +MRuby.each_target do
 +  if enable_gems?
-+    self.libmruby << "#{build_dir}/mrbgems/gem_init.o"
++    self.libmruby &lt;&lt; &quot;#{build_dir}/mrbgems/gem_init.o&quot;
 +
-+    file "#{build_dir}/mrbgems/gem_init.o" => "#{build_dir}/mrbgems/gem_init.c"
-+    file "#{build_dir}/mrbgems/gem_init.c" do |t|
-+      FileUtils.mkdir_p "#{build_dir}/mrbgems"
++    file &quot;#{build_dir}/mrbgems/gem_init.o&quot; =&gt; &quot;#{build_dir}/mrbgems/gem_init.c&quot;
++    file &quot;#{build_dir}/mrbgems/gem_init.c&quot; do |t|
++      FileUtils.mkdir_p &quot;#{build_dir}/mrbgems&quot;
 +      open(t.name, 'w') do |f|
-+        f.puts <<__EOF__
++        f.puts &lt;&lt;__EOF__
 +/*
 + * This file contains a list of all
 + * initializing methods which are
@@ -3840,12 +3840,12 @@ index 0000000..356e403
 + *   All manual changes will get lost.
 + */
 +
-+#include "mruby.h"
++#include &quot;mruby.h&quot;
 +
-+#{gems.map{|gem| "void GENERATED_TMP_mrb_%s_gem_init(mrb_state* mrb);" % [gem.funcname]}.join("\n")}
++#{gems.map{|gem| &quot;void GENERATED_TMP_mrb_%s_gem_init(mrb_state* mrb);&quot; % [gem.funcname]}.join(&quot;\n&quot;)}
 +void
 +mrb_init_mrbgems(mrb_state *mrb) {
-+#{gems.map{|gem| "GENERATED_TMP_mrb_%s_gem_init(mrb);" % [gem.funcname]}.join("\n")}
++#{gems.map{|gem| &quot;GENERATED_TMP_mrb_%s_gem_init(mrb);&quot; % [gem.funcname]}.join(&quot;\n&quot;)}
 +}
 +__EOF__
 +      end
@@ -3859,16 +3859,16 @@ index 0000000..fad92c5
 +++ b/tasks/mruby_build.rake
 @@ -0,0 +1,175 @@
 +module MRuby
-+  class << self
++  class &lt;&lt; self
 +    attr_accessor :build
 +
 +    def targets
 +      @targets ||= []
 +    end
 +
-+    def each_target(&block)
++    def each_target(&amp;block)
 +      @targets.each do |target|
-+        target.instance_eval(&block)
++        target.instance_eval(&amp;block)
 +      end
 +    end
 +  end
@@ -3887,9 +3887,9 @@ index 0000000..fad92c5
 +    attr_reader :root, :gems
 +    attr_reader :libmruby
 +
-+    def initialize(&block)
++    def initialize(&amp;block)
 +      @name ||= 'host'
-+      @root = File.expand_path("#{File.dirname(__FILE__)}/..")
++      @root = File.expand_path(&quot;#{File.dirname(__FILE__)}/..&quot;)
 +      @cc, @cflags, @includes = 'gcc', %W(-DDISABLE_GEMS -MMD), %W(#{@root}/include)
 +      @ldflags, @libs = [], %w(-lm)
 +      @ar = 'ar'
@@ -3900,9 +3900,9 @@ index 0000000..fad92c5
 +
 +      @gems, @libmruby = [], []
 +
-+      MRuby.targets << self
++      MRuby.targets &lt;&lt; self
 +      MRuby.build = self
-+      instance_eval(&block)
++      instance_eval(&amp;block)
 +    end
 +
 +    def cxx; @cxx || cc; end
@@ -3923,20 +3923,20 @@ index 0000000..fad92c5
 +        f.delete '-DDISABLE_GEMS' if f
 +      end
 +      Gem::processing_path = gemdir
-+      load File.join(gemdir, "mrbgem.rake")
++      load File.join(gemdir, &quot;mrbgem.rake&quot;)
 +    end
 +
 +    def load_external_gem(params)
 +      if params[:git]
 +        url = params[:git]
-+        gemdir = "build/mrbgems/#{url.match(/([-_\w]+)(\.[-_\w]+|)$/).to_a[1]}"
++        gemdir = &quot;build/mrbgems/#{url.match(/([-_\w]+)(\.[-_\w]+|)$/).to_a[1]}&quot;
 +        return gemdir if File.exists?(gemdir)
 +        options = []
-+        options << "--branch \"#{params[:branch]}\"" if params[:branch]
++        options &lt;&lt; &quot;--branch \&quot;#{params[:branch]}\&quot;&quot; if params[:branch]
 +        run_git_clone gemdir, url, options
 +        gemdir
 +      else
-+        fail "unknown gem option #{params}"
++        fail &quot;unknown gem option #{params}&quot;
 +      end
 +    end
 +
@@ -3945,55 +3945,55 @@ index 0000000..fad92c5
 +    end
 +
 +    def gemlibs
-+      enable_gems? ? ["#{build_dir}/mrbgems/gem_init.o"] + @gems.map{ |g| g.lib } : []
++      enable_gems? ? [&quot;#{build_dir}/mrbgems/gem_init.o&quot;] + @gems.map{ |g| g.lib } : []
 +    end
 +
 +    def build_dir
-+      #@build_dir ||= "build/#{name}"
-+      "build/#{self.name}"
++      #@build_dir ||= &quot;build/#{name}&quot;
++      &quot;build/#{self.name}&quot;
 +    end
 +
 +    def mrbcfile
-+      @mrbcfile ||= exefile("build/host/bin/mrbc")
++      @mrbcfile ||= exefile(&quot;build/host/bin/mrbc&quot;)
 +    end
 +
 +    def compile_c(outfile, infile, flags=[], includes=[])
 +      FileUtils.mkdir_p File.dirname(outfile)
 +      flags = [cflags, gems.map { |g| g.mruby_cflags }, flags]
-+      flags << [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| "-I#{filename f}" }
-+      sh "#{filename cc} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}"
++      flags &lt;&lt; [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| &quot;-I#{filename f}&quot; }
++      sh &quot;#{filename cc} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}&quot;
 +    end
 +    
 +    def compile_cxx(outfile, infile, flags=[], includes=[])
 +      FileUtils.mkdir_p File.dirname(outfile)
 +      flags = [cxxflags, gems.map { |g| g.mruby_cflags }, flags]
-+      flags << [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| "-I#{filename f}" }
-+      sh "#{filename cxx} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}"
++      flags &lt;&lt; [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| &quot;-I#{filename f}&quot; }
++      sh &quot;#{filename cxx} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}&quot;
 +    end
 +    
 +    def compile_objc(outfile, infile, flags=[], includes=[])
 +      FileUtils.mkdir_p File.dirname(outfile)
 +      flags = [objcflags, gems.map { |g| g.mruby_cflags }, flags]
-+      flags << [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| "-I#{filename f}" }
-+      sh "#{filename objcc} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}"
++      flags &lt;&lt; [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| &quot;-I#{filename f}&quot; }
++      sh &quot;#{filename objcc} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}&quot;
 +    end
 +    
 +    def compile_asm(outfile, infile, flags=[], includes=[])
 +      FileUtils.mkdir_p File.dirname(outfile)
 +      flags = [asmflags, gems.map { |g| g.mruby_cflags }, flags]
-+      flags << [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| "-I#{filename f}" }
-+      sh "#{filename asm} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}"
++      flags &lt;&lt; [self.includes, gems.map { |g| g.mruby_includes }, includes].flatten.map { |f| &quot;-I#{filename f}&quot; }
++      sh &quot;#{filename asm} #{flags.flatten.join(' ')} -o #{filename outfile} -c #{filename infile}&quot;
 +    end
 +    
 +    def compile_mruby(outfile, infiles, funcname)
-+      cmd = "#{cat} #{filenames [infiles]} | #{filename mrbcfile} -B#{funcname}"
++      cmd = &quot;#{cat} #{filenames [infiles]} | #{filename mrbcfile} -B#{funcname}&quot;
 +      if outfile.is_a?(IO)
-+        IO.popen("#{cmd} -o- -", 'r') do |f|
++        IO.popen(&quot;#{cmd} -o- -&quot;, 'r') do |f|
 +          outfile.puts f.read
 +        end
 +      else
 +        FileUtils.mkdir_p File.dirname(outfile)
-+        sh "#{cmd} -o#{filename outfile} -"
++        sh &quot;#{cmd} -o#{filename outfile} -&quot;
 +      end
 +    end
 +    
@@ -4001,35 +4001,35 @@ index 0000000..fad92c5
 +      FileUtils.mkdir_p File.dirname(outfile)
 +      flags = [ldflags, flags]
 +      libs = [libs, self.libs]
-+      sh "#{filename ld} -o #{filename outfile} #{flags.join(' ')} #{filenames objfiles} #{libs.flatten.join(' ')}"
++      sh &quot;#{filename ld} -o #{filename outfile} #{flags.join(' ')} #{filenames objfiles} #{libs.flatten.join(' ')}&quot;
 +    end
 +    
 +    def archive(outfile, options, objfiles)
 +      FileUtils.mkdir_p File.dirname(outfile)
-+      sh "#{filename ar} #{options} #{filename outfile} #{filenames objfiles}"
++      sh &quot;#{filename ar} #{options} #{filename outfile} #{filenames objfiles}&quot;
 +    end
 +
 +    def run_yacc(outfile, infile)
 +      FileUtils.mkdir_p File.dirname(outfile)
-+      sh "#{filename yacc} -o #{filename outfile} #{filename infile}"
++      sh &quot;#{filename yacc} -o #{filename outfile} #{filename infile}&quot;
 +    end
 +
 +    def run_gperf(outfile, infile)
 +      FileUtils.mkdir_p File.dirname(outfile)
-+      sh %Q[#{filename gperf} -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word -k"1,3,$" #{filename infile} > #{filename outfile}]
++      sh %Q[#{filename gperf} -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word -k&quot;1,3,$&quot; #{filename infile} &gt; #{filename outfile}]
 +    end
 +
 +    def run_git_clone(gemdir, giturl, options=[])
-+      sh "#{filename git} clone #{options.join(' ')} #{filename giturl} #{filename gemdir}"
++      sh &quot;#{filename git} clone #{options.join(' ')} #{filename giturl} #{filename gemdir}&quot;
 +    end
 +
 +
 +  end # Build
 +
-+  class CrossBuild < Build
-+    def initialize(name, &block)
++  class CrossBuild &lt; Build
++    def initialize(name, &amp;block)
 +      @name ||= name
-+      super(&block)
++      super(&amp;block)
 +    end
 +  end # CrossBuild
 +end # MRuby
@@ -4043,7 +4043,7 @@ index 0000000..59a536e
 +
 +module MRuby
 +  module Gem
-+    class << self
++    class &lt;&lt; self
 +      attr_accessor :processing_path
 +    end
 +
@@ -4056,7 +4056,7 @@ index 0000000..59a536e
 +      def self.attr_array(*vars)
 +        attr_reader *vars
 +        vars.each do |v|
-+          class_eval "def #{v}=(val);@#{v}||=[];@#{v}+=[val].flatten;end"
++          class_eval &quot;def #{v}=(val);@#{v}||=[];@#{v}+=[val].flatten;end&quot;
 +        end
 +      end
 +
@@ -4070,36 +4070,36 @@ index 0000000..59a536e
 +      attr_array :test_objs, :test_rbfiles
 +      attr_accessor :test_preload
 +
-+      def initialize(name, &block)
++      def initialize(name, &amp;block)
 +        @name = name
 +        @build = MRuby.build
 +        @dir = Gem.processing_path
 +        @cflags = []
 +        @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
-+        @mruby_includes = ["#{dir}/include"]
-+        @rbfiles = Dir.glob("#{dir}/mrblib/*.rb")
-+        @objs = Dir.glob("#{dir}/src/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(@dir).to_s.pathmap("#{build_dir}/%X.o") }
-+        @test_rbfiles = Dir.glob("#{dir}/test/*.rb")
-+        @test_objs = Dir.glob("#{dir}/test/*.{c,cpp,m,asm,S}").map { |f| f.relative_path_from(dir).to_s.pathmap("#{build_dir}/%X.o") }
++        @mruby_includes = [&quot;#{dir}/include&quot;]
++        @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
++        @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(@dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
++        @test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
++        @test_objs = Dir.glob(&quot;#{dir}/test/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +        @test_preload = 'test/assert.rb'
 +
-+        instance_eval(&block)
++        instance_eval(&amp;block)
 +
-+        @objs << "#{build_dir}/gem_init.o"
++        @objs &lt;&lt; &quot;#{build_dir}/gem_init.o&quot;
 +
 +        if !name || !licenses || !authors
-+          fail "#{name || dir} required to set name, license(s) and author(s)"
++          fail &quot;#{name || dir} required to set name, license(s) and author(s)&quot;
 +        end
 +
-+        build.gems << self
-+        build.libmruby << @objs
++        build.gems &lt;&lt; self
++        build.libmruby &lt;&lt; @objs
 +
 +        define_default_rules
 +        add_tasks
 +      end
 +
 +      def testlib
-+        "#{build_dir}/libmrb-#{name}-gem-test.a"
++        &quot;#{build_dir}/libmrb-#{name}-gem-test.a&quot;
 +      end
 +
 +      def funcname
@@ -4108,59 +4108,59 @@ index 0000000..59a536e
 +
 +      def build_dir
 +        return @build_dir if @build_dir
-+        @build_dir = "#{build.build_dir}/mrbgems/#{name}"
++        @build_dir = &quot;#{build.build_dir}/mrbgems/#{name}&quot;
 +        FileUtils.mkdir_p @build_dir
 +        @build_dir
 +      end
 +
 +      def add_tasks
-+        test_rbc = "#{build_dir}/gem_test.c"
++        test_rbc = &quot;#{build_dir}/gem_test.c&quot;
 +        test_rbobj = test_rbc.ext('o')
 +
-+        Rake::FileTask.define_task testlib => test_objs + [test_rbobj] do |t|
++        Rake::FileTask.define_task testlib =&gt; test_objs + [test_rbobj] do |t|
 +          build.archive t.name, 'rs', t.prerequisites
 +        end
 +
-+        Rake::FileTask.define_task test_rbobj => test_rbc
-+        Rake::FileTask.define_task test_rbc => [build.mrbcfile] + test_rbfiles do |t|
++        Rake::FileTask.define_task test_rbobj =&gt; test_rbc
++        Rake::FileTask.define_task test_rbc =&gt; [build.mrbcfile] + test_rbfiles do |t|
 +          open(t.name, 'w') do |f|
 +            f.puts gem_init_header
-+            build.compile_mruby f, test_rbfiles, "gem_test_irep_#{funcname}" unless test_rbfiles.empty?
++            build.compile_mruby f, test_rbfiles, &quot;gem_test_irep_#{funcname}&quot; unless test_rbfiles.empty?
 +          end
 +
 +          open(t.name, 'a') do |f|
-+            f.puts "void mrb_#{funcname}_gem_test(mrb_state *mrb);" unless test_objs.empty?
-+            f.puts "void GENERATED_TMP_mrb_#{funcname}_gem_test(mrb_state *mrb) {"
-+            f.puts "  mrb_#{funcname}_gem_test(mrb);" unless test_objs.empty? 
-+            f.puts <<__EOF__ unless test_rbfiles.empty?
++            f.puts &quot;void mrb_#{funcname}_gem_test(mrb_state *mrb);&quot; unless test_objs.empty?
++            f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_test(mrb_state *mrb) {&quot;
++            f.puts &quot;  mrb_#{funcname}_gem_test(mrb);&quot; unless test_objs.empty? 
++            f.puts &lt;&lt;__EOF__ unless test_rbfiles.empty?
 +  mrb_load_irep(mrb, gem_test_irep_#{funcname});
-+  if (mrb->exc) {
-+    mrb_p(mrb, mrb_obj_value(mrb->exc));
++  if (mrb-&gt;exc) {
++    mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
 +    exit(0);
 +  }
 +
 +__EOF__
-+            f.puts "}"
++            f.puts &quot;}&quot;
 +          end
 +        end
 +
-+        Rake::FileTask.define_task "#{build_dir}/gem_init.o" => "#{build_dir}/gem_init.c"
-+        Rake::FileTask.define_task "#{build_dir}/gem_init.c" => [build.mrbcfile] + rbfiles do |t|
++        Rake::FileTask.define_task &quot;#{build_dir}/gem_init.o&quot; =&gt; &quot;#{build_dir}/gem_init.c&quot;
++        Rake::FileTask.define_task &quot;#{build_dir}/gem_init.c&quot; =&gt; [build.mrbcfile] + rbfiles do |t|
 +          generate_gem_init(t.name)
 +        end
 +      end
 +
 +      def define_default_rules
-+        obj_matcher = Regexp.new("^#{build_dir}/(.*)\\.o$")
++        obj_matcher = Regexp.new(&quot;^#{build_dir}/(.*)\\.o$&quot;)
 +        {
-+          '.c' => proc { |t| build.compile_c t.name, t.prerequisites.first, cflags },
-+          '.cpp' => proc { |t| build.compile_cxx t.name, t.prerequisites.first, cflags },
-+          '.m' => proc { |t| build.compile_objc t.name, t.prerequisites.first, cflags },
-+          '.S' => proc { |t| build.compile_asm t.name, t.prerequisites.first, cflags }
++          '.c' =&gt; proc { |t| build.compile_c t.name, t.prerequisites.first, cflags },
++          '.cpp' =&gt; proc { |t| build.compile_cxx t.name, t.prerequisites.first, cflags },
++          '.m' =&gt; proc { |t| build.compile_objc t.name, t.prerequisites.first, cflags },
++          '.S' =&gt; proc { |t| build.compile_asm t.name, t.prerequisites.first, cflags }
 +        }.each do |ext, compile|
-+          rule obj_matcher => [
++          rule obj_matcher =&gt; [
 +            proc { |file|
-+              file.sub(obj_matcher, "#{dir}/\\1#{ext}")
++              file.sub(obj_matcher, &quot;#{dir}/\\1#{ext}&quot;)
 +            },
 +            proc { |file|
 +              get_dependencies(file)
@@ -4169,9 +4169,9 @@ index 0000000..59a536e
 +            compile.call t
 +          end
 +
-+          rule obj_matcher => [
++          rule obj_matcher =&gt; [
 +            proc { |file|
-+              file.sub(obj_matcher, "#{build_dir}/\\1#{ext}")
++              file.sub(obj_matcher, &quot;#{build_dir}/\\1#{ext}&quot;)
 +            },
 +            proc { |file|
 +              get_dependencies(file)
@@ -4185,24 +4185,24 @@ index 0000000..59a536e
 +      def generate_gem_init(fname)
 +        open(fname, 'w') do |f|
 +          f.puts gem_init_header
-+          build.compile_mruby f, rbfiles, "gem_mrblib_irep_#{funcname}" unless rbfiles.empty?
-+          f.puts "void mrb_#{funcname}_gem_init(mrb_state *mrb);"
-+          f.puts "void GENERATED_TMP_mrb_#{funcname}_gem_init(mrb_state *mrb) {"
-+          f.puts "  mrb_#{funcname}_gem_init(mrb);" unless objs.empty?
-+          f.puts <<__EOF__ unless rbfiles.empty?
++          build.compile_mruby f, rbfiles, &quot;gem_mrblib_irep_#{funcname}&quot; unless rbfiles.empty?
++          f.puts &quot;void mrb_#{funcname}_gem_init(mrb_state *mrb);&quot;
++          f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_init(mrb_state *mrb) {&quot;
++          f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; unless objs.empty?
++          f.puts &lt;&lt;__EOF__ unless rbfiles.empty?
 +  mrb_load_irep(mrb, gem_mrblib_irep_#{funcname});
-+  if (mrb->exc) {
-+    mrb_p(mrb, mrb_obj_value(mrb->exc));
++  if (mrb-&gt;exc) {
++    mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
 +    exit(0);
 +  }
 +
 +__EOF__
-+          f.puts "}"
++          f.puts &quot;}&quot;
 +        end
 +      end # generate_gem_init
 +
 +      def gem_init_header
-+        <<__EOF__
++        &lt;&lt;__EOF__
 +/*
 + * This file is loading the irep
 + * Ruby GEM code.
@@ -4211,11 +4211,11 @@ index 0000000..59a536e
 + *   This file was generated!
 + *   All manual changes will get lost.
 + */
-+#include "mruby.h"
-+#include "mruby/irep.h"
-+#include "mruby/dump.h"
-+#include "mruby/string.h"
-+#include "mruby/proc.h"
++#include &quot;mruby.h&quot;
++#include &quot;mruby/irep.h&quot;
++#include &quot;mruby/dump.h&quot;
++#include &quot;mruby/string.h&quot;
++#include &quot;mruby/proc.h&quot;
 +__EOF__
 +      end # gem_init_header
 +
@@ -4231,7 +4231,7 @@ index 0000000..08633b4
 @@ -0,0 +1,24 @@
 +def exefile(filename)
 +  if ENV['OS'] == 'Windows_NT'
-+    "#{filename}.exe"
++    &quot;#{filename}.exe&quot;
 +  else
 +    filename
 +  end
@@ -4239,9 +4239,9 @@ index 0000000..08633b4
 +
 +def filename(name)
 +  if ENV['OS'] == 'Windows_NT'
-+    '"'+name.gsub('/', '\\')+'"'
++    '&quot;'+name.gsub('/', '\\')+'&quot;'
 +  end
-+  '"'+name+'"'
++  '&quot;'+name+'&quot;'
 +end
 +
 +def filenames(names)
@@ -4262,23 +4262,23 @@ index 0000000..f53f3bc
 +def get_dependencies(file)
 +  file = file.pathmap('%n.d') unless File.extname(file) == '.d'
 +  if File.exists?(file)
-+    File.read(file).gsub("\\\n ", "").scan(/^\S+:\s+(.+)$/).flatten.map {|s| s.split(' ') }.flatten
++    File.read(file).gsub(&quot;\\\n &quot;, &quot;&quot;).scan(/^\S+:\s+(.+)$/).flatten.map {|s| s.split(' ') }.flatten
 +  else
 +    []
 +  end
 +end
 +
 +MRuby.each_target do |t|
-+  obj_matcher = Regexp.new("^#{build_dir}/(.*)\\.o$")
++  obj_matcher = Regexp.new(&quot;^#{build_dir}/(.*)\\.o$&quot;)
 +  {
-+    '.c' => proc { |t| compile_c t.name, t.prerequisites.first },
-+    '.cpp' => proc { |t| compile_cxx t.name, t.prerequisites.first },
-+    '.m' => proc { |t| compile_objc t.name, t.prerequisites.first },
-+    '.S' => proc { |t| compile_asm t.name, t.prerequisites.first }
++    '.c' =&gt; proc { |t| compile_c t.name, t.prerequisites.first },
++    '.cpp' =&gt; proc { |t| compile_cxx t.name, t.prerequisites.first },
++    '.m' =&gt; proc { |t| compile_objc t.name, t.prerequisites.first },
++    '.S' =&gt; proc { |t| compile_asm t.name, t.prerequisites.first }
 +  }.each do |ext, compile|
-+    rule obj_matcher => [
++    rule obj_matcher =&gt; [
 +      proc { |file|
-+        file.sub(obj_matcher, "\\1#{ext}")
++        file.sub(obj_matcher, &quot;\\1#{ext}&quot;)
 +      },
 +      proc { |file|
 +        get_dependencies(file)
@@ -4287,9 +4287,9 @@ index 0000000..f53f3bc
 +      compile.call t
 +    end
 +
-+    rule obj_matcher => [
++    rule obj_matcher =&gt; [
 +      proc { |file|
-+        file.sub(obj_matcher, "#{build_dir}/\\1#{ext}")
++        file.sub(obj_matcher, &quot;#{build_dir}/\\1#{ext}&quot;)
 +      },
 +      proc { |file|
 +        get_dependencies(file)
@@ -4310,39 +4310,39 @@ index 45031fc..0000000
 -
 -if(NOT CMAKE_CROSSCOMPILING)
 -
--  file(GLOB MRBTEST_SRC_RB "assert.rb" "t/*.rb")
+-  file(GLOB MRBTEST_SRC_RB &quot;assert.rb&quot; &quot;t/*.rb&quot;)
 -
 -  # generate a single rb file from all existing test *.rb
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp&quot;
 -    DEPENDS xpcat
--    COMMAND xpcat -o "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp" ${MRBTEST_SRC_RB}
+-    COMMAND xpcat -o &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp&quot; ${MRBTEST_SRC_RB}
 -    )
 -
 -  # mruby compile and generate C byte array representation
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp"
--    DEPENDS mrbc "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp"
--    COMMAND mrbc -Bmrbtest_irep -o"${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp"
--                 "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp&quot;
+-    DEPENDS mrbc &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp&quot;
+-    COMMAND mrbc -Bmrbtest_irep -o&quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp&quot;
+-                 &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.rbtmp&quot;
 -    )
 -
 -  # aggregate mruby's *.rb test files as a single C file
--  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c"
--    DEPENDS xpcat init_mrbtest.c "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp"
--    COMMAND xpcat -o "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c"
--                     "${CMAKE_CURRENT_SOURCE_DIR}/init_mrbtest.c"
--                     "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp"
+-  add_custom_command(OUTPUT &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c&quot;
+-    DEPENDS xpcat init_mrbtest.c &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp&quot;
+-    COMMAND xpcat -o &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c&quot;
+-                     &quot;${CMAKE_CURRENT_SOURCE_DIR}/init_mrbtest.c&quot;
+-                     &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.ctmp&quot;
 -    )
 -
 -  add_executable(mrbtest
 -    EXCLUDE_FROM_ALL
--    "${CMAKE_CURRENT_SOURCE_DIR}/driver.c"
--    "${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c"
+-    &quot;${CMAKE_CURRENT_SOURCE_DIR}/driver.c&quot;
+-    &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest.c&quot;
 -    )
 -  target_link_libraries(mrbtest libmruby_static ${MRUBY_LIBS})
 -
 -  add_custom_target(test
 -    DEPENDS mrbtest
--    COMMAND "${CMAKE_CURRENT_BINARY_DIR}/mrbtest"
+-    COMMAND &quot;${CMAKE_CURRENT_BINARY_DIR}/mrbtest&quot;
 -    )
 -
 -endif()
@@ -4434,14 +4434,14 @@ index 95690a6..0000000
 -
 -.PHONY : test
 -all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB) 
--	@echo "# exec mrbtest"
+-	@echo &quot;# exec mrbtest&quot;
 -	./$(EXE)
 -	@echo
--	@echo "# exec mruby test with ruby script"
--	@($(MRUBY) $(TESTRB) > $(TESTRB_REP) && echo "mrubytest.rb success.") || $(CAT) $(TESTRB_REP)
+-	@echo &quot;# exec mruby test with ruby script&quot;
+-	@($(MRUBY) $(TESTRB) &gt; $(TESTRB_REP) &amp;&amp; echo &quot;mrubytest.rb success.&quot;) || $(CAT) $(TESTRB_REP)
 -	@echo
--	@echo "# exec mruby test with mrb file"
--	@($(MRUBY) -b $(TESTMRB) > $(TESTMRB_REP) && echo "mrubytest.mrb success.") || $(CAT) $(TESTMRB_REP)
+-	@echo &quot;# exec mruby test with mrb file&quot;
+-	@($(MRUBY) -b $(TESTMRB) &gt; $(TESTMRB_REP) &amp;&amp; echo &quot;mrubytest.mrb success.&quot;) || $(CAT) $(TESTMRB_REP)
 -	@echo
 -
 -# executable constructed using linker from object files
@@ -4457,30 +4457,30 @@ index 95690a6..0000000
 -
 -# objects compiled from source
 -$(OBJS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# Compile C source from merged mruby source
 -$(CLIB) : $(DLIB) $(INIT) $(GEMDLIB)
--	$(CAT) $(INIT) $(DLIB) $(GEMDLIB) > $@
+-	$(CAT) $(INIT) $(DLIB) $(GEMDLIB) &gt; $@
 -
 -$(DLIB) : $(RLIB) $(MRBC)
 -	$(MRBC) -Bmrbtest_irep -o$@ $(RLIB)
 -
 -# merge mruby sources
 -$(RLIB) : $(ASSLIB) $(MRBS)
--	$(CAT) $(ASSLIB) $(MRBS) > $@
+-	$(CAT) $(ASSLIB) $(MRBS) &gt; $@
 -
 -# Compile mrb file from mruby source
 -$(TESTMRB) : $(MRBC) $(TESTRB)
 -	$(MRBC) $(TESTRB)
 -
 -$(TESTRB) : $(ASSLIB) $(MRBS) $(REPLIB)
--	$(CAT) $(ASSLIB) $(MRBS) $(REPLIB) > $@
+-	$(CAT) $(ASSLIB) $(MRBS) $(REPLIB) &gt; $@
 -
 -# clean up
 -.PHONY : clean
 -clean :
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(MLIB) $(CLIB) $(RLIB) $(DLIB) $(DEPLIB) $(OBJS) $(EXE)
 -	-$(RM_F) $(TESTRB) $(TESTMRB) $(TESTRB_REP) $(TESTMRB_REP)
 diff --git a/test/mrbtest.rake b/test/mrbtest.rake
@@ -4492,32 +4492,32 @@ index 0000000..1d416df
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  exec = exefile("#{build_dir}/#{dir}/mrbtest")
-+  clib = "#{build_dir}/#{dir}/mrbtest.c"
++  exec = exefile(&quot;#{build_dir}/#{dir}/mrbtest&quot;)
++  clib = &quot;#{build_dir}/#{dir}/mrbtest.c&quot;
 +  mlib = clib.ext('o')
-+  mrbs = Dir.glob("#{dir}/t/*.rb")
-+  init = "#{dir}/init_mrbtest.c"
-+  asslib = "#{dir}/assert.rb"
++  mrbs = Dir.glob(&quot;#{dir}/t/*.rb&quot;)
++  init = &quot;#{dir}/init_mrbtest.c&quot;
++  asslib = &quot;#{dir}/assert.rb&quot;
 +
-+  objs = ["#{build_dir}/#{dir}/driver.o", mlib]
++  objs = [&quot;#{build_dir}/#{dir}/driver.o&quot;, mlib]
 +
-+  file exec => objs + gems.map{ |g| g.testlib } + ["#{build_dir}/lib/libmruby.a"] do |t|
++  file exec =&gt; objs + gems.map{ |g| g.testlib } + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
 +    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
 +  end
 +
-+  file mlib => [clib]
-+  file clib => [exefile("#{build_dir}/bin/mrbc"), init, asslib] + mrbs do |t|
++  file mlib =&gt; [clib]
++  file clib =&gt; [exefile(&quot;#{build_dir}/bin/mrbc&quot;), init, asslib] + mrbs do |t|
 +    open(clib, 'w') do |f|
 +      f.puts File.read(init)
 +      compile_mruby f, [asslib] + mrbs, 'mrbtest_irep'
 +      gems.each do |g|
-+        f.puts "void GENERATED_TMP_mrb_#{g.funcname}_gem_test(mrb_state *mrb);"
++        f.puts &quot;void GENERATED_TMP_mrb_#{g.funcname}_gem_test(mrb_state *mrb);&quot;
 +      end
-+      f.puts "void mrbgemtest_init(mrb_state* mrb) {"
++      f.puts &quot;void mrbgemtest_init(mrb_state* mrb) {&quot;
 +      gems.each do |g|
-+        f.puts "    GENERATED_TMP_mrb_#{g.funcname}_gem_test(mrb);"
++        f.puts &quot;    GENERATED_TMP_mrb_#{g.funcname}_gem_test(mrb);&quot;
 +      end
-+      f.puts "}"
++      f.puts &quot;}&quot;
 +    end
 +  end
 +end
@@ -4544,7 +4544,7 @@ index a9f52db..0000000
 @@ -1,9 +0,0 @@
 -# build tools/mirb executable
 -
--file(GLOB MIRBBIN_SRC_C "*.c")
+-file(GLOB MIRBBIN_SRC_C &quot;*.c&quot;)
 -add_executable(mirb ${MIRBBIN_SRC_C})
 -target_link_libraries(mirb libmruby_static ${MRUBY_LIBS})
 -
@@ -4632,7 +4632,7 @@ index b953038..0000000
 -
 -# objects compiled from source
 -$(OBJS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# C library compile
 -$(LIBR) :
@@ -4641,14 +4641,14 @@ index b953038..0000000
 -# mruby library compile
 -# extend libraries complile
 -$(EXTS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# clean up
 -.PHONY : clean #cleandep
 -clean :
 -	$(MAKE) clean -C ../../mrblib $(MAKE_FLAGS)
 -	$(MAKE) clean -C ../mrbc $(MAKE_FLAGS)
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(EXE) $(OBJS)
 -	-$(RM_F) $(OBJS:.o=.d)
 diff --git a/tools/mirb/mirb.rake b/tools/mirb/mirb.rake
@@ -4660,10 +4660,10 @@ index 0000000..045f6ab
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  exec = exefile("#{build_dir}/bin/mirb")
-+  objs = Dir.glob("#{dir}/*.{c}").map { |f| f.pathmap("#{build_dir}/%X.o") }
++  exec = exefile(&quot;#{build_dir}/bin/mirb&quot;)
++  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +
-+  file exec => objs + ["#{build_dir}/lib/libmruby.a"] do |t|
++  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
 +    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
 +  end
 +end
@@ -4676,8 +4676,8 @@ index 043b7dc..0000000
 @@ -1,9 +0,0 @@
 -# build tools/mrbc executable
 -
--file(GLOB MRBC_SRC_C "*.c")
--add_executable(mrbc ${MRBC_SRC_C} $<TARGET_OBJECTS:mruby_object>)
+-file(GLOB MRBC_SRC_C &quot;*.c&quot;)
+-add_executable(mrbc ${MRBC_SRC_C} $&lt;TARGET_OBJECTS:mruby_object&gt;)
 -target_link_libraries(mrbc ${MRUBY_LIBS})
 -
 -install(TARGETS mrbc RUNTIME DESTINATION bin)
@@ -4729,7 +4729,7 @@ index ea22860..0000000
 -
 -ALL_CFLAGS = -Wall -Werror-implicit-function-declaration $(CFLAGS)
 -ifeq ($(OS),Windows_NT)
--  MAKE_FLAGS = CC=$(CC) LL=$(LL) ALL_CFLAGS="$(ALL_CFLAGS)"
+-  MAKE_FLAGS = CC=$(CC) LL=$(LL) ALL_CFLAGS=&quot;$(ALL_CFLAGS)&quot;
 -else
 -  MAKE_FLAGS = CC='$(CC)' LL='$(LL)' ALL_CFLAGS='$(ALL_CFLAGS)'
 -endif
@@ -4749,7 +4749,7 @@ index ea22860..0000000
 -
 -# objects compiled from source
 -$(OBJS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# C library compile
 -$(LIBR) :
@@ -4758,7 +4758,7 @@ index ea22860..0000000
 -# clean up
 -.PHONY : clean
 -clean :
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(EXE) $(OBJS)
 -	-$(RM_F) $(OBJS:.o=.d)
 diff --git a/tools/mrbc/mrbc.rake b/tools/mrbc/mrbc.rake
@@ -4770,10 +4770,10 @@ index 0000000..4cca63b
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  exec = exefile("#{build_dir}/bin/mrbc")
-+  objs = Dir.glob("#{dir}/*.{c}").map { |f| f.pathmap("#{build_dir}/%X.o") }
++  exec = exefile(&quot;#{build_dir}/bin/mrbc&quot;)
++  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +
-+  file exec => objs + ["#{build_dir}/lib/libmruby_core.a"] do |t|
++  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby_core.a&quot;] do |t|
 +    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
 +  end
 +end
@@ -4786,7 +4786,7 @@ index beff628..0000000
 @@ -1,9 +0,0 @@
 -# build tools/mruby executable
 -
--file(GLOB MRUBYBIN_SRC_C "*.c")
+-file(GLOB MRUBYBIN_SRC_C &quot;*.c&quot;)
 -add_executable(mruby ${MRUBYBIN_SRC_C})
 -target_link_libraries(mruby libmruby_static ${MRUBY_LIBS})
 -
@@ -4879,7 +4879,7 @@ index 55e37aa..0000000
 -
 -# objects compiled from source
 -$(OBJS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# C library compile
 -$(LIBR) :
@@ -4888,14 +4888,14 @@ index 55e37aa..0000000
 -# mruby library compile
 -# extend libraries complile
 -$(EXTS) : %.o : %.c
--	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+-	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
 -
 -# clean up
 -.PHONY : clean #cleandep
 -clean :
 -	$(MAKE) clean -C ../../mrblib $(MAKE_FLAGS)
 -	$(MAKE) clean -C ../mrbc $(MAKE_FLAGS)
--	@echo "make: removing targets, objects and depend files of `pwd`"
+-	@echo &quot;make: removing targets, objects and depend files of `pwd`&quot;
 -	-$(RM_F) $(EXE) $(OBJS)
 -	-$(RM_F) $(OBJS:.o=.d)
 diff --git a/tools/mruby/mruby.rake b/tools/mruby/mruby.rake
@@ -4907,10 +4907,10 @@ index 0000000..4159fad
 +dir = File.dirname(__FILE__).sub(%r|^\./|, '')
 +
 +MRuby.each_target do
-+  exec = exefile("#{build_dir}/bin/mruby")
-+  objs = Dir.glob("#{dir}/*.{c}").map { |f| f.pathmap("#{build_dir}/%X.o") }
++  exec = exefile(&quot;#{build_dir}/bin/mruby&quot;)
++  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
 +
-+  file exec => objs + ["#{build_dir}/lib/libmruby.a"] do |t|
++  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
 +    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
 +  end
 +end
@@ -4932,14 +4932,14 @@ index e39babc..0000000
 --- a/tools/xpcat/xpcat.c
 +++ /dev/null
 @@ -1,72 +0,0 @@
--#include <stdio.h>
--#include <stdlib.h>
--#include <string.h>
+-#include &lt;stdio.h&gt;
+-#include &lt;stdlib.h&gt;
+-#include &lt;string.h&gt;
 -
 -static void
 -usage(const char *program)
 -{
--  printf("Usage: %s -o outputfile FILE...\n", program);
+-  printf(&quot;Usage: %s -o outputfile FILE...\n&quot;, program);
 -}
 -
 -int
@@ -4950,15 +4950,15 @@ index e39babc..0000000
 -  FILE *infile = NULL;
 -  FILE *outfile = NULL;
 -
--  if (argc < 4) {
+-  if (argc &lt; 4) {
 -    usage(argv[0]);
 -    return EXIT_FAILURE;
 -  }
 -
--  for (i = 1; i < argc; i++) {
--    if (strcmp(argv[i], "-o") == 0) {
+-  for (i = 1; i &lt; argc; i++) {
+-    if (strcmp(argv[i], &quot;-o&quot;) == 0) {
 -      i++;
--      if (i < argc)
+-      if (i &lt; argc)
 -        output = argv[i];
 -      else {
 -        usage(argv[0]);
@@ -4968,29 +4968,29 @@ index e39babc..0000000
 -  }
 -
 -  if (output) {
--    outfile = fopen(output, "wb");
+-    outfile = fopen(output, &quot;wb&quot;);
 -    if (!outfile) {
--      fprintf(stderr, "[ERROR] unable to open output file: %s\n", output);
+-      fprintf(stderr, &quot;[ERROR] unable to open output file: %s\n&quot;, output);
 -      return EXIT_FAILURE;
 -    }
 -    setbuf(outfile, NULL);
 -
--    for (i = 1; i < argc; i++) {
--      if (strcmp(argv[i], "-o") == 0) {
+-    for (i = 1; i &lt; argc; i++) {
+-      if (strcmp(argv[i], &quot;-o&quot;) == 0) {
 -        i++;
 -        continue;
 -      }
 -
--      infile = fopen(argv[i], "rb");
+-      infile = fopen(argv[i], &quot;rb&quot;);
 -      if (!infile) {
--        fprintf(stderr, "[ERROR] unable to open input file: %s\n", argv[i]);
+-        fprintf(stderr, &quot;[ERROR] unable to open input file: %s\n&quot;, argv[i]);
 -        return EXIT_FAILURE;
 -      }
 -      setbuf(infile, NULL);
 -
 -      while ((ch = getc(infile)) != EOF) {
 -        if (putc(ch, outfile) == EOF) {
--          fprintf(stderr, "[ERROR] error writing output file: %s\n", output);
+-          fprintf(stderr, &quot;[ERROR] error writing output file: %s\n&quot;, output);
 -          return EXIT_FAILURE;
 -        }
 -      }

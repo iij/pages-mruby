@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit dee0b2283c180c4e2584ff27dcb241a80fb7cfc2
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Sat Dec 22 01:38:06 2012 +0900
 
     Add MRUBY_CFLAGS / MRUBY_LDFLAGS to mrbgems
@@ -2105,7 +2105,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit dee0b2283c180c4e2584ff27dcb241a80fb7cfc2
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Sat Dec 22 01:38:06 2012 +0900
 
     Add MRUBY_CFLAGS / MRUBY_LDFLAGS to mrbgems
@@ -2136,11 +2136,11 @@ index aec259e..61bf248 100644
 +  require './mrbgems/build_tasks'
 +  Rake::Task[:load_mrbgems_flags].invoke
 +else
-+  CFLAGS << "-DDISABLE_GEMS"
++  CFLAGS &lt;&lt; &quot;-DDISABLE_GEMS&quot;
 +end
  
--CFLAGS << "-DDISABLE_GEMS" unless ENABLE_GEMS
- CFLAGS << "-Wall" << "-Werror-implicit-function-declaration" << "-I#{MRUBY_ROOT}/include"
+-CFLAGS &lt;&lt; &quot;-DDISABLE_GEMS&quot; unless ENABLE_GEMS
+ CFLAGS &lt;&lt; &quot;-Wall&quot; &lt;&lt; &quot;-Werror-implicit-function-declaration&quot; &lt;&lt; &quot;-I#{MRUBY_ROOT}/include&quot;
  
  if ENV['OS'] == 'Windows_NT'
 @@ -58,10 +63,6 @@ CAT = ENV['CAT'] ||= 'cat'
@@ -2151,9 +2151,9 @@ index aec259e..61bf248 100644
 -  require './mrbgems/build_tasks'
 -end
 -
- task :default => :all
+ task :default =&gt; :all
  
- desc "build all targets, install (locally) in-repo"
+ desc &quot;build all targets, install (locally) in-repo&quot;
 diff --git a/doc/mrbgems/c_and_ruby_extension_example/.gitignore b/doc/mrbgems/c_and_ruby_extension_example/.gitignore
 index e6ad3b5..186584e 100644
 --- a/doc/mrbgems/c_and_ruby_extension_example/.gitignore
@@ -2305,30 +2305,30 @@ index cd3151b..d6022c8 100644
  # Default rules which are calling the
  # gem specific gem-all and gem-clean
 @@ -72,20 +83,45 @@ gem_mrblib_init.ctmp :
- 	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib.rb '$(GEM)' > $@
+ 	ruby $(MRUBY_ROOT)/mrbgems/generate_gem_mrblib.rb '$(GEM)' &gt; $@
  
  gem_mrblib_irep.ctmp : gem_mrblib.rbtmp
--	$(MRUBY_ROOT)/bin/mrbc -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $<
-+	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $<
+-	$(MRUBY_ROOT)/bin/mrbc -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $&lt;
++	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM)) -o$@ $&lt;
  
  gem_mrblib.rbtmp :
--	cat $(GEM_RB_FILES) > $@
-+		cat $(GEM_RB_FILES) > $@
+-	cat $(GEM_RB_FILES) &gt; $@
++		cat $(GEM_RB_FILES) &gt; $@
 +
 +
 +gem_test.ctmp : gem_test.rbtmp $(GEM_TEST_C_FILES)
-+	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM))_test -o$@ $<
++	$(MRBC) -Bgem_mrblib_irep_$(subst -,_,$(GEM))_test -o$@ $&lt;
 +ifeq ($(GEM_TEST_C_FILES),)
-+		echo "void mrb_$(subst -,_,$(GEM))_gem_test_init(mrb_state* mrb) { }" >> $@
++		echo &quot;void mrb_$(subst -,_,$(GEM))_gem_test_init(mrb_state* mrb) { }&quot; &gt;&gt; $@
 +else
-+		cat $(GEM_TEST_C_FILES) >> $@
++		cat $(GEM_TEST_C_FILES) &gt;&gt; $@
 +endif
 +
 +gem_test.rbtmp : $(GEM_TEST_RB_FILES)
 +ifeq ($(GEM_TEST_RB_FILES),)
-+		echo > $@
++		echo &gt; $@
 +else
-+		cat $(GEM_TEST_RB_FILES) > $@
++		cat $(GEM_TEST_RB_FILES) &gt; $@
 +endif
 +
 +gem-test-c-and-rb-files : gem_test.ctmp
@@ -2353,86 +2353,86 @@ index cd3151b..d6022c8 100644
 +
  
  %.o : %.c
- 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GEM_INCLUDE_LIST) $< -o $@
+ 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GEM_INCLUDE_LIST) $&lt; -o $@
 @@ -93,3 +129,9 @@ gem-clean-rb-files :
  .PHONY : clean
  clean : gem-clean
- 	@echo "Gem '$(GEM)' is clean"
+ 	@echo &quot;Gem '$(GEM)' is clean&quot;
 +
 +.PHONY : gem-flags
 +gem-flags :
-+	@echo "$(MRUBY_CFLAGS) -I`pwd`/include" >  gem-cflags.tmp
-+	@echo "$(MRUBY_LDFLAGS)" >  gem-ldflags.tmp
++	@echo &quot;$(MRUBY_CFLAGS) -I`pwd`/include&quot; &gt;  gem-cflags.tmp
++	@echo &quot;$(MRUBY_LDFLAGS)&quot; &gt;  gem-ldflags.tmp
 +
 diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
 index 3c6c457..4f0d117 100644
 --- a/mrbgems/build_tasks.rb
 +++ b/mrbgems/build_tasks.rb
-@@ -5,15 +5,25 @@ GEM_MAKEFILE = "#{MRBGEMS_PATH}/g/Makefile"
- GEM_MAKEFILE_LIST = "#{MRBGEMS_PATH}/g/MakefileGemList"
- MAKEFILE_4_GEM = "#{MRUBY_ROOT}/mrbgems/Makefile4gem"
+@@ -5,15 +5,25 @@ GEM_MAKEFILE = &quot;#{MRBGEMS_PATH}/g/Makefile&quot;
+ GEM_MAKEFILE_LIST = &quot;#{MRBGEMS_PATH}/g/MakefileGemList&quot;
+ MAKEFILE_4_GEM = &quot;#{MRUBY_ROOT}/mrbgems/Makefile4gem&quot;
  
 -if ENV['OS'] == 'Windows_NT'
--GEM_MAKE_FLAGS = "#{MAKE_FLAGS} MAKEFILE_4_GEM=\"#{MAKEFILE_4_GEM}\""
+-GEM_MAKE_FLAGS = &quot;#{MAKE_FLAGS} MAKEFILE_4_GEM=\&quot;#{MAKEFILE_4_GEM}\&quot;&quot;
 -else
--GEM_MAKE_FLAGS = "#{MAKE_FLAGS} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'"
+-GEM_MAKE_FLAGS = &quot;#{MAKE_FLAGS} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'&quot;
 +def gem_make_flags
 +  if ENV['OS'] == 'Windows_NT'
-+    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM=\"#{MAKEFILE_4_GEM}\""
++    &quot;#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM=\&quot;#{MAKEFILE_4_GEM}\&quot;&quot;
 +  else
-+    "#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'"
++    &quot;#{MAKE_FLAGS rescue ''} MAKEFILE_4_GEM='#{MAKEFILE_4_GEM}'&quot;
 +  end
  end
  
- task :mrbgems_all => ["#{GEM_INIT}.a", :mrbgems_generate_gem_makefile_list] do
+ task :mrbgems_all =&gt; [&quot;#{GEM_INIT}.a&quot;, :mrbgems_generate_gem_makefile_list] do
    for_each_gem do |path, gemname|
--    sh "#{MAKE} -C #{path} #{GEM_MAKE_FLAGS}"
-+    sh "#{MAKE} -C #{path} #{gem_make_flags}"
+-    sh &quot;#{MAKE} -C #{path} #{GEM_MAKE_FLAGS}&quot;
++    sh &quot;#{MAKE} -C #{path} #{gem_make_flags}&quot;
 +  end
 +end
 +
 +task :load_mrbgems_flags do
 +  for_each_gem do |path, gemname|
-+    sh "#{MAKE} gem-flags -C #{path} #{gem_make_flags}"
-+    CFLAGS << File.read("#{path}/gem-cflags.tmp").chomp
-+    LDFLAGS << File.read("#{path}/gem-ldflags.tmp").chomp
++    sh &quot;#{MAKE} gem-flags -C #{path} #{gem_make_flags}&quot;
++    CFLAGS &lt;&lt; File.read(&quot;#{path}/gem-cflags.tmp&quot;).chomp
++    LDFLAGS &lt;&lt; File.read(&quot;#{path}/gem-ldflags.tmp&quot;).chomp
    end
  end
  
 @@ -21,13 +31,30 @@ task :mrbgems_clean do
-   sh "cd #{MRUBY_ROOT}/mrbgems && #{RM_F} *.c *.d *.a *.o"
-   sh "cd #{MRUBY_ROOT}/mrbgems/g && #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest"
+   sh &quot;cd #{MRUBY_ROOT}/mrbgems &amp;&amp; #{RM_F} *.c *.d *.a *.o&quot;
+   sh &quot;cd #{MRUBY_ROOT}/mrbgems/g &amp;&amp; #{RM_F} *.c *.d *.rbtmp *.ctmp *.o mrbtest&quot;
    for_each_gem do |path, gemname|
--    sh "#{MAKE} clean -C #{path} #{GEM_MAKE_FLAGS}"
-+    sh "#{MAKE} gem-clean -C #{path} #{gem_make_flags}"
+-    sh &quot;#{MAKE} clean -C #{path} #{GEM_MAKE_FLAGS}&quot;
++    sh &quot;#{MAKE} gem-clean -C #{path} #{gem_make_flags}&quot;
    end
  end
  
  task :mrbgems_prepare_test do
--  sh "#{CAT} #{for_each_gem{|path, gemname| "#{path}/test/*.rb "}} > #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp"
--  sh "#{MRUBY_ROOT}/bin/mrbc -Bmrbgemtest_irep -o#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp"
+-  sh &quot;#{CAT} #{for_each_gem{|path, gemname| &quot;#{path}/test/*.rb &quot;}} &gt; #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp&quot;
+-  sh &quot;#{MRUBY_ROOT}/bin/mrbc -Bmrbgemtest_irep -o#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.rbtmp&quot;
 +  for_each_gem do |path, gemname, escaped_gemname|
-+    sh "#{MAKE} gem-test -C #{path} #{gem_make_flags}"
++    sh &quot;#{MAKE} gem-test -C #{path} #{gem_make_flags}&quot;
 +  end
-+  open("#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp", 'w') do |f|
++  open(&quot;#{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp&quot;, 'w') do |f|
 +    for_each_gem do |path, gemname, escaped_gemname|
-+      f.puts "void mrb_#{escaped_gemname}_gem_test_init(mrb_state *mrb);"
-+      f.puts "extern const char gem_mrblib_irep_#{escaped_gemname}_test[];"
++      f.puts &quot;void mrb_#{escaped_gemname}_gem_test_init(mrb_state *mrb);&quot;
++      f.puts &quot;extern const char gem_mrblib_irep_#{escaped_gemname}_test[];&quot;
 +    end
-+    f.puts "void mrbgemtest_init(mrb_state* mrb) {"
++    f.puts &quot;void mrbgemtest_init(mrb_state* mrb) {&quot;
 +    for_each_gem do |path, gemname, escaped_gemname|
-+      f.puts "mrb_#{escaped_gemname}_gem_test_init(mrb);"
++      f.puts &quot;mrb_#{escaped_gemname}_gem_test_init(mrb);&quot;
 +    end
 +    for_each_gem do |path, gemname, escaped_gemname|
-+      f.puts "mrb_load_irep(mrb, gem_mrblib_irep_#{escaped_gemname}_test);"
++      f.puts &quot;mrb_load_irep(mrb, gem_mrblib_irep_#{escaped_gemname}_test);&quot;
 +    end
-+    f.puts "}"
++    f.puts &quot;}&quot;
 +
 +  end
-+  sh "#{CAT} #{for_each_gem{|path, gemname| "#{path}/gem_test.ctmp "}} >> #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp"
++  sh &quot;#{CAT} #{for_each_gem{|path, gemname| &quot;#{path}/gem_test.ctmp &quot;}} &gt;&gt; #{MRUBY_ROOT}/mrbgems/g/mrbgemtest.ctmp&quot;
  end
  
- file "#{GEM_INIT}.a" => ["#{GEM_INIT}.c", "#{GEM_INIT}.o"] do |t|
+ file &quot;#{GEM_INIT}.a&quot; =&gt; [&quot;#{GEM_INIT}.c&quot;, &quot;#{GEM_INIT}.o&quot;] do |t|
 diff --git a/test/Makefile b/test/Makefile
 index f918d67..95690a6 100644
 --- a/test/Makefile
@@ -2458,7 +2458,7 @@ index f918d67..95690a6 100644
  .PHONY : test
 -all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB)
 +all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB) 
- 	@echo "# exec mrbtest"
+ 	@echo &quot;# exec mrbtest&quot;
  	./$(EXE)
  	@echo
 @@ -97,9 +89,14 @@ all : $(EXE) $(MRUBY) $(TESTRB) $(TESTMRB)
@@ -2478,7 +2478,7 @@ index f918d67..95690a6 100644
  
  # objects compiled from source
 @@ -107,10 +104,7 @@ $(OBJS) : %.o : %.c
- 	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $< -o $@
+ 	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $&lt; -o $@
  
  # Compile C source from merged mruby source
 -$(CLIB) : $(DLIB) $(INIT)
@@ -2486,7 +2486,7 @@ index f918d67..95690a6 100644
 -	@$(RAKE) mrbgems_prepare_test
 -endif
 +$(CLIB) : $(DLIB) $(INIT) $(GEMDLIB)
- 	$(CAT) $(INIT) $(DLIB) $(GEMDLIB) > $@
+ 	$(CAT) $(INIT) $(DLIB) $(GEMDLIB) &gt; $@
  
  $(DLIB) : $(RLIB) $(MRBC)
 diff --git a/test/init_mrbtest.c b/test/init_mrbtest.c
@@ -2494,7 +2494,7 @@ index 569fde3..6b2219b 100644
 --- a/test/init_mrbtest.c
 +++ b/test/init_mrbtest.c
 @@ -5,14 +5,15 @@
- #include "mruby/proc.h"
+ #include &quot;mruby/proc.h&quot;
  
  extern const char mrbtest_irep[];
 -extern const char mrbgemtest_irep[];
@@ -2509,8 +2509,8 @@ index 569fde3..6b2219b 100644
 -  mrb_load_irep(mrb, mrbgemtest_irep);
 +  mrbgemtest_init(mrb);
  #endif
-   if (mrb->exc) {
-     mrb_p(mrb, mrb_obj_value(mrb->exc));
+   if (mrb-&gt;exc) {
+     mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
 </pre>
 
   </body>

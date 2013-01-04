@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 6a16cad1bf8925498f655e4cac491aa95dbc2963
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 21 23:55:17 2012 +0900
 
     should save ciidx in exception raised from VM
@@ -1989,7 +1989,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 6a16cad1bf8925498f655e4cac491aa95dbc2963
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 21 23:55:17 2012 +0900
 
     should save ciidx in exception raised from VM
@@ -2002,24 +2002,24 @@ index bce92c9..b84158d 100644
          int eidx;
  
        L_RAISE:
-+	ci = mrb->ci;
- 	mrb_obj_iv_ifnone(mrb, mrb->exc, mrb_intern(mrb, "lastpc"), mrb_voidp_value(pc));
--        ci = mrb->ci;
-+	mrb_obj_iv_set(mrb, mrb->exc, mrb_intern(mrb, "ciidx"), mrb_fixnum_value(ci - mrb->cibase));
- 	eidx = ci->eidx;
-         if (ci == mrb->cibase) {
- 	  if (ci->ridx == 0) goto L_STOP;
++	ci = mrb-&gt;ci;
+ 	mrb_obj_iv_ifnone(mrb, mrb-&gt;exc, mrb_intern(mrb, &quot;lastpc&quot;), mrb_voidp_value(pc));
+-        ci = mrb-&gt;ci;
++	mrb_obj_iv_set(mrb, mrb-&gt;exc, mrb_intern(mrb, &quot;ciidx&quot;), mrb_fixnum_value(ci - mrb-&gt;cibase));
+ 	eidx = ci-&gt;eidx;
+         if (ci == mrb-&gt;cibase) {
+ 	  if (ci-&gt;ridx == 0) goto L_STOP;
 @@ -1198,11 +1199,12 @@ mrb_run(mrb_state *mrb, struct RProc *proc, mrb_value self)
-               localjump_error(mrb, "return");
+               localjump_error(mrb, &quot;return&quot;);
                goto L_RAISE;
              }
--            ci = mrb->ci = mrb->cibase + e->cioff;
-+            ci = mrb->cibase + e->cioff;
- 	    if (ci == mrb->cibase) {
-               localjump_error(mrb, "return");
+-            ci = mrb-&gt;ci = mrb-&gt;cibase + e-&gt;cioff;
++            ci = mrb-&gt;cibase + e-&gt;cioff;
+ 	    if (ci == mrb-&gt;cibase) {
+               localjump_error(mrb, &quot;return&quot;);
                goto L_RAISE;
  	    }
-+	    mrb->ci = ci;
++	    mrb-&gt;ci = ci;
              break;
            }
          case OP_R_NORMAL:

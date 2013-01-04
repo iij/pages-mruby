@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit bfd41bd6bf09becfc035c9b9805b29b9ebbf532c
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Dec 22 00:11:45 2012 +0900
 
     avoid printing backtrace line with unknown place info
@@ -1989,7 +1989,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit bfd41bd6bf09becfc035c9b9805b29b9ebbf532c
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Dec 22 00:11:45 2012 +0900
 
     avoid printing backtrace line with unknown place info
@@ -2003,8 +2003,8 @@ index 99af7bc..9d61822 100644
        }
      }
 +    if (line == -1) continue;
-     if (ci->target_class == ci->proc->target_class)
-       sep = ".";
+     if (ci-&gt;target_class == ci-&gt;proc-&gt;target_class)
+       sep = &quot;.&quot;;
      else
 </pre>
 

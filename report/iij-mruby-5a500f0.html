@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 5a500f0d864f9573b28b896faea257f74f608663
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Tue Dec 25 16:53:52 2012 +0900
 
     fix Rakefile
@@ -4932,7 +4932,7 @@ POSIX test result: OK
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 5a500f0d864f9573b28b896faea257f74f608663
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Tue Dec 25 16:53:52 2012 +0900
 
     fix Rakefile
@@ -4945,8 +4945,8 @@ index de1c902..9ad7edc 100644
  # basic build file for mruby
  
  def default_make
--  `which gmake` == "" ? 'make' : 'gmake'
-+  `which gmake 2>/dev/null` == "" ? 'make' : 'gmake'
+-  `which gmake` == &quot;&quot; ? 'make' : 'gmake'
++  `which gmake 2&gt;/dev/null` == &quot;&quot; ? 'make' : 'gmake'
  end
  
  # compiler, linker (gcc), archiver, parser generator

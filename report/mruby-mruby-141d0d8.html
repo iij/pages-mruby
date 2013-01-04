@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 141d0d841c05a2ea75b3eeaec7cc26d9ba0e3307
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Dec 22 00:11:19 2012 +0900
 
     should copy lineno info to child scope
@@ -1998,7 +1998,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 141d0d841c05a2ea75b3eeaec7cc26d9ba0e3307
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Dec 22 00:11:19 2012 +0900
 
     should copy lineno info to child scope
@@ -2008,10 +2008,10 @@ index 2afd3a1..c6afa01 100644
 --- a/src/codegen.c
 +++ b/src/codegen.c
 @@ -2089,6 +2089,7 @@ scope_new(mrb_state *mrb, codegen_scope *prev, node *lv)
-   if (p->filename) {
-     p->lines = (short*)mrb_malloc(mrb, sizeof(short)*p->icapa);
+   if (p-&gt;filename) {
+     p-&gt;lines = (short*)mrb_malloc(mrb, sizeof(short)*p-&gt;icapa);
    }
-+  p->lineno = prev->lineno;
++  p-&gt;lineno = prev-&gt;lineno;
    return p;
  }
  

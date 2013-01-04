@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 7cea9d7b945a4b00cef699f47c07654f8b7bd579
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Nov 17 02:16:35 2012 +0900
 
     int and mrb_int should not be mixed under -DMRB_INT64; may fix #557
@@ -2078,7 +2078,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 7cea9d7b945a4b00cef699f47c07654f8b7bd579
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Sat Nov 17 02:16:35 2012 +0900
 
     int and mrb_int should not be mixed under -DMRB_INT64; may fix #557
@@ -2094,8 +2094,8 @@ index a200de3..ea461e0 100644
 -  int size;
 +  mrb_int size;
  
-   if (mrb_get_args(mrb, "|i", &size) == 0) {
-     return (a->len > 0)? a->ptr[0]: mrb_nil_value();
+   if (mrb_get_args(mrb, &quot;|i&quot;, &amp;size) == 0) {
+     return (a-&gt;len &gt; 0)? a-&gt;ptr[0]: mrb_nil_value();
 diff --git a/src/numeric.c b/src/numeric.c
 index 5625623..98a60ed 100644
 --- a/src/numeric.c
@@ -2108,7 +2108,7 @@ index 5625623..98a60ed 100644
 +  mrb_int ndigits = 0;
 +  int i;
  
-   mrb_get_args(mrb, "|i", &ndigits);
+   mrb_get_args(mrb, &quot;|i&quot;, &amp;ndigits);
    number = mrb_float(num);
 diff --git a/src/string.c b/src/string.c
 index 2ac4359..425b79c 100644
@@ -2122,7 +2122,7 @@ index 2ac4359..425b79c 100644
 +  mrb_int lim = -1;
    mrb_value result, tmp;
  
-   argc = mrb_get_args(mrb, "|oi", &spat, &lim);
+   argc = mrb_get_args(mrb, &quot;|oi&quot;, &amp;spat, &amp;lim);
 </pre>
 
   </body>

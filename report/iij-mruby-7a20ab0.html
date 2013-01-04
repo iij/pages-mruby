@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 7a20ab0f959fac94f10b190ebbd385a51ce3d146
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Fri Nov 16 19:12:57 2012 +0900
 
     define MRB_INT64 flag for mrb_int as 64bit
@@ -1928,7 +1928,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 7a20ab0f959fac94f10b190ebbd385a51ce3d146
-Author: Yuichiro MASUI <masui@masuidrive.jp>
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
 Date:   Fri Nov 16 19:12:57 2012 +0900
 
     define MRB_INT64 flag for mrb_int as 64bit
@@ -1952,17 +1952,17 @@ index 841ef18..20c9a59 100644
  
  #ifdef MRB_USE_FLOAT
 -typedef float mrb_float;
--#define mrb_float_to_str(buf, i) sprintf((buf), "%.7e", (i))
+-#define mrb_float_to_str(buf, i) sprintf((buf), &quot;%.7e&quot;, (i))
 -#define str_to_mrb_float(buf) (mrb_float)strtof((buf),NULL)
 +  typedef float mrb_float;
-+# define mrb_float_to_str(buf, i) sprintf((buf), "%.7e", (i))
++# define mrb_float_to_str(buf, i) sprintf((buf), &quot;%.7e&quot;, (i))
 +# define str_to_mrb_float(buf) (mrb_float)strtof((buf),NULL)
  #else
 -typedef double mrb_float;
--#define mrb_float_to_str(buf, i) sprintf((buf), "%.16e", (i))
+-#define mrb_float_to_str(buf, i) sprintf((buf), &quot;%.16e&quot;, (i))
 -#define str_to_mrb_float(buf) (mrb_float)strtod((buf),NULL)
 +  typedef double mrb_float;
-+# define mrb_float_to_str(buf, i) sprintf((buf), "%.16e", (i))
++# define mrb_float_to_str(buf, i) sprintf((buf), &quot;%.16e&quot;, (i))
 +# define str_to_mrb_float(buf) (mrb_float)strtod((buf),NULL)
  #endif
  
@@ -1970,7 +1970,7 @@ index 841ef18..20c9a59 100644
 -typedef int32_t mrb_int;
 -#define MRB_INT_MIN INT32_MIN
 -#define MRB_INT_MAX INT32_MAX
--#define mrb_int_to_str(buf, i) sprintf((buf), "%d", (i))
+-#define mrb_int_to_str(buf, i) sprintf((buf), &quot;%d&quot;, (i))
 -#define str_to_mrb_int(buf) (mrb_int)strtol((buf), NULL, 10);
 +# ifdef MRB_INT64
 +#  error Cannot use NaN boxing when mrb_int is 64bit
@@ -1978,26 +1978,26 @@ index 841ef18..20c9a59 100644
 +   typedef int32_t mrb_int;
 +#  define MRB_INT_MIN INT32_MIN
 +#  define MRB_INT_MAX INT32_MAX
-+#  define mrb_int_to_str(buf, i) sprintf((buf), "%d", (i))
++#  define mrb_int_to_str(buf, i) sprintf((buf), &quot;%d&quot;, (i))
 +#  define str_to_mrb_int(buf) (mrb_int)strtol((buf), NULL, 10)
 +# endif
  #else
 -typedef int mrb_int;
 -#define MRB_INT_MIN INT_MIN
 -#define MRB_INT_MAX INT_MAX
--#define mrb_int_to_str(buf, i) sprintf((buf), "%d", (i))
+-#define mrb_int_to_str(buf, i) sprintf((buf), &quot;%d&quot;, (i))
 -#define str_to_mrb_int(buf) (mrb_int)strtol((buf), NULL, 10);
 +# ifdef MRB_INT64
 +   typedef int64_t mrb_int;
 +#  define MRB_INT_MIN INT64_MIN
 +#  define MRB_INT_MAX INT64_MAX
-+#  define mrb_int_to_str(buf, i) sprintf((buf), "%ld", (i))
++#  define mrb_int_to_str(buf, i) sprintf((buf), &quot;%ld&quot;, (i))
 +#  define str_to_mrb_int(buf) (mrb_int)strtoll((buf), NULL, 10)
 +# else
 +   typedef int mrb_int;
 +#  define MRB_INT_MIN INT_MIN
 +#  define MRB_INT_MAX INT_MAX
-+#  define mrb_int_to_str(buf, i) sprintf((buf), "%d", (i))
++#  define mrb_int_to_str(buf, i) sprintf((buf), &quot;%d&quot;, (i))
 +#  define str_to_mrb_int(buf) (mrb_int)strtol((buf), NULL, 10)
 +# endif
  #endif

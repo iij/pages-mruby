@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 38ce9516aa4611110b3084699db6c18cf7e99ad9
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Mon Nov 12 20:18:40 2012 +0800
 
     modify Module#class_variables test
@@ -1703,7 +1703,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 38ce9516aa4611110b3084699db6c18cf7e99ad9
-Author: skandhas <skandhas@163.com>
+Author: skandhas &lt;skandhas@163.com&gt;
 Date:   Mon Nov 12 20:18:40 2012 +0800
 
     modify Module#class_variables test
@@ -1718,11 +1718,11 @@ index bec1d7b..ff8178c 100644
    end
 -  class Test4ClassVariables2
 -    @@var3 =2
-+  class Test4ClassVariables2 < Test4ClassVariables1
++  class Test4ClassVariables2 &lt; Test4ClassVariables1
 +    @@var3 = 2
    end
 +
-   Test4ClassVariables1.class_variables == [:@@var1, :@@var2] &&
+   Test4ClassVariables1.class_variables == [:@@var1, :@@var2] &amp;&amp;
    Test4ClassVariables2.class_variables == [:@@var3]
  end
 </pre>

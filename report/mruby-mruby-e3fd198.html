@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit e3fd198cbfc57ba4b33de72276b53867fa54d371
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Fri Jan 4 07:01:01 2013 +0800
 
     Fix an unnecessary space
@@ -1631,7 +1631,7 @@ Crash: 0
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit e3fd198cbfc57ba4b33de72276b53867fa54d371
-Author: Daniel Bovensiepen <daniel@bovensiepen.net>
+Author: Daniel Bovensiepen &lt;daniel@bovensiepen.net&gt;
 Date:   Fri Jan 4 07:01:01 2013 +0800
 
     Fix an unnecessary space
@@ -1643,7 +1643,7 @@ index 5b785d2..1c68aa5 100644
 @@ -1,4 +1,4 @@
 - MRuby.each_target do
 +MRuby.each_target do
-   file "#{build_dir}/lib/libmruby.a" => libmruby.flatten do |t|
+   file &quot;#{build_dir}/lib/libmruby.a&quot; =&gt; libmruby.flatten do |t|
      archive t.name, 'r', t.prerequisites
    end
 </pre>

@@ -37,7 +37,7 @@
         
       <li>
       <pre>commit 0f6c1a034bef4ec2661930f2f8db550463edf665
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Wed Nov 14 23:55:06 2012 +0900
 
     zero initialize singleton_class iv
@@ -1198,7 +1198,7 @@ make: *** [all] Error 2</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 0f6c1a034bef4ec2661930f2f8db550463edf665
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Wed Nov 14 23:55:06 2012 +0900
 
     zero initialize singleton_class iv
@@ -1209,23 +1209,23 @@ index e737a12..79daa6f 100644
 +++ b/src/class.c
 @@ -74,6 +74,7 @@ make_metaclass(mrb_state *mrb, struct RClass *c)
    }
-   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
-   sc->mt = 0;
-+  sc->iv = 0;
-   if (!c->super) {
-     sc->super = mrb->class_class;
+   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb-&gt;class_class);
+   sc-&gt;mt = 0;
++  sc-&gt;iv = 0;
+   if (!c-&gt;super) {
+     sc-&gt;super = mrb-&gt;class_class;
    }
 @@ -763,9 +764,7 @@ mrb_singleton_class_ptr(mrb_state *mrb, struct RClass *c)
  {
    struct RClass *sc;
  
--  if (c->tt == MRB_TT_SCLASS) {
+-  if (c-&gt;tt == MRB_TT_SCLASS) {
 -    return c;
 -  }
-+  if (o->c->tt == MRB_TT_SCLASS) return;
-   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb->class_class);
-   sc->mt = 0;
-   sc->super = c;
++  if (o-&gt;c-&gt;tt == MRB_TT_SCLASS) return;
+   sc = (struct RClass*)mrb_obj_alloc(mrb, MRB_TT_SCLASS, mrb-&gt;class_class);
+   sc-&gt;mt = 0;
+   sc-&gt;super = c;
 </pre>
 
   </body>

@@ -37,10 +37,10 @@
         
       <li>
       <pre>commit 5287888c562ea2d7276ef9daf88be07ab3979b76
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Wed Nov 14 10:07:55 2012 +0900
 
-    "".strip must be "", not nil.
+    &quot;&quot;.strip must be &quot;&quot;, not nil.
 
 </pre>
       <a href="#commitlog">commit log</a>
@@ -3599,10 +3599,10 @@ trap: SIGUSR2: bad trap</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 5287888c562ea2d7276ef9daf88be07ab3979b76
-Author: Tomoyuki Sahara <tsahara@iij.ad.jp>
+Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
 Date:   Wed Nov 14 10:07:55 2012 +0900
 
-    "".strip must be "", not nil.
+    &quot;&quot;.strip must be &quot;&quot;, not nil.
 
 diff --git a/mrblib/string.rb b/mrblib/string.rb
 index bf80796..858f0fc 100644
@@ -3614,28 +3614,28 @@ index bf80796..858f0fc 100644
      a = 0
 -    z = self.size
 +    z = self.size - 1
-     a += 1 while SPACES__.include?(self[a]) and a <= z
+     a += 1 while SPACES__.include?(self[a]) and a &lt;= z
 -    self[a..z]
-+    (z >= 0) ? self[a..z] : ""
++    (z &gt;= 0) ? self[a..z] : &quot;&quot;
    end
  
    def rstrip
      a = 0
 -    z = self.size
 +    z = self.size - 1
-     z -= 1 while SPACES__.include?(self[z]) and a <= z
+     z -= 1 while SPACES__.include?(self[z]) and a &lt;= z
 -    self[a..z]
-+    (z >= 0) ? self[a..z] : ""
++    (z &gt;= 0) ? self[a..z] : &quot;&quot;
    end
  
    def strip
      a = 0
 -    z = self.size
 +    z = self.size - 1
-     a += 1 while SPACES__.include?(self[a]) and a <= z
-     z -= 1 while SPACES__.include?(self[z]) and a <= z
+     a += 1 while SPACES__.include?(self[a]) and a &lt;= z
+     z -= 1 while SPACES__.include?(self[z]) and a &lt;= z
 -    self[a..z]
-+    (z >= 0) ? self[a..z] : ""
++    (z &gt;= 0) ? self[a..z] : &quot;&quot;
    end
  
    def strip!
@@ -3644,18 +3644,18 @@ index 29d21bc..5868c32 100644
 --- a/test/t/string.rb
 +++ b/test/t/string.rb
 @@ -436,25 +436,40 @@ assert('Check the usage of a NUL character') do
-   "qqq\0ppp"
+   &quot;qqq\0ppp&quot;
  end
  
 -assert('String strip methods test') do
--  ls = " strip"
--  rs = "strip "
--  bs = " strip "
--  bangs = " strip "
--  tab = "\tstrip\t"
--  cr = "\rstrip\r"
--  lf = "\nstrip\n"
--  res = "strip"
+-  ls = &quot; strip&quot;
+-  rs = &quot;strip &quot;
+-  bs = &quot; strip &quot;
+-  bangs = &quot; strip &quot;
+-  tab = &quot;\tstrip\t&quot;
+-  cr = &quot;\rstrip\r&quot;
+-  lf = &quot;\nstrip\n&quot;
+-  res = &quot;strip&quot;
 -
 -  bangs.strip!
 -
@@ -3667,39 +3667,39 @@ index 29d21bc..5868c32 100644
 -  lf.strip ==  res and
 -  bangs == res
 +assert('String#strip') do
-+  s = "  abc  " 
++  s = &quot;  abc  &quot; 
 +  s.strip
-+  "".strip == "" and " \t\r\n\f\v".strip == "" and "abc".strip == "abc" and
-+  "  abc".strip   == "abc" and
-+  "abc  ".strip   == "abc" and
-+  "  abc  ".strip == "abc" and
-+  s == "  abc  "
++  &quot;&quot;.strip == &quot;&quot; and &quot; \t\r\n\f\v&quot;.strip == &quot;&quot; and &quot;abc&quot;.strip == &quot;abc&quot; and
++  &quot;  abc&quot;.strip   == &quot;abc&quot; and
++  &quot;abc  &quot;.strip   == &quot;abc&quot; and
++  &quot;  abc  &quot;.strip == &quot;abc&quot; and
++  s == &quot;  abc  &quot;
 +end
 +
 +assert('String#lstrip') do
-+  s = "  abc  " 
++  s = &quot;  abc  &quot; 
 +  s.rstrip
-+  "".lstrip == "" and " \t\r\n\f\v".lstrip == "" and "abc".lstrip == "abc" and
-+  "  abc".lstrip   == "abc"   and
-+  "abc  ".lstrip   == "abc  " and
-+  "  abc  ".lstrip == "abc  " and
-+  s == "  abc  "
++  &quot;&quot;.lstrip == &quot;&quot; and &quot; \t\r\n\f\v&quot;.lstrip == &quot;&quot; and &quot;abc&quot;.lstrip == &quot;abc&quot; and
++  &quot;  abc&quot;.lstrip   == &quot;abc&quot;   and
++  &quot;abc  &quot;.lstrip   == &quot;abc  &quot; and
++  &quot;  abc  &quot;.lstrip == &quot;abc  &quot; and
++  s == &quot;  abc  &quot;
 +end
 +
 +assert('String#rstrip') do
-+  s = "  abc  " 
++  s = &quot;  abc  &quot; 
 +  s.rstrip
-+  "".rstrip == "" and " \t\r\n\f\v".rstrip == "" and "abc".rstrip == "abc" and
-+  "  abc".rstrip   == "  abc" and
-+  "abc  ".rstrip   == "abc"   and
-+  "  abc  ".rstrip == "  abc" and
-+  s == "  abc  "
++  &quot;&quot;.rstrip == &quot;&quot; and &quot; \t\r\n\f\v&quot;.rstrip == &quot;&quot; and &quot;abc&quot;.rstrip == &quot;abc&quot; and
++  &quot;  abc&quot;.rstrip   == &quot;  abc&quot; and
++  &quot;abc  &quot;.rstrip   == &quot;abc&quot;   and
++  &quot;  abc  &quot;.rstrip == &quot;  abc&quot; and
++  s == &quot;  abc  &quot;
 +end
 +
 +assert('String#strip!') do
-+  s = "  abc  "
++  s = &quot;  abc  &quot;
 +  s.strip!
-+  s == "abc"
++  s == &quot;abc&quot;
  end
  
  assert('String#bytes') do

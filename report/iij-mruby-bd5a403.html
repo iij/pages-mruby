@@ -39,10 +39,10 @@
         
       <li>
       <pre>commit bd5a403ba9392f9bfe726fb4a63000033d8bce63
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Mon Dec 31 11:39:34 2012 +0900
 
-    mrbges/g/pack -> iij/mruby-pack
+    mrbges/g/pack -&gt; iij/mruby-pack
 
 </pre>
       <a href="#commitlog">commit log</a>
@@ -5295,10 +5295,10 @@ trap: SIGUSR2: bad trap</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit bd5a403ba9392f9bfe726fb4a63000033d8bce63
-Author: Akira Yumiyama <yumiyama@iij.ad.jp>
+Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
 Date:   Mon Dec 31 11:39:34 2012 +0900
 
-    mrbges/g/pack -> iij/mruby-pack
+    mrbges/g/pack -&gt; iij/mruby-pack
 
 diff --git a/mrbgems/GEMS.active b/mrbgems/GEMS.active
 index a02d761..c59d575 100644
@@ -5349,19 +5349,19 @@ index e9cf1fb..0000000
 - ** See Copyright Notice in mruby.h
 - */
 -
--#include "mruby.h"
--#include "error.h"
--#include "mruby/array.h"
--#include "mruby/class.h"
--#include "mruby/numeric.h"
--#include "mruby/string.h"
--#include "mruby/variable.h"
+-#include &quot;mruby.h&quot;
+-#include &quot;error.h&quot;
+-#include &quot;mruby/array.h&quot;
+-#include &quot;mruby/class.h&quot;
+-#include &quot;mruby/numeric.h&quot;
+-#include &quot;mruby/string.h&quot;
+-#include &quot;mruby/variable.h&quot;
 -
--#include <ctype.h>
--#include <errno.h>
--#include <limits.h>
--#include <string.h>
--#include <stdio.h>
+-#include &lt;ctype.h&gt;
+-#include &lt;errno.h&gt;
+-#include &lt;limits.h&gt;
+-#include &lt;string.h&gt;
+-#include &lt;stdio.h&gt;
 -
 -struct tmpl {
 -  mrb_value str;
@@ -5392,15 +5392,15 @@ index e9cf1fb..0000000
 -  PACK_TYPE_NONE
 -};
 -
--#define PACK_FLAG_s		0x00000001	/* native size ("_" "!") */
--#define PACK_FLAG_a		0x00000002	/* null padding ("a") */
--#define PACK_FLAG_Z		0x00000004	/* append nul char ("z") */
--#define PACK_FLAG_SIGNED	0x00000008	/* native size ("_" "!") */
--#define PACK_FLAG_GT		0x00000010	/* big endian (">") */
--#define PACK_FLAG_LT		0x00000020	/* little endian ("<") */
+-#define PACK_FLAG_s		0x00000001	/* native size (&quot;_&quot; &quot;!&quot;) */
+-#define PACK_FLAG_a		0x00000002	/* null padding (&quot;a&quot;) */
+-#define PACK_FLAG_Z		0x00000004	/* append nul char (&quot;z&quot;) */
+-#define PACK_FLAG_SIGNED	0x00000008	/* native size (&quot;_&quot; &quot;!&quot;) */
+-#define PACK_FLAG_GT		0x00000010	/* big endian (&quot;&gt;&quot;) */
+-#define PACK_FLAG_LT		0x00000020	/* little endian (&quot;&lt;&quot;) */
 -#define PACK_FLAG_WIDTH		0x00000040	/* */
 -#define PACK_FLAG_LSB		0x00000080	/* LSB / low nibble first */
--#define PACK_FLAG_COUNT2	0x00000100	/* "count" is special... */
+-#define PACK_FLAG_COUNT2	0x00000100	/* &quot;count&quot; is special... */
 -#define PACK_FLAG_LITTLEENDIAN	0x00000200	/* little endian actually */
 -
 -#define PACK_BASE64_IGNORE	0xff
@@ -5409,7 +5409,7 @@ index e9cf1fb..0000000
 -static int littleendian = 0;
 -
 -const static unsigned char base64chars[] =
--    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+-    &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;;
 -static signed char base64_dec_tab[128];
 -
 -
@@ -5417,17 +5417,17 @@ index e9cf1fb..0000000
 -check_little_endian(void)
 -{
 -  unsigned int n = 1;
--  return (*(unsigned char *)&n == 1);
+-  return (*(unsigned char *)&amp;n == 1);
 -}
 -
 -static unsigned int
 -hex2int(unsigned char ch)
 -{
--  if (ch >= '0' && ch <= '9') 
+-  if (ch &gt;= '0' &amp;&amp; ch &lt;= '9') 
 -    return ch - '0';
--  else if (ch >= 'A' && ch <= 'F')
+-  else if (ch &gt;= 'A' &amp;&amp; ch &lt;= 'F')
 -    return 10 + (ch - 'A');
--  else if (ch >= 'a' && ch <= 'f')
+-  else if (ch &gt;= 'a' &amp;&amp; ch &lt;= 'f')
 -    return 10 + (ch - 'a');
 -  else
 -    return 0;
@@ -5438,11 +5438,11 @@ index e9cf1fb..0000000
 -{
 -  int i;
 -  memset(base64_dec_tab, PACK_BASE64_IGNORE, sizeof(base64_dec_tab));
--  for (i = 0; i < 26; i++)
+-  for (i = 0; i &lt; 26; i++)
 -    base64_dec_tab['A' + i] = i;
--  for (i = 0; i < 26; i++)
+-  for (i = 0; i &lt; 26; i++)
 -    base64_dec_tab['a' + i] = i + 26;
--  for (i = 0; i < 10; i++)
+-  for (i = 0; i &lt; 10; i++)
 -    base64_dec_tab['0' + i] = i + 52;
 -  base64_dec_tab['+'] = 62;
 -  base64_dec_tab['/'] = 63;
@@ -5453,10 +5453,10 @@ index e9cf1fb..0000000
 -str_len_ensure(mrb_state *mrb, mrb_value str, int len)
 -{
 -  int n = RSTRING_LEN(str);
--  if (len > n) {
+-  if (len &gt; n) {
 -    do {
 -      n *= 2;
--    } while (len > n);
+-    } while (len &gt; n);
 -    str = mrb_str_resize(mrb, str, n);
 -  }
 -  return str;
@@ -5474,7 +5474,7 @@ index e9cf1fb..0000000
 -static int
 -unpack_c(mrb_state *mrb, const void *src, int srclen, mrb_value ary, unsigned int flags)
 -{
--  if (flags & PACK_FLAG_SIGNED)
+-  if (flags &amp; PACK_FLAG_SIGNED)
 -    mrb_ary_push(mrb, ary, mrb_fixnum_value(*(signed char *)src));
 -  else
 -    mrb_ary_push(mrb, ary, mrb_fixnum_value(*(unsigned char *)src));
@@ -5487,7 +5487,7 @@ index e9cf1fb..0000000
 -  short n;
 -  str = str_len_ensure(mrb, str, sidx + 2);
 -  n = mrb_fixnum(o);
--  if (flags & PACK_FLAG_LITTLEENDIAN) {
+-  if (flags &amp; PACK_FLAG_LITTLEENDIAN) {
 -    RSTRING_PTR(str)[sidx+0] = n % 256;
 -    RSTRING_PTR(str)[sidx+1] = n / 256;
 -  } else {
@@ -5502,12 +5502,12 @@ index e9cf1fb..0000000
 -{
 -  int n;
 -
--  if (flags & PACK_FLAG_LITTLEENDIAN) {
+-  if (flags &amp; PACK_FLAG_LITTLEENDIAN) {
 -    n = src[1] * 256 + src[0];
 -  } else {
 -    n = src[0] * 256 + src[1];
 -  }
--  if ((flags & PACK_FLAG_SIGNED) && (n >= 0x8000)) {
+-  if ((flags &amp; PACK_FLAG_SIGNED) &amp;&amp; (n &gt;= 0x8000)) {
 -    n -= 0x10000;
 -  }
 -  mrb_ary_push(mrb, ary, mrb_fixnum_value(n));
@@ -5520,16 +5520,16 @@ index e9cf1fb..0000000
 -  long n;
 -  str = str_len_ensure(mrb, str, sidx + 4);
 -  n = mrb_fixnum(o);
--  if (flags & PACK_FLAG_LITTLEENDIAN) {
--    RSTRING_PTR(str)[sidx+0] = n & 0xff;
--    RSTRING_PTR(str)[sidx+1] = n >> 8;
--    RSTRING_PTR(str)[sidx+2] = n >> 16;
--    RSTRING_PTR(str)[sidx+3] = n >> 24;
+-  if (flags &amp; PACK_FLAG_LITTLEENDIAN) {
+-    RSTRING_PTR(str)[sidx+0] = n &amp; 0xff;
+-    RSTRING_PTR(str)[sidx+1] = n &gt;&gt; 8;
+-    RSTRING_PTR(str)[sidx+2] = n &gt;&gt; 16;
+-    RSTRING_PTR(str)[sidx+3] = n &gt;&gt; 24;
 -  } else {
--    RSTRING_PTR(str)[sidx+0] = n >> 24;
--    RSTRING_PTR(str)[sidx+1] = n >> 16;
--    RSTRING_PTR(str)[sidx+2] = n >> 8;
--    RSTRING_PTR(str)[sidx+3] = n & 0xff;
+-    RSTRING_PTR(str)[sidx+0] = n &gt;&gt; 24;
+-    RSTRING_PTR(str)[sidx+1] = n &gt;&gt; 16;
+-    RSTRING_PTR(str)[sidx+2] = n &gt;&gt; 8;
+-    RSTRING_PTR(str)[sidx+3] = n &amp; 0xff;
 -  }
 -  return 4;
 -}
@@ -5539,19 +5539,19 @@ index e9cf1fb..0000000
 -{
 -  long n;
 -
--  if (flags & PACK_FLAG_LITTLEENDIAN) {
--    n = (src[3] << 24) + (src[2] << 16) + (src[1] << 8) + src[0];
+-  if (flags &amp; PACK_FLAG_LITTLEENDIAN) {
+-    n = (src[3] &lt;&lt; 24) + (src[2] &lt;&lt; 16) + (src[1] &lt;&lt; 8) + src[0];
 -  } else {
--    n = (src[0] << 24) + (src[1] << 16) + (src[2] << 8) + src[3];
+-    n = (src[0] &lt;&lt; 24) + (src[1] &lt;&lt; 16) + (src[2] &lt;&lt; 8) + src[3];
 -  }
--  if (flags & PACK_FLAG_SIGNED) {
--    if (sizeof(long) > sizeof(int))
+-  if (flags &amp; PACK_FLAG_SIGNED) {
+-    if (sizeof(long) &gt; sizeof(int))
 -      n = 0L - n;
 -    if (!FIXABLE(n))
--      mrb_raisef(mrb, E_ARGUMENT_ERROR, "cannot unpack to 32bit signed number: %ld", n);
+-      mrb_raisef(mrb, E_ARGUMENT_ERROR, &quot;cannot unpack to 32bit signed number: %ld&quot;, n);
 -  } else {
 -    if (!POSFIXABLE(n))
--      mrb_raisef(mrb, E_ARGUMENT_ERROR, "cannot unpack to 32bit unsigned number: %ld", n);
+-      mrb_raisef(mrb, E_ARGUMENT_ERROR, &quot;cannot unpack to 32bit unsigned number: %ld&quot;, n);
 -  }
 -  mrb_ary_push(mrb, ary, mrb_fixnum_value(n));
 -  return 4;
@@ -5566,15 +5566,15 @@ index e9cf1fb..0000000
 -  sptr = RSTRING_PTR(src);
 -  slen = RSTRING_LEN(src);
 -
--  if ((flags & PACK_FLAG_a) || (flags & PACK_FLAG_Z))
+-  if ((flags &amp; PACK_FLAG_a) || (flags &amp; PACK_FLAG_Z))
 -    pad = '\0';
 -  else
 -    pad = ' ';
 -
 -  if (count == -1) {
 -    copylen = slen;
--    padlen = (flags & PACK_FLAG_Z) ? 1 : 0;
--  } else if (count < slen) {
+-    padlen = (flags &amp; PACK_FLAG_Z) ? 1 : 0;
+-  } else if (count &lt; slen) {
 -    copylen = count;
 -    padlen = 0;
 -  } else {
@@ -5586,7 +5586,7 @@ index e9cf1fb..0000000
 -  dptr0 = dptr = RSTRING_PTR(dst) + didx;
 -  memcpy(dptr, sptr, copylen);
 -  dptr += copylen;
--  while (padlen-- > 0) {
+-  while (padlen-- &gt; 0) {
 -    *dptr++ = pad;
 -  }
 - 
@@ -5602,18 +5602,18 @@ index e9cf1fb..0000000
 -
 -  sptr = src;
 -
--  if (count == -1 || count > slen)
+-  if (count == -1 || count &gt; slen)
 -    count = slen;
 -
 -  dst = mrb_str_new(mrb, NULL, count);
 -  dptr0 = dptr = RSTRING_PTR(dst);
 -
 -  memcpy(dptr, sptr, count);
--  if (flags & PACK_FLAG_Z) {
--    if (count > 0 && dptr[count - 1] == '\0')
+-  if (flags &amp; PACK_FLAG_Z) {
+-    if (count &gt; 0 &amp;&amp; dptr[count - 1] == '\0')
 -      count--;
--  } else if (!(flags & PACK_FLAG_a)) {
--    while (count > 0 && (dptr[count - 1] == '\0' || isspace(dptr[count - 1])))
+-  } else if (!(flags &amp; PACK_FLAG_a)) {
+-    while (count &gt; 0 &amp;&amp; (dptr[count - 1] == '\0' || isspace(dptr[count - 1])))
 -      count--;
 -  }
 -
@@ -5633,7 +5633,7 @@ index e9cf1fb..0000000
 -  sptr = RSTRING_PTR(src);
 -  slen = RSTRING_LEN(src);
 -
--  if (flags & PACK_FLAG_LSB) {
+-  if (flags &amp; PACK_FLAG_LSB) {
 -    ashift = 0;
 -    bshift = 4;
 -  } else {
@@ -5643,7 +5643,7 @@ index e9cf1fb..0000000
 -
 -  if (count == -1) {
 -    count = slen;
--  } else if (slen > count) {
+-  } else if (slen &gt; count) {
 -    slen = count;
 -  }
 -    
@@ -5651,17 +5651,17 @@ index e9cf1fb..0000000
 -  dptr = RSTRING_PTR(dst) + didx;
 -
 -  dptr0 = dptr;
--  for (; count > 0; count -= 2) {
+-  for (; count &gt; 0; count -= 2) {
 -    a = b = 0;
--    if (slen > 0) {
+-    if (slen &gt; 0) {
 -      a = hex2int(*sptr++);
 -      slen--;
 -    }
--    if (slen > 0) {
+-    if (slen &gt; 0) {
 -      b = hex2int(*sptr++);
 -      slen--;
 -    }
--    *dptr++ = (a << ashift) + (b << bshift);
+-    *dptr++ = (a &lt;&lt; ashift) + (b &lt;&lt; bshift);
 -  }
 -
 -  return dptr - dptr0;
@@ -5676,9 +5676,9 @@ index e9cf1fb..0000000
 -  unsigned char c, ch[4];
 -  const char *sptr, *sptr0;
 -  char *dptr, *dptr0;
--  const char hexadecimal[] = "0123456789abcdef";
+-  const char hexadecimal[] = &quot;0123456789abcdef&quot;;
 -
--  if (flags & PACK_FLAG_LSB) {
+-  if (flags &amp; PACK_FLAG_LSB) {
 -    ashift = 0;
 -    bshift = 4;
 -  } else {
@@ -5697,16 +5697,16 @@ index e9cf1fb..0000000
 -  sptr0 = sptr;
 -  dptr0 = dptr;
 -  padding = 0;
--  while (slen > 0 && count > 0) {
--    a = (*sptr >> ashift) & 0x0f;
--    b = (*sptr >> bshift) & 0x0f;
+-  while (slen &gt; 0 &amp;&amp; count &gt; 0) {
+-    a = (*sptr &gt;&gt; ashift) &amp; 0x0f;
+-    b = (*sptr &gt;&gt; bshift) &amp; 0x0f;
 -    sptr++;
 -    slen--;
 -
 -    *dptr++ = hexadecimal[a];
 -    count--;
 -
--    if (count > 0) {
+-    if (count &gt; 0) {
 -      *dptr++ = hexadecimal[b];
 -      count--;
 -    }
@@ -5732,29 +5732,29 @@ index e9cf1fb..0000000
 -  if (srclen == 0)  /* easy case */
 -    return 0;
 -
--  if (count != 0 && count < 3) {  /* -1, 1 or 2 */
+-  if (count != 0 &amp;&amp; count &lt; 3) {  /* -1, 1 or 2 */
 -    count = 45;
--  } else if (count >= 3) {
+-  } else if (count &gt;= 3) {
 -    count -= count % 3;
 -  }
 -
 -  dstlen = srclen / 3 * 4;
--  if (count > 0) {
+-  if (count &gt; 0) {
 -    dstlen += (srclen / count) + ((srclen % count) == 0 ? 0 : 1);
 -  }
 -  dst = str_len_ensure(mrb, dst, didx + dstlen);
 -  dstptr = RSTRING_PTR(dst) + didx;
 -
 -  dstptr0 = dstptr;
--  for (column = 3; srclen >= 3; srclen -= 3, column += 3) {
--    l = (unsigned char)*srcptr++ << 16;
--    l += (unsigned char)*srcptr++ << 8;
+-  for (column = 3; srclen &gt;= 3; srclen -= 3, column += 3) {
+-    l = (unsigned char)*srcptr++ &lt;&lt; 16;
+-    l += (unsigned char)*srcptr++ &lt;&lt; 8;
 -    l += (unsigned char)*srcptr++;
 -
--    *dstptr++ = base64chars[(l >> 18) & 0x3f];
--    *dstptr++ = base64chars[(l >> 12) & 0x3f];
--    *dstptr++ = base64chars[(l >>  6) & 0x3f];
--    *dstptr++ = base64chars[ l        & 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt; 18) &amp; 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt; 12) &amp; 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt;  6) &amp; 0x3f];
+-    *dstptr++ = base64chars[ l        &amp; 0x3f];
 -
 -    if (column == count) {
 -      *dstptr++ = '\n';
@@ -5762,22 +5762,22 @@ index e9cf1fb..0000000
 -    }
 -  }
 -  if (srclen == 1) {
--    l = (unsigned char)*srcptr++ << 16;
--    *dstptr++ = base64chars[(l >> 18) & 0x3f];
--    *dstptr++ = base64chars[(l >> 12) & 0x3f];
+-    l = (unsigned char)*srcptr++ &lt;&lt; 16;
+-    *dstptr++ = base64chars[(l &gt;&gt; 18) &amp; 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt; 12) &amp; 0x3f];
 -    *dstptr++ = '=';
 -    *dstptr++ = '=';
 -    column += 3;
 -  } else if (srclen == 2) {
--    l = (unsigned char)*srcptr++ << 16;
--    l += (unsigned char)*srcptr++ << 8;
--    *dstptr++ = base64chars[(l >> 18) & 0x3f];
--    *dstptr++ = base64chars[(l >> 12) & 0x3f];
--    *dstptr++ = base64chars[(l >>  6) & 0x3f];
+-    l = (unsigned char)*srcptr++ &lt;&lt; 16;
+-    l += (unsigned char)*srcptr++ &lt;&lt; 8;
+-    *dstptr++ = base64chars[(l &gt;&gt; 18) &amp; 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt; 12) &amp; 0x3f];
+-    *dstptr++ = base64chars[(l &gt;&gt;  6) &amp; 0x3f];
 -    *dstptr++ = '=';
 -    column += 3;
 -  }
--  if (column > 0 && count > 0) {
+-  if (column &gt; 0 &amp;&amp; count &gt; 0) {
 -    *dstptr++ = '\n';
 -  }
 -
@@ -5802,13 +5802,13 @@ index e9cf1fb..0000000
 -  dptr0 = dptr = RSTRING_PTR(dst);
 -
 -  padding = 0;
--  while (slen >= 4) {
--    for (i = 0; i < 4; i++) {
+-  while (slen &gt;= 4) {
+-    for (i = 0; i &lt; 4; i++) {
 -      do {
 -        if (slen-- == 0)
 -          goto done;
 -        c = *sptr++;
--	if (c >= sizeof(base64_dec_tab))
+-	if (c &gt;= sizeof(base64_dec_tab))
 -	  continue;
 -	ch[i] = base64_dec_tab[c];
 -	if (ch[i] == PACK_BASE64_PADDING) {
@@ -5818,18 +5818,18 @@ index e9cf1fb..0000000
 -      } while (ch[i] == PACK_BASE64_IGNORE);
 -    }
 -
--    l = (ch[0] << 18) + (ch[1] << 12) + (ch[2] << 6) + ch[3];
+-    l = (ch[0] &lt;&lt; 18) + (ch[1] &lt;&lt; 12) + (ch[2] &lt;&lt; 6) + ch[3];
 -
 -    if (padding == 0) {
--      *dptr++ = (l >> 16) & 0xff;
--      *dptr++ = (l >> 8) & 0xff;
--      *dptr++ = l & 0xff;
+-      *dptr++ = (l &gt;&gt; 16) &amp; 0xff;
+-      *dptr++ = (l &gt;&gt; 8) &amp; 0xff;
+-      *dptr++ = l &amp; 0xff;
 -    } else if (padding == 1) {
--      *dptr++ = (l >> 16) & 0xff;
--      *dptr++ = (l >> 8) & 0xff;
+-      *dptr++ = (l &gt;&gt; 16) &amp; 0xff;
+-      *dptr++ = (l &gt;&gt; 8) &amp; 0xff;
 -      break;
 -    } else {
--      *dptr++ = (l >> 16) & 0xff;
+-      *dptr++ = (l &gt;&gt; 16) &amp; 0xff;
 -      break;
 -    }
 -  }
@@ -5844,14 +5844,14 @@ index e9cf1fb..0000000
 -static void
 -prepare_tmpl(mrb_state *mrb, struct tmpl *tmpl)
 -{
--  mrb_get_args(mrb, "S", &tmpl->str);
--  tmpl->idx = 0;
+-  mrb_get_args(mrb, &quot;S&quot;, &amp;tmpl-&gt;str);
+-  tmpl-&gt;idx = 0;
 -}
 -
 -static int
 -has_tmpl(const struct tmpl *tmpl)
 -{
--  return (tmpl->idx < RSTRING_LEN(tmpl->str));
+-  return (tmpl-&gt;idx &lt; RSTRING_LEN(tmpl-&gt;str));
 -}
 -
 -static void
@@ -5863,10 +5863,10 @@ index e9cf1fb..0000000
 -  unsigned int flags = 0;
 -  const char *tptr;
 -
--  tptr = RSTRING_PTR(tmpl->str);
--  tlen = RSTRING_LEN(tmpl->str);
+-  tptr = RSTRING_PTR(tmpl-&gt;str);
+-  tlen = RSTRING_LEN(tmpl-&gt;str);
 -
--  t = tptr[tmpl->idx++];
+-  t = tptr[tmpl-&gt;idx++];
 -  switch (t) {
 -  case 'A':
 -    dir = PACK_DIR_STR;
@@ -5910,13 +5910,13 @@ index e9cf1fb..0000000
 -    size = 4;
 -    flags |= PACK_FLAG_SIGNED;
 -    break;
--  case 'N':  /* = "L>" */
+-  case 'N':  /* = &quot;L&gt;&quot; */
 -    dir = PACK_DIR_LONG;
 -    type = PACK_TYPE_INTEGER;
 -    size = 4;
 -    flags |= PACK_FLAG_GT;
 -    break;
--  case 'n':  /* = "S>" */
+-  case 'n':  /* = &quot;S&gt;&quot; */
 -    dir = PACK_DIR_SHORT;
 -    type = PACK_TYPE_INTEGER;
 -    size = 2;
@@ -5948,35 +5948,35 @@ index e9cf1fb..0000000
 -    break;
 -  }
 -
--  /* read suffix [0-9*_!<>] */
--  while (tmpl->idx < tlen) {
--    ch = tptr[tmpl->idx++];
+-  /* read suffix [0-9*_!&lt;&gt;] */
+-  while (tmpl-&gt;idx &lt; tlen) {
+-    ch = tptr[tmpl-&gt;idx++];
 -    if (isdigit(ch)) {
 -      count = ch - '0';
--      while (tmpl->idx < tlen && isdigit(tptr[tmpl->idx])) {
--        count = count * 10 + (tptr[tmpl->idx++] - '0');
+-      while (tmpl-&gt;idx &lt; tlen &amp;&amp; isdigit(tptr[tmpl-&gt;idx])) {
+-        count = count * 10 + (tptr[tmpl-&gt;idx++] - '0');
 -      }
 -      continue;  /* special case */
 -    } else if (ch == '*')  {
 -      count = -1;
--    } else if (ch == '_' || ch == '!' || ch == '<' || ch == '>') {
--      if (strchr("sSiIlL", t) == NULL) {
--        mrb_raisef(mrb, E_ARGUMENT_ERROR, "'%c' allowed only after types sSiIlL", ch);
+-    } else if (ch == '_' || ch == '!' || ch == '&lt;' || ch == '&gt;') {
+-      if (strchr(&quot;sSiIlL&quot;, t) == NULL) {
+-        mrb_raisef(mrb, E_ARGUMENT_ERROR, &quot;'%c' allowed only after types sSiIlL&quot;, ch);
 -      }
 -      if (ch == '_' || ch == '!') {
 -        flags |= PACK_FLAG_s;
--      } else if (ch == '<') {
+-      } else if (ch == '&lt;') {
 -        flags |= PACK_FLAG_LT;
--      } else if (ch == '>') {
+-      } else if (ch == '&gt;') {
 -        flags |= PACK_FLAG_GT;
 -      }
 -    } else {
--      tmpl->idx--;
+-      tmpl-&gt;idx--;
 -      break;
 -    }
 -  }
 -
--  if ((flags & PACK_FLAG_LT) || (!(flags & PACK_FLAG_GT) && littleendian)) {
+-  if ((flags &amp; PACK_FLAG_LT) || (!(flags &amp; PACK_FLAG_GT) &amp;&amp; littleendian)) {
 -    flags |= PACK_FLAG_LITTLEENDIAN;
 -  }
 -
@@ -5997,30 +5997,30 @@ index e9cf1fb..0000000
 -  unsigned int flags;
 -  int dir, ridx, size, type;
 -
--  prepare_tmpl(mrb, &tmpl);
+-  prepare_tmpl(mrb, &amp;tmpl);
 -
 -  result = mrb_str_new(mrb, NULL, 128);  /* allocate initial buffer */
 -  ridx = 0;
--  while (has_tmpl(&tmpl)) {
--    read_tmpl(mrb, &tmpl, &dir, &type, &size, &count, &flags);
+-  while (has_tmpl(&amp;tmpl)) {
+-    read_tmpl(mrb, &amp;tmpl, &amp;dir, &amp;type, &amp;size, &amp;count, &amp;flags);
 -
 -    if (dir == PACK_DIR_INVALID)
 -      continue;
 -
--    for (aidx = 0; aidx < RARRAY_LEN(ary); aidx++) {
--      if (count == 0 && !(flags & PACK_FLAG_WIDTH))
+-    for (aidx = 0; aidx &lt; RARRAY_LEN(ary); aidx++) {
+-      if (count == 0 &amp;&amp; !(flags &amp; PACK_FLAG_WIDTH))
 -        break;
 -
 -      o = mrb_ary_ref(mrb, ary, aidx);
 -      if (type == PACK_TYPE_INTEGER) {
 -        if (mrb_float_p(o)) {
--          o = mrb_funcall(mrb, o, "to_i", 0);
+-          o = mrb_funcall(mrb, o, &quot;to_i&quot;, 0);
 -	} else if (!mrb_fixnum_p(o)) {
--	  mrb_raisef(mrb, E_TYPE_ERROR, "can't convert %s into Integer", mrb_obj_classname(mrb, o));
+-	  mrb_raisef(mrb, E_TYPE_ERROR, &quot;can't convert %s into Integer&quot;, mrb_obj_classname(mrb, o));
 -	}
 -      } else if (type == PACK_TYPE_STRING) {
 -        if (!mrb_string_p(o)) {
--	  mrb_raisef(mrb, E_TYPE_ERROR, "can't convert %s into String", mrb_obj_classname(mrb, o));
+-	  mrb_raisef(mrb, E_TYPE_ERROR, &quot;can't convert %s into String&quot;, mrb_obj_classname(mrb, o));
 -	}
 -      }
 -
@@ -6046,7 +6046,7 @@ index e9cf1fb..0000000
 -      default:
 -        break;
 -      }
--      if (count > 0) {
+-      if (count &gt; 0) {
 -        count--;
 -      }
 -    }
@@ -6066,19 +6066,19 @@ index e9cf1fb..0000000
 -  int dir, sidx, size, srclen, type;
 -  const char *sptr;
 -
--  prepare_tmpl(mrb, &tmpl);
+-  prepare_tmpl(mrb, &amp;tmpl);
 -
 -  sidx = 0;
 -  srclen = RSTRING_LEN(str);
 -
 -  result = mrb_ary_new(mrb);
--  while (has_tmpl(&tmpl)) {
--    read_tmpl(mrb, &tmpl, &dir, &type, &size, &count, &flags);
+-  while (has_tmpl(&amp;tmpl)) {
+-    read_tmpl(mrb, &amp;tmpl, &amp;dir, &amp;type, &amp;size, &amp;count, &amp;flags);
 -
 -    if (dir == PACK_DIR_INVALID)
 -      continue;
 -
--    if (flags & PACK_FLAG_COUNT2) {
+-    if (flags &amp; PACK_FLAG_COUNT2) {
 -      sptr = RSTRING_PTR(str) + sidx;
 -      switch (dir) {
 -      case PACK_DIR_HEX:
@@ -6092,8 +6092,8 @@ index e9cf1fb..0000000
 -    }
 -
 -    while (count != 0) {
--      if (srclen - sidx < size) {
--        while (count-- > 0) {
+-      if (srclen - sidx &lt; size) {
+-        while (count-- &gt; 0) {
 -          mrb_ary_push(mrb, result, mrb_nil_value());
 -	}
 -        break;
@@ -6114,7 +6114,7 @@ index e9cf1fb..0000000
 -        sidx += unpack_m(mrb, sptr, srclen - sidx, result, flags);
 -        break;
 -      }
--      if (count > 0) {
+-      if (count &gt; 0) {
 -        count--;
 -      }
 -    }
@@ -6131,11 +6131,11 @@ index e9cf1fb..0000000
 -  littleendian = check_little_endian();
 -  make_base64_dec_tab();
 -
--  cArray = mrb->array_class;
--  cString = mrb->string_class;
+-  cArray = mrb-&gt;array_class;
+-  cString = mrb-&gt;string_class;
 -
--  mrb_define_method(mrb, cArray, "pack", mrb_pack_pack, ARGS_REQ(1));
--  mrb_define_method(mrb, cString, "unpack", mrb_pack_unpack, ARGS_REQ(1));
+-  mrb_define_method(mrb, cArray, &quot;pack&quot;, mrb_pack_pack, ARGS_REQ(1));
+-  mrb_define_method(mrb, cString, &quot;unpack&quot;, mrb_pack_unpack, ARGS_REQ(1));
 -}
 diff --git a/mrbgems/g/pack/test/pack.rb b/mrbgems/g/pack/test/pack.rb
 deleted file mode 100644
@@ -6143,90 +6143,90 @@ index 7339bbd..0000000
 --- a/mrbgems/g/pack/test/pack.rb
 +++ /dev/null
 @@ -1,85 +0,0 @@
--# pack & unpack 'm' (base64)
--assert('[""].pack("m")') do
--  ary = ""
--  str = ""
--  [ary].pack("m") == str and
--  str.unpack("m") == [ary]
+-# pack &amp; unpack 'm' (base64)
+-assert('[&quot;&quot;].pack(&quot;m&quot;)') do
+-  ary = &quot;&quot;
+-  str = &quot;&quot;
+-  [ary].pack(&quot;m&quot;) == str and
+-  str.unpack(&quot;m&quot;) == [ary]
 -end
 -
--assert('["\0"].pack("m")') do
--  ary = "\0"
--  str = "AA==\n"
--  [ary].pack("m") == str and
--  str.unpack("m") == [ary]
+-assert('[&quot;\0&quot;].pack(&quot;m&quot;)') do
+-  ary = &quot;\0&quot;
+-  str = &quot;AA==\n&quot;
+-  [ary].pack(&quot;m&quot;) == str and
+-  str.unpack(&quot;m&quot;) == [ary]
 -end
 -
--assert('["\0\0"].pack("m")') do
--  ary = "\0\0"
--  str = "AAA=\n"
--  [ary].pack("m") == str and
--  str.unpack("m") == [ary]
+-assert('[&quot;\0\0&quot;].pack(&quot;m&quot;)') do
+-  ary = &quot;\0\0&quot;
+-  str = &quot;AAA=\n&quot;
+-  [ary].pack(&quot;m&quot;) == str and
+-  str.unpack(&quot;m&quot;) == [ary]
 -end
 -
--assert('["\0\0\0"].pack("m")') do
--  ary = "\0\0\0"
--  str = "AAAA\n"
--  [ary].pack("m") == str and
--  str.unpack("m") == [ary]
+-assert('[&quot;\0\0\0&quot;].pack(&quot;m&quot;)') do
+-  ary = &quot;\0\0\0&quot;
+-  str = &quot;AAAA\n&quot;
+-  [ary].pack(&quot;m&quot;) == str and
+-  str.unpack(&quot;m&quot;) == [ary]
 -end
 -
--assert('["abc..xyzABC..XYZ"].pack("m")') do
--  ["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"].pack("m") == "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJT\nVFVWV1hZWg==\n"
+-assert('[&quot;abc..xyzABC..XYZ&quot;].pack(&quot;m&quot;)') do
+-  [&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;].pack(&quot;m&quot;) == &quot;YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJT\nVFVWV1hZWg==\n&quot;
 -end
 -
--assert('"YWJ...".unpack("m") should "abc..xyzABC..XYZ"') do
--  str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
--  "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJT\nVFVWV1hZWg==\n".unpack("m") == [str] and
--  "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWg==\n".unpack("m") == [str]
+-assert('&quot;YWJ...&quot;.unpack(&quot;m&quot;) should &quot;abc..xyzABC..XYZ&quot;') do
+-  str = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+-  &quot;YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJT\nVFVWV1hZWg==\n&quot;.unpack(&quot;m&quot;) == [str] and
+-  &quot;YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWg==\n&quot;.unpack(&quot;m&quot;) == [str]
 -end
 -
--# pack & unpack 'H'
--assert('["3031"].pack("H*")') do
--  ary = "3031"
--  str = "01"
--  [ary].pack("H*") == str and
--  str.unpack("H*") == [ary]
+-# pack &amp; unpack 'H'
+-assert('[&quot;3031&quot;].pack(&quot;H*&quot;)') do
+-  ary = &quot;3031&quot;
+-  str = &quot;01&quot;
+-  [ary].pack(&quot;H*&quot;) == str and
+-  str.unpack(&quot;H*&quot;) == [ary]
 -end
 -
--assert('["10"].pack("H*")') do
--  ary = "10"
--  str = "\020"
--  [ary].pack("H*") == str and
--  str.unpack("H*") == [ary]
+-assert('[&quot;10&quot;].pack(&quot;H*&quot;)') do
+-  ary = &quot;10&quot;
+-  str = &quot;\020&quot;
+-  [ary].pack(&quot;H*&quot;) == str and
+-  str.unpack(&quot;H*&quot;) == [ary]
 -end
 -
--assert('[0,1,127,128,255].pack("C*")') do
+-assert('[0,1,127,128,255].pack(&quot;C*&quot;)') do
 - ary = [ 0, 1, 127, 128, 255 ]
-- str = "\x00\x01\x7F\x80\xFF"
-- ary.pack("C*") == str and str.unpack("C*") == ary
+- str = &quot;\x00\x01\x7F\x80\xFF&quot;
+- ary.pack(&quot;C*&quot;) == str and str.unpack(&quot;C*&quot;) == ary
 -end
 -
--# pack "a"
--assert('["abc"].pack("a")') do
--  ["abc"].pack("a") == "a" and
--  ["abc"].pack("a*") == "abc" and
--  ["abc"].pack("a4") == "abc\0"
+-# pack &quot;a&quot;
+-assert('[&quot;abc&quot;].pack(&quot;a&quot;)') do
+-  [&quot;abc&quot;].pack(&quot;a&quot;) == &quot;a&quot; and
+-  [&quot;abc&quot;].pack(&quot;a*&quot;) == &quot;abc&quot; and
+-  [&quot;abc&quot;].pack(&quot;a4&quot;) == &quot;abc\0&quot;
 -end
 -
--# upack "a"
--assert('["abc"].pack("a")') do
--  "abc\0".unpack("a4") == ["abc\0"] and
--  "abc ".unpack("a4") == ["abc "]
+-# upack &quot;a&quot;
+-assert('[&quot;abc&quot;].pack(&quot;a&quot;)') do
+-  &quot;abc\0&quot;.unpack(&quot;a4&quot;) == [&quot;abc\0&quot;] and
+-  &quot;abc &quot;.unpack(&quot;a4&quot;) == [&quot;abc &quot;]
 -end
 -
--# pack "A"
--assert('["abc"].pack("A")') do
--  ["abc"].pack("A") == "a" and
--  ["abc"].pack("A*") == "abc" and
--  ["abc"].pack("A4") == "abc "
+-# pack &quot;A&quot;
+-assert('[&quot;abc&quot;].pack(&quot;A&quot;)') do
+-  [&quot;abc&quot;].pack(&quot;A&quot;) == &quot;a&quot; and
+-  [&quot;abc&quot;].pack(&quot;A*&quot;) == &quot;abc&quot; and
+-  [&quot;abc&quot;].pack(&quot;A4&quot;) == &quot;abc &quot;
 -end
 -
--# upack "A"
--assert('["abc"].pack("A")') do
--  "abc\0".unpack("A4") == ["abc"] and
--  "abc ".unpack("A4") == ["abc"]
+-# upack &quot;A&quot;
+-assert('[&quot;abc&quot;].pack(&quot;A&quot;)') do
+-  &quot;abc\0&quot;.unpack(&quot;A4&quot;) == [&quot;abc&quot;] and
+-  &quot;abc &quot;.unpack(&quot;A4&quot;) == [&quot;abc&quot;]
 -end
 </pre>
 

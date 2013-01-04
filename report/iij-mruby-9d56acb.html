@@ -39,7 +39,7 @@
         
       <li>
       <pre>commit 9d56acb7092928d4c8c84e7af80eb3be8aaa2e4e
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 28 17:12:22 2012 +0900
 
     wrong stack position for headless case; close #675
@@ -1965,7 +1965,7 @@ mrubytest.mrb success.</textarea></td>
 
     <h2><a name="commitlog">commit log</a></h2>
       <pre>commit 9d56acb7092928d4c8c84e7af80eb3be8aaa2e4e
-Author: Yukihiro Matz Matsumoto <matz@ruby-lang.org>
+Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
 Date:   Fri Dec 28 17:12:22 2012 +0900
 
     wrong stack position for headless case; close #675
@@ -1976,7 +1976,7 @@ index c6afa01..eefd9f0 100644
 +++ b/src/codegen.c
 @@ -1205,6 +1205,7 @@ codegen(codegen_scope *s, node *tree, int val)
              pop();
-             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s->mrb, "===")), 1));
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s-&gt;mrb, &quot;===&quot;)), 1));
            }
 +	  pop();
            tmp = new_label(s);
@@ -1987,13 +1987,13 @@ index c6afa01..eefd9f0 100644
            dispatch_linked(s, pos2);
          }
 -	pop();			/* pop HEAD */
-         codegen(s, tree->car->cdr, val);
+         codegen(s, tree-&gt;car-&gt;cdr, val);
  	if (val) pop();
          tmp = new_label(s);
 @@ -1223,11 +1223,11 @@ codegen(codegen_scope *s, node *tree, int val)
          pos3 = tmp;
          if (pos1) dispatch(s, pos1);
-         tree = tree->cdr;
+         tree = tree-&gt;cdr;
 -	push();			/* push HEAD */
        }
 -      pop();			/* pop HEAD */
