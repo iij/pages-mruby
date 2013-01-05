@@ -33,18 +33,10 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit c65042906894599381efc139420b75044dd55def
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Sat Dec 29 17:09:04 2012 +0900
-
-    update exception test. test fixes with mruby-mtest.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4931,40 +4923,7 @@ POSIX test result: OK
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit c65042906894599381efc139420b75044dd55def
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Sat Dec 29 17:09:04 2012 +0900
-
-    update exception test. test fixes with mruby-mtest.
-
-diff --git a/test/t/exception.rb b/test/t/exception.rb
-index 8179d8e..2662cfd 100644
---- a/test/t/exception.rb
-+++ b/test/t/exception.rb
-@@ -297,13 +297,18 @@ TEST_INFINITE_RECURSION_MAX = 100000
- def test_infinite_recursion
-   $test_infinite_recursion += 1
-   if $test_infinite_recursion &gt; TEST_INFINITE_RECURSION_MAX
--    return $test_infinite_recursion 
-+    return $test_infinite_recursion
-   end
--  test_infinite_recursion 
-+  test_infinite_recursion
- end
- 
- assert('Infinite recursion should result in an exception being raised') do
--  true  # disable this test on iij/mruby - consumes too much time!
-+  a = begin
-+        test_infinite_recursion
-+      rescue
-+        :ok
-+      end
-+  # OK if an exception was caught, otherwise a number will be stored in a
-+  a == :ok
- end
- 
--
-</pre>
+      <pre></pre>
 
   </body>
 </html>

@@ -33,18 +33,10 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 779a73e7de17a970fab5418917b5b952293c85d0
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Sat Dec 29 14:22:35 2012 +0800
-
-    add mrb_mod_remove_method/remove_method
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -2104,74 +2096,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 779a73e7de17a970fab5418917b5b952293c85d0
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Sat Dec 29 14:22:35 2012 +0800
-
-    add mrb_mod_remove_method/remove_method
-
-diff --git a/src/class.c b/src/class.c
-index db334cf..ace34eb 100644
---- a/src/class.c
-+++ b/src/class.c
-@@ -1596,6 +1596,48 @@ mrb_mod_remove_cvar(mrb_state *mrb, mrb_value mod)
- }
- 
- static void
-+remove_method(mrb_state *mrb, struct RClass *c, mrb_sym mid)
-+{
-+  khash_t(mt) *h = c-&gt;mt;
-+  khiter_t k;
-+
-+  if (h) {
-+    k = kh_get(mt, h, mid);
-+    if (k != kh_end(h)) {
-+      kh_del(mt, h, k);
-+      return;
-+    }
-+  }
-+
-+  mrb_name_error(mrb, mid, &quot;method `%s' not defined in %s&quot;,
-+    mrb_sym2name(mrb, mid), mrb_class_name(mrb, c));
-+}
-+
-+/* 15.2.2.4.41 */
-+/*
-+ *  call-seq:
-+ *     remove_method(symbol)   -&gt; self
-+ *
-+ *  Removes the method identified by _symbol_ from the current
-+ *  class. For an example, see &lt;code&gt;Module.undef_method&lt;/code&gt;.
-+ */
-+
-+mrb_value
-+mrb_mod_remove_method(mrb_state *mrb, mrb_value mod)
-+{
-+  struct RClass *c = mrb_class_ptr(mod);
-+  int argc;
-+  mrb_value *argv;
-+
-+  mrb_get_args(mrb, &quot;*&quot;, &amp;argv, &amp;argc);
-+  while (argc--) {
-+    remove_method(mrb, c, mrb_symbol(*argv));
-+    argv++;
-+  }
-+  return mod;
-+}
-+
-+static void
- check_const_name(mrb_state *mrb, mrb_sym id)
- {
-   const char *s;
-@@ -1710,6 +1752,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, mod, &quot;instance_methods&quot;, mrb_mod_instance_methods, ARGS_ANY());  /* 15.2.2.4.33 */
-   mrb_define_method(mrb, mod, &quot;module_eval&quot;, mrb_mod_module_eval, ARGS_ANY());            /* 15.2.2.4.35 */
-   mrb_define_method(mrb, mod, &quot;remove_class_variable&quot;, mrb_mod_remove_cvar, ARGS_REQ(1)); /* 15.2.2.4.39 */
-+  mrb_define_method(mrb, mod, &quot;remove_method&quot;, mrb_mod_remove_method, ARGS_ANY());        /* 15.2.2.4.41 */
- 
-   mrb_define_method(mrb, mod, &quot;to_s&quot;, mrb_mod_to_s, ARGS_NONE());
-   mrb_define_method(mrb, mod, &quot;inspect&quot;, mrb_mod_to_s, ARGS_NONE());
-</pre>
+      <pre></pre>
 
   </body>
 </html>

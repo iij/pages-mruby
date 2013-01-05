@@ -33,86 +33,10 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit b76ba056d49c974de72835313f5c4e00d1c232f9
-Merge: 9afc3f2 c836187
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Sat Dec 29 07:01:36 2012 +0900
-
-    Merge branch 'master' into iij
-
-diff --cc tools/mirb/mirb.c
-index ba2589b,b89c63c..1654a4e
---- a/tools/mirb/mirb.c
-+++ b/tools/mirb/mirb.c
-@@@ -12,14 -12,11 +12,18 @@@
-  #include &lt;mruby/proc.h&gt;
-  #include &lt;mruby/data.h&gt;
-  #include &lt;mruby/compile.h&gt;
-+ #ifdef ENABLE_READLINE
-+ #include &lt;readline/readline.h&gt;
-+ #include &lt;readline/history.h&gt;
-+ #endif
-  
- +#ifdef ENABLE_REQUIRE
- +#include &quot;mruby/array.h&quot;
- +#include &quot;mruby/string.h&quot;
- +#include &quot;mruby/variable.h&quot;
- +extern mrb_value mrb_file_exist(mrb_state *mrb, mrb_value fname);
- +#endif
- +
-  #ifndef ENABLE_STDIO
-  #include &lt;mruby/string.h&gt;
-  static void
-@@@ -148,12 -145,14 +152,14 @@@ print_cmdline(int code_block_open
-  }
-  
-  int
- -main(void)
- +main(int argc, char **argv)
-  {
--   int last_char;
-    char ruby_code[1024] = { 0 };
-    char last_code_line[1024] = { 0 };
-+ #ifndef ENABLE_READLINE
-+   int last_char;
-    int char_index;
-+ #endif
-    mrbc_context *cxt;
-    struct mrb_parser_state *parser;
-    mrb_state *mrb;
-@@@ -174,25 -172,8 +180,26 @@@
-    cxt = mrbc_context_new(mrb);
-    cxt-&gt;capture_errors = 1;
-  
- +  MIRB_BIN= mrb_str_new(mrb, argv[0], strlen(argv[0]));
- +  mrb_define_global_const(mrb, &quot;MIRB_BIN&quot;, MIRB_BIN);
- +
- +#ifdef ENABLE_REQUIRE
- +  mrb_value LOAD_PATH = mrb_gv_get(mrb, mrb_intern(mrb, &quot;$:&quot;));
- +
- +  if (mrb_str_cmp(mrb, MIRB_BIN, mrb_str_new2(mrb, &quot;mirb&quot;)) != 0) {
- +    int len = strrchr(RSTRING_PTR(MIRB_BIN), '/') - RSTRING_PTR(MIRB_BIN);
- +    mrb_value extdir = mrb_str_substr(mrb, mrb_str_dup(mrb, MIRB_BIN), 0, len);
- +    mrb_str_cat2(mrb, extdir, &quot;/../ext&quot;);
- +
- +    if (mrb_obj_eq(mrb, mrb_file_exist(mrb, extdir), mrb_true_value())) {
- +      mrb_ary_push(mrb, LOAD_PATH, extdir);
- +    }
- +  }
- +#endif /* ENABLE_REQUIRE */
- +
- +
-    while (TRUE) {
-+ #ifndef ENABLE_READLINE
-      print_cmdline(code_block_open);
-  
-      char_index = 0;
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -5002,81 +4926,7 @@ POSIX test result: OK
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit b76ba056d49c974de72835313f5c4e00d1c232f9
-Merge: 9afc3f2 c836187
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Sat Dec 29 07:01:36 2012 +0900
-
-    Merge branch 'master' into iij
-
-diff --cc tools/mirb/mirb.c
-index ba2589b,b89c63c..1654a4e
---- a/tools/mirb/mirb.c
-+++ b/tools/mirb/mirb.c
-@@@ -12,14 -12,11 +12,18 @@@
-  #include &lt;mruby/proc.h&gt;
-  #include &lt;mruby/data.h&gt;
-  #include &lt;mruby/compile.h&gt;
-+ #ifdef ENABLE_READLINE
-+ #include &lt;readline/readline.h&gt;
-+ #include &lt;readline/history.h&gt;
-+ #endif
-  
- +#ifdef ENABLE_REQUIRE
- +#include &quot;mruby/array.h&quot;
- +#include &quot;mruby/string.h&quot;
- +#include &quot;mruby/variable.h&quot;
- +extern mrb_value mrb_file_exist(mrb_state *mrb, mrb_value fname);
- +#endif
- +
-  #ifndef ENABLE_STDIO
-  #include &lt;mruby/string.h&gt;
-  static void
-@@@ -148,12 -145,14 +152,14 @@@ print_cmdline(int code_block_open
-  }
-  
-  int
- -main(void)
- +main(int argc, char **argv)
-  {
--   int last_char;
-    char ruby_code[1024] = { 0 };
-    char last_code_line[1024] = { 0 };
-+ #ifndef ENABLE_READLINE
-+   int last_char;
-    int char_index;
-+ #endif
-    mrbc_context *cxt;
-    struct mrb_parser_state *parser;
-    mrb_state *mrb;
-@@@ -174,25 -172,8 +180,26 @@@
-    cxt = mrbc_context_new(mrb);
-    cxt-&gt;capture_errors = 1;
-  
- +  MIRB_BIN= mrb_str_new(mrb, argv[0], strlen(argv[0]));
- +  mrb_define_global_const(mrb, &quot;MIRB_BIN&quot;, MIRB_BIN);
- +
- +#ifdef ENABLE_REQUIRE
- +  mrb_value LOAD_PATH = mrb_gv_get(mrb, mrb_intern(mrb, &quot;$:&quot;));
- +
- +  if (mrb_str_cmp(mrb, MIRB_BIN, mrb_str_new2(mrb, &quot;mirb&quot;)) != 0) {
- +    int len = strrchr(RSTRING_PTR(MIRB_BIN), '/') - RSTRING_PTR(MIRB_BIN);
- +    mrb_value extdir = mrb_str_substr(mrb, mrb_str_dup(mrb, MIRB_BIN), 0, len);
- +    mrb_str_cat2(mrb, extdir, &quot;/../ext&quot;);
- +
- +    if (mrb_obj_eq(mrb, mrb_file_exist(mrb, extdir), mrb_true_value())) {
- +      mrb_ary_push(mrb, LOAD_PATH, extdir);
- +    }
- +  }
- +#endif /* ENABLE_REQUIRE */
- +
- +
-    while (TRUE) {
-+ #ifndef ENABLE_READLINE
-      print_cmdline(code_block_open);
-  
-      char_index = 0;
-</pre>
+      <pre></pre>
 
   </body>
 </html>
