@@ -32,19 +32,11 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
         
       <li>
-      <pre>commit bfd41bd6bf09becfc035c9b9805b29b9ebbf532c
-Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Sat Dec 22 00:11:45 2012 +0900
-
-    avoid printing backtrace line with unknown place info
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1988,25 +1980,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit bfd41bd6bf09becfc035c9b9805b29b9ebbf532c
-Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Sat Dec 22 00:11:45 2012 +0900
-
-    avoid printing backtrace line with unknown place info
-
-diff --git a/tools/mruby/mruby.c b/tools/mruby/mruby.c
-index 99af7bc..9d61822 100644
---- a/tools/mruby/mruby.c
-+++ b/tools/mruby/mruby.c
-@@ -202,6 +202,7 @@ showcallinfo(mrb_state *mrb)
-         }
-       }
-     }
-+    if (line == -1) continue;
-     if (ci-&gt;target_class == ci-&gt;proc-&gt;target_class)
-       sep = &quot;.&quot;;
-     else
-</pre>
+      <pre></pre>
 
   </body>
 </html>
