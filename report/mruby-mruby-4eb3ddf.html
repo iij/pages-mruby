@@ -32,19 +32,11 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
         
       <li>
-      <pre>commit 4eb3ddfd305bef84d1537b535d85923194732c19
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Tue Dec 25 12:07:54 2012 +0800
-
-    add mrb_mod_remove_cvar
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1964,82 +1956,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 4eb3ddfd305bef84d1537b535d85923194732c19
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Tue Dec 25 12:07:54 2012 +0800
-
-    add mrb_mod_remove_cvar
-
-diff --git a/src/class.c b/src/class.c
-index 0ed18e1..db334cf 100644
---- a/src/class.c
-+++ b/src/class.c
-@@ -1545,6 +1545,56 @@ mrb_mod_cvar_set(mrb_state *mrb, mrb_value mod)
-   return value;
- }
- 
-+/* 15.2.2.4.39 */
-+/*
-+ *  call-seq:
-+ *     remove_class_variable(sym)    -&gt; obj
-+ *
-+ *  Removes the definition of the &lt;i&gt;sym&lt;/i&gt;, returning that
-+ *  constant's value.
-+ *
-+ *     class Dummy
-+ *       @@var = 99
-+ *       puts @@var
-+ *       p class_variables
-+ *       remove_class_variable(:@@var)
-+ *       p class_variables
-+ *     end
-+ *
-+ *  &lt;em&gt;produces:&lt;/em&gt;
-+ *
-+ *     99
-+ *     [:@@var]
-+ *     []
-+ */
-+
-+mrb_value
-+mrb_mod_remove_cvar(mrb_state *mrb, mrb_value mod)
-+{
-+  mrb_value sym, val;
-+  mrb_sym id;
-+
-+  mrb_get_args(mrb, &quot;o&quot;, &amp;sym);
-+
-+  id = mrb_sym_value(mrb,sym);
-+  check_cv_name(mrb, id);
-+
-+  val = mrb_iv_remove(mrb, mod, id);
-+
-+  if (!mrb_undef_p(val)) return val;
-+
-+  if (mrb_cv_defined(mrb, mod, id)){
-+    mrb_name_error(mrb, id, &quot;cannot remove %s for %s&quot;,
-+        mrb_sym2name(mrb, id), mrb_class_name(mrb, mrb_class_ptr(mod)));
-+  }
-+
-+  mrb_name_error(mrb, id, &quot;class variable %s not defined for %s&quot;,
-+      mrb_sym2name(mrb, id), mrb_class_name(mrb, mrb_class_ptr(mod)));
-+
-+ /* not reached */
-+ return mrb_nil_value();
-+}
-+
- static void
- check_const_name(mrb_state *mrb, mrb_sym id)
- {
-@@ -1659,6 +1709,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, mod, &quot;included_modules&quot;, mrb_mod_included_modules, ARGS_NONE()); /* 15.2.2.4.30 */
-   mrb_define_method(mrb, mod, &quot;instance_methods&quot;, mrb_mod_instance_methods, ARGS_ANY());  /* 15.2.2.4.33 */
-   mrb_define_method(mrb, mod, &quot;module_eval&quot;, mrb_mod_module_eval, ARGS_ANY());            /* 15.2.2.4.35 */
-+  mrb_define_method(mrb, mod, &quot;remove_class_variable&quot;, mrb_mod_remove_cvar, ARGS_REQ(1)); /* 15.2.2.4.39 */
- 
-   mrb_define_method(mrb, mod, &quot;to_s&quot;, mrb_mod_to_s, ARGS_NONE());
-   mrb_define_method(mrb, mod, &quot;inspect&quot;, mrb_mod_to_s, ARGS_NONE());
-</pre>
+      <pre></pre>
 
   </body>
 </html>

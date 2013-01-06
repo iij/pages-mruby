@@ -32,19 +32,11 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
         
       <li>
-      <pre>commit 9599381ae334ac474d40dc617407d2b05f17a328
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Sun Dec 23 15:25:24 2012 +0800
-
-    add mrb_mod_cv_defined and mrb_cv_defined
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1917,57 +1909,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 9599381ae334ac474d40dc617407d2b05f17a328
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Sun Dec 23 15:25:24 2012 +0800
-
-    add mrb_mod_cv_defined and mrb_cv_defined
-
-diff --git a/include/mruby/variable.h b/include/mruby/variable.h
-index 9f4a623..f2f22e6 100644
---- a/include/mruby/variable.h
-+++ b/include/mruby/variable.h
-@@ -59,6 +59,8 @@ mrb_value mrb_mod_cv_get(mrb_state *mrb, struct RClass * c, mrb_sym sym);
- mrb_value mrb_cv_get(mrb_state *mrb, mrb_value mod, mrb_sym sym);
- void mrb_mod_cv_set(mrb_state *mrb, struct RClass * c, mrb_sym sym, mrb_value v);
- void mrb_cv_set(mrb_state *mrb, mrb_value mod, mrb_sym sym, mrb_value v);
-+int mrb_mod_cv_defined(mrb_state *mrb, struct RClass * c, mrb_sym sym);
-+int mrb_cv_defined(mrb_state *mrb, mrb_value mod, mrb_sym sym);
- 
- /* GC functions */
- void mrb_gc_mark_gv(mrb_state*);
-diff --git a/src/variable.c b/src/variable.c
-index 71187af..5d46ffc 100644
---- a/src/variable.c
-+++ b/src/variable.c
-@@ -730,6 +730,26 @@ mrb_cv_set(mrb_state *mrb, mrb_value mod, mrb_sym sym, mrb_value v)
-   mrb_mod_cv_set(mrb, mrb_class_ptr(mod), sym, v);
- }
- 
-+int
-+mrb_mod_cv_defined(mrb_state *mrb, struct RClass * c, mrb_sym sym)
-+{
-+  while (c) {
-+    if (c-&gt;iv) {
-+      iv_tbl *t = c-&gt;iv;
-+      if (iv_get(mrb, t, sym, NULL)) return TRUE;
-+    }
-+    c = c-&gt;super;
-+  }
-+
-+  return FALSE;
-+}
-+
-+int
-+mrb_cv_defined(mrb_state *mrb, mrb_value mod, mrb_sym sym)
-+{
-+  return mrb_mod_cv_defined(mrb, mrb_class_ptr(mod), sym);
-+}
-+
- mrb_value
- mrb_vm_cv_get(mrb_state *mrb, mrb_sym sym)
- {
-</pre>
+      <pre></pre>
 
   </body>
 </html>

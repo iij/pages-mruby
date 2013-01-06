@@ -1,0 +1,451 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 280bad6)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/280bad6" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+        
+        
+      <li>
+      <pre>commit 280bad605e764d1caf59a3ee21b640e077b63d2f
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Mon Jan 7 01:47:48 2013 +0900
+
+    Run mrbgems test run on isolate mrb_state each rb file.
+    
+    Can access to current gem's name through GEMNAME from test.
+    
+    Can change assert library each mrbgems. used spec.test_preload on mrbgem.rake.
+    
+    assert library should set $ok_test, $ko_test, $kill_test, $asserts.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    <table border="1">
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Build-Status</th>
+        
+          <th>Mrbtest-Status</th>
+        
+          <th>Total</th>
+        
+          <th>OK</th>
+        
+          <th>KO</th>
+        
+          <th>Crash</th>
+        
+          <th>Fail</th>
+        
+          <th>Msg</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#ff9999">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>success</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment</h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-280bad6)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/src/re.o" -c "src/re.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm
+</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-280bad6)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-280bad6/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+rake aborted!
+Command Failed: ["gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm]
+
+</textarea></td>
+          <td><textarea>ld: /usr/lib/crt0.o: No such file: Too many open files
+</textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 280bad605e764d1caf59a3ee21b640e077b63d2f
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Mon Jan 7 01:47:48 2013 +0900
+
+    Run mrbgems test run on isolate mrb_state each rb file.
+    
+    Can access to current gem's name through GEMNAME from test.
+    
+    Can change assert library each mrbgems. used spec.test_preload on mrbgem.rake.
+    
+    assert library should set $ok_test, $ko_test, $kill_test, $asserts.
+
+diff --git a/Rakefile b/Rakefile
+index da42755..d31af96 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -19,6 +19,8 @@ load 'tasks/mrbgems.rake'
+ load 'tasks/libmruby.rake'
+ load 'tools/mruby/mruby.rake'
+ load 'tools/mirb/mirb.rake'
++
++load 'tasks/mrbgems_test.rake'
+ load 'test/mrbtest.rake'
+ 
+ ##############################
+diff --git a/tasks/mrbgems_test.rake b/tasks/mrbgems_test.rake
+new file mode 100644
+index 0000000..f247718
+--- /dev/null
++++ b/tasks/mrbgems_test.rake
+@@ -0,0 +1,73 @@
++dir = File.dirname(__FILE__).sub(%r|^\./|, '')
++
++MRuby.each_target do
++  gems.each do |g|
++    test_rbc = &quot;#{g.build_dir}/gem_test.c&quot;
++    test_rbobj = test_rbc.ext('o')
++
++    Rake::FileTask.define_task g.testlib =&gt; g.test_objs + [test_rbobj] do |t|
++      g.build.archive t.name, 'rs', t.prerequisites
++    end
++
++    Rake::FileTask.define_task test_rbobj =&gt; test_rbc
++    Rake::FileTask.define_task test_rbc =&gt; g.test_rbfiles + [g.build.mrbcfile, &quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
++      open(t.name, 'w') do |f|
++        f.puts g.gem_init_header
++        g.build.compile_mruby f, g.test_preload, &quot;gem_test_irep_#{g.funcname}_preload&quot;
++        g.test_rbfiles.each_with_index do |rbfile, i|
++          g.build.compile_mruby f, rbfile, &quot;gem_test_irep_#{g.funcname}_#{i}&quot;
++        end
++        f.puts %Q[void mrb_#{g.funcname}_gem_test(mrb_state *mrb);] unless g.test_objs.empty?
++        f.puts %Q[void GENERATED_TMP_mrb_#{g.funcname}_gem_test(mrb_state *mrb) {]
++        f.puts %Q[  mrb_state *mrb2;]
++        f.puts %Q[  mrb_value val1, val2, ary1, ary2;]
++        f.puts %Q[  int ai;]
++        unless g.test_rbfiles.empty?
++          g.test_rbfiles.count.times do |i|
++            f.puts %Q[  ai = mrb_gc_arena_save(mrb);]
++            f.puts %Q[  mrb2 = mrb_open();]
++            f.puts %Q[  mrb_load_irep(mrb2, gem_test_irep_#{g.funcname}_preload);]
++            f.puts %Q[  if (mrb2-&gt;exc) {]
++            f.puts %Q[    mrb_p(mrb2, mrb_obj_value(mrb2-&gt;exc));]
++            f.puts %Q[    exit(0);]
++            f.puts %Q[  }]
++            f.puts %Q[  mrb_const_set(mrb2, mrb_obj_value(mrb2-&gt;object_class), mrb_intern(mrb2, &quot;GEMNAME&quot;), mrb_str_new(mrb2, &quot;#{g.name}&quot;, #{g.name.length}));]
++            
++            f.puts %Q[  mrb_#{g.funcname}_gem_test(mrb2);] unless g.test_objs.empty? 
++            
++            f.puts %Q[  mrb_load_irep(mrb2, gem_test_irep_#{g.funcname}_#{i});]
++            f.puts %Q[  if (mrb2-&gt;exc) {]
++            f.puts %Q[    mrb_p(mrb2, mrb_obj_value(mrb2-&gt;exc));]
++            f.puts %Q[    exit(0);]
++            f.puts %Q[  }]
++            f.puts %Q[  ]
++
++            %w(ok_test ko_test kill_test).each do |vname|
++              f.puts %Q[  val1 = mrb_gv_get(mrb2, mrb_intern(mrb, &quot;$#{vname}&quot;));]
++              f.puts %Q[  if(mrb_fixnum_p(val1)) {]
++              f.puts %Q[    val2 = mrb_gv_get(mrb, mrb_intern(mrb, &quot;$#{vname}&quot;));]
++              f.puts %Q[    mrb_gv_set(mrb, mrb_intern(mrb, &quot;$#{vname}&quot;), mrb_fixnum_value(mrb_fixnum(val1) + mrb_fixnum(val2)));]
++              f.puts %Q[  }\n]
++            end
++
++            f.puts %Q[  ary2 = mrb_gv_get(mrb2, mrb_intern(mrb2, &quot;$asserts&quot;));]
++            f.puts %Q[  if(mrb_test(ary2)) {]
++            f.puts %Q[    ary1 = mrb_gv_get(mrb, mrb_intern(mrb, &quot;$asserts&quot;));]
++            f.puts %Q[    val2 = mrb_ary_shift(mrb2, ary2);]
++            f.puts %Q[    ]
++            f.puts %Q[    while(mrb_test(val2)) {]
++            f.puts %Q[      char *str = mrb_string_value_cstr(mrb2, &amp;val2);]
++            f.puts %Q[      mrb_ary_push(mrb, ary1, mrb_str_new(mrb, str, strlen(str)));]
++            f.puts %Q[      val2 = mrb_ary_shift(mrb2, ary2);]
++            f.puts %Q[    }]
++            f.puts %Q[  }]
++            f.puts %Q[  mrb_close(mrb2);]
++            f.puts %Q[  mrb_gc_arena_restore(mrb, ai);]
++          end
++        end
++        f.puts %Q[}]
++      end
++    end
++
++  end
++end
+diff --git a/tasks/mruby_gem_spec.rake b/tasks/mruby_gem_spec.rake
+index d9078cd..c247941 100644
+--- a/tasks/mruby_gem_spec.rake
++++ b/tasks/mruby_gem_spec.rake
+@@ -66,46 +66,15 @@ module MRuby
+       end
+ 
+       def build_dir
+-        return @build_dir if @build_dir
+-        @build_dir = &quot;#{build.build_dir}/mrbgems/#{name}&quot;
++        @build_dir ||= &quot;#{build.build_dir}/mrbgems/#{name}&quot;
+         FileUtils.mkdir_p @build_dir
+         @build_dir
+       end
+ 
+       def add_tasks
+-        test_rbc = &quot;#{build_dir}/gem_test.c&quot;
+-        test_rbobj = test_rbc.ext('o')
+-
+-        Rake::FileTask.define_task testlib =&gt; test_objs + [test_rbobj] do |t|
+-          build.archive t.name, 'rs', t.prerequisites
+-        end
+-
+-        Rake::FileTask.define_task test_rbobj =&gt; test_rbc
+-        Rake::FileTask.define_task test_rbc =&gt; [build.mrbcfile] + test_rbfiles do |t|
+-          open(t.name, 'w') do |f|
+-            f.puts gem_init_header
+-            build.compile_mruby f, test_rbfiles, &quot;gem_test_irep_#{funcname}&quot; unless test_rbfiles.empty?
+-          end
+-
+-          open(t.name, 'a') do |f|
+-            f.puts &quot;void mrb_#{funcname}_gem_test(mrb_state *mrb);&quot; unless test_objs.empty?
+-            f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_test(mrb_state *mrb) {&quot;
+-            f.puts &quot;  mrb_#{funcname}_gem_test(mrb);&quot; unless test_objs.empty? 
+-            f.puts &lt;&lt;__EOF__ unless test_rbfiles.empty?
+-  mrb_load_irep(mrb, gem_test_irep_#{funcname});
+-  if (mrb-&gt;exc) {
+-    mrb_p(mrb, mrb_obj_value(mrb-&gt;exc));
+-    exit(0);
+-  }
+-
+-__EOF__
+-            f.puts &quot;}&quot;
+-          end
+-        end
+-
+         Rake::FileTask.define_task &quot;#{build_dir}/gem_init.o&quot; =&gt; &quot;#{build_dir}/gem_init.c&quot;
+         Rake::FileTask.define_task &quot;#{build_dir}/gem_init.c&quot; =&gt; [build.mrbcfile] + rbfiles do |t|
+-          generate_gem_init(t.name)
++          generate_gem_init(&quot;#{build_dir}/gem_init.c&quot;)
+         end
+       end
+ 
+@@ -149,6 +118,7 @@ __EOF__
+           build.compile_mruby f, rbfiles, &quot;gem_mrblib_irep_#{funcname}&quot; unless rbfiles.empty?
+           f.puts &quot;void mrb_#{funcname}_gem_init(mrb_state *mrb);&quot;
+           f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_init(mrb_state *mrb) {&quot;
++          f.puts &quot;  int ai = mrb_gc_arena_save(mrb);&quot;
+           f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; if objs != [&quot;#{build_dir}/gem_init.o&quot;]
+           f.puts &lt;&lt;__EOF__ unless rbfiles.empty?
+   mrb_load_irep(mrb, gem_mrblib_irep_#{funcname});
+@@ -158,6 +128,8 @@ __EOF__
+   }
+ 
+ __EOF__
++          f.puts &quot;  mrb_gc_arena_restore(mrb, ai);&quot;
++
+           f.puts &quot;}&quot;
+         end
+       end # generate_gem_init
+@@ -177,6 +149,9 @@ __EOF__
+ #include &quot;mruby/dump.h&quot;
+ #include &quot;mruby/string.h&quot;
+ #include &quot;mruby/proc.h&quot;
++#include &quot;mruby/variable.h&quot;
++#include &quot;mruby/array.h&quot;
++#include &quot;mruby/string.h&quot;
+ __EOF__
+       end # gem_init_header
+ 
+diff --git a/test/assert.rb b/test/assert.rb
+index 89e820a..4fe95de 100644
+--- a/test/assert.rb
++++ b/test/assert.rb
+@@ -5,14 +5,13 @@ $asserts  = []
+ $test_start = Time.now if Object.const_defined?(:Time)
+ 
+ ##
+-# Print the assertion in a readable way
+-def print_assertion_string(str, iso)
+-  print(str)
+-  if(iso != '')
+-    print(' [')
+-    print(iso)
+-    print(']')
+-  end
++# Create the assertion in a readable way
++def assertion_string(err, str, iso=nil, e=nil)
++  msg = &quot;#{err}#{str}&quot;
++  msg += &quot; [#{iso}]&quot; if iso &amp;&amp; iso != ''
++  msg += &quot; =&gt; #{e.message}&quot; if e
++  msg += &quot; (mrbgems: #{GEMNAME})&quot; if Object.const_defined?(:GEMNAME)
++  msg
+ end
+ 
+ ##
+@@ -26,7 +25,7 @@ end
+ def assert(str = 'Assertion failed', iso = '')
+   begin
+     if(!yield)
+-      $asserts.push(['Fail: ', str, iso])
++      $asserts.push(assertion_string('Fail: ', str, iso))
+       $ko_test += 1
+       print('F')
+     else
+@@ -34,7 +33,7 @@ def assert(str = 'Assertion failed', iso = '')
+       print('.')
+     end
+   rescue Exception =&gt; e
+-    $asserts.push(['Error: ', str, iso, e])
++    $asserts.push(assertion_string('Error: ', str, iso, e))
+     $kill_test += 1
+     print('X')
+   end
+@@ -45,14 +44,9 @@ end
+ # which were reported broken.
+ def report()
+   print &quot;\n&quot;
+-  $asserts.each do |err, str, iso, e|
+-    print(err);
+-    print_assertion_string(str, iso)
+-    if e
+-      print(&quot; =&gt; &quot;)
+-      print(e.message)
+-    end
+-    print(&quot;\n&quot;)
++
++  $asserts.each do |msg|
++    puts msg
+   end
+ 
+   $total_test = $ok_test.+($ko_test)
+</pre>
+
+  </body>
+</html>
