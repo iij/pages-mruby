@@ -77,8 +77,25 @@
     "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
     -o "build/host/src/codegen.o" -c "src/codegen.c"
 
+    rake aborted!
+
+    Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration
+    -I"/home/mruby/arm/mruby-mruby-4258d77/include" -o "build/host/src/codegen.o"
+    -c "src/codegen.c"]
+
+
 '
-  :stderr: ''
+  :stderr: ! 'src/codegen.c: In function `codedump'':
+
+    src/codegen.c:2222: internal compiler error: Segmentation fault
+
+    Please submit a full bug report,
+
+    with preprocessed source if appropriate.
+
+    See <URL:http://www.netbsd.org/Misc/send-pr.html> for instructions.
+
+'
   :status: ''
 :make_test:
   :stdout: ''

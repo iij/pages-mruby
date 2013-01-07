@@ -757,21 +757,21 @@
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.029207 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.044202 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.008267 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.008321 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.020553 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.021607 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.048145 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.047382 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.070912 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 685 done\nwait 235 done\nwait 234 done\n.\nTotal: 6\n   OK:
-    6\n   KO: 0\nCrash: 0\n Time: 0.281762 seconds\n\n###################################\n#
+    0.070423 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 2672 done\nwait 6394 done\nwait 3216 done\n.\nTotal: 6\n   OK:
+    6\n   KO: 0\nCrash: 0\n Time: 0.280556 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.739668 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.740451 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.03205 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.040351 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
