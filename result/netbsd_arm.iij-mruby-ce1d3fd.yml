@@ -36,32 +36,32 @@
   :stdout: ! "(in /home/mruby/arm/iij-mruby-ce1d3fd)\n\"build/host/test/mrbtest\"\nmrbtest
     - Embeddable Ruby Test\n\nThis is a very early version, please test and report
     errors.\nThanks :)\n\n......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 2.827483s, 3.8904 tests/s,
-    6.7198 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 0.023746s, 463.2359 tests/s,
-    800.1348 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
-    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 59.493932 seconds\n"
+    Running tests:\n\n...........\n\nFinished tests in 2.829109s, 3.8881 tests/s,
+    6.7159 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
+    Running tests:\n\n...........\n\nFinished tests in 0.023825s, 461.6999 tests/s,
+    797.4816 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
+    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 59.461667 seconds\n"
   :stderr: ''
   :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.031859 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.028191 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.008632 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.008967 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.024353 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.024961 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.042334 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.041944 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.069214 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 9899 done\nwait 10075 done\nwait 10510 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.282884 seconds\n\n###################################\n#
+    0.070841 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 13549 done\nwait 16408 done\nwait 13904 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.28164 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.746083 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.75881 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.034404 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.030516 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
