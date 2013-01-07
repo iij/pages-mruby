@@ -1,0 +1,88 @@
+---
+:date: ''
+:hostname: netbsd_arm
+:id: mruby-mruby-4258d77
+:ball_id: mruby-mruby-4258d77
+:zipball_url: https://github.com/mruby/mruby/zipball/4258d77
+:repository: mruby/mruby
+:commit: 4258d77
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! '(in /home/mruby/arm/mruby-mruby-4258d77)
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/range.o" -c "src/range.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/array.o" -c "src/array.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/numeric.o" -c "src/numeric.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/pool.o" -c "src/pool.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/compar.o" -c "src/compar.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/crc.o" -c "src/crc.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/proc.o" -c "src/proc.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/math.o" -c "src/math.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/state.o" -c "src/state.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/print.o" -c "src/print.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/vm.o" -c "src/vm.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/class.o" -c "src/class.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/load.o" -c "src/load.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-4258d77/include"
+    -o "build/host/src/codegen.o" -c "src/codegen.c"
+
+'
+  :stderr: ''
+  :status: ''
+:make_test:
+  :stdout: ''
+  :stderr: ''
+  :status: ''
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
