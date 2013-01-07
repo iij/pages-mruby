@@ -32,19 +32,11 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
         
       <li>
-      <pre>commit 3ffe8fe105adfb5df81e7da2996a01e576ed41f9
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Tue Dec 25 12:13:31 2012 +0800
-
-    add test for Module#remove_class_variable
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -2244,34 +2236,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 3ffe8fe105adfb5df81e7da2996a01e576ed41f9
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Tue Dec 25 12:13:31 2012 +0800
-
-    add test for Module#remove_class_variable
-
-diff --git a/test/t/module.rb b/test/t/module.rb
-index b3b1ccf..deacb33 100644
---- a/test/t/module.rb
-+++ b/test/t/module.rb
-@@ -208,6 +208,16 @@ assert('Module#module_eval', '15.2.2.4.35') do
-    Test4ModuleEval.module_eval{ @b } == 12
- end
- 
-+assert('Module#remove_class_variable', '15.2.2.4.39') do
-+  class Test4RemoveClassVariable
-+    @@cv = 99
-+  end
-+
-+  Test4RemoveClassVariable.remove_class_variable(:@@cv) == 99 and
-+  not Test4RemoveClassVariable.class_variables.include? :@@cv
-+end
-+
-+
- # Not ISO specified
- 
- assert('Module#to_s') do
-</pre>
+      <pre></pre>
 
   </body>
 </html>
