@@ -1,11 +1,11 @@
 ---
 :date: ''
 :hostname: netbsd_mips
-:id: iij-mruby-83ed028
-:ball_id: iij-mruby-83ed028
-:zipball_url: https://github.com/iij/mruby/zipball/83ed028
+:id: iij-mruby-375b886
+:ball_id: iij-mruby-375b886
+:zipball_url: https://github.com/iij/mruby/zipball/375b886
 :repository: iij/mruby
-:commit: 83ed028
+:commit: 375b886
 :env:
   :gcc:
     :stdout: ''
@@ -27,41 +27,41 @@
   :make: gmake CFLAGS='-DDISABLE_SOCKET'
   :bison: bison
 :make:
-  :stdout: ! '(in /home/mruby/mips/iij-mruby-83ed028)
+  :stdout: ! '(in /home/mruby/mips/iij-mruby-375b886)
 
 '
   :stderr: ''
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mips/iij-mruby-83ed028)\n\"build/host/test/mrbtest\"\nmrbtest
+  :stdout: ! "(in /home/mruby/mips/iij-mruby-375b886)\n\"build/host/test/mrbtest\"\nmrbtest
     - Embeddable Ruby Test\n\nThis is a very early version, please test and report
     errors.\nThanks :)\n\n......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 3.280773s, 3.3529 tests/s,
-    5.7913 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 0.027226s, 404.0256 tests/s,
-    697.8623 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
-    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 49.387328 seconds\n"
+    Running tests:\n\n...........\n\nFinished tests in 3.307714s, 3.3256 tests/s,
+    5.7441 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
+    Running tests:\n\n...........\n\nFinished tests in 0.027598s, 398.5796 tests/s,
+    688.4557 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
+    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 49.485068 seconds\n"
   :stderr: ''
   :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.0336 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.035678 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.008635 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.012638 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.024782 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.024897 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.021304 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.035245 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.070576 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 2358 done\nwait 19796 done\nwait 29713 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.249089 seconds\n\n###################################\n#
+    0.072517 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 1367 done\nwait 28579 done\nwait 26149 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.242564 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.94837 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.949061 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.032482 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.03259 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success

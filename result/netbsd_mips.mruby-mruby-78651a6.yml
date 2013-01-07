@@ -201,27 +201,17 @@
 '
   :status: success
 :make_test:
-  :stdout: ! '(in /home/mruby/mips/mruby-mruby-78651a6)
-
-    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-78651a6/include"
-    -o "build/host/test/driver.o" -c "test/driver.c"
-
-    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-78651a6/include"
-    -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
-
-    "gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o"
-    "build/host/lib/libmruby.a" -lm
-
-    rake aborted!
-
-    Command Failed: ["gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o"
-    "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm]
-
-
-'
-  :stderr: ! 'ld: /usr/lib/crt0.o: No such file: Too many open files
-
-'
-  :status: failed
+  :stdout: ! "(in /home/mruby/mips/mruby-mruby-78651a6)\n\"gcc\" -DDISABLE_GEMS -MMD
+    -g -O3 -Wall -Werror-implicit-function-declaration -I\"/home/mruby/mips/mruby-mruby-78651a6/include\"
+    -o \"build/host/test/driver.o\" -c \"test/driver.c\"\n\"gcc\" -DDISABLE_GEMS -MMD
+    -g -O3 -Wall -Werror-implicit-function-declaration -I\"/home/mruby/mips/mruby-mruby-78651a6/include\"
+    -o \"build/host/test/mrbtest.o\" -c \"build/host/test/mrbtest.c\"\n\"gcc\" -o
+    \"build/host/test/mrbtest\" -lm  \"build/host/test/driver.o\" \"build/host/test/mrbtest.o\"
+    \"build/host/lib/libmruby.a\" -lm\n\"build/host/test/mrbtest\"\nmrbtest - Embeddable
+    Ruby Test\n\nThis is a very early version, please test and report errors.\nThanks
+    :)\n\n.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    505\n   OK: 505\n   KO: 0\nCrash: 0\n Time: 19.271366 seconds\n"
+  :stderr: ''
+  :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
