@@ -469,8 +469,8 @@
     "build/host/src/ext/errno/errno.o" "build/host/src/ext/require/require.o" "build/host/src/ext/io/file.o"
     "build/host/src/ext/io/io.o" "build/host/src/ext/socket/socket.o" "build/host/src/ext/random/random.o"
 
-    "gcc" -o "build/host/bin/mrbc" -lm   -lcrypto    "build/host/tools/mrbc/mrbc.o"
-    "build/host/lib/libmruby_core.a" -lm
+    "gcc" -o "build/host/bin/mrbc" -lm       "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a"
+    -lcrypto -lcrypto -lm
 
     "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-4d02a7f/include"
     -I"/home/mruby/arm/iij-mruby-4d02a7f/src" -I"build/mrbgems/mruby-mtest/include"
@@ -589,8 +589,8 @@
     "build/host/src/ext/random/random.o" "build/host/mrblib/mrblib.o" "build/host/mrblib/ext/mrblib_ext.o"
     "build/host/mrbgems/gem_init.o"
 
-    "gcc" -o "build/host/bin/mruby" -lm   -lcrypto    "build/host/tools/mruby/mruby.o"
-    "build/host/lib/libmruby.a" -lm
+    "gcc" -o "build/host/bin/mruby" -lm       "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a"
+    -lcrypto -lcrypto -lm
 
     "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-4d02a7f/include"
     -I"/home/mruby/arm/iij-mruby-4d02a7f/src" -I"build/mrbgems/mruby-mtest/include"
@@ -600,8 +600,8 @@
     -I"build/mrbgems/mruby-pack/include" -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-4d02a7f/src"
     -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
 
-    "gcc" -o "build/host/bin/mirb" -lm   -lcrypto    "build/host/tools/mirb/mirb.o"
-    "build/host/lib/libmruby.a" -lm
+    "gcc" -o "build/host/bin/mirb" -lm       "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a"
+    -lcrypto -lcrypto -lm
 
 '
   :stderr: ! 'src/compile.c: In function `mrb_compile'':
@@ -712,18 +712,17 @@
     -I\"build/mrbgems/mruby-pack/include\" -I\"build/mrbgems/mruby-pack/src\" -I\"/home/mruby/arm/iij-mruby-4d02a7f/src\"
     -o \"build/host/mrbgems/mruby-pack/gem_test.o\" -c \"build/host/mrbgems/mruby-pack/gem_test.c\"\n\"ar\"
     rs \"build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a\" \"build/host/mrbgems/mruby-pack/gem_test.o\"\n\"gcc\"
-    -o \"build/host/test/mrbtest\" -lm   -lcrypto    \"build/host/test/driver.o\"
-    \"build/host/test/mrbtest.o\" \"build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a\"
-    \"build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a\" \"build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a\"
-    \"build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a\" \"build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a\"
-    \"build/host/lib/libmruby.a\" -lm\n\"build/host/test/mrbtest\"\nmrbtest - Embeddable
-    Ruby Test\n\nThis is a very early version, please test and report errors.\nThanks
-    :)\n\n......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 2.826472s, 3.8918 tests/s,
-    6.7222 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
-    Running tests:\n\n...........\n\nFinished tests in 0.023821s, 461.7774 tests/s,
-    797.6155 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
-    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 59.546319 seconds\n"
+    -o \"build/host/test/mrbtest\" -lm       \"build/host/test/driver.o\" \"build/host/test/mrbtest.o\"
+    \"build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a\" \"build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a\"
+    \"build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a\" \"build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a\"
+    \"build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a\" \"build/host/lib/libmruby.a\"
+    -lcrypto -lcrypto -lm\n\"build/host/test/mrbtest\"\nmrbtest - Embeddable Ruby
+    Test\n\nThis is a very early version, please test and report errors.\nThanks :)\n\n......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\n#
+    Running tests:\n\n...........\n\nFinished tests in 2.846568s, 3.8643 tests/s,
+    6.6747 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n...........................................\n#
+    Running tests:\n\n...........\n\nFinished tests in 0.024238s, 453.8328 tests/s,
+    783.8931 assertions/s.\n\n11 tests, 19 assertions, 0 failures, 0 errors, 0 skips\n.\nTotal:
+    610\n   OK: 610\n   KO: 0\nCrash: 0\n Time: 59.463333 seconds\n"
   :stderr: ! 'ar: creating build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a
 
     ar: creating build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a
@@ -740,21 +739,21 @@
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.055564 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.031909 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.00848 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.008396 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.024567 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.024556 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.058648 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.040424 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.071128 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 608 done\nwait 21854 done\nwait 16396 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.284556 seconds\n\n###################################\n#
+    0.07076 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 11454 done\nwait 13775 done\nwait 13708 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.281534 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.738626 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.747242 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.035509 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.035801 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
