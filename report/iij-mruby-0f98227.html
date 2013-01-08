@@ -190,6 +190,20 @@ Date:   Mon Jan 7 21:32:37 2013 -0800
         
         
         <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_arm">netbsd_arm</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
           <td><a href="#netbsd_mips">netbsd_mips</a></td>
           <td>success</td>
           <td>success</td>
@@ -439,6 +453,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -1263,6 +1285,95 @@ Total: 510
    KO: 0
 Crash: 0
  Time: 0.943698 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_arm">netbsd_arm</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm/iij-mruby-0f98227)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/src/re.o" -c "src/re.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm
+</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm/iij-mruby-0f98227)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-0f98227/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 32.992956 seconds
+</textarea></td>
           <td><textarea></textarea></td>
         </tr>
         
