@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit dcc71ba1521ea6e00d224b29093953048cfefa84
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 19:11:59 2013 +0900
-
-    test driver update (support MTest::Unit)
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -5030,39 +5022,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit dcc71ba1521ea6e00d224b29093953048cfefa84
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 19:11:59 2013 +0900
-
-    test driver update (support MTest::Unit)
-
-diff --git a/test/driver.c b/test/driver.c
-index 788a77b..2d14ff5 100644
---- a/test/driver.c
-+++ b/test/driver.c
-@@ -41,6 +41,12 @@ main(void)
-   mrb_state *mrb;
-   mrb_value return_value;
-   const char *prog = &quot;report()&quot;;
-+  const char *mtest = &quot;&quot;
-+    &quot;if Object.const_defined?(:MTest)\n&quot;
-+    &quot;  assert('MrubyMTest run') do\n&quot;
-+    &quot;    MTest::Unit.new.run == 0\n&quot;
-+    &quot;  end\n&quot;
-+    &quot;end&quot;;
-   int ret = EXIT_SUCCESS;
- 
-   print_hint();
-@@ -53,6 +59,8 @@ main(void)
-   }
- 
-   mrb_init_mrbtest(mrb);
-+  /* execute MTest */
-+  mrb_load_string(mrb, mtest);
-   /* evaluate the test */
-   return_value = mrb_load_string(mrb, prog);
-   /* did an exception occur? */
-</pre>
+      <pre></pre>
 
   </body>
 </html>
