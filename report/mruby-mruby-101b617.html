@@ -36,7 +36,6 @@
         
       
         
-        
       <li>
       <pre>commit 101b617d24b3c25d0b5b36ab13ebf5336d167f50
 Merge: ba9ca03 5dfefb9
@@ -204,10 +203,10 @@ Date:   Sun Jan 6 09:54:30 2013 -0800
       
         
         
-        <tr style="background-color:#ff9999">
+        <tr style="background-color:#99ff99">
           <td><a href="#netbsd_mips">netbsd_mips</a></td>
           <td>success</td>
-          <td>failed</td>
+          <td>success</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -1400,12 +1399,20 @@ ar: creating build/host/lib/libmruby.a
 "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-101b617/include" -o "build/host/test/driver.o" -c "test/driver.c"
 "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-101b617/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
 "gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
-rake aborted!
-Command Failed: ["gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm]
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
 
+This is a very early version, please test and report errors.
+Thanks :)
+
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 505
+   OK: 505
+   KO: 0
+Crash: 0
+ Time: 18.798799 seconds
 </textarea></td>
-          <td><textarea>ld: /usr/lib/crt0.o: No such file: Too many open files
-</textarea></td>
+          <td><textarea></textarea></td>
         </tr>
         
       </table>

@@ -34,15 +34,8 @@
         
         
       
-        
       <li>
-      <pre>commit b1f5840aefe0c4edac9dc3f238bdb757521eb67c
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Tue Nov 13 16:50:41 2012 +0900
-
-    fix the issue String#slice with Range may return broken String.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1668,63 +1661,7 @@ mrubytest.mrb success.</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit b1f5840aefe0c4edac9dc3f238bdb757521eb67c
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Tue Nov 13 16:50:41 2012 +0900
-
-    fix the issue String#slice with Range may return broken String.
-
-diff --git a/src/range.c b/src/range.c
-index 6fe7964..085d5b1 100644
---- a/src/range.c
-+++ b/src/range.c
-@@ -286,7 +286,7 @@ mrb_range_beg_len(mrb_state *mrb, mrb_value range, mrb_int *begp, mrb_int *lenp,
-     if (end &gt; len) end = len;
-   }
-   if (end &lt; 0) end += len;
--  if (!r-&gt;excl) end++;  /* include end point */
-+  if (!r-&gt;excl &amp;&amp; end &lt; len) end++;  /* include end point */
-   len = end - beg;
-   if (len &lt; 0) len = 0;
- 
-diff --git a/test/t/string.rb b/test/t/string.rb
-index 26b7df5..1e921c6 100644
---- a/test/t/string.rb
-+++ b/test/t/string.rb
-@@ -61,6 +61,32 @@ assert('String#[]', '15.2.10.5.6') do
-     a3 == 'bc' and b3 == nil
- end
- 
-+assert('String#[] with Range') do
-+  a1 = 'abc'[1..0]
-+  b1 = 'abc'[1..1]
-+  c1 = 'abc'[1..2]
-+  d1 = 'abc'[1..3]
-+  e1 = 'abc'[1..4]
-+  f1 = 'abc'[0..-2]
-+  g1 = 'abc'[-2..3]
-+  h1 = 'abc'[3..4]
-+  i1 = 'abc'[4..5]
-+  a2 = 'abc'[1...0]
-+  b2 = 'abc'[1...1]
-+  c2 = 'abc'[1...2]
-+  d2 = 'abc'[1...3]
-+  e2 = 'abc'[1...4]
-+  f2 = 'abc'[0...-2]
-+  g2 = 'abc'[-2...3]
-+  h2 = 'abc'[3...4]
-+  i2 = 'abc'[4...5]
-+
-+  a1 == ''   and b1 == 'b'  and c1 == 'bc' and d1 == 'bc' and e1 == 'bc' and
-+  f1 == 'ab' and g1 == 'bc' and h1 == ''   and i2 == nil  and
-+  a2 == ''   and b2 == ''   and c2 == 'b'  and d2 == 'bc' and e2 == 'bc' and
-+  f2 == 'a'  and g2 == 'bc' and h2 == ''   and i2 == nil
-+end
-+
- assert('String#capitalize', '15.2.10.5.7') do
-   a = 'abc'
-   a.capitalize
-</pre>
+      <pre></pre>
 
   </body>
 </html>
