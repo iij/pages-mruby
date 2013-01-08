@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 64e1e33ace4d32551e9466c00ef80b34fd6ca950
-Author: Akira Yumiyama &lt;yumiyama.akira@gmail.com&gt;
-Date:   Fri Jan 4 20:52:01 2013 +0900
-
-    mruby_gem_spec.rake typo fixes
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4625,26 +4617,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 64e1e33ace4d32551e9466c00ef80b34fd6ca950
-Author: Akira Yumiyama &lt;yumiyama.akira@gmail.com&gt;
-Date:   Fri Jan 4 20:52:01 2013 +0900
-
-    mruby_gem_spec.rake typo fixes
-
-diff --git a/tasks/mruby_gem_spec.rake b/tasks/mruby_gem_spec.rake
-index e2fcc75..ec7aadf 100644
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@ -35,7 +35,7 @@ module MRuby
-         @dir = Gem.processing_path
-         @cflags = []
-         @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
--        @mruby_includes = [&quot;#{dir}/include #{dir}/src&quot;]
-+        @mruby_includes = [&quot;#{dir}/include&quot;, &quot;#{dir}/src&quot;]
-         @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
-         @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(@dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
-         @test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
-</pre>
+      <pre></pre>
 
   </body>
 </html>
