@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit eeb3cca6f9250881cf9b7f4a8510e3dec87710a2
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Thu Jan 3 16:55:18 2013 +0900
-
-    build config update of mrblib/ext
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1590,114 +1582,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit eeb3cca6f9250881cf9b7f4a8510e3dec87710a2
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Thu Jan 3 16:55:18 2013 +0900
-
-    build config update of mrblib/ext
-
-diff --git a/Rakefile b/Rakefile
-index da42755..a5e9318 100644
---- a/Rakefile
-+++ b/Rakefile
-@@ -13,6 +13,7 @@ load File.expand_path(ENV['CONFIG'] || './build_config.rb')
- load 'tasks/rules.rake'
- load 'src/mruby_core.rake'
- load 'mrblib/mrblib.rake'
-+load 'mrblib/ext/mrblib_ext.rake'
- load 'tools/mrbc/mrbc.rake'
- 
- load 'tasks/mrbgems.rake'
-diff --git a/mrblib/ext/init_mrblib_ext.c b/mrblib/ext/init_mrblib_ext.c
-new file mode 100644
-index 0000000..9e39141
---- /dev/null
-+++ b/mrblib/ext/init_mrblib_ext.c
-@@ -0,0 +1,13 @@
-+#include &quot;mruby.h&quot;
-+#include &quot;mruby/irep.h&quot;
-+#include &quot;mruby/dump.h&quot;
-+#include &quot;mruby/string.h&quot;
-+#include &quot;mruby/proc.h&quot;
-+
-+extern const char mrblib_ext_irep[];
-+
-+void
-+mrb_init_mrblib_ext(mrb_state *mrb)
-+{
-+  mrb_load_irep(mrb, mrblib_ext_irep);
-+}
-diff --git a/mrblib/ext/mrblib_ext.rake b/mrblib/ext/mrblib_ext.rake
-new file mode 100644
-index 0000000..e76aa5a
---- /dev/null
-+++ b/mrblib/ext/mrblib_ext.rake
-@@ -0,0 +1,15 @@
-+dir = File.dirname(__FILE__).sub(%r|^\./|, '')
-+
-+MRuby.each_target do
-+  self.libmruby &lt;&lt; &quot;#{build_dir}/#{dir}/mrblib_ext.o&quot;
-+
-+  file &quot;#{build_dir}/#{dir}/mrblib_ext.o&quot; =&gt; &quot;#{build_dir}/#{dir}/mrblib_ext.c&quot;
-+  file &quot;#{build_dir}/#{dir}/mrblib_ext.c&quot; =&gt; [mrbcfile] + Dir.glob(&quot;#{dir}/*.rb&quot;) do |t|
-+    mrbc, *rbfiles = t.prerequisites
-+    FileUtils.mkdir_p File.dirname(t.name)
-+    open(t.name, 'w') do |f|
-+      f.puts File.read(&quot;#{dir}/init_mrblib_ext.c&quot;)
-+      compile_mruby f, rbfiles, 'mrblib_ext_irep'
-+    end
-+  end
-+end
-diff --git a/mrblib/init_mrblib.c b/mrblib/init_mrblib.c
-index 5e895e8..5a6ce21 100644
---- a/mrblib/init_mrblib.c
-+++ b/mrblib/init_mrblib.c
-@@ -5,7 +5,7 @@
- #include &quot;mruby/proc.h&quot;
- 
- extern const char mrblib_irep[];
--extern const char mrblib_ext_irep[];
-+//extern const char mrblib_ext_irep[];
- 
- void
- mrb_init_mrblib(mrb_state *mrb)
-@@ -13,6 +13,7 @@ mrb_init_mrblib(mrb_state *mrb)
-   mrb_load_irep(mrb, mrblib_irep);
- }
- 
-+/*
- void
- mrb_init_mrblib_ext(mrb_state *mrb)
- {
-@@ -21,3 +22,4 @@ mrb_init_mrblib_ext(mrb_state *mrb)
-   extern mrb_value mrb_top_self(mrb_state *mrb);
-   mrb_run(mrb, mrb_proc_new(mrb, mrb-&gt;irep[n]), mrb_top_self(mrb));
- }
-+*/
-diff --git a/mrblib/init_mrblib_ext.c b/mrblib/init_mrblib_ext.c
-deleted file mode 100644
-index 5b09828..0000000
---- a/mrblib/init_mrblib_ext.c
-+++ /dev/null
-@@ -1,17 +0,0 @@
--#include &quot;mruby.h&quot;
--#include &quot;mruby/irep.h&quot;
--#include &quot;mruby/dump.h&quot;
--#include &quot;mruby/string.h&quot;
--#include &quot;mruby/proc.h&quot;
--
--extern const char mrblib_ext_irep[];
--
--void
--mrb_init_mrblib_ext(mrb_state *mrb)
--{
--  int n = mrb_read_irep(mrb, mrblib_ext_irep);
--
--  extern mrb_value mrb_top_self(mrb_state *mrb);
--  mrb_run(mrb, mrb_proc_new(mrb, mrb-&gt;irep[n]), mrb_top_self(mrb));
--}
--
-</pre>
+      <pre></pre>
 
   </body>
 </html>

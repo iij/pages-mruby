@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit b306d4d3a259ef89969261369302f03ee6fab418
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 11:07:44 2012 +0900
-
-    auto download mrbgem on build time
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -5249,79 +5241,7 @@ POSIX test result: OK
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit b306d4d3a259ef89969261369302f03ee6fab418
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 11:07:44 2012 +0900
-
-    auto download mrbgem on build time
-
-diff --git a/Rakefile b/Rakefile
-index 9ad7edc..c53650d 100644
---- a/Rakefile
-+++ b/Rakefile
-@@ -20,6 +20,7 @@ ENABLE_GEMS = true
- 
- # the default file which contains the active GEMs
- ACTIVE_GEMS = ENV['ACTIVE_GEMS'] || File.join(MRUBY_ROOT, '/mrbgems/GEMS.active')
-+GEMS_DATABASE = File.join MRUBY_ROOT, 'mrbgems', 'GEMS.db'
- 
- # default compile option
- COMPILE_MODE = ENV['COMPILE_MODE'] || :debug
-diff --git a/mrbgems/GEMS.active b/mrbgems/GEMS.active
-index 2878d98..a02d761 100644
---- a/mrbgems/GEMS.active
-+++ b/mrbgems/GEMS.active
-@@ -1,2 +1,4 @@
-+mruby-mtest
-+mruby-dir
- pack
- process
-diff --git a/mrbgems/GEMS.db b/mrbgems/GEMS.db
-new file mode 100644
-index 0000000..f7e2606
---- /dev/null
-+++ b/mrbgems/GEMS.db
-@@ -0,0 +1,3 @@
-+mruby-dir, git://github.com/iij/mruby-dir.git
-+mruby-mtest, git://github.com/iij/mruby-mtest.git
-+mruby-syslog, git://github.com/iij/mruby-syslog.git
-diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
-index dabc259..86019d1 100644
---- a/mrbgems/build_tasks.rb
-+++ b/mrbgems/build_tasks.rb
-@@ -98,12 +98,29 @@ __EOF__
-   end
- end
- 
-+def fetch_gem(gempath)
-+  gemname = File.basename(gempath)
-+  IO.readlines(GEMS_DATABASE).each { |line|
-+    name, url, rev = line.split(',').map{|s| s.strip }
-+    rev = 'master' unless rev
-+    if name == gemname
-+      sh &quot;cd #{File.dirname gempath} &amp;&amp; git clone #{url} &amp;&amp; git checkout #{rev}&quot;
-+      break
-+    end
-+  }
-+end
-+
- def for_each_gem(&amp;block)
-   IO.readlines(ACTIVE_GEMS).map { |line|
-     path = line.chomp
-     if not File.exist?(path)
--      path2 = File.join MRUBY_ROOT, 'mrbgems', 'g', path
--      path = path2 if File.exist? path2
-+      gempath = File.join MRUBY_ROOT, 'mrbgems', 'g', path
-+      if File.exist? gempath
-+        path = gempath
-+      else
-+        fetch_gem(gempath)
-+        path = gempath
-+      end
-     end
-     gemname = File.basename(path)
-     escaped_gemname = gemname.gsub(/-/, '_')
-</pre>
+      <pre></pre>
 
   </body>
 </html>

@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 1758276ca614bfc6fbe279e44b68195eb93595b1
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Thu Jan 3 17:04:48 2013 +0900
-
-    add '-I#{MRUBY_ROOT}/src'
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -2835,46 +2827,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 1758276ca614bfc6fbe279e44b68195eb93595b1
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Thu Jan 3 17:04:48 2013 +0900
-
-    add '-I#{MRUBY_ROOT}/src'
-
-diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
-index fad92c5..cda3dbc 100644
---- a/tasks/mruby_build.rake
-+++ b/tasks/mruby_build.rake
-@@ -30,7 +30,7 @@ module MRuby
-     def initialize(&amp;block)
-       @name ||= 'host'
-       @root = File.expand_path(&quot;#{File.dirname(__FILE__)}/..&quot;)
--      @cc, @cflags, @includes = 'gcc', %W(-DDISABLE_GEMS -MMD), %W(#{@root}/include)
-+      @cc, @cflags, @includes = 'gcc', %W(-DDISABLE_GEMS -MMD), %W(#{@root}/include #{@root}/src)
-       @ldflags, @libs = [], %w(-lm)
-       @ar = 'ar'
-       @cxxflags, @objccflags, @asmflags = [], [], []
-diff --git a/tasks/mruby_gem_spec.rake b/tasks/mruby_gem_spec.rake
-index 59a536e..f13a7d6 100644
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@ -35,7 +35,7 @@ module MRuby
-         @dir = Gem.processing_path
-         @cflags = []
-         @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
--        @mruby_includes = [&quot;#{dir}/include&quot;]
-+        @mruby_includes = [&quot;#{dir}/include #{dir}/src&quot;]
-         @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
-         @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(@dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
-         @test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
-@@ -180,4 +180,4 @@ __EOF__
- 
-     end # Specification
-   end # Gem
--end # MRuby
-\ No newline at end of file
-+end # MRuby
-</pre>
+      <pre></pre>
 
   </body>
 </html>

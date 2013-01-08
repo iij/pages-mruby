@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 0f43affc02d2c709777ad497b63ef33cdc0ac78b
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 19:11:41 2013 +0900
-
-    build task bug fixes
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4414,26 +4406,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 0f43affc02d2c709777ad497b63ef33cdc0ac78b
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 19:11:41 2013 +0900
-
-    build task bug fixes
-
-diff --git a/tasks/mruby_gem_spec.rake b/tasks/mruby_gem_spec.rake
-index f13a7d6..e2fcc75 100644
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@ -147,7 +147,7 @@ __EOF__
-           build.compile_mruby f, rbfiles, &quot;gem_mrblib_irep_#{funcname}&quot; unless rbfiles.empty?
-           f.puts &quot;void mrb_#{funcname}_gem_init(mrb_state *mrb);&quot;
-           f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_init(mrb_state *mrb) {&quot;
--          f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; unless objs.empty?
-+          f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; if objs != [&quot;#{build_dir}/gem_init.o&quot;]
-           f.puts &lt;&lt;__EOF__ unless rbfiles.empty?
-   mrb_load_irep(mrb, gem_mrblib_irep_#{funcname});
-   if (mrb-&gt;exc) {
-</pre>
+      <pre></pre>
 
   </body>
 </html>

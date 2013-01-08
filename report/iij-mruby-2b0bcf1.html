@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 2b0bcf1326ac945932c1551d3fa9b5c1b17678dd
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 13:13:20 2013 +0900
-
-    add src/ext/mruby_ext.rake
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -3199,41 +3191,7 @@ POSIX test result: NG
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 2b0bcf1326ac945932c1551d3fa9b5c1b17678dd
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Fri Jan 4 13:13:20 2013 +0900
-
-    add src/ext/mruby_ext.rake
-
-diff --git a/Rakefile b/Rakefile
-index a5e9318..90806d2 100644
---- a/Rakefile
-+++ b/Rakefile
-@@ -12,6 +12,7 @@ load File.expand_path(ENV['CONFIG'] || './build_config.rb')
- 
- load 'tasks/rules.rake'
- load 'src/mruby_core.rake'
-+load 'src/ext/mruby_ext.rake'
- load 'mrblib/mrblib.rake'
- load 'mrblib/ext/mrblib_ext.rake'
- load 'tools/mrbc/mrbc.rake'
-diff --git a/src/ext/mruby_ext.rake b/src/ext/mruby_ext.rake
-new file mode 100644
-index 0000000..b2fa120
---- /dev/null
-+++ b/src/ext/mruby_ext.rake
-@@ -0,0 +1,10 @@
-+dir = File.dirname(__FILE__).sub(%r|^\./|, '')
-+
-+MRuby.each_target do
-+  objs = Dir.glob(&quot;src/ext/*/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
-+  self.libmruby &lt;&lt; objs
-+
-+  file &quot;#{build_dir}/lib/libmruby_core.a&quot; =&gt; objs do |t|
-+    archive t.name, 'r', t.prerequisites
-+  end
-+end
-</pre>
+      <pre></pre>
 
   </body>
 </html>

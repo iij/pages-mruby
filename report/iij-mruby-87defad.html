@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 87defadd9f553d91ab4736feee35160e280eb31c
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 12:38:29 2012 +0900
-
-    add mrbgems_download, update tasks.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1833,87 +1825,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 87defadd9f553d91ab4736feee35160e280eb31c
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 12:38:29 2012 +0900
-
-    add mrbgems_download, update tasks.
-
-diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
-index e342f76..f7ecfae 100644
---- a/mrbgems/build_tasks.rb
-+++ b/mrbgems/build_tasks.rb
-@@ -13,15 +13,39 @@ def gem_make_flags
-   end
- end
- 
-+task :mrbgems_download do
-+  for_each_gem do |path, gemname|
-+    next if File.exist?(path)
-+    next if path.index(File.join(MRUBY_ROOT, 'mrbgems', 'g')) != 0
-+    url, rev = mrbgem_url(path, gemname)
-+    next if url.nil? or rev.nil?
-+
-+    sh &quot;cd #{File.dirname path} &amp;&amp; git clone #{url} &amp;&amp; cd #{path} &amp;&amp; git checkout #{rev}&quot;
-+  end
-+end
-+
-+task :mrbgems_update do
-+  for_each_gem do |path, gemname|
-+    next if path.index(File.join(MRUBY_ROOT, 'mrbgems', 'g')) != 0
-+    url, rev = mrbgem_url(path, gemname)
-+    next if url.nil? or rev.nil?
-+
-+    if File.exist?(File.join(path, '.git'))
-+      sh &quot;cd #{path} &amp;&amp; git pull &amp;&amp; git checkout #{rev}&quot;
-+    else
-+      sh &quot;cd #{File.dirname path} &amp;&amp; git clone #{url} &amp;&amp; cd #{path} &amp;&amp; git checkout #{rev}&quot;
-+    end
-+  end
-+end
-+
- task :mrbgems_all =&gt; [&quot;#{GEM_INIT}.a&quot;, :mrbgems_generate_gem_makefile_list] do
-   for_each_gem do |path, gemname|
-     sh &quot;#{MAKE} -C #{path} #{gem_make_flags}&quot;
-   end
- end
- 
--task :load_mrbgems_flags do
-+task :load_mrbgems_flags =&gt; :mrbgems_download do
-   for_each_gem do |path, gemname|
--    fetch_gem(gemname)
-     sh &quot;#{MAKE} gem-flags -C #{path} #{gem_make_flags}&quot;
-     CFLAGS &lt;&lt; File.read(&quot;#{path}/gem-cflags.tmp&quot;).chomp
-     LDFLAGS &lt;&lt; File.read(&quot;#{path}/gem-ldflags.tmp&quot;).chomp
-@@ -99,22 +123,15 @@ __EOF__
-   end
- end
- 
--def fetch_gem(gemname)
--  return if File.exist?(gemname)
--  gempath = File.join MRUBY_ROOT, 'mrbgems', 'g', gemname
--  return if File.exist?(gempath)
--
--  db = {}
-+def mrbgem_url(path, gemname)
-   IO.readlines(GEMS_DATABASE).each { |line|
-     name, url, rev = line.split(',').map{|s| s.strip }
-     rev = 'master' unless rev
--    db[name] = [url, rev]
-+    if name == gemname &amp;&amp; url &amp;&amp; url != ''
-+      return [url, rev]
-+    end
-   }
--
--  url, rev = db[gemname]
--  if url &amp;&amp; url != ''
--    sh &quot;cd #{File.dirname gempath} &amp;&amp; git clone #{url} &amp;&amp; cd #{gempath} &amp;&amp; git checkout #{rev}&quot;
--  end
-+  return nil
- end
- 
- def for_each_gem(&amp;block)
-</pre>
+      <pre></pre>
 
   </body>
 </html>

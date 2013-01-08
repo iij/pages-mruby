@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit a706a08e71bd933f0cb703d6ea788fca07d341f7
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 12:03:00 2012 +0900
-
-    update mrbges/build_tasks
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1833,63 +1825,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit a706a08e71bd933f0cb703d6ea788fca07d341f7
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Mon Dec 31 12:03:00 2012 +0900
-
-    update mrbges/build_tasks
-
-diff --git a/mrbgems/build_tasks.rb b/mrbgems/build_tasks.rb
-index 86019d1..920b374 100644
---- a/mrbgems/build_tasks.rb
-+++ b/mrbgems/build_tasks.rb
-@@ -21,6 +21,7 @@ end
- 
- task :load_mrbgems_flags do
-   for_each_gem do |path, gemname|
-+    fetch_gem(gemname)
-     sh &quot;#{MAKE} gem-flags -C #{path} #{gem_make_flags}&quot;
-     CFLAGS &lt;&lt; File.read(&quot;#{path}/gem-cflags.tmp&quot;).chomp
-     LDFLAGS &lt;&lt; File.read(&quot;#{path}/gem-ldflags.tmp&quot;).chomp
-@@ -98,16 +99,22 @@ __EOF__
-   end
- end
- 
--def fetch_gem(gempath)
--  gemname = File.basename(gempath)
-+def fetch_gem(gemname)
-+  return if File.exist?(gemname)
-+  gempath = File.join MRUBY_ROOT, 'mrbgems', 'g', gemname
-+  return if File.exist?(gempath)
-+
-+  db = {}
-   IO.readlines(GEMS_DATABASE).each { |line|
-     name, url, rev = line.split(',').map{|s| s.strip }
-     rev = 'master' unless rev
--    if name == gemname
--      sh &quot;cd #{File.dirname gempath} &amp;&amp; git clone #{url} &amp;&amp; git checkout #{rev}&quot;
--      break
--    end
-+    db[name] = [url, rev]
-   }
-+
-+  url, rev = db[gemname]
-+  if url &amp;&amp; url != ''
-+    sh &quot;cd #{File.dirname gempath} &amp;&amp; git clone #{url} &amp;&amp; git checkout #{rev}&quot;
-+  end
- end
- 
- def for_each_gem(&amp;block)
-@@ -118,7 +125,7 @@ def for_each_gem(&amp;block)
-       if File.exist? gempath
-         path = gempath
-       else
--        fetch_gem(gempath)
-+        fetch_gem(path)
-         path = gempath
-       end
-     end
-</pre>
+      <pre></pre>
 
   </body>
 </html>
