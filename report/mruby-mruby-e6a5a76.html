@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit e6a5a76885f60d5d858c1d87daf240a7dd90671e
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Fri Jan 4 15:28:59 2013 +0800
-
-    add mrb_mod_method_defined
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1629,74 +1621,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit e6a5a76885f60d5d858c1d87daf240a7dd90671e
-Author: skandhas &lt;skandhas@163.com&gt;
-Date:   Fri Jan 4 15:28:59 2013 +0800
-
-    add mrb_mod_method_defined
-
-diff --git a/src/class.c b/src/class.c
-index ace34eb..ea0db2b 100644
---- a/src/class.c
-+++ b/src/class.c
-@@ -1595,6 +1595,48 @@ mrb_mod_remove_cvar(mrb_state *mrb, mrb_value mod)
-  return mrb_nil_value();
- }
- 
-+/* 15.2.2.4.34 */
-+/*
-+ *  call-seq:
-+ *     mod.method_defined?(symbol)    -&gt; true or false
-+ *
-+ *  Returns +true+ if the named method is defined by
-+ *  _mod_ (or its included modules and, if _mod_ is a class,
-+ *  its ancestors). Public and protected methods are matched.
-+ *
-+ *     module A
-+ *       def method1()  end
-+ *     end
-+ *     class B
-+ *       def method2()  end
-+ *     end
-+ *     class C &lt; B
-+ *       include A
-+ *       def method3()  end
-+ *     end
-+ *
-+ *     A.method_defined? :method1    #=&gt; true
-+ *     C.method_defined? &quot;method1&quot;   #=&gt; true
-+ *     C.method_defined? &quot;method2&quot;   #=&gt; true
-+ *     C.method_defined? &quot;method3&quot;   #=&gt; true
-+ *     C.method_defined? &quot;method4&quot;   #=&gt; false
-+ */
-+
-+static mrb_value
-+mrb_mod_method_defined(mrb_state *mrb, mrb_value mod)
-+{
-+  mrb_value sym;
-+  mrb_sym id;
-+
-+  mrb_get_args(mrb, &quot;o&quot;, &amp;sym);
-+  id = mrb_sym_value(mrb,sym);
-+
-+  if (mrb_obj_respond_to(mrb_class_ptr(mod), id)) {
-+    return mrb_true_value();
-+  }
-+  return mrb_false_value();
-+}
-+
- static void
- remove_method(mrb_state *mrb, struct RClass *c, mrb_sym mid)
- {
-@@ -1750,6 +1792,7 @@ mrb_init_class(mrb_state *mrb)
-   mrb_define_method(mrb, mod, &quot;included&quot;, mrb_bob_init, ARGS_REQ(1));                     /* 15.2.2.4.29 */
-   mrb_define_method(mrb, mod, &quot;included_modules&quot;, mrb_mod_included_modules, ARGS_NONE()); /* 15.2.2.4.30 */
-   mrb_define_method(mrb, mod, &quot;instance_methods&quot;, mrb_mod_instance_methods, ARGS_ANY());  /* 15.2.2.4.33 */
-+  mrb_define_method(mrb, mod, &quot;method_defined?&quot;, mrb_mod_method_defined, ARGS_REQ(1));    /* 15.2.2.4.34 */
-   mrb_define_method(mrb, mod, &quot;module_eval&quot;, mrb_mod_module_eval, ARGS_ANY());            /* 15.2.2.4.35 */
-   mrb_define_method(mrb, mod, &quot;remove_class_variable&quot;, mrb_mod_remove_cvar, ARGS_REQ(1)); /* 15.2.2.4.39 */
-   mrb_define_method(mrb, mod, &quot;remove_method&quot;, mrb_mod_remove_method, ARGS_ANY());        /* 15.2.2.4.41 */
-</pre>
+      <pre></pre>
 
   </body>
 </html>
