@@ -32,20 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit b8a6c5ce0d453ce22e31d12265978931e52c1957
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Fri Jan 4 23:43:33 2013 +0900
-
-    Changed objccflags to objcflags
-    Added cxxflags, objcflags, asmflags to mrbgem.rake
-    Support .cxx and .cc as C++ source in mrbgems
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1837,95 +1827,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit b8a6c5ce0d453ce22e31d12265978931e52c1957
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Fri Jan 4 23:43:33 2013 +0900
-
-    Changed objccflags to objcflags
-    Added cxxflags, objcflags, asmflags to mrbgem.rake
-    Support .cxx and .cc as C++ source in mrbgems
-
-diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
-index fad92c5..65c80ab 100644
---- a/tasks/mruby_build.rake
-+++ b/tasks/mruby_build.rake
-@@ -20,7 +20,7 @@ module MRuby
-     attr_accessor :ld, :ldflags, :libs
-     attr_accessor :ar
-     attr_writer :cxx, :cxxflags
--    attr_writer :objcc, :objccflags
-+    attr_writer :objcc, :objcflags
-     attr_writer :asm, :asmflags
-     attr_accessor :gperf, :yacc
-     attr_accessor :cat, :git
-@@ -46,13 +46,13 @@ module MRuby
-     end
- 
-     def cxx; @cxx || cc; end
--    def cxxflags; @cxxflags.empty? ? cflags : @cxxflags; end
-+    def cxxflags; !@cxxflags || @cxxflags.empty? ? cflags : @cxxflags; end
- 
-     def objcc; @objcc || cc; end
--    def objccflags; @objccflags.empty? ? cflags : @objccflags; end
-+    def objcflags; !@objcflags || @objcflags.empty? ? cflags : @objcflags; end
- 
-     def asm; @asm || cc; end
--    def asmflags; @asmflags.empty? ? cflags : @asmflags; end
-+    def asmflags; !@asmflags || @asmflags.empty? ? cflags : @asmflags; end
- 
-     def ld; @ld || cc; end
- 
-diff --git a/tasks/mruby_gem_spec.rake b/tasks/mruby_gem_spec.rake
-index 59a536e..9f28b2b 100644
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@ -33,7 +33,7 @@ module MRuby
-         @name = name
-         @build = MRuby.build
-         @dir = Gem.processing_path
--        @cflags = []
-+        @cflags, @cxxflags, @objcflags, @asmflags = [], [], [], []
-         @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
-         @mruby_includes = [&quot;#{dir}/include&quot;]
-         @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
-@@ -113,9 +113,11 @@ __EOF__
-         obj_matcher = Regexp.new(&quot;^#{build_dir}/(.*)\\.o$&quot;)
-         {
-           '.c' =&gt; proc { |t| build.compile_c t.name, t.prerequisites.first, cflags },
--          '.cpp' =&gt; proc { |t| build.compile_cxx t.name, t.prerequisites.first, cflags },
--          '.m' =&gt; proc { |t| build.compile_objc t.name, t.prerequisites.first, cflags },
--          '.S' =&gt; proc { |t| build.compile_asm t.name, t.prerequisites.first, cflags }
-+          '.cpp' =&gt; proc { |t| build.compile_cxx t.name, t.prerequisites.first, cxxflags },
-+          '.cxx' =&gt; proc { |t| build.compile_cxx t.name, t.prerequisites.first, cxxflags },
-+          '.cc' =&gt; proc { |t| build.compile_cxx t.name, t.prerequisites.first, cxxflags },
-+          '.m' =&gt; proc { |t| build.compile_objc t.name, t.prerequisites.first, objcflags },
-+          '.S' =&gt; proc { |t| build.compile_asm t.name, t.prerequisites.first, asmflags }
-         }.each do |ext, compile|
-           rule obj_matcher =&gt; [
-             proc { |file|
-@@ -147,7 +149,7 @@ __EOF__
-           build.compile_mruby f, rbfiles, &quot;gem_mrblib_irep_#{funcname}&quot; unless rbfiles.empty?
-           f.puts &quot;void mrb_#{funcname}_gem_init(mrb_state *mrb);&quot;
-           f.puts &quot;void GENERATED_TMP_mrb_#{funcname}_gem_init(mrb_state *mrb) {&quot;
--          f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; unless objs.empty?
-+          f.puts &quot;  mrb_#{funcname}_gem_init(mrb);&quot; if objs != [&quot;#{build_dir}/gem_init.o&quot;]
-           f.puts &lt;&lt;__EOF__ unless rbfiles.empty?
-   mrb_load_irep(mrb, gem_mrblib_irep_#{funcname});
-   if (mrb-&gt;exc) {
-diff --git a/tasks/rules.rake b/tasks/rules.rake
-index f53f3bc..7d988cd 100644
---- a/tasks/rules.rake
-+++ b/tasks/rules.rake
-@@ -12,6 +12,8 @@ MRuby.each_target do |t|
-   {
-     '.c' =&gt; proc { |t| compile_c t.name, t.prerequisites.first },
-     '.cpp' =&gt; proc { |t| compile_cxx t.name, t.prerequisites.first },
-+    '.cxx' =&gt; proc { |t| compile_cxx t.name, t.prerequisites.first },
-+    '.cc' =&gt; proc { |t| compile_cxx t.name, t.prerequisites.first },
-     '.m' =&gt; proc { |t| compile_objc t.name, t.prerequisites.first },
-     '.S' =&gt; proc { |t| compile_asm t.name, t.prerequisites.first }
-   }.each do |ext, compile|
-</pre>
+      <pre></pre>
 
   </body>
 </html>
