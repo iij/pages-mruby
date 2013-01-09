@@ -33,34 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 4d02a7fd95bc40b04d31a55bfdf87732e2ada717
-Merge: 64e1e33 fe95409
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Sat Jan 5 07:01:43 2013 +0900
-
-    Merge branch 'master' into iij
-
-diff --cc tasks/mruby_gem_spec.rake
-index ec7aadf,9f28b2b..5f1269c
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@@ -33,9 -33,9 +33,9 @@@ module MRub
-          @name = name
-          @build = MRuby.build
-          @dir = Gem.processing_path
--         @cflags = []
-+         @cflags, @cxxflags, @objcflags, @asmflags = [], [], [], []
-          @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
- -        @mruby_includes = [&quot;#{dir}/include&quot;]
- +        @mruby_includes = [&quot;#{dir}/include&quot;, &quot;#{dir}/src&quot;]
-          @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
-          @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(@dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
-          @test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4383,30 +4358,7 @@ require.sh: 15: require.sh: ../../bin/mruby: not found</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 4d02a7fd95bc40b04d31a55bfdf87732e2ada717
-Merge: 64e1e33 fe95409
-Author: Tomoyuki Sahara &lt;tsahara@iij.ad.jp&gt;
-Date:   Sat Jan 5 07:01:43 2013 +0900
-
-    Merge branch 'master' into iij
-
-diff --cc tasks/mruby_gem_spec.rake
-index ec7aadf,9f28b2b..5f1269c
---- a/tasks/mruby_gem_spec.rake
-+++ b/tasks/mruby_gem_spec.rake
-@@@ -33,9 -33,9 +33,9 @@@ module MRub
-          @name = name
-          @build = MRuby.build
-          @dir = Gem.processing_path
--         @cflags = []
-+         @cflags, @cxxflags, @objcflags, @asmflags = [], [], [], []
-          @mruby_cflags, @mruby_ldflags, @mruby_libs = [], [], []
- -        @mruby_includes = [&quot;#{dir}/include&quot;]
- +        @mruby_includes = [&quot;#{dir}/include&quot;, &quot;#{dir}/src&quot;]
-          @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
-          @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map { |f| f.relative_path_from(@dir).to_s.pathmap(&quot;#{build_dir}/%X.o&quot;) }
-          @test_rbfiles = Dir.glob(&quot;#{dir}/test/*.rb&quot;)
-</pre>
+      <pre></pre>
 
   </body>
 </html>
