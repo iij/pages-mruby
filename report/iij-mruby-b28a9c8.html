@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit b28a9c84c84f31de11b215c2b394535820163e55
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Sat Jan 5 17:00:07 2013 +0900
-
-    Fixed build dependency
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -204,24 +196,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit b28a9c84c84f31de11b215c2b394535820163e55
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Sat Jan 5 17:00:07 2013 +0900
-
-    Fixed build dependency
-
-diff --git a/tasks/rules.rake b/tasks/rules.rake
-index 7d988cd..beda2a8 100644
---- a/tasks/rules.rake
-+++ b/tasks/rules.rake
-@@ -1,5 +1,5 @@
- def get_dependencies(file)
--  file = file.pathmap('%n.d') unless File.extname(file) == '.d'
-+  file = file.ext('d') unless File.extname(file) == '.d'
-   if File.exists?(file)
-     File.read(file).gsub(&quot;\\\n &quot;, &quot;&quot;).scan(/^\S+:\s+(.+)$/).flatten.map {|s| s.split(' ') }.flatten
-   else
-</pre>
+      <pre></pre>
 
   </body>
 </html>
