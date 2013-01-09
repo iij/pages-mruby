@@ -1,0 +1,397 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 3335025)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/3335025" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+        
+      <li>
+      <pre>commit 33350251ae3d8d683ac4b4c462e7f8aa690c25da
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Wed Jan 9 22:40:08 2013 +0900
+
+    Added conf.bins for defining bulding binaries
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    <table border="1">
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Build-Status</th>
+        
+          <th>Mrbtest-Status</th>
+        
+          <th>Total</th>
+        
+          <th>OK</th>
+        
+          <th>KO</th>
+        
+          <th>Crash</th>
+        
+          <th>Fail</th>
+        
+          <th>Msg</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment</h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-3335025)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/src/re.o" -c "src/re.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm
+</textarea></td>
+          <td><textarea>src/dump.c: In function `calc_crc_section':
+src/dump.c:480: warning: `result' might be used uninitialized in this function
+ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-3335025)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/mruby-mruby-3335025/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 18.792591 seconds
+</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 33350251ae3d8d683ac4b4c462e7f8aa690c25da
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Wed Jan 9 22:40:08 2013 +0900
+
+    Added conf.bins for defining bulding binaries
+
+diff --git a/Rakefile b/Rakefile
+index d31af96..d067a22 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -27,25 +27,21 @@ load 'test/mrbtest.rake'
+ # generic build targets, rules
+ task :default =&gt; :all
+ 
+-binfiles = [exefile('bin/mruby'), exefile('bin/mirb'), exefile('bin/mrbc')]
+-
+-desc &quot;build all targets, install (locally) in-repo&quot;
+-task :all =&gt; binfiles + MRuby.targets.map { |t| [exefile(&quot;#{t.build_dir}/bin/mruby&quot;), exefile(&quot;#{t.build_dir}/bin/mirb&quot;), exefile(&quot;#{t.build_dir}/bin/mrbc&quot;)] }.flatten
+-
+-file exefile('bin/mruby') =&gt; exefile('build/host/bin/mruby') do |t|
+-  FileUtils.cp t.prerequisites.first, t.name
+-end
++binfiles = MRuby.targets['host'].bins.map do |bin|
++  install_path = exefile(&quot;bin/#{bin}&quot;)
++  
++  file install_path =&gt; exefile(&quot;build/host/bin/#{bin}&quot;) do |t|
++    FileUtils.cp t.prerequisites.first, t.name
++  end
+ 
+-file exefile('bin/mirb') =&gt; exefile('build/host/bin/mirb') do |t|
+-  FileUtils.cp t.prerequisites.first, t.name
++  install_path
+ end
+ 
+-file exefile('bin/mrbc') =&gt; exefile('build/host/bin/mrbc') do |t|
+-  FileUtils.cp t.prerequisites.first, t.name
+-end
++desc &quot;build all targets, install (locally) in-repo&quot;
++task :all =&gt; binfiles + MRuby.targets.values.map { |t| [exefile(&quot;#{t.build_dir}/bin/mruby&quot;), exefile(&quot;#{t.build_dir}/bin/mirb&quot;), exefile(&quot;#{t.build_dir}/bin/mrbc&quot;)] }.flatten
+ 
+ desc &quot;run all mruby tests&quot;
+-task :test =&gt; MRuby.targets.map { |t| exefile(&quot;#{t.build_dir}/test/mrbtest&quot;) } do
++task :test =&gt; MRuby.targets.values.map { |t| exefile(&quot;#{t.build_dir}/test/mrbtest&quot;) } do
+   sh &quot;#{filename exefile('build/host/test/mrbtest')}&quot;
+   if MRuby.targets.count &gt; 1
+     puts &quot;\nYou should run #{MRuby.targets.map{ |t| t.name == 'host' ? nil : &quot;#{t.build_dir}/test/mrbtest&quot; }.compact.join(', ')} on target device.&quot;
+@@ -54,7 +50,7 @@ end
+ 
+ desc &quot;clean all built and in-repo installed artifacts&quot;
+ task :clean do
+-  MRuby.targets.each do |t|
++  MRuby.each_target do |t|
+     FileUtils.rm_rf t.build_dir
+   end
+   FileUtils.rm_f binfiles
+diff --git a/build_config.rb b/build_config.rb
+index 93ccc1a..4e80a25 100644
+--- a/build_config.rb
++++ b/build_config.rb
+@@ -2,6 +2,7 @@ MRuby::Build.new do |conf|
+   conf.cc = ENV['CC'] || 'gcc'
+   conf.ld = ENV['LD'] || 'gcc'
+   conf.ar = ENV['AR'] || 'ar'
++  # conf.bins = %w(mrbc mruby mirb)
+   # conf.cxx = conf.cc
+   # conf.objcc = conf.cc
+   # conf.asm = conf.cc
+@@ -27,6 +28,7 @@ MRuby::CrossBuild.new('i386') do |conf|
+   conf.cc = ENV['CC'] || 'gcc'
+   conf.ld = ENV['LD'] || 'gcc'
+   conf.ar = ENV['AR'] || 'ar'
++  # conf.bins = %w(mrbc mruby mirb)
+   # conf.cxx = 'gcc'
+   # conf.objcc = 'gcc'
+   # conf.asm = 'gcc'
+diff --git a/doc/compile/README.md b/doc/compile/README.md
+index e68c0d6..cec70e6 100644
+--- a/doc/compile/README.md
++++ b/doc/compile/README.md
+@@ -53,6 +53,7 @@ The following options can be configurated:
+ * conf.objccflags (Object compiler flags)
+ * conf.asmflags (Assembler flags)
+ * conf.gem (A GEM which should be integrated - can be set several times)
++* conf.bins (Build binaries)
+ 
+ To compile just call ```./minirake``` inside of the mruby source root. To
+ generate the test tool environment call ```./minirake test```. To clean
+diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
+index d5dc075..de9e556 100644
+--- a/tasks/mruby_build.rake
++++ b/tasks/mruby_build.rake
+@@ -3,11 +3,11 @@ module MRuby
+     attr_accessor :build
+ 
+     def targets
+-      @targets ||= []
++      @targets ||= {}
+     end
+ 
+     def each_target(&amp;block)
+-      @targets.each do |target|
++      @targets.each do |key, target|
+         target.instance_eval(&amp;block)
+       end
+     end
+@@ -22,6 +22,7 @@ module MRuby
+     attr_writer :cxx, :cxxflags
+     attr_writer :objcc, :objcflags
+     attr_writer :asm, :asmflags
++    attr_accessor :bins
+     attr_accessor :gperf, :yacc
+     attr_accessor :cat, :git
+     attr_reader :root, :gems
+@@ -38,9 +39,11 @@ module MRuby
+       @yacc, @gperf = 'bison', 'gperf'
+       @cat, @git = 'cat', 'git'
+ 
++      @bins = %w(mruby mrbc mirb)
++
+       @gems, @libmruby = [], []
+ 
+-      MRuby.targets &lt;&lt; self
++      MRuby.targets[name.to_s] = self
+       MRuby.build = self
+       instance_eval(&amp;block)
+     end
+diff --git a/tools/mirb/mirb.rake b/tools/mirb/mirb.rake
+index 52f3344..958ebe7 100644
+--- a/tools/mirb/mirb.rake
++++ b/tools/mirb/mirb.rake
+@@ -1,10 +1,12 @@
+ dir = File.dirname(__FILE__).sub(%r|^\./|, '')
+ 
+ MRuby.each_target do
+-  exec = exefile(&quot;#{build_dir}/bin/mirb&quot;)
+-  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  if bins.select { |s| s.to_s == 'mirb' }
++    exec = exefile(&quot;#{build_dir}/bin/mirb&quot;)
++    objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
+ 
+-  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
+-    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
++    file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
++      link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
++    end
+   end
+ end
+diff --git a/tools/mrbc/mrbc.rake b/tools/mrbc/mrbc.rake
+index cf356ba..bff8831 100644
+--- a/tools/mrbc/mrbc.rake
++++ b/tools/mrbc/mrbc.rake
+@@ -1,10 +1,12 @@
+ dir = File.dirname(__FILE__).sub(%r|^\./|, '')
+ 
+ MRuby.each_target do
+-  exec = exefile(&quot;#{build_dir}/bin/mrbc&quot;)
+-  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  if bins.select { |s| s.to_s == 'mrbc' }
++    exec = exefile(&quot;#{build_dir}/bin/mrbc&quot;)
++    objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
+ 
+-  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby_core.a&quot;] do |t|
+-    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
++    file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby_core.a&quot;] do |t|
++      link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
++    end
+   end
+ end
+diff --git a/tools/mruby/mruby.rake b/tools/mruby/mruby.rake
+index 162e8d1..7842c42 100644
+--- a/tools/mruby/mruby.rake
++++ b/tools/mruby/mruby.rake
+@@ -1,10 +1,12 @@
+ dir = File.dirname(__FILE__).sub(%r|^\./|, '')
+ 
+ MRuby.each_target do
+-  exec = exefile(&quot;#{build_dir}/bin/mruby&quot;)
+-  objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
++  if bins.select { |s| s.to_s == 'mruby' }
++    exec = exefile(&quot;#{build_dir}/bin/mruby&quot;)
++    objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
+ 
+-  file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
+-    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
++    file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
++      link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
++    end
+   end
+ end
+</pre>
+
+  </body>
+</html>
