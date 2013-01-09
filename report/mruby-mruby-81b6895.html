@@ -1,0 +1,1643 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 81b6895)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/81b6895" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+        
+      <li>
+      <pre>commit 81b6895885f76c5638628471c4d11d020a555d55
+Merge: 0b337ac 2c6d34f
+Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
+Date:   Wed Jan 9 13:29:59 2013 +0900
+
+    Merge branch 'master' of github.com:mruby/mruby into pr-strict-error-checking
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    <table border="1">
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Build-Status</th>
+        
+          <th>Mrbtest-Status</th>
+        
+          <th>Total</th>
+        
+          <th>OK</th>
+        
+          <th>KO</th>
+        
+          <th>Crash</th>
+        
+          <th>Fail</th>
+        
+          <th>Msg</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos32bit">centos32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos64bit">centos64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd32bit">freebsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd64bit">freebsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-lion">mac-lion</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-ppc">mac-ppc</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd32bit">netbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd64bit">netbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd32bit">openbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd64bit">openbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu32bit">ubuntu32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu64bit">ubuntu64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment</h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for amd64-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-lion</td>
+          <td><b>gcc</b><br/><pre>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-apple-darwin11.3.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-ppc</td>
+          <td><b>gcc</b><br/><pre>powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+Copyright (C) 2005 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for powerpc-apple-darwin9.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386--netbsdelf
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64--netbsd
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i686-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="centos32bit">centos32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/etc.o" "build/host/src/crc.o" "build/host/src/numeric.o" "build/host/src/class.o" "build/host/src/range.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/variable.o" "build/host/src/state.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/load.o" "build/host/src/regparse.o" "build/host/src/regexec.o" "build/host/src/sprintf.o" "build/host/src/gc.o" "build/host/src/symbol.o" "build/host/src/error.o" "build/host/src/hash.o" "build/host/src/enum.o" "build/host/src/time.o" "build/host/src/kernel.o" "build/host/src/string.o" "build/host/src/re.o" "build/host/src/pool.o" "build/host/src/dump.o" "build/host/src/st.o" "build/host/src/regcomp.o" "build/host/src/regerror.o" "build/host/src/print.o" "build/host/src/init_ext.o" "build/host/src/vm.o" "build/host/src/regenc.o" "build/host/src/struct.o" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/init.o" "build/host/src/object.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/etc.o" "build/host/src/crc.o" "build/host/src/numeric.o" "build/host/src/class.o" "build/host/src/range.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/variable.o" "build/host/src/state.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/load.o" "build/host/src/regparse.o" "build/host/src/regexec.o" "build/host/src/sprintf.o" "build/host/src/gc.o" "build/host/src/symbol.o" "build/host/src/error.o" "build/host/src/hash.o" "build/host/src/enum.o" "build/host/src/time.o" "build/host/src/kernel.o" "build/host/src/string.o" "build/host/src/re.o" "build/host/src/pool.o" "build/host/src/dump.o" "build/host/src/st.o" "build/host/src/regcomp.o" "build/host/src/regerror.o" "build/host/src/print.o" "build/host/src/init_ext.o" "build/host/src/vm.o" "build/host/src/regenc.o" "build/host/src/struct.o" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/init.o" "build/host/src/object.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/load.c: In function 'mrb_read_irep_file':
+src/load.c:141: warning: 'hex2' may be used uninitialized in this function
+src/load.c:141: note: 'hex2' was declared here
+ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-5170-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.900074 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="centos64bit">centos64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/regerror.o" "build/host/src/gc.o" "build/host/src/time.o" "build/host/src/print.o" "build/host/src/numeric.o" "build/host/src/hash.o" "build/host/src/proc.o" "build/host/src/cdump.o" "build/host/src/error.o" "build/host/src/regcomp.o" "build/host/src/re.o" "build/host/src/dump.o" "build/host/src/init_ext.o" "build/host/src/compar.o" "build/host/src/variable.o" "build/host/src/state.o" "build/host/src/st.o" "build/host/src/symbol.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/regenc.o" "build/host/src/crc.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/enum.o" "build/host/src/init.o" "build/host/src/struct.o" "build/host/src/kernel.o" "build/host/src/math.o" "build/host/src/array.o" "build/host/src/regexec.o" "build/host/src/pool.o" "build/host/src/string.o" "build/host/src/class.o" "build/host/src/object.o" "build/host/src/vm.o" "build/host/src/etc.o" "build/host/src/range.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/regerror.o" "build/host/src/gc.o" "build/host/src/time.o" "build/host/src/print.o" "build/host/src/numeric.o" "build/host/src/hash.o" "build/host/src/proc.o" "build/host/src/cdump.o" "build/host/src/error.o" "build/host/src/regcomp.o" "build/host/src/re.o" "build/host/src/dump.o" "build/host/src/init_ext.o" "build/host/src/compar.o" "build/host/src/variable.o" "build/host/src/state.o" "build/host/src/st.o" "build/host/src/symbol.o" "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/regenc.o" "build/host/src/crc.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/enum.o" "build/host/src/init.o" "build/host/src/struct.o" "build/host/src/kernel.o" "build/host/src/math.o" "build/host/src/array.o" "build/host/src/regexec.o" "build/host/src/pool.o" "build/host/src/string.o" "build/host/src/class.o" "build/host/src/object.o" "build/host/src/vm.o" "build/host/src/etc.o" "build/host/src/range.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/load.c: In function 'mrb_read_irep_file':
+src/load.c:141: warning: 'hex2' may be used uninitialized in this function
+src/load.c:141: note: 'hex2' was declared here
+ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-25142-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 1.723202 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd32bit">freebsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:442: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:450: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+ar: warning: creating build/host/lib/libmruby_core.a
+ar: warning: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135845-61045-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.28069 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd64bit">freebsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:442: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:450: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+ar: warning: creating build/host/lib/libmruby_core.a
+ar: warning: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/usr/home/mruby/mruby-test-tool/tmp/20130109135846-61012-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.716079 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-lion">mac-lion</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>ar: creating archive build/host/lib/libmruby_core.a
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
+ar: creating archive build/host/lib/libmruby.a
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135846-31609-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 2.039745 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-ppc">mac-ppc</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>In file included from src/parse.y:3496:
+src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
+ar: creating archive build/host/lib/libmruby_core.a
+ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
+ar: creating archive build/host/lib/libmruby.a
+ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130109135845-68943-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 3.888325 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd32bit">netbsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-4267-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.798236 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd64bit">netbsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-8294-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.764369 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd32bit">openbsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:442: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:450: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+ar: creating build/host/lib/libmruby_core.a
+build/host/tools/mrbc/mrbc.o(.text+0x4b): In function `get_outfilename':
+tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/lib/libmruby_core.a(dump.o)(.text+0x9b): In function `get_pool_block_size':
+src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+ar: creating build/host/lib/libmruby.a
+build/host/tools/mruby/mruby.o(.text+0x853): In function `main':
+tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mruby/mruby.o(.text+0x799):tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x816): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()
+build/host/tools/mirb/mirb.o(.text+0x4f4): In function `main':
+tools/mirb/mirb.c:213: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mirb/mirb.o(.text+0x275):tools/mirb/mirb.c:204: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x816): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135848-9672-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.421225 seconds</textarea></td>
+          <td><textarea>build/host/lib/libmruby.a(string.o)(.text+0x42d6): In function `mrb_str_dump':
+src/string.c:2871: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd64bit">openbsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/array.o" "build/host/src/cdump.o" "build/host/src/class.o" "build/host/src/codegen.o" "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/dump.o" "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/hash.o" "build/host/src/init.o" "build/host/src/init_ext.o" "build/host/src/kernel.o" "build/host/src/load.o" "build/host/src/math.o" "build/host/src/numeric.o" "build/host/src/object.o" "build/host/src/pool.o" "build/host/src/print.o" "build/host/src/proc.o" "build/host/src/range.o" "build/host/src/re.o" "build/host/src/regcomp.o" "build/host/src/regenc.o" "build/host/src/regerror.o" "build/host/src/regexec.o" "build/host/src/regparse.o" "build/host/src/sprintf.o" "build/host/src/st.o" "build/host/src/state.o" "build/host/src/string.o" "build/host/src/struct.o" "build/host/src/symbol.o" "build/host/src/time.o" "build/host/src/variable.o" "build/host/src/vm.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:442: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:450: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+ar: creating build/host/lib/libmruby_core.a
+build/host/tools/mrbc/mrbc.o(.text+0x4d): In function `get_outfilename':
+tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/lib/libmruby_core.a(dump.o)(.text+0x5d): In function `get_pool_block_size':
+src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+ar: creating build/host/lib/libmruby.a
+build/host/tools/mruby/mruby.o(.text+0x722): In function `main':
+tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mruby/mruby.o(.text+0x67c):tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()
+build/host/tools/mirb/mirb.o(.text+0x411): In function `main':
+tools/mirb/mirb.c:213: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mirb/mirb.o(.text+0x224):tools/mirb/mirb.c:210: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-11981-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.544702 seconds</textarea></td>
+          <td><textarea>build/host/lib/libmruby.a(string.o)(.text+0x4da1): In function `mrb_str_dump':
+src/string.c:2871: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu32bit">ubuntu32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/pool.o" "build/host/src/regerror.o" "build/host/src/kernel.o" "build/host/src/codegen.o" "build/host/src/state.o" "build/host/src/gc.o" "build/host/src/re.o" "build/host/src/init.o" "build/host/src/regcomp.o" "build/host/src/class.o" "build/host/src/array.o" "build/host/src/symbol.o" "build/host/src/print.o" "build/host/src/etc.o" "build/host/src/enum.o" "build/host/src/proc.o" "build/host/src/time.o" "build/host/src/regexec.o" "build/host/src/numeric.o" "build/host/src/cdump.o" "build/host/src/vm.o" "build/host/src/init_ext.o" "build/host/src/st.o" "build/host/src/object.o" "build/host/src/math.o" "build/host/src/regparse.o" "build/host/src/load.o" "build/host/src/regenc.o" "build/host/src/range.o" "build/host/src/variable.o" "build/host/src/error.o" "build/host/src/dump.o" "build/host/src/crc.o" "build/host/src/struct.o" "build/host/src/sprintf.o" "build/host/src/compar.o" "build/host/src/string.o" "build/host/src/hash.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/pool.o" "build/host/src/regerror.o" "build/host/src/kernel.o" "build/host/src/codegen.o" "build/host/src/state.o" "build/host/src/gc.o" "build/host/src/re.o" "build/host/src/init.o" "build/host/src/regcomp.o" "build/host/src/class.o" "build/host/src/array.o" "build/host/src/symbol.o" "build/host/src/print.o" "build/host/src/etc.o" "build/host/src/enum.o" "build/host/src/proc.o" "build/host/src/time.o" "build/host/src/regexec.o" "build/host/src/numeric.o" "build/host/src/cdump.o" "build/host/src/vm.o" "build/host/src/init_ext.o" "build/host/src/st.o" "build/host/src/object.o" "build/host/src/math.o" "build/host/src/regparse.o" "build/host/src/load.o" "build/host/src/regenc.o" "build/host/src/range.o" "build/host/src/variable.o" "build/host/src/error.o" "build/host/src/dump.o" "build/host/src/crc.o" "build/host/src/struct.o" "build/host/src/sprintf.o" "build/host/src/compar.o" "build/host/src/string.o" "build/host/src/hash.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-7810-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.534736 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu64bit">ubuntu64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/symbol.o" -c "src/symbol.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/object.o" -c "src/object.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/struct.o" -c "src/struct.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/kernel.o" -c "src/kernel.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/regenc.o" -c "src/regenc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/st.o" -c "src/st.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/sprintf.o" -c "src/sprintf.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/variable.o" -c "src/variable.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/regerror.o" -c "src/regerror.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/etc.o" -c "src/etc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/init_ext.o" -c "src/init_ext.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/enum.o" -c "src/enum.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/regparse.o" -c "src/regparse.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/init.o" -c "src/init.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/regexec.o" -c "src/regexec.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/dump.o" -c "src/dump.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/gc.o" -c "src/gc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/string.o" -c "src/string.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/time.o" -c "src/time.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/error.o" -c "src/error.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/hash.o" -c "src/hash.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/src/re.o" -c "src/re.c"
+"bison" -o "build/host/src/y.tab.c" "src/parse.y"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -I"src" -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"ar" r "build/host/lib/libmruby_core.a" "build/host/src/vm.o" "build/host/src/print.o" "build/host/src/symbol.o" "build/host/src/object.o" "build/host/src/struct.o" "build/host/src/range.o" "build/host/src/kernel.o" "build/host/src/regenc.o" "build/host/src/cdump.o" "build/host/src/numeric.o" "build/host/src/st.o" "build/host/src/regcomp.o" "build/host/src/load.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/regerror.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/etc.o" "build/host/src/init_ext.o" "build/host/src/enum.o" "build/host/src/state.o" "build/host/src/codegen.o" "build/host/src/math.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/class.o" "build/host/src/crc.o" "build/host/src/gc.o" "build/host/src/string.o" "build/host/src/time.o" "build/host/src/error.o" "build/host/src/proc.o" "build/host/src/array.o" "build/host/src/hash.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+"gcc" -o "build/host/bin/mrbc" -lm  "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+"ar" r "build/host/lib/libmruby.a" "build/host/src/vm.o" "build/host/src/print.o" "build/host/src/symbol.o" "build/host/src/object.o" "build/host/src/struct.o" "build/host/src/range.o" "build/host/src/kernel.o" "build/host/src/regenc.o" "build/host/src/cdump.o" "build/host/src/numeric.o" "build/host/src/st.o" "build/host/src/regcomp.o" "build/host/src/load.o" "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/regerror.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/etc.o" "build/host/src/init_ext.o" "build/host/src/enum.o" "build/host/src/state.o" "build/host/src/codegen.o" "build/host/src/math.o" "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/class.o" "build/host/src/crc.o" "build/host/src/gc.o" "build/host/src/string.o" "build/host/src/time.o" "build/host/src/error.o" "build/host/src/proc.o" "build/host/src/array.o" "build/host/src/hash.o" "build/host/src/re.o" "build/host/src/y.tab.o" "build/host/mrblib/mrblib.o"
+"gcc" -o "build/host/bin/mruby" -lm  "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a" -lm
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+"gcc" -o "build/host/bin/mirb" -lm  "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a" -lm</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130109135845-10985-build/mruby-mruby-81b6895/include" -o "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
+"build/host/test/mrbtest"
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 510
+   OK: 510
+   KO: 0
+Crash: 0
+ Time: 0.946471 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a></h2>
+      <pre>commit 81b6895885f76c5638628471c4d11d020a555d55
+Merge: 0b337ac 2c6d34f
+Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
+Date:   Wed Jan 9 13:29:59 2013 +0900
+
+    Merge branch 'master' of github.com:mruby/mruby into pr-strict-error-checking
+
+</pre>
+
+  </body>
+</html>
