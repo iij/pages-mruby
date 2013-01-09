@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit ce1d3fd3c7a07e32df0ebdcef30677937e54f9e9
-Author: Akira Yumiyama &lt;yumiyama.akira@gmail.com&gt;
-Date:   Sat Jan 5 12:40:48 2013 +0900
-
-    mruby link options add &quot;.flatten.uniq&quot;
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4299,28 +4291,7 @@ POSIX test result: OK
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit ce1d3fd3c7a07e32df0ebdcef30677937e54f9e9
-Author: Akira Yumiyama &lt;yumiyama.akira@gmail.com&gt;
-Date:   Sat Jan 5 12:40:48 2013 +0900
-
-    mruby link options add &quot;.flatten.uniq&quot;
-
-diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
-index 87b7099..2efff9c 100644
---- a/tasks/mruby_build.rake
-+++ b/tasks/mruby_build.rake
-@@ -139,8 +139,8 @@ module MRuby
-     
-     def link(outfile, objfiles, flags=[], libs=[])
-       FileUtils.mkdir_p File.dirname(outfile)
--      flags = [ldflags, gems.map { |g| g.mruby_ldflags }, flags]
--      libs = [libs, gems.map { |g| g.mruby_libs }, self.libs]
-+      flags = [ldflags, gems.map { |g| g.mruby_ldflags }, flags].flatten.uniq
-+      libs = [libs, gems.map { |g| g.mruby_libs }, self.libs].flatten.uniq
-       sh &quot;#{filename ld} -o #{filename outfile} #{flags.join(' ')} #{filenames objfiles} #{libs.flatten.join(' ')}&quot;
-     end
-     
-</pre>
+      <pre></pre>
 
   </body>
 </html>

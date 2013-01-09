@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit f6bc6b7692b307b411767ebb748aa428728c4e61
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 15:12:42 2013 +0900
-
-    Add mruby_ldflags when tools/mruby and tools/mrbc link archive files
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -205,41 +197,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit f6bc6b7692b307b411767ebb748aa428728c4e61
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 15:12:42 2013 +0900
-
-    Add mruby_ldflags when tools/mruby and tools/mrbc link archive files
-
-diff --git a/tools/mrbc/mrbc.rake b/tools/mrbc/mrbc.rake
-index 4cca63b..c28d652 100644
---- a/tools/mrbc/mrbc.rake
-+++ b/tools/mrbc/mrbc.rake
-@@ -5,6 +5,6 @@ MRuby.each_target do
-   objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
- 
-   file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby_core.a&quot;] do |t|
--    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
-+    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
-   end
--end
-\ No newline at end of file
-+end
-diff --git a/tools/mruby/mruby.rake b/tools/mruby/mruby.rake
-index 4159fad..162e8d1 100644
---- a/tools/mruby/mruby.rake
-+++ b/tools/mruby/mruby.rake
-@@ -5,6 +5,6 @@ MRuby.each_target do
-   objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
- 
-   file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
--    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
-+    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
-   end
--end
-\ No newline at end of file
-+end
-</pre>
+      <pre></pre>
 
   </body>
 </html>
