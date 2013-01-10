@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit c38b8776c84999000dea01f7e92b1c96af93207a
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 17:33:39 2013 +0900
-
-    Add mruby_ldflags to mrbtest
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1732,33 +1724,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit c38b8776c84999000dea01f7e92b1c96af93207a
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 17:33:39 2013 +0900
-
-    Add mruby_ldflags to mrbtest
-
-diff --git a/test/mrbtest.rake b/test/mrbtest.rake
-index 1d416df..cd560d2 100644
---- a/test/mrbtest.rake
-+++ b/test/mrbtest.rake
-@@ -11,7 +11,7 @@ MRuby.each_target do
-   objs = [&quot;#{build_dir}/#{dir}/driver.o&quot;, mlib]
- 
-   file exec =&gt; objs + gems.map{ |g| g.testlib } + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
--    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
-+    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
-   end
- 
-   file mlib =&gt; [clib]
-@@ -29,4 +29,4 @@ MRuby.each_target do
-       f.puts &quot;}&quot;
-     end
-   end
--end
-\ No newline at end of file
-+end
-</pre>
+      <pre></pre>
 
   </body>
 </html>

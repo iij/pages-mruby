@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit d48bb813d8a4a7b1f1ea87f9187f231ff22af24a
-Author: Masamitsu MURASE &lt;masamitsu.murase@gmail.com&gt;
-Date:   Sun Jan 6 06:23:10 2013 +0900
-
-    `unless` without `else` should return nil if the condition is true.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -192,31 +184,7 @@ Command Failed: ["gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit d48bb813d8a4a7b1f1ea87f9187f231ff22af24a
-Author: Masamitsu MURASE &lt;masamitsu.murase@gmail.com&gt;
-Date:   Sun Jan 6 06:23:10 2013 +0900
-
-    `unless` without `else` should return nil if the condition is true.
-
-diff --git a/src/codegen.c b/src/codegen.c
-index 0451bb9..c1a6232 100644
---- a/src/codegen.c
-+++ b/src/codegen.c
-@@ -1099,8 +1099,12 @@ codegen(codegen_scope *s, node *tree, int val)
-       genop(s, MKOP_AsBx(OP_JMPNOT, cursp(), 0));
- 
-       codegen(s, tree-&gt;cdr-&gt;car, val);
-+      if (val &amp;&amp; !(tree-&gt;cdr-&gt;car)) {
-+        genop(s, MKOP_A(OP_LOADNIL, cursp()));
-+        push();
-+      }
-       if (e) {
--        if (val &amp;&amp; tree-&gt;cdr-&gt;car) pop();
-+        if (val) pop();
-         pos2 = new_label(s);
-         genop(s, MKOP_sBx(OP_JMP, 0));
-         dispatch(s, pos1);
-</pre>
+      <pre></pre>
 
   </body>
 </html>
