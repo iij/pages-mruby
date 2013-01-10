@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 1cd7c9fac5274cf1c0207ab15669933a3352680b
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 17:20:01 2013 +0900
-
-    Fix mrbgem options 689#issuecomment-11911431
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1732,39 +1724,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 1cd7c9fac5274cf1c0207ab15669933a3352680b
-Author: MATSUMOTO Ryosuke &lt;matsumoto_r@net.ist.i.kyoto-u.ac.jp&gt;
-Date:   Sat Jan 5 17:20:01 2013 +0900
-
-    Fix mrbgem options 689#issuecomment-11911431
-
-diff --git a/tools/mirb/mirb.rake b/tools/mirb/mirb.rake
-index 045f6ab..52f3344 100644
---- a/tools/mirb/mirb.rake
-+++ b/tools/mirb/mirb.rake
-@@ -5,6 +5,6 @@ MRuby.each_target do
-   objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
- 
-   file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby.a&quot;] do |t|
--    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
-+    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
-   end
--end
-\ No newline at end of file
-+end
-diff --git a/tools/mrbc/mrbc.rake b/tools/mrbc/mrbc.rake
-index c28d652..cf356ba 100644
---- a/tools/mrbc/mrbc.rake
-+++ b/tools/mrbc/mrbc.rake
-@@ -5,6 +5,6 @@ MRuby.each_target do
-   objs = Dir.glob(&quot;#{dir}/*.{c}&quot;).map { |f| f.pathmap(&quot;#{build_dir}/%X.o&quot;) }
- 
-   file exec =&gt; objs + [&quot;#{build_dir}/lib/libmruby_core.a&quot;] do |t|
--    link t.name, t.prerequisites, gems.map { |g| g.mruby_ldflags }, gems.map { |g| g.mruby_libs }
-+    link t.name, t.prerequisites, [], gems.map { |g| g.mruby_libs }
-   end
- end
-</pre>
+      <pre></pre>
 
   </body>
 </html>
