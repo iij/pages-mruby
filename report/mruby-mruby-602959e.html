@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 602959ec7f8e7a681a419aee4d1c8b0e07f8fb5e
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Mon Jan 7 11:57:43 2013 +0900
-
-    Compact flags for GC
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -311,30 +303,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 602959ec7f8e7a681a419aee4d1c8b0e07f8fb5e
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Mon Jan 7 11:57:43 2013 +0900
-
-    Compact flags for GC
-
-diff --git a/include/mruby.h b/include/mruby.h
-index 197961c..f9df610 100644
---- a/include/mruby.h
-+++ b/include/mruby.h
-@@ -121,9 +121,9 @@ typedef struct mrb_state {
-   size_t gc_threshold;
-   int gc_interval_ratio;
-   int gc_step_ratio;
--  int gc_disabled;
--  int gc_full;
--  int is_generational_gc_mode;
-+  unsigned int gc_disabled:1;
-+  unsigned int gc_full:1;
-+  unsigned int is_generational_gc_mode:1;
-   size_t majorgc_old_threshold;
-   struct alloca_header *mems;
- 
-</pre>
+      <pre></pre>
 
   </body>
 </html>

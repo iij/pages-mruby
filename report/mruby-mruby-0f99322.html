@@ -32,19 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 0f99322f27338d759b86551363a7275e53627a72
-Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
-Date:   Mon Jan 7 15:28:05 2013 +0900
-
-    gc.c: Enable DEBUG(x) if GC_DEBUG is defined.
-    vm.c: Enable DEBUG(x) if VM_DEBUG is defined.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -312,46 +303,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 0f99322f27338d759b86551363a7275e53627a72
-Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
-Date:   Mon Jan 7 15:28:05 2013 +0900
-
-    gc.c: Enable DEBUG(x) if GC_DEBUG is defined.
-    vm.c: Enable DEBUG(x) if VM_DEBUG is defined.
-
-diff --git a/src/gc.c b/src/gc.c
-index 4725359..816f258 100644
---- a/src/gc.c
-+++ b/src/gc.c
-@@ -147,8 +147,10 @@ gettimeofday_time(void)
- #ifdef GC_DEBUG
- #include &lt;assert.h&gt;
- #define gc_assert(expect) assert(expect)
-+#define DEBUG(x) (x)
- #else
- #define gc_assert(expect) ((void)0)
-+#define DEBUG(x)
- #endif
- 
- #define GC_STEP_SIZE 1024
-diff --git a/src/vm.c b/src/vm.c
-index b84158d..8ae28ef 100644
---- a/src/vm.c
-+++ b/src/vm.c
-@@ -49,7 +49,11 @@ The value below allows about 60000 recursive calls in the simplest case. */
- #define MRB_STACK_MAX ((1&lt;&lt;18) - MRB_STACK_GROWTH)
- #endif
- 
--
-+#ifdef VM_DEBUG
-+# define DEBUG(x) (x)
-+#else
-+# define DEBUG(x)
-+#endif
- 
- static inline void
- stack_copy(mrb_value *dst, const mrb_value *src, size_t size)
-</pre>
+      <pre></pre>
 
   </body>
 </html>
