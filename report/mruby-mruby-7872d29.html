@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 7872d2974d379975943fd8346cabf5198c3ee7d7
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Sun Jan 6 23:48:49 2013 +0900
-
-    These places need the write barrier
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1851,49 +1843,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 7872d2974d379975943fd8346cabf5198c3ee7d7
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Sun Jan 6 23:48:49 2013 +0900
-
-    These places need the write barrier
-
-diff --git a/src/variable.c b/src/variable.c
-index 5d46ffc..6aa6e71 100644
---- a/src/variable.c
-+++ b/src/variable.c
-@@ -710,6 +710,7 @@ mrb_mod_cv_set(mrb_state *mrb, struct RClass * c, mrb_sym sym, mrb_value v)
-       iv_tbl *t = c-&gt;iv;
- 
-       if (iv_get(mrb, t, sym, NULL)) {
-+        mrb_write_barrier(mrb, (struct RBasic*)c);
-         iv_put(mrb, t, sym, v);
-         return;
-       }
-@@ -721,6 +722,7 @@ mrb_mod_cv_set(mrb_state *mrb, struct RClass * c, mrb_sym sym, mrb_value v)
-     cls-&gt;iv = iv_new(mrb);
-   }
- 
-+  mrb_write_barrier(mrb, (struct RBasic*)cls);
-   iv_put(mrb, cls-&gt;iv, sym, v);
- }
- 
-@@ -771,6 +773,7 @@ mrb_vm_cv_set(mrb_state *mrb, mrb_sym sym, mrb_value v)
-       iv_tbl *t = c-&gt;iv;
- 
-       if (iv_get(mrb, t, sym, NULL)) {
-+        mrb_write_barrier(mrb, (struct RBasic*)c);
- 	iv_put(mrb, t, sym, v);
-         return;
-       }
-@@ -781,6 +784,7 @@ mrb_vm_cv_set(mrb_state *mrb, mrb_sym sym, mrb_value v)
-   if (!c-&gt;iv) {
-     c-&gt;iv = iv_new(mrb);
-   }
-+  mrb_write_barrier(mrb, (struct RBasic*)c);
-   iv_put(mrb, c-&gt;iv, sym, v);
- }
- 
-</pre>
+      <pre></pre>
 
   </body>
 </html>
