@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit a44d1b79083000f9a4ddfb5510d9ad85669c9b6b
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Tue Jan 8 18:00:40 2013 +0900
-
-    rake test should more faster!
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4337,61 +4329,7 @@ trap: SIGUSR2: bad trap</textarea></td>
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit a44d1b79083000f9a4ddfb5510d9ad85669c9b6b
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Tue Jan 8 18:00:40 2013 +0900
-
-    rake test should more faster!
-
-diff --git a/test/t/exception.rb b/test/t/exception.rb
-index 2662cfd..d1f1e2d 100644
---- a/test/t/exception.rb
-+++ b/test/t/exception.rb
-@@ -291,24 +291,25 @@ assert('Exception#inspect without message') do
-   Exception.new.inspect
- end
- 
--# very deeply recursive function that stil returns albeit very deeply so
--$test_infinite_recursion    = 0
--TEST_INFINITE_RECURSION_MAX = 100000
--def test_infinite_recursion
--  $test_infinite_recursion += 1
--  if $test_infinite_recursion &gt; TEST_INFINITE_RECURSION_MAX
--    return $test_infinite_recursion
-+if $full_test
-+  # very deeply recursive function that stil returns albeit very deeply so
-+  $test_infinite_recursion    = 0
-+  TEST_INFINITE_RECURSION_MAX = 100000
-+  def test_infinite_recursion
-+    $test_infinite_recursion += 1
-+    if $test_infinite_recursion &gt; TEST_INFINITE_RECURSION_MAX
-+      return $test_infinite_recursion
-+    end
-+    test_infinite_recursion
-   end
--  test_infinite_recursion
--end
- 
--assert('Infinite recursion should result in an exception being raised') do
--  a = begin
--        test_infinite_recursion
--      rescue
--        :ok
--      end
--  # OK if an exception was caught, otherwise a number will be stored in a
--  a == :ok
-+  assert('Infinite recursion should result in an exception being raised') do
-+    a = begin
-+          test_infinite_recursion
-+        rescue
-+          :ok
-+        end
-+    # OK if an exception was caught, otherwise a number will be stored in a
-+    a == :ok
-+  end
- end
--
-</pre>
+      <pre></pre>
 
   </body>
 </html>

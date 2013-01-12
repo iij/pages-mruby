@@ -33,17 +33,9 @@
         
         
         
-          <li><a href="iij-mruby.html">back to iij-mruby</a></li>
-        
       
       <li>
-      <pre>commit 308ba5729d34eab290c8c5c7b5a7b4b51961dff1
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Tue Jan 8 17:41:14 2013 +0900
-
-    remove MTest::Unit.new.run from test/driver.c
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -4299,39 +4291,7 @@ POSIX test result: NG
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 308ba5729d34eab290c8c5c7b5a7b4b51961dff1
-Author: Akira Yumiyama &lt;yumiyama@iij.ad.jp&gt;
-Date:   Tue Jan 8 17:41:14 2013 +0900
-
-    remove MTest::Unit.new.run from test/driver.c
-
-diff --git a/test/driver.c b/test/driver.c
-index 2d14ff5..788a77b 100644
---- a/test/driver.c
-+++ b/test/driver.c
-@@ -41,12 +41,6 @@ main(void)
-   mrb_state *mrb;
-   mrb_value return_value;
-   const char *prog = &quot;report()&quot;;
--  const char *mtest = &quot;&quot;
--    &quot;if Object.const_defined?(:MTest)\n&quot;
--    &quot;  assert('MrubyMTest run') do\n&quot;
--    &quot;    MTest::Unit.new.run == 0\n&quot;
--    &quot;  end\n&quot;
--    &quot;end&quot;;
-   int ret = EXIT_SUCCESS;
- 
-   print_hint();
-@@ -59,8 +53,6 @@ main(void)
-   }
- 
-   mrb_init_mrbtest(mrb);
--  /* execute MTest */
--  mrb_load_string(mrb, mtest);
-   /* evaluate the test */
-   return_value = mrb_load_string(mrb, prog);
-   /* did an exception occur? */
-</pre>
+      <pre></pre>
 
   </body>
 </html>
