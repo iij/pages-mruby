@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit a19c061cb13d9cebcbf96e00d6add8c16b546032
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Tue Jan 8 00:44:48 2013 +0900
-
-    Added gem :github option
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1853,43 +1845,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit a19c061cb13d9cebcbf96e00d6add8c16b546032
-Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
-Date:   Tue Jan 8 00:44:48 2013 +0900
-
-    Added gem :github option
-
-diff --git a/doc/mrbgems/README.md b/doc/mrbgems/README.md
-index cc28f48..9e930d8 100644
---- a/doc/mrbgems/README.md
-+++ b/doc/mrbgems/README.md
-@@ -27,6 +27,10 @@ A remote GIT repository location for a GEM is also supported:
- conf.gem :git =&gt; 'https://github.com/masuidrive/mrbgems-example.git', :branch =&gt; 'master'
- ```
- 
-+```
-+conf.gem :github =&gt; 'masuidrive/mrbgems-example', :branch =&gt; 'master'
-+```
-+
- 
- ## GEM Structure
- 
-diff --git a/tasks/mruby_build.rake b/tasks/mruby_build.rake
-index 65c80ab..d5dc075 100644
---- a/tasks/mruby_build.rake
-+++ b/tasks/mruby_build.rake
-@@ -67,6 +67,10 @@ module MRuby
-     end
- 
-     def load_external_gem(params)
-+      if params[:github]
-+        params[:git] = &quot;git@github.com:#{params[:github]}.git&quot;
-+      end
-+
-       if params[:git]
-         url = params[:git]
-         gemdir = &quot;build/mrbgems/#{url.match(/([-_\w]+)(\.[-_\w]+|)$/).to_a[1]}&quot;
-</pre>
+      <pre></pre>
 
   </body>
 </html>
