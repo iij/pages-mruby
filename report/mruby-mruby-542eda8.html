@@ -32,18 +32,10 @@
       
         
         
-          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
-        
       
         
       <li>
-      <pre>commit 542eda83abda4bcbc6ac7fa28a5ed8ae28ccb9bb
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Mon Jan 7 11:54:23 2013 +0900
-
-    Skip sweeping old slots which don't contain any young object.
-
-</pre>
+      <pre></pre>
       <a href="#commitlog">commit log</a>
       </li>
   </ul>
@@ -1851,48 +1843,7 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a></h2>
-      <pre>commit 542eda83abda4bcbc6ac7fa28a5ed8ae28ccb9bb
-Author: Narihiro Nakamura &lt;authornari@gmail.com&gt;
-Date:   Mon Jan 7 11:54:23 2013 +0900
-
-    Skip sweeping old slots which don't contain any young object.
-
-diff --git a/src/gc.c b/src/gc.c
-index 4725359..b843786 100644
---- a/src/gc.c
-+++ b/src/gc.c
-@@ -206,6 +206,7 @@ struct heap_page {
-   struct heap_page *next;
-   struct heap_page *free_next;
-   struct heap_page *free_prev;
-+  unsigned int old:1;
-   RVALUE objects[MRB_HEAP_PAGE_SIZE];
- };
- 
-@@ -762,6 +763,11 @@ incremental_sweep_phase(mrb_state *mrb, size_t limit)
-     int dead_slot = 1;
-     int full = (page-&gt;freelist == NULL);
- 
-+    if (is_minor_gc(mrb) &amp;&amp; page-&gt;old) {
-+      /* skip a slot which doesn't contain any young object */
-+      p = e;
-+      dead_slot = 0;
-+    }
-     while (p&lt;e) {
-       if (is_dead(mrb, &amp;p-&gt;as.basic)) {
-         if (p-&gt;as.basic.tt != MRB_TT_FREE) {
-@@ -792,6 +798,10 @@ incremental_sweep_phase(mrb_state *mrb, size_t limit)
-       if (full &amp;&amp; freed &gt; 0) {
-         link_free_heap_page(mrb, page);
-       }
-+      if (page-&gt;freelist == NULL &amp;&amp; is_minor_gc(mrb))
-+        page-&gt;old = TRUE;
-+      else
-+        page-&gt;old = FALSE;
-       page = page-&gt;next;
-     }
-     tried_sweep += MRB_HEAP_PAGE_SIZE;
-</pre>
+      <pre></pre>
 
   </body>
 </html>
