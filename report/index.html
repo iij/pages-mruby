@@ -18,7 +18,7 @@
       
     </div>
 
-    <h1>mruby build & test report (<a href="http://github.com/mruby/mruby/commit/b5830ae">mruby-mruby</a>)</h1>
+    <h1>mruby build & test report (<a href="http://github.com/mruby/mruby/commit/d5b8dc5">mruby-mruby</a>)</h1>
     
     <table border="1">
       <tr>
@@ -27,6 +27,83 @@
         <th>Author</th>
         <th>Date</th>
       </tr>
+      
+        <tr>
+          
+          
+            <td>d1656d4</td>
+          
+          <td>Merge pull request #732 from masamitsu-murase/remove_multiple_definition_of_RuntimeError</td>
+          
+          <td>Yukihiro "Matz" Matsumoto <matz@ruby-lang.org></td>
+          <td>Tue Jan 15 14:50:38 2013 -0800</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>709c120</td>
+          
+          <td>Merge pull request #734 from monaka/pr-error-check-inprovement-in-cdump-and-dump</td>
+          
+          <td>Yukihiro "Matz" Matsumoto <matz@ruby-lang.org></td>
+          <td>Tue Jan 15 14:50:05 2013 -0800</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>79aa717</td>
+          
+          <td>Merge pull request #736 from selman/cmake_warning_fix</td>
+          
+          <td>Yukihiro "Matz" Matsumoto <matz@ruby-lang.org></td>
+          <td>Tue Jan 15 14:49:00 2013 -0800</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>443f207</td>
+          
+          <td>silence clang warning</td>
+          
+          <td>Selman ULUG <selman.ulug@gmail.com></td>
+          <td>Tue Jan 15 03:08:11 2013 +0200</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>85bdd63</td>
+          
+          <td>include/mruby/cdump.h: Add new error codes. src/cdump.h: Use error codes defined in mruby/cdump.h.</td>
+          
+          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
+          <td>Tue Jan 15 09:04:51 2013 +0900</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>5830553</td>
+          
+          <td>Use MRB_DUMP_OK instead of 0.</td>
+          
+          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
+          <td>Tue Jan 15 09:03:56 2013 +0900</td>
+        </tr>
+      
+        <tr>
+          
+          
+            <td>b4255c7</td>
+          
+          <td>Remove multiple definition of RuntimeError.</td>
+          
+          <td>Masamitsu MURASE <masamitsu.murase@gmail.com></td>
+          <td>Mon Jan 14 18:26:39 2013 +0900</td>
+        </tr>
       
         <tr>
           
@@ -583,95 +660,6 @@
           
           <td>Masaki Muranaka <monaka@monami-ya.jp></td>
           <td>Wed Jan 9 13:33:51 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-86b3200.html">86b3200</a></td>
-          
-          <td>Fix error handlings.</td>
-          
-          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
-          <td>Wed Jan 9 13:33:00 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-81b6895.html">81b6895</a></td>
-          
-          <td>Merge branch 'master' of github.com:mruby/mruby into pr-strict-error-checking</td>
-          
-          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
-          <td>Wed Jan 9 13:29:59 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-2c6d34f.html">2c6d34f</a></td>
-          
-          <td>Merge pull request #709 from monaka/pr-remove-redundant-null-checks</td>
-          
-          <td>Yukihiro "Matz" Matsumoto <matz@ruby-lang.org></td>
-          <td>Tue Jan 8 20:14:27 2013 -0800</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-0b337ac.html">0b337ac</a></td>
-          
-          <td>Extract each expresion in "if" statements. It is for maintainability.</td>
-          
-          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
-          <td>Wed Jan 9 12:03:16 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-94fb04a.html">94fb04a</a></td>
-          
-          <td>Remove redundant null checks.</td>
-          
-          <td>Masaki Muranaka <monaka@monami-ya.jp></td>
-          <td>Wed Jan 9 11:22:39 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            <td>ef4b0c6</td>
-          
-          <td>Merge branch 'master' of https://github.com/mruby/mruby</td>
-          
-          <td>mattn <mattn.jp@gmail.com></td>
-          <td>Wed Jan 9 10:24:01 2013 +0900</td>
-        </tr>
-      
-        <tr>
-          
-          
-            
-            
-            <td style="background-color:#99ff99"><a href="mruby-mruby-b5830ae.html">b5830ae</a></td>
-          
-          <td>remove MRUBY_VERSION for the time being; close #700</td>
-          
-          <td>Yukihiro Matz Matsumoto <matz@ruby-lang.org></td>
-          <td>Tue Jan 8 23:36:19 2013 +0900</td>
         </tr>
       
     </table>
