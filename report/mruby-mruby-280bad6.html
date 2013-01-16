@@ -205,8 +205,8 @@ Date:   Mon Jan 7 01:47:48 2013 +0900
         
         <tr style="background-color:#ff9999">
           <td><a href="#netbsd_arm">netbsd_arm</a></td>
-          <td>success</td>
-          <td>failed</td>
+          <td></td>
+          <td></td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -1315,19 +1315,29 @@ Crash: 0
         <tr>
           <th>make</th>
           <td><textarea>(in /home/mruby/arm/mruby-mruby-280bad6)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/vm.o" -c "src/vm.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/class.o" -c "src/class.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/load.o" -c "src/load.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/mruby-mruby-280bad6/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
 </textarea></td>
           <td><textarea></textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/arm/mruby-mruby-280bad6)
-"gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm
-rake aborted!
-Command Failed: ["gcc" -o "build/host/test/mrbtest" -lm  "build/host/test/driver.o" "build/host/test/mrbtest.o" "build/host/lib/libmruby.a" -lm]
-
-</textarea></td>
-          <td><textarea>ld: cannot find -lm
-</textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
         </tr>
         
       </table>
