@@ -198,6 +198,20 @@ Date:   Mon Jan 7 15:07:44 2013 +0900
         
         
         <tr style="background-color:#ff9999">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>failed</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#ff9999">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>failed</td>
           <td>failed</td>
@@ -433,6 +447,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -897,6 +919,55 @@ Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-functio
 src/gc.c:507: error: implicit declaration of function 'DEBUG'
 src/gc.c:507: error: implicit declaration of function 'printf'
 src/gc.c:507: warning: incompatible implicit declaration of built-in function 'printf'</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-83d91b9)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/range.o" -c "src/range.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/array.o" -c "src/array.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/numeric.o" -c "src/numeric.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/pool.o" -c "src/pool.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/compar.o" -c "src/compar.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/crc.o" -c "src/crc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/regcomp.o" -c "src/regcomp.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/proc.o" -c "src/proc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/math.o" -c "src/math.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/state.o" -c "src/state.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/print.o" -c "src/print.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/vm.o" -c "src/vm.c"
+rake aborted!
+Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/vm.o" -c "src/vm.c"]
+
+</textarea></td>
+          <td><textarea>src/vm.c: In function `mrb_run':
+src/vm.c:1239: error: implicit declaration of function `DEBUG'
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-83d91b9)
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/test/driver.o" -c "test/driver.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+"gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/vm.o" -c "src/vm.c"
+rake aborted!
+Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-83d91b9/include" -o "build/host/src/vm.o" -c "src/vm.c"]
+
+</textarea></td>
+          <td><textarea>src/vm.c: In function `mrb_run':
+src/vm.c:1239: error: implicit declaration of function `DEBUG'
+</textarea></td>
         </tr>
         
       </table>
