@@ -1,0 +1,93 @@
+--- 
+:date: 2013-01-16 13:34:05.376488 +09:00
+:id: iij-mruby-83d91b9
+:zipball_url: https://github.com/iij/mruby/zipball/83d91b9
+:make: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9)
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/array.o" -c "src/array.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/cdump.o" -c "src/cdump.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/class.o" -c "src/class.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/codegen.o" -c "src/codegen.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/compar.o" -c "src/compar.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/crc.o" -c "src/crc.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/dump.o" -c "src/dump.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/enum.o" -c "src/enum.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/error.o" -c "src/error.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/etc.o" -c "src/etc.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/gc.o" -c "src/gc.c"
+    rake aborted!
+    Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/gc.o" -c "src/gc.c"]
+  :stderr: |-
+    src/gc.c: In function 'obj_free':
+    src/gc.c:507: error: implicit declaration of function 'DEBUG'
+    src/gc.c:507: error: implicit declaration of function 'printf'
+    src/gc.c:507: warning: incompatible implicit declaration of built-in function 'printf'
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9)
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/test/driver.o" -c "test/driver.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/gc.o" -c "src/gc.c"
+    rake aborted!
+    Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130116133409-17361-build/iij-mruby-83d91b9/include" -o "build/host/src/gc.o" -c "src/gc.c"]
+  :stderr: |-
+    src/gc.c: In function 'obj_free':
+    src/gc.c:507: error: implicit declaration of function 'DEBUG'
+    src/gc.c:507: error: implicit declaration of function 'printf'
+    src/gc.c:507: warning: incompatible implicit declaration of built-in function 'printf'
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:repository: iij/mruby
+:commit: 83d91b9
+:ball_id: iij-mruby-83d91b9
+:hostname: mac-ppc
+:env: 
+  :gcc: 
+    :stdout: |-
+      powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+      Copyright (C) 2005 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for powerpc-apple-darwin9.0
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.3
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2006 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
