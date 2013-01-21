@@ -198,6 +198,20 @@ Date:   Mon Jan 21 15:58:20 2013 +0800
         
         
         <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_arm">netbsd_arm</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
           <td><a href="#netbsd_mips">netbsd_mips</a></td>
           <td>success</td>
           <td>success</td>
@@ -447,6 +461,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -861,6 +883,44 @@ Total: 515
    KO: 0
 Crash: 0
  Time: 1.874826 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_arm">netbsd_arm</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm/mruby-mruby-9d9e784)
+</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm/mruby-mruby-9d9e784)
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 36.242343 seconds
+
+</textarea></td>
           <td><textarea></textarea></td>
         </tr>
         
