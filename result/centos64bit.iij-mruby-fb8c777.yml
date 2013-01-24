@@ -1,26 +1,26 @@
 --- 
-:date: 2013-01-25 07:04:54.701155 +09:00
+:date: 2013-01-25 08:04:32.356139 +09:00
 :id: iij-mruby-fb8c777
 :zipball_url: https://github.com/iij/mruby/zipball/fb8c777
 :make: 
   :stdout: |-
-    (in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777)
+    (in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777)
     GIT   https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-mtest/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-mtest/.git/
     GIT   https://github.com/iij/mruby-dir.git -> build/mrbgems/mruby-dir
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-dir/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-dir/.git/
     GIT   https://github.com/iij/mruby-digest.git -> build/mrbgems/mruby-digest
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-digest/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-digest/.git/
     GIT   https://github.com/iij/mruby-process.git -> build/mrbgems/mruby-process
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-process/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-process/.git/
     GIT   https://github.com/iij/mruby-pack.git -> build/mrbgems/mruby-pack
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-pack/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-pack/.git/
     GIT   https://github.com/iij/mruby-syslog.git -> build/mrbgems/mruby-syslog
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-syslog/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-syslog/.git/
     GIT   https://github.com/iij/mruby-env.git -> build/mrbgems/mruby-env
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-env/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-env/.git/
     GIT   https://github.com/iij/mruby-simple-random.git -> build/mrbgems/mruby-simple-random
-    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777/build/mrbgems/mruby-simple-random/.git/
+    Initialized empty Git repository in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777/build/mrbgems/mruby-simple-random/.git/
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/regerror.c -> build/host/src/regerror.o
     CC    src/gc.c -> build/host/src/gc.o
@@ -172,7 +172,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /home/mruby/mruby-test-tool/tmp/20130125070459-23343-build/iij-mruby-fb8c777)
+    (in /home/mruby/mruby-test-tool/tmp/20130125080435-27548-build/iij-mruby-fb8c777)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -258,7 +258,7 @@
        OK: 644
        KO: 0
     Crash: 0
-     Time: 0.352642 seconds
+     Time: 0.36634 seconds
     mrbtest - Embeddable Ruby Test
     
     This is a very early version, please test and report errors.
@@ -284,7 +284,7 @@
        OK: 21
        KO: 0
     Crash: 0
-     Time: 0.000982 seconds
+     Time: 0.001203 seconds
     
     ###################################
     # exec test/posix/env.sh; start...
@@ -293,7 +293,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.000399 seconds
+     Time: 0.000331 seconds
     
     ###################################
     # exec test/posix/errno.sh; start...
@@ -302,7 +302,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.000578 seconds
+     Time: 0.000478 seconds
     
     ###################################
     # exec test/posix/file.sh; start...
@@ -311,7 +311,7 @@
        OK: 11
        KO: 0
     Crash: 0
-     Time: 0.039168 seconds
+     Time: 0.018727 seconds
     
     ###################################
     # exec test/posix/io.sh; start...
@@ -320,19 +320,19 @@
        OK: 18
        KO: 0
     Crash: 0
-     Time: 0.055943 seconds
+     Time: 0.032661 seconds
     
     ###################################
     # exec test/posix/process.sh; start...
-    .....wait 23893 done
-    wait 23894 done
-    wait 23895 done
+    .....wait 28098 done
+    wait 28099 done
+    wait 28100 done
     .
     Total: 6
        OK: 6
        KO: 0
     Crash: 0
-     Time: 0.209068 seconds
+     Time: 0.209695 seconds
     
     ###################################
     # exec test/posix/require.sh; start...
@@ -341,7 +341,7 @@
        OK: 20
        KO: 0
     Crash: 0
-     Time: 0.051917 seconds
+     Time: 0.044722 seconds
     
     ###################################
     # exec test/posix/syslog.sh; start...
@@ -350,7 +350,7 @@
        OK: 10
        KO: 0
     Crash: 0
-     Time: 0.000773 seconds
+     Time: 0.000751 seconds
     
     ###################################
     POSIX test result: OK
