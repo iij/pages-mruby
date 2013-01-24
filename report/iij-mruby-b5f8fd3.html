@@ -201,6 +201,20 @@ Date:   Mon Jan 21 07:35:04 2013 -0800
         
         
         <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>success</td>
           <td>success</td>
@@ -436,6 +450,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -1682,6 +1704,149 @@ Total: 515
    KO: 0
 Crash: 0
  Time: 0.846182 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-b5f8fd3)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/re.c" > "build/host/src/re.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/array.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"
+</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-b5f8fd3)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/module.rb
+  MRBC test/t/math.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/object.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/class.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/true.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/typeerror.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/range.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/time.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 19.390673 seconds
+
+</textarea></td>
           <td><textarea></textarea></td>
         </tr>
         
