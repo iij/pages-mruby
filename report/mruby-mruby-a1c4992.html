@@ -1,0 +1,2523 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div style="background-color:#a0a0a0;">
+      
+        
+        <a href="mruby-mruby.html">mruby-mruby</a>
+      
+        
+        <a href="iij-mruby.html">iij-mruby</a>
+      
+    </div>
+
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - a1c4992)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/a1c4992" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+        
+      <li>
+      <pre>commit a1c4992905e6e3df1e6841085c552b33cf525b0f
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Mon Jan 21 22:15:15 2013 +0900
+
+    Added flags_before_libraries to linker
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    <table border="1">
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Build-Status</th>
+        
+          <th>Mrbtest-Status</th>
+        
+          <th>Total</th>
+        
+          <th>OK</th>
+        
+          <th>KO</th>
+        
+          <th>Crash</th>
+        
+          <th>Fail</th>
+        
+          <th>Msg</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos32bit">centos32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos64bit">centos64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd32bit">freebsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd64bit">freebsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-lion">mac-lion</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-ppc">mac-ppc</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd32bit">netbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd64bit">netbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd32bit">openbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd64bit">openbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu32bit">ubuntu32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu64bit">ubuntu64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>515</td>
+          <td>515</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for amd64-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-lion</td>
+          <td><b>gcc</b><br/><pre>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-apple-darwin11.3.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-ppc</td>
+          <td><b>gcc</b><br/><pre>powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+Copyright (C) 2005 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for powerpc-apple-darwin9.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386--netbsdelf
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64--netbsd
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i686-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="centos32bit">centos32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-1809-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/object.c" > "build/host/src/object.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/range.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/array.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/struct.rb
+  MRBC mrblib/kernel.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/load.c: In function 'mrb_read_irep_file':
+src/load.c:141: warning: 'hex2' may be used uninitialized in this function
+src/load.c:141: note: 'hex2' was declared here
+ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-1809-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/range.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/class.rb
+  MRBC test/t/object.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/false.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/array.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/module.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/true.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/float.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/time.rb
+  MRBC test/t/typeerror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/kernel.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 1.048091 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="centos64bit">centos64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-22696-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/range.c" > "build/host/src/range.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/print.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/struct.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/array.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/load.c: In function 'mrb_read_irep_file':
+src/load.c:141: warning: 'hex2' may be used uninitialized in this function
+src/load.c:141: note: 'hex2' was declared here
+ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-22696-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/module.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/math.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/typeerror.rb
+  MRBC test/t/class.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/range.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/false.rb
+  MRBC test/t/true.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/float.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/time.rb
+  MRBC test/t/array.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/literals.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 1.877202 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd32bit">freebsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130124173830-68813-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:450: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:458: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+src/dump.c: In function 'write_irep_record':
+src/dump.c:621: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating build/host/lib/libmruby_core.a
+ar: warning: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130124173830-68813-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.443806 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd64bit">freebsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130124173831-65964-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:450: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:458: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+src/dump.c: In function 'write_irep_record':
+src/dump.c:621: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating build/host/lib/libmruby_core.a
+ar: warning: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130124173831-65964-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.69126 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-lion">mac-lion</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130124173832-89485-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>ar: creating archive build/host/lib/libmruby_core.a
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
+ar: creating archive build/host/lib/libmruby.a
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
+/usr/bin/ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130124173832-89485-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 2.141583 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-ppc">mac-ppc</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130124173830-78874-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>In file included from src/parse.y:3493:
+src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
+build/host/src/y.tab.c: In function 'yyparse':
+src/parse.y:4317: warning: 'beg' may be used uninitialized in this function
+ar: creating archive build/host/lib/libmruby_core.a
+ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
+ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
+ar: creating archive build/host/lib/libmruby.a
+ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
+ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130124173830-78874-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 3.874258 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd32bit">netbsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-26303-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-26303-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.943549 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd64bit">netbsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-21498-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173830-21498-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 1.524167 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd32bit">openbsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-8884-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:450: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:458: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+src/dump.c: In function 'write_irep_record':
+src/dump.c:621: warning: 'crc' may be used uninitialized in this function
+ar: creating build/host/lib/libmruby_core.a
+build/host/tools/mrbc/mrbc.o(.text+0x4b): In function `get_outfilename':
+tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/lib/libmruby_core.a(dump.o)(.text+0x9b): In function `get_pool_block_size':
+src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+ar: creating build/host/lib/libmruby.a
+build/host/tools/mruby/mruby.o(.text+0x853): In function `main':
+tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mruby/mruby.o(.text+0x799):tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x816): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()
+build/host/tools/mirb/mirb.o(.text+0x520): In function `main':
+tools/mirb/mirb.c:215: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mirb/mirb.o(.text+0x28f):tools/mirb/mirb.c:206: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x816): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-8884-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.325936 seconds</textarea></td>
+          <td><textarea>build/host/lib/libmruby.a(string.o)(.text+0x41a6): In function `mrb_str_dump':
+src/string.c:2833: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd64bit">openbsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173833-319-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/array.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/print.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/struct.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>src/dump.c: In function 'get_syms_block_size':
+src/dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c: In function 'write_syms_block':
+src/dump.c:450: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+src/dump.c:458: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+src/dump.c: In function 'write_irep_record':
+src/dump.c:621: warning: 'crc' may be used uninitialized in this function
+ar: creating build/host/lib/libmruby_core.a
+build/host/tools/mrbc/mrbc.o(.text+0x4d): In function `get_outfilename':
+tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/lib/libmruby_core.a(dump.o)(.text+0x5d): In function `get_pool_block_size':
+src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+ar: creating build/host/lib/libmruby.a
+build/host/tools/mruby/mruby.o(.text+0x722): In function `main':
+tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mruby/mruby.o(.text+0x67c):tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()
+build/host/tools/mirb/mirb.o(.text+0x423): In function `main':
+tools/mirb/mirb.c:215: warning: strcpy() is almost always misused, please use strlcpy()
+build/host/tools/mirb/mirb.o(.text+0x22b):tools/mirb/mirb.c:212: warning: strcat() is almost always misused, please use strlcat()
+build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s':
+src/object.c:453: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173833-319-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/class.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/false.rb
+  MRBC test/t/float.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/math.rb
+  MRBC test/t/module.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/object.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/range.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/time.rb
+  MRBC test/t/true.rb
+  MRBC test/t/typeerror.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.575191 seconds</textarea></td>
+          <td><textarea>build/host/lib/libmruby.a(string.o)(.text+0x4651): In function `mrb_str_dump':
+src/string.c:2833: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu32bit">ubuntu32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-12847-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/re.c" > "build/host/src/re.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/range.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/array.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/struct.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/string.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/print.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173831-12847-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/range.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/module.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/class.rb
+  MRBC test/t/time.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/typeerror.rb
+  MRBC test/t/true.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/array.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/object.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/false.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/string.rb
+  MRBC test/t/float.rb
+  MRBC test/t/math.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/exception.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/enumerable.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 0.447097 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu64bit">ubuntu64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173832-22977-build/mruby-mruby-a1c4992)
+CC "tools/mruby/mruby.c" > "build/host/tools/mruby/mruby.o"
+CC "src/vm.c" > "build/host/src/vm.o"
+CC "src/print.c" > "build/host/src/print.o"
+CC "src/symbol.c" > "build/host/src/symbol.o"
+CC "src/object.c" > "build/host/src/object.o"
+CC "src/struct.c" > "build/host/src/struct.o"
+CC "src/range.c" > "build/host/src/range.o"
+CC "src/kernel.c" > "build/host/src/kernel.o"
+CC "src/regenc.c" > "build/host/src/regenc.o"
+CC "src/cdump.c" > "build/host/src/cdump.o"
+CC "src/numeric.c" > "build/host/src/numeric.o"
+CC "src/st.c" > "build/host/src/st.o"
+CC "src/regcomp.c" > "build/host/src/regcomp.o"
+CC "src/load.c" > "build/host/src/load.o"
+CC "src/sprintf.c" > "build/host/src/sprintf.o"
+CC "src/variable.c" > "build/host/src/variable.o"
+CC "src/regerror.c" > "build/host/src/regerror.o"
+CC "src/pool.c" > "build/host/src/pool.o"
+CC "src/compar.c" > "build/host/src/compar.o"
+CC "src/etc.c" > "build/host/src/etc.o"
+CC "src/init_ext.c" > "build/host/src/init_ext.o"
+CC "src/enum.c" > "build/host/src/enum.o"
+CC "src/state.c" > "build/host/src/state.o"
+CC "src/codegen.c" > "build/host/src/codegen.o"
+CC "src/math.c" > "build/host/src/math.o"
+CC "src/regparse.c" > "build/host/src/regparse.o"
+CC "src/init.c" > "build/host/src/init.o"
+CC "src/regexec.c" > "build/host/src/regexec.o"
+CC "src/dump.c" > "build/host/src/dump.o"
+CC "src/class.c" > "build/host/src/class.o"
+CC "src/crc.c" > "build/host/src/crc.o"
+CC "src/gc.c" > "build/host/src/gc.o"
+CC "src/string.c" > "build/host/src/string.o"
+CC "src/time.c" > "build/host/src/time.o"
+CC "src/error.c" > "build/host/src/error.o"
+CC "src/proc.c" > "build/host/src/proc.o"
+CC "src/array.c" > "build/host/src/array.o"
+CC "src/hash.c" > "build/host/src/hash.o"
+CC "src/re.c" > "build/host/src/re.o"
+YACC "src/parse.y" > "build/host/src/y.tab.c"
+CC "build/host/src/y.tab.c" > "build/host/src/y.tab.o"
+CC "tools/mrbc/mrbc.c" > "build/host/tools/mrbc/mrbc.o"
+AR "build/host/lib/libmruby_core.a"
+LD "build/host/bin/mrbc"
+GEN *.rb > build/host/mrblib/mrblib.c
+  MRBC mrblib/string.rb
+  MRBC mrblib/compar.rb
+  MRBC mrblib/class.rb
+  MRBC mrblib/range.rb
+  MRBC mrblib/array.rb
+  MRBC mrblib/struct.rb
+  MRBC mrblib/hash.rb
+  MRBC mrblib/numeric.rb
+  MRBC mrblib/enum.rb
+  MRBC mrblib/kernel.rb
+  MRBC mrblib/error.rb
+  MRBC mrblib/print.rb
+CC "build/host/mrblib/mrblib.c" > "build/host/mrblib/mrblib.o"
+AR "build/host/lib/libmruby.a"
+LD "build/host/bin/mruby"
+CC "tools/mirb/mirb.c" > "build/host/tools/mirb/mirb.o"
+LD "build/host/bin/mirb"</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130124173832-22977-build/mruby-mruby-a1c4992)
+CC "test/driver.c" > "build/host/test/driver.o"
+GEN *.rb > build/host/test/mrbtest.c
+  MRBC test/assert.rb
+  MRBC test/t/rangeerror.rb
+  MRBC test/t/false.rb
+  MRBC test/t/standarderror.rb
+  MRBC test/t/time.rb
+  MRBC test/t/gc.rb
+  MRBC test/t/basicobject.rb
+  MRBC test/t/regexperror.rb
+  MRBC test/t/string.rb
+  MRBC test/t/nameerror.rb
+  MRBC test/t/true.rb
+  MRBC test/t/math.rb
+  MRBC test/t/float.rb
+  MRBC test/t/nomethoderror.rb
+  MRBC test/t/class.rb
+  MRBC test/t/range.rb
+  MRBC test/t/array.rb
+  MRBC test/t/integer.rb
+  MRBC test/t/struct.rb
+  MRBC test/t/hash.rb
+  MRBC test/t/argumenterror.rb
+  MRBC test/t/module.rb
+  MRBC test/t/syntax.rb
+  MRBC test/t/nil.rb
+  MRBC test/t/indexerror.rb
+  MRBC test/t/numeric.rb
+  MRBC test/t/proc.rb
+  MRBC test/t/typeerror.rb
+  MRBC test/t/kernel.rb
+  MRBC test/t/literals.rb
+  MRBC test/t/bs_block.rb
+  MRBC test/t/object.rb
+  MRBC test/t/localjumperror.rb
+  MRBC test/t/symbol.rb
+  MRBC test/t/enumerable.rb
+  MRBC test/t/comparable.rb
+  MRBC test/t/bs_literal.rb
+  MRBC test/t/runtimeerror.rb
+  MRBC test/t/exception.rb
+CC "build/host/test/mrbtest.c" > "build/host/test/mrbtest.o"
+LD "build/host/test/mrbtest"
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 515
+   OK: 515
+   KO: 0
+Crash: 0
+ Time: 1.448897 seconds</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+      <pre>commit a1c4992905e6e3df1e6841085c552b33cf525b0f
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Mon Jan 21 22:15:15 2013 +0900
+
+    Added flags_before_libraries to linker
+
+diff --git a/build_config.rb b/build_config.rb
+index 1c177fd..1eeff4b 100644
+--- a/build_config.rb
++++ b/build_config.rb
+@@ -29,6 +29,7 @@ MRuby::Build.new do |conf|
+   # conf.linker do |linker|
+   #   linker.command = ENV['LD'] || 'gcc'
+   #   linker.flags = [ENV['LDFLAGS'] || []]
++  #   linker.flags_before_libraries = []
+   #   linker.libraries = %w()
+   #   linker.library_paths = []
+   #   linker.option_library = '-l%s'
+diff --git a/doc/compile/README.md b/doc/compile/README.md
+index a1c915a..05d5606 100644
+--- a/doc/compile/README.md
++++ b/doc/compile/README.md
+@@ -118,6 +118,7 @@ Configuration of the Linker binary, flags and library paths.
+ conf.linker do |linker|
+   linker.command = ...
+   linker.flags = ...
++  linker.flags_before_libraries = ...
+   linker.libraries = ...
+   linker.library_paths = ....
+   linker.option_library = ...
+diff --git a/tasks/libmruby.rake b/tasks/libmruby.rake
+index 108f42f..4cfebac 100644
+--- a/tasks/libmruby.rake
++++ b/tasks/libmruby.rake
+@@ -2,14 +2,17 @@ MRuby.each_target do
+   file libfile(&quot;#{build_dir}/lib/libmruby&quot;) =&gt; libmruby.flatten do |t|
+     archiver.run t.name, t.prerequisites
+     open(&quot;#{build_dir}/lib/libmruby.flags.mak&quot;, 'w') do |f|
+-      f.puts 'CFLAGS = &quot;%s&quot;' % cc.all_flags.gsub('&quot;', '\\&quot;') 
++      f.puts 'MRUBY_CFLAGS = &quot;%s&quot;' % cc.all_flags.gsub('&quot;', '\\&quot;') 
+ 
+       gem_flags = gems.map { |g| g.linker.flags }
+       gem_library_paths = gems.map { |g| g.linker.library_paths }
+-      f.puts 'LDFLAGS = &quot;%s&quot;' % linker.all_flags(gem_library_paths, gem_flags).gsub('&quot;', '\\&quot;') 
++      f.puts 'MRUBY_LDFLAGS = &quot;%s&quot;' % linker.all_flags(gem_library_paths, gem_flags).gsub('&quot;', '\\&quot;') 
++
++      gem_flags_before_libraries = gems.map { |g| g.linker.flags_before_libraries }
++      f.puts 'MRUBY_LDFLAGS_BEFORE_LIBS = &quot;%s&quot;' % [linker.flags_before_libraries, gem_flags_before_libraries].flatten.join(' ').gsub('&quot;', '\\&quot;') 
+ 
+       gem_libraries = gems.map { |g| g.linker.libraries }
+-      f.puts 'LIBS = &quot;%s&quot;' % linker.library_flags(gem_libraries).gsub('&quot;', '\\&quot;') 
++      f.puts 'MRUBY_LIBS = &quot;%s&quot;' % linker.library_flags(gem_libraries).gsub('&quot;', '\\&quot;') 
+     end
+   end
+ end
+diff --git a/tasks/mrbgem_spec.rake b/tasks/mrbgem_spec.rake
+index 906f47a..612ff24 100644
+--- a/tasks/mrbgem_spec.rake
++++ b/tasks/mrbgem_spec.rake
+@@ -6,7 +6,7 @@ module MRuby
+     class &lt;&lt; self
+       attr_accessor :current
+     end
+-    LinkerConfig = Struct.new(:libraries, :library_paths, :flags) 
++    LinkerConfig = Struct.new(:libraries, :library_paths, :flags, :flags_before_libraries) 
+ 
+     class Specification
+       include Rake::DSL
+@@ -43,7 +43,7 @@ module MRuby
+         MRuby::Build::COMMANDS.each do |command|
+           instance_variable_set(&quot;@#{command}&quot;, @build.send(command).clone)
+         end
+-        @linker = LinkerConfig.new([], [], [])
++        @linker = LinkerConfig.new([], [], [], [])
+ 
+         @rbfiles = Dir.glob(&quot;#{dir}/mrblib/*.rb&quot;)
+         @objs = Dir.glob(&quot;#{dir}/src/*.{c,cpp,m,asm,S}&quot;).map do |f|
+diff --git a/tasks/mruby_build_commands.rake b/tasks/mruby_build_commands.rake
+index 8ffafe9..abaf3a7 100644
+--- a/tasks/mruby_build_commands.rake
++++ b/tasks/mruby_build_commands.rake
+@@ -48,18 +48,16 @@ module MRuby
+ 
+     def all_flags(_defineds=[], _include_paths=[], _flags=[])
+       define_flags = [defines, _defineds].flatten.map{ |d| option_define % d }
+-      include_path_flags = [include_paths, _include_paths].flatten.map{ |f| option_include_path % filename(f) }
++      include_path_flags = [include_paths, _include_paths].flatten.map do |f|
++        option_include_path % filename(f)
++      end
+       [flags, define_flags, include_path_flags, _flags].flatten.join(' ')
+     end
+     
+     def run(outfile, infile, _defineds=[], _include_paths=[], _flags=[])
+       FileUtils.mkdir_p File.dirname(outfile)
+-      define_flags = [defines, _defineds].flatten.map{ |d| option_define % d }
+-      include_path_flags = [include_paths, _include_paths, File.dirname(infile)].flatten.map do |f|
+-        option_include_path % filename(f)
+-      end
+       _pp &quot;CC #{filename(infile)} &gt; #{filename(outfile)}&quot;
+-      _run compile_options, { :flags =&gt; (flags + define_flags + include_path_flags + _flags).join(' '),
++      _run compile_options, { :flags =&gt; all_flags(_defineds, [_include_paths, File.dirname(infile)], _flags),
+                               :infile =&gt; filename(infile), :outfile =&gt; filename(outfile) }
+     end
+ 
+@@ -104,36 +102,42 @@ module MRuby
+   end
+ 
+   class Command::Linker &lt; Command
+-    attr_accessor :flags, :libraries, :library_paths
++    attr_accessor :flags, :flags_before_libraries, :libraries, :library_paths
+     attr_accessor :link_options, :option_library, :option_library_path
+ 
+     def initialize(build)
+       super
+       @command = ENV['LD'] || 'gcc'
+       @flags = (ENV['LDFLAGS'] || [])
++      @flags_before_libraries = []
+       @libraries = []
+       @library_paths = []
+       @option_library = '-l%s'
+       @option_library_path = '-L%s'
+-      @link_options = &quot;%{flags} -o %{outfile} %{objs} %{libs}&quot;
++      @link_options = &quot;%{flags} -o %{outfile} %{objs} %{flags_before_libraries} %{libs}&quot;
+     end
+ 
+     def all_flags(_library_paths=[], _flags=[])
+-      library_path_flags = [library_paths, _library_paths].flatten.map{ |f| option_library_path % filename(f) }
++      library_path_flags = [library_paths, _library_paths].flatten.map do |f|
++        option_library_path % filename(f)
++      end
+       [flags, library_path_flags, _flags].flatten.join(' ')
+     end
+ 
+     def library_flags(_libraries)
+-      [libraries, _libraries].flatten.reverse.map{ |d| option_library % d }.join(' ')
++      [libraries, _libraries].flatten.reverse.map do |d|
++        option_library % d
++      end.join(' ')
+     end
+ 
+-    def run(outfile, objfiles, _libraries=[], _library_paths=[], _flags=[])
++    def run(outfile, objfiles, _libraries=[], _library_paths=[], _flags=[], _flags_before_libraries=[])
+       FileUtils.mkdir_p File.dirname(outfile)
+-      library_flags = [libraries, _libraries].flatten.reverse.map{ |d| option_library % d }
+-      library_path_flags = [library_paths, _library_paths].flatten.map{ |f| option_library_path % filename(f) }
++      library_flags = [libraries, _libraries].flatten.reverse.map { |d| option_library % d }
++      library_path_flags = [library_paths, _library_paths].flatten.map { |f| option_library_path % filename(f) }
+       _pp &quot;LD #{filename(outfile)}&quot;
+-      _run link_options, { :flags =&gt; (flags + library_path_flags + _flags).join(' '),
++      _run link_options, { :flags =&gt; all_flags(_library_paths, _flags),
+                            :outfile =&gt; filename(outfile) , :objs =&gt; filename(objfiles).join(' '),
++                           :flags_before_libraries =&gt; [flags_before_libraries, _flags_before_libraries].flatten.join(' '),
+                            :libs =&gt; library_flags.join(' ') }
+     end
+   end
+diff --git a/tasks/toolchains/gcc.rake b/tasks/toolchains/gcc.rake
+index c624c8f..3a3485a 100644
+--- a/tasks/toolchains/gcc.rake
++++ b/tasks/toolchains/gcc.rake
+@@ -16,6 +16,6 @@ MRuby::Toolchain.new(:gcc) do |conf|
+     linker.library_paths = []
+     linker.option_library = '-l%s'
+     linker.option_library_path = '-L%s'
+-    linker.link_options = '%{flags} -o %{outfile} %{objs} %{libs}'
++    linker.link_options = '%{flags} -o %{outfile} %{objs} %{flags_before_libraries} %{libs}'
+   end
+ end
+diff --git a/tasks/toolchains/vs2012.rake b/tasks/toolchains/vs2012.rake
+index c3599a5..108b433 100644
+--- a/tasks/toolchains/vs2012.rake
++++ b/tasks/toolchains/vs2012.rake
+@@ -16,7 +16,7 @@ MRuby::Toolchain.new(:vs2012) do |conf|
+     linker.library_paths = %w()
+     linker.option_library = '%s'
+     linker.option_library_path = '/LIBPATH:%s'
+-    linker.link_options = &quot;%{flags} /OUT:%{outfile} %{objs} %{libs}&quot;
++    linker.link_options = &quot;%{flags} /OUT:%{outfile} %{objs} %{flags_before_libraries} %{libs}&quot;
+   end
+  
+   conf.archiver do |archiver|
+diff --git a/test/mrbtest.rake b/test/mrbtest.rake
+index 76ddc30..30444bd 100644
+--- a/test/mrbtest.rake
++++ b/test/mrbtest.rake
+@@ -10,11 +10,12 @@ MRuby.each_target do
+ 
+   objs = [objfile(&quot;#{build_dir}/#{dir}/driver&quot;), mlib].flatten
+ 
+-  file exec =&gt; objs + gems.map(&amp;:testlib) + [libfile(&quot;#{build_dir}/lib/libmruby&quot;)] do |t|
++  file exec =&gt; objs + gems.map(&amp;:testlib).flatten + [libfile(&quot;#{build_dir}/lib/libmruby&quot;)] do |t|
+     gem_flags = gems.map { |g| g.linker.flags }
++    gem_flags_before_libraries = gems.map { |g| g.linker.flags_before_libraries }
+     gem_libraries = gems.map { |g| g.linker.libraries }
+     gem_library_paths = gems.map { |g| g.linker.library_paths }
+-    linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags
++    linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags, gem_flags_before_libraries
+   end
+ 
+   file mlib =&gt; [clib]
+diff --git a/tools/mirb/mirb.rake b/tools/mirb/mirb.rake
+index 0c340a2..dbce4f1 100644
+--- a/tools/mirb/mirb.rake
++++ b/tools/mirb/mirb.rake
+@@ -7,9 +7,10 @@ MRuby.each_target do
+ 
+     file exec =&gt; objs + [libfile(&quot;#{build_dir}/lib/libmruby&quot;)] do |t|
+       gem_flags = gems.map { |g| g.linker.flags }
++      gem_flags_before_libraries = gems.map { |g| g.linker.flags_before_libraries }
+       gem_libraries = gems.map { |g| g.linker.libraries }
+       gem_library_paths = gems.map { |g| g.linker.library_paths }
+-      linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags
++      linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags, gem_flags_before_libraries
+     end
+   end
+ end
+diff --git a/tools/mruby/mruby.rake b/tools/mruby/mruby.rake
+index df31b03..7111dc0 100644
+--- a/tools/mruby/mruby.rake
++++ b/tools/mruby/mruby.rake
+@@ -7,9 +7,10 @@ MRuby.each_target do
+ 
+     file exec =&gt; objs + [libfile(&quot;#{build_dir}/lib/libmruby&quot;)] do |t|
+       gem_flags = gems.map { |g| g.linker.flags }
++      gem_flags_before_libraries = gems.map { |g| g.linker.flags_before_libraries }
+       gem_libraries = gems.map { |g| g.linker.libraries }
+       gem_library_paths = gems.map { |g| g.linker.library_paths }
+-      linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags
++      linker.run t.name, t.prerequisites, gem_libraries, gem_library_paths, gem_flags, gem_flags_before_libraries
+     end
+   end
+ end
+</pre>
+
+  </body>
+</html>
