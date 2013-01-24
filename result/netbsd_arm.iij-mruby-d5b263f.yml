@@ -1,0 +1,83 @@
+---
+:date: ''
+:hostname: netbsd_arm
+:id: iij-mruby-d5b263f
+:ball_id: iij-mruby-d5b263f
+:zipball_url: https://github.com/iij/mruby/zipball/d5b263f
+:repository: iij/mruby
+:commit: d5b263f
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! "(in /home/mruby/arm/iij-mruby-d5b263f)\nCC    \"tools/mruby/mruby.c\"
+    -> \"build/host/tools/mruby/mruby.o\"\nCC    \"src/range.c\" -> \"build/host/src/range.o\"\nCC
+    \   \"src/array.c\" -> \"build/host/src/array.o\"\nCC    \"src/numeric.c\" ->
+    \"build/host/src/numeric.o\"\nCC    \"src/pool.c\" -> \"build/host/src/pool.o\"\nCC
+    \   \"src/compar.c\" -> \"build/host/src/compar.o\"\nCC    \"src/crc.c\" -> \"build/host/src/crc.o\"\nCC
+    \   \"src/regcomp.c\" -> \"build/host/src/regcomp.o\"\nCC    \"src/proc.c\" ->
+    \"build/host/src/proc.o\"\nCC    \"src/math.c\" -> \"build/host/src/math.o\"\nCC
+    \   \"src/state.c\" -> \"build/host/src/state.o\"\nCC    \"src/print.c\" -> \"build/host/src/print.o\"\nCC
+    \   \"src/vm.c\" -> \"build/host/src/vm.o\"\nCC    \"src/class.c\" -> \"build/host/src/class.o\"\nCC
+    \   \"src/load.c\" -> \"build/host/src/load.o\"\nCC    \"src/codegen.c\" -> \"build/host/src/codegen.o\"\nCC
+    \   \"src/symbol.c\" -> \"build/host/src/symbol.o\"\nCC    \"src/etc.c\" -> \"build/host/src/etc.o\"\nCC
+    \   \"src/gc.c\" -> \"build/host/src/gc.o\"\nCC    \"src/st.c\" -> \"build/host/src/st.o\"\nCC
+    \   \"src/struct.c\" -> \"build/host/src/struct.o\"\nCC    \"src/regerror.c\"
+    -> \"build/host/src/regerror.o\"\nCC    \"src/regparse.c\" -> \"build/host/src/regparse.o\"\nCC
+    \   \"src/init.c\" -> \"build/host/src/init.o\"\nCC    \"src/regexec.c\" -> \"build/host/src/regexec.o\"\nCC
+    \   \"src/dump.c\" -> \"build/host/src/dump.o\"\nCC    \"src/kernel.c\" -> \"build/host/src/kernel.o\"\nCC
+    \   \"src/hash.c\" -> \"build/host/src/hash.o\"\nCC    \"src/string.c\" -> \"build/host/src/string.o\"\nCC
+    \   \"src/sprintf.c\" -> \"build/host/src/sprintf.o\"\nCC    \"src/variable.c\"
+    -> \"build/host/src/variable.o\"\nCC    \"src/object.c\" -> \"build/host/src/object.o\"\nCC
+    \   \"src/cdump.c\" -> \"build/host/src/cdump.o\"\nCC    \"src/time.c\" -> \"build/host/src/time.o\"\nCC
+    \   \"src/regenc.c\" -> \"build/host/src/regenc.o\"\nCC    \"src/enum.c\" -> \"build/host/src/enum.o\"\nCC
+    \   \"src/error.c\" -> \"build/host/src/error.o\"\nCC    \"src/init_ext.c\" ->
+    \"build/host/src/init_ext.o\"\nCC    \"src/re.c\" -> \"build/host/src/re.o\"\nYACC
+    \ \"src/parse.y\" -> \"build/host/src/y.tab.c\"\nCC    \"build/host/src/y.tab.c\"
+    -> \"build/host/src/y.tab.o\"\nCC    \"tools/mrbc/mrbc.c\" -> \"build/host/tools/mrbc/mrbc.o\"\nAR
+    \   \"build/host/lib/libmruby_core.a\" \nLD    \"build/host/bin/mrbc\" \nGEN   *.rb
+    -> build/host/mrblib/mrblib.c\n  MRBC mrblib/kernel.rb \n  MRBC mrblib/compar.rb
+    \n  MRBC mrblib/hash.rb \n  MRBC mrblib/numeric.rb \n  MRBC mrblib/class.rb \n
+    \ MRBC mrblib/string.rb \n  MRBC mrblib/enum.rb \n  MRBC mrblib/print.rb \n  MRBC
+    mrblib/array.rb \n  MRBC mrblib/range.rb \n  MRBC mrblib/error.rb \n  MRBC mrblib/struct.rb
+    \nCC    \"build/host/mrblib/mrblib.c\" -> \"build/host/mrblib/mrblib.o\"\nAR    \"build/host/lib/libmruby.a\"
+    \nLD    \"build/host/bin/mruby\" \nCC    \"tools/mirb/mirb.c\" -> \"build/host/tools/mirb/mirb.o\"\nLD
+    \   \"build/host/bin/mirb\" \n"
+  :stderr: ! 'ar: creating build/host/lib/libmruby_core.a
+
+    ar: creating build/host/lib/libmruby.a
+
+'
+  :status: success
+:make_test:
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-d5b263f)
+
+    CC    "test/driver.c" -> "build/host/test/driver.o"
+
+    rake aborted!
+
+    wrong number of arguments (1 for 2)
+
+
+'
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
