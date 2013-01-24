@@ -206,6 +206,20 @@ Date:   Thu Jan 24 08:18:25 2013 +0900
         
         
         <tr style="background-color:#ff9999">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>failed</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#ff9999">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>failed</td>
           <td>failed</td>
@@ -379,6 +393,19 @@ Date:   Thu Jan 24 08:18:25 2013 +0900
           
           <tr style="background-color:#ff9999">
             <td><a href="#netbsd64bit">netbsd64bit</a></td>
+            <td>failed</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: NG<br/>  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh  require.sh  syslog.sh</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#ff9999">
+            <td><a href="#netbsd_mips">netbsd_mips</a></td>
             <td>failed</td>
             <td>0</td>
             <td>0</td>
@@ -621,6 +648,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -1881,6 +1916,189 @@ mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
 require.sh: ../../bin/mrbc: not found
 mv: rename require/mrb1_.mrb to require/mrb1.mrb: No such file or directory
 require.sh: ../../bin/mruby: not found</textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-b2eeaea)
+CC    "tools/mruby/mruby.c" -> "build/host/tools/mruby/mruby.o"
+rake aborted!
+Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-b2eeaea/include" -I"build/mrbgems/mruby-mtest/include" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-digest/include" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-pack/include" -I"build/mrbgems/mruby-syslog/include" -I"build/mrbgems/mruby-env/include" -I"build/mrbgems/mruby-simple-random/include" -I"tools/mruby" -MMD -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"]
+
+</textarea></td>
+          <td><textarea>In file included from tools/mruby/mruby.c:4:
+/home/mruby/mips/iij-mruby-b2eeaea/include/mruby/string.h:15:22: encoding.h: No such file or directory
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-b2eeaea)
+CC    "test/driver.c" -> "build/host/test/driver.o"
+CC    "tools/mrbc/mrbc.c" -> "build/host/tools/mrbc/mrbc.o"
+CC    "src/range.c" -> "build/host/src/range.o"
+CC    "src/array.c" -> "build/host/src/array.o"
+CC    "src/numeric.c" -> "build/host/src/numeric.o"
+CC    "src/pool.c" -> "build/host/src/pool.o"
+CC    "src/compar.c" -> "build/host/src/compar.o"
+CC    "src/crc.c" -> "build/host/src/crc.o"
+CC    "src/regcomp.c" -> "build/host/src/regcomp.o"
+CC    "src/proc.c" -> "build/host/src/proc.o"
+CC    "src/math.c" -> "build/host/src/math.o"
+CC    "src/state.c" -> "build/host/src/state.o"
+CC    "src/print.c" -> "build/host/src/print.o"
+CC    "src/vm.c" -> "build/host/src/vm.o"
+CC    "src/compile.c" -> "build/host/src/compile.o"
+CC    "src/class.c" -> "build/host/src/class.o"
+CC    "src/load.c" -> "build/host/src/load.o"
+CC    "src/codegen.c" -> "build/host/src/codegen.o"
+CC    "src/symbol.c" -> "build/host/src/symbol.o"
+CC    "src/etc.c" -> "build/host/src/etc.o"
+CC    "src/gc.c" -> "build/host/src/gc.o"
+CC    "src/st.c" -> "build/host/src/st.o"
+CC    "src/struct.c" -> "build/host/src/struct.o"
+CC    "src/regerror.c" -> "build/host/src/regerror.o"
+CC    "src/regparse.c" -> "build/host/src/regparse.o"
+CC    "src/init.c" -> "build/host/src/init.o"
+CC    "src/regexec.c" -> "build/host/src/regexec.o"
+CC    "src/dump.c" -> "build/host/src/dump.o"
+CC    "src/kernel.c" -> "build/host/src/kernel.o"
+CC    "src/hash.c" -> "build/host/src/hash.o"
+CC    "src/string.c" -> "build/host/src/string.o"
+CC    "src/sprintf.c" -> "build/host/src/sprintf.o"
+CC    "src/variable.c" -> "build/host/src/variable.o"
+CC    "src/object.c" -> "build/host/src/object.o"
+CC    "src/cdump.c" -> "build/host/src/cdump.o"
+CC    "src/time.c" -> "build/host/src/time.o"
+CC    "src/regenc.c" -> "build/host/src/regenc.o"
+CC    "src/enum.c" -> "build/host/src/enum.o"
+CC    "src/error.c" -> "build/host/src/error.o"
+CC    "src/init_ext.c" -> "build/host/src/init_ext.o"
+CC    "src/re.c" -> "build/host/src/re.o"
+YACC  "src/parse.y" -> "build/host/src/y.tab.c"
+CC    "build/host/src/y.tab.c" -> "build/host/src/y.tab.o"
+CC    "src/ext/enc/ascii.c" -> "build/host/src/ext/enc/ascii.o"
+rake aborted!
+Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mips/iij-mruby-b2eeaea/include" -I"build/mrbgems/mruby-mtest/include" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-digest/include" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-pack/include" -I"build/mrbgems/mruby-syslog/include" -I"build/mrbgems/mruby-env/include" -I"build/mrbgems/mruby-simple-random/include" -I"src/ext/enc" -MMD -o "build/host/src/ext/enc/ascii.o" -c "src/ext/enc/ascii.c"]
+
+</textarea></td>
+          <td><textarea>src/compile.c: In function `mrb_compile':
+src/compile.c:38: warning: unused variable `irep_len'
+src/compile.c: At top level:
+src/compile.c:21: warning: `replace_stop_with_return' defined but not used
+src/load.c: In function `load_debug_info_irep':
+src/load.c:259: warning: `plen' might be used uninitialized in this function
+src/ext/enc/ascii.c:30:20: regenc.h: No such file or directory
+src/ext/enc/ascii.c:33: error: parse error before "code"
+src/ext/enc/ascii.c: In function `ascii_is_code_ctype':
+src/ext/enc/ascii.c:35: error: `code' undeclared (first use in this function)
+src/ext/enc/ascii.c:35: error: (Each undeclared identifier is reported only once
+src/ext/enc/ascii.c:35: error: for each function it appears in.)
+src/ext/enc/ascii.c:36: error: implicit declaration of function `ONIGENC_IS_ASCII_CODE_CTYPE'
+src/ext/enc/ascii.c:36: error: `ctype' undeclared (first use in this function)
+src/ext/enc/ascii.c: At top level:
+src/ext/enc/ascii.c:41: error: parse error before "OnigEncodingASCII"
+src/ext/enc/ascii.c:41: warning: type defaults to `int' in declaration of `OnigEncodingASCII'
+src/ext/enc/ascii.c:42: error: `onigenc_single_byte_mbc_enc_len' undeclared here (not in a function)
+src/ext/enc/ascii.c:42: error: initializer element is not constant
+src/ext/enc/ascii.c:42: error: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:43: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:43: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:44: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:44: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:45: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:45: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:46: error: `onigenc_is_mbc_newline_0x0a' undeclared here (not in a function)
+src/ext/enc/ascii.c:46: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:46: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:47: error: `onigenc_single_byte_mbc_to_code' undeclared here (not in a function)
+src/ext/enc/ascii.c:47: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:47: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:48: error: `onigenc_single_byte_code_to_mbclen' undeclared here (not in a function)
+src/ext/enc/ascii.c:48: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:48: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:49: error: `onigenc_single_byte_code_to_mbc' undeclared here (not in a function)
+src/ext/enc/ascii.c:49: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:49: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:50: error: `onigenc_ascii_mbc_case_fold' undeclared here (not in a function)
+src/ext/enc/ascii.c:50: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:50: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:51: error: `onigenc_ascii_apply_all_case_fold' undeclared here (not in a function)
+src/ext/enc/ascii.c:51: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:51: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:52: error: `onigenc_ascii_get_case_fold_codes_by_str' undeclared here (not in a function)
+src/ext/enc/ascii.c:52: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:52: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:53: error: `onigenc_minimum_property_name_to_ctype' undeclared here (not in a function)
+src/ext/enc/ascii.c:53: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:53: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:54: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:54: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:55: error: `onigenc_not_support_get_ctype_code_range' undeclared here (not in a function)
+src/ext/enc/ascii.c:55: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:55: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:56: error: `onigenc_single_byte_left_adjust_char_head' undeclared here (not in a function)
+src/ext/enc/ascii.c:56: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:56: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:58: error: `onigenc_always_true_is_allowed_reverse_match' undeclared here (not in a function)
+src/ext/enc/ascii.c:58: warning: excess elements in scalar initializer
+src/ext/enc/ascii.c:58: warning: (near initialization for `OnigEncodingASCII')
+src/ext/enc/ascii.c:58: warning: data definition has no type or storage class
+</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+
+###################################
+# exec test/posix/env.sh; start...
+
+###################################
+# exec test/posix/errno.sh; start...
+
+###################################
+# exec test/posix/file.sh; start...
+
+###################################
+# exec test/posix/io.sh; start...
+
+###################################
+# exec test/posix/process.sh; start...
+
+###################################
+# exec test/posix/require.sh; start...
+
+###################################
+# exec test/posix/syslog.sh; start...
+
+###################################
+POSIX test result: NG
+  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh  require.sh  syslog.sh
+###################################
+</textarea></td>
+            <td><textarea>dir.sh: /home/mruby/mips/iij-mruby-b2eeaea/test/posix/../../bin/mruby: not found
+env: ../../bin/mruby: No such file or directory
+errno.sh: ../../bin/mruby: not found
+file.sh: /home/mruby/mips/iij-mruby-b2eeaea/test/posix/../../bin/mruby: not found
+io.sh: ../../bin/mruby: not found
+env: /home/mruby/mips/iij-mruby-b2eeaea/test/posix/../../bin/mruby: No such file or directory
+require.sh: ../../bin/mrbc: not found
+mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
+require.sh: ../../bin/mrbc: not found
+mv: rename require/mrb1_.mrb to require/mrb1.mrb: No such file or directory
+require.sh: ../../bin/mruby: not found
+</textarea></td>
           </tr>
         
       </table>
