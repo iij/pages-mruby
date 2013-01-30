@@ -1,9 +1,9 @@
 ---
-:date: 2013-01-30 15:53:26.542924000 +09:00
+:date: 2013-01-30 22:31:47.363973000 +09:00
 :id: iij-mruby-80009e2
 :zipball_url: https://github.com/iij/mruby/zipball/80009e2
 :make:
-  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130130155330-35817-build/iij-mruby-80009e2)\nGIT
+  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130130223151-36613-build/iij-mruby-80009e2)\nGIT
     \  https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest\nCloning
     into 'build/mrbgems/mruby-mtest'...\nGIT   https://github.com/iij/mruby-dir.git
     -> build/mrbgems/mruby-dir\nCloning into 'build/mrbgems/mruby-dir'...\nGIT   https://github.com/iij/mruby-digest.git
@@ -118,7 +118,7 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130130155330-35817-build/iij-mruby-80009e2)\nCC
+  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130130223151-36613-build/iij-mruby-80009e2)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/argumenterror.rb \n      MRBC test/t/array.rb
     \n      MRBC test/t/basicobject.rb \n      MRBC test/t/bs_block.rb \n      MRBC
@@ -159,7 +159,7 @@
     -> build/host/mrbgems/mruby-simple-random/gem_test.o\nAR    build/host/mrbgems/mruby-simple-random/libmrb-mruby-simple-random-gem-test.a
     \nLD    build/host/test/mrbtest \n>>> Test host <<<\nmrbtest - Embeddable Ruby
     Test\n\nThis is a very early version, please test and report errors.\nThanks :)\n\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    644\n   OK: 644\n   KO: 0\nCrash: 0\n Time: 0.115076 seconds\n\n*** Test with
+    644\n   OK: 644\n   KO: 0\nCrash: 0\n Time: 0.146463 seconds\n\n*** Test with
     tools/mruby (rb file) ***\nSuccess\n\n*** Test with tools/mruby (mrb file) ***\nSuccess"
   :stderr: ! 'ar: creating archive build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a
 
@@ -180,25 +180,32 @@
   :status: success
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.003138 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.007022 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.001294 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.008373 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.001269 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.001335 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.029207 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.019877 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.00581 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 36391 done\nwait 36392 done\nwait 36393 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.230811 seconds\n\n###################################\n#
+    0.035533 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 37186 done\nwait 37187 done\nwait 37188 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.229178 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.078325 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.094735 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
-    0\nCrash: 0\n Time: 0.00572 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.003222 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################"
   :stderr: ''
   :status_info: !ruby/object:Process::Status {}
   :status: success
+:filesize:
+  bin/mruby: 955484
+  bin/mrbc: 851932
+  bin/mirb: 955652
+  lib/libmruby.a: 3396664
+  lib/libmruby_core.a: 3097904
+  test/mrbtest: 1124220
 :repository: iij/mruby
 :commit: 80009e2
 :ball_id: iij-mruby-80009e2

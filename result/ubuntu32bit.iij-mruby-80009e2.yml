@@ -1,9 +1,9 @@
 ---
-:date: 2013-01-30 15:53:26.277522922 +09:00
+:date: 2013-01-30 22:31:46.785892466 +09:00
 :id: iij-mruby-80009e2
 :zipball_url: https://github.com/iij/mruby/zipball/80009e2
 :make:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130130155330-6124-build/iij-mruby-80009e2)\nGIT
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130130223151-7262-build/iij-mruby-80009e2)\nGIT
     \  https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest\nCloning
     into 'build/mrbgems/mruby-mtest'...\nGIT   https://github.com/iij/mruby-dir.git
     -> build/mrbgems/mruby-dir\nCloning into 'build/mrbgems/mruby-dir'...\nGIT   https://github.com/iij/mruby-digest.git
@@ -209,7 +209,7 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130130155330-6124-build/iij-mruby-80009e2)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130130223151-7262-build/iij-mruby-80009e2)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/ipaddr.rb \n      MRBC test/t/bs_block.rb
     \n      MRBC test/t/range.rb \n      MRBC test/t/basicobject.rb \n      MRBC test/t/runtimeerror.rb
@@ -273,25 +273,33 @@
   :status: failed
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.001817 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.001186 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.000384 seconds\n\n###################################\n#
-    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.000435 seconds\n\n###################################\n#
-    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.010434 seconds\n\n###################################\n# exec test/posix/io.sh;
-    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.033348 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 6801 done\nwait 6802 done\nwait 6803 done\n.\nTotal: 6\n   OK:
-    6\n   KO: 0\nCrash: 0\n Time: 0.213773 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.0003 seconds\n\n###################################\n# exec
+    test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO: 0\nCrash:
+    0\n Time: 0.000405 seconds\n\n###################################\n# exec test/posix/file.sh;
+    start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash: 0\n Time: 0.010495
+    seconds\n\n###################################\n# exec test/posix/io.sh; start...\n..................\nTotal:
+    18\n   OK: 18\n   KO: 0\nCrash: 0\n Time: 0.010669 seconds\n\n###################################\n#
+    exec test/posix/process.sh; start...\n.....wait 7938 done\nwait 7939 done\nwait
+    7940 done\n.\nTotal: 6\n   OK: 6\n   KO: 0\nCrash: 0\n Time: 0.222681 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.05114 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.052668 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
-    0\nCrash: 0\n Time: 0.001006 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.001018 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################"
-  :stderr: ''
+  :stderr: ! 'trap: SIGUSR1: bad trap
+
+    trap: SIGUSR2: bad trap'
   :status_info: !ruby/object:Process::Status {}
   :status: success
+:filesize:
+  bin/mruby: 2613238
+  bin/mrbc: 2373897
+  bin/mirb: 2604620
+  lib/libmruby.a: 3728264
+  lib/libmruby_core.a: 3381152
+  test/mrbtest: 2823207
 :repository: iij/mruby
 :commit: 80009e2
 :ball_id: iij-mruby-80009e2
