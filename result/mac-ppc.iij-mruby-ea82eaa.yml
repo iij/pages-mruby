@@ -1,10 +1,10 @@
 --- 
-:date: 2013-01-30 08:10:55.450541 +09:00
+:date: 2013-01-30 23:27:15.653287 +09:00
 :id: iij-mruby-ea82eaa
 :zipball_url: https://github.com/iij/mruby/zipball/ea82eaa
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130130081058-8553-build/iij-mruby-ea82eaa)
+    (in /Users/mruby/mruby-test-tool/tmp/20130130232720-25256-build/iij-mruby-ea82eaa)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/cdump.c -> build/host/src/cdump.o
@@ -98,7 +98,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130130081058-8553-build/iij-mruby-ea82eaa)
+    (in /Users/mruby/mruby-test-tool/tmp/20130130232720-25256-build/iij-mruby-ea82eaa)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -153,11 +153,18 @@
        OK: 515
        KO: 0
     Crash: 0
-     Time: 3.876144 seconds
+     Time: 3.909952 seconds
   :stderr: ""
   :status_info: !ruby/object:Process::Status {}
 
   :status: success
+:filesize: 
+  bin/mruby: 585880
+  bin/mrbc: 570008
+  bin/mirb: 581804
+  lib/libmruby.a: 3434800
+  lib/libmruby_core.a: 3410928
+  test/mrbtest: 692532
 :repository: iij/mruby
 :commit: ea82eaa
 :ball_id: iij-mruby-ea82eaa
