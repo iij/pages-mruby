@@ -199,6 +199,34 @@ Date:   Sat Feb 2 07:01:46 2013 +0900
         
         
         <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_arm">netbsd_arm</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>642</td>
+          <td>642</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>642</td>
+          <td>642</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>success</td>
           <td>success</td>
@@ -379,6 +407,32 @@ Date:   Sat Feb 2 07:01:46 2013 +0900
             <td>0</td>
             <td></td>
             <td>wait 1879 done<br/>wait 27131 done<br/>.<br/>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#netbsd_arm">netbsd_arm</a></td>
+            <td>success</td>
+            <td>114</td>
+            <td>114</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>wait 6879 done<br/>wait 18523 done<br/>.<br/>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#netbsd_mips">netbsd_mips</a></td>
+            <td>success</td>
+            <td>114</td>
+            <td>114</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>wait 7477 done<br/>wait 25277 done<br/>.<br/>POSIX test result: OK</td>
           </tr>
         
           
@@ -614,6 +668,22 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -3638,6 +3708,717 @@ Crash: 0
 ###################################
 POSIX test result: OK
 ###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_arm">netbsd_arm</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm/iij-mruby-5cdaed7)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/regcomp.c -> build/host/src/regcomp.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/compile.c -> build/host/src/compile.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/st.c -> build/host/src/st.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/regerror.c -> build/host/src/regerror.o
+CC    src/regparse.c -> build/host/src/regparse.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/regexec.c -> build/host/src/regexec.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/time.c -> build/host/src/time.o
+CC    src/regenc.c -> build/host/src/regenc.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/init_ext.c -> build/host/src/init_ext.o
+CC    src/re.c -> build/host/src/re.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    src/ext/enc/ascii.c -> build/host/src/ext/enc/ascii.o
+CC    src/ext/errno/errno.c -> build/host/src/ext/errno/errno.o
+CC    src/ext/require/require.c -> build/host/src/ext/require/require.o
+CC    src/ext/io/file.c -> build/host/src/ext/io/file.o
+CC    src/ext/io/io.c -> build/host/src/ext/io/io.o
+CC    src/ext/socket/socket.c -> build/host/src/ext/socket/socket.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+GEN   *.rb -> build/host/mrblib/ext/mrblib_ext.c
+      MRBC mrblib/ext/file.rb 
+      MRBC mrblib/ext/ipaddr.rb 
+      MRBC mrblib/ext/socket.rb 
+      MRBC mrblib/ext/io.rb 
+CC    build/host/mrblib/ext/mrblib_ext.c -> build/host/mrblib/ext/mrblib_ext.o
+      MRBC build/mrbgems/mruby-mtest/mrblib/mtest_unit.rb 
+CC    build/host/mrbgems/mruby-mtest/gem_init.c -> build/host/mrbgems/mruby-mtest/gem_init.o
+CC    build/mrbgems/mruby-dir/src/dir.c -> build/host/mrbgems/mruby-dir/src/dir.o
+      MRBC build/mrbgems/mruby-dir/mrblib/dir.rb 
+CC    build/host/mrbgems/mruby-dir/gem_init.c -> build/host/mrbgems/mruby-dir/gem_init.o
+CC    build/mrbgems/mruby-digest/src/digest.c -> build/host/mrbgems/mruby-digest/src/digest.o
+      MRBC build/mrbgems/mruby-digest/mrblib/digest.rb 
+CC    build/host/mrbgems/mruby-digest/gem_init.c -> build/host/mrbgems/mruby-digest/gem_init.o
+CC    build/mrbgems/mruby-process/src/process.c -> build/host/mrbgems/mruby-process/src/process.o
+CC    build/host/mrbgems/mruby-process/gem_init.c -> build/host/mrbgems/mruby-process/gem_init.o
+CC    build/mrbgems/mruby-pack/src/pack.c -> build/host/mrbgems/mruby-pack/src/pack.o
+CC    build/host/mrbgems/mruby-pack/gem_init.c -> build/host/mrbgems/mruby-pack/gem_init.o
+CC    build/mrbgems/mruby-syslog/src/syslog.c -> build/host/mrbgems/mruby-syslog/src/syslog.o
+CC    build/host/mrbgems/mruby-syslog/gem_init.c -> build/host/mrbgems/mruby-syslog/gem_init.o
+CC    build/mrbgems/mruby-env/src/env.c -> build/host/mrbgems/mruby-env/src/env.o
+CC    build/host/mrbgems/mruby-env/gem_init.c -> build/host/mrbgems/mruby-env/gem_init.o
+CC    build/mrbgems/mruby-simple-random/src/random.c -> build/host/mrbgems/mruby-simple-random/src/random.o
+CC    build/host/mrbgems/mruby-simple-random/gem_init.c -> build/host/mrbgems/mruby-simple-random/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-mtest
+             mruby-dir
+             mruby-digest
+             mruby-process
+             mruby-pack
+             mruby-syslog
+             mruby-env
+             mruby-simple-random
+================================================
+
+</textarea></td>
+          <td><textarea>src/compile.c: In function `mrb_compile':
+src/compile.c:38: warning: unused variable `irep_len'
+src/compile.c: At top level:
+src/compile.c:21: warning: `replace_stop_with_return' defined but not used
+src/load.c: In function `load_debug_info_irep':
+src/load.c:259: warning: `plen' might be used uninitialized in this function
+src/ext/io/file.c: In function `mrb_file__gethome':
+src/ext/io/file.c:334: warning: `cuser' might be used uninitialized in this function
+ar: creating build/host/lib/libmruby_core.a
+build/mrbgems/mruby-pack/src/pack.c: In function `pack_a':
+build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable `dlen'
+build/mrbgems/mruby-pack/src/pack.c: In function `unpack_a':
+build/mrbgems/mruby-pack/src/pack.c:271: warning: subscript has type `char'
+build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable `sptr0'
+build/mrbgems/mruby-pack/src/pack.c: In function `pack_h':
+build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable `x'
+build/mrbgems/mruby-pack/src/pack.c: In function `unpack_h':
+build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable `l'
+build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable `i'
+build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `c'
+build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `ch'
+build/mrbgems/mruby-pack/src/pack.c: In function `read_tmpl':
+build/mrbgems/mruby-pack/src/pack.c:611: warning: subscript has type `char'
+build/mrbgems/mruby-pack/src/pack.c:515: warning: `type' might be used uninitialized in this function
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm/iij-mruby-5cdaed7)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/file.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/ipaddr.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/regexp.rb 
+      MRBC test/t/variable.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/time.rb 
+GEM   *.rb -> build/host/test/mrbtest.rb
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-mtest/test/mtest_unit_test.rb 
+CC    build/host/mrbgems/mruby-mtest/gem_test.c -> build/host/mrbgems/mruby-mtest/gem_test.o
+AR    build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-dir/test/dir.rb 
+CC    build/host/mrbgems/mruby-dir/gem_test.c -> build/host/mrbgems/mruby-dir/gem_test.o
+AR    build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-digest/test/digest.rb 
+CC    build/host/mrbgems/mruby-digest/gem_test.c -> build/host/mrbgems/mruby-digest/gem_test.o
+AR    build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-process/test/process.rb 
+CC    build/host/mrbgems/mruby-process/gem_test.c -> build/host/mrbgems/mruby-process/gem_test.o
+AR    build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-pack/test/pack.rb 
+CC    build/host/mrbgems/mruby-pack/gem_test.c -> build/host/mrbgems/mruby-pack/gem_test.o
+AR    build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-syslog/test/syslog.rb 
+CC    build/host/mrbgems/mruby-syslog/gem_test.c -> build/host/mrbgems/mruby-syslog/gem_test.o
+AR    build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-env/test/env_test.rb 
+CC    build/host/mrbgems/mruby-env/gem_test.c -> build/host/mrbgems/mruby-env/gem_test.o
+AR    build/host/mrbgems/mruby-env/libmrb-mruby-env-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-simple-random/test/random.rb 
+CC    build/host/mrbgems/mruby-simple-random/gem_test.c -> build/host/mrbgems/mruby-simple-random/gem_test.o
+AR    build/host/mrbgems/mruby-simple-random/libmrb-mruby-simple-random-gem-test.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 642
+   OK: 642
+   KO: 0
+Crash: 0
+ Time: 1.182188 seconds
+
+*** Test with tools/mruby (rb file) ***
+Success
+
+*** Test with tools/mruby (mrb file) ***
+Success
+
+</textarea></td>
+          <td><textarea>ar: creating build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a
+ar: creating build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a
+ar: creating build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a
+ar: creating build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a
+ar: creating build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a
+ar: creating build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a
+ar: creating build/host/mrbgems/mruby-env/libmrb-mruby-env-gem-test.a
+ar: creating build/host/mrbgems/mruby-simple-random/libmrb-mruby-simple-random-gem-test.a
+</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.046079 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.011454 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.044905 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.079629 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.108222 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+.....wait 1129 done
+wait 6879 done
+wait 18523 done
+.
+Total: 6
+   OK: 6
+   KO: 0
+Crash: 0
+ Time: 0.408724 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.76139 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+..........
+Total: 10
+   OK: 10
+   KO: 0
+Crash: 0
+ Time: 0.032883 seconds
+
+###################################
+POSIX test result: OK
+###################################
+</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-5cdaed7)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/regcomp.c -> build/host/src/regcomp.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/compile.c -> build/host/src/compile.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/st.c -> build/host/src/st.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/regerror.c -> build/host/src/regerror.o
+CC    src/regparse.c -> build/host/src/regparse.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/regexec.c -> build/host/src/regexec.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/time.c -> build/host/src/time.o
+CC    src/regenc.c -> build/host/src/regenc.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/init_ext.c -> build/host/src/init_ext.o
+CC    src/re.c -> build/host/src/re.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    src/ext/enc/ascii.c -> build/host/src/ext/enc/ascii.o
+CC    src/ext/errno/errno.c -> build/host/src/ext/errno/errno.o
+CC    src/ext/require/require.c -> build/host/src/ext/require/require.o
+CC    src/ext/io/file.c -> build/host/src/ext/io/file.o
+CC    src/ext/io/io.c -> build/host/src/ext/io/io.o
+CC    src/ext/socket/socket.c -> build/host/src/ext/socket/socket.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+GEN   *.rb -> build/host/mrblib/ext/mrblib_ext.c
+      MRBC mrblib/ext/file.rb 
+      MRBC mrblib/ext/ipaddr.rb 
+      MRBC mrblib/ext/socket.rb 
+      MRBC mrblib/ext/io.rb 
+CC    build/host/mrblib/ext/mrblib_ext.c -> build/host/mrblib/ext/mrblib_ext.o
+      MRBC build/mrbgems/mruby-mtest/mrblib/mtest_unit.rb 
+CC    build/host/mrbgems/mruby-mtest/gem_init.c -> build/host/mrbgems/mruby-mtest/gem_init.o
+CC    build/mrbgems/mruby-dir/src/dir.c -> build/host/mrbgems/mruby-dir/src/dir.o
+      MRBC build/mrbgems/mruby-dir/mrblib/dir.rb 
+CC    build/host/mrbgems/mruby-dir/gem_init.c -> build/host/mrbgems/mruby-dir/gem_init.o
+CC    build/mrbgems/mruby-digest/src/digest.c -> build/host/mrbgems/mruby-digest/src/digest.o
+      MRBC build/mrbgems/mruby-digest/mrblib/digest.rb 
+CC    build/host/mrbgems/mruby-digest/gem_init.c -> build/host/mrbgems/mruby-digest/gem_init.o
+CC    build/mrbgems/mruby-process/src/process.c -> build/host/mrbgems/mruby-process/src/process.o
+CC    build/host/mrbgems/mruby-process/gem_init.c -> build/host/mrbgems/mruby-process/gem_init.o
+CC    build/mrbgems/mruby-pack/src/pack.c -> build/host/mrbgems/mruby-pack/src/pack.o
+CC    build/host/mrbgems/mruby-pack/gem_init.c -> build/host/mrbgems/mruby-pack/gem_init.o
+CC    build/mrbgems/mruby-syslog/src/syslog.c -> build/host/mrbgems/mruby-syslog/src/syslog.o
+CC    build/host/mrbgems/mruby-syslog/gem_init.c -> build/host/mrbgems/mruby-syslog/gem_init.o
+CC    build/mrbgems/mruby-env/src/env.c -> build/host/mrbgems/mruby-env/src/env.o
+CC    build/host/mrbgems/mruby-env/gem_init.c -> build/host/mrbgems/mruby-env/gem_init.o
+CC    build/mrbgems/mruby-simple-random/src/random.c -> build/host/mrbgems/mruby-simple-random/src/random.o
+CC    build/host/mrbgems/mruby-simple-random/gem_init.c -> build/host/mrbgems/mruby-simple-random/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-mtest
+             mruby-dir
+             mruby-digest
+             mruby-process
+             mruby-pack
+             mruby-syslog
+             mruby-env
+             mruby-simple-random
+================================================
+
+</textarea></td>
+          <td><textarea>src/compile.c: In function `mrb_compile':
+src/compile.c:38: warning: unused variable `irep_len'
+src/compile.c: At top level:
+src/compile.c:21: warning: `replace_stop_with_return' defined but not used
+src/load.c: In function `load_debug_info_irep':
+src/load.c:259: warning: `plen' might be used uninitialized in this function
+src/ext/io/file.c: In function `mrb_file__gethome':
+src/ext/io/file.c:334: warning: `cuser' might be used uninitialized in this function
+ar: creating build/host/lib/libmruby_core.a
+build/mrbgems/mruby-pack/src/pack.c: In function `pack_a':
+build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable `dlen'
+build/mrbgems/mruby-pack/src/pack.c: In function `unpack_a':
+build/mrbgems/mruby-pack/src/pack.c:271: warning: subscript has type `char'
+build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable `sptr0'
+build/mrbgems/mruby-pack/src/pack.c: In function `pack_h':
+build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable `x'
+build/mrbgems/mruby-pack/src/pack.c: In function `unpack_h':
+build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable `l'
+build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable `i'
+build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `c'
+build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `ch'
+build/mrbgems/mruby-pack/src/pack.c: In function `read_tmpl':
+build/mrbgems/mruby-pack/src/pack.c:611: warning: subscript has type `char'
+build/mrbgems/mruby-pack/src/pack.c:515: warning: `type' might be used uninitialized in this function
+ar: creating build/host/lib/libmruby.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/iij-mruby-5cdaed7)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/file.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/ipaddr.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/regexp.rb 
+      MRBC test/t/variable.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/time.rb 
+GEM   *.rb -> build/host/test/mrbtest.rb
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-mtest/test/mtest_unit_test.rb 
+CC    build/host/mrbgems/mruby-mtest/gem_test.c -> build/host/mrbgems/mruby-mtest/gem_test.o
+AR    build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-dir/test/dir.rb 
+CC    build/host/mrbgems/mruby-dir/gem_test.c -> build/host/mrbgems/mruby-dir/gem_test.o
+AR    build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-digest/test/digest.rb 
+CC    build/host/mrbgems/mruby-digest/gem_test.c -> build/host/mrbgems/mruby-digest/gem_test.o
+AR    build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-process/test/process.rb 
+CC    build/host/mrbgems/mruby-process/gem_test.c -> build/host/mrbgems/mruby-process/gem_test.o
+AR    build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-pack/test/pack.rb 
+CC    build/host/mrbgems/mruby-pack/gem_test.c -> build/host/mrbgems/mruby-pack/gem_test.o
+AR    build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-syslog/test/syslog.rb 
+CC    build/host/mrbgems/mruby-syslog/gem_test.c -> build/host/mrbgems/mruby-syslog/gem_test.o
+AR    build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-env/test/env_test.rb 
+CC    build/host/mrbgems/mruby-env/gem_test.c -> build/host/mrbgems/mruby-env/gem_test.o
+AR    build/host/mrbgems/mruby-env/libmrb-mruby-env-gem-test.a 
+      MRBC test/assert.rb 
+      MRBC build/mrbgems/mruby-simple-random/test/random.rb 
+CC    build/host/mrbgems/mruby-simple-random/gem_test.c -> build/host/mrbgems/mruby-simple-random/gem_test.o
+AR    build/host/mrbgems/mruby-simple-random/libmrb-mruby-simple-random-gem-test.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 642
+   OK: 642
+   KO: 0
+Crash: 0
+ Time: 1.459401 seconds
+
+*** Test with tools/mruby (rb file) ***
+Success
+
+*** Test with tools/mruby (mrb file) ***
+Success
+
+</textarea></td>
+          <td><textarea>ar: creating build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a
+ar: creating build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a
+ar: creating build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a
+ar: creating build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a
+ar: creating build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a
+ar: creating build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a
+ar: creating build/host/mrbgems/mruby-env/libmrb-mruby-env-gem-test.a
+ar: creating build/host/mrbgems/mruby-simple-random/libmrb-mruby-simple-random-gem-test.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+/usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm; link against libcrypto_mdc2.a
+</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.035674 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.007424 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.022898 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.246849 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.074121 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+.....wait 8237 done
+wait 7477 done
+wait 25277 done
+.
+Total: 6
+   OK: 6
+   KO: 0
+Crash: 0
+ Time: 0.247668 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.917176 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+..........
+Total: 10
+   OK: 10
+   KO: 0
+Crash: 0
+ Time: 0.026318 seconds
+
+###################################
+POSIX test result: OK
+###################################
+</textarea></td>
             <td><textarea></textarea></td>
           </tr>
         
