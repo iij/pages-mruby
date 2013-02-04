@@ -1,0 +1,257 @@
+---
+:date: 2013-01-24 10:57:19.652472595 +09:00
+:id: iij-mruby-b2eeaea
+:zipball_url: https://github.com/iij/mruby/zipball/b2eeaea
+:make:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea)
+
+    GIT   https://github.com/iij/mruby-mtest.git -> "build/mrbgems/mruby-mtest"
+
+    Cloning into ''build/mrbgems/mruby-mtest''...
+
+    GIT   https://github.com/iij/mruby-dir.git -> "build/mrbgems/mruby-dir"
+
+    Cloning into ''build/mrbgems/mruby-dir''...
+
+    GIT   https://github.com/iij/mruby-digest.git -> "build/mrbgems/mruby-digest"
+
+    Cloning into ''build/mrbgems/mruby-digest''...
+
+    GIT   https://github.com/iij/mruby-process.git -> "build/mrbgems/mruby-process"
+
+    Cloning into ''build/mrbgems/mruby-process''...
+
+    GIT   https://github.com/iij/mruby-pack.git -> "build/mrbgems/mruby-pack"
+
+    Cloning into ''build/mrbgems/mruby-pack''...
+
+    GIT   https://github.com/iij/mruby-syslog.git -> "build/mrbgems/mruby-syslog"
+
+    Cloning into ''build/mrbgems/mruby-syslog''...
+
+    GIT   https://github.com/iij/mruby-env.git -> "build/mrbgems/mruby-env"
+
+    Cloning into ''build/mrbgems/mruby-env''...
+
+    GIT   https://github.com/iij/mruby-simple-random.git -> "build/mrbgems/mruby-simple-random"
+
+    Cloning into ''build/mrbgems/mruby-simple-random''...
+
+    CC    "tools/mruby/mruby.c" -> "build/host/tools/mruby/mruby.o"
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/include"
+    -I"build/mrbgems/mruby-mtest/include" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-pack/include" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-env/include" -I"build/mrbgems/mruby-simple-random/include"
+    -I"tools/mruby" -MMD -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"]'
+  :stderr: ! 'In file included from tools/mruby/mruby.c:4:
+
+    /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/include/mruby/string.h:15:22:
+    error: encoding.h: No such file or directory'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea)
+
+    CC    "test/driver.c" -> "build/host/test/driver.o"
+
+    CC    "tools/mrbc/mrbc.c" -> "build/host/tools/mrbc/mrbc.o"
+
+    CC    "src/array.c" -> "build/host/src/array.o"
+
+    CC    "src/cdump.c" -> "build/host/src/cdump.o"
+
+    CC    "src/class.c" -> "build/host/src/class.o"
+
+    CC    "src/codegen.c" -> "build/host/src/codegen.o"
+
+    CC    "src/compar.c" -> "build/host/src/compar.o"
+
+    CC    "src/compile.c" -> "build/host/src/compile.o"
+
+    CC    "src/crc.c" -> "build/host/src/crc.o"
+
+    CC    "src/dump.c" -> "build/host/src/dump.o"
+
+    CC    "src/enum.c" -> "build/host/src/enum.o"
+
+    CC    "src/error.c" -> "build/host/src/error.o"
+
+    CC    "src/etc.c" -> "build/host/src/etc.o"
+
+    CC    "src/gc.c" -> "build/host/src/gc.o"
+
+    CC    "src/hash.c" -> "build/host/src/hash.o"
+
+    CC    "src/init.c" -> "build/host/src/init.o"
+
+    CC    "src/init_ext.c" -> "build/host/src/init_ext.o"
+
+    CC    "src/kernel.c" -> "build/host/src/kernel.o"
+
+    CC    "src/load.c" -> "build/host/src/load.o"
+
+    CC    "src/math.c" -> "build/host/src/math.o"
+
+    CC    "src/numeric.c" -> "build/host/src/numeric.o"
+
+    CC    "src/object.c" -> "build/host/src/object.o"
+
+    CC    "src/pool.c" -> "build/host/src/pool.o"
+
+    CC    "src/print.c" -> "build/host/src/print.o"
+
+    CC    "src/proc.c" -> "build/host/src/proc.o"
+
+    CC    "src/range.c" -> "build/host/src/range.o"
+
+    CC    "src/re.c" -> "build/host/src/re.o"
+
+    CC    "src/regcomp.c" -> "build/host/src/regcomp.o"
+
+    CC    "src/regenc.c" -> "build/host/src/regenc.o"
+
+    CC    "src/regerror.c" -> "build/host/src/regerror.o"
+
+    CC    "src/regexec.c" -> "build/host/src/regexec.o"
+
+    CC    "src/regparse.c" -> "build/host/src/regparse.o"
+
+    CC    "src/sprintf.c" -> "build/host/src/sprintf.o"
+
+    CC    "src/st.c" -> "build/host/src/st.o"
+
+    CC    "src/state.c" -> "build/host/src/state.o"
+
+    CC    "src/string.c" -> "build/host/src/string.o"
+
+    CC    "src/struct.c" -> "build/host/src/struct.o"
+
+    CC    "src/symbol.c" -> "build/host/src/symbol.o"
+
+    CC    "src/time.c" -> "build/host/src/time.o"
+
+    CC    "src/variable.c" -> "build/host/src/variable.o"
+
+    CC    "src/vm.c" -> "build/host/src/vm.o"
+
+    YACC  "src/parse.y" -> "build/host/src/y.tab.c"
+
+    CC    "build/host/src/y.tab.c" -> "build/host/src/y.tab.o"
+
+    CC    "src/ext/enc/ascii.c" -> "build/host/src/ext/enc/ascii.o"
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/include"
+    -I"build/mrbgems/mruby-mtest/include" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-pack/include" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-env/include" -I"build/mrbgems/mruby-simple-random/include"
+    -I"src/ext/enc" -MMD -o "build/host/src/ext/enc/ascii.o" -c "src/ext/enc/ascii.c"]'
+  :stderr: ! 'src/compile.c: In function ''mrb_compile'':
+
+    src/compile.c:38: warning: unused variable ''irep_len''
+
+    src/compile.c: At top level:
+
+    src/compile.c:21: warning: ''replace_stop_with_return'' defined but not used
+
+    src/ext/enc/ascii.c:30:20: error: regenc.h: No such file or directory
+
+    src/ext/enc/ascii.c:33: error: expected '')'' before ''code''
+
+    src/ext/enc/ascii.c:41: error: expected ''='', '','', '';'', ''asm'' or ''__attribute__''
+    before ''OnigEncodingASCII'''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:posix_test:
+  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n\n###################################\n#
+    exec test/posix/env.sh; start...\n\n###################################\n# exec
+    test/posix/errno.sh; start...\n\n###################################\n# exec test/posix/file.sh;
+    start...\n\n###################################\n# exec test/posix/io.sh; start...\n\n###################################\n#
+    exec test/posix/process.sh; start...\n\n###################################\n#
+    exec test/posix/require.sh; start...\n\n###################################\n#
+    exec test/posix/syslog.sh; start...\n\n###################################\nPOSIX
+    test result: NG\n  fail test is :  dir.sh  env.sh  errno.sh  file.sh  io.sh  process.sh
+    \ require.sh  syslog.sh\n###################################"
+  :stderr: ! 'dir.sh: /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/test/posix/../../bin/mruby:
+    not found
+
+    env: ../../bin/mruby: No such file or directory
+
+    errno.sh: ../../bin/mruby: not found
+
+    file.sh: /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/test/posix/../../bin/mruby:
+    not found
+
+    io.sh: ../../bin/mruby: not found
+
+    env: /home/mruby/mruby-test-tool/tmp/20130124105723-25851-build/iij-mruby-b2eeaea/test/posix/../../bin/mruby:
+    No such file or directory
+
+    require.sh: ../../bin/mrbc: not found
+
+    mv: rename require/mrb0_.mrb to require/mrb0.mrb: No such file or directory
+
+    require.sh: ../../bin/mrbc: not found
+
+    mv: rename require/mrb1_.mrb to require/mrb1.mrb: No such file or directory
+
+    require.sh: ../../bin/mruby: not found'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:repository: iij/mruby
+:commit: b2eeaea
+:ball_id: iij-mruby-b2eeaea
+:hostname: netbsd32bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+
+      Copyright (C) 2006 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for i386--netbsdelf
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5.1
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2012 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison

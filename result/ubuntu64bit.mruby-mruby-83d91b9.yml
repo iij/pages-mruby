@@ -1,0 +1,103 @@
+---
+:date: 2013-01-16 20:18:21.075836979 +09:00
+:id: mruby-mruby-83d91b9
+:zipball_url: https://github.com/mruby/mruby/zipball/83d91b9
+:make:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9)
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/src/vm.o" -c "src/vm.c"
+
+    rake aborted!
+
+    Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration
+    -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/src/vm.o" -c "src/vm.c"]'
+  :stderr: ! 'src/vm.c: In function ''mrb_run'':
+
+    src/vm.c:1239:9: error: implicit declaration of function ''DEBUG'' [-Werror=implicit-function-declaration]
+
+    cc1: some warnings being treated as errors'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9)
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/test/driver.o" -c "test/driver.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+
+    "gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/src/vm.o" -c "src/vm.c"
+
+    rake aborted!
+
+    Command Failed: ["gcc" -DDISABLE_GEMS -MMD -g -O3 -Wall -Werror-implicit-function-declaration
+    -I"/home/mruby/mruby-test-tool/tmp/20130116201824-6541-build/mruby-mruby-83d91b9/include"
+    -o "build/host/src/vm.o" -c "src/vm.c"]'
+  :stderr: ! 'src/vm.c: In function ''mrb_run'':
+
+    src/vm.c:1239:9: error: implicit declaration of function ''DEBUG'' [-Werror=implicit-function-declaration]
+
+    cc1: some warnings being treated as errors'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:repository: mruby/mruby
+:commit: 83d91b9
+:ball_id: mruby-mruby-83d91b9
+:hostname: ubuntu64bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.81
+
+      Copyright (C) 2006  Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.
+
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+
+      PARTICULAR PURPOSE.
+
+
+      This program built for x86_64-pc-linux-gnu'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: make
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison

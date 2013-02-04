@@ -1,0 +1,175 @@
+---
+:date: 2013-01-31 08:26:28.397244093 +09:00
+:id: iij-mruby-5c79d23
+:zipball_url: https://github.com/iij/mruby/zipball/5c79d23
+:make:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130131082634-11846-build/iij-mruby-5c79d23)\nCC
+    \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/array.c ->
+    build/host/src/array.o\nCC    src/class.c -> build/host/src/class.o\nCC    src/codegen.c
+    -> build/host/src/codegen.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
+    \   src/crc.c -> build/host/src/crc.o\nCC    src/dump.c -> build/host/src/dump.o\nCC
+    \   src/enum.c -> build/host/src/enum.o\nCC    src/error.c -> build/host/src/error.o\nCC
+    \   src/etc.c -> build/host/src/etc.o\nCC    src/gc.c -> build/host/src/gc.o\nCC
+    \   src/hash.c -> build/host/src/hash.o\nCC    src/init.c -> build/host/src/init.o\nCC
+    \   src/kernel.c -> build/host/src/kernel.o\nCC    src/load.c -> build/host/src/load.o\nCC
+    \   src/math.c -> build/host/src/math.o\nCC    src/numeric.c -> build/host/src/numeric.o\nCC
+    \   src/object.c -> build/host/src/object.o\nCC    src/pool.c -> build/host/src/pool.o\nCC
+    \   src/print.c -> build/host/src/print.o\nCC    src/proc.c -> build/host/src/proc.o\nCC
+    \   src/range.c -> build/host/src/range.o\nCC    src/re.c -> build/host/src/re.o\nCC
+    \   src/regcomp.c -> build/host/src/regcomp.o\nCC    src/regenc.c -> build/host/src/regenc.o\nCC
+    \   src/regerror.c -> build/host/src/regerror.o\nCC    src/regexec.c -> build/host/src/regexec.o\nCC
+    \   src/regparse.c -> build/host/src/regparse.o\nCC    src/sprintf.c -> build/host/src/sprintf.o\nCC
+    \   src/st.c -> build/host/src/st.o\nCC    src/state.c -> build/host/src/state.o\nCC
+    \   src/string.c -> build/host/src/string.o\nCC    src/struct.c -> build/host/src/struct.o\nCC
+    \   src/symbol.c -> build/host/src/symbol.o\nCC    src/time.c -> build/host/src/time.o\nCC
+    \   src/variable.c -> build/host/src/variable.o\nCC    src/vm.c -> build/host/src/vm.o\nYACC
+    \ src/parse.y -> build/host/src/y.tab.c\nCC    build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC
+    \   tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a
+    \nLD    build/host/bin/mrbc \nGEN   *.rb -> build/host/mrblib/mrblib.c\n      MRBC
+    mrblib/array.rb \n      MRBC mrblib/class.rb \n      MRBC mrblib/compar.rb \n
+    \     MRBC mrblib/enum.rb \n      MRBC mrblib/error.rb \n      MRBC mrblib/hash.rb
+    \n      MRBC mrblib/kernel.rb \n      MRBC mrblib/numeric.rb \n      MRBC mrblib/print.rb
+    \n      MRBC mrblib/range.rb \n      MRBC mrblib/string.rb \n      MRBC mrblib/struct.rb
+    \nCC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o\nAR    build/host/lib/libmruby.a
+    \nLD    build/host/bin/mruby \nCC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o\nLD
+    \   build/host/bin/mirb \n\nBuild summary:\n\n================================================\n
+    \     Config Name: host\n Output Directory: build/host\n         Binaries: mruby,
+    mrbc, mirb\n================================================"
+  :stderr: ! 'src/dump.c: In function ''get_syms_block_size'':
+
+    src/dump.c:293: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
+
+    src/dump.c: In function ''write_syms_block'':
+
+    src/dump.c:450: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
+
+    src/dump.c:458: warning: passing argument 1 of ''str_dump'' discards qualifiers
+    from pointer target type
+
+    src/dump.c: In function ''write_irep_record'':
+
+    src/dump.c:621: warning: ''crc'' may be used uninitialized in this function
+
+    src/init.c:81:2: warning: no newline at end of file
+
+    ar: creating build/host/lib/libmruby_core.a
+
+    build/host/tools/mrbc/mrbc.o(.text+0x4d): In function `get_outfilename'':
+
+    tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
+
+    build/host/lib/libmruby_core.a(dump.o)(.text+0x5d): In function `get_pool_block_size'':
+
+    src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+
+    ar: creating build/host/lib/libmruby.a
+
+    build/host/tools/mruby/mruby.o(.text+0x722): In function `main'':
+
+    tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use
+    strlcpy()
+
+    build/host/tools/mruby/mruby.o(.text+0x67c):tools/mruby/mruby.c:102: warning:
+    strcat() is almost always misused, please use strlcat()
+
+    build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s'':
+
+    src/object.c:453: warning: sprintf() is often misused, please use snprintf()
+
+    build/host/tools/mirb/mirb.o(.text+0x423): In function `main'':
+
+    tools/mirb/mirb.c:215: warning: strcpy() is almost always misused, please use
+    strlcpy()
+
+    build/host/tools/mirb/mirb.o(.text+0x22b):tools/mirb/mirb.c:212: warning: strcat()
+    is almost always misused, please use strlcat()
+
+    build/host/lib/libmruby.a(object.o)(.text+0x7ee): In function `mrb_any_to_s'':
+
+    src/object.c:453: warning: sprintf() is often misused, please use snprintf()'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:make_test:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130131082634-11846-build/iij-mruby-5c79d23)\nCC
+    \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
+    \     MRBC test/assert.rb \n      MRBC test/t/argumenterror.rb \n      MRBC test/t/array.rb
+    \n      MRBC test/t/basicobject.rb \n      MRBC test/t/bs_block.rb \n      MRBC
+    test/t/bs_literal.rb \n      MRBC test/t/class.rb \n      MRBC test/t/comparable.rb
+    \n      MRBC test/t/enumerable.rb \n      MRBC test/t/exception.rb \n      MRBC
+    test/t/false.rb \n      MRBC test/t/float.rb \n      MRBC test/t/gc.rb \n      MRBC
+    test/t/hash.rb \n      MRBC test/t/indexerror.rb \n      MRBC test/t/integer.rb
+    \n      MRBC test/t/kernel.rb \n      MRBC test/t/literals.rb \n      MRBC test/t/localjumperror.rb
+    \n      MRBC test/t/math.rb \n      MRBC test/t/module.rb \n      MRBC test/t/nameerror.rb
+    \n      MRBC test/t/nil.rb \n      MRBC test/t/numeric.rb \n      MRBC test/t/nomethoderror.rb
+    \n      MRBC test/t/object.rb \n      MRBC test/t/proc.rb \n      MRBC test/t/range.rb
+    \n      MRBC test/t/rangeerror.rb \n      MRBC test/t/regexperror.rb \n      MRBC
+    test/t/runtimeerror.rb \n      MRBC test/t/standarderror.rb \n      MRBC test/t/string.rb
+    \n      MRBC test/t/struct.rb \n      MRBC test/t/symbol.rb \n      MRBC test/t/syntax.rb
+    \n      MRBC test/t/time.rb \n      MRBC test/t/true.rb \n      MRBC test/t/typeerror.rb
+    \nCC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o\nLD    build/host/test/mrbtest
+    \n>>> Test host <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version,
+    please test and report errors.\nThanks :)\n\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 0.590325 seconds"
+  :stderr: ! 'build/host/lib/libmruby.a(string.o)(.text+0x4481): In function `mrb_str_dump'':
+
+    src/string.c:2832: warning: sprintf() is often misused, please use snprintf()'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:filesize:
+  bin/mruby: 1926005
+  bin/mrbc: 1904366
+  bin/mirb: 1922093
+  lib/libmruby.a: 3007408
+  lib/libmruby_core.a: 2978072
+  test/mrbtest: 2033931
+:repository: iij/mruby
+:commit: 5c79d23
+:ball_id: iij-mruby-5c79d23
+:hostname: openbsd64bit
+:env:
+  :gcc:
+    :stdout: ! "gcc (GCC) 4.2.1 20070719 \nCopyright (C) 2007 Free Software Foundation,
+      Inc.\nThis is free software; see the source for copying conditions.  There is
+      NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for x86_64-unknown-openbsd5.1
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2006 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison

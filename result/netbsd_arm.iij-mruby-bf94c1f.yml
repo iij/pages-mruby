@@ -1,0 +1,941 @@
+---
+:date: ''
+:hostname: netbsd_arm
+:id: iij-mruby-bf94c1f
+:ball_id: iij-mruby-bf94c1f
+:zipball_url: https://github.com/iij/mruby/zipball/bf94c1f
+:repository: iij/mruby
+:commit: bf94c1f
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-bf94c1f)
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/tools/mruby/mruby.o" -c "tools/mruby/mruby.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/tools/mrbc/mrbc.o" -c "tools/mrbc/mrbc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/range.o" -c "src/range.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/array.o" -c "src/array.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/numeric.o" -c "src/numeric.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/pool.o" -c "src/pool.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/compar.o" -c "src/compar.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/crc.o" -c "src/crc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/regcomp.o" -c "src/regcomp.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/proc.o" -c "src/proc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/math.o" -c "src/math.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/state.o" -c "src/state.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/print.o" -c "src/print.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/vm.o" -c "src/vm.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/compile.o" -c "src/compile.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/class.o" -c "src/class.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/load.o" -c "src/load.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/codegen.o" -c "src/codegen.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/symbol.o" -c "src/symbol.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/etc.o" -c "src/etc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/gc.o" -c "src/gc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/st.o" -c "src/st.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/struct.o" -c "src/struct.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/regerror.o" -c "src/regerror.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/regparse.o" -c "src/regparse.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/init.o" -c "src/init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/regexec.o" -c "src/regexec.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/dump.o" -c "src/dump.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/kernel.o" -c "src/kernel.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/hash.o" -c "src/hash.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/string.o" -c "src/string.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/sprintf.o" -c "src/sprintf.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/variable.o" -c "src/variable.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/object.o" -c "src/object.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/cdump.o" -c "src/cdump.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/time.o" -c "src/time.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/regenc.o" -c "src/regenc.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/enum.o" -c "src/enum.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/error.o" -c "src/error.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/init_ext.o" -c "src/init_ext.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/re.o" -c "src/re.c"
+
+    "bison" -o "build/host/src/y.tab.c" "src/parse.y"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"src"
+    -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/env/env.o" -c "src/ext/env/env.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/enc/ascii.o" -c "src/ext/enc/ascii.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/errno/errno.o" -c "src/ext/errno/errno.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/require/require.o" -c "src/ext/require/require.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/io/file.o" -c "src/ext/io/file.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/io/io.o" -c "src/ext/io/io.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/socket/socket.o" -c "src/ext/socket/socket.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/src/ext/random/random.o" -c "src/ext/random/random.c"
+
+    "ar" r "build/host/lib/libmruby_core.a" "build/host/src/range.o" "build/host/src/array.o"
+    "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o"
+    "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o"
+    "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/compile.o" "build/host/src/class.o"
+    "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o"
+    "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o"
+    "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o"
+    "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o"
+    "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o"
+    "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o"
+    "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+    "build/host/src/ext/env/env.o" "build/host/src/ext/enc/ascii.o" "build/host/src/ext/errno/errno.o"
+    "build/host/src/ext/require/require.o" "build/host/src/ext/io/file.o" "build/host/src/ext/io/io.o"
+    "build/host/src/ext/socket/socket.o" "build/host/src/ext/random/random.o"
+
+    "ar" r "build/host/lib/libmruby_core.a" "build/host/src/range.o" "build/host/src/array.o"
+    "build/host/src/numeric.o" "build/host/src/pool.o" "build/host/src/compar.o" "build/host/src/crc.o"
+    "build/host/src/regcomp.o" "build/host/src/proc.o" "build/host/src/math.o" "build/host/src/state.o"
+    "build/host/src/print.o" "build/host/src/vm.o" "build/host/src/compile.o" "build/host/src/class.o"
+    "build/host/src/load.o" "build/host/src/codegen.o" "build/host/src/symbol.o" "build/host/src/etc.o"
+    "build/host/src/gc.o" "build/host/src/st.o" "build/host/src/struct.o" "build/host/src/regerror.o"
+    "build/host/src/regparse.o" "build/host/src/init.o" "build/host/src/regexec.o"
+    "build/host/src/dump.o" "build/host/src/kernel.o" "build/host/src/hash.o" "build/host/src/string.o"
+    "build/host/src/sprintf.o" "build/host/src/variable.o" "build/host/src/object.o"
+    "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o" "build/host/src/enum.o"
+    "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o" "build/host/src/y.tab.o"
+    "build/host/src/ext/env/env.o" "build/host/src/ext/enc/ascii.o" "build/host/src/ext/errno/errno.o"
+    "build/host/src/ext/require/require.o" "build/host/src/ext/io/file.o" "build/host/src/ext/io/io.o"
+    "build/host/src/ext/socket/socket.o" "build/host/src/ext/random/random.o"
+
+    "gcc" -o "build/host/bin/mrbc" -lm "build/host/tools/mrbc/mrbc.o" "build/host/lib/libmruby_core.a"
+    -lcrypto -lm
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-mtest/gem_init.o" -c "build/host/mrbgems/mruby-mtest/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-dir/src/dir.o" -c "build/mrbgems/mruby-dir/src/dir.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-dir/gem_init.o" -c "build/host/mrbgems/mruby-dir/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-digest/src/digest.o" -c "build/mrbgems/mruby-digest/src/digest.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-digest/gem_init.o" -c "build/host/mrbgems/mruby-digest/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-process/src/process.o" -c "build/mrbgems/mruby-process/src/process.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-process/gem_init.o" -c "build/host/mrbgems/mruby-process/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-pack/src/pack.o" -c "build/mrbgems/mruby-pack/src/pack.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-pack/gem_init.o" -c "build/host/mrbgems/mruby-pack/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-syslog/src/syslog.o" -c "build/mrbgems/mruby-syslog/src/syslog.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-syslog/gem_init.o" -c "build/host/mrbgems/mruby-syslog/gem_init.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrblib/mrblib.o" -c "build/host/mrblib/mrblib.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrblib/ext/mrblib_ext.o" -c "build/host/mrblib/ext/mrblib_ext.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/gem_init.o" -c "build/host/mrbgems/gem_init.c"
+
+    "ar" r "build/host/lib/libmruby.a" "build/host/mrbgems/mruby-mtest/gem_init.o"
+    "build/host/mrbgems/mruby-dir/src/dir.o" "build/host/mrbgems/mruby-dir/gem_init.o"
+    "build/host/mrbgems/mruby-digest/src/digest.o" "build/host/mrbgems/mruby-digest/gem_init.o"
+    "build/host/mrbgems/mruby-process/src/process.o" "build/host/mrbgems/mruby-process/gem_init.o"
+    "build/host/mrbgems/mruby-pack/src/pack.o" "build/host/mrbgems/mruby-pack/gem_init.o"
+    "build/host/mrbgems/mruby-syslog/src/syslog.o" "build/host/mrbgems/mruby-syslog/gem_init.o"
+    "build/host/src/range.o" "build/host/src/array.o" "build/host/src/numeric.o" "build/host/src/pool.o"
+    "build/host/src/compar.o" "build/host/src/crc.o" "build/host/src/regcomp.o" "build/host/src/proc.o"
+    "build/host/src/math.o" "build/host/src/state.o" "build/host/src/print.o" "build/host/src/vm.o"
+    "build/host/src/compile.o" "build/host/src/class.o" "build/host/src/load.o" "build/host/src/codegen.o"
+    "build/host/src/symbol.o" "build/host/src/etc.o" "build/host/src/gc.o" "build/host/src/st.o"
+    "build/host/src/struct.o" "build/host/src/regerror.o" "build/host/src/regparse.o"
+    "build/host/src/init.o" "build/host/src/regexec.o" "build/host/src/dump.o" "build/host/src/kernel.o"
+    "build/host/src/hash.o" "build/host/src/string.o" "build/host/src/sprintf.o" "build/host/src/variable.o"
+    "build/host/src/object.o" "build/host/src/cdump.o" "build/host/src/time.o" "build/host/src/regenc.o"
+    "build/host/src/enum.o" "build/host/src/error.o" "build/host/src/init_ext.o" "build/host/src/re.o"
+    "build/host/src/y.tab.o" "build/host/src/ext/env/env.o" "build/host/src/ext/enc/ascii.o"
+    "build/host/src/ext/errno/errno.o" "build/host/src/ext/require/require.o" "build/host/src/ext/io/file.o"
+    "build/host/src/ext/io/io.o" "build/host/src/ext/socket/socket.o" "build/host/src/ext/random/random.o"
+    "build/host/mrblib/mrblib.o" "build/host/mrblib/ext/mrblib_ext.o" "build/host/mrbgems/gem_init.o"
+
+    "gcc" -o "build/host/bin/mruby" -lm "build/host/tools/mruby/mruby.o" "build/host/lib/libmruby.a"
+    -lcrypto -lm
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/tools/mirb/mirb.o" -c "tools/mirb/mirb.c"
+
+    "gcc" -o "build/host/bin/mirb" -lm "build/host/tools/mirb/mirb.o" "build/host/lib/libmruby.a"
+    -lcrypto -lm
+
+'
+  :stderr: ! 'src/compile.c: In function `mrb_compile'':
+
+    src/compile.c:38: warning: unused variable `irep_len''
+
+    src/compile.c: At top level:
+
+    src/compile.c:21: warning: `replace_stop_with_return'' defined but not used
+
+    src/load.c: In function `load_debug_info_irep'':
+
+    src/load.c:249: warning: `plen'' might be used uninitialized in this function
+
+    ar: creating build/host/lib/libmruby_core.a
+
+    build/mrbgems/mruby-pack/src/pack.c: In function `pack_a'':
+
+    build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable `dlen''
+
+    build/mrbgems/mruby-pack/src/pack.c: In function `unpack_a'':
+
+    build/mrbgems/mruby-pack/src/pack.c:271: warning: subscript has type `char''
+
+    build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable `sptr0''
+
+    build/mrbgems/mruby-pack/src/pack.c: In function `pack_h'':
+
+    build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable `x''
+
+    build/mrbgems/mruby-pack/src/pack.c: In function `unpack_h'':
+
+    build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable `l''
+
+    build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable `i''
+
+    build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `c''
+
+    build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable `ch''
+
+    build/mrbgems/mruby-pack/src/pack.c: In function `read_tmpl'':
+
+    build/mrbgems/mruby-pack/src/pack.c:611: warning: subscript has type `char''
+
+    build/mrbgems/mruby-pack/src/pack.c:515: warning: `type'' might be used uninitialized
+    in this function
+
+    ar: creating build/host/lib/libmruby.a
+
+'
+  :status: success
+:make_test:
+  :stdout: ! '(in /home/mruby/arm/iij-mruby-bf94c1f)
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/test/driver.o" -c "test/driver.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/test/mrbtest.o" -c "build/host/test/mrbtest.c"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-mtest/gem_test.o" -c "build/host/mrbgems/mruby-mtest/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a" "build/host/mrbgems/mruby-mtest/gem_test.o"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-dir/gem_test.o" -c "build/host/mrbgems/mruby-dir/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a" "build/host/mrbgems/mruby-dir/gem_test.o"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-digest/gem_test.o" -c "build/host/mrbgems/mruby-digest/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a" "build/host/mrbgems/mruby-digest/gem_test.o"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-process/gem_test.o" -c "build/host/mrbgems/mruby-process/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a" "build/host/mrbgems/mruby-process/gem_test.o"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-pack/gem_test.o" -c "build/host/mrbgems/mruby-pack/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a" "build/host/mrbgems/mruby-pack/gem_test.o"
+
+    "gcc" -MMD -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm/iij-mruby-bf94c1f/include"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-mtest/include"
+    -I"build/mrbgems/mruby-mtest/src" -I"build/mrbgems/mruby-dir/include" -I"build/mrbgems/mruby-dir/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-digest/include"
+    -I"build/mrbgems/mruby-digest/src" -I"build/mrbgems/mruby-process/include" -I"build/mrbgems/mruby-process/src"
+    -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-pack/include"
+    -I"build/mrbgems/mruby-pack/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -I"build/mrbgems/mruby-syslog/include"
+    -I"build/mrbgems/mruby-syslog/src" -I"/home/mruby/arm/iij-mruby-bf94c1f/src" -o
+    "build/host/mrbgems/mruby-syslog/gem_test.o" -c "build/host/mrbgems/mruby-syslog/gem_test.c"
+
+    "ar" rs "build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a" "build/host/mrbgems/mruby-syslog/gem_test.o"
+
+    "gcc" -o "build/host/test/mrbtest" -lm "build/host/test/driver.o" "build/host/test/mrbtest.o"
+    "build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a" "build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a"
+    "build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a" "build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a"
+    "build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a" "build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a"
+    "build/host/lib/libmruby.a" -lcrypto -lm
+
+    "build/host/test/mrbtest"
+
+    rake aborted!
+
+    Command Failed: ["build/host/test/mrbtest"]
+
+    ./Rakefile:51
+
+'
+  :stderr: ! 'ar: creating build/host/mrbgems/mruby-mtest/libmrb-mruby-mtest-gem-test.a
+
+    ar: creating build/host/mrbgems/mruby-dir/libmrb-mruby-dir-gem-test.a
+
+    ar: creating build/host/mrbgems/mruby-digest/libmrb-mruby-digest-gem-test.a
+
+    ar: creating build/host/mrbgems/mruby-process/libmrb-mruby-process-gem-test.a
+
+    ar: creating build/host/mrbgems/mruby-pack/libmrb-mruby-pack-gem-test.a
+
+    ar: creating build/host/mrbgems/mruby-syslog/libmrb-mruby-syslog-gem-test.a
+
+    [1]   Bus error (core dumped) "build/host/test...
+
+'
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
+:posix_test:
+  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.033477 seconds\n\n###################################\n#
+    exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.006122 seconds\n\n###################################\n#
+    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.018344 seconds\n\n###################################\n#
+    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
+    0\n Time: 0.042619 seconds\n\n###################################\n# exec test/posix/io.sh;
+    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
+    0.068137 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 6173 done\nwait 3086 done\nwait 3739 done\n.\nTotal: 6\n   OK:
+    6\n   KO: 0\nCrash: 0\n Time: 0.281817 seconds\n\n###################################\n#
+    exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
+    20\n   KO: 0\nCrash: 0\n Time: 0.756714 seconds\n\n###################################\n#
+    exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
+    0\nCrash: 0\n Time: 0.038249 seconds\n\n###################################\nPOSIX
+    test result: OK\n###################################\n"
+  :stderr: ''
+  :status: success

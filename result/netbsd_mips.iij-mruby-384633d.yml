@@ -1,0 +1,38 @@
+---
+:date: ''
+:hostname: netbsd_mips
+:id: iij-mruby-384633d
+:ball_id: iij-mruby-384633d
+:zipball_url: https://github.com/iij/mruby/zipball/384633d
+:repository: iij/mruby
+:commit: 384633d
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+:make_test:
+  :stdout: ''
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''

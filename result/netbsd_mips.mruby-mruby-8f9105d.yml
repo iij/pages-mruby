@@ -1,0 +1,42 @@
+---
+:date: ''
+:hostname: netbsd_mips
+:id: mruby-mruby-8f9105d
+:ball_id: mruby-mruby-8f9105d
+:zipball_url: https://github.com/mruby/mruby/zipball/8f9105d
+:repository: mruby/mruby
+:commit: 8f9105d
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ''
+  :stderr: ! 'gmake: *** No targets specified and no makefile found.  Stop.
+
+'
+  :status: failed
+:make_test:
+  :stdout: ! 'gmake: Nothing to be done for `test''.
+
+'
+  :stderr: ''
+  :status: success
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
