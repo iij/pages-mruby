@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-07 12:27:25.385354 +09:00
+:date: 2013-02-08 14:30:51.732940 +09:00
 :id: iij-mruby-45edfb5
 :zipball_url: https://github.com/iij/mruby/zipball/45edfb5
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130207122730-53152-build/iij-mruby-45edfb5)
+    (in /Users/mruby/mruby-test-tool/tmp/20130208143055-63488-build/iij-mruby-45edfb5)
     GIT   https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest
     Cloning into 'build/mrbgems/mruby-mtest'...
     GIT   https://github.com/iij/mruby-dir.git -> build/mrbgems/mruby-dir
@@ -174,7 +174,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130207122730-53152-build/iij-mruby-45edfb5)
+    (in /Users/mruby/mruby-test-tool/tmp/20130208143055-63488-build/iij-mruby-45edfb5)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -259,7 +259,7 @@
        OK: 634
        KO: 0
     Crash: 0
-     Time: 0.166948 seconds
+     Time: 0.158393 seconds
     
     *** Test with tools/mruby (rb file) ***
     Success
@@ -279,7 +279,7 @@
        OK: 21
        KO: 0
     Crash: 0
-     Time: 0.047638 seconds
+     Time: 0.011201 seconds
     
     ###################################
     # exec test/posix/env.sh; start...
@@ -288,7 +288,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.048963 seconds
+     Time: 0.00302 seconds
     
     ###################################
     # exec test/posix/errno.sh; start...
@@ -297,7 +297,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.003947 seconds
+     Time: 0.008373 seconds
     
     ###################################
     # exec test/posix/file.sh; start...
@@ -306,7 +306,7 @@
        OK: 11
        KO: 0
     Crash: 0
-     Time: 0.076792 seconds
+     Time: 0.018547 seconds
     
     ###################################
     # exec test/posix/io.sh; start...
@@ -315,19 +315,19 @@
        OK: 18
        KO: 0
     Crash: 0
-     Time: 0.014258 seconds
+     Time: 0.024581 seconds
     
     ###################################
     # exec test/posix/process.sh; start...
-    .....wait 53713 done
-    wait 53714 done
-    wait 53715 done
+    .....wait 64049 done
+    wait 64050 done
+    wait 64051 done
     .
     Total: 6
        OK: 6
        KO: 0
     Crash: 0
-     Time: 0.235077 seconds
+     Time: 0.258855 seconds
     
     ###################################
     # exec test/posix/require.sh; start...
@@ -336,7 +336,7 @@
        OK: 20
        KO: 0
     Crash: 0
-     Time: 0.1733 seconds
+     Time: 0.192359 seconds
     
     ###################################
     # exec test/posix/syslog.sh; start...
@@ -345,7 +345,7 @@
        OK: 10
        KO: 0
     Crash: 0
-     Time: 0.029211 seconds
+     Time: 0.006188 seconds
     
     ###################################
     POSIX test result: OK
@@ -355,12 +355,12 @@
 
   :status: success
 :filesize: 
-  bin/mruby: 982636
-  bin/mrbc: 876692
-  bin/mirb: 978552
+  bin/mruby: 852708
+  bin/mrbc: 761200
+  bin/mirb: 848644
   lib/libmruby.a: 5024976
   lib/libmruby_core.a: 4662824
-  test/mrbtest: 1154984
+  test/mrbtest: 1020616
 :repository: iij/mruby
 :commit: 45edfb5
 :ball_id: iij-mruby-45edfb5

@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-06 12:27:45.699977 +09:00
+:date: 2013-02-08 14:59:03.509801 +09:00
 :id: iij-mruby-feaff10
 :zipball_url: https://github.com/iij/mruby/zipball/feaff10
 :make: 
   :stdout: |-
-    (in /home/mruby/mruby-test-tool/tmp/20130206122749-9666-build/iij-mruby-feaff10)
+    (in /home/mruby/mruby-test-tool/tmp/20130208145906-32608-build/iij-mruby-feaff10)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/regerror.c -> build/host/src/regerror.o
     CC    src/gc.c -> build/host/src/gc.o
@@ -81,7 +81,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /home/mruby/mruby-test-tool/tmp/20130206122749-9666-build/iij-mruby-feaff10)
+    (in /home/mruby/mruby-test-tool/tmp/20130208145906-32608-build/iij-mruby-feaff10)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -136,18 +136,18 @@
        OK: 516
        KO: 0
     Crash: 0
-     Time: 1.961266 seconds
+     Time: 1.934724 seconds
   :stderr: ""
   :status_info: !ruby/object:Process::Status {}
 
   :status: success
 :filesize: 
-  bin/mruby: 1788433
-  bin/mrbc: 1770039
-  bin/mirb: 1783457
-  lib/libmruby.a: 2954960
-  lib/libmruby_core.a: 2923576
-  test/mrbtest: 1893975
+  bin/mruby: 488016
+  bin/mrbc: 467888
+  bin/mirb: 486544
+  lib/libmruby.a: 521328
+  lib/libmruby_core.a: 503196
+  test/mrbtest: 595664
 :repository: iij/mruby
 :commit: feaff10
 :ball_id: iij-mruby-feaff10

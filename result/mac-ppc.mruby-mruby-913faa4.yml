@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-04 09:31:59.661708 +09:00
+:date: 2013-02-08 15:15:20.115483 +09:00
 :id: mruby-mruby-913faa4
 :zipball_url: https://github.com/mruby/mruby/zipball/913faa4
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130204093202-44580-build/mruby-mruby-913faa4)
+    (in /Users/mruby/mruby-test-tool/tmp/20130208151523-70501-build/mruby-mruby-913faa4)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/class.c -> build/host/src/class.o
@@ -97,7 +97,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130204093202-44580-build/mruby-mruby-913faa4)
+    (in /Users/mruby/mruby-test-tool/tmp/20130208151523-70501-build/mruby-mruby-913faa4)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -153,18 +153,18 @@
        OK: 516
        KO: 0
     Crash: 0
-     Time: 3.923728 seconds
+     Time: 3.945189 seconds
   :stderr: "ar: creating archive build/host/test/mrbtest.a"
   :status_info: !ruby/object:Process::Status {}
 
   :status: success
 :filesize: 
-  bin/mruby: 585956
-  bin/mrbc: 565620
-  bin/mirb: 581876
+  bin/mruby: 510256
+  bin/mrbc: 489748
+  bin/mirb: 506108
   lib/libmruby.a: 3418712
   lib/libmruby_core.a: 3394832
-  test/mrbtest: 692620
+  test/mrbtest: 616616
 :repository: mruby/mruby
 :commit: 913faa4
 :ball_id: mruby-mruby-913faa4

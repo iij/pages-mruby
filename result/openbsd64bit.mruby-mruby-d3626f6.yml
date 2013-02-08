@@ -1,9 +1,9 @@
 ---
-:date: 2013-02-04 09:19:36.875166514 +09:00
+:date: 2013-02-08 15:23:18.302648512 +09:00
 :id: mruby-mruby-d3626f6
 :zipball_url: https://github.com/mruby/mruby/zipball/d3626f6
 :make:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130204091940-29622-build/mruby-mruby-d3626f6)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130208152321-21763-build/mruby-mruby-d3626f6)\nCC
     \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/array.c ->
     build/host/src/array.o\nCC    src/class.c -> build/host/src/class.o\nCC    src/codegen.c
     -> build/host/src/codegen.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
@@ -92,7 +92,7 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130204091940-29622-build/mruby-mruby-d3626f6)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130208152321-21763-build/mruby-mruby-d3626f6)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/argumenterror.rb \n      MRBC test/t/array.rb
     \n      MRBC test/t/basicobject.rb \n      MRBC test/t/bs_block.rb \n      MRBC
@@ -111,19 +111,19 @@
     \nCC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o\nLD    build/host/test/mrbtest
     \n>>> Test host <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version,
     please test and report errors.\nThanks :)\n\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 0.558587 seconds"
+    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 0.583184 seconds"
   :stderr: ! 'build/host/lib/libmruby.a(string.o)(.text+0x44a1): In function `mrb_str_dump'':
 
     src/string.c:2832: warning: sprintf() is often misused, please use snprintf()'
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :filesize:
-  bin/mruby: 1923293
-  bin/mrbc: 1901494
-  bin/mirb: 1919629
-  lib/libmruby.a: 3002888
-  lib/libmruby_core.a: 2973552
-  test/mrbtest: 2031443
+  bin/mruby: 517320
+  bin/mrbc: 496488
+  bin/mirb: 515880
+  lib/libmruby.a: 547024
+  lib/libmruby_core.a: 528988
+  test/mrbtest: 626432
 :repository: mruby/mruby
 :commit: d3626f6
 :ball_id: mruby-mruby-d3626f6

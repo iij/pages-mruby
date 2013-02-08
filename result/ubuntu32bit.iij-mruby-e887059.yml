@@ -1,9 +1,9 @@
 ---
-:date: 2013-02-06 12:23:03.069297328 +09:00
+:date: 2013-02-08 14:54:16.397439273 +09:00
 :id: iij-mruby-e887059
 :zipball_url: https://github.com/iij/mruby/zipball/e887059
 :make:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130206122306-24679-build/iij-mruby-e887059)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130208145420-20445-build/iij-mruby-e887059)\nCC
     \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/pool.c ->
     build/host/src/pool.o\nCC    src/regerror.c -> build/host/src/regerror.o\nCC    src/kernel.c
     -> build/host/src/kernel.o\nCC    src/codegen.c -> build/host/src/codegen.o\nCC
@@ -41,7 +41,7 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130206122306-24679-build/iij-mruby-e887059)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130208145420-20445-build/iij-mruby-e887059)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/bs_block.rb \n      MRBC test/t/range.rb
     \n      MRBC test/t/basicobject.rb \n      MRBC test/t/runtimeerror.rb \n      MRBC
@@ -60,17 +60,17 @@
     test/t/enumerable.rb \nCC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o\nLD
     \   build/host/test/mrbtest \n>>> Test host <<<\nmrbtest - Embeddable Ruby Test\n\nThis
     is a very early version, please test and report errors.\nThanks :)\n\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 0.622636 seconds"
+    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 0.58281 seconds"
   :stderr: ''
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :filesize:
-  bin/mruby: 1438926
-  bin/mrbc: 1415540
-  bin/mirb: 1433272
-  lib/libmruby.a: 2185296
-  lib/libmruby_core.a: 2158536
-  test/mrbtest: 1544474
+  bin/mruby: 472768
+  bin/mrbc: 452288
+  bin/mirb: 468668
+  lib/libmruby.a: 497244
+  lib/libmruby_core.a: 479356
+  test/mrbtest: 579248
 :repository: iij/mruby
 :commit: e887059
 :ball_id: iij-mruby-e887059
