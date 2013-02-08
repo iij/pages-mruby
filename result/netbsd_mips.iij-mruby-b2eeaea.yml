@@ -289,6 +289,7 @@
   :status: failed
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
+:filesize: {}
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n\n###################################\n#
     exec test/posix/env.sh; start...\n\n###################################\n# exec

@@ -230,6 +230,13 @@
   :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
+:filesize:
+  bin/mirb: 3705984
+  bin/mrbc: 2903875
+  bin/mruby: 3712939
+  lib/libmruby.a: 4419596
+  lib/libmruby_core.a: 3769828
+  test/mrbtest: 3984387
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
     21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.039629 seconds\n\n###################################\n#

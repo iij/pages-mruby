@@ -91,3 +91,10 @@
   :status: success
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
+:filesize:
+  bin/mirb: 1388963
+  bin/mrbc: 1368101
+  bin/mruby: 1392328
+  lib/libmruby.a: 1878268
+  lib/libmruby_core.a: 1852304
+  test/mrbtest: 1500721

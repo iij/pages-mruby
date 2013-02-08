@@ -267,6 +267,7 @@
   :status: failed
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
+:filesize: {}
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n..................F..\nFail:
     Dir#pos\nTotal: 21\n   OK: 20\n   KO: 1\nCrash: 0\n Time: 0.064015 seconds\n\n###################################\n#
