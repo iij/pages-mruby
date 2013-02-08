@@ -85,7 +85,7 @@
     \   build/host/test/mrbtest.a \nLD    build/host/test/mrbtest \n>>> Test host
     <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version, please test
     and report errors.\nThanks :)\n\n....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 6.487906 seconds\n\n"
+    516\n   OK: 516\n   KO: 0\nCrash: 0\n Time: 6.579086 seconds\n\n"
   :stderr: ! 'ar: creating build/host/test/mrbtest.a
 
 '
@@ -93,9 +93,9 @@
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
 :filesize:
-  bin/mirb: 1389087
-  bin/mrbc: 1368217
-  bin/mruby: 1392448
-  lib/libmruby.a: 1878472
-  lib/libmruby_core.a: 1852504
-  test/mrbtest: 1500849
+  lib/libmruby.a: 453996
+  lib/libmruby_core.a: 436216
+  bin/mirb: 425992
+  bin/mrbc: 407040
+  test/mrbtest: 536096
+  bin/mruby: 428136
