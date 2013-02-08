@@ -178,7 +178,7 @@
     \   build/host/test/mrbtest.a \nLD    build/host/test/mrbtest \n>>> Test host
     <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version, please test
     and report errors.\nThanks :)\n\n..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    642\n   OK: 642\n   KO: 0\nCrash: 0\n Time: 1.219966 seconds\n\n*** Test with
+    642\n   OK: 642\n   KO: 0\nCrash: 0\n Time: 1.214731 seconds\n\n*** Test with
     tools/mruby (rb file) ***\nSuccess\n\n*** Test with tools/mruby (mrb file) ***\nSuccess\n\n"
   :stderr: ! 'ar: creating build/host/test/mrbtest.a
 
@@ -187,29 +187,29 @@
   :mrubytest_rb: ''
   :mrubytest_mrb: ''
 :filesize:
-  bin/mirb: 2549854
-  bin/mrbc: 2224167
-  bin/mruby: 2555776
-  lib/libmruby.a: 3857656
-  lib/libmruby_core.a: 3294432
-  test/mrbtest: 2822351
+  lib/libmruby.a: 932232
+  lib/libmruby_core.a: 843316
+  bin/mirb: 907724
+  bin/mrbc: 827300
+  test/mrbtest: 1075288
+  bin/mruby: 911212
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.063049 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.06788 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.006552 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.00667 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.03116 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.031421 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.074841 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.077281 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.081839 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 19303 done\nwait 20773 done\nwait 20878 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.29209 seconds\n\n###################################\n#
+    0.081535 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 23028 done\nwait 21676 done\nwait 22078 done\n.\nTotal: 6\n
+    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.311596 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.855984 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.779579 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
-    0\nCrash: 0\n Time: 0.031785 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.030167 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
