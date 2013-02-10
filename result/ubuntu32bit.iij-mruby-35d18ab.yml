@@ -1,0 +1,335 @@
+---
+:date: 2013-02-10 11:30:47.625231374 +09:00
+:id: iij-mruby-35d18ab
+:zipball_url: https://github.com/iij/mruby/zipball/35d18ab
+:make:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130210113051-4557-build/iij-mruby-35d18ab)\nGIT
+    \  https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest\nCloning
+    into 'build/mrbgems/mruby-mtest'...\nGIT   https://github.com/iij/mruby-dir.git
+    -> build/mrbgems/mruby-dir\nCloning into 'build/mrbgems/mruby-dir'...\nGIT   https://github.com/iij/mruby-digest.git
+    -> build/mrbgems/mruby-digest\nCloning into 'build/mrbgems/mruby-digest'...\nGIT
+    \  https://github.com/iij/mruby-process.git -> build/mrbgems/mruby-process\nCloning
+    into 'build/mrbgems/mruby-process'...\nGIT   https://github.com/iij/mruby-pack.git
+    -> build/mrbgems/mruby-pack\nCloning into 'build/mrbgems/mruby-pack'...\nGIT   https://github.com/iij/mruby-syslog.git
+    -> build/mrbgems/mruby-syslog\nCloning into 'build/mrbgems/mruby-syslog'...\nGIT
+    \  https://github.com/iij/mruby-env.git -> build/mrbgems/mruby-env\nCloning into
+    'build/mrbgems/mruby-env'...\nGIT   https://github.com/iij/mruby-simple-random.git
+    -> build/mrbgems/mruby-simple-random\nCloning into 'build/mrbgems/mruby-simple-random'...\nCC
+    \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/pool.c ->
+    build/host/src/pool.o\nCC    src/regerror.c -> build/host/src/regerror.o\nCC    src/kernel.c
+    -> build/host/src/kernel.o\nCC    src/codegen.c -> build/host/src/codegen.o\nCC
+    \   src/state.c -> build/host/src/state.o\nCC    src/gc.c -> build/host/src/gc.o\nCC
+    \   src/re.c -> build/host/src/re.o\nCC    src/init.c -> build/host/src/init.o\nCC
+    \   src/regcomp.c -> build/host/src/regcomp.o\nCC    src/class.c -> build/host/src/class.o\nCC
+    \   src/array.c -> build/host/src/array.o\nCC    src/symbol.c -> build/host/src/symbol.o\nCC
+    \   src/print.c -> build/host/src/print.o\nCC    src/etc.c -> build/host/src/etc.o\nCC
+    \   src/enum.c -> build/host/src/enum.o\nCC    src/proc.c -> build/host/src/proc.o\nCC
+    \   src/time.c -> build/host/src/time.o\nCC    src/regexec.c -> build/host/src/regexec.o\nCC
+    \   src/numeric.c -> build/host/src/numeric.o\nCC    src/vm.c -> build/host/src/vm.o\nCC
+    \   src/init_ext.c -> build/host/src/init_ext.o\nCC    src/st.c -> build/host/src/st.o\nCC
+    \   src/object.c -> build/host/src/object.o\nCC    src/compile.c -> build/host/src/compile.o\nCC
+    \   src/math.c -> build/host/src/math.o\nCC    src/regparse.c -> build/host/src/regparse.o\nCC
+    \   src/load.c -> build/host/src/load.o\nCC    src/regenc.c -> build/host/src/regenc.o\nCC
+    \   src/range.c -> build/host/src/range.o\nCC    src/variable.c -> build/host/src/variable.o\nCC
+    \   src/error.c -> build/host/src/error.o\nCC    src/dump.c -> build/host/src/dump.o\nCC
+    \   src/crc.c -> build/host/src/crc.o\nCC    src/struct.c -> build/host/src/struct.o\nCC
+    \   src/sprintf.c -> build/host/src/sprintf.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
+    \   src/string.c -> build/host/src/string.o\nCC    src/hash.c -> build/host/src/hash.o\nYACC
+    \ src/parse.y -> build/host/src/y.tab.c\nCC    build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC
+    \   src/ext/require/require.c -> build/host/src/ext/require/require.o\nCC    src/ext/errno/errno.c
+    -> build/host/src/ext/errno/errno.o\nCC    src/ext/io/io.c -> build/host/src/ext/io/io.o\nCC
+    \   src/ext/io/file.c -> build/host/src/ext/io/file.o\nCC    src/ext/enc/ascii.c
+    -> build/host/src/ext/enc/ascii.o\nCC    src/ext/socket/socket.c -> build/host/src/ext/socket/socket.o\nCC
+    \   tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a
+    \nAR    build/host/lib/libmruby_core.a \nLD    build/host/bin/mrbc \nGEN   *.rb
+    -> build/host/mrblib/mrblib.c\n      MRBC mrblib/range.rb \n      MRBC mrblib/error.rb
+    \n      MRBC mrblib/class.rb \n      MRBC mrblib/enum.rb \n      MRBC mrblib/array.rb
+    \n      MRBC mrblib/numeric.rb \n      MRBC mrblib/struct.rb \n      MRBC mrblib/kernel.rb
+    \n      MRBC mrblib/hash.rb \n      MRBC mrblib/string.rb \n      MRBC mrblib/compar.rb
+    \n      MRBC mrblib/print.rb \nCC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o\nGEN
+    \  *.rb -> build/host/mrblib/ext/mrblib_ext.c\n      MRBC mrblib/ext/ipaddr.rb
+    \n      MRBC mrblib/ext/file.rb \n      MRBC mrblib/ext/socket.rb \n      MRBC
+    mrblib/ext/io.rb \nCC    build/host/mrblib/ext/mrblib_ext.c -> build/host/mrblib/ext/mrblib_ext.o\n
+    \     MRBC build/mrbgems/mruby-mtest/mrblib/mtest_unit.rb \nCC    build/host/mrbgems/mruby-mtest/gem_init.c
+    -> build/host/mrbgems/mruby-mtest/gem_init.o\nCC    build/mrbgems/mruby-dir/src/dir.c
+    -> build/host/mrbgems/mruby-dir/src/dir.o\n      MRBC build/mrbgems/mruby-dir/mrblib/dir.rb
+    \nCC    build/host/mrbgems/mruby-dir/gem_init.c -> build/host/mrbgems/mruby-dir/gem_init.o\nCC
+    \   build/mrbgems/mruby-digest/src/digest.c -> build/host/mrbgems/mruby-digest/src/digest.o\n
+    \     MRBC build/mrbgems/mruby-digest/mrblib/digest.rb \nCC    build/host/mrbgems/mruby-digest/gem_init.c
+    -> build/host/mrbgems/mruby-digest/gem_init.o\nCC    build/mrbgems/mruby-process/src/process.c
+    -> build/host/mrbgems/mruby-process/src/process.o\nCC    build/host/mrbgems/mruby-process/gem_init.c
+    -> build/host/mrbgems/mruby-process/gem_init.o\nCC    build/mrbgems/mruby-pack/src/pack.c
+    -> build/host/mrbgems/mruby-pack/src/pack.o\nCC    build/host/mrbgems/mruby-pack/gem_init.c
+    -> build/host/mrbgems/mruby-pack/gem_init.o\nCC    build/mrbgems/mruby-syslog/src/syslog.c
+    -> build/host/mrbgems/mruby-syslog/src/syslog.o\nCC    build/host/mrbgems/mruby-syslog/gem_init.c
+    -> build/host/mrbgems/mruby-syslog/gem_init.o\nCC    build/mrbgems/mruby-env/src/env.c
+    -> build/host/mrbgems/mruby-env/src/env.o\nCC    build/host/mrbgems/mruby-env/gem_init.c
+    -> build/host/mrbgems/mruby-env/gem_init.o\nCC    build/mrbgems/mruby-simple-random/src/random.c
+    -> build/host/mrbgems/mruby-simple-random/src/random.o\nCC    build/host/mrbgems/mruby-simple-random/gem_init.c
+    -> build/host/mrbgems/mruby-simple-random/gem_init.o\nCC    build/host/mrbgems/gem_init.c
+    -> build/host/mrbgems/gem_init.o\nAR    build/host/lib/libmruby.a \nLD    build/host/bin/mruby
+    \nCC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o\nLD    build/host/bin/mirb
+    \n\nBuild summary:\n\n================================================\n      Config
+    Name: host\n Output Directory: build/host\n         Binaries: mruby, mrbc, mirb\n
+    \   Included Gems:\n             mruby-mtest\n             mruby-dir\n             mruby-digest\n
+    \            mruby-process\n             mruby-pack\n             mruby-syslog\n
+    \            mruby-env\n             mruby-simple-random\n================================================"
+  :stderr: ! 'src/regcomp.c: In function ''is_not_included'':
+
+    src/regcomp.c:2433:13: warning: variable ''c'' set but not used [-Wunused-but-set-variable]
+
+    src/regcomp.c: In function ''update_string_node_case_fold'':
+
+    src/regcomp.c:3225:14: warning: variable ''q'' set but not used [-Wunused-but-set-variable]
+
+    src/compile.c: In function ''mrb_compile'':
+
+    src/compile.c:38:7: warning: unused variable ''irep_len'' [-Wunused-variable]
+
+    src/compile.c: At top level:
+
+    src/compile.c:20:1: warning: ''replace_stop_with_return'' defined but not used
+    [-Wunused-function]
+
+    src/regparse.c: In function ''fetch_escaped_value'':
+
+    src/regparse.c:2392:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    src/regparse.c: In function ''fetch_name'':
+
+    src/regparse.c:2605:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    src/regparse.c: In function ''parse_posix_bracket'':
+
+    src/regparse.c:3984:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    src/regparse.c: In function ''fetch_char_property_to_ctype'':
+
+    src/regparse.c:4037:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    src/regparse.c: In function ''code_exist_check'':
+
+    src/regparse.c:4194:3: warning: variable ''pfetch_prev'' set but not used [-Wunused-but-set-variable]
+
+    src/string.c: In function ''mrb_str_sub'':
+
+    src/string.c:2381:7: warning: variable ''iter'' set but not used [-Wunused-but-set-variable]
+
+    src/ext/require/require.c: In function ''find_file_check'':
+
+    src/ext/require/require.c:88:11: warning: ignoring return value of ''realpath'',
+    declared with attribute warn_unused_result [-Wunused-result]
+
+    src/ext/io/io.c: In function ''rb_io_close'':
+
+    src/ext/io/io.c:491:11: warning: variable ''fd2'' set but not used [-Wunused-but-set-variable]
+
+    src/ext/io/io.c:491:7: warning: variable ''fd'' set but not used [-Wunused-but-set-variable]
+
+    src/ext/io/io.c: In function ''pipe_open'':
+
+    src/ext/io/io.c:937:16: warning: variable ''write_fd'' set but not used [-Wunused-but-set-variable]
+
+    src/ext/io/io.c: In function ''mrb_io_s_popen'':
+
+    src/ext/io/io.c:1509:13: warning: variable ''io'' set but not used [-Wunused-but-set-variable]
+
+    src/ext/io/io.c: In function ''appendlineOld'':
+
+    src/ext/io/io.c:552:12: warning: ignoring return value of ''fread'', declared
+    with attribute warn_unused_result [-Wunused-result]
+
+    src/ext/io/io.c: In function ''appendline'':
+
+    src/ext/io/io.c:653:12: warning: ignoring return value of ''fread'', declared
+    with attribute warn_unused_result [-Wunused-result]
+
+    src/ext/io/file.c: In function ''mrb_file__gethome'':
+
+    src/ext/io/file.c:353:17: warning: ''cuser'' may be used uninitialized in this
+    function [-Wuninitialized]
+
+    ar: creating build/host/lib/libmruby_core.a
+
+    build/mrbgems/mruby-process/src/process.c: In function ''mrb_f_system'':
+
+    build/mrbgems/mruby-process/src/process.c:160:16: warning: variable ''chfunc''
+    set but not used [-Wunused-but-set-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''pack_a'':
+
+    build/mrbgems/mruby-pack/src/pack.c:218:16: warning: unused variable ''dlen''
+    [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''unpack_a'':
+
+    build/mrbgems/mruby-pack/src/pack.c:256:16: warning: variable ''dptr0'' set but
+    not used [-Wunused-but-set-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c:255:22: warning: unused variable ''sptr0''
+    [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''pack_h'':
+
+    build/mrbgems/mruby-pack/src/pack.c:284:38: warning: unused variable ''x'' [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''unpack_h'':
+
+    build/mrbgems/mruby-pack/src/pack.c:331:20: warning: unused variable ''ch'' [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c:331:17: warning: unused variable ''c'' [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c:330:32: warning: variable ''padding'' set
+    but not used [-Wunused-but-set-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c:330:29: warning: unused variable ''i'' [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c:329:17: warning: unused variable ''l'' [-Wunused-variable]
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''mrb_pack_unpack'':
+
+    build/mrbgems/mruby-pack/src/pack.c:763:9: warning: pointer targets in passing
+    argument 2 of ''unpack_s'' differ in signedness [-Wpointer-sign]
+
+    build/mrbgems/mruby-pack/src/pack.c:156:1: note: expected ''const unsigned char
+    *'' but argument is of type ''const char *''
+
+    build/mrbgems/mruby-pack/src/pack.c:766:9: warning: pointer targets in passing
+    argument 2 of ''unpack_l'' differ in signedness [-Wpointer-sign]
+
+    build/mrbgems/mruby-pack/src/pack.c:193:1: note: expected ''const unsigned char
+    *'' but argument is of type ''const char *''
+
+    build/mrbgems/mruby-pack/src/pack.c: In function ''read_tmpl.isra.5'':
+
+    build/mrbgems/mruby-pack/src/pack.c:639:10: warning: ''type'' may be used uninitialized
+    in this function [-Wuninitialized]
+
+    ar: creating build/host/lib/libmruby.a'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:make_test:
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130210113051-4557-build/iij-mruby-35d18ab)\nCC
+    \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
+    \     MRBC test/assert.rb \n      MRBC test/t/ipaddr.rb \n      MRBC test/t/bs_block.rb
+    \n      MRBC test/t/range.rb \n      MRBC test/t/basicobject.rb \n      MRBC test/t/runtimeerror.rb
+    \n      MRBC test/t/module.rb \n      MRBC test/t/standarderror.rb \n      MRBC
+    test/t/argumenterror.rb \n      MRBC test/t/localjumperror.rb \n      MRBC test/t/class.rb
+    \n      MRBC test/t/time.rb \n      MRBC test/t/regexp.rb \n      MRBC test/t/syntax.rb
+    \n      MRBC test/t/symbol.rb \n      MRBC test/t/gc.rb \n      MRBC test/t/file.rb
+    \n      MRBC test/t/regexperror.rb \n      MRBC test/t/typeerror.rb \n      MRBC
+    test/t/true.rb \n      MRBC test/t/integer.rb \n      MRBC test/t/proc.rb \n      MRBC
+    test/t/nameerror.rb \n      MRBC test/t/array.rb \n      MRBC test/t/rangeerror.rb
+    \n      MRBC test/t/bs_literal.rb \n      MRBC test/t/numeric.rb \n      MRBC
+    test/t/object.rb \n      MRBC test/t/nil.rb \n      MRBC test/t/false.rb \n      MRBC
+    test/t/struct.rb \n      MRBC test/t/kernel.rb \n      MRBC test/t/indexerror.rb
+    \n      MRBC test/t/variable.rb \n      MRBC test/t/hash.rb \n      MRBC test/t/string.rb
+    \n      MRBC test/t/float.rb \n      MRBC test/t/math.rb \n      MRBC test/t/literals.rb
+    \n      MRBC test/t/nomethoderror.rb \n      MRBC test/t/exception.rb \n      MRBC
+    test/t/comparable.rb \n      MRBC test/t/enumerable.rb \nGEM   *.rb -> build/host/test/mrbtest.rb\nCC
+    \   build/host/test/mrbtest.c -> build/host/test/mrbtest.o\n      MRBC test/assert.rb
+    \n      MRBC build/mrbgems/mruby-mtest/test/mtest_unit_test.rb \nCC    build/host/mrbgems/mruby-mtest/gem_test.c
+    -> build/host/mrbgems/mruby-mtest/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-dir/test/dir.rb \nCC    build/host/mrbgems/mruby-dir/gem_test.c
+    -> build/host/mrbgems/mruby-dir/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-digest/test/digest.rb \nCC    build/host/mrbgems/mruby-digest/gem_test.c
+    -> build/host/mrbgems/mruby-digest/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-process/test/process.rb \nCC    build/host/mrbgems/mruby-process/gem_test.c
+    -> build/host/mrbgems/mruby-process/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-pack/test/pack.rb \nCC    build/host/mrbgems/mruby-pack/gem_test.c
+    -> build/host/mrbgems/mruby-pack/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-syslog/test/syslog.rb \nCC    build/host/mrbgems/mruby-syslog/gem_test.c
+    -> build/host/mrbgems/mruby-syslog/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-env/test/env_test.rb \nCC    build/host/mrbgems/mruby-env/gem_test.c
+    -> build/host/mrbgems/mruby-env/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    build/mrbgems/mruby-simple-random/test/random.rb \nCC    build/host/mrbgems/mruby-simple-random/gem_test.c
+    -> build/host/mrbgems/mruby-simple-random/gem_test.o\nAR    build/host/test/mrbtest.a
+    \nLD    build/host/test/mrbtest \n>>> Test host <<<\nmrbtest - Embeddable Ruby
+    Test\n\nThis is a very early version, please test and report errors.\nThanks :)\n\n.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    645\n   OK: 645\n   KO: 0\nCrash: 0\n Time: 0.082258 seconds\n\n*** Test with
+    tools/mruby (rb file) ***\nSuccess\n\n*** Test with tools/mruby (mrb file) ***\nSuccess"
+  :stderr: ! 'ar: creating build/host/test/mrbtest.a'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:posix_test:
+  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.007299 seconds\n\n###################################\n#
+    exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.002645 seconds\n\n###################################\n#
+    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.008251 seconds\n\n###################################\n#
+    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
+    0\n Time: 0.008829 seconds\n\n###################################\n# exec test/posix/io.sh;
+    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
+    0.008996 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 5217 done\nwait 5218 done\nwait 5219 done\n.\nTotal: 6\n   OK:
+    6\n   KO: 0\nCrash: 0\n Time: 0.207661 seconds\n\n###################################\n#
+    exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
+    20\n   KO: 0\nCrash: 0\n Time: 0.047339 seconds\n\n###################################\n#
+    exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
+    0\nCrash: 0\n Time: 0.002529 seconds\n\n###################################\nPOSIX
+    test result: OK\n###################################"
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:filesize:
+  bin/mruby: 837908
+  bin/mrbc: 743472
+  bin/mirb: 833808
+  lib/libmruby.a: 858912
+  lib/libmruby_core.a: 760848
+  test/mrbtest: 1014036
+:repository: iij/mruby
+:commit: 35d18ab
+:ball_id: iij-mruby-35d18ab
+:hostname: ubuntu32bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.81
+
+      Copyright (C) 2006  Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.
+
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+
+      PARTICULAR PURPOSE.
+
+
+      This program built for i686-pc-linux-gnu'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: make
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2011 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
