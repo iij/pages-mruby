@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-11 07:08:25.915017 +09:00
+:date: 2013-02-12 08:21:59.994750 +09:00
 :id: iij-mruby-6e504f8
 :zipball_url: https://github.com/iij/mruby/zipball/6e504f8
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130211070829-84012-build/iij-mruby-6e504f8)
+    (in /Users/mruby/mruby-test-tool/tmp/20130212082203-86393-build/iij-mruby-6e504f8)
     GIT   https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest
     Cloning into 'build/mrbgems/mruby-mtest'...
     GIT   https://github.com/iij/mruby-dir.git -> build/mrbgems/mruby-dir
@@ -174,7 +174,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130211070829-84012-build/iij-mruby-6e504f8)
+    (in /Users/mruby/mruby-test-tool/tmp/20130212082203-86393-build/iij-mruby-6e504f8)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -259,7 +259,7 @@
        OK: 634
        KO: 0
     Crash: 0
-     Time: 0.202072 seconds
+     Time: 0.327474 seconds
     
     *** Test with tools/mruby (rb file) ***
     Success
@@ -279,7 +279,7 @@
        OK: 21
        KO: 0
     Crash: 0
-     Time: 0.011627 seconds
+     Time: 0.009871 seconds
     
     ###################################
     # exec test/posix/env.sh; start...
@@ -288,7 +288,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.003652 seconds
+     Time: 0.003626 seconds
     
     ###################################
     # exec test/posix/errno.sh; start...
@@ -297,7 +297,7 @@
        OK: 14
        KO: 0
     Crash: 0
-     Time: 0.0046 seconds
+     Time: 0.004604 seconds
     
     ###################################
     # exec test/posix/file.sh; start...
@@ -306,7 +306,7 @@
        OK: 11
        KO: 0
     Crash: 0
-     Time: 0.026447 seconds
+     Time: 0.029986 seconds
     
     ###################################
     # exec test/posix/io.sh; start...
@@ -315,19 +315,19 @@
        OK: 18
        KO: 0
     Crash: 0
-     Time: 0.014612 seconds
+     Time: 0.019021 seconds
     
     ###################################
     # exec test/posix/process.sh; start...
-    .....wait 84575 done
-    wait 84576 done
-    wait 84577 done
+    .....wait 86956 done
+    wait 86957 done
+    wait 86958 done
     .
     Total: 6
        OK: 6
        KO: 0
     Crash: 0
-     Time: 0.276554 seconds
+     Time: 0.257241 seconds
     
     ###################################
     # exec test/posix/require.sh; start...
@@ -336,7 +336,7 @@
        OK: 20
        KO: 0
     Crash: 0
-     Time: 0.174176 seconds
+     Time: 0.170575 seconds
     
     ###################################
     # exec test/posix/syslog.sh; start...
@@ -345,7 +345,7 @@
        OK: 10
        KO: 0
     Crash: 0
-     Time: 0.006894 seconds
+     Time: 0.006703 seconds
     
     ###################################
     POSIX test result: OK
