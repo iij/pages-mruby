@@ -1,9 +1,9 @@
 ---
-:date: 2013-02-15 07:33:14.397465531 +09:00
+:date: 2013-02-18 15:15:14.500967876 +09:00
 :id: iij-mruby-9471c3f
 :zipball_url: https://github.com/iij/mruby/zipball/9471c3f
 :make:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130215073321-3999-build/iij-mruby-9471c3f)\nGIT
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130218151517-3718-build/iij-mruby-9471c3f)\nGIT
     \  https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest\nCloning
     into 'build/mrbgems/mruby-mtest'...\nGIT   https://github.com/iij/mruby-dir.git
     -> build/mrbgems/mruby-dir\nCloning into 'build/mrbgems/mruby-dir'...\nGIT   https://github.com/iij/mruby-digest.git
@@ -98,50 +98,50 @@
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''pack_a'':
 
-    build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable ''dlen''
+    build/mrbgems/mruby-pack/src/pack.c:215: warning: unused variable ''dlen''
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''unpack_a'':
 
-    build/mrbgems/mruby-pack/src/pack.c:271: warning: array subscript has type ''char''
+    build/mrbgems/mruby-pack/src/pack.c:268: warning: array subscript has type ''char''
 
-    build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable ''sptr0''
+    build/mrbgems/mruby-pack/src/pack.c:252: warning: unused variable ''sptr0''
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''pack_h'':
 
-    build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable ''x''
+    build/mrbgems/mruby-pack/src/pack.c:281: warning: unused variable ''x''
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''unpack_h'':
 
-    build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable ''ch''
+    build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable ''ch''
 
-    build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable ''c''
+    build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable ''c''
 
-    build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable ''i''
+    build/mrbgems/mruby-pack/src/pack.c:327: warning: unused variable ''i''
 
-    build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable ''l''
+    build/mrbgems/mruby-pack/src/pack.c:326: warning: unused variable ''l''
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''read_tmpl'':
 
-    build/mrbgems/mruby-pack/src/pack.c:611: warning: array subscript has type ''char''
+    build/mrbgems/mruby-pack/src/pack.c:620: warning: array subscript has type ''char''
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''mrb_pack_unpack'':
 
-    build/mrbgems/mruby-pack/src/pack.c:763: warning: pointer targets in passing argument
+    build/mrbgems/mruby-pack/src/pack.c:772: warning: pointer targets in passing argument
     2 of ''unpack_s'' differ in signedness
 
-    build/mrbgems/mruby-pack/src/pack.c:766: warning: pointer targets in passing argument
+    build/mrbgems/mruby-pack/src/pack.c:775: warning: pointer targets in passing argument
     2 of ''unpack_l'' differ in signedness
 
     build/mrbgems/mruby-pack/src/pack.c: In function ''read_tmpl'':
 
-    build/mrbgems/mruby-pack/src/pack.c:515: warning: ''type'' may be used uninitialized
+    build/mrbgems/mruby-pack/src/pack.c:512: warning: ''type'' may be used uninitialized
     in this function
 
     ar: creating build/host/lib/libmruby.a'
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130215073321-3999-build/iij-mruby-9471c3f)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130218151517-3718-build/iij-mruby-9471c3f)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/argumenterror.rb \n      MRBC test/t/array.rb
     \n      MRBC test/t/basicobject.rb \n      MRBC test/t/bs_block.rb \n      MRBC
@@ -179,39 +179,39 @@
     \   build/host/test/mrbtest.a \nLD    build/host/test/mrbtest \n>>> Test host
     <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version, please test
     and report errors.\nThanks :)\n\n.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    649\n   OK: 649\n   KO: 0\nCrash: 0\n Time: 0.092852 seconds\n\n*** Test with
+    649\n   OK: 649\n   KO: 0\nCrash: 0\n Time: 0.076441 seconds\n\n*** Test with
     tools/mruby (rb file) ***\nSuccess\n\n*** Test with tools/mruby (mrb file) ***\nSuccess"
   :stderr: ! 'ar: creating build/host/test/mrbtest.a'
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.031044 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.008842 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.000975 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.000887 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.00126 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.000885 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.003831 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.002906 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.007187 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n.....wait 22505 done\nwait 5708 done\nwait 17944 done\n.\nTotal: 6\n
-    \  OK: 6\n   KO: 0\nCrash: 0\n Time: 0.213084 seconds\n\n###################################\n#
+    0.005268 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n.....wait 6646 done\nwait 5285 done\nwait 6601 done\n.\nTotal: 6\n   OK:
+    6\n   KO: 0\nCrash: 0\n Time: 0.213841 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.212869 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.067327 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n..........\nTotal: 10\n   OK: 10\n   KO:
-    0\nCrash: 0\n Time: 0.000845 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.001081 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################"
   :stderr: ''
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :filesize:
-  bin/mruby: 752624
+  bin/mruby: 752720
   bin/mrbc: 668824
   bin/mirb: 747952
-  lib/libmruby.a: 771244
+  lib/libmruby.a: 771276
   lib/libmruby_core.a: 684496
-  test/mrbtest: 933164
+  test/mrbtest: 933228
 :repository: iij/mruby
 :commit: 9471c3f
 :ball_id: iij-mruby-9471c3f
