@@ -1,0 +1,88 @@
+--- 
+:date: 2013-02-18 13:33:56.236563 +09:00
+:id: mruby-mruby-5568df5
+:zipball_url: https://github.com/mruby/mruby/zipball/5568df5
+:make: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130218133359-4663-build/mruby-mruby-5568df5)
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+    CC    src/etc.c -> build/host/src/etc.o
+    CC    src/crc.c -> build/host/src/crc.o
+    CC    src/numeric.c -> build/host/src/numeric.o
+    CC    src/class.c -> build/host/src/class.o
+    rake aborted!
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -DDISABLE_GEMS -DDISABLE_GEMS -I"/home/mruby/mruby-test-tool/tmp/20130218133359-4663-build/mruby-mruby-5568df5/include" -MMD -o "build/host/src/class.o" -c "src/class.c"]
+  :stderr: |-
+    src/class.c: In function 'mrb_mod_remove_const':
+    src/class.c:1740: error: 'sym' undeclared (first use in this function)
+    src/class.c:1740: error: (Each undeclared identifier is reported only once
+    src/class.c:1740: error: for each function it appears in.)
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130218133359-4663-build/mruby-mruby-5568df5)
+    CC    test/driver.c -> build/host/test/driver.o
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+    CC    src/class.c -> build/host/src/class.o
+    rake aborted!
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -DDISABLE_GEMS -DDISABLE_GEMS -I"/home/mruby/mruby-test-tool/tmp/20130218133359-4663-build/mruby-mruby-5568df5/include" -MMD -o "build/host/src/class.o" -c "src/class.c"]
+  :stderr: |-
+    src/class.c: In function 'mrb_mod_remove_const':
+    src/class.c:1740: error: 'sym' undeclared (first use in this function)
+    src/class.c:1740: error: (Each undeclared identifier is reported only once
+    src/class.c:1740: error: for each function it appears in.)
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:filesize: {}
+
+:repository: mruby/mruby
+:commit: 5568df5
+:ball_id: mruby-mruby-5568df5
+:hostname: centos32bit
+:env: 
+  :gcc: 
+    :stdout: |-
+      gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+      Copyright (C) 2010 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for i386-redhat-linux-gnu
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.4.1
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2008 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
