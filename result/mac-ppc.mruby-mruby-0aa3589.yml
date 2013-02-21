@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-21 23:22:31.316138 +09:00
-:id: mruby-mruby-7ef927e
-:zipball_url: https://github.com/mruby/mruby/zipball/7ef927e
+:date: 2013-02-21 23:38:15.002840 +09:00
+:id: mruby-mruby-0aa3589
+:zipball_url: https://github.com/mruby/mruby/zipball/0aa3589
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130221232235-17735-build/mruby-mruby-7ef927e)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221233822-18796-build/mruby-mruby-0aa3589)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/class.c -> build/host/src/class.o
@@ -97,7 +97,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130221232235-17735-build/mruby-mruby-7ef927e)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221233822-18796-build/mruby-mruby-0aa3589)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -143,23 +143,31 @@
     AR    build/host/test/mrbtest.a 
     LD    build/host/test/mrbtest 
     >>> Test host <<<
-    rake aborted!
-    Command Failed: ["build/host/test/mrbtest"]
-    rakefile:67:in `block (2 levels) in <top (required)>'
+    mrbtest - Embeddable Ruby Test
+    
+    This is a very early version, please test and report errors.
+    Thanks :)
+    
+    .........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+    Total: 521
+       OK: 521
+       KO: 0
+    Crash: 0
+     Time: 11.806359 seconds
   :stderr: "ar: creating archive build/host/test/mrbtest.a"
   :status_info: !ruby/object:Process::Status {}
 
-  :status: failed
+  :status: success
 :filesize: 
   bin/mruby: 510256
   bin/mrbc: 489748
   bin/mirb: 506108
-  lib/libmruby.a: 3424440
-  lib/libmruby_core.a: 3400536
+  lib/libmruby.a: 3424456
+  lib/libmruby_core.a: 3400552
   test/mrbtest: 620712
 :repository: mruby/mruby
-:commit: 7ef927e
-:ball_id: mruby-mruby-7ef927e
+:commit: 0aa3589
+:ball_id: mruby-mruby-0aa3589
 :hostname: mac-ppc
 :env: 
   :gcc: 

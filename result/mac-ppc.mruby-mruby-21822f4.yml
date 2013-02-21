@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-21 23:22:31.316138 +09:00
-:id: mruby-mruby-7ef927e
-:zipball_url: https://github.com/mruby/mruby/zipball/7ef927e
+:date: 2013-02-21 22:36:12.485589 +09:00
+:id: mruby-mruby-21822f4
+:zipball_url: https://github.com/mruby/mruby/zipball/21822f4
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130221232235-17735-build/mruby-mruby-7ef927e)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221223617-14461-build/mruby-mruby-21822f4)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/class.c -> build/host/src/class.o
@@ -28,11 +28,6 @@
     CC    src/proc.c -> build/host/src/proc.o
     CC    src/range.c -> build/host/src/range.o
     CC    src/re.c -> build/host/src/re.o
-    CC    src/regcomp.c -> build/host/src/regcomp.o
-    CC    src/regenc.c -> build/host/src/regenc.o
-    CC    src/regerror.c -> build/host/src/regerror.o
-    CC    src/regexec.c -> build/host/src/regexec.o
-    CC    src/regparse.c -> build/host/src/regparse.o
     CC    src/sprintf.c -> build/host/src/sprintf.o
     CC    src/st.c -> build/host/src/st.o
     CC    src/state.c -> build/host/src/state.o
@@ -74,30 +69,18 @@
              Binaries: mruby, mrbc, mirb
     ================================================
   :stderr: |-
-    In file included from src/parse.y:3492:
+    In file included from src/parse.y:3547:
     src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
     build/host/src/y.tab.c: In function 'yyparse':
-    src/parse.y:4316: warning: 'beg' may be used uninitialized in this function
+    src/parse.y:4375: warning: 'beg' may be used uninitialized in this function
     ar: creating archive build/host/lib/libmruby_core.a
-    ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
-    ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
-    ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
-    ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
-    ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
-    ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
     ar: creating archive build/host/lib/libmruby.a
-    ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
-    ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
-    ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
-    ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
-    ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
-    ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols
   :status_info: !ruby/object:Process::Status {}
 
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130221232235-17735-build/mruby-mruby-7ef927e)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221223617-14461-build/mruby-mruby-21822f4)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -152,14 +135,14 @@
   :status: failed
 :filesize: 
   bin/mruby: 510256
-  bin/mrbc: 489748
-  bin/mirb: 506108
-  lib/libmruby.a: 3424440
-  lib/libmruby_core.a: 3400536
-  test/mrbtest: 620712
+  bin/mrbc: 493844
+  bin/mirb: 510204
+  lib/libmruby.a: 3438704
+  lib/libmruby_core.a: 3414768
+  test/mrbtest: 624808
 :repository: mruby/mruby
-:commit: 7ef927e
-:ball_id: mruby-mruby-7ef927e
+:commit: 21822f4
+:ball_id: mruby-mruby-21822f4
 :hostname: mac-ppc
 :env: 
   :gcc: 

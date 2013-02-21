@@ -1,9 +1,9 @@
 ---
-:date: 2013-02-21 23:22:29.638849000 +09:00
-:id: mruby-mruby-7ef927e
-:zipball_url: https://github.com/mruby/mruby/zipball/7ef927e
+:date: 2013-02-21 22:49:01.019660000 +09:00
+:id: mruby-mruby-7b5ec71
+:zipball_url: https://github.com/mruby/mruby/zipball/7b5ec71
 :make:
-  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130221232233-25220-build/mruby-mruby-7ef927e)\nCC
+  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130221224905-21506-build/mruby-mruby-7b5ec71)\nCC
     \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/array.c ->
     build/host/src/array.o\nCC    src/class.c -> build/host/src/class.o\nCC    src/codegen.c
     -> build/host/src/codegen.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
@@ -16,56 +16,29 @@
     \   src/object.c -> build/host/src/object.o\nCC    src/pool.c -> build/host/src/pool.o\nCC
     \   src/print.c -> build/host/src/print.o\nCC    src/proc.c -> build/host/src/proc.o\nCC
     \   src/range.c -> build/host/src/range.o\nCC    src/re.c -> build/host/src/re.o\nCC
-    \   src/regcomp.c -> build/host/src/regcomp.o\nCC    src/regenc.c -> build/host/src/regenc.o\nCC
-    \   src/regerror.c -> build/host/src/regerror.o\nCC    src/regexec.c -> build/host/src/regexec.o\nCC
-    \   src/regparse.c -> build/host/src/regparse.o\nCC    src/sprintf.c -> build/host/src/sprintf.o\nCC
-    \   src/st.c -> build/host/src/st.o\nCC    src/state.c -> build/host/src/state.o\nCC
-    \   src/string.c -> build/host/src/string.o\nCC    src/struct.c -> build/host/src/struct.o\nCC
-    \   src/symbol.c -> build/host/src/symbol.o\nCC    src/time.c -> build/host/src/time.o\nCC
-    \   src/variable.c -> build/host/src/variable.o\nCC    src/vm.c -> build/host/src/vm.o\nYACC
-    \ src/parse.y -> build/host/src/y.tab.c\nCC    build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC
-    \   tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a
-    \nLD    build/host/bin/mrbc \nGEN   *.rb -> build/host/mrblib/mrblib.c\n      MRBC
-    mrblib/array.rb \n      MRBC mrblib/class.rb \n      MRBC mrblib/compar.rb \n
-    \     MRBC mrblib/enum.rb \n      MRBC mrblib/error.rb \n      MRBC mrblib/hash.rb
-    \n      MRBC mrblib/kernel.rb \n      MRBC mrblib/numeric.rb \n      MRBC mrblib/print.rb
-    \n      MRBC mrblib/range.rb \n      MRBC mrblib/string.rb \n      MRBC mrblib/struct.rb
-    \nCC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o\nAR    build/host/lib/libmruby.a
-    \nLD    build/host/bin/mruby \nCC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o\nLD
-    \   build/host/bin/mirb \n\nBuild summary:\n\n================================================\n
-    \     Config Name: host\n Output Directory: build/host\n         Binaries: mruby,
-    mrbc, mirb\n================================================"
+    \   src/sprintf.c -> build/host/src/sprintf.o\nCC    src/st.c -> build/host/src/st.o\nCC
+    \   src/state.c -> build/host/src/state.o\nCC    src/string.c -> build/host/src/string.o\nCC
+    \   src/struct.c -> build/host/src/struct.o\nCC    src/symbol.c -> build/host/src/symbol.o\nCC
+    \   src/time.c -> build/host/src/time.o\nCC    src/variable.c -> build/host/src/variable.o\nCC
+    \   src/vm.c -> build/host/src/vm.o\nYACC  src/parse.y -> build/host/src/y.tab.c\nCC
+    \   build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC    tools/mrbc/mrbc.c
+    -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a \nLD    build/host/bin/mrbc
+    \nGEN   *.rb -> build/host/mrblib/mrblib.c\n      MRBC mrblib/array.rb \n      MRBC
+    mrblib/class.rb \n      MRBC mrblib/compar.rb \n      MRBC mrblib/enum.rb \n      MRBC
+    mrblib/error.rb \n      MRBC mrblib/hash.rb \n      MRBC mrblib/kernel.rb \n      MRBC
+    mrblib/numeric.rb \n      MRBC mrblib/print.rb \n      MRBC mrblib/range.rb \n
+    \     MRBC mrblib/string.rb \n      MRBC mrblib/struct.rb \nCC    build/host/mrblib/mrblib.c
+    -> build/host/mrblib/mrblib.o\nAR    build/host/lib/libmruby.a \nLD    build/host/bin/mruby
+    \nCC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o\nLD    build/host/bin/mirb
+    \n\nBuild summary:\n\n================================================\n      Config
+    Name: host\n Output Directory: build/host\n         Binaries: mruby, mrbc, mirb\n================================================"
   :stderr: ! 'ar: creating archive build/host/lib/libmruby_core.a
 
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(re.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regcomp.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regenc.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regerror.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regexec.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby_core.a(regparse.o) has no symbols
-
-    ar: creating archive build/host/lib/libmruby.a
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(re.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(regcomp.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(regenc.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(regerror.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(regexec.o) has no symbols
-
-    /usr/bin/ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols'
+    ar: creating archive build/host/lib/libmruby.a'
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130221232233-25220-build/mruby-mruby-7ef927e)\nCC
+  :stdout: ! "(in /Users/mruby/mruby-test-tool/tmp/20130221224905-21506-build/mruby-mruby-7b5ec71)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/argumenterror.rb \n      MRBC test/t/array.rb
     \n      MRBC test/t/basicobject.rb \n      MRBC test/t/bs_block.rb \n      MRBC
@@ -84,20 +57,20 @@
     \nCC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o\nAR    build/host/test/mrbtest.a
     \nLD    build/host/test/mrbtest \n>>> Test host <<<\nmrbtest - Embeddable Ruby
     Test\n\nThis is a very early version, please test and report errors.\nThanks :)\n\n.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    521\n   OK: 521\n   KO: 0\nCrash: 0\n Time: 1.051281 seconds"
+    521\n   OK: 521\n   KO: 0\nCrash: 0\n Time: 1.066551 seconds"
   :stderr: ! 'ar: creating archive build/host/test/mrbtest.a'
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :filesize:
-  bin/mruby: 488268
-  bin/mrbc: 467684
-  bin/mirb: 484152
-  lib/libmruby.a: 2096712
-  lib/libmruby_core.a: 2073120
-  test/mrbtest: 598696
+  bin/mruby: 488292
+  bin/mrbc: 467772
+  bin/mirb: 484176
+  lib/libmruby.a: 2097704
+  lib/libmruby_core.a: 2074016
+  test/mrbtest: 598760
 :repository: mruby/mruby
-:commit: 7ef927e
-:ball_id: mruby-mruby-7ef927e
+:commit: 7b5ec71
+:ball_id: mruby-mruby-7b5ec71
 :hostname: mac-lion
 :env:
   :gcc:
