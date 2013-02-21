@@ -34,11 +34,11 @@
     
 
     <h1>mruby build & test report
-      <span style="font-size:small;">(mruby/mruby - a118c30)</span>
+      <span style="font-size:small;">(mruby/mruby - 9931f00)</span>
     </h1>
 
     <ul>
-      <li><a href="http://github.com/mruby/mruby/commit/a118c30" target="_blank">commit info on github</a></li>
+      <li><a href="http://github.com/mruby/mruby/commit/9931f00" target="_blank">commit info on github</a></li>
       
       
         
@@ -48,11 +48,11 @@
         
       
       <li>
-      <pre>commit a118c30861e26ec96a236e595697aea82ca04c09
+      <pre>commit 9931f00863578ad942077a42000ca8b70b7a30c2
 Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Thu Feb 21 22:31:35 2013 +0900
+Date:   Thu Feb 21 22:28:32 2013 +0900
 
-    better comment description for mrbconf.h configuration
+    remove unused HAVE_UNISTD_H altogether; ref #865
 
 </pre>
       <a href="#commitlog">commit log</a>
@@ -95,25 +95,6 @@ Date:   Thu Feb 21 22:31:35 2013 +0900
         
         
         <tr style="background-color:#99ff99">
-          <td><a href="#netbsd_arm">netbsd_arm</a></td>
-          <td>success</td>
-          <td>success</td>
-          <td>521</td>
-          <td>521</td>
-          <td>0</td>
-          <td>0</td>
-          <td></td>
-          <td></td>
-          
-            <td style="text-align:right;">607,800</td>
-          
-            <td style="text-align:right;">629,024</td>
-          
-        </tr>
-      
-        
-        
-        <tr style="background-color:#99ff99">
           <td><a href="#netbsd_mips">netbsd_mips</a></td>
           <td>success</td>
           <td>success</td>
@@ -143,14 +124,6 @@ Date:   Thu Feb 21 22:31:35 2013 +0900
       
         
         <tr>
-          <td rowspan="3">netbsd_arm</td>
-          <td><b>gcc</b><br/><pre></pre></td>
-        </tr>
-        <tr><td><b>make</b><br/><pre></pre></td></tr>
-        <tr><td><b>bison</b><br/><pre></pre></td></tr>
-      
-        
-        <tr>
           <td rowspan="3">netbsd_mips</td>
           <td><b>gcc</b><br/><pre></pre></td>
         </tr>
@@ -162,153 +135,6 @@ Date:   Thu Feb 21 22:31:35 2013 +0900
     <h2>Build Log</h2>
     
       
-      <h3><a name="netbsd_arm">netbsd_arm</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
-      <table border='1' style="width:90%;">
-        <tr>
-          <th style="width:100px;">task</th>
-          <th>stdout</th>
-          <th>stderr</th>
-        </tr>
-        <tr>
-          <th>make</th>
-          <td><textarea>(in /home/mruby/arm/mruby-mruby-a118c30)
-CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
-CC    src/range.c -> build/host/src/range.o
-CC    src/array.c -> build/host/src/array.o
-CC    src/numeric.c -> build/host/src/numeric.o
-CC    src/pool.c -> build/host/src/pool.o
-CC    src/compar.c -> build/host/src/compar.o
-CC    src/crc.c -> build/host/src/crc.o
-CC    src/proc.c -> build/host/src/proc.o
-CC    src/math.c -> build/host/src/math.o
-CC    src/state.c -> build/host/src/state.o
-CC    src/print.c -> build/host/src/print.o
-CC    src/vm.c -> build/host/src/vm.o
-CC    src/class.c -> build/host/src/class.o
-CC    src/load.c -> build/host/src/load.o
-CC    src/codegen.c -> build/host/src/codegen.o
-CC    src/symbol.c -> build/host/src/symbol.o
-CC    src/etc.c -> build/host/src/etc.o
-CC    src/gc.c -> build/host/src/gc.o
-CC    src/st.c -> build/host/src/st.o
-CC    src/struct.c -> build/host/src/struct.o
-CC    src/init.c -> build/host/src/init.o
-CC    src/dump.c -> build/host/src/dump.o
-CC    src/kernel.c -> build/host/src/kernel.o
-CC    src/hash.c -> build/host/src/hash.o
-CC    src/string.c -> build/host/src/string.o
-CC    src/sprintf.c -> build/host/src/sprintf.o
-CC    src/variable.c -> build/host/src/variable.o
-CC    src/object.c -> build/host/src/object.o
-CC    src/time.c -> build/host/src/time.o
-CC    src/enum.c -> build/host/src/enum.o
-CC    src/error.c -> build/host/src/error.o
-CC    src/re.c -> build/host/src/re.o
-YACC  src/parse.y -> build/host/src/y.tab.c
-CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
-CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
-AR    build/host/lib/libmruby_core.a 
-LD    build/host/bin/mrbc 
-GEN   *.rb -> build/host/mrblib/mrblib.c
-      MRBC mrblib/kernel.rb 
-      MRBC mrblib/compar.rb 
-      MRBC mrblib/hash.rb 
-      MRBC mrblib/numeric.rb 
-      MRBC mrblib/class.rb 
-      MRBC mrblib/string.rb 
-      MRBC mrblib/enum.rb 
-      MRBC mrblib/print.rb 
-      MRBC mrblib/array.rb 
-      MRBC mrblib/range.rb 
-      MRBC mrblib/error.rb 
-      MRBC mrblib/struct.rb 
-CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
-AR    build/host/lib/libmruby.a 
-LD    build/host/bin/mruby 
-CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
-LD    build/host/bin/mirb 
-
-Build summary:
-
-================================================
-      Config Name: host
- Output Directory: build/host
-         Binaries: mruby, mrbc, mirb
-================================================
-
-</textarea></td>
-          <td><textarea>ar: creating build/host/lib/libmruby_core.a
-ar: creating build/host/lib/libmruby.a
-</textarea></td>
-        </tr>
-        <tr>
-          <th>make test</th>
-          <td><textarea>(in /home/mruby/arm/mruby-mruby-a118c30)
-CC    test/driver.c -> build/host/test/driver.o
-GEN   *.rb -> build/host/test/mrbtest.c
-      MRBC test/assert.rb 
-      MRBC test/t/module.rb 
-      MRBC test/t/math.rb 
-      MRBC test/t/kernel.rb 
-      MRBC test/t/integer.rb 
-      MRBC test/t/gc.rb 
-      MRBC test/t/standarderror.rb 
-      MRBC test/t/basicobject.rb 
-      MRBC test/t/object.rb 
-      MRBC test/t/hash.rb 
-      MRBC test/t/comparable.rb 
-      MRBC test/t/exception.rb 
-      MRBC test/t/numeric.rb 
-      MRBC test/t/bs_literal.rb 
-      MRBC test/t/false.rb 
-      MRBC test/t/float.rb 
-      MRBC test/t/class.rb 
-      MRBC test/t/nomethoderror.rb 
-      MRBC test/t/true.rb 
-      MRBC test/t/nil.rb 
-      MRBC test/t/rangeerror.rb 
-      MRBC test/t/typeerror.rb 
-      MRBC test/t/proc.rb 
-      MRBC test/t/literals.rb 
-      MRBC test/t/indexerror.rb 
-      MRBC test/t/nameerror.rb 
-      MRBC test/t/bs_block.rb 
-      MRBC test/t/regexperror.rb 
-      MRBC test/t/string.rb 
-      MRBC test/t/argumenterror.rb 
-      MRBC test/t/runtimeerror.rb 
-      MRBC test/t/array.rb 
-      MRBC test/t/range.rb 
-      MRBC test/t/syntax.rb 
-      MRBC test/t/localjumperror.rb 
-      MRBC test/t/struct.rb 
-      MRBC test/t/symbol.rb 
-      MRBC test/t/enumerable.rb 
-      MRBC test/t/time.rb 
-CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
-AR    build/host/test/mrbtest.a 
-LD    build/host/test/mrbtest 
->>> Test host <<<
-mrbtest - Embeddable Ruby Test
-
-This is a very early version, please test and report errors.
-Thanks :)
-
-.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
-Total: 521
-   OK: 521
-   KO: 0
-Crash: 0
- Time: 36.288935 seconds
-
-</textarea></td>
-          <td><textarea>ar: creating build/host/test/mrbtest.a
-</textarea></td>
-        </tr>
-        
-      </table>
-    
-      
       <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
       <table border='1' style="width:90%;">
         <tr>
@@ -318,7 +144,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mips/mruby-mruby-a118c30)
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-9931f00)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/range.c -> build/host/src/range.o
 CC    src/array.c -> build/host/src/array.o
@@ -390,7 +216,7 @@ ar: creating build/host/lib/libmruby.a
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mips/mruby-mruby-a118c30)
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-9931f00)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -446,7 +272,7 @@ Total: 521
    OK: 521
    KO: 0
 Crash: 0
- Time: 19.282975 seconds
+ Time: 19.289435 seconds
 
 </textarea></td>
           <td><textarea>ar: creating build/host/test/mrbtest.a
@@ -457,36 +283,26 @@ Crash: 0
     
 
     <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
-      <pre>commit a118c30861e26ec96a236e595697aea82ca04c09
+      <pre>commit 9931f00863578ad942077a42000ca8b70b7a30c2
 Author: Yukihiro Matz Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Thu Feb 21 22:31:35 2013 +0900
+Date:   Thu Feb 21 22:28:32 2013 +0900
 
-    better comment description for mrbconf.h configuration
+    remove unused HAVE_UNISTD_H altogether; ref #865
 
 diff --git a/include/mrbconf.h b/include/mrbconf.h
-index 52e634b..ddd9592 100644
+index 175383e..52e634b 100644
 --- a/include/mrbconf.h
 +++ b/include/mrbconf.h
-@@ -43,16 +43,15 @@
- /* page size of memory pool */
- //#define POOL_PAGE_SIZE 16000
+@@ -54,9 +54,6 @@
+ /* Now DISABLE_GEMS is added as a command line flag in Rakefile, */
+ /* we do not need to set it here. */
  
--/* -DDISABLE_XXXX to drop the feature */
-+/* -DDISABLE_XXXX to drop following features */
- //#define DISABLE_SPRINTF	/* Kernel.sprintf method */
- //#define DISABLE_MATH		/* Math functions */
- //#define DISABLE_TIME		/* Time class */
- //#define DISABLE_STRUCT	/* Struct class */
- //#define DISABLE_STDIO		/* use of stdio */
--//#define ENABLE_DEBUG    /* hooks for debugger */
- 
--/* Now DISABLE_GEMS is added as a command line flag in Rakefile, */
--/* we do not need to set it here. */
-+/* -DENABLE_XXXX to enable following features */
-+//#define ENABLE_DEBUG		/* hooks for debugger */
- 
+-//#undef  HAVE_UNISTD_H /* WINDOWS */
+-#define HAVE_UNISTD_H /* LINUX */
+-
  /* end of configuration */
  
+ #ifdef MRB_USE_FLOAT
 </pre>
 
   </body>
