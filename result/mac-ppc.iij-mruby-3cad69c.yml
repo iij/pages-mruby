@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-10 11:40:30.802532 +09:00
+:date: 2013-02-21 20:07:34.989205 +09:00
 :id: iij-mruby-3cad69c
 :zipball_url: https://github.com/iij/mruby/zipball/3cad69c
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130210114034-79708-build/iij-mruby-3cad69c)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221200738-8395-build/iij-mruby-3cad69c)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/class.c -> build/host/src/class.o
@@ -97,7 +97,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130210114034-79708-build/iij-mruby-3cad69c)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221200738-8395-build/iij-mruby-3cad69c)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -143,27 +143,19 @@
     AR    build/host/test/mrbtest.a 
     LD    build/host/test/mrbtest 
     >>> Test host <<<
-    mrbtest - Embeddable Ruby Test
-    
-    This is a very early version, please test and report errors.
-    Thanks :)
-    
-    ....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
-    Total: 516
-       OK: 516
-       KO: 0
-    Crash: 0
-     Time: 3.936944 seconds
+    rake aborted!
+    Command Failed: ["build/host/test/mrbtest"]
+    rakefile:67:in `block (2 levels) in <top (required)>'
   :stderr: "ar: creating archive build/host/test/mrbtest.a"
   :status_info: !ruby/object:Process::Status {}
 
-  :status: success
+  :status: failed
 :filesize: 
   bin/mruby: 510256
   bin/mrbc: 489748
   bin/mirb: 506108
-  lib/libmruby.a: 3418224
-  lib/libmruby_core.a: 3394352
+  lib/libmruby.a: 3418096
+  lib/libmruby_core.a: 3394224
   test/mrbtest: 616616
 :repository: iij/mruby
 :commit: 3cad69c

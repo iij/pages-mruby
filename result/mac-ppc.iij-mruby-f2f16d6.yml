@@ -1,10 +1,10 @@
 --- 
-:date: 2013-02-10 11:38:38.640523 +09:00
+:date: 2013-02-21 20:03:40.281022 +09:00
 :id: iij-mruby-f2f16d6
 :zipball_url: https://github.com/iij/mruby/zipball/f2f16d6
 :make: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130210113842-79417-build/iij-mruby-f2f16d6)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221200344-8123-build/iij-mruby-f2f16d6)
     CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
     CC    src/array.c -> build/host/src/array.o
     CC    src/class.c -> build/host/src/class.o
@@ -97,7 +97,7 @@
   :status: success
 :make_test: 
   :stdout: |-
-    (in /Users/mruby/mruby-test-tool/tmp/20130210113842-79417-build/iij-mruby-f2f16d6)
+    (in /Users/mruby/mruby-test-tool/tmp/20130221200344-8123-build/iij-mruby-f2f16d6)
     CC    test/driver.c -> build/host/test/driver.o
     GEN   *.rb -> build/host/test/mrbtest.c
           MRBC test/assert.rb 
@@ -153,7 +153,7 @@
        OK: 516
        KO: 0
     Crash: 0
-     Time: 3.945295 seconds
+     Time: 12.296542 seconds
   :stderr: "ar: creating archive build/host/test/mrbtest.a"
   :status_info: !ruby/object:Process::Status {}
 
@@ -162,8 +162,8 @@
   bin/mruby: 510256
   bin/mrbc: 489748
   bin/mirb: 506108
-  lib/libmruby.a: 3418224
-  lib/libmruby_core.a: 3394352
+  lib/libmruby.a: 3418096
+  lib/libmruby_core.a: 3394224
   test/mrbtest: 616616
 :repository: iij/mruby
 :commit: f2f16d6

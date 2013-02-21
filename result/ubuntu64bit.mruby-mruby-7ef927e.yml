@@ -1,9 +1,9 @@
 ---
-:date: 2013-02-18 13:37:05.988561664 +09:00
+:date: 2013-02-21 20:19:39.486590886 +09:00
 :id: mruby-mruby-7ef927e
 :zipball_url: https://github.com/mruby/mruby/zipball/7ef927e
 :make:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130218133709-8402-build/mruby-mruby-7ef927e)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130221201944-19152-build/mruby-mruby-7ef927e)\nCC
     \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/vm.c -> build/host/src/vm.o\nCC
     \   src/print.c -> build/host/src/print.o\nCC    src/symbol.c -> build/host/src/symbol.o\nCC
     \   src/object.c -> build/host/src/object.o\nCC    src/struct.c -> build/host/src/struct.o\nCC
@@ -40,7 +40,7 @@
   :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
-  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130218133709-8402-build/mruby-mruby-7ef927e)\nCC
+  :stdout: ! "(in /home/mruby/mruby-test-tool/tmp/20130221201944-19152-build/mruby-mruby-7ef927e)\nCC
     \   test/driver.c -> build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n
     \     MRBC test/assert.rb \n      MRBC test/t/rangeerror.rb \n      MRBC test/t/false.rb
     \n      MRBC test/t/standarderror.rb \n      MRBC test/t/time.rb \n      MRBC
@@ -60,7 +60,7 @@
     \   build/host/test/mrbtest.a \nLD    build/host/test/mrbtest \n>>> Test host
     <<<\nmrbtest - Embeddable Ruby Test\n\nThis is a very early version, please test
     and report errors.\nThanks :)\n\n.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    521\n   OK: 521\n   KO: 0\nCrash: 0\n Time: 0.683518 seconds"
+    521\n   OK: 521\n   KO: 0\nCrash: 0\n Time: 0.575377 seconds"
   :stderr: ! 'ar: creating build/host/test/mrbtest.a'
   :status_info: !ruby/object:Process::Status {}
   :status: success
