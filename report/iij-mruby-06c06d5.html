@@ -190,12 +190,12 @@ Date:   Sun Feb 10 01:11:09 2013 +0900
       
         
         
-        <tr style="background-color:#99ff99">
+        <tr style="background-color:#ff9999">
           <td><a href="#mac-ppc">mac-ppc</a></td>
           <td>success</td>
-          <td>success</td>
-          <td>516</td>
-          <td>516</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
           <td>0</td>
           <td>0</td>
           <td></td>
@@ -203,7 +203,7 @@ Date:   Sun Feb 10 01:11:09 2013 +0900
           
             <td style="text-align:right;">510,256</td>
           
-            <td style="text-align:right;">3,418,144</td>
+            <td style="text-align:right;">3,418,016</td>
           
         </tr>
       
@@ -1285,7 +1285,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130211073509-55839-build/iij-mruby-06c06d5)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221195630-10515-build/iij-mruby-06c06d5)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1371,7 +1371,7 @@ ar: creating archive build/host/lib/libmruby.a
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130211073509-55839-build/iij-mruby-06c06d5)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221195630-10515-build/iij-mruby-06c06d5)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1427,7 +1427,7 @@ Total: 516
    OK: 516
    KO: 0
 Crash: 0
- Time: 1.03879 seconds</textarea></td>
+ Time: 1.051007 seconds</textarea></td>
           <td><textarea>ar: creating archive build/host/test/mrbtest.a</textarea></td>
         </tr>
         
@@ -1443,7 +1443,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130211073507-84950-build/iij-mruby-06c06d5)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221195630-7595-build/iij-mruby-06c06d5)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1533,7 +1533,7 @@ ranlib: file: build/host/lib/libmruby.a(regparse.o) has no symbols</textarea></t
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130211073507-84950-build/iij-mruby-06c06d5)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221195630-7595-build/iij-mruby-06c06d5)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1579,17 +1579,9 @@ CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
 AR    build/host/test/mrbtest.a 
 LD    build/host/test/mrbtest 
 >>> Test host <<<
-mrbtest - Embeddable Ruby Test
-
-This is a very early version, please test and report errors.
-Thanks :)
-
-....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
-Total: 516
-   OK: 516
-   KO: 0
-Crash: 0
- Time: 3.928825 seconds</textarea></td>
+rake aborted!
+Command Failed: ["build/host/test/mrbtest"]
+rakefile:67:in `block (2 levels) in <top (required)>'</textarea></td>
           <td><textarea>ar: creating archive build/host/test/mrbtest.a</textarea></td>
         </tr>
         

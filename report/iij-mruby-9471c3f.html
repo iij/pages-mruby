@@ -188,7 +188,7 @@ Date:   Thu Feb 14 23:51:56 2013 +0900
           
             <td style="text-align:right;">799,276</td>
           
-            <td style="text-align:right;">3,397,928</td>
+            <td style="text-align:right;">3,397,768</td>
           
         </tr>
       
@@ -207,7 +207,7 @@ Date:   Thu Feb 14 23:51:56 2013 +0900
           
             <td style="text-align:right;">852,708</td>
           
-            <td style="text-align:right;">5,025,032</td>
+            <td style="text-align:right;">5,025,360</td>
           
         </tr>
       
@@ -450,7 +450,7 @@ Date:   Thu Feb 14 23:51:56 2013 +0900
             <td>0</td>
             <td>0</td>
             <td></td>
-            <td>wait 80293 done<br/>wait 80294 done<br/>.<br/>POSIX test result: OK</td>
+            <td>wait 5130 done<br/>wait 5131 done<br/>.<br/>POSIX test result: OK</td>
           </tr>
         
           
@@ -463,7 +463,7 @@ Date:   Thu Feb 14 23:51:56 2013 +0900
             <td>0</td>
             <td>0</td>
             <td></td>
-            <td>wait 90810 done<br/>wait 90811 done<br/>.<br/>POSIX test result: OK</td>
+            <td>wait 3592 done<br/>wait 3593 done<br/>.<br/>POSIX test result: OK</td>
           </tr>
         
           
@@ -2294,7 +2294,7 @@ POSIX test result: OK
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130215073609-79729-build/iij-mruby-9471c3f)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221190626-4569-build/iij-mruby-9471c3f)
 GIT   https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest
 Cloning into 'build/mrbgems/mruby-mtest'...
 GIT   https://github.com/iij/mruby-dir.git -> build/mrbgems/mruby-dir
@@ -2428,24 +2428,24 @@ src/compile.c: At top level:
 src/compile.c:21: warning: 'replace_stop_with_return' defined but not used
 ar: creating archive build/host/lib/libmruby_core.a
 build/mrbgems/mruby-pack/src/pack.c: In function 'pack_a':
-build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable 'dlen'
+build/mrbgems/mruby-pack/src/pack.c:215: warning: unused variable 'dlen'
 build/mrbgems/mruby-pack/src/pack.c: In function 'unpack_a':
-build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable 'sptr0'
+build/mrbgems/mruby-pack/src/pack.c:252: warning: unused variable 'sptr0'
 build/mrbgems/mruby-pack/src/pack.c: In function 'pack_h':
-build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable 'x'
+build/mrbgems/mruby-pack/src/pack.c:281: warning: unused variable 'x'
 build/mrbgems/mruby-pack/src/pack.c: In function 'unpack_h':
-build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable 'ch'
-build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable 'c'
-build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable 'i'
-build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable 'l'
+build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable 'ch'
+build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable 'c'
+build/mrbgems/mruby-pack/src/pack.c:327: warning: unused variable 'i'
+build/mrbgems/mruby-pack/src/pack.c:326: warning: unused variable 'l'
 build/mrbgems/mruby-pack/src/pack.c: In function 'mrb_pack_unpack':
-build/mrbgems/mruby-pack/src/pack.c:763: warning: pointer targets in passing argument 2 of 'unpack_s' differ in signedness
-build/mrbgems/mruby-pack/src/pack.c:766: warning: pointer targets in passing argument 2 of 'unpack_l' differ in signedness
+build/mrbgems/mruby-pack/src/pack.c:772: warning: pointer targets in passing argument 2 of 'unpack_s' differ in signedness
+build/mrbgems/mruby-pack/src/pack.c:775: warning: pointer targets in passing argument 2 of 'unpack_l' differ in signedness
 ar: creating archive build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130215073609-79729-build/iij-mruby-9471c3f)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221190626-4569-build/iij-mruby-9471c3f)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2530,7 +2530,7 @@ Total: 648
    OK: 648
    KO: 0
 Crash: 0
- Time: 0.130017 seconds
+ Time: 0.129968 seconds
 
 *** Test with tools/mruby (rb file) ***
 Success
@@ -2549,7 +2549,7 @@ Total: 21
    OK: 21
    KO: 0
 Crash: 0
- Time: 0.004042 seconds
+ Time: 0.0042 seconds
 
 ###################################
 # exec test/posix/env.sh; start...
@@ -2567,7 +2567,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.001866 seconds
+ Time: 0.001849 seconds
 
 ###################################
 # exec test/posix/file.sh; start...
@@ -2576,7 +2576,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.024315 seconds
+ Time: 0.010237 seconds
 
 ###################################
 # exec test/posix/io.sh; start...
@@ -2585,19 +2585,19 @@ Total: 18
    OK: 18
    KO: 0
 Crash: 0
- Time: 0.005587 seconds
+ Time: 0.005412 seconds
 
 ###################################
 # exec test/posix/process.sh; start...
-.....wait 80292 done
-wait 80293 done
-wait 80294 done
+.....wait 5129 done
+wait 5130 done
+wait 5131 done
 .
 Total: 6
    OK: 6
    KO: 0
 Crash: 0
- Time: 0.217038 seconds
+ Time: 0.21707 seconds
 
 ###################################
 # exec test/posix/require.sh; start...
@@ -2606,7 +2606,7 @@ Total: 20
    OK: 20
    KO: 0
 Crash: 0
- Time: 0.077322 seconds
+ Time: 0.078124 seconds
 
 ###################################
 # exec test/posix/syslog.sh; start...
@@ -2615,7 +2615,7 @@ Total: 10
    OK: 10
    KO: 0
 Crash: 0
- Time: 0.004124 seconds
+ Time: 0.004166 seconds
 
 ###################################
 POSIX test result: OK
@@ -2635,7 +2635,7 @@ POSIX test result: OK
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130215073607-90248-build/iij-mruby-9471c3f)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221190626-3029-build/iij-mruby-9471c3f)
 GIT   https://github.com/iij/mruby-mtest.git -> build/mrbgems/mruby-mtest
 Cloning into 'build/mrbgems/mruby-mtest'...
 GIT   https://github.com/iij/mruby-dir.git -> build/mrbgems/mruby-dir
@@ -2782,27 +2782,27 @@ ranlib: file: build/host/lib/libmruby_core.a(socket.o) has no symbols
 build/mrbgems/mruby-digest/src/digest.c: In function 'mrb_hmac_init':
 build/mrbgems/mruby-digest/src/digest.c:471: warning: 'algorithm' may be used uninitialized in this function
 build/mrbgems/mruby-pack/src/pack.c: In function 'pack_a':
-build/mrbgems/mruby-pack/src/pack.c:218: warning: unused variable 'dlen'
+build/mrbgems/mruby-pack/src/pack.c:215: warning: unused variable 'dlen'
 build/mrbgems/mruby-pack/src/pack.c: In function 'unpack_a':
-build/mrbgems/mruby-pack/src/pack.c:255: warning: unused variable 'sptr0'
+build/mrbgems/mruby-pack/src/pack.c:252: warning: unused variable 'sptr0'
 build/mrbgems/mruby-pack/src/pack.c: In function 'pack_h':
-build/mrbgems/mruby-pack/src/pack.c:284: warning: unused variable 'x'
+build/mrbgems/mruby-pack/src/pack.c:281: warning: unused variable 'x'
 build/mrbgems/mruby-pack/src/pack.c: In function 'unpack_h':
-build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable 'ch'
-build/mrbgems/mruby-pack/src/pack.c:331: warning: unused variable 'c'
-build/mrbgems/mruby-pack/src/pack.c:330: warning: unused variable 'i'
-build/mrbgems/mruby-pack/src/pack.c:329: warning: unused variable 'l'
+build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable 'ch'
+build/mrbgems/mruby-pack/src/pack.c:328: warning: unused variable 'c'
+build/mrbgems/mruby-pack/src/pack.c:327: warning: unused variable 'i'
+build/mrbgems/mruby-pack/src/pack.c:326: warning: unused variable 'l'
 build/mrbgems/mruby-pack/src/pack.c: In function 'mrb_pack_unpack':
-build/mrbgems/mruby-pack/src/pack.c:763: warning: pointer targets in passing argument 2 of 'unpack_s' differ in signedness
-build/mrbgems/mruby-pack/src/pack.c:766: warning: pointer targets in passing argument 2 of 'unpack_l' differ in signedness
+build/mrbgems/mruby-pack/src/pack.c:772: warning: pointer targets in passing argument 2 of 'unpack_s' differ in signedness
+build/mrbgems/mruby-pack/src/pack.c:775: warning: pointer targets in passing argument 2 of 'unpack_l' differ in signedness
 build/mrbgems/mruby-pack/src/pack.c: In function 'read_tmpl':
-build/mrbgems/mruby-pack/src/pack.c:515: warning: 'type' may be used uninitialized in this function
+build/mrbgems/mruby-pack/src/pack.c:512: warning: 'type' may be used uninitialized in this function
 ar: creating archive build/host/lib/libmruby.a
 ranlib: file: build/host/lib/libmruby.a(socket.o) has no symbols</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130215073607-90248-build/iij-mruby-9471c3f)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130221190626-3029-build/iij-mruby-9471c3f)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2887,7 +2887,7 @@ Total: 638
    OK: 638
    KO: 0
 Crash: 0
- Time: 0.202503 seconds
+ Time: 0.445041 seconds
 
 *** Test with tools/mruby (rb file) ***
 Success
@@ -2906,7 +2906,7 @@ Total: 21
    OK: 21
    KO: 0
 Crash: 0
- Time: 0.07562 seconds
+ Time: 0.017326 seconds
 
 ###################################
 # exec test/posix/env.sh; start...
@@ -2915,7 +2915,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.003657 seconds
+ Time: 0.003535 seconds
 
 ###################################
 # exec test/posix/errno.sh; start...
@@ -2924,7 +2924,7 @@ Total: 14
    OK: 14
    KO: 0
 Crash: 0
- Time: 0.00431 seconds
+ Time: 0.004643 seconds
 
 ###################################
 # exec test/posix/file.sh; start...
@@ -2933,7 +2933,7 @@ Total: 11
    OK: 11
    KO: 0
 Crash: 0
- Time: 0.045714 seconds
+ Time: 0.101393 seconds
 
 ###################################
 # exec test/posix/io.sh; start...
@@ -2942,19 +2942,19 @@ Total: 18
    OK: 18
    KO: 0
 Crash: 0
- Time: 0.014488 seconds
+ Time: 0.137687 seconds
 
 ###################################
 # exec test/posix/process.sh; start...
-.....wait 90809 done
-wait 90810 done
-wait 90811 done
+.....wait 3591 done
+wait 3592 done
+wait 3593 done
 .
 Total: 6
    OK: 6
    KO: 0
 Crash: 0
- Time: 0.251712 seconds
+ Time: 0.244736 seconds
 
 ###################################
 # exec test/posix/require.sh; start...
@@ -2963,7 +2963,7 @@ Total: 20
    OK: 20
    KO: 0
 Crash: 0
- Time: 0.194956 seconds
+ Time: 1.05586 seconds
 
 ###################################
 # exec test/posix/syslog.sh; start...
@@ -2972,7 +2972,7 @@ Total: 10
    OK: 10
    KO: 0
 Crash: 0
- Time: 0.00675 seconds
+ Time: 0.006375 seconds
 
 ###################################
 POSIX test result: OK
