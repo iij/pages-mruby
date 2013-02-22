@@ -1,0 +1,828 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div style="background-color:#a0a0a0;">
+      
+        
+        <a href="iij-mruby.html">iij-mruby</a>
+      
+        
+        <a href="mruby-mruby.html">mruby-mruby</a>
+      
+    </div>
+
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - 2838fcf)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/2838fcf" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+      <li>
+      <pre>commit 2838fcf2aacb2fa33b905b8b145b6388248be10b
+Author: mattn &lt;mattn.jp@gmail.com&gt;
+Date:   Fri Feb 22 16:19:00 2013 +0900
+
+    Fix indent
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    
+    <table border="1">
+      <tr>
+        
+          <th rowspan="2">Name</th>
+        
+          <th rowspan="2">Build-Status</th>
+        
+          <th rowspan="2">Mrbtest-Status</th>
+        
+          <th rowspan="2">Total</th>
+        
+          <th rowspan="2">OK</th>
+        
+          <th rowspan="2">KO</th>
+        
+          <th rowspan="2">Crash</th>
+        
+          <th rowspan="2">Fail</th>
+        
+          <th rowspan="2">Msg</th>
+        
+        <th colspan="2">FileSize (Byte)</th>
+      </tr>
+      <tr>
+        
+          <th>bin/mruby</th>
+        
+          <th>lib/libmruby.a</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_mips">netbsd_mips</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>521</td>
+          <td>521</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">973,828</td>
+          
+            <td style="text-align:right;">736,068</td>
+          
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_mips</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-2838fcf)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/st.c -> build/host/src/st.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/time.c -> build/host/src/time.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/re.c -> build/host/src/re.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+================================================
+
+</textarea></td>
+          <td><textarea>ar: creating build/host/lib/libmruby_core.a
+ar: creating build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mips/mruby-mruby-2838fcf)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/time.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 521
+   OK: 521
+   KO: 0
+Crash: 0
+ Time: 19.217522 seconds
+
+</textarea></td>
+          <td><textarea>ar: creating build/host/test/mrbtest.a
+</textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+      <pre>commit 2838fcf2aacb2fa33b905b8b145b6388248be10b
+Author: mattn &lt;mattn.jp@gmail.com&gt;
+Date:   Fri Feb 22 16:19:00 2013 +0900
+
+    Fix indent
+
+diff --git a/src/codegen.c b/src/codegen.c
+index 6c7f108..3d9440a 100644
+--- a/src/codegen.c
++++ b/src/codegen.c
+@@ -168,8 +168,8 @@ genop_peep(codegen_scope *s, mrb_code i, int val)
+     switch (c1) {
+     case OP_MOVE:
+       if (GETARG_A(i) == GETARG_B(i)) {
+-	/* skip useless OP_MOVE */
+-	return;
++        /* skip useless OP_MOVE */
++        return;
+       }
+       if (val) break;
+       switch (c0) {
+@@ -178,10 +178,10 @@ genop_peep(codegen_scope *s, mrb_code i, int val)
+           /* skip swapping OP_MOVE */
+           return;
+         }
+-	if (GETARG_B(i) == GETARG_A(i0) &amp;&amp; GETARG_A(i0) &gt;= s-&gt;nlocals) {
+-	  s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(OP_MOVE, GETARG_A(i), GETARG_B(i0));
+-	  return;
+-	}
++        if (GETARG_B(i) == GETARG_A(i0) &amp;&amp; GETARG_A(i0) &gt;= s-&gt;nlocals) {
++          s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(OP_MOVE, GETARG_A(i), GETARG_B(i0));
++          return;
++        }
+         break;
+       case OP_LOADI:
+         if (GETARG_B(i) == GETARG_A(i0) &amp;&amp; GETARG_A(i0) &gt;= s-&gt;nlocals) {
+@@ -229,7 +229,7 @@ genop_peep(codegen_scope *s, mrb_code i, int val)
+         }
+         break;
+       default:
+-	break;
++        break;
+       }
+       break;
+     case OP_SETIV:
+@@ -269,33 +269,33 @@ genop_peep(codegen_scope *s, mrb_code i, int val)
+     case OP_RETURN:
+       switch (c0) {
+       case OP_RETURN:
+-	return;
++        return;
+       case OP_MOVE:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(OP_RETURN, GETARG_B(i0), OP_R_NORMAL);
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(OP_RETURN, GETARG_B(i0), OP_R_NORMAL);
++        return;
+       case OP_LOADI:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_AsBx(OP_LOADI, 0, GETARG_sBx(i0));
+-	genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_AsBx(OP_LOADI, 0, GETARG_sBx(i0));
++        genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
++        return;
+       case OP_ARRAY:
+       case OP_HASH:
+       case OP_RANGE:
+       case OP_AREF:
+       case OP_GETUPVAR:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(c0, 0, GETARG_B(i0), GETARG_C(i0));
+-	genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(c0, 0, GETARG_B(i0), GETARG_C(i0));
++        genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
++        return;
+       case OP_SETIV:
+       case OP_SETCV:
+       case OP_SETCONST:
+       case OP_SETMCNST:
+       case OP_SETUPVAR:
+       case OP_SETGLOBAL:
+-	s-&gt;pc--;
+-	genop_peep(s, i0, NOVAL);
+-	i0 = s-&gt;iseq[s-&gt;pc-1];
+-	genop(s, MKOP_AB(OP_RETURN, GETARG_A(i0), OP_R_NORMAL));
+-	return;
++        s-&gt;pc--;
++        genop_peep(s, i0, NOVAL);
++        i0 = s-&gt;iseq[s-&gt;pc-1];
++        genop(s, MKOP_AB(OP_RETURN, GETARG_A(i0), OP_R_NORMAL));
++        return;
+       case OP_LOADSYM:
+       case OP_GETGLOBAL:
+       case OP_GETIV:
+@@ -304,37 +304,37 @@ genop_peep(codegen_scope *s, mrb_code i, int val)
+       case OP_GETSPECIAL:
+       case OP_LOADL:
+       case OP_STRING:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_ABx(c0, 0, GETARG_Bx(i0));
+-	genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_ABx(c0, 0, GETARG_Bx(i0));
++        genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
++        return;
+       case OP_SCLASS:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(c0, GETARG_A(i), GETARG_B(i0));
+-	genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_AB(c0, GETARG_A(i), GETARG_B(i0));
++        genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
++        return;
+       case OP_LOADNIL:
+       case OP_LOADSELF:
+       case OP_LOADT:
+       case OP_LOADF:
+       case OP_OCLASS:
+-	s-&gt;iseq[s-&gt;pc-1] = MKOP_A(c0, 0);
+-	genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
+-	return;
++        s-&gt;iseq[s-&gt;pc-1] = MKOP_A(c0, 0);
++        genop(s, MKOP_AB(OP_RETURN, 0, OP_R_NORMAL));
++        return;
+       default:
+-	break;
++        break;
+       }
+       break;
+     case OP_ADD:
+     case OP_SUB:
+       if (c0 == OP_LOADI) {
+-	int c = GETARG_sBx(i0);
+-	
+-	if (c1 == OP_SUB) c = -c;
+-	if (c &gt; 127 || c &lt; -127) break;
+-	if (0 &lt;= c) 
+-	  s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(OP_ADDI, GETARG_A(i), GETARG_B(i), c);
+-	else
+-	  s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(OP_SUBI, GETARG_A(i), GETARG_B(i), -c);
+-	return;
++        int c = GETARG_sBx(i0);
++
++        if (c1 == OP_SUB) c = -c;
++        if (c &gt; 127 || c &lt; -127) break;
++        if (0 &lt;= c) 
++          s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(OP_ADDI, GETARG_A(i), GETARG_B(i), c);
++        else
++          s-&gt;iseq[s-&gt;pc-1] = MKOP_ABC(OP_SUBI, GETARG_A(i), GETARG_B(i), -c);
++        return;
+       }
+     default:
+       break;
+@@ -419,7 +419,7 @@ new_lit(codegen_scope *s, mrb_value val)
+   }
+   s-&gt;irep-&gt;pool[s-&gt;irep-&gt;plen] = val;
+   i = s-&gt;irep-&gt;plen++;
+-  
++
+   return i;
+ }
+ 
+@@ -681,33 +681,33 @@ gen_values(codegen_scope *s, node *t, int val)
+   while (t) {
+     if ((intptr_t)t-&gt;car-&gt;car == NODE_SPLAT) { // splat mode
+       if (val) {
+-	pop_n(n);
+-	genop(s, MKOP_ABC(OP_ARRAY, cursp(), cursp(), n));
+-	push();
+-	codegen(s, t-&gt;car, VAL);
+-	pop(); pop();
+-	genop(s, MKOP_AB(OP_ARYCAT, cursp(), cursp()+1));
+-	t = t-&gt;cdr;
+-	while (t) {
+-	  push();
+-	  codegen(s, t-&gt;car, VAL);
+-	  pop(); pop();
+-	  if ((intptr_t)t-&gt;car-&gt;car == NODE_SPLAT) {
+-	    genop(s, MKOP_AB(OP_ARYCAT, cursp(), cursp()+1));
+-	  }
+-	  else {
+-	    genop(s, MKOP_AB(OP_ARYPUSH, cursp(), cursp()+1));
+-	  }
+-	  t = t-&gt;cdr;
+-	}
++        pop_n(n);
++        genop(s, MKOP_ABC(OP_ARRAY, cursp(), cursp(), n));
++        push();
++        codegen(s, t-&gt;car, VAL);
++        pop(); pop();
++        genop(s, MKOP_AB(OP_ARYCAT, cursp(), cursp()+1));
++        t = t-&gt;cdr;
++        while (t) {
++          push();
++          codegen(s, t-&gt;car, VAL);
++          pop(); pop();
++          if ((intptr_t)t-&gt;car-&gt;car == NODE_SPLAT) {
++            genop(s, MKOP_AB(OP_ARYCAT, cursp(), cursp()+1));
++          }
++          else {
++            genop(s, MKOP_AB(OP_ARYPUSH, cursp(), cursp()+1));
++          }
++          t = t-&gt;cdr;
++        }
+       }
+       else {
+-	codegen(s, t-&gt;car-&gt;cdr, NOVAL);
+-	t = t-&gt;cdr;
+-	while (t) {
+-	  codegen(s, t-&gt;car, NOVAL);
+-	  t = t-&gt;cdr;
+-	}
++        codegen(s, t-&gt;car-&gt;cdr, NOVAL);
++        t = t-&gt;cdr;
++        while (t) {
++          codegen(s, t-&gt;car, NOVAL);
++          t = t-&gt;cdr;
++        }
+       }
+       return -1;
+     }
+@@ -792,11 +792,11 @@ gen_call(codegen_scope *s, node *tree, mrb_sym name, int sp, int val)
+     }
+     else {
+       if (sendv) n = CALL_MAXARGS;
+-      if (blk &gt; 0) {		   /* no block */
+-	genop(s, MKOP_ABC(OP_SEND, cursp(), idx, n));
++      if (blk &gt; 0) {                   /* no block */
++        genop(s, MKOP_ABC(OP_SEND, cursp(), idx, n));
+       }
+       else {
+-	genop(s, MKOP_ABC(OP_SENDB, cursp(), idx, n));
++        genop(s, MKOP_ABC(OP_SENDB, cursp(), idx, n));
+       }
+     }
+   }
+@@ -947,9 +947,9 @@ readint_float(codegen_scope *s, const char *p, int base)
+     c = tolower((unsigned char)c);
+     for (n=0; n&lt;base; n++) {
+       if (mrb_digitmap[n] == c) {
+-	f *= base;
+-	f += n;
+-	break;
++        f *= base;
++        f += n;
++        break;
+       }
+     }
+     if (n == base) {
+@@ -973,7 +973,7 @@ readint_mrb_int(codegen_scope *s, const char *p, int base, int neg, int *overflo
+     c = tolower((unsigned char)c);
+     for (n=0; n&lt;base; n++) {
+       if (mrb_digitmap[n] == c) {
+-	break;
++        break;
+       }
+     }
+     if (n == base) {
+@@ -1034,7 +1034,7 @@ codegen(codegen_scope *s, node *tree, int val)
+       lp-&gt;pc1 = onerr;
+       if (tree-&gt;car) {
+         codegen(s, tree-&gt;car, val);
+-	if (val) pop();
++        if (val) pop();
+       }
+       lp-&gt;type = LOOP_RESCUE;
+       noexc = new_label(s);
+@@ -1166,16 +1166,16 @@ codegen(codegen_scope *s, node *tree, int val)
+       else {
+         if (val) {
+           pop();
+-	  pos2 = new_label(s);
+-	  genop(s, MKOP_sBx(OP_JMP, 0));
+-	  dispatch(s, pos1);
++          pos2 = new_label(s);
++          genop(s, MKOP_sBx(OP_JMP, 0));
++          dispatch(s, pos1);
+           genop(s, MKOP_A(OP_LOADNIL, cursp()));
+-	  dispatch(s, pos2);
++          dispatch(s, pos2);
+           push();
+         }
+-	else {
+-	  dispatch(s, pos1);
+-	}
++        else {
++          dispatch(s, pos1);
++        }
+       }
+     }
+     break;
+@@ -1268,8 +1268,8 @@ codegen(codegen_scope *s, node *tree, int val)
+             genop(s, MKOP_ABC(OP_SEND, cursp(), new_msym(s, mrb_intern(s-&gt;mrb, &quot;===&quot;)), 1));
+           }
+           else {
+-	    pop();
+-	  }
++            pop();
++          }
+           tmp = new_label(s);
+           genop(s, MKOP_AsBx(OP_JMPIF, cursp(), pos2));
+           pos2 = tmp;
+@@ -1281,7 +1281,7 @@ codegen(codegen_scope *s, node *tree, int val)
+           dispatch_linked(s, pos2);
+         }
+         codegen(s, tree-&gt;car-&gt;cdr, val);
+-	if (val) pop();
++        if (val) pop();
+         tmp = new_label(s);
+         genop(s, MKOP_sBx(OP_JMP, pos3));
+         pos3 = tmp;
+@@ -1289,8 +1289,8 @@ codegen(codegen_scope *s, node *tree, int val)
+         tree = tree-&gt;cdr;
+       }
+       if (val) {
+-	genop(s, MKOP_A(OP_LOADNIL, cursp()));
+-	push();
++        genop(s, MKOP_A(OP_LOADNIL, cursp()));
++        push();
+       }
+       if (pos3) dispatch_linked(s, pos3);
+     }
+@@ -1353,7 +1353,7 @@ codegen(codegen_scope *s, node *tree, int val)
+       n = gen_values(s, tree, val);
+       if (n &gt;= 0) {
+         if (val) {
+-	  pop_n(n);
++          pop_n(n);
+           genop(s, MKOP_ABC(OP_ARRAY, cursp(), cursp(), n));
+           push();
+         }
+@@ -1375,7 +1375,7 @@ codegen(codegen_scope *s, node *tree, int val)
+         tree = tree-&gt;cdr;
+       }
+       if (val) {
+-	pop_n(len*2);
++        pop_n(len*2);
+         genop(s, MKOP_ABC(OP_HASH, cursp(), cursp(), len));
+         push();
+       }
+@@ -1465,18 +1465,18 @@ codegen(codegen_scope *s, node *tree, int val)
+ 
+       codegen(s, tree-&gt;car, VAL);
+       if (len == 2 &amp;&amp;
+-	  ((name[0] == '|' &amp;&amp; name[1] == '|') ||
+-	   (name[0] == '&amp;' &amp;&amp; name[1] == '&amp;'))) {
+-	int pos;
+-
+-	pop();
+-	pos = new_label(s);
+-	genop(s, MKOP_AsBx(name[0] == '|' ? OP_JMPIF : OP_JMPNOT, cursp(), 0));
+-	codegen(s, tree-&gt;cdr-&gt;cdr-&gt;car, VAL);
+-	pop();
+-	gen_assignment(s, tree-&gt;car, cursp(), val);
+-	dispatch(s, pos);
+-	break;
++          ((name[0] == '|' &amp;&amp; name[1] == '|') ||
++           (name[0] == '&amp;' &amp;&amp; name[1] == '&amp;'))) {
++        int pos;
++
++        pop();
++        pos = new_label(s);
++        genop(s, MKOP_AsBx(name[0] == '|' ? OP_JMPIF : OP_JMPNOT, cursp(), 0));
++        codegen(s, tree-&gt;cdr-&gt;cdr-&gt;car, VAL);
++        pop();
++        gen_assignment(s, tree-&gt;car, cursp(), val);
++        dispatch(s, pos);
++        break;
+       }
+       codegen(s, tree-&gt;cdr-&gt;cdr-&gt;car, VAL);
+       pop(); pop();
+@@ -1501,7 +1501,7 @@ codegen(codegen_scope *s, node *tree, int val)
+         genop(s, MKOP_ABC(OP_GE, cursp(), idx, 1));
+       }
+       else {
+-	genop(s, MKOP_ABC(OP_SEND, cursp(), idx, 1));
++        genop(s, MKOP_ABC(OP_SEND, cursp(), idx, 1));
+       }
+     }
+     gen_assignment(s, tree-&gt;car, cursp(), val);
+@@ -1511,16 +1511,16 @@ codegen(codegen_scope *s, node *tree, int val)
+     {
+       int n = 0, noop = 0, sendv = 0;
+ 
+-      push();			/* room for receiver */
++      push();        /* room for receiver */
+       if (tree) {
+         node *args = tree-&gt;car;
+-	if (args) {
+-	  n = gen_values(s, args, VAL);
+-	  if (n &lt; 0) {
+-	    n = noop = sendv = 1;
+-	    push();
+-	  }
+-	}
++        if (args) {
++          n = gen_values(s, args, VAL);
++          if (n &lt; 0) {
++            n = noop = sendv = 1;
++            push();
++          }
++        }
+       }
+       if (tree &amp;&amp; tree-&gt;cdr) {
+         codegen(s, tree-&gt;cdr, VAL);
+@@ -1541,7 +1541,7 @@ codegen(codegen_scope *s, node *tree, int val)
+       codegen_scope *s2 = s;
+       int lv = 0, ainfo = 0;
+ 
+-      push(); 			/* room for receiver */
++      push();        /* room for receiver */
+       while (!s2-&gt;mscope) {
+         lv++;
+         s2 = s2-&gt;prev;
+@@ -1550,7 +1550,7 @@ codegen(codegen_scope *s, node *tree, int val)
+       if (s2) ainfo = s2-&gt;ainfo;
+       genop(s, MKOP_ABx(OP_ARGARY, cursp(), (ainfo&lt;&lt;4)|(lv &amp; 0xf)));
+       if (tree &amp;&amp; tree-&gt;cdr) {
+-	push();
++        push();
+         codegen(s, tree-&gt;cdr, VAL);
+         pop_n(2);
+       }
+@@ -1782,20 +1782,20 @@ codegen(codegen_scope *s, node *tree, int val)
+ 
+       i = readint_mrb_int(s, p, base, FALSE, &amp;overflow);
+       if (overflow) {
+-	double f = readint_float(s, p, base);
+-	int off = new_lit(s, mrb_float_value(f));
++        double f = readint_float(s, p, base);
++        int off = new_lit(s, mrb_float_value(f));
+ 
+-	genop(s, MKOP_ABx(OP_LOADL, cursp(), off));
++        genop(s, MKOP_ABx(OP_LOADL, cursp(), off));
+       }
+       else {
+-	if (i &lt; MAXARG_sBx &amp;&amp; i &gt; -MAXARG_sBx) {
+-	  co = MKOP_AsBx(OP_LOADI, cursp(), i);
+-	}
+-	else {
+-	  int off = new_lit(s, mrb_fixnum_value(i));
+-	  co = MKOP_ABx(OP_LOADL, cursp(), off);
+-	}
+-	genop(s, co);
++        if (i &lt; MAXARG_sBx &amp;&amp; i &gt; -MAXARG_sBx) {
++          co = MKOP_AsBx(OP_LOADI, cursp(), i);
++        }
++        else {
++          int off = new_lit(s, mrb_fixnum_value(i));
++          co = MKOP_ABx(OP_LOADL, cursp(), off);
++        }
++        genop(s, co);
+       }
+       push();
+     }
+@@ -1838,21 +1838,21 @@ codegen(codegen_scope *s, node *tree, int val)
+ 
+           i = readint_mrb_int(s, p, base, TRUE, &amp;overflow);
+           if (overflow) {
+-	    double f = readint_float(s, p, base);
+-	    int off = new_lit(s, mrb_float_value(-f));
+-
+-	    genop(s, MKOP_ABx(OP_LOADL, cursp(), off));
+-	  }
+-	  else {
+-	    if (i &lt; MAXARG_sBx &amp;&amp; i &gt; -MAXARG_sBx) {
+-	      co = MKOP_AsBx(OP_LOADI, cursp(), i);
+-	    }
+-	    else {
+-	      int off = new_lit(s, mrb_fixnum_value(i));
+-	      co = MKOP_ABx(OP_LOADL, cursp(), off);
+-	    }
+-	    genop(s, co);
+-	  }
++            double f = readint_float(s, p, base);
++            int off = new_lit(s, mrb_float_value(-f));
++
++            genop(s, MKOP_ABx(OP_LOADL, cursp(), off));
++          }
++          else {
++            if (i &lt; MAXARG_sBx &amp;&amp; i &gt; -MAXARG_sBx) {
++              co = MKOP_AsBx(OP_LOADI, cursp(), i);
++            }
++            else {
++              int off = new_lit(s, mrb_fixnum_value(i));
++              co = MKOP_ABx(OP_LOADL, cursp(), off);
++            }
++            genop(s, co);
++          }
+           push();
+         }
+         break;
+@@ -1925,11 +1925,11 @@ codegen(codegen_scope *s, node *tree, int val)
+       push();
+       genop(s, MKOP_ABx(OP_STRING, cursp(), off));
+       if (p2) {
+-	push();
+-	off = new_lit(s, mrb_str_new(s-&gt;mrb, p2, strlen(p2)));
+-	genop(s, MKOP_ABx(OP_STRING, cursp(), off));
+-	n++;
+-	pop();
++        push();
++        off = new_lit(s, mrb_str_new(s-&gt;mrb, p2, strlen(p2)));
++        genop(s, MKOP_ABx(OP_STRING, cursp(), off));
++        n++;
++        pop();
+       }
+       pop();
+       sym = new_sym(s, mrb_intern(s-&gt;mrb, &quot;new&quot;));
+@@ -2178,7 +2178,7 @@ scope_new(mrb_state *mrb, codegen_scope *prev, node *lv)
+   p-&gt;irep-&gt;slen = 0;
+ 
+   p-&gt;lv = lv;
+-  p-&gt;sp += node_len(lv)+1;	/* add self */
++  p-&gt;sp += node_len(lv)+1;        /* add self */
+   p-&gt;nlocals = p-&gt;sp;
+   p-&gt;ai = mrb_gc_arena_save(mrb);
+ 
+@@ -2195,7 +2195,7 @@ scope_finish(codegen_scope *s)
+ {
+   mrb_state *mrb = s-&gt;mrb;
+   mrb_irep *irep = s-&gt;irep;
+-    
++
+   irep-&gt;flags = 0;
+   if (s-&gt;iseq) {
+     irep-&gt;iseq = (mrb_code *)codegen_realloc(s, s-&gt;iseq, sizeof(mrb_code)*s-&gt;pc);
+@@ -2540,10 +2540,10 @@ codedump(mrb_state *mrb, int n)
+       break;
+     case OP_STRING:
+       {
+-	mrb_value s = irep-&gt;pool[GETARG_Bx(c)];
+-	
+-	s = mrb_str_dump(mrb, s);
+-	printf(&quot;OP_STRING\tR%d\t%s\n&quot;, GETARG_A(c), RSTRING_PTR(s));
++        mrb_value s = irep-&gt;pool[GETARG_Bx(c)];
++
++        s = mrb_str_dump(mrb, s);
++        printf(&quot;OP_STRING\tR%d\t%s\n&quot;, GETARG_A(c), RSTRING_PTR(s));
+       }
+       break;
+     case OP_STRCAT:
+</pre>
+
+  </body>
+</html>
