@@ -1,0 +1,186 @@
+---
+:date: 2013-02-23 12:28:45.214317140 +09:00
+:id: mruby-mruby-9ea0b4b
+:zipball_url: https://github.com/mruby/mruby/zipball/9ea0b4b
+:make:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130223122848-25766-build/mruby-mruby-9ea0b4b)
+
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+
+    CC    src/array.c -> build/host/src/array.o
+
+    CC    src/class.c -> build/host/src/class.o
+
+    CC    src/codegen.c -> build/host/src/codegen.o
+
+    CC    src/compar.c -> build/host/src/compar.o
+
+    CC    src/crc.c -> build/host/src/crc.o
+
+    CC    src/dump.c -> build/host/src/dump.o
+
+    CC    src/enum.c -> build/host/src/enum.o
+
+    CC    src/error.c -> build/host/src/error.o
+
+    CC    src/etc.c -> build/host/src/etc.o
+
+    CC    src/gc.c -> build/host/src/gc.o
+
+    CC    src/hash.c -> build/host/src/hash.o
+
+    CC    src/init.c -> build/host/src/init.o
+
+    CC    src/kernel.c -> build/host/src/kernel.o
+
+    CC    src/load.c -> build/host/src/load.o
+
+    CC    src/math.c -> build/host/src/math.o
+
+    CC    src/numeric.c -> build/host/src/numeric.o
+
+    CC    src/object.c -> build/host/src/object.o
+
+    CC    src/pool.c -> build/host/src/pool.o
+
+    CC    src/print.c -> build/host/src/print.o
+
+    CC    src/proc.c -> build/host/src/proc.o
+
+    CC    src/range.c -> build/host/src/range.o
+
+    CC    src/re.c -> build/host/src/re.o
+
+    CC    src/sprintf.c -> build/host/src/sprintf.o
+
+    CC    src/st.c -> build/host/src/st.o
+
+    CC    src/state.c -> build/host/src/state.o
+
+    CC    src/string.c -> build/host/src/string.o
+
+    CC    src/struct.c -> build/host/src/struct.o
+
+    CC    src/symbol.c -> build/host/src/symbol.o
+
+    CC    src/time.c -> build/host/src/time.o
+
+    CC    src/variable.c -> build/host/src/variable.o
+
+    CC    src/vm.c -> build/host/src/vm.o
+
+    YACC  src/parse.y -> build/host/src/y.tab.c
+
+    GPERF src/keywords -> src/lex.def
+
+    rake aborted!
+
+    Command Failed: ["gperf" -L ANSI-C -C -p -j1 -i 1 -g -o -t -N mrb_reserved_word
+    -k"1,3,$" "src/keywords" > "src/lex.def"]'
+  :stderr: ! 'src/dump.c: In function ''get_syms_block_size'':
+
+    src/dump.c:283: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
+
+    src/dump.c: In function ''write_syms_block'':
+
+    src/dump.c:423: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
+
+    src/dump.c:431: warning: passing argument 1 of ''str_dump'' discards qualifiers
+    from pointer target type
+
+    src/dump.c: In function ''write_irep_record'':
+
+    src/dump.c:594: warning: ''crc'' may be used uninitialized in this function
+
+    sh: gperf: not found'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130223122848-25766-build/mruby-mruby-9ea0b4b)
+
+    CC    test/driver.c -> build/host/test/driver.o
+
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+
+    CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -DDISABLE_GEMS
+    -DDISABLE_GEMS -I"/home/mruby/mruby-test-tool/tmp/20130223122848-25766-build/mruby-mruby-9ea0b4b/include"
+    -I"src" -MMD -o "build/host/src/y.tab.o" -c "build/host/src/y.tab.c"]'
+  :stderr: ! 'src/parse.y: In function ''parser_yylex'':
+
+    src/parse.y:4664: error: implicit declaration of function ''mrb_reserved_word''
+
+    src/parse.y:4664: warning: assignment makes pointer from integer without a cast
+
+    src/parse.y:4667: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4669: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4670: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4675: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4689: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4691: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4691: error: dereferencing pointer to incomplete type
+
+    src/parse.y:4693: error: dereferencing pointer to incomplete type'
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:filesize: {}
+:repository: mruby/mruby
+:commit: 9ea0b4b
+:ball_id: mruby-mruby-9ea0b4b
+:hostname: openbsd32bit
+:env:
+  :gcc:
+    :stdout: ! "gcc (GCC) 4.2.1 20070719 \nCopyright (C) 2007 Free Software Foundation,
+      Inc.\nThis is free software; see the source for copying conditions.  There is
+      NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for i386-unknown-openbsd5.1
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2006 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison
