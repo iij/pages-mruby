@@ -1,0 +1,4416 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div style="background-color:#a0a0a0;">
+      
+        
+        <a href="iij-mruby.html">iij-mruby</a>
+      
+        
+        <a href="mruby-mruby.html">mruby-mruby</a>
+      
+    </div>
+
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - f4485ee)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/f4485ee" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+      <li>
+      <pre>commit f4485ee1eb6c8f586ca5313b1085e4f354db19d1
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Thu Feb 28 11:55:22 2013 +0900
+
+    s/mgem/mrbgem/
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    
+    <table border="1">
+      <tr>
+        
+          <th rowspan="2">Name</th>
+        
+          <th rowspan="2">Build-Status</th>
+        
+          <th rowspan="2">Mrbtest-Status</th>
+        
+          <th rowspan="2">Total</th>
+        
+          <th rowspan="2">OK</th>
+        
+          <th rowspan="2">KO</th>
+        
+          <th rowspan="2">Crash</th>
+        
+          <th rowspan="2">Fail</th>
+        
+          <th rowspan="2">Msg</th>
+        
+        <th colspan="2">FileSize (Byte)</th>
+      </tr>
+      <tr>
+        
+          <th>bin/mruby</th>
+        
+          <th>lib/libmruby.a</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos32bit">centos32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">436,444</td>
+          
+            <td style="text-align:right;">457,720</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos64bit">centos64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">492,832</td>
+          
+            <td style="text-align:right;">518,144</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd32bit">freebsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">487,216</td>
+          
+            <td style="text-align:right;">503,320</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd64bit">freebsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">525,608</td>
+          
+            <td style="text-align:right;">551,152</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-lion">mac-lion</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">492,452</td>
+          
+            <td style="text-align:right;">2,095,520</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-ppc">mac-ppc</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">514,352</td>
+          
+            <td style="text-align:right;">3,433,480</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd32bit">netbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">442,912</td>
+          
+            <td style="text-align:right;">459,780</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd64bit">netbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">513,320</td>
+          
+            <td style="text-align:right;">541,424</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd32bit">openbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">494,992</td>
+          
+            <td style="text-align:right;">509,900</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd64bit">openbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">525,048</td>
+          
+            <td style="text-align:right;">547,520</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu32bit">ubuntu32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">480,964</td>
+          
+            <td style="text-align:right;">497,920</td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu64bit">ubuntu64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>523</td>
+          <td>523</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">477,896</td>
+          
+            <td style="text-align:right;">500,520</td>
+          
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for amd64-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-lion</td>
+          <td><b>gcc</b><br/><pre>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-apple-darwin11.3.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-ppc</td>
+          <td><b>gcc</b><br/><pre>powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+Copyright (C) 2005 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for powerpc-apple-darwin9.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386--netbsdelf
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64--netbsd
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i686-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="centos32bit">centos32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/object.c -> build/host/src/object.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/range.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/struct.rb 
+      MRBC mrblib/kernel.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/kernel.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.806849 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5013-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="centos64bit">centos64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/range.c -> build/host/src/range.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/print.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/struct.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/array.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/literals.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 1.248928 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231545-5371-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd32bit">freebsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c: In function 'get_syms_block_size':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_syms_block':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_irep_record':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 1.025633 seconds</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221114-55641-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd64bit">freebsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c: In function 'get_syms_block_size':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_syms_block':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_irep_record':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 1.172833 seconds</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130228221126-55235-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-lion">mac-lion</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 1.826284 seconds</textarea></td>
+          <td><textarea>/Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231656-92416-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-ppc">mac-ppc</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>In file included from src/parse.y:3546:
+src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
+/Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/src/y.tab.c: In function 'yyparse':
+src/parse.y:4374: warning: 'beg' may be used uninitialized in this function
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 9.768366 seconds</textarea></td>
+          <td><textarea>/Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130228231652-47151-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd32bit">netbsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.976336 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231620-23459-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd64bit">netbsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 1.499264 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231617-24108-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd32bit">openbsd32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c: In function 'get_syms_block_size':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_syms_block':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_irep_record':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/tools/mrbc/mrbc.o(.text+0x6b): In function `get_outfilename':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a(dump.o)(.text+0xd5): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/tools/mruby/mruby.o(.text+0x853): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/tools/mruby/mruby.o(.text+0x799):/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/tools/mirb/mirb.o(.text+0x520): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/tools/mirb/mirb.c:219: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/tools/mirb/mirb.o(.text+0x28f):/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/tools/mirb/mirb.c:210: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.61063 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-32408-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd64bit">openbsd64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/vm.c -> build/host/src/vm.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/array.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/struct.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c: In function 'get_syms_block_size':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_syms_block':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c: In function 'write_irep_record':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/tools/mrbc/mrbc.o(.text+0x6d): In function `get_outfilename':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a(dump.o)(.text+0xb5): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/tools/mruby/mruby.o(.text+0x722): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/tools/mruby/mruby.o(.text+0x67c):/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/tools/mirb/mirb.o(.text+0x423): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/tools/mirb/mirb.c:219: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/tools/mirb/mirb.o(.text+0x22b):/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/tools/mirb/mirb.c:216: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/typeerror.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.968307 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735: warning: unused variable 'test_args_hash'
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130228231651-5269-build/mruby-mruby-f4485ee/src/numeric.c:200: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu32bit">ubuntu32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/re.c -> build/host/src/re.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/hash.c -> build/host/src/hash.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/struct.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/print.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/enumerable.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.532893 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735:37: warning: unused variable 'test_args_hash' [-Wunused-variable]
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228221150-17433-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu64bit">ubuntu64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/struct.c -> build/host/src/struct.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/sprintf.c -> build/host/src/sprintf.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/math.c -> build/host/src/math.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/re.c -> build/host/src/re.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/string.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/struct.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/print.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-time
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/math.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/struct.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/exception.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 523
+   OK: 523
+   KO: 0
+Crash: 0
+ Time: 0.925522 seconds</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c: In function 'GENERATED_TMP_mrb_mruby_time_gem_test':
+/home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee/build/host/mrbgems/mruby-time/gem_test.c:735:37: warning: unused variable 'test_args_hash' [-Wunused-variable]
+ar: creating /home/mruby/mruby-test-tool/tmp/20130228221200-22408-build/mruby-mruby-f4485ee/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+      <pre>commit f4485ee1eb6c8f586ca5313b1085e4f354db19d1
+Author: Yuichiro MASUI &lt;masui@masuidrive.jp&gt;
+Date:   Thu Feb 28 11:55:22 2013 +0900
+
+    s/mgem/mrbgem/
+
+diff --git a/build_config.rb b/build_config.rb
+index a66dab6..a296ce7 100644
+--- a/build_config.rb
++++ b/build_config.rb
+@@ -12,7 +12,7 @@ MRuby::Build.new do |conf|
+   # conf.gem :git =&gt; 'git@github.com:masuidrive/mrbgems-example.git', :branch =&gt; 'master', :options =&gt; '-v'
+ 
+   # Use standard Time class
+-  conf.gem 'mgems/mruby-time'
++  conf.gem 'mrbgems/mruby-time'
+ 
+   # Generate binaries
+   # conf.bins = %w(mrbc mruby mirb)
+diff --git a/mgems/mruby-time/mrbgem.rake b/mgems/mruby-time/mrbgem.rake
+deleted file mode 100644
+index 2cd3fd3..0000000
+--- a/mgems/mruby-time/mrbgem.rake
++++ /dev/null
+@@ -1,4 +0,0 @@
+-MRuby::Gem::Specification.new('mruby-time') do |spec|
+-  spec.license = 'MIT'
+-  spec.authors = 'mruby team'
+-end
+diff --git a/mgems/mruby-time/src/time.c b/mgems/mruby-time/src/time.c
+deleted file mode 100644
+index ed40c52..0000000
+--- a/mgems/mruby-time/src/time.c
++++ /dev/null
+@@ -1,755 +0,0 @@
+-/*
+-** time.c - Time class
+-**
+-** See Copyright Notice in mruby.h
+-*/
+-
+-
+-#include &quot;mruby.h&quot;
+-#include &lt;string.h&gt;
+-#include &lt;stdio.h&gt;
+-#include &lt;time.h&gt;
+-#include &quot;mruby/class.h&quot;
+-#include &quot;mruby/data.h&quot;
+-
+-/** Time class configuration */
+-
+-/* gettimeofday(2) */
+-/* C99 does not have gettimeofday that is required to retrieve microseconds */
+-/* uncomment following macro on platforms without gettimeofday(2) */
+-/* #define NO_GETTIMEOFDAY */
+-
+-/* gmtime(3) */
+-/* C99 does not have reentrant gmtime_r() so it might cause troubles under */
+-/* multi-threading environment.  undef following macro on platforms that */
+-/* does not have gmtime_r() and localtime_r(). */
+-/* #define NO_GMTIME_R */
+-
+-#ifdef _WIN32
+-#if _MSC_VER
+-/* Win32 platform do not provide gmtime_r/localtime_r; emulate them using gmtime_s/localtime_s */
+-#define gmtime_r(tp, tm)    ((gmtime_s((tm), (tp)) == 0) ? (tm) : NULL)
+-#define localtime_r(tp, tm)    ((localtime_s((tm), (tp)) == 0) ? (tm) : NULL)
+-#else
+-#define NO_GMTIME_R
+-#endif
+-#endif
+-
+-/* timegm(3) */
+-/* mktime() creates tm structure for localtime; timegm() is for UTF time */
+-/* define following macro to use probably faster timegm() on the platform */
+-/* #define USE_SYSTEM_TIMEGM */
+-
+-/** end of Time class configuration */
+-
+-#ifndef NO_GETTIMEOFDAY
+-#include &lt;sys/time.h&gt;
+-#endif
+-#ifdef NO_GMTIME_R
+-#define gmtime_r(t,r) gmtime(t)
+-#define localtime_r(t,r) (tzset(),localtime(t))
+-#endif
+-
+-#ifndef USE_SYSTEM_TIMEGM
+-#define timegm my_timgm
+-
+-static unsigned int
+-is_leapyear(unsigned int y)
+-{
+-  return (y % 4) == 0 &amp;&amp; ((y % 100) != 0 || (y % 400) == 0);
+-}
+-
+-static time_t
+-timegm(struct tm *tm)
+-{
+-  static const unsigned int ndays[2][12] = {
+-    {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+-    {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+-  };
+-  time_t r = 0;
+-  int i;
+-  unsigned int *nday = (unsigned int*) ndays[is_leapyear(tm-&gt;tm_year+1900)];
+-
+-  for (i = 70; i &lt; tm-&gt;tm_year; ++i)
+-    r += is_leapyear(i+1900) ? 366*24*60*60 : 365*24*60*60;
+-  for (i = 0; i &lt; tm-&gt;tm_mon; ++i)
+-    r += nday[i] * 24 * 60 * 60;
+-  r += (tm-&gt;tm_mday - 1) * 24 * 60 * 60;
+-  r += tm-&gt;tm_hour * 60 * 60;
+-  r += tm-&gt;tm_min * 60;
+-  r += tm-&gt;tm_sec;
+-  return r;
+-}
+-#endif
+-
+-/* Since we are limited to using ISO C89, this implementation is based
+-* on time_t. That means the resolution of time is only precise to the
+-* second level. Also, there are only 2 timezones, namely UTC and LOCAL.
+-*/
+-
+-#ifndef mrb_bool_value
+-#define mrb_bool_value(val) ((val) ? mrb_true_value() : mrb_false_value())
+-#endif
+-
+-
+-enum mrb_timezone {
+-  MRB_TIMEZONE_NONE   = 0,
+-  MRB_TIMEZONE_UTC    = 1,
+-  MRB_TIMEZONE_LOCAL  = 2,
+-  MRB_TIMEZONE_LAST   = 3
+-};
+-
+-static const char *timezone_names[] = {
+-  &quot;none&quot;,
+-  &quot;UTC&quot;,
+-  &quot;LOCAL&quot;,
+-   NULL
+-};
+-
+-static const char *mon_names[] = {
+-  &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;,
+-};
+-
+-static const char *wday_names[] = {
+-  &quot;Sun&quot;, &quot;Mon&quot;, &quot;Tus&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;,
+-};
+-
+-struct mrb_time {
+-  time_t              sec;
+-  time_t              usec;
+-  enum mrb_timezone   timezone;
+-  struct tm           datetime;
+-};
+-
+-static void
+-mrb_time_free(mrb_state *mrb, void *ptr)
+-{
+-  mrb_free(mrb, ptr);
+-}
+-
+-static struct mrb_data_type mrb_time_type = { &quot;Time&quot;, mrb_time_free };
+-
+-/** Updates the datetime of a mrb_time based on it's timezone and
+-seconds setting. Returns self on cussess, NULL of failure. */
+-static struct mrb_time*
+-mrb_time_update_datetime(struct mrb_time *self)
+-{
+-  struct tm *aid;
+-
+-  if (self-&gt;timezone == MRB_TIMEZONE_UTC) {
+-    aid = gmtime_r(&amp;self-&gt;sec, &amp;self-&gt;datetime);
+-  }
+-  else {
+-    aid = localtime_r(&amp;self-&gt;sec, &amp;self-&gt;datetime);
+-  }
+-  if (!aid) return NULL;
+-#ifdef NO_GMTIME_R
+-  self-&gt;datetime = *aid; // copy data
+-#endif
+-
+-  return self;
+-}
+-
+-static mrb_value
+-mrb_time_wrap(mrb_state *mrb, struct RClass *tc, struct mrb_time *tm)
+-{
+-  return mrb_obj_value(Data_Wrap_Struct(mrb, tc, &amp;mrb_time_type, tm));
+-}
+-
+-
+-/* Allocates a mrb_time object and initializes it. */
+-static struct mrb_time*
+-mrb_time_alloc(mrb_state *mrb, double sec, double usec, enum mrb_timezone timezone)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_malloc(mrb, sizeof(struct mrb_time));
+-  tm-&gt;sec  = (time_t)sec;
+-  tm-&gt;usec = (sec - tm-&gt;sec) * 1.0e6 + usec;
+-  while (tm-&gt;usec &lt; 0) {
+-    tm-&gt;sec--;
+-    tm-&gt;usec += 1.0e6;
+-  }
+-  while (tm-&gt;usec &gt; 1.0e6) {
+-    tm-&gt;sec++;
+-    tm-&gt;usec -= 1.0e6;
+-  }
+-  tm-&gt;timezone = timezone;
+-  mrb_time_update_datetime(tm);
+-
+-  return tm;
+-}
+-
+-static mrb_value
+-mrb_time_make(mrb_state *mrb, struct RClass *c, double sec, double usec, enum mrb_timezone timezone)
+-{
+-  return mrb_time_wrap(mrb, c, mrb_time_alloc(mrb, sec, usec, timezone));
+-}
+-
+-static struct mrb_time*
+-current_mrb_time(mrb_state *mrb)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
+-#ifdef NO_GETTIMEOFDAY
+-  {
+-    static time_t last_sec = 0, last_usec = 0;
+-
+-    tm-&gt;sec  = time(NULL);
+-    if (tm-&gt;sec != last_sec) {
+-      last_sec = tm-&gt;sec;
+-      last_usec = 0;
+-    }
+-    else {
+-      /* add 1 usec to differentiate two times */
+-      last_usec += 1;
+-    }
+-    tm-&gt;usec = last_usec;
+-  }
+-#else
+-  {
+-    struct timeval tv;
+-
+-    gettimeofday(&amp;tv, NULL);
+-    tm-&gt;sec = tv.tv_sec;
+-    tm-&gt;usec = tv.tv_usec;
+-  }
+-#endif
+-  tm-&gt;timezone = MRB_TIMEZONE_LOCAL;
+-  mrb_time_update_datetime(tm);
+-
+-  return tm;
+-}
+-
+-/* Allocates a new Time object with given millis value. */
+-static mrb_value
+-mrb_time_now(mrb_state *mrb, mrb_value self)
+-{
+-  return mrb_time_wrap(mrb, mrb_class_ptr(self), current_mrb_time(mrb));
+-}
+-
+-/* 15.2.19.6.1 */
+-/* Creates an instance of time at the given time in seconds, etc. */
+-static mrb_value
+-mrb_time_at(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_float f, f2 = 0;
+-
+-  mrb_get_args(mrb, &quot;f|f&quot;, &amp;f, &amp;f2);
+-  return mrb_time_make(mrb, mrb_class_ptr(self), f, f2, MRB_TIMEZONE_LOCAL);
+-}
+-
+-static struct mrb_time*
+-time_mktime(mrb_state *mrb, mrb_int ayear, mrb_int amonth, mrb_int aday,
+-	    mrb_int ahour, mrb_int amin, mrb_int asec, mrb_int ausec,
+-	    enum mrb_timezone timezone)
+-{
+-  time_t nowsecs;
+-  struct tm nowtime = { 0 };
+-
+-  nowtime.tm_year  = (int)ayear  - 1900;
+-  nowtime.tm_mon   = (int)amonth - 1;
+-  nowtime.tm_mday  = (int)aday;
+-  nowtime.tm_hour  = (int)ahour;
+-  nowtime.tm_min   = (int)amin;
+-  nowtime.tm_sec   = (int)asec;
+-  nowtime.tm_isdst = -1;
+-  if (timezone == MRB_TIMEZONE_UTC) {
+-    nowsecs = timegm(&amp;nowtime);
+-  }
+-  else {
+-    nowsecs = mktime(&amp;nowtime);
+-  }
+-  if (nowsecs &lt; 0) {
+-    mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;Not a valid time.&quot;);
+-  }
+-
+-  return mrb_time_alloc(mrb, nowsecs, ausec, timezone);
+-}
+-
+-/* 15.2.19.6.2 */
+-/* Creates an instance of time at the given time in UTC. */
+-static mrb_value
+-mrb_time_gm(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0, amin = 0, asec = 0, ausec = 0;
+-
+-  mrb_get_args(mrb, &quot;i|iiiiii&quot;,
+-                &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
+-  return mrb_time_wrap(mrb, mrb_class_ptr(self),
+-		       time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_UTC));
+-}
+-
+-
+-/* 15.2.19.6.3 */
+-/* Creates an instance of time at the given time in local time zone. */
+-static mrb_value
+-mrb_time_local(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0, amin = 0, asec = 0, ausec = 0;
+-
+-  mrb_get_args(mrb, &quot;i|iiiiii&quot;,
+-                &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
+-  return mrb_time_wrap(mrb, mrb_class_ptr(self),
+-		       time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_LOCAL));
+-}
+-
+-
+-static mrb_value
+-mrb_time_eq(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_value other;
+-  struct mrb_time *tm1, *tm2;
+-
+-  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
+-  tm1 = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
+-  if (!tm1 || !tm2) return mrb_false_value();
+-  if (tm1-&gt;sec == tm2-&gt;sec &amp;&amp; tm1-&gt;usec == tm2-&gt;usec) {
+-    return mrb_true_value();
+-  }
+-  return mrb_false_value();
+-}
+-
+-static mrb_value
+-mrb_time_cmp(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_value other;
+-  struct mrb_time *tm1, *tm2;
+-
+-  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
+-  tm1 = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
+-  if (!tm1 || !tm2) return mrb_nil_value();
+-  if (tm1-&gt;sec &gt; tm2-&gt;sec) {
+-    return mrb_fixnum_value(1);
+-  }
+-  else if (tm1-&gt;sec &lt; tm2-&gt;sec) {
+-    return mrb_fixnum_value(-1);
+-  }
+-  /* tm1-&gt;sec == tm2-&gt;sec */
+-  if (tm1-&gt;usec &gt; tm2-&gt;usec) {
+-    return mrb_fixnum_value(1);
+-  }
+-  else if (tm1-&gt;usec &lt; tm2-&gt;usec) {
+-    return mrb_fixnum_value(-1);
+-  }
+-  return mrb_fixnum_value(0);
+-}
+-
+-static mrb_value
+-mrb_time_plus(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_float f;
+-  struct mrb_time *tm;
+-
+-  mrb_get_args(mrb, &quot;f&quot;, &amp;f);
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_time_make(mrb, mrb_obj_class(mrb, self), (double)tm-&gt;sec+f, tm-&gt;usec, tm-&gt;timezone);
+-}
+-
+-static mrb_value
+-mrb_time_minus(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_float f;
+-  mrb_value other;
+-  struct mrb_time *tm, *tm2;
+-
+-  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-
+-  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
+-  if (tm2) {
+-    f = (mrb_float)(tm-&gt;sec - tm2-&gt;sec)
+-      + (mrb_float)(tm-&gt;usec - tm2-&gt;usec) / 1.0e6;
+-    return mrb_float_value(f);
+-  }
+-  else {
+-    mrb_get_args(mrb, &quot;f&quot;, &amp;f);
+-    return mrb_time_make(mrb, mrb_obj_class(mrb, self), (double)tm-&gt;sec-f, tm-&gt;usec, tm-&gt;timezone);
+-  }
+-}
+-
+-/* 15.2.19.7.30 */
+-/* Returns week day number of time. */
+-static mrb_value
+-mrb_time_wday(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_wday);
+-}
+-
+-/* 15.2.19.7.31 */
+-/* Returns year day number of time. */
+-static mrb_value
+-mrb_time_yday(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_check_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_yday + 1);
+-}
+-
+-/* 15.2.19.7.32 */
+-/* Returns year of time. */
+-static mrb_value
+-mrb_time_year(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_year + 1900);
+-}
+-
+-/* 15.2.19.7.33 */
+-/* Returns name of time's timezone. */
+-static mrb_value
+-mrb_time_zone(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  if (tm-&gt;timezone &lt;= MRB_TIMEZONE_NONE) return mrb_nil_value();
+-  if (tm-&gt;timezone &gt;= MRB_TIMEZONE_LAST) return mrb_nil_value();
+-  return mrb_str_new_cstr(mrb, timezone_names[tm-&gt;timezone]);
+-}
+-
+-/* 15.2.19.7.4 */
+-/* Returns a string that describes the time. */
+-static mrb_value
+-mrb_time_asctime(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-  struct tm *d;
+-  char buf[256];
+-  int len;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  d = &amp;tm-&gt;datetime;
+-  len = snprintf(buf, sizeof(buf), &quot;%s %s %02d %02d:%02d:%02d %s%d&quot;,
+-		 wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
+-		 d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
+-		 tm-&gt;timezone == MRB_TIMEZONE_UTC ? &quot;UTC &quot; : &quot;&quot;,
+-		 d-&gt;tm_year + 1900);
+-  return mrb_str_new(mrb, buf, len);
+-}
+-
+-/* 15.2.19.7.6 */
+-/* Returns the day in the month of the time. */
+-static mrb_value
+-mrb_time_day(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_mday);
+-}
+-
+-
+-/* 15.2.19.7.7 */
+-/* Returns true if daylight saving was applied for this time. */
+-static mrb_value
+-mrb_time_dstp(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_bool_value(tm-&gt;datetime.tm_isdst);
+-}
+-
+-/* 15.2.19.7.8 */
+-/* 15.2.19.7.10 */
+-/* Returns the Time object of the UTC(GMT) timezone. */
+-static mrb_value
+-mrb_time_getutc(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm, *tm2;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return self;
+-  tm2 = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
+-  *tm2 = *tm;
+-  tm2-&gt;timezone = MRB_TIMEZONE_UTC;
+-  mrb_time_update_datetime(tm2);
+-  return mrb_time_wrap(mrb, mrb_obj_class(mrb, self), tm2);
+-}
+-
+-/* 15.2.19.7.9 */
+-/* Returns the Time object of the LOCAL timezone. */
+-static mrb_value
+-mrb_time_getlocal(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm, *tm2;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return self;
+-  tm2 = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
+-  *tm2 = *tm;
+-  tm2-&gt;timezone = MRB_TIMEZONE_LOCAL;
+-  mrb_time_update_datetime(tm2);
+-  return mrb_time_wrap(mrb, mrb_obj_class(mrb, self), tm2);
+-}
+-
+-/* 15.2.19.7.15 */
+-/* Returns hour of time. */
+-static mrb_value
+-mrb_time_hour(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_hour);
+-}
+-
+-/* 15.2.19.7.16 */
+-/* Initializes a time by setting the amount of milliseconds since the epoch.*/
+-static mrb_value
+-mrb_time_initialize(mrb_state *mrb, mrb_value self)
+-{
+-  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0,
+-  amin = 0, asec = 0, ausec = 0;
+-  int n;
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (tm) {
+-    mrb_time_free(mrb, tm);
+-  }
+-
+-  n = mrb_get_args(mrb, &quot;|iiiiiii&quot;,
+-		   &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
+-  if (n == 0) {
+-    tm = current_mrb_time(mrb);
+-  }
+-  else {
+-    tm = time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_LOCAL);
+-  }
+-  DATA_PTR(self) = tm;
+-  DATA_TYPE(self) = &amp;mrb_time_type;
+-  return self;
+-}
+-
+-/* 15.2.19.7.17(x) */
+-/* Initializes a copy of this time object. */
+-static mrb_value
+-mrb_time_initialize_copy(mrb_state *mrb, mrb_value copy)
+-{
+-  mrb_value src;
+-
+-  mrb_get_args(mrb, &quot;o&quot;, &amp;src);
+-  if (mrb_obj_equal(mrb, copy, src)) return copy;
+-  if (!mrb_obj_is_instance_of(mrb, src, mrb_obj_class(mrb, copy))) {
+-    mrb_raise(mrb, E_TYPE_ERROR, &quot;wrong argument class&quot;);
+-  }
+-  if (!DATA_PTR(copy)) {
+-    DATA_PTR(copy) = mrb_malloc(mrb, sizeof(struct mrb_time));
+-    DATA_TYPE(copy) = &amp;mrb_time_type;
+-  }
+-  *(struct mrb_time *)DATA_PTR(copy) = *(struct mrb_time *)DATA_PTR(src);
+-  return copy;
+-}
+-
+-/* 15.2.19.7.18 */
+-/* Sets the timezone attribute of the Time object to LOCAL. */
+-static mrb_value
+-mrb_time_localtime(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return self;
+-  tm-&gt;timezone = MRB_TIMEZONE_LOCAL;
+-  mrb_time_update_datetime(tm);
+-  return self;
+-}
+-
+-/* 15.2.19.7.19 */
+-/* Returns day of month of time. */
+-static mrb_value
+-mrb_time_mday(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_mday);
+-}
+-
+-/* 15.2.19.7.20 */
+-/* Returns minutes of time. */
+-static mrb_value
+-mrb_time_min(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_min);
+-}
+-
+-/* 15.2.19.7.21 and 15.2.19.7.22 */
+-/* Returns month of time. */
+-static mrb_value
+-mrb_time_mon(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_mon + 1);
+-}
+-
+-/* 15.2.19.7.23 */
+-/* Returns seconds in minute of time. */
+-static mrb_value
+-mrb_time_sec(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;datetime.tm_sec);
+-}
+-
+-
+-/* 15.2.19.7.24 */
+-/* Returns a Float with the time since the epoch in seconds. */
+-static mrb_value
+-mrb_time_to_f(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_float_value((mrb_float)tm-&gt;sec + (mrb_float)tm-&gt;usec/1.0e6);
+-}
+-
+-/* 15.2.19.7.25 */
+-/* Returns a Fixnum with the time since the epoch in seconds. */
+-static mrb_value
+-mrb_time_to_i(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;sec);
+-}
+-
+-/* 15.2.19.7.26 */
+-/* Returns a Float with the time since the epoch in microseconds. */
+-static mrb_value
+-mrb_time_usec(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_fixnum_value(tm-&gt;usec);
+-}
+-
+-/* 15.2.19.7.27 */
+-/* Sets the timzeone attribute of the Time object to UTC. */
+-static mrb_value
+-mrb_time_utc(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (tm) {
+-    tm-&gt;timezone = MRB_TIMEZONE_UTC;
+-    mrb_time_update_datetime(tm);
+-  }
+-  return self;
+-}
+-
+-/* 15.2.19.7.28 */
+-/* Returns true if this time is in the UTC timze zone false if not. */
+-static mrb_value
+-mrb_time_utcp(mrb_state *mrb, mrb_value self)
+-{
+-  struct mrb_time *tm;
+-  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
+-  if (!tm) return mrb_nil_value();
+-  return mrb_bool_value(tm-&gt;timezone == MRB_TIMEZONE_UTC);
+-}
+-
+-
+-
+-void
+-mrb_mruby_time_gem_init(mrb_state* mrb)
+-{
+-  struct RClass *tc;
+-  /* ISO 15.2.19.2 */
+-  tc = mrb_define_class(mrb, &quot;Time&quot;, mrb-&gt;object_class);
+-  MRB_SET_INSTANCE_TT(tc, MRB_TT_DATA);
+-  mrb_include_module(mrb, tc, mrb_class_get(mrb, &quot;Comparable&quot;));
+-  mrb_define_class_method(mrb, tc, &quot;at&quot;, mrb_time_at, ARGS_ANY());                    /* 15.2.19.6.1 */
+-  mrb_define_class_method(mrb, tc, &quot;gm&quot;, mrb_time_gm, ARGS_REQ(1)|ARGS_OPT(6));       /* 15.2.19.6.2 */
+-  mrb_define_class_method(mrb, tc, &quot;local&quot;, mrb_time_local, ARGS_REQ(1)|ARGS_OPT(6)); /* 15.2.19.6.3 */
+-  mrb_define_class_method(mrb, tc, &quot;mktime&quot;, mrb_time_local, ARGS_REQ(1)|ARGS_OPT(6));/* 15.2.19.6.4 */
+-  mrb_define_class_method(mrb, tc, &quot;now&quot;, mrb_time_now, ARGS_NONE());                 /* 15.2.19.6.5 */
+-  mrb_define_class_method(mrb, tc, &quot;utc&quot;, mrb_time_gm, ARGS_REQ(1)|ARGS_OPT(6));      /* 15.2.19.6.6 */
+-
+-  mrb_define_method(mrb, tc, &quot;==&quot;     , mrb_time_eq     , ARGS_REQ(1));
+-  mrb_define_method(mrb, tc, &quot;&lt;=&gt;&quot;    , mrb_time_cmp    , ARGS_REQ(1)); /* 15.2.19.7.1 */
+-  mrb_define_method(mrb, tc, &quot;+&quot;      , mrb_time_plus   , ARGS_REQ(1)); /* 15.2.19.7.2 */
+-  mrb_define_method(mrb, tc, &quot;-&quot;      , mrb_time_minus  , ARGS_REQ(1)); /* 15.2.19.7.3 */
+-  mrb_define_method(mrb, tc, &quot;to_s&quot;   , mrb_time_asctime, ARGS_NONE());
+-  mrb_define_method(mrb, tc, &quot;inspect&quot;, mrb_time_asctime, ARGS_NONE());
+-  mrb_define_method(mrb, tc, &quot;asctime&quot;, mrb_time_asctime, ARGS_NONE()); /* 15.2.19.7.4 */
+-  mrb_define_method(mrb, tc, &quot;ctime&quot;  , mrb_time_asctime, ARGS_NONE()); /* 15.2.19.7.5 */
+-  mrb_define_method(mrb, tc, &quot;day&quot;    , mrb_time_day    , ARGS_NONE()); /* 15.2.19.7.6 */
+-  mrb_define_method(mrb, tc, &quot;dst?&quot;   , mrb_time_dstp   , ARGS_NONE()); /* 15.2.19.7.7 */
+-  mrb_define_method(mrb, tc, &quot;getgm&quot;  , mrb_time_getutc , ARGS_NONE()); /* 15.2.19.7.8 */
+-  mrb_define_method(mrb, tc, &quot;getlocal&quot;,mrb_time_getlocal,ARGS_NONE()); /* 15.2.19.7.9 */
+-  mrb_define_method(mrb, tc, &quot;getutc&quot; , mrb_time_getutc , ARGS_NONE()); /* 15.2.19.7.10 */
+-  mrb_define_method(mrb, tc, &quot;gmt?&quot;   , mrb_time_utcp   , ARGS_NONE()); /* 15.2.19.7.11 */
+-  mrb_define_method(mrb, tc, &quot;gmtime&quot; , mrb_time_utc    , ARGS_NONE()); /* 15.2.19.7.13 */
+-  mrb_define_method(mrb, tc, &quot;hour&quot;   , mrb_time_hour, ARGS_NONE());    /* 15.2.19.7.15 */
+-  mrb_define_method(mrb, tc, &quot;localtime&quot;, mrb_time_localtime, ARGS_NONE()); /* 15.2.19.7.18 */
+-  mrb_define_method(mrb, tc, &quot;mday&quot;   , mrb_time_mday, ARGS_NONE());    /* 15.2.19.7.19 */
+-  mrb_define_method(mrb, tc, &quot;min&quot;    , mrb_time_min, ARGS_NONE());     /* 15.2.19.7.20 */
+-
+-  mrb_define_method(mrb, tc, &quot;mon&quot;  , mrb_time_mon, ARGS_NONE());       /* 15.2.19.7.21 */
+-  mrb_define_method(mrb, tc, &quot;month&quot;, mrb_time_mon, ARGS_NONE());       /* 15.2.19.7.22 */
+-
+-  mrb_define_method(mrb, tc, &quot;sec&quot; , mrb_time_sec, ARGS_NONE());        /* 15.2.19.7.23 */
+-  mrb_define_method(mrb, tc, &quot;to_i&quot;, mrb_time_to_i, ARGS_NONE());       /* 15.2.19.7.25 */
+-  mrb_define_method(mrb, tc, &quot;to_f&quot;, mrb_time_to_f, ARGS_NONE());       /* 15.2.19.7.24 */
+-  mrb_define_method(mrb, tc, &quot;usec&quot;, mrb_time_usec, ARGS_NONE());       /* 15.2.19.7.26 */
+-  mrb_define_method(mrb, tc, &quot;utc&quot; , mrb_time_utc, ARGS_NONE());        /* 15.2.19.7.27 */
+-  mrb_define_method(mrb, tc, &quot;utc?&quot;, mrb_time_utcp, ARGS_NONE());       /* 15.2.19.7.28 */
+-  mrb_define_method(mrb, tc, &quot;wday&quot;, mrb_time_wday, ARGS_NONE());       /* 15.2.19.7.30 */
+-  mrb_define_method(mrb, tc, &quot;yday&quot;, mrb_time_yday, ARGS_NONE());       /* 15.2.19.7.31 */
+-  mrb_define_method(mrb, tc, &quot;year&quot;, mrb_time_year, ARGS_NONE());       /* 15.2.19.7.32 */
+-  mrb_define_method(mrb, tc, &quot;zone&quot;, mrb_time_zone, ARGS_NONE());       /* 15.2.19.7.33 */
+-
+-  mrb_define_method(mrb, tc, &quot;initialize&quot;, mrb_time_initialize, ARGS_REQ(1)); /* 15.2.19.7.16 */
+-  mrb_define_method(mrb, tc, &quot;initialize_copy&quot;, mrb_time_initialize_copy, ARGS_REQ(1)); /* 15.2.19.7.17 */
+-
+-  /*
+-    methods not available:
+-      gmt_offset(15.2.19.7.12)
+-      gmtoff(15.2.19.7.14)
+-      utc_offset(15.2.19.7.29)
+-  */
+-}
+-
+-void
+-mrb_mruby_time_gem_final(mrb_state* mrb)
+-{
+-}
+diff --git a/mgems/mruby-time/test/time.rb b/mgems/mruby-time/test/time.rb
+deleted file mode 100644
+index f92459d..0000000
+--- a/mgems/mruby-time/test/time.rb
++++ /dev/null
+@@ -1,201 +0,0 @@
+-##
+-# Time ISO Test
+-
+-if Object.const_defined?(:Time)
+-  assert('Time.new', '15.2.3.3.3') do
+-    Time.new.class == Time
+-  end
+-
+-  assert('Time', '15.2.19') do
+-    Time.class == Class
+-  end
+-
+-  assert('Time superclass', '15.2.19.2') do
+-    Time.superclass == Object
+-  end
+-
+-  assert('Time.at', '15.2.19.6.1') do
+-    Time.at(1300000000.0)
+-  end
+-
+-  assert('Time.gm', '15.2.19.6.2') do
+-    Time.gm(2012, 12, 23)
+-  end
+-
+-  assert('Time.local', '15.2.19.6.3') do
+-    Time.local(2012, 12, 23)
+-  end
+-
+-  assert('Time.mktime', '15.2.19.6.4') do
+-    Time.mktime(2012, 12, 23)
+-  end
+-
+-  assert('Time.now', '15.2.19.6.5') do
+-    Time.now.class == Time
+-  end
+-
+-  assert('Time.utc', '15.2.19.6.6') do
+-    Time.utc(2012, 12, 23)
+-  end
+-
+-  assert('Time#+', '15.2.19.7.1') do
+-    t1 = Time.at(1300000000.0)
+-    t2 = t1.+(60)
+-
+-    t2.utc.asctime == &quot;Sun Mar 13 07:07:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#-', '15.2.19.7.2') do
+-    t1 = Time.at(1300000000.0)
+-    t2 = t1.-(60)
+-
+-    t2.utc.asctime == &quot;Sun Mar 13 07:05:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#&lt;=&gt;', '15.2.19.7.3') do
+-    t1 = Time.at(1300000000.0)
+-    t2 = Time.at(1400000000.0)
+-    t3 = Time.at(1500000000.0)
+-
+-    t2.&lt;=&gt;(t1) == 1 and
+-      t2.&lt;=&gt;(t2) == 0 and
+-      t2.&lt;=&gt;(t3) == -1 and
+-      t2.&lt;=&gt;(nil) == nil
+-  end
+-
+-  assert('Time#asctime', '15.2.19.7.4') do
+-    Time.at(1300000000.0).utc.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#ctime', '15.2.19.7.5') do
+-    Time.at(1300000000.0).utc.ctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#day', '15.2.19.7.6') do
+-    Time.gm(2012, 12, 23).day == 23
+-  end
+-
+-  assert('Time#dst?', '15.2.19.7.7') do
+-    not Time.gm(2012, 12, 23).utc.dst?
+-  end
+-
+-  assert('Time#getgm', '15.2.19.7.8') do
+-    Time.at(1300000000.0).getgm.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#getlocal', '15.2.19.7.9') do
+-    t1 = Time.at(1300000000.0)
+-    t2 = Time.at(1300000000.0)
+-    t3 = t1.getlocal
+-
+-    t1 == t3 and t3 == t2.getlocal
+-  end
+-
+-  assert('Time#getutc', '15.2.19.7.10') do
+-    Time.at(1300000000.0).getutc.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#gmt?', '15.2.19.7.11') do
+-    Time.at(1300000000.0).utc.gmt?
+-  end
+-
+-  # ATM not implemented
+-  # assert('Time#gmt_offset', '15.2.19.7.12') do
+-
+-  assert('Time#gmtime', '15.2.19.7.13') do
+-    Time.at(1300000000.0).gmtime
+-  end
+-
+-  # ATM not implemented
+-  # assert('Time#gmtoff', '15.2.19.7.14') do
+-
+-  assert('Time#hour', '15.2.19.7.15') do
+-    Time.gm(2012, 12, 23, 7, 6).hour == 7
+-  end
+-
+-  # ATM doesn't really work
+-  # assert('Time#initialize', '15.2.19.7.16') do
+-
+-  assert('Time#initialize_copy', '15.2.19.7.17') do
+-    time_tmp_2 = Time.at(7.0e6)
+-    time_tmp_2.clone == time_tmp_2
+-  end
+-
+-  assert('Time#localtime', '15.2.19.7.18') do
+-    t1 = Time.at(1300000000.0)
+-    t2 = Time.at(1300000000.0)
+-
+-    t1.localtime
+-    t1 == t2.getlocal
+-  end
+-
+-  assert('Time#mday', '15.2.19.7.19') do
+-    Time.gm(2012, 12, 23).mday == 23
+-  end
+-
+-  assert('Time#min', '15.2.19.7.20') do
+-    Time.gm(2012, 12, 23, 7, 6).min == 6
+-  end
+-
+-  assert('Time#mon', '15.2.19.7.21') do
+-    Time.gm(2012, 12, 23).mon == 12
+-  end
+-
+-  assert('Time#month', '15.2.19.7.22') do
+-    Time.gm(2012, 12, 23).month == 12
+-  end
+-
+-  assert('Times#sec', '15.2.19.7.23') do
+-    Time.gm(2012, 12, 23, 7, 6, 40).sec == 40
+-  end
+-
+-  assert('Time#to_f', '15.2.19.7.24') do
+-    Time.at(1300000000.0).to_f == 1300000000.0
+-  end
+-
+-  assert('Time#to_i', '15.2.19.7.25') do
+-    Time.at(1300000000.0).to_i == 1300000000
+-  end
+-
+-  assert('Time#usec', '15.2.19.7.26') do
+-    Time.at(1300000000.0).usec == 0
+-  end
+-
+-  assert('Time#utc', '15.2.19.7.27') do
+-    Time.at(1300000000.0).utc
+-  end
+-
+-  assert('Time#utc?', '15.2.19.7.28') do
+-    Time.at(1300000000.0).utc.utc?
+-  end
+-
+-  # ATM not implemented
+-  # assert('Time#utc_offset', '15.2.19.7.29') do
+-
+-  assert('Time#wday', '15.2.19.7.30') do
+-    Time.gm(2012, 12, 23).wday == 0
+-  end
+-
+-  assert('Time#yday', '15.2.19.7.31') do
+-    Time.gm(2012, 12, 23).yday == 358
+-  end
+-
+-  assert('Time#year', '15.2.19.7.32') do
+-    Time.gm(2012, 12, 23).year == 2012
+-  end
+-
+-  assert('Time#zone', '15.2.19.7.33') do
+-    Time.at(1300000000.0).utc.zone == 'UTC'
+-  end
+-
+-  # Not ISO specified
+-
+-  assert('Time#to_s') do
+-    Time.at(1300000000.0).utc.to_s == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-
+-  assert('Time#inspect') do
+-    Time.at(1300000000.0).utc.inspect == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
+-  end
+-end
+-
+diff --git a/mrbgems/mruby-time/mrbgem.rake b/mrbgems/mruby-time/mrbgem.rake
+new file mode 100644
+index 0000000..0f0b489
+--- /dev/null
++++ b/mrbgems/mruby-time/mrbgem.rake
+@@ -0,0 +1,4 @@
++MRuby::Gem::Specification.new('mruby-time') do |spec|
++  spec.license = 'MIT'
++  spec.authors = 'mruby developers'
++end
+diff --git a/mrbgems/mruby-time/src/time.c b/mrbgems/mruby-time/src/time.c
+new file mode 100644
+index 0000000..ed40c52
+--- /dev/null
++++ b/mrbgems/mruby-time/src/time.c
+@@ -0,0 +1,755 @@
++/*
++** time.c - Time class
++**
++** See Copyright Notice in mruby.h
++*/
++
++
++#include &quot;mruby.h&quot;
++#include &lt;string.h&gt;
++#include &lt;stdio.h&gt;
++#include &lt;time.h&gt;
++#include &quot;mruby/class.h&quot;
++#include &quot;mruby/data.h&quot;
++
++/** Time class configuration */
++
++/* gettimeofday(2) */
++/* C99 does not have gettimeofday that is required to retrieve microseconds */
++/* uncomment following macro on platforms without gettimeofday(2) */
++/* #define NO_GETTIMEOFDAY */
++
++/* gmtime(3) */
++/* C99 does not have reentrant gmtime_r() so it might cause troubles under */
++/* multi-threading environment.  undef following macro on platforms that */
++/* does not have gmtime_r() and localtime_r(). */
++/* #define NO_GMTIME_R */
++
++#ifdef _WIN32
++#if _MSC_VER
++/* Win32 platform do not provide gmtime_r/localtime_r; emulate them using gmtime_s/localtime_s */
++#define gmtime_r(tp, tm)    ((gmtime_s((tm), (tp)) == 0) ? (tm) : NULL)
++#define localtime_r(tp, tm)    ((localtime_s((tm), (tp)) == 0) ? (tm) : NULL)
++#else
++#define NO_GMTIME_R
++#endif
++#endif
++
++/* timegm(3) */
++/* mktime() creates tm structure for localtime; timegm() is for UTF time */
++/* define following macro to use probably faster timegm() on the platform */
++/* #define USE_SYSTEM_TIMEGM */
++
++/** end of Time class configuration */
++
++#ifndef NO_GETTIMEOFDAY
++#include &lt;sys/time.h&gt;
++#endif
++#ifdef NO_GMTIME_R
++#define gmtime_r(t,r) gmtime(t)
++#define localtime_r(t,r) (tzset(),localtime(t))
++#endif
++
++#ifndef USE_SYSTEM_TIMEGM
++#define timegm my_timgm
++
++static unsigned int
++is_leapyear(unsigned int y)
++{
++  return (y % 4) == 0 &amp;&amp; ((y % 100) != 0 || (y % 400) == 0);
++}
++
++static time_t
++timegm(struct tm *tm)
++{
++  static const unsigned int ndays[2][12] = {
++    {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
++    {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
++  };
++  time_t r = 0;
++  int i;
++  unsigned int *nday = (unsigned int*) ndays[is_leapyear(tm-&gt;tm_year+1900)];
++
++  for (i = 70; i &lt; tm-&gt;tm_year; ++i)
++    r += is_leapyear(i+1900) ? 366*24*60*60 : 365*24*60*60;
++  for (i = 0; i &lt; tm-&gt;tm_mon; ++i)
++    r += nday[i] * 24 * 60 * 60;
++  r += (tm-&gt;tm_mday - 1) * 24 * 60 * 60;
++  r += tm-&gt;tm_hour * 60 * 60;
++  r += tm-&gt;tm_min * 60;
++  r += tm-&gt;tm_sec;
++  return r;
++}
++#endif
++
++/* Since we are limited to using ISO C89, this implementation is based
++* on time_t. That means the resolution of time is only precise to the
++* second level. Also, there are only 2 timezones, namely UTC and LOCAL.
++*/
++
++#ifndef mrb_bool_value
++#define mrb_bool_value(val) ((val) ? mrb_true_value() : mrb_false_value())
++#endif
++
++
++enum mrb_timezone {
++  MRB_TIMEZONE_NONE   = 0,
++  MRB_TIMEZONE_UTC    = 1,
++  MRB_TIMEZONE_LOCAL  = 2,
++  MRB_TIMEZONE_LAST   = 3
++};
++
++static const char *timezone_names[] = {
++  &quot;none&quot;,
++  &quot;UTC&quot;,
++  &quot;LOCAL&quot;,
++   NULL
++};
++
++static const char *mon_names[] = {
++  &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;,
++};
++
++static const char *wday_names[] = {
++  &quot;Sun&quot;, &quot;Mon&quot;, &quot;Tus&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;,
++};
++
++struct mrb_time {
++  time_t              sec;
++  time_t              usec;
++  enum mrb_timezone   timezone;
++  struct tm           datetime;
++};
++
++static void
++mrb_time_free(mrb_state *mrb, void *ptr)
++{
++  mrb_free(mrb, ptr);
++}
++
++static struct mrb_data_type mrb_time_type = { &quot;Time&quot;, mrb_time_free };
++
++/** Updates the datetime of a mrb_time based on it's timezone and
++seconds setting. Returns self on cussess, NULL of failure. */
++static struct mrb_time*
++mrb_time_update_datetime(struct mrb_time *self)
++{
++  struct tm *aid;
++
++  if (self-&gt;timezone == MRB_TIMEZONE_UTC) {
++    aid = gmtime_r(&amp;self-&gt;sec, &amp;self-&gt;datetime);
++  }
++  else {
++    aid = localtime_r(&amp;self-&gt;sec, &amp;self-&gt;datetime);
++  }
++  if (!aid) return NULL;
++#ifdef NO_GMTIME_R
++  self-&gt;datetime = *aid; // copy data
++#endif
++
++  return self;
++}
++
++static mrb_value
++mrb_time_wrap(mrb_state *mrb, struct RClass *tc, struct mrb_time *tm)
++{
++  return mrb_obj_value(Data_Wrap_Struct(mrb, tc, &amp;mrb_time_type, tm));
++}
++
++
++/* Allocates a mrb_time object and initializes it. */
++static struct mrb_time*
++mrb_time_alloc(mrb_state *mrb, double sec, double usec, enum mrb_timezone timezone)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_malloc(mrb, sizeof(struct mrb_time));
++  tm-&gt;sec  = (time_t)sec;
++  tm-&gt;usec = (sec - tm-&gt;sec) * 1.0e6 + usec;
++  while (tm-&gt;usec &lt; 0) {
++    tm-&gt;sec--;
++    tm-&gt;usec += 1.0e6;
++  }
++  while (tm-&gt;usec &gt; 1.0e6) {
++    tm-&gt;sec++;
++    tm-&gt;usec -= 1.0e6;
++  }
++  tm-&gt;timezone = timezone;
++  mrb_time_update_datetime(tm);
++
++  return tm;
++}
++
++static mrb_value
++mrb_time_make(mrb_state *mrb, struct RClass *c, double sec, double usec, enum mrb_timezone timezone)
++{
++  return mrb_time_wrap(mrb, c, mrb_time_alloc(mrb, sec, usec, timezone));
++}
++
++static struct mrb_time*
++current_mrb_time(mrb_state *mrb)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
++#ifdef NO_GETTIMEOFDAY
++  {
++    static time_t last_sec = 0, last_usec = 0;
++
++    tm-&gt;sec  = time(NULL);
++    if (tm-&gt;sec != last_sec) {
++      last_sec = tm-&gt;sec;
++      last_usec = 0;
++    }
++    else {
++      /* add 1 usec to differentiate two times */
++      last_usec += 1;
++    }
++    tm-&gt;usec = last_usec;
++  }
++#else
++  {
++    struct timeval tv;
++
++    gettimeofday(&amp;tv, NULL);
++    tm-&gt;sec = tv.tv_sec;
++    tm-&gt;usec = tv.tv_usec;
++  }
++#endif
++  tm-&gt;timezone = MRB_TIMEZONE_LOCAL;
++  mrb_time_update_datetime(tm);
++
++  return tm;
++}
++
++/* Allocates a new Time object with given millis value. */
++static mrb_value
++mrb_time_now(mrb_state *mrb, mrb_value self)
++{
++  return mrb_time_wrap(mrb, mrb_class_ptr(self), current_mrb_time(mrb));
++}
++
++/* 15.2.19.6.1 */
++/* Creates an instance of time at the given time in seconds, etc. */
++static mrb_value
++mrb_time_at(mrb_state *mrb, mrb_value self)
++{
++  mrb_float f, f2 = 0;
++
++  mrb_get_args(mrb, &quot;f|f&quot;, &amp;f, &amp;f2);
++  return mrb_time_make(mrb, mrb_class_ptr(self), f, f2, MRB_TIMEZONE_LOCAL);
++}
++
++static struct mrb_time*
++time_mktime(mrb_state *mrb, mrb_int ayear, mrb_int amonth, mrb_int aday,
++	    mrb_int ahour, mrb_int amin, mrb_int asec, mrb_int ausec,
++	    enum mrb_timezone timezone)
++{
++  time_t nowsecs;
++  struct tm nowtime = { 0 };
++
++  nowtime.tm_year  = (int)ayear  - 1900;
++  nowtime.tm_mon   = (int)amonth - 1;
++  nowtime.tm_mday  = (int)aday;
++  nowtime.tm_hour  = (int)ahour;
++  nowtime.tm_min   = (int)amin;
++  nowtime.tm_sec   = (int)asec;
++  nowtime.tm_isdst = -1;
++  if (timezone == MRB_TIMEZONE_UTC) {
++    nowsecs = timegm(&amp;nowtime);
++  }
++  else {
++    nowsecs = mktime(&amp;nowtime);
++  }
++  if (nowsecs &lt; 0) {
++    mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;Not a valid time.&quot;);
++  }
++
++  return mrb_time_alloc(mrb, nowsecs, ausec, timezone);
++}
++
++/* 15.2.19.6.2 */
++/* Creates an instance of time at the given time in UTC. */
++static mrb_value
++mrb_time_gm(mrb_state *mrb, mrb_value self)
++{
++  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0, amin = 0, asec = 0, ausec = 0;
++
++  mrb_get_args(mrb, &quot;i|iiiiii&quot;,
++                &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
++  return mrb_time_wrap(mrb, mrb_class_ptr(self),
++		       time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_UTC));
++}
++
++
++/* 15.2.19.6.3 */
++/* Creates an instance of time at the given time in local time zone. */
++static mrb_value
++mrb_time_local(mrb_state *mrb, mrb_value self)
++{
++  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0, amin = 0, asec = 0, ausec = 0;
++
++  mrb_get_args(mrb, &quot;i|iiiiii&quot;,
++                &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
++  return mrb_time_wrap(mrb, mrb_class_ptr(self),
++		       time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_LOCAL));
++}
++
++
++static mrb_value
++mrb_time_eq(mrb_state *mrb, mrb_value self)
++{
++  mrb_value other;
++  struct mrb_time *tm1, *tm2;
++
++  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
++  tm1 = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
++  if (!tm1 || !tm2) return mrb_false_value();
++  if (tm1-&gt;sec == tm2-&gt;sec &amp;&amp; tm1-&gt;usec == tm2-&gt;usec) {
++    return mrb_true_value();
++  }
++  return mrb_false_value();
++}
++
++static mrb_value
++mrb_time_cmp(mrb_state *mrb, mrb_value self)
++{
++  mrb_value other;
++  struct mrb_time *tm1, *tm2;
++
++  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
++  tm1 = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
++  if (!tm1 || !tm2) return mrb_nil_value();
++  if (tm1-&gt;sec &gt; tm2-&gt;sec) {
++    return mrb_fixnum_value(1);
++  }
++  else if (tm1-&gt;sec &lt; tm2-&gt;sec) {
++    return mrb_fixnum_value(-1);
++  }
++  /* tm1-&gt;sec == tm2-&gt;sec */
++  if (tm1-&gt;usec &gt; tm2-&gt;usec) {
++    return mrb_fixnum_value(1);
++  }
++  else if (tm1-&gt;usec &lt; tm2-&gt;usec) {
++    return mrb_fixnum_value(-1);
++  }
++  return mrb_fixnum_value(0);
++}
++
++static mrb_value
++mrb_time_plus(mrb_state *mrb, mrb_value self)
++{
++  mrb_float f;
++  struct mrb_time *tm;
++
++  mrb_get_args(mrb, &quot;f&quot;, &amp;f);
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_time_make(mrb, mrb_obj_class(mrb, self), (double)tm-&gt;sec+f, tm-&gt;usec, tm-&gt;timezone);
++}
++
++static mrb_value
++mrb_time_minus(mrb_state *mrb, mrb_value self)
++{
++  mrb_float f;
++  mrb_value other;
++  struct mrb_time *tm, *tm2;
++
++  mrb_get_args(mrb, &quot;o&quot;, &amp;other);
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++
++  tm2 = (struct mrb_time *)mrb_get_datatype(mrb, other, &amp;mrb_time_type);
++  if (tm2) {
++    f = (mrb_float)(tm-&gt;sec - tm2-&gt;sec)
++      + (mrb_float)(tm-&gt;usec - tm2-&gt;usec) / 1.0e6;
++    return mrb_float_value(f);
++  }
++  else {
++    mrb_get_args(mrb, &quot;f&quot;, &amp;f);
++    return mrb_time_make(mrb, mrb_obj_class(mrb, self), (double)tm-&gt;sec-f, tm-&gt;usec, tm-&gt;timezone);
++  }
++}
++
++/* 15.2.19.7.30 */
++/* Returns week day number of time. */
++static mrb_value
++mrb_time_wday(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_wday);
++}
++
++/* 15.2.19.7.31 */
++/* Returns year day number of time. */
++static mrb_value
++mrb_time_yday(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_check_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_yday + 1);
++}
++
++/* 15.2.19.7.32 */
++/* Returns year of time. */
++static mrb_value
++mrb_time_year(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_year + 1900);
++}
++
++/* 15.2.19.7.33 */
++/* Returns name of time's timezone. */
++static mrb_value
++mrb_time_zone(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  if (tm-&gt;timezone &lt;= MRB_TIMEZONE_NONE) return mrb_nil_value();
++  if (tm-&gt;timezone &gt;= MRB_TIMEZONE_LAST) return mrb_nil_value();
++  return mrb_str_new_cstr(mrb, timezone_names[tm-&gt;timezone]);
++}
++
++/* 15.2.19.7.4 */
++/* Returns a string that describes the time. */
++static mrb_value
++mrb_time_asctime(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++  struct tm *d;
++  char buf[256];
++  int len;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  d = &amp;tm-&gt;datetime;
++  len = snprintf(buf, sizeof(buf), &quot;%s %s %02d %02d:%02d:%02d %s%d&quot;,
++		 wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
++		 d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
++		 tm-&gt;timezone == MRB_TIMEZONE_UTC ? &quot;UTC &quot; : &quot;&quot;,
++		 d-&gt;tm_year + 1900);
++  return mrb_str_new(mrb, buf, len);
++}
++
++/* 15.2.19.7.6 */
++/* Returns the day in the month of the time. */
++static mrb_value
++mrb_time_day(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_mday);
++}
++
++
++/* 15.2.19.7.7 */
++/* Returns true if daylight saving was applied for this time. */
++static mrb_value
++mrb_time_dstp(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_bool_value(tm-&gt;datetime.tm_isdst);
++}
++
++/* 15.2.19.7.8 */
++/* 15.2.19.7.10 */
++/* Returns the Time object of the UTC(GMT) timezone. */
++static mrb_value
++mrb_time_getutc(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm, *tm2;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return self;
++  tm2 = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
++  *tm2 = *tm;
++  tm2-&gt;timezone = MRB_TIMEZONE_UTC;
++  mrb_time_update_datetime(tm2);
++  return mrb_time_wrap(mrb, mrb_obj_class(mrb, self), tm2);
++}
++
++/* 15.2.19.7.9 */
++/* Returns the Time object of the LOCAL timezone. */
++static mrb_value
++mrb_time_getlocal(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm, *tm2;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return self;
++  tm2 = (struct mrb_time *)mrb_malloc(mrb, sizeof(*tm));
++  *tm2 = *tm;
++  tm2-&gt;timezone = MRB_TIMEZONE_LOCAL;
++  mrb_time_update_datetime(tm2);
++  return mrb_time_wrap(mrb, mrb_obj_class(mrb, self), tm2);
++}
++
++/* 15.2.19.7.15 */
++/* Returns hour of time. */
++static mrb_value
++mrb_time_hour(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_hour);
++}
++
++/* 15.2.19.7.16 */
++/* Initializes a time by setting the amount of milliseconds since the epoch.*/
++static mrb_value
++mrb_time_initialize(mrb_state *mrb, mrb_value self)
++{
++  mrb_int ayear = 0, amonth = 1, aday = 1, ahour = 0,
++  amin = 0, asec = 0, ausec = 0;
++  int n;
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (tm) {
++    mrb_time_free(mrb, tm);
++  }
++
++  n = mrb_get_args(mrb, &quot;|iiiiiii&quot;,
++		   &amp;ayear, &amp;amonth, &amp;aday, &amp;ahour, &amp;amin, &amp;asec, &amp;ausec);
++  if (n == 0) {
++    tm = current_mrb_time(mrb);
++  }
++  else {
++    tm = time_mktime(mrb, ayear, amonth, aday, ahour, amin, asec, ausec, MRB_TIMEZONE_LOCAL);
++  }
++  DATA_PTR(self) = tm;
++  DATA_TYPE(self) = &amp;mrb_time_type;
++  return self;
++}
++
++/* 15.2.19.7.17(x) */
++/* Initializes a copy of this time object. */
++static mrb_value
++mrb_time_initialize_copy(mrb_state *mrb, mrb_value copy)
++{
++  mrb_value src;
++
++  mrb_get_args(mrb, &quot;o&quot;, &amp;src);
++  if (mrb_obj_equal(mrb, copy, src)) return copy;
++  if (!mrb_obj_is_instance_of(mrb, src, mrb_obj_class(mrb, copy))) {
++    mrb_raise(mrb, E_TYPE_ERROR, &quot;wrong argument class&quot;);
++  }
++  if (!DATA_PTR(copy)) {
++    DATA_PTR(copy) = mrb_malloc(mrb, sizeof(struct mrb_time));
++    DATA_TYPE(copy) = &amp;mrb_time_type;
++  }
++  *(struct mrb_time *)DATA_PTR(copy) = *(struct mrb_time *)DATA_PTR(src);
++  return copy;
++}
++
++/* 15.2.19.7.18 */
++/* Sets the timezone attribute of the Time object to LOCAL. */
++static mrb_value
++mrb_time_localtime(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return self;
++  tm-&gt;timezone = MRB_TIMEZONE_LOCAL;
++  mrb_time_update_datetime(tm);
++  return self;
++}
++
++/* 15.2.19.7.19 */
++/* Returns day of month of time. */
++static mrb_value
++mrb_time_mday(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_mday);
++}
++
++/* 15.2.19.7.20 */
++/* Returns minutes of time. */
++static mrb_value
++mrb_time_min(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_min);
++}
++
++/* 15.2.19.7.21 and 15.2.19.7.22 */
++/* Returns month of time. */
++static mrb_value
++mrb_time_mon(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_mon + 1);
++}
++
++/* 15.2.19.7.23 */
++/* Returns seconds in minute of time. */
++static mrb_value
++mrb_time_sec(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;datetime.tm_sec);
++}
++
++
++/* 15.2.19.7.24 */
++/* Returns a Float with the time since the epoch in seconds. */
++static mrb_value
++mrb_time_to_f(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_float_value((mrb_float)tm-&gt;sec + (mrb_float)tm-&gt;usec/1.0e6);
++}
++
++/* 15.2.19.7.25 */
++/* Returns a Fixnum with the time since the epoch in seconds. */
++static mrb_value
++mrb_time_to_i(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;sec);
++}
++
++/* 15.2.19.7.26 */
++/* Returns a Float with the time since the epoch in microseconds. */
++static mrb_value
++mrb_time_usec(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_fixnum_value(tm-&gt;usec);
++}
++
++/* 15.2.19.7.27 */
++/* Sets the timzeone attribute of the Time object to UTC. */
++static mrb_value
++mrb_time_utc(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (tm) {
++    tm-&gt;timezone = MRB_TIMEZONE_UTC;
++    mrb_time_update_datetime(tm);
++  }
++  return self;
++}
++
++/* 15.2.19.7.28 */
++/* Returns true if this time is in the UTC timze zone false if not. */
++static mrb_value
++mrb_time_utcp(mrb_state *mrb, mrb_value self)
++{
++  struct mrb_time *tm;
++  tm = (struct mrb_time *)mrb_get_datatype(mrb, self, &amp;mrb_time_type);
++  if (!tm) return mrb_nil_value();
++  return mrb_bool_value(tm-&gt;timezone == MRB_TIMEZONE_UTC);
++}
++
++
++
++void
++mrb_mruby_time_gem_init(mrb_state* mrb)
++{
++  struct RClass *tc;
++  /* ISO 15.2.19.2 */
++  tc = mrb_define_class(mrb, &quot;Time&quot;, mrb-&gt;object_class);
++  MRB_SET_INSTANCE_TT(tc, MRB_TT_DATA);
++  mrb_include_module(mrb, tc, mrb_class_get(mrb, &quot;Comparable&quot;));
++  mrb_define_class_method(mrb, tc, &quot;at&quot;, mrb_time_at, ARGS_ANY());                    /* 15.2.19.6.1 */
++  mrb_define_class_method(mrb, tc, &quot;gm&quot;, mrb_time_gm, ARGS_REQ(1)|ARGS_OPT(6));       /* 15.2.19.6.2 */
++  mrb_define_class_method(mrb, tc, &quot;local&quot;, mrb_time_local, ARGS_REQ(1)|ARGS_OPT(6)); /* 15.2.19.6.3 */
++  mrb_define_class_method(mrb, tc, &quot;mktime&quot;, mrb_time_local, ARGS_REQ(1)|ARGS_OPT(6));/* 15.2.19.6.4 */
++  mrb_define_class_method(mrb, tc, &quot;now&quot;, mrb_time_now, ARGS_NONE());                 /* 15.2.19.6.5 */
++  mrb_define_class_method(mrb, tc, &quot;utc&quot;, mrb_time_gm, ARGS_REQ(1)|ARGS_OPT(6));      /* 15.2.19.6.6 */
++
++  mrb_define_method(mrb, tc, &quot;==&quot;     , mrb_time_eq     , ARGS_REQ(1));
++  mrb_define_method(mrb, tc, &quot;&lt;=&gt;&quot;    , mrb_time_cmp    , ARGS_REQ(1)); /* 15.2.19.7.1 */
++  mrb_define_method(mrb, tc, &quot;+&quot;      , mrb_time_plus   , ARGS_REQ(1)); /* 15.2.19.7.2 */
++  mrb_define_method(mrb, tc, &quot;-&quot;      , mrb_time_minus  , ARGS_REQ(1)); /* 15.2.19.7.3 */
++  mrb_define_method(mrb, tc, &quot;to_s&quot;   , mrb_time_asctime, ARGS_NONE());
++  mrb_define_method(mrb, tc, &quot;inspect&quot;, mrb_time_asctime, ARGS_NONE());
++  mrb_define_method(mrb, tc, &quot;asctime&quot;, mrb_time_asctime, ARGS_NONE()); /* 15.2.19.7.4 */
++  mrb_define_method(mrb, tc, &quot;ctime&quot;  , mrb_time_asctime, ARGS_NONE()); /* 15.2.19.7.5 */
++  mrb_define_method(mrb, tc, &quot;day&quot;    , mrb_time_day    , ARGS_NONE()); /* 15.2.19.7.6 */
++  mrb_define_method(mrb, tc, &quot;dst?&quot;   , mrb_time_dstp   , ARGS_NONE()); /* 15.2.19.7.7 */
++  mrb_define_method(mrb, tc, &quot;getgm&quot;  , mrb_time_getutc , ARGS_NONE()); /* 15.2.19.7.8 */
++  mrb_define_method(mrb, tc, &quot;getlocal&quot;,mrb_time_getlocal,ARGS_NONE()); /* 15.2.19.7.9 */
++  mrb_define_method(mrb, tc, &quot;getutc&quot; , mrb_time_getutc , ARGS_NONE()); /* 15.2.19.7.10 */
++  mrb_define_method(mrb, tc, &quot;gmt?&quot;   , mrb_time_utcp   , ARGS_NONE()); /* 15.2.19.7.11 */
++  mrb_define_method(mrb, tc, &quot;gmtime&quot; , mrb_time_utc    , ARGS_NONE()); /* 15.2.19.7.13 */
++  mrb_define_method(mrb, tc, &quot;hour&quot;   , mrb_time_hour, ARGS_NONE());    /* 15.2.19.7.15 */
++  mrb_define_method(mrb, tc, &quot;localtime&quot;, mrb_time_localtime, ARGS_NONE()); /* 15.2.19.7.18 */
++  mrb_define_method(mrb, tc, &quot;mday&quot;   , mrb_time_mday, ARGS_NONE());    /* 15.2.19.7.19 */
++  mrb_define_method(mrb, tc, &quot;min&quot;    , mrb_time_min, ARGS_NONE());     /* 15.2.19.7.20 */
++
++  mrb_define_method(mrb, tc, &quot;mon&quot;  , mrb_time_mon, ARGS_NONE());       /* 15.2.19.7.21 */
++  mrb_define_method(mrb, tc, &quot;month&quot;, mrb_time_mon, ARGS_NONE());       /* 15.2.19.7.22 */
++
++  mrb_define_method(mrb, tc, &quot;sec&quot; , mrb_time_sec, ARGS_NONE());        /* 15.2.19.7.23 */
++  mrb_define_method(mrb, tc, &quot;to_i&quot;, mrb_time_to_i, ARGS_NONE());       /* 15.2.19.7.25 */
++  mrb_define_method(mrb, tc, &quot;to_f&quot;, mrb_time_to_f, ARGS_NONE());       /* 15.2.19.7.24 */
++  mrb_define_method(mrb, tc, &quot;usec&quot;, mrb_time_usec, ARGS_NONE());       /* 15.2.19.7.26 */
++  mrb_define_method(mrb, tc, &quot;utc&quot; , mrb_time_utc, ARGS_NONE());        /* 15.2.19.7.27 */
++  mrb_define_method(mrb, tc, &quot;utc?&quot;, mrb_time_utcp, ARGS_NONE());       /* 15.2.19.7.28 */
++  mrb_define_method(mrb, tc, &quot;wday&quot;, mrb_time_wday, ARGS_NONE());       /* 15.2.19.7.30 */
++  mrb_define_method(mrb, tc, &quot;yday&quot;, mrb_time_yday, ARGS_NONE());       /* 15.2.19.7.31 */
++  mrb_define_method(mrb, tc, &quot;year&quot;, mrb_time_year, ARGS_NONE());       /* 15.2.19.7.32 */
++  mrb_define_method(mrb, tc, &quot;zone&quot;, mrb_time_zone, ARGS_NONE());       /* 15.2.19.7.33 */
++
++  mrb_define_method(mrb, tc, &quot;initialize&quot;, mrb_time_initialize, ARGS_REQ(1)); /* 15.2.19.7.16 */
++  mrb_define_method(mrb, tc, &quot;initialize_copy&quot;, mrb_time_initialize_copy, ARGS_REQ(1)); /* 15.2.19.7.17 */
++
++  /*
++    methods not available:
++      gmt_offset(15.2.19.7.12)
++      gmtoff(15.2.19.7.14)
++      utc_offset(15.2.19.7.29)
++  */
++}
++
++void
++mrb_mruby_time_gem_final(mrb_state* mrb)
++{
++}
+diff --git a/mrbgems/mruby-time/test/time.rb b/mrbgems/mruby-time/test/time.rb
+new file mode 100644
+index 0000000..f92459d
+--- /dev/null
++++ b/mrbgems/mruby-time/test/time.rb
+@@ -0,0 +1,201 @@
++##
++# Time ISO Test
++
++if Object.const_defined?(:Time)
++  assert('Time.new', '15.2.3.3.3') do
++    Time.new.class == Time
++  end
++
++  assert('Time', '15.2.19') do
++    Time.class == Class
++  end
++
++  assert('Time superclass', '15.2.19.2') do
++    Time.superclass == Object
++  end
++
++  assert('Time.at', '15.2.19.6.1') do
++    Time.at(1300000000.0)
++  end
++
++  assert('Time.gm', '15.2.19.6.2') do
++    Time.gm(2012, 12, 23)
++  end
++
++  assert('Time.local', '15.2.19.6.3') do
++    Time.local(2012, 12, 23)
++  end
++
++  assert('Time.mktime', '15.2.19.6.4') do
++    Time.mktime(2012, 12, 23)
++  end
++
++  assert('Time.now', '15.2.19.6.5') do
++    Time.now.class == Time
++  end
++
++  assert('Time.utc', '15.2.19.6.6') do
++    Time.utc(2012, 12, 23)
++  end
++
++  assert('Time#+', '15.2.19.7.1') do
++    t1 = Time.at(1300000000.0)
++    t2 = t1.+(60)
++
++    t2.utc.asctime == &quot;Sun Mar 13 07:07:40 UTC 2011&quot;
++  end
++
++  assert('Time#-', '15.2.19.7.2') do
++    t1 = Time.at(1300000000.0)
++    t2 = t1.-(60)
++
++    t2.utc.asctime == &quot;Sun Mar 13 07:05:40 UTC 2011&quot;
++  end
++
++  assert('Time#&lt;=&gt;', '15.2.19.7.3') do
++    t1 = Time.at(1300000000.0)
++    t2 = Time.at(1400000000.0)
++    t3 = Time.at(1500000000.0)
++
++    t2.&lt;=&gt;(t1) == 1 and
++      t2.&lt;=&gt;(t2) == 0 and
++      t2.&lt;=&gt;(t3) == -1 and
++      t2.&lt;=&gt;(nil) == nil
++  end
++
++  assert('Time#asctime', '15.2.19.7.4') do
++    Time.at(1300000000.0).utc.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++
++  assert('Time#ctime', '15.2.19.7.5') do
++    Time.at(1300000000.0).utc.ctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++
++  assert('Time#day', '15.2.19.7.6') do
++    Time.gm(2012, 12, 23).day == 23
++  end
++
++  assert('Time#dst?', '15.2.19.7.7') do
++    not Time.gm(2012, 12, 23).utc.dst?
++  end
++
++  assert('Time#getgm', '15.2.19.7.8') do
++    Time.at(1300000000.0).getgm.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++
++  assert('Time#getlocal', '15.2.19.7.9') do
++    t1 = Time.at(1300000000.0)
++    t2 = Time.at(1300000000.0)
++    t3 = t1.getlocal
++
++    t1 == t3 and t3 == t2.getlocal
++  end
++
++  assert('Time#getutc', '15.2.19.7.10') do
++    Time.at(1300000000.0).getutc.asctime == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++
++  assert('Time#gmt?', '15.2.19.7.11') do
++    Time.at(1300000000.0).utc.gmt?
++  end
++
++  # ATM not implemented
++  # assert('Time#gmt_offset', '15.2.19.7.12') do
++
++  assert('Time#gmtime', '15.2.19.7.13') do
++    Time.at(1300000000.0).gmtime
++  end
++
++  # ATM not implemented
++  # assert('Time#gmtoff', '15.2.19.7.14') do
++
++  assert('Time#hour', '15.2.19.7.15') do
++    Time.gm(2012, 12, 23, 7, 6).hour == 7
++  end
++
++  # ATM doesn't really work
++  # assert('Time#initialize', '15.2.19.7.16') do
++
++  assert('Time#initialize_copy', '15.2.19.7.17') do
++    time_tmp_2 = Time.at(7.0e6)
++    time_tmp_2.clone == time_tmp_2
++  end
++
++  assert('Time#localtime', '15.2.19.7.18') do
++    t1 = Time.at(1300000000.0)
++    t2 = Time.at(1300000000.0)
++
++    t1.localtime
++    t1 == t2.getlocal
++  end
++
++  assert('Time#mday', '15.2.19.7.19') do
++    Time.gm(2012, 12, 23).mday == 23
++  end
++
++  assert('Time#min', '15.2.19.7.20') do
++    Time.gm(2012, 12, 23, 7, 6).min == 6
++  end
++
++  assert('Time#mon', '15.2.19.7.21') do
++    Time.gm(2012, 12, 23).mon == 12
++  end
++
++  assert('Time#month', '15.2.19.7.22') do
++    Time.gm(2012, 12, 23).month == 12
++  end
++
++  assert('Times#sec', '15.2.19.7.23') do
++    Time.gm(2012, 12, 23, 7, 6, 40).sec == 40
++  end
++
++  assert('Time#to_f', '15.2.19.7.24') do
++    Time.at(1300000000.0).to_f == 1300000000.0
++  end
++
++  assert('Time#to_i', '15.2.19.7.25') do
++    Time.at(1300000000.0).to_i == 1300000000
++  end
++
++  assert('Time#usec', '15.2.19.7.26') do
++    Time.at(1300000000.0).usec == 0
++  end
++
++  assert('Time#utc', '15.2.19.7.27') do
++    Time.at(1300000000.0).utc
++  end
++
++  assert('Time#utc?', '15.2.19.7.28') do
++    Time.at(1300000000.0).utc.utc?
++  end
++
++  # ATM not implemented
++  # assert('Time#utc_offset', '15.2.19.7.29') do
++
++  assert('Time#wday', '15.2.19.7.30') do
++    Time.gm(2012, 12, 23).wday == 0
++  end
++
++  assert('Time#yday', '15.2.19.7.31') do
++    Time.gm(2012, 12, 23).yday == 358
++  end
++
++  assert('Time#year', '15.2.19.7.32') do
++    Time.gm(2012, 12, 23).year == 2012
++  end
++
++  assert('Time#zone', '15.2.19.7.33') do
++    Time.at(1300000000.0).utc.zone == 'UTC'
++  end
++
++  # Not ISO specified
++
++  assert('Time#to_s') do
++    Time.at(1300000000.0).utc.to_s == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++
++  assert('Time#inspect') do
++    Time.at(1300000000.0).utc.inspect == &quot;Sun Mar 13 07:06:40 UTC 2011&quot;
++  end
++end
++
+</pre>
+
+  </body>
+</html>
