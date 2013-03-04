@@ -1,0 +1,120 @@
+--- 
+:date: 2013-03-05 00:06:46.318482 +09:00
+:id: mruby-mruby-a5bc5b2
+:zipball_url: https://github.com/mruby/mruby/zipball/a5bc5b2
+:make: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2)
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+    CC    src/array.c -> build/host/src/array.o
+    CC    src/class.c -> build/host/src/class.o
+    CC    src/codegen.c -> build/host/src/codegen.o
+    CC    src/compar.c -> build/host/src/compar.o
+    CC    src/crc.c -> build/host/src/crc.o
+    CC    src/dump.c -> build/host/src/dump.o
+    CC    src/enum.c -> build/host/src/enum.o
+    CC    src/error.c -> build/host/src/error.o
+    CC    src/etc.c -> build/host/src/etc.o
+    CC    src/gc.c -> build/host/src/gc.o
+    CC    src/hash.c -> build/host/src/hash.o
+    CC    src/init.c -> build/host/src/init.o
+    CC    src/kernel.c -> build/host/src/kernel.o
+    CC    src/load.c -> build/host/src/load.o
+    CC    src/numeric.c -> build/host/src/numeric.o
+    CC    src/object.c -> build/host/src/object.o
+    CC    src/pool.c -> build/host/src/pool.o
+    CC    src/print.c -> build/host/src/print.o
+    CC    src/proc.c -> build/host/src/proc.o
+    CC    src/range.c -> build/host/src/range.o
+    CC    src/state.c -> build/host/src/state.o
+    CC    src/string.c -> build/host/src/string.o
+    CC    src/symbol.c -> build/host/src/symbol.o
+    CC    src/variable.c -> build/host/src/variable.o
+    CC    src/vm.c -> build/host/src/vm.o
+    YACC  src/parse.y -> build/host/src/y.tab.c
+    CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+    AR    build/host/lib/libmruby_core.a 
+    LD    build/host/bin/mrbc 
+    rake aborted!
+    Command Failed: ["gcc"  -o "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/bin/mrbc" "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o" "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a"  -lm ]
+  :stderr: |-
+    In file included from src/parse.y:3763:
+    src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
+    /Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/src/y.tab.c: In function 'yyparse':
+    src/parse.y:4609: warning: 'beg' may be used uninitialized in this function
+    ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a
+    Undefined symbols:
+      "_mrb_f_sprintf", referenced from:
+          _mrb_f_sprintf$non_lazy_ptr in libmruby_core.a(kernel.o)
+    ld: symbol(s) not found
+    collect2: ld returned 1 exit status
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2)
+    CC    test/driver.c -> build/host/test/driver.o
+    LD    build/host/bin/mrbc 
+    rake aborted!
+    Command Failed: ["gcc"  -o "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/bin/mrbc" "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o" "/Users/mruby/mruby-test-tool/tmp/20130305000651-71213-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a"  -lm ]
+  :stderr: |-
+    Undefined symbols:
+      "_mrb_f_sprintf", referenced from:
+          _mrb_f_sprintf$non_lazy_ptr in libmruby_core.a(kernel.o)
+    ld: symbol(s) not found
+    collect2: ld returned 1 exit status
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:filesize: 
+  lib/libmruby_core.a: 3295360
+:repository: mruby/mruby
+:commit: a5bc5b2
+:ball_id: mruby-mruby-a5bc5b2
+:hostname: mac-ppc
+:env: 
+  :gcc: 
+    :stdout: |-
+      powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+      Copyright (C) 2005 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for powerpc-apple-darwin9.0
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.3
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2006 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison

@@ -1,0 +1,134 @@
+---
+:date: 2013-03-04 23:00:44.798290802 +09:00
+:id: mruby-mruby-a5bc5b2
+:zipball_url: https://github.com/mruby/mruby/zipball/a5bc5b2
+:make:
+  :stdout: ! "(in /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2)\nCC
+    \   tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o\nCC    src/array.c ->
+    build/host/src/array.o\nCC    src/class.c -> build/host/src/class.o\nCC    src/codegen.c
+    -> build/host/src/codegen.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
+    \   src/crc.c -> build/host/src/crc.o\nCC    src/dump.c -> build/host/src/dump.o\nCC
+    \   src/enum.c -> build/host/src/enum.o\nCC    src/error.c -> build/host/src/error.o\nCC
+    \   src/etc.c -> build/host/src/etc.o\nCC    src/gc.c -> build/host/src/gc.o\nCC
+    \   src/hash.c -> build/host/src/hash.o\nCC    src/init.c -> build/host/src/init.o\nCC
+    \   src/kernel.c -> build/host/src/kernel.o\nCC    src/load.c -> build/host/src/load.o\nCC
+    \   src/numeric.c -> build/host/src/numeric.o\nCC    src/object.c -> build/host/src/object.o\nCC
+    \   src/pool.c -> build/host/src/pool.o\nCC    src/print.c -> build/host/src/print.o\nCC
+    \   src/proc.c -> build/host/src/proc.o\nCC    src/range.c -> build/host/src/range.o\nCC
+    \   src/state.c -> build/host/src/state.o\nCC    src/string.c -> build/host/src/string.o\nCC
+    \   src/symbol.c -> build/host/src/symbol.o\nCC    src/variable.c -> build/host/src/variable.o\nCC
+    \   src/vm.c -> build/host/src/vm.o\nYACC  src/parse.y -> build/host/src/y.tab.c\nCC
+    \   build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC    tools/mrbc/mrbc.c
+    -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a \nLD    build/host/bin/mrbc
+    \nrake aborted!\nCommand Failed: [\"gcc\"  -o \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/bin/mrbc\"
+    \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o\"
+    \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a\"
+    \ -lm ]"
+  :stderr: ! '/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:
+    In function ''get_syms_block_size'':
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:285:
+    warning: passing argument 1 of ''str_dump_len'' discards qualifiers from pointer
+    target type
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:
+    In function ''write_syms_block'':
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:427:
+    warning: passing argument 1 of ''str_dump_len'' discards qualifiers from pointer
+    target type
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:435:
+    warning: passing argument 1 of ''str_dump'' discards qualifiers from pointer target
+    type
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:
+    In function ''write_irep_record'':
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/dump.c:598:
+    warning: ''crc'' may be used uninitialized in this function
+
+    ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o):
+    In function `mrb_init_kernel'':
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/kernel.c:1113:
+    undefined reference to `mrb_f_sprintf'''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! "(in /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2)\nCC
+    \   test/driver.c -> build/host/test/driver.o\nLD    build/host/bin/mrbc \nrake
+    aborted!\nCommand Failed: [\"gcc\"  -o \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/bin/mrbc\"
+    \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o\"
+    \"/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a\"
+    \ -lm ]"
+  :stderr: ! '/usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o):
+    In function `mrb_init_kernel'':
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+    /usr/home/mruby/mruby-test-tool/tmp/20130304230047-79930-build/mruby-mruby-a5bc5b2/src/kernel.c:1113:
+    undefined reference to `mrb_f_sprintf'''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:filesize:
+  lib/libmruby_core.a: 445688
+:repository: mruby/mruby
+:commit: a5bc5b2
+:ball_id: mruby-mruby-a5bc5b2
+:hostname: freebsd32bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+
+      Copyright (C) 2007 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for i386-portbld-freebsd9.0
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.4.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2010 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison
