@@ -247,6 +247,25 @@ Date:   Mon Mar 4 22:27:23 2013 +0900
         
         
         <tr style="background-color:#ff9999">
+          <td><a href="#netbsd_arm">netbsd_arm</a></td>
+          <td>failed</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;"></td>
+          
+            <td style="text-align:right;"></td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#ff9999">
           <td><a href="#netbsd_arm_nb6">netbsd_arm_nb6</a></td>
           <td>failed</td>
           <td>failed</td>
@@ -540,6 +559,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -1177,6 +1204,71 @@ Command Failed: ["gcc"  -o "/home/mruby/mruby-test-tool/tmp/20130305000550-3961-
           <td><textarea>/home/mruby/mruby-test-tool/tmp/20130305000550-3961-build/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o): In function `mrb_init_kernel':
 /home/mruby/mruby-test-tool/tmp/20130305000550-3961-build/mruby-mruby-a5bc5b2/src/kernel.c:1112: undefined reference to `mrb_f_sprintf'
 /home/mruby/mruby-test-tool/tmp/20130305000550-3961-build/mruby-mruby-a5bc5b2/src/kernel.c:1113: undefined reference to `mrb_f_sprintf'</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_arm">netbsd_arm</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm/mruby-mruby-a5bc5b2)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+rake aborted!
+Command Failed: ["gcc"  -o "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/bin/mrbc" "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o" "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a"  -lm ]
+
+</textarea></td>
+          <td><textarea>ar: creating /home/mruby/arm/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a
+/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0xb6c):/home/mruby/arm/mruby-mruby-a5bc5b2/src/kernel.c:1117: undefined reference to `mrb_f_sprintf'
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm/mruby-mruby-a5bc5b2)
+CC    test/driver.c -> build/host/test/driver.o
+LD    build/host/bin/mrbc 
+rake aborted!
+Command Failed: ["gcc"  -o "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/bin/mrbc" "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o" "/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a"  -lm ]
+
+</textarea></td>
+          <td><textarea>/home/mruby/arm/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0xb6c):/home/mruby/arm/mruby-mruby-a5bc5b2/src/kernel.c:1117: undefined reference to `mrb_f_sprintf'
+</textarea></td>
         </tr>
         
       </table>
