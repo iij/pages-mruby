@@ -1,0 +1,75 @@
+---
+:date: ''
+:hostname: netbsd_mips
+:id: mruby-mruby-a5bc5b2
+:ball_id: mruby-mruby-a5bc5b2
+:zipball_url: https://github.com/mruby/mruby/zipball/a5bc5b2
+:repository: mruby/mruby
+:commit: a5bc5b2
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! "(in /home/mruby/mips/mruby-mruby-a5bc5b2)\nCC    tools/mruby/mruby.c
+    -> build/host/tools/mruby/mruby.o\nCC    src/range.c -> build/host/src/range.o\nCC
+    \   src/array.c -> build/host/src/array.o\nCC    src/numeric.c -> build/host/src/numeric.o\nCC
+    \   src/pool.c -> build/host/src/pool.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
+    \   src/crc.c -> build/host/src/crc.o\nCC    src/proc.c -> build/host/src/proc.o\nCC
+    \   src/state.c -> build/host/src/state.o\nCC    src/print.c -> build/host/src/print.o\nCC
+    \   src/vm.c -> build/host/src/vm.o\nCC    src/class.c -> build/host/src/class.o\nCC
+    \   src/load.c -> build/host/src/load.o\nCC    src/codegen.c -> build/host/src/codegen.o\nCC
+    \   src/symbol.c -> build/host/src/symbol.o\nCC    src/etc.c -> build/host/src/etc.o\nCC
+    \   src/gc.c -> build/host/src/gc.o\nCC    src/init.c -> build/host/src/init.o\nCC
+    \   src/dump.c -> build/host/src/dump.o\nCC    src/kernel.c -> build/host/src/kernel.o\nCC
+    \   src/hash.c -> build/host/src/hash.o\nCC    src/string.c -> build/host/src/string.o\nCC
+    \   src/variable.c -> build/host/src/variable.o\nCC    src/object.c -> build/host/src/object.o\nCC
+    \   src/enum.c -> build/host/src/enum.o\nCC    src/error.c -> build/host/src/error.o\nYACC
+    \ src/parse.y -> build/host/src/y.tab.c\nCC    build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC
+    \   tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a
+    \nLD    build/host/bin/mrbc \nrake aborted!\nCommand Failed: [\"gcc\"  -o \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/bin/mrbc\"
+    \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o\" \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a\"
+    \ -lm ]\n\n"
+  :stderr: ! 'ar: creating /home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a
+
+    /home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0x2a74):/home/mruby/mips/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+    /home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0x2a7c):/home/mruby/mips/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+'
+  :status: failed
+:make_test:
+  :stdout: ! "(in /home/mruby/mips/mruby-mruby-a5bc5b2)\nCC    test/driver.c -> build/host/test/driver.o\nLD
+    \   build/host/bin/mrbc \nrake aborted!\nCommand Failed: [\"gcc\"  -o \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/bin/mrbc\"
+    \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/tools/mrbc/mrbc.o\" \"/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a\"
+    \ -lm ]\n\n"
+  :stderr: ! '/home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0x2a74):/home/mruby/mips/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+    /home/mruby/mips/mruby-mruby-a5bc5b2/build/host/lib/libmruby_core.a(kernel.o)(.text+0x2a7c):/home/mruby/mips/mruby-mruby-a5bc5b2/src/kernel.c:1112:
+    undefined reference to `mrb_f_sprintf''
+
+'
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
+:filesize:
+  lib/libmruby_core.a: 664820
