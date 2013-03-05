@@ -34,11 +34,11 @@
     
 
     <h1>mruby build & test report
-      <span style="font-size:small;">(mruby/mruby - 6d0e251)</span>
+      <span style="font-size:small;">(mruby/mruby - fbbe630)</span>
     </h1>
 
     <ul>
-      <li><a href="http://github.com/mruby/mruby/commit/6d0e251" target="_blank">commit info on github</a></li>
+      <li><a href="http://github.com/mruby/mruby/commit/fbbe630" target="_blank">commit info on github</a></li>
       
       
         
@@ -48,14 +48,11 @@
         
       
       <li>
-      <pre>commit 6d0e2519dd3e432339b1cb75a0379df6cb8ff518
-Merge: 83c5274 4bc4380
-Author: Yukihiro &quot;Matz&quot; Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Tue Mar 5 06:22:43 2013 -0800
+      <pre>commit fbbe6309fcac83414085905d985f17c3606a0643
+Author: kano4 &lt;shinji.warp@gmail.com&gt;
+Date:   Tue Mar 5 23:06:44 2013 +0900
 
-    Merge pull request #952 from kano4/master
-    
-    Add include guard in node.h and Replace tabs with spaces
+    Replace tabs with spaces
 
 </pre>
       <a href="#commitlog">commit log</a>
@@ -94,6 +91,25 @@ Date:   Tue Mar 5 06:22:43 2013 -0800
           <th>lib/libmruby.a</th>
         
       </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos32bit">centos32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>524</td>
+          <td>524</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">442,332</td>
+          
+            <td style="text-align:right;">465,392</td>
+          
+        </tr>
       
         
         
@@ -231,44 +247,6 @@ Date:   Tue Mar 5 06:22:43 2013 -0800
         
         
         <tr style="background-color:#99ff99">
-          <td><a href="#netbsd_arm">netbsd_arm</a></td>
-          <td>success</td>
-          <td>success</td>
-          <td>524</td>
-          <td>524</td>
-          <td>0</td>
-          <td>0</td>
-          <td></td>
-          <td></td>
-          
-            <td style="text-align:right;">623,076</td>
-          
-            <td style="text-align:right;">642,536</td>
-          
-        </tr>
-      
-        
-        
-        <tr style="background-color:#99ff99">
-          <td><a href="#netbsd_mips">netbsd_mips</a></td>
-          <td>success</td>
-          <td>success</td>
-          <td>524</td>
-          <td>524</td>
-          <td>0</td>
-          <td>0</td>
-          <td></td>
-          <td></td>
-          
-            <td style="text-align:right;">988,044</td>
-          
-            <td style="text-align:right;">747,748</td>
-          
-        </tr>
-      
-        
-        
-        <tr style="background-color:#99ff99">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>success</td>
           <td>success</td>
@@ -352,6 +330,28 @@ Date:   Tue Mar 5 06:22:43 2013 -0800
         <th>Name</th>
         <th>software version</th>
       </tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
       
         
         <tr>
@@ -505,22 +505,6 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre
       
         
         <tr>
-          <td rowspan="3">netbsd_arm</td>
-          <td><b>gcc</b><br/><pre></pre></td>
-        </tr>
-        <tr><td><b>make</b><br/><pre></pre></td></tr>
-        <tr><td><b>bison</b><br/><pre></pre></td></tr>
-      
-        
-        <tr>
-          <td rowspan="3">netbsd_mips</td>
-          <td><b>gcc</b><br/><pre></pre></td>
-        </tr>
-        <tr><td><b>make</b><br/><pre></pre></td></tr>
-        <tr><td><b>bison</b><br/><pre></pre></td></tr>
-      
-        
-        <tr>
           <td rowspan="3">openbsd32bit</td>
           <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
 Copyright (C) 2007 Free Software Foundation, Inc.
@@ -610,6 +594,165 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre
     <h2>Build Log</h2>
     
       
+      <h3><a name="centos32bit">centos32bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234606-10351-build/mruby-mruby-fbbe630)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/error.c -> build/host/src/error.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/object.c -> build/host/src/object.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/range.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/error.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/kernel.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
+CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
+      MRBC mrbgems/mruby-struct/mrblib/struct.rb 
+CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
+CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
+CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
+CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-math
+             mruby-time
+             mruby-struct
+             mruby-sprintf
+================================================</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234606-10351-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234606-10351-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234606-10351-build/mruby-mruby-fbbe630)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/enumerable.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/kernel.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-math/test/math.rb 
+CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-struct/test/struct.rb 
+CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
+CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 524
+   OK: 524
+   KO: 0
+Crash: 0
+ Time: 0.941259 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234606-10351-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
       <h3><a name="centos64bit">centos64bit</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
       <table border='1' style="width:90%;">
         <tr>
@@ -619,7 +762,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233402-10468-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234605-11239-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/gc.c -> build/host/src/gc.o
 CC    src/print.c -> build/host/src/print.o
@@ -692,12 +835,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233402-10468-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233402-10468-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234605-11239-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234605-11239-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233402-10468-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234605-11239-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -762,8 +905,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 1.174257 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233402-10468-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 1.498687 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234605-11239-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -778,7 +921,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -851,19 +994,19 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c: In function 'get_syms_block_size':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_syms_block':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_irep_record':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
-ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c: In function 'get_syms_block_size':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_syms_block':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_irep_record':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -928,8 +1071,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 0.42822 seconds</textarea></td>
-          <td><textarea>ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222929-86029-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 0.431582 seconds</textarea></td>
+          <td><textarea>ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224135-86413-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -944,7 +1087,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1017,19 +1160,19 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c: In function 'get_syms_block_size':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_syms_block':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_irep_record':
-/usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
-ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c: In function 'get_syms_block_size':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_syms_block':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_irep_record':
+/usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1094,8 +1237,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 1.308211 seconds</textarea></td>
-          <td><textarea>ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305222935-85296-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 1.228981 seconds</textarea></td>
+          <td><textarea>ar: warning: creating /usr/home/mruby/mruby-test-tool/tmp/20130305224143-85680-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -1110,7 +1253,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305233508-51494-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305234743-52333-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1183,12 +1326,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233508-51494-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233508-51494-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234743-52333-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234743-52333-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305233508-51494-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305234743-52333-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1253,8 +1396,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 2.037884 seconds</textarea></td>
-          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233508-51494-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 1.794947 seconds</textarea></td>
+          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234743-52333-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -1269,7 +1412,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1344,14 +1487,14 @@ Build summary:
 ================================================</textarea></td>
           <td><textarea>In file included from src/parse.y:3762:
 src/keywords:77: warning: '__gnu_inline__' attribute directive ignored
-/Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251/build/host/src/y.tab.c: In function 'yyparse':
+/Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630/build/host/src/y.tab.c: In function 'yyparse':
 src/parse.y:4608: warning: 'beg' may be used uninitialized in this function
-ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1416,8 +1559,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 7.676445 seconds</textarea></td>
-          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305233519-77465-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 7.604902 seconds</textarea></td>
+          <td><textarea>ar: creating archive /Users/mruby/mruby-test-tool/tmp/20130305234801-78055-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -1432,7 +1575,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233432-10817-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234640-13010-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1505,12 +1648,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233432-10817-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233432-10817-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234640-13010-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234640-13010-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233432-10817-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234640-13010-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1575,8 +1718,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 0.88457 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233432-10817-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 0.780276 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234640-13010-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -1591,7 +1734,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233429-8061-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234637-27621-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -1664,12 +1807,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233429-8061-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233429-8061-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234637-27621-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234637-27621-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233429-8061-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234637-27621-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -1734,338 +1877,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 1.465045 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233429-8061-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
-        </tr>
-        
-      </table>
-    
-      
-      <h3><a name="netbsd_arm">netbsd_arm</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
-      <table border='1' style="width:90%;">
-        <tr>
-          <th style="width:100px;">task</th>
-          <th>stdout</th>
-          <th>stderr</th>
-        </tr>
-        <tr>
-          <th>make</th>
-          <td><textarea>(in /home/mruby/arm/mruby-mruby-6d0e251)
-CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
-CC    src/range.c -> build/host/src/range.o
-CC    src/array.c -> build/host/src/array.o
-CC    src/numeric.c -> build/host/src/numeric.o
-CC    src/pool.c -> build/host/src/pool.o
-CC    src/compar.c -> build/host/src/compar.o
-CC    src/crc.c -> build/host/src/crc.o
-CC    src/proc.c -> build/host/src/proc.o
-CC    src/state.c -> build/host/src/state.o
-CC    src/print.c -> build/host/src/print.o
-CC    src/vm.c -> build/host/src/vm.o
-CC    src/class.c -> build/host/src/class.o
-CC    src/load.c -> build/host/src/load.o
-CC    src/codegen.c -> build/host/src/codegen.o
-CC    src/symbol.c -> build/host/src/symbol.o
-CC    src/etc.c -> build/host/src/etc.o
-CC    src/gc.c -> build/host/src/gc.o
-CC    src/init.c -> build/host/src/init.o
-CC    src/dump.c -> build/host/src/dump.o
-CC    src/kernel.c -> build/host/src/kernel.o
-CC    src/hash.c -> build/host/src/hash.o
-CC    src/string.c -> build/host/src/string.o
-CC    src/variable.c -> build/host/src/variable.o
-CC    src/object.c -> build/host/src/object.o
-CC    src/enum.c -> build/host/src/enum.o
-CC    src/error.c -> build/host/src/error.o
-YACC  src/parse.y -> build/host/src/y.tab.c
-CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
-CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
-AR    build/host/lib/libmruby_core.a 
-LD    build/host/bin/mrbc 
-GEN   *.rb -> build/host/mrblib/mrblib.c
-      MRBC mrblib/kernel.rb 
-      MRBC mrblib/compar.rb 
-      MRBC mrblib/hash.rb 
-      MRBC mrblib/numeric.rb 
-      MRBC mrblib/class.rb 
-      MRBC mrblib/string.rb 
-      MRBC mrblib/enum.rb 
-      MRBC mrblib/print.rb 
-      MRBC mrblib/array.rb 
-      MRBC mrblib/range.rb 
-      MRBC mrblib/error.rb 
-CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
-CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
-CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
-CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
-CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
-CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
-      MRBC mrbgems/mruby-struct/mrblib/struct.rb 
-CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
-CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
-CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
-CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
-CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
-AR    build/host/lib/libmruby.a 
-LD    build/host/bin/mruby 
-CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
-LD    build/host/bin/mirb 
-
-Build summary:
-
-================================================
-      Config Name: host
- Output Directory: build/host
-         Binaries: mruby, mrbc, mirb
-    Included Gems:
-             mruby-math
-             mruby-time
-             mruby-struct
-             mruby-sprintf
-================================================
-
-</textarea></td>
-          <td><textarea>ar: creating /home/mruby/arm/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/arm/mruby-mruby-6d0e251/build/host/lib/libmruby.a
-</textarea></td>
-        </tr>
-        <tr>
-          <th>make test</th>
-          <td><textarea>(in /home/mruby/arm/mruby-mruby-6d0e251)
-CC    test/driver.c -> build/host/test/driver.o
-GEN   *.rb -> build/host/test/mrbtest.c
-      MRBC test/assert.rb 
-      MRBC test/t/module.rb 
-      MRBC test/t/kernel.rb 
-      MRBC test/t/integer.rb 
-      MRBC test/t/gc.rb 
-      MRBC test/t/standarderror.rb 
-      MRBC test/t/basicobject.rb 
-      MRBC test/t/object.rb 
-      MRBC test/t/hash.rb 
-      MRBC test/t/comparable.rb 
-      MRBC test/t/exception.rb 
-      MRBC test/t/numeric.rb 
-      MRBC test/t/bs_literal.rb 
-      MRBC test/t/false.rb 
-      MRBC test/t/float.rb 
-      MRBC test/t/class.rb 
-      MRBC test/t/nomethoderror.rb 
-      MRBC test/t/true.rb 
-      MRBC test/t/nil.rb 
-      MRBC test/t/rangeerror.rb 
-      MRBC test/t/typeerror.rb 
-      MRBC test/t/proc.rb 
-      MRBC test/t/literals.rb 
-      MRBC test/t/indexerror.rb 
-      MRBC test/t/nameerror.rb 
-      MRBC test/t/bs_block.rb 
-      MRBC test/t/regexperror.rb 
-      MRBC test/t/string.rb 
-      MRBC test/t/argumenterror.rb 
-      MRBC test/t/runtimeerror.rb 
-      MRBC test/t/array.rb 
-      MRBC test/t/range.rb 
-      MRBC test/t/syntax.rb 
-      MRBC test/t/localjumperror.rb 
-      MRBC test/t/symbol.rb 
-      MRBC test/t/enumerable.rb 
-CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-math/test/math.rb 
-CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-time/test/time.rb 
-CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-struct/test/struct.rb 
-CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
-CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
-AR    build/host/test/mrbtest.a 
-LD    build/host/test/mrbtest 
->>> Test host <<<
-mrbtest - Embeddable Ruby Test
-
-This is a very early version, please test and report errors.
-Thanks :)
-
-............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
-Total: 524
-   OK: 524
-   KO: 0
-Crash: 0
- Time: 43.07573 seconds
-
-</textarea></td>
-          <td><textarea>ar: creating /home/mruby/arm/mruby-mruby-6d0e251/build/host/test/mrbtest.a
-</textarea></td>
-        </tr>
-        
-      </table>
-    
-      
-      <h3><a name="netbsd_mips">netbsd_mips</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
-      <table border='1' style="width:90%;">
-        <tr>
-          <th style="width:100px;">task</th>
-          <th>stdout</th>
-          <th>stderr</th>
-        </tr>
-        <tr>
-          <th>make</th>
-          <td><textarea>(in /home/mruby/mips/mruby-mruby-6d0e251)
-CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
-CC    src/range.c -> build/host/src/range.o
-CC    src/array.c -> build/host/src/array.o
-CC    src/numeric.c -> build/host/src/numeric.o
-CC    src/pool.c -> build/host/src/pool.o
-CC    src/compar.c -> build/host/src/compar.o
-CC    src/crc.c -> build/host/src/crc.o
-CC    src/proc.c -> build/host/src/proc.o
-CC    src/state.c -> build/host/src/state.o
-CC    src/print.c -> build/host/src/print.o
-CC    src/vm.c -> build/host/src/vm.o
-CC    src/class.c -> build/host/src/class.o
-CC    src/load.c -> build/host/src/load.o
-CC    src/codegen.c -> build/host/src/codegen.o
-CC    src/symbol.c -> build/host/src/symbol.o
-CC    src/etc.c -> build/host/src/etc.o
-CC    src/gc.c -> build/host/src/gc.o
-CC    src/init.c -> build/host/src/init.o
-CC    src/dump.c -> build/host/src/dump.o
-CC    src/kernel.c -> build/host/src/kernel.o
-CC    src/hash.c -> build/host/src/hash.o
-CC    src/string.c -> build/host/src/string.o
-CC    src/variable.c -> build/host/src/variable.o
-CC    src/object.c -> build/host/src/object.o
-CC    src/enum.c -> build/host/src/enum.o
-CC    src/error.c -> build/host/src/error.o
-YACC  src/parse.y -> build/host/src/y.tab.c
-CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
-CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
-AR    build/host/lib/libmruby_core.a 
-LD    build/host/bin/mrbc 
-GEN   *.rb -> build/host/mrblib/mrblib.c
-      MRBC mrblib/kernel.rb 
-      MRBC mrblib/compar.rb 
-      MRBC mrblib/hash.rb 
-      MRBC mrblib/numeric.rb 
-      MRBC mrblib/class.rb 
-      MRBC mrblib/string.rb 
-      MRBC mrblib/enum.rb 
-      MRBC mrblib/print.rb 
-      MRBC mrblib/array.rb 
-      MRBC mrblib/range.rb 
-      MRBC mrblib/error.rb 
-CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
-CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
-CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
-CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
-CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
-CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
-      MRBC mrbgems/mruby-struct/mrblib/struct.rb 
-CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
-CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
-CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
-CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
-CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
-AR    build/host/lib/libmruby.a 
-LD    build/host/bin/mruby 
-CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
-LD    build/host/bin/mirb 
-
-Build summary:
-
-================================================
-      Config Name: host
- Output Directory: build/host
-         Binaries: mruby, mrbc, mirb
-    Included Gems:
-             mruby-math
-             mruby-time
-             mruby-struct
-             mruby-sprintf
-================================================
-
-</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mips/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mips/mruby-mruby-6d0e251/build/host/lib/libmruby.a
-</textarea></td>
-        </tr>
-        <tr>
-          <th>make test</th>
-          <td><textarea>(in /home/mruby/mips/mruby-mruby-6d0e251)
-CC    test/driver.c -> build/host/test/driver.o
-GEN   *.rb -> build/host/test/mrbtest.c
-      MRBC test/assert.rb 
-      MRBC test/t/module.rb 
-      MRBC test/t/kernel.rb 
-      MRBC test/t/integer.rb 
-      MRBC test/t/gc.rb 
-      MRBC test/t/standarderror.rb 
-      MRBC test/t/basicobject.rb 
-      MRBC test/t/object.rb 
-      MRBC test/t/hash.rb 
-      MRBC test/t/comparable.rb 
-      MRBC test/t/exception.rb 
-      MRBC test/t/numeric.rb 
-      MRBC test/t/bs_literal.rb 
-      MRBC test/t/false.rb 
-      MRBC test/t/float.rb 
-      MRBC test/t/class.rb 
-      MRBC test/t/nomethoderror.rb 
-      MRBC test/t/true.rb 
-      MRBC test/t/nil.rb 
-      MRBC test/t/rangeerror.rb 
-      MRBC test/t/typeerror.rb 
-      MRBC test/t/proc.rb 
-      MRBC test/t/literals.rb 
-      MRBC test/t/indexerror.rb 
-      MRBC test/t/nameerror.rb 
-      MRBC test/t/bs_block.rb 
-      MRBC test/t/regexperror.rb 
-      MRBC test/t/string.rb 
-      MRBC test/t/argumenterror.rb 
-      MRBC test/t/runtimeerror.rb 
-      MRBC test/t/array.rb 
-      MRBC test/t/range.rb 
-      MRBC test/t/syntax.rb 
-      MRBC test/t/localjumperror.rb 
-      MRBC test/t/symbol.rb 
-      MRBC test/t/enumerable.rb 
-CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-math/test/math.rb 
-CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-time/test/time.rb 
-CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-struct/test/struct.rb 
-CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
-      MRBC test/assert.rb 
-      MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
-CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
-AR    build/host/test/mrbtest.a 
-LD    build/host/test/mrbtest 
->>> Test host <<<
-mrbtest - Embeddable Ruby Test
-
-This is a very early version, please test and report errors.
-Thanks :)
-
-............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
-Total: 524
-   OK: 524
-   KO: 0
-Crash: 0
- Time: 21.691494 seconds
-
-</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mips/mruby-mruby-6d0e251/build/host/test/mrbtest.a
-</textarea></td>
+ Time: 1.160496 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234637-27621-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -2080,7 +1893,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -2153,33 +1966,33 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c: In function 'get_syms_block_size':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_syms_block':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_irep_record':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/tools/mrbc/mrbc.o(.text+0x6b): In function `get_outfilename':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a(dump.o)(.text+0xd5): In function `get_pool_block_size':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/tools/mruby/mruby.o(.text+0x853): In function `main':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/tools/mruby/mruby.o(.text+0x799):/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/tools/mirb/mirb.o(.text+0x52f): In function `main':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/tools/mirb/mirb.o(.text+0x29f):/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/tools/mirb/mirb.c:217: warning: strcat() is almost always misused, please use strlcat()
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c: In function 'get_syms_block_size':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_syms_block':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_irep_record':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/tools/mrbc/mrbc.o(.text+0x6b): In function `get_outfilename':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a(dump.o)(.text+0xd5): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/tools/mruby/mruby.o(.text+0x853): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/tools/mruby/mruby.o(.text+0x799):/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/tools/mirb/mirb.o(.text+0x52f): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/tools/mirb/mirb.o(.text+0x29f):/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/tools/mirb/mirb.c:217: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2244,10 +2057,10 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 0.499069 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233508-19869-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+ Time: 0.64427 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x895): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-7638-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
         </tr>
         
       </table>
@@ -2262,7 +2075,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/array.c -> build/host/src/array.o
 CC    src/class.c -> build/host/src/class.o
@@ -2335,33 +2148,33 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c: In function 'get_syms_block_size':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_syms_block':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c: In function 'write_irep_record':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/tools/mrbc/mrbc.o(.text+0x6d): In function `get_outfilename':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a(dump.o)(.text+0xb5): In function `get_pool_block_size':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/tools/mruby/mruby.o(.text+0x722): In function `main':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/tools/mruby/mruby.o(.text+0x67c):/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/tools/mirb/mirb.o(.text+0x448): In function `main':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/tools/mirb/mirb.o(.text+0x24b):/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/tools/mirb/mirb.c:223: warning: strcat() is almost always misused, please use strlcat()
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+          <td><textarea>/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c: In function 'get_syms_block_size':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c:285: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_syms_block':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c:427: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c:435: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c: In function 'write_irep_record':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c:598: warning: 'crc' may be used uninitialized in this function
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/tools/mrbc/mrbc.o(.text+0x6d): In function `get_outfilename':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/tools/mrbc/mrbc.c:54: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a(dump.o)(.text+0xb5): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/dump.c:250: warning: sprintf() is often misused, please use snprintf()
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/tools/mruby/mruby.o(.text+0x722): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/tools/mruby/mruby.c:96: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/tools/mruby/mruby.o(.text+0x67c):/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/tools/mruby/mruby.c:102: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/tools/mirb/mirb.o(.text+0x448): In function `main':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/tools/mirb/mirb.o(.text+0x24b):/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/tools/mirb/mirb.c:223: warning: strcat() is almost always misused, please use strlcat()
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2401,6 +2214,8 @@ GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/t/true.rb 
       MRBC test/t/typeerror.rb 
 CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
+AR    build/host/lib/libmruby.a 
       MRBC test/assert.rb 
       MRBC mrbgems/mruby-math/test/math.rb 
 CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
@@ -2426,10 +2241,10 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 1.118368 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
-/home/mruby/mruby-test-tool/tmp/20130305233505-19752-build/mruby-mruby-6d0e251/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+ Time: 0.983008 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a(numeric.o)(.text+0x676): In function `flo_to_s':
+/home/mruby/mruby-test-tool/tmp/20130305234740-17063-build/mruby-mruby-fbbe630/src/numeric.c:199: warning: sprintf() is often misused, please use snprintf()</textarea></td>
         </tr>
         
       </table>
@@ -2444,7 +2259,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305223010-20505-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305224213-21639-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/pool.c -> build/host/src/pool.o
 CC    src/kernel.c -> build/host/src/kernel.o
@@ -2517,12 +2332,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305223010-20505-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305223010-20505-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305224213-21639-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305224213-21639-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305223010-20505-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305224213-21639-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2587,8 +2402,8 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 0.4648 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305223010-20505-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 0.447497 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305224213-21639-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
@@ -2603,7 +2418,7 @@ Crash: 0
         </tr>
         <tr>
           <th>make</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305223016-29140-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305224220-30308-build/mruby-mruby-fbbe630)
 CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
 CC    src/vm.c -> build/host/src/vm.o
 CC    src/print.c -> build/host/src/print.o
@@ -2676,12 +2491,12 @@ Build summary:
              mruby-struct
              mruby-sprintf
 ================================================</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305223016-29140-build/mruby-mruby-6d0e251/build/host/lib/libmruby_core.a
-ar: creating /home/mruby/mruby-test-tool/tmp/20130305223016-29140-build/mruby-mruby-6d0e251/build/host/lib/libmruby.a</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305224220-30308-build/mruby-mruby-fbbe630/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/mruby-test-tool/tmp/20130305224220-30308-build/mruby-mruby-fbbe630/build/host/lib/libmruby.a</textarea></td>
         </tr>
         <tr>
           <th>make test</th>
-          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305223016-29140-build/mruby-mruby-6d0e251)
+          <td><textarea>(in /home/mruby/mruby-test-tool/tmp/20130305224220-30308-build/mruby-mruby-fbbe630)
 CC    test/driver.c -> build/host/test/driver.o
 GEN   *.rb -> build/host/test/mrbtest.c
       MRBC test/assert.rb 
@@ -2746,23 +2561,217 @@ Total: 524
    OK: 524
    KO: 0
 Crash: 0
- Time: 1.042045 seconds</textarea></td>
-          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305223016-29140-build/mruby-mruby-6d0e251/build/host/test/mrbtest.a</textarea></td>
+ Time: 1.046169 seconds</textarea></td>
+          <td><textarea>ar: creating /home/mruby/mruby-test-tool/tmp/20130305224220-30308-build/mruby-mruby-fbbe630/build/host/test/mrbtest.a</textarea></td>
         </tr>
         
       </table>
     
 
     <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
-      <pre>commit 6d0e2519dd3e432339b1cb75a0379df6cb8ff518
-Merge: 83c5274 4bc4380
-Author: Yukihiro &quot;Matz&quot; Matsumoto &lt;matz@ruby-lang.org&gt;
-Date:   Tue Mar 5 06:22:43 2013 -0800
+      <pre>commit fbbe6309fcac83414085905d985f17c3606a0643
+Author: kano4 &lt;shinji.warp@gmail.com&gt;
+Date:   Tue Mar 5 23:06:44 2013 +0900
 
-    Merge pull request #952 from kano4/master
-    
-    Add include guard in node.h and Replace tabs with spaces
+    Replace tabs with spaces
 
+diff --git a/src/crc.c b/src/crc.c
+index 0451c36..c150f96 100644
+--- a/src/crc.c
++++ b/src/crc.c
+@@ -19,7 +19,7 @@ uint16_t
+ calc_crc_16_ccitt(unsigned char *src, int nbytes)
+ {
+   uint32_t   crcwk = 0ul;
+-  int             ibyte, ibit;
++  int        ibyte, ibit;
+ 
+   for (ibyte = 0; ibyte &lt; nbytes; ibyte++) {
+     crcwk |= *src++;
+diff --git a/src/string.c b/src/string.c
+index 679b06f..cfef573 100644
+--- a/src/string.c
++++ b/src/string.c
+@@ -62,7 +62,7 @@ str_modify(mrb_state *mrb, struct RString *s)
+       len = s-&gt;len;
+       ptr = (char *)mrb_malloc(mrb, len+1);
+       if (p) {
+-	memcpy(ptr, p, len);
++        memcpy(ptr, p, len);
+       }
+       ptr[len] = 0;
+       s-&gt;ptr = ptr;
+@@ -931,8 +931,8 @@ mrb_str_chomp_bang(mrb_state *mrb, mrb_value str)
+     if (s-&gt;ptr[len-1] == '\n') {
+       s-&gt;len--;
+       if (s-&gt;len &gt; 0 &amp;&amp;
+-	  s-&gt;ptr[s-&gt;len-1] == '\r') {
+-	s-&gt;len--;
++          s-&gt;ptr[s-&gt;len-1] == '\r') {
++        s-&gt;len--;
+       }
+     }
+     else if (s-&gt;ptr[len-1] == '\r') {
+diff --git a/src/variable.c b/src/variable.c
+index d5331f8..8715505 100644
+--- a/src/variable.c
++++ b/src/variable.c
+@@ -60,19 +60,19 @@ iv_put(mrb_state *mrb, iv_tbl *t, mrb_sym sym, mrb_value val)
+       mrb_sym key = seg-&gt;key[i];
+       /* found room in last segment after last_len */
+       if (!seg-&gt;next &amp;&amp; i &gt;= t-&gt;last_len) {
+-	seg-&gt;key[i] = sym;
+-	seg-&gt;val[i] = val;
+-	t-&gt;last_len = i+1;
+-	t-&gt;size++;
+-	return;
++        seg-&gt;key[i] = sym;
++        seg-&gt;val[i] = val;
++        t-&gt;last_len = i+1;
++        t-&gt;size++;
++        return;
+       }
+       if (!matched_seg &amp;&amp; key == 0) {
+-	matched_seg = seg;
+-	matched_idx = i;
++        matched_seg = seg;
++        matched_idx = i;
+       }
+       else if (key == sym) {
+-	seg-&gt;val[i] = val;
+-	return;
++        seg-&gt;val[i] = val;
++        return;
+       }
+     }
+     prev = seg;
+@@ -114,11 +114,11 @@ iv_get(mrb_state *mrb, iv_tbl *t, mrb_sym sym, mrb_value *vp)
+       mrb_sym key = seg-&gt;key[i];
+ 
+       if (!seg-&gt;next &amp;&amp; i &gt;= t-&gt;last_len) {
+-	return FALSE;
++        return FALSE;
+       }
+       if (key == sym) {
+-	if (vp) *vp = seg-&gt;val[i];
+-	return TRUE;
++        if (vp) *vp = seg-&gt;val[i];
++        return TRUE;
+       }
+     }
+     seg = seg-&gt;next;
+@@ -138,13 +138,13 @@ iv_del(mrb_state *mrb, iv_tbl *t, mrb_sym sym, mrb_value *vp)
+       mrb_sym key = seg-&gt;key[i];
+ 
+       if (!seg-&gt;next &amp;&amp; i &gt;= t-&gt;last_len) {
+-	return FALSE;
++        return FALSE;
+       }
+       if (key == sym) {
+-	t-&gt;size--;
+-	seg-&gt;key[i] = 0;
+-	if (vp) *vp = seg-&gt;val[i];
+-	return TRUE;
++        t-&gt;size--;
++        seg-&gt;key[i] = 0;
++        if (vp) *vp = seg-&gt;val[i];
++        return TRUE;
+       }
+     }
+     seg = seg-&gt;next;
+@@ -165,15 +165,15 @@ iv_foreach(mrb_state *mrb, iv_tbl *t, iv_foreach_func *func, void *p)
+ 
+       /* no value in last segment after last_len */
+       if (!seg-&gt;next &amp;&amp; i &gt;= t-&gt;last_len) {
+-	return FALSE;
++        return FALSE;
+       }
+       if (key != 0) {
+-	n =(*func)(mrb, key, seg-&gt;val[i], p);
+-	if (n &gt; 0) return FALSE;
+-	if (n &lt; 0) {
+-	  t-&gt;size--;
+-	  seg-&gt;key[i] = 0;
+-	}
++        n =(*func)(mrb, key, seg-&gt;val[i], p);
++        if (n &gt; 0) return FALSE;
++        if (n &lt; 0) {
++          t-&gt;size--;
++          seg-&gt;key[i] = 0;
++        }
+       }
+     }
+     seg = seg-&gt;next;
+@@ -315,11 +315,11 @@ iv_foreach(mrb_state *mrb, iv_tbl *t, iv_foreach_func *func, void *p)
+   if (h) {
+     for (k = kh_begin(h); k != kh_end(h); k++) {
+       if (kh_exist(h, k)){
+-	n = (*func)(mrb, kh_key(h, k), kh_value(h, k), p);
+-	if (n &gt; 0) return FALSE;
+-	if (n &lt; 0) {
+-	  kh_del(iv, h, k);
+-	}
++        n = (*func)(mrb, kh_key(h, k), kh_value(h, k), p);
++        if (n &gt; 0) return FALSE;
++        if (n &lt; 0) {
++          kh_del(iv, h, k);
++        }
+       }
+     }
+   }
+@@ -769,7 +769,7 @@ mrb_vm_cv_set(mrb_state *mrb, mrb_sym sym, mrb_value v)
+ 
+       if (iv_get(mrb, t, sym, NULL)) {
+         mrb_write_barrier(mrb, (struct RBasic*)c);
+-	iv_put(mrb, t, sym, v);
++        iv_put(mrb, t, sym, v);
+         return;
+       }
+     }
+@@ -816,12 +816,12 @@ const_get(mrb_state *mrb, struct RClass *base, mrb_sym sym)
+   int retry = 0;
+   mrb_sym cm;
+ 
+- L_RETRY:
++L_RETRY:
+   while (c) {
+     if (c-&gt;iv) {
+       t = c-&gt;iv;
+       if (iv_get(mrb, t, sym, &amp;v))
+-	return v;
++        return v;
+     }
+     c = c-&gt;super;
+   }
+@@ -870,7 +870,7 @@ mrb_vm_const_get(mrb_state *mrb, mrb_sym sym)
+       c2 = mrb_class_outer_module(mrb, c2);
+       if (!c2) break;
+       if (c2-&gt;iv &amp;&amp; iv_get(mrb, c2-&gt;iv, sym, &amp;v)) {
+-	return v;
++        return v;
+       }
+     }
+   }
+diff --git a/src/vm.c b/src/vm.c
+index 2255ebd..e33f08a 100644
+--- a/src/vm.c
++++ b/src/vm.c
+@@ -483,12 +483,12 @@ argnum_error(mrb_state *mrb, int num)
+ 
+   if (mrb-&gt;ci-&gt;mid) {
+     len = snprintf(buf, sizeof(buf), &quot;'%s': wrong number of arguments (%d for %d)&quot;,
+-		   mrb_sym2name(mrb, mrb-&gt;ci-&gt;mid),
+-		   mrb-&gt;ci-&gt;argc, num);
++                  mrb_sym2name(mrb, mrb-&gt;ci-&gt;mid),
++                  mrb-&gt;ci-&gt;argc, num);
+   }
+   else {
+     len = snprintf(buf, sizeof(buf), &quot;wrong number of arguments (%d for %d)&quot;,
+-		   mrb-&gt;ci-&gt;argc, num);
++                  mrb-&gt;ci-&gt;argc, num);
+   }
+   exc = mrb_exc_new(mrb, E_ARGUMENT_ERROR, buf, len);
+   mrb-&gt;exc = (struct RObject*)mrb_object(exc);
 </pre>
 
   </body>
