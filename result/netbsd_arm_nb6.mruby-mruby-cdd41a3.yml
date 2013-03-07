@@ -1,0 +1,117 @@
+---
+:date: ''
+:hostname: netbsd_arm_nb6
+:id: mruby-mruby-cdd41a3
+:ball_id: mruby-mruby-cdd41a3
+:zipball_url: https://github.com/mruby/mruby/zipball/cdd41a3
+:repository: mruby/mruby
+:commit: cdd41a3
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! "(in /home/mruby/arm-nb6/mruby-mruby-cdd41a3)\nCC    tools/mruby/mruby.c
+    -> build/host/tools/mruby/mruby.o\nCC    src/range.c -> build/host/src/range.o\nCC
+    \   src/array.c -> build/host/src/array.o\nCC    src/numeric.c -> build/host/src/numeric.o\nCC
+    \   src/pool.c -> build/host/src/pool.o\nCC    src/compar.c -> build/host/src/compar.o\nCC
+    \   src/crc.c -> build/host/src/crc.o\nCC    src/proc.c -> build/host/src/proc.o\nCC
+    \   src/state.c -> build/host/src/state.o\nCC    src/print.c -> build/host/src/print.o\nCC
+    \   src/vm.c -> build/host/src/vm.o\nCC    src/class.c -> build/host/src/class.o\nCC
+    \   src/load.c -> build/host/src/load.o\nCC    src/codegen.c -> build/host/src/codegen.o\nCC
+    \   src/symbol.c -> build/host/src/symbol.o\nCC    src/etc.c -> build/host/src/etc.o\nCC
+    \   src/gc.c -> build/host/src/gc.o\nCC    src/init.c -> build/host/src/init.o\nCC
+    \   src/dump.c -> build/host/src/dump.o\nCC    src/kernel.c -> build/host/src/kernel.o\nCC
+    \   src/hash.c -> build/host/src/hash.o\nCC    src/string.c -> build/host/src/string.o\nCC
+    \   src/variable.c -> build/host/src/variable.o\nCC    src/object.c -> build/host/src/object.o\nCC
+    \   src/enum.c -> build/host/src/enum.o\nCC    src/error.c -> build/host/src/error.o\nYACC
+    \ src/parse.y -> build/host/src/y.tab.c\nCC    build/host/src/y.tab.c -> build/host/src/y.tab.o\nCC
+    \   tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o\nAR    build/host/lib/libmruby_core.a
+    \nLD    build/host/bin/mrbc \nGEN   *.rb -> build/host/mrblib/mrblib.c\n      MRBC
+    mrblib/kernel.rb \n      MRBC mrblib/compar.rb \n      MRBC mrblib/hash.rb \n
+    \     MRBC mrblib/numeric.rb \n      MRBC mrblib/class.rb \n      MRBC mrblib/string.rb
+    \n      MRBC mrblib/enum.rb \n      MRBC mrblib/print.rb \n      MRBC mrblib/array.rb
+    \n      MRBC mrblib/range.rb \n      MRBC mrblib/error.rb \nCC    build/host/mrblib/mrblib.c
+    -> build/host/mrblib/mrblib.o\nCC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o\nCC
+    \   build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o\nCC
+    \   mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o\nCC
+    \   build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o\nCC
+    \   mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o\n
+    \     MRBC mrbgems/mruby-struct/mrblib/struct.rb \nCC    build/host/mrbgems/mruby-struct/gem_init.c
+    -> build/host/mrbgems/mruby-struct/gem_init.o\nCC    mrbgems/mruby-sprintf/src/kernel.c
+    -> build/host/mrbgems/mruby-sprintf/src/kernel.o\nCC    mrbgems/mruby-sprintf/src/sprintf.c
+    -> build/host/mrbgems/mruby-sprintf/src/sprintf.o\nCC    build/host/mrbgems/mruby-sprintf/gem_init.c
+    -> build/host/mrbgems/mruby-sprintf/gem_init.o\nCC    mrbgems/mruby-string-ext/src/string.c
+    -> build/host/mrbgems/mruby-string-ext/src/string.o\nCC    build/host/mrbgems/mruby-string-ext/gem_init.c
+    -> build/host/mrbgems/mruby-string-ext/gem_init.o\nCC    build/host/mrbgems/gem_init.c
+    -> build/host/mrbgems/gem_init.o\nAR    build/host/lib/libmruby.a \nLD    build/host/bin/mruby
+    \nCC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o\nLD    build/host/bin/mirb
+    \n\nBuild summary:\n\n================================================\n      Config
+    Name: host\n Output Directory: build/host\n         Binaries: mruby, mrbc, mirb\n
+    \   Included Gems:\n             mruby-math\n             mruby-time\n             mruby-struct\n
+    \            mruby-sprintf\n             mruby-string-ext\n================================================\n\n"
+  :stderr: ! 'ar: creating /home/mruby/arm-nb6/mruby-mruby-cdd41a3/build/host/lib/libmruby_core.a
+
+    ar: creating /home/mruby/arm-nb6/mruby-mruby-cdd41a3/build/host/lib/libmruby.a
+
+'
+  :status: success
+:make_test:
+  :stdout: ! "(in /home/mruby/arm-nb6/mruby-mruby-cdd41a3)\nCC    test/driver.c ->
+    build/host/test/driver.o\nGEN   *.rb -> build/host/test/mrbtest.c\n      MRBC
+    test/assert.rb \n      MRBC test/t/module.rb \n      MRBC test/t/kernel.rb \n
+    \     MRBC test/t/integer.rb \n      MRBC test/t/gc.rb \n      MRBC test/t/standarderror.rb
+    \n      MRBC test/t/basicobject.rb \n      MRBC test/t/object.rb \n      MRBC
+    test/t/hash.rb \n      MRBC test/t/comparable.rb \n      MRBC test/t/exception.rb
+    \n      MRBC test/t/numeric.rb \n      MRBC test/t/bs_literal.rb \n      MRBC
+    test/t/false.rb \n      MRBC test/t/float.rb \n      MRBC test/t/class.rb \n      MRBC
+    test/t/nomethoderror.rb \n      MRBC test/t/true.rb \n      MRBC test/t/nil.rb
+    \n      MRBC test/t/rangeerror.rb \n      MRBC test/t/typeerror.rb \n      MRBC
+    test/t/proc.rb \n      MRBC test/t/literals.rb \n      MRBC test/t/indexerror.rb
+    \n      MRBC test/t/nameerror.rb \n      MRBC test/t/bs_block.rb \n      MRBC
+    test/t/regexperror.rb \n      MRBC test/t/string.rb \n      MRBC test/t/argumenterror.rb
+    \n      MRBC test/t/runtimeerror.rb \n      MRBC test/t/array.rb \n      MRBC
+    test/t/range.rb \n      MRBC test/t/syntax.rb \n      MRBC test/t/localjumperror.rb
+    \n      MRBC test/t/symbol.rb \n      MRBC test/t/enumerable.rb \nCC    build/host/test/mrbtest.c
+    -> build/host/test/mrbtest.o\n      MRBC test/assert.rb \n      MRBC mrbgems/mruby-math/test/math.rb
+    \nCC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o\n
+    \     MRBC test/assert.rb \n      MRBC mrbgems/mruby-time/test/time.rb \nCC    build/host/mrbgems/mruby-time/gem_test.c
+    -> build/host/mrbgems/mruby-time/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    mrbgems/mruby-struct/test/struct.rb \nCC    build/host/mrbgems/mruby-struct/gem_test.c
+    -> build/host/mrbgems/mruby-struct/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    mrbgems/mruby-sprintf/test/sprintf.rb \nCC    build/host/mrbgems/mruby-sprintf/gem_test.c
+    -> build/host/mrbgems/mruby-sprintf/gem_test.o\n      MRBC test/assert.rb \n      MRBC
+    mrbgems/mruby-string-ext/test/string.rb \nCC    build/host/mrbgems/mruby-string-ext/gem_test.c
+    -> build/host/mrbgems/mruby-string-ext/gem_test.o\nAR    build/host/test/mrbtest.a
+    \nLD    build/host/test/mrbtest \n>>> Test host <<<\nmrbtest - Embeddable Ruby
+    Test\n\nThis is a very early version, please test and report errors.\nThanks :)\n\n.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    525\n   OK: 525\n   KO: 0\nCrash: 0\n Time: 9.28359 seconds\n\n"
+  :stderr: ! 'ar: creating /home/mruby/arm-nb6/mruby-mruby-cdd41a3/build/host/test/mrbtest.a
+
+'
+  :status: success
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
+:filesize:
+  lib/libmruby.a: 460528
+  lib/libmruby_core.a: 397672
+  bin/mirb: 435784
+  bin/mrbc: 378436
+  test/mrbtest: 581340
+  bin/mruby: 437832
