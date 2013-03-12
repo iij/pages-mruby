@@ -1,0 +1,640 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div style="background-color:#a0a0a0;">
+      
+        
+        <a href="iij-mruby.html">iij-mruby</a>
+      
+        
+        <a href="mruby-mruby.html">mruby-mruby</a>
+      
+    </div>
+
+    
+    
+
+    <h1>mruby build & test report
+      <span style="font-size:small;">(mruby/mruby - e7fe4ed)</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://github.com/mruby/mruby/commit/e7fe4ed" target="_blank">commit info on github</a></li>
+      
+      
+        
+        
+        
+          <li><a href="mruby-mruby.html">back to mruby-mruby</a></li>
+        
+      
+      <li>
+      <pre>commit e7fe4ed49914974f04ac3b409c860df7fdbd9522
+Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
+Date:   Tue Mar 12 20:47:34 2013 +0900
+
+    Use suitable types for variables.
+
+</pre>
+      <a href="#commitlog">commit log</a>
+      </li>
+  </ul>
+
+    <h2>mrbtest</h2>
+    
+    <table border="1">
+      <tr>
+        
+          <th rowspan="2">Name</th>
+        
+          <th rowspan="2">Build-Status</th>
+        
+          <th rowspan="2">Mrbtest-Status</th>
+        
+          <th rowspan="2">Total</th>
+        
+          <th rowspan="2">OK</th>
+        
+          <th rowspan="2">KO</th>
+        
+          <th rowspan="2">Crash</th>
+        
+          <th rowspan="2">Fail</th>
+        
+          <th rowspan="2">Msg</th>
+        
+        <th colspan="2">FileSize (Byte)</th>
+      </tr>
+      <tr>
+        
+          <th>bin/mruby</th>
+        
+          <th>lib/libmruby.a</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd_arm_nb6">netbsd_arm_nb6</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>533</td>
+          <td>533</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;">440,496</td>
+          
+            <td style="text-align:right;">464,500</td>
+          
+        </tr>
+      
+    </table>
+
+    
+
+    <h2>environment <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm_nb6</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="netbsd_arm_nb6">netbsd_arm_nb6</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm-nb6/mruby-mruby-e7fe4ed)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+YACC  src/parse.y -> build/host/src/y.tab.c
+CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+AR    build/host/lib/libmruby_core.a 
+LD    build/host/bin/mrbc 
+GEN   *.rb -> build/host/mrblib/mrblib.c
+      MRBC mrblib/kernel.rb 
+      MRBC mrblib/compar.rb 
+      MRBC mrblib/hash.rb 
+      MRBC mrblib/numeric.rb 
+      MRBC mrblib/class.rb 
+      MRBC mrblib/string.rb 
+      MRBC mrblib/enum.rb 
+      MRBC mrblib/print.rb 
+      MRBC mrblib/array.rb 
+      MRBC mrblib/range.rb 
+      MRBC mrblib/error.rb 
+CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
+CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
+CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
+      MRBC mrbgems/mruby-struct/mrblib/struct.rb 
+CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
+CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
+CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
+CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
+CC    mrbgems/mruby-string-ext/src/string.c -> build/host/mrbgems/mruby-string-ext/src/string.o
+      MRBC mrbgems/mruby-string-ext/mrblib/string.rb 
+CC    build/host/mrbgems/mruby-string-ext/gem_init.c -> build/host/mrbgems/mruby-string-ext/gem_init.o
+CC    mrbgems/mruby-numeric-ext/src/numeric_ext.c -> build/host/mrbgems/mruby-numeric-ext/src/numeric_ext.o
+CC    build/host/mrbgems/mruby-numeric-ext/gem_init.c -> build/host/mrbgems/mruby-numeric-ext/gem_init.o
+CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+AR    build/host/lib/libmruby.a 
+LD    build/host/bin/mruby 
+CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+LD    build/host/bin/mirb 
+
+Build summary:
+
+================================================
+      Config Name: host
+ Output Directory: build/host
+         Binaries: mruby, mrbc, mirb
+    Included Gems:
+             mruby-math
+             mruby-time
+             mruby-struct
+             mruby-sprintf
+             mruby-string-ext
+             mruby-numeric-ext
+================================================
+
+</textarea></td>
+          <td><textarea>ar: creating /home/mruby/arm-nb6/mruby-mruby-e7fe4ed/build/host/lib/libmruby_core.a
+ar: creating /home/mruby/arm-nb6/mruby-mruby-e7fe4ed/build/host/lib/libmruby.a
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm-nb6/mruby-mruby-e7fe4ed)
+CC    test/driver.c -> build/host/test/driver.o
+GEN   *.rb -> build/host/test/mrbtest.c
+      MRBC test/assert.rb 
+      MRBC test/t/module.rb 
+      MRBC test/t/kernel.rb 
+      MRBC test/t/integer.rb 
+      MRBC test/t/gc.rb 
+      MRBC test/t/standarderror.rb 
+      MRBC test/t/basicobject.rb 
+      MRBC test/t/object.rb 
+      MRBC test/t/hash.rb 
+      MRBC test/t/comparable.rb 
+      MRBC test/t/exception.rb 
+      MRBC test/t/numeric.rb 
+      MRBC test/t/bs_literal.rb 
+      MRBC test/t/false.rb 
+      MRBC test/t/float.rb 
+      MRBC test/t/class.rb 
+      MRBC test/t/nomethoderror.rb 
+      MRBC test/t/true.rb 
+      MRBC test/t/nil.rb 
+      MRBC test/t/rangeerror.rb 
+      MRBC test/t/typeerror.rb 
+      MRBC test/t/proc.rb 
+      MRBC test/t/literals.rb 
+      MRBC test/t/indexerror.rb 
+      MRBC test/t/nameerror.rb 
+      MRBC test/t/bs_block.rb 
+      MRBC test/t/regexperror.rb 
+      MRBC test/t/string.rb 
+      MRBC test/t/argumenterror.rb 
+      MRBC test/t/runtimeerror.rb 
+      MRBC test/t/array.rb 
+      MRBC test/t/range.rb 
+      MRBC test/t/syntax.rb 
+      MRBC test/t/localjumperror.rb 
+      MRBC test/t/symbol.rb 
+      MRBC test/t/enumerable.rb 
+CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-math/test/math.rb 
+CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-time/test/time.rb 
+CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-struct/test/struct.rb 
+CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
+CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-string-ext/test/string.rb 
+CC    build/host/mrbgems/mruby-string-ext/gem_test.c -> build/host/mrbgems/mruby-string-ext/gem_test.o
+      MRBC test/assert.rb 
+      MRBC mrbgems/mruby-numeric-ext/test/numeric.rb 
+CC    build/host/mrbgems/mruby-numeric-ext/gem_test.c -> build/host/mrbgems/mruby-numeric-ext/gem_test.o
+AR    build/host/test/mrbtest.a 
+LD    build/host/test/mrbtest 
+>>> Test host <<<
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 533
+   OK: 533
+   KO: 0
+Crash: 0
+ Time: 9.251762 seconds
+
+</textarea></td>
+          <td><textarea>ar: creating /home/mruby/arm-nb6/mruby-mruby-e7fe4ed/build/host/test/mrbtest.a
+</textarea></td>
+        </tr>
+        
+      </table>
+    
+
+    <h2><a name="commitlog">commit log</a> <span style="font-size:small;"><a href="#top">#top</a></span></h2>
+      <pre>commit e7fe4ed49914974f04ac3b409c860df7fdbd9522
+Author: Masaki Muranaka &lt;monaka@monami-ya.jp&gt;
+Date:   Tue Mar 12 20:47:34 2013 +0900
+
+    Use suitable types for variables.
+
+diff --git a/include/mruby/string.h b/include/mruby/string.h
+index 4ba4ce5..9e6de48 100644
+--- a/include/mruby/string.h
++++ b/include/mruby/string.h
+@@ -68,7 +68,7 @@ mrb_value mrb_str_buf_append(mrb_state *mrb, mrb_value str, mrb_value str2);
+ mrb_value mrb_str_inspect(mrb_state *mrb, mrb_value str);
+ int mrb_str_equal(mrb_state *mrb, mrb_value str1, mrb_value str2);
+ mrb_value mrb_str_dump(mrb_state *mrb, mrb_value str);
+-mrb_value mrb_str_cat(mrb_state *mrb, mrb_value str, const char *ptr, long len);
++mrb_value mrb_str_cat(mrb_state *mrb, mrb_value str, const char *ptr, mrb_int len);
+ mrb_value mrb_str_append(mrb_state *mrb, mrb_value str, mrb_value str2);
+ 
+ int mrb_str_cmp(mrb_state *mrb, mrb_value str1, mrb_value str2);
+diff --git a/src/string.c b/src/string.c
+index bcf2293..d58886b 100644
+--- a/src/string.c
++++ b/src/string.c
+@@ -6,6 +6,8 @@
+ 
+ #include &quot;mruby.h&quot;
+ 
++#include &lt;stdint.h&gt;
++#include &lt;stddef.h&gt;
+ #include &lt;string.h&gt;
+ #include &quot;mruby/string.h&quot;
+ #include &quot;mruby/class.h&quot;
+@@ -20,7 +22,7 @@
+ const char mrb_digitmap[] = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;;
+ 
+ static mrb_value str_replace(mrb_state *mrb, struct RString *s1, struct RString *s2);
+-static mrb_value mrb_str_subseq(mrb_state *mrb, mrb_value str, int beg, int len);
++static mrb_value mrb_str_subseq(mrb_state *mrb, mrb_value str, mrb_int beg, mrb_int len);
+ 
+ #define RESIZE_CAPA(s,capacity) do {\
+       s-&gt;ptr = (char *)mrb_realloc(mrb, s-&gt;ptr, (capacity)+1);\
+@@ -56,11 +58,11 @@ str_modify(mrb_state *mrb, struct RString *s)
+     }
+     else {
+       char *ptr, *p;
+-      long len;
++      mrb_int len;
+ 
+       p = s-&gt;ptr;
+       len = s-&gt;len;
+-      ptr = (char *)mrb_malloc(mrb, len+1);
++      ptr = (char *)mrb_malloc(mrb, (size_t)len + 1);
+       if (p) {
+         memcpy(ptr, p, len);
+       }
+@@ -175,9 +177,11 @@ mrb_str_buf_new(mrb_state *mrb, int capa)
+ }
+ 
+ static void
+-str_buf_cat(mrb_state *mrb, struct RString *s, const char *ptr, int len)
++str_buf_cat(mrb_state *mrb, struct RString *s, const char *ptr, mrb_int len)
+ {
+-  long capa, total, off = -1;
++  mrb_int capa;
++  mrb_int total;
++  ptrdiff_t off = -1;
+ 
+   str_modify(mrb, s);
+   if (ptr &gt;= s-&gt;ptr &amp;&amp; ptr &lt;= s-&gt;ptr + s-&gt;len) {
+@@ -185,13 +189,13 @@ str_buf_cat(mrb_state *mrb, struct RString *s, const char *ptr, int len)
+   }
+   if (len == 0) return;
+   capa = s-&gt;aux.capa;
+-  if (s-&gt;len &gt;= INT_MAX - len) {
++  if (s-&gt;len &gt;= MRB_INT_MAX - len) {
+     mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;string sizes too big&quot;);
+   }
+   total = s-&gt;len+len;
+   if (capa &lt;= total) {
+     while (total &gt; capa) {
+-        if (capa + 1 &gt;= INT_MAX / 2) {
++        if (capa + 1 &gt;= MRB_INT_MAX / 2) {
+           capa = (total + 4095) / 4096;
+           break;
+         }
+@@ -208,7 +212,7 @@ str_buf_cat(mrb_state *mrb, struct RString *s, const char *ptr, int len)
+ }
+ 
+ mrb_value
+-mrb_str_buf_cat(mrb_state *mrb, mrb_value str, const char *ptr, int len)
++mrb_str_buf_cat(mrb_state *mrb, mrb_value str, const char *ptr, mrb_int len)
+ {
+   if (len == 0) return str;
+   str_buf_cat(mrb, mrb_str_ptr(str), ptr, len);
+@@ -216,10 +220,14 @@ mrb_str_buf_cat(mrb_state *mrb, mrb_value str, const char *ptr, int len)
+ }
+ 
+ mrb_value
+-mrb_str_new(mrb_state *mrb, const char *p, int len)
++mrb_str_new(mrb_state *mrb, const char *p, mrb_int len)
+ {
+   struct RString *s;
+ 
++  if (len &lt; 0) {
++    len = 0;
++  }
++
+   s = str_new(mrb, p, len);
+   return mrb_obj_value(s);
+ }
+@@ -446,7 +454,7 @@ mrb_str_times(mrb_state *mrb, mrb_value self)
+   if (times &lt; 0) {
+     mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;negative argument&quot;);
+   }
+-  if (times &amp;&amp; INT_MAX/times &lt; RSTRING_LEN(self)) {
++  if (times &amp;&amp; MRB_INT_MAX / times &lt; RSTRING_LEN(self)) {
+     mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;argument too big&quot;);
+   }
+ 
+@@ -557,7 +565,9 @@ mrb_str_cmp_m(mrb_state *mrb, mrb_value str1)
+ static int
+ str_eql(mrb_state *mrb, const mrb_value str1, const mrb_value str2)
+ {
+-  const long len = RSTRING_LEN(str1);
++  const size_t len = RSTRING_LEN(str1);
++
++  /* PARANOID: assert(SIZE_MAX &gt;= MRB_INT_MAX) */
+ 
+   if (len != RSTRING_LEN(str2)) return FALSE;
+   if (memcmp(RSTRING_PTR(str1), RSTRING_PTR(str2), len) == 0)
+@@ -657,8 +667,8 @@ mrb_str_match(mrb_state *mrb, mrb_value self/* x */)
+   return mrb_nil_value();
+ }
+ 
+-static inline long
+-mrb_memsearch_qs(const unsigned char *xs, long m, const unsigned char *ys, long n)
++static inline mrb_int
++mrb_memsearch_qs(const unsigned char *xs, mrb_int m, const unsigned char *ys, mrb_int n)
+ {
+   const unsigned char *x = xs, *xe = xs + m;
+   const unsigned char *y = ys;
+@@ -677,8 +687,8 @@ mrb_memsearch_qs(const unsigned char *xs, long m, const unsigned char *ys, long
+   return -1;
+ }
+ 
+-static int
+-mrb_memsearch(const void *x0, int m, const void *y0, int n)
++static mrb_int
++mrb_memsearch(const void *x0, mrb_int m, const void *y0, mrb_int n)
+ {
+   const unsigned char *x = (const unsigned char *)x0, *y = (const unsigned char *)y0;
+ 
+@@ -705,7 +715,8 @@ mrb_str_index(mrb_state *mrb, mrb_value str, mrb_value sub, mrb_int offset)
+ {
+   mrb_int pos;
+   char *s, *sptr;
+-  int len, slen;
++  mrb_int len, slen;
++
+   len = RSTRING_LEN(str);
+   slen = RSTRING_LEN(sub);
+   if (offset &lt; 0) {
+@@ -739,7 +750,7 @@ mrb_str_dup(mrb_state *mrb, mrb_value str)
+ static mrb_value
+ mrb_str_aref(mrb_state *mrb, mrb_value str, mrb_value indx)
+ {
+-  long idx;
++  mrb_int idx;
+ 
+   if (!strcmp(_obj_classname(mrb, indx), REGEXP_CLASS)) {
+     mrb_raise(mrb, E_NOTIMP_ERROR, &quot;Regexp Class not implemented&quot;);
+@@ -920,7 +931,8 @@ mrb_str_chomp_bang(mrb_state *mrb, mrb_value str)
+   mrb_value rs;
+   mrb_int newline;
+   char *p, *pp;
+-  long len, rslen;
++  mrb_int rslen;
++  mrb_int len;
+   struct RString *s = mrb_str_ptr(str);
+ 
+   str_modify(mrb, s);
+@@ -1157,7 +1169,7 @@ mrb_str_eql(mrb_state *mrb, mrb_value self)
+ }
+ 
+ static mrb_value
+-mrb_str_subseq(mrb_state *mrb, mrb_value str, int beg, int len)
++mrb_str_subseq(mrb_state *mrb, mrb_value str, mrb_int beg, mrb_int len)
+ {
+   struct RString *orig, *s;
+   mrb_shared_string *shared;
+@@ -1176,7 +1188,7 @@ mrb_str_subseq(mrb_state *mrb, mrb_value str, int beg, int len)
+ }
+ 
+ mrb_value
+-mrb_str_substr(mrb_state *mrb, mrb_value str, mrb_int beg, int len)
++mrb_str_substr(mrb_state *mrb, mrb_value str, mrb_int beg, mrb_int len)
+ {
+   mrb_value str2;
+ 
+@@ -1267,7 +1279,7 @@ mrb_str_hash(mrb_state *mrb, mrb_value str)
+ {
+   /* 1-8-7 */
+   struct RString *s = mrb_str_ptr(str);
+-  long len = s-&gt;len;
++  mrb_int len = s-&gt;len;
+   char *p = s-&gt;ptr;
+   mrb_int key = 0;
+ 
+@@ -1381,7 +1393,7 @@ mrb_str_index_m(mrb_state *mrb, mrb_value str)
+   switch (mrb_type(sub)) {
+     case MRB_TT_FIXNUM: {
+       int c = mrb_fixnum(sub);
+-      long len = RSTRING_LEN(str);
++      mrb_int len = RSTRING_LEN(str);
+       unsigned char *p = (unsigned char*)RSTRING_PTR(str);
+ 
+       for (;pos&lt;len;pos++) {
+@@ -1637,7 +1649,7 @@ mrb_str_rindex(mrb_state *mrb, mrb_value str, mrb_value sub, mrb_int pos)
+   char *s, *sbeg, *t;
+   struct RString *ps = mrb_str_ptr(str);
+   struct RString *psub = mrb_str_ptr(sub);
+-  long len = psub-&gt;len;
++  mrb_int len = psub-&gt;len;
+ 
+   /* substring longer than string */
+   if (ps-&gt;len &lt; len) return -1;
+@@ -1728,7 +1740,7 @@ mrb_str_rindex_m(mrb_state *mrb, mrb_value str)
+   switch (mrb_type(sub)) {
+     case MRB_TT_FIXNUM: {
+       int c = mrb_fixnum(sub);
+-      long len = RSTRING_LEN(str);
++      mrb_int len = RSTRING_LEN(str);
+       unsigned char *p = (unsigned char*)RSTRING_PTR(str);
+ 
+       for (pos=len;pos&gt;=0;pos--) {
+@@ -1865,7 +1877,9 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
+   int argc;
+   mrb_value spat = mrb_nil_value();
+   enum {awk, string, regexp} split_type = string;
+-  long beg, end, i = 0, lim_p;
++  long i = 0, lim_p;
++  mrb_int beg;
++  mrb_int end;
+   mrb_int lim = 0;
+   mrb_value result, tmp;
+ 
+@@ -1934,7 +1948,7 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
+     char *ptr = RSTRING_PTR(str);
+     char *temp = ptr;
+     char *eptr = RSTRING_END(str);
+-    long slen = RSTRING_LEN(spat);
++    mrb_int slen = RSTRING_LEN(spat);
+ 
+     if (slen == 0) {
+       int ai = mrb_gc_arena_save(mrb);
+@@ -1972,7 +1986,7 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
+     mrb_ary_push(mrb, result, tmp);
+   }
+   if (!lim_p &amp;&amp; lim == 0) {
+-    long len;
++    mrb_int len;
+     while ((len = RARRAY_LEN(result)) &gt; 0 &amp;&amp;
+            (tmp = RARRAY_PTR(result)[len-1], RSTRING_LEN(tmp) == 0))
+       mrb_ary_pop(mrb, result);
+@@ -2054,7 +2068,7 @@ mrb_cstr_to_inum(mrb_state *mrb, const char *str, int base, int badcheck)
+   char *end;
+   char sign = 1;
+   int c;
+-  unsigned long val;
++  mrb_int val;
+ 
+ #undef ISDIGIT
+ #define ISDIGIT(c) ('0' &lt;= (c) &amp;&amp; (c) &lt;= '9')
+@@ -2166,11 +2180,7 @@ mrb_cstr_to_inum(mrb_state *mrb, const char *str, int base, int badcheck)
+     if (*end) goto bad;        /* trailing garbage */
+   }
+ 
+-  if (sign) return mrb_fixnum_value(val);
+-  else {
+-    long result = -(long)val;
+-    return mrb_fixnum_value(result);
+-  }
++  return mrb_fixnum_value(sign ? val : -val);
+ bad:
+   mrb_raisef(mrb, E_ARGUMENT_ERROR, &quot;invalid string for number(%s)&quot;, str);
+   /* not reached */
+@@ -2440,7 +2450,7 @@ mrb_str_upcase(mrb_state *mrb, mrb_value self)
+ mrb_value
+ mrb_str_dump(mrb_state *mrb, mrb_value str)
+ {
+-    long len;
++    mrb_int len;
+     const char *p, *pend;
+     char *q;
+     struct RString *result;
+@@ -2542,7 +2552,7 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
+ }
+ 
+ mrb_value
+-mrb_str_cat(mrb_state *mrb, mrb_value str, const char *ptr, long len)
++mrb_str_cat(mrb_state *mrb, mrb_value str, const char *ptr, mrb_int len)
+ {
+   if (len &lt; 0) {
+     mrb_raise(mrb, E_ARGUMENT_ERROR, &quot;negative string size (or size too big)&quot;);
+@@ -2554,7 +2564,14 @@ mrb_str_cat(mrb_state *mrb, mrb_value str, const char *ptr, long len)
+ mrb_value
+ mrb_str_cat2(mrb_state *mrb, mrb_value str, const char *ptr)
+ {
+-  return mrb_str_cat(mrb, str, ptr, strlen(ptr));
++  size_t len;
++
++  len = strlen(ptr);
++  if (len &gt; MRB_INT_MAX) {
++    len = MRB_INT_MAX;
++  }
++
++  return mrb_str_cat(mrb, str, ptr, len);
+ }
+ 
+ mrb_value
+</pre>
+
+  </body>
+</html>
