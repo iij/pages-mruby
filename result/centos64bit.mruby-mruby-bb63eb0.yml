@@ -1,0 +1,212 @@
+--- 
+:date: 2013-03-15 01:02:19.882321 +09:00
+:id: mruby-mruby-bb63eb0
+:zipball_url: https://github.com/mruby/mruby/zipball/bb63eb0
+:make: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130315010226-24671-build/mruby-mruby-bb63eb0)
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+    CC    src/gc.c -> build/host/src/gc.o
+    CC    src/print.c -> build/host/src/print.o
+    CC    src/numeric.c -> build/host/src/numeric.o
+    CC    src/hash.c -> build/host/src/hash.o
+    CC    src/proc.c -> build/host/src/proc.o
+    CC    src/error.c -> build/host/src/error.o
+    CC    src/dump.c -> build/host/src/dump.o
+    CC    src/compar.c -> build/host/src/compar.o
+    CC    src/variable.c -> build/host/src/variable.o
+    CC    src/state.c -> build/host/src/state.o
+    CC    src/symbol.c -> build/host/src/symbol.o
+    CC    src/load.c -> build/host/src/load.o
+    CC    src/codegen.c -> build/host/src/codegen.o
+    CC    src/crc.c -> build/host/src/crc.o
+    CC    src/enum.c -> build/host/src/enum.o
+    CC    src/init.c -> build/host/src/init.o
+    CC    src/kernel.c -> build/host/src/kernel.o
+    CC    src/array.c -> build/host/src/array.o
+    CC    src/pool.c -> build/host/src/pool.o
+    CC    src/string.c -> build/host/src/string.o
+    CC    src/class.c -> build/host/src/class.o
+    CC    src/object.c -> build/host/src/object.o
+    CC    src/vm.c -> build/host/src/vm.o
+    CC    src/etc.c -> build/host/src/etc.o
+    CC    src/range.c -> build/host/src/range.o
+    YACC  src/parse.y -> build/host/src/y.tab.c
+    CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+    AR    build/host/lib/libmruby_core.a 
+    LD    build/host/bin/mrbc 
+    GEN   *.rb -> build/host/mrblib/mrblib.c
+          MRBC mrblib/print.rb 
+          MRBC mrblib/numeric.rb 
+          MRBC mrblib/string.rb 
+          MRBC mrblib/class.rb 
+          MRBC mrblib/hash.rb 
+          MRBC mrblib/compar.rb 
+          MRBC mrblib/range.rb 
+          MRBC mrblib/error.rb 
+          MRBC mrblib/enum.rb 
+          MRBC mrblib/kernel.rb 
+          MRBC mrblib/array.rb 
+    CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+    CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
+    CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
+    CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+    CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+    CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
+          MRBC mrbgems/mruby-struct/mrblib/struct.rb 
+    CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
+    CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
+    CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
+    CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
+    CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+    AR    build/host/lib/libmruby.a 
+    LD    build/host/bin/mruby 
+    CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+    LD    build/host/bin/mirb 
+    
+    Build summary:
+    
+    ================================================
+          Config Name: host
+     Output Directory: build/host
+             Binaries: mruby, mrbc, mirb
+        Included Gems:
+                 mruby-math
+                 mruby-time
+                 mruby-struct
+                 mruby-sprintf
+    ================================================
+  :stderr: |-
+    ar: creating /home/mruby/mruby-test-tool/tmp/20130315010226-24671-build/mruby-mruby-bb63eb0/build/host/lib/libmruby_core.a
+    ar: creating /home/mruby/mruby-test-tool/tmp/20130315010226-24671-build/mruby-mruby-bb63eb0/build/host/lib/libmruby.a
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: success
+:make_test: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130315010226-24671-build/mruby-mruby-bb63eb0)
+    CC    test/driver.c -> build/host/test/driver.o
+    GEN   *.rb -> build/host/test/mrbtest.c
+          MRBC test/assert.rb 
+          MRBC test/t/indexerror.rb 
+          MRBC test/t/symbol.rb 
+          MRBC test/t/module.rb 
+          MRBC test/t/basicobject.rb 
+          MRBC test/t/syntax.rb 
+          MRBC test/t/gc.rb 
+          MRBC test/t/numeric.rb 
+          MRBC test/t/regexperror.rb 
+          MRBC test/t/string.rb 
+          MRBC test/t/integer.rb 
+          MRBC test/t/bs_literal.rb 
+          MRBC test/t/bs_block.rb 
+          MRBC test/t/localjumperror.rb 
+          MRBC test/t/rangeerror.rb 
+          MRBC test/t/nomethoderror.rb 
+          MRBC test/t/standarderror.rb 
+          MRBC test/t/proc.rb 
+          MRBC test/t/typeerror.rb 
+          MRBC test/t/class.rb 
+          MRBC test/t/argumenterror.rb 
+          MRBC test/t/hash.rb 
+          MRBC test/t/nil.rb 
+          MRBC test/t/range.rb 
+          MRBC test/t/runtimeerror.rb 
+          MRBC test/t/false.rb 
+          MRBC test/t/true.rb 
+          MRBC test/t/nameerror.rb 
+          MRBC test/t/object.rb 
+          MRBC test/t/enumerable.rb 
+          MRBC test/t/float.rb 
+          MRBC test/t/exception.rb 
+          MRBC test/t/kernel.rb 
+          MRBC test/t/array.rb 
+          MRBC test/t/comparable.rb 
+          MRBC test/t/literals.rb 
+    CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-math/test/math.rb 
+    CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-time/test/time.rb 
+    CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-struct/test/struct.rb 
+    CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
+    CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
+    AR    build/host/test/mrbtest.a 
+    LD    build/host/test/mrbtest 
+    >>> Test host <<<
+    mrbtest - Embeddable Ruby Test
+    
+    This is a very early version, please test and report errors.
+    Thanks :)
+    
+    ............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+    Total: 524
+       OK: 524
+       KO: 0
+    Crash: 0
+     Time: 1.563913 seconds
+  :stderr: "ar: creating /home/mruby/mruby-test-tool/tmp/20130315010226-24671-build/mruby-mruby-bb63eb0/build/host/test/mrbtest.a"
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: success
+:filesize: 
+  bin/mruby: 498832
+  bin/mrbc: 429344
+  bin/mirb: 496688
+  lib/libmruby.a: 526828
+  lib/libmruby_core.a: 451312
+  test/mrbtest: 638080
+:repository: mruby/mruby
+:commit: bb63eb0
+:ball_id: mruby-mruby-bb63eb0
+:hostname: centos64bit
+:env: 
+  :gcc: 
+    :stdout: |-
+      gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+      Copyright (C) 2010 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for x86_64-redhat-linux-gnu
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.4.1
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2008 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
