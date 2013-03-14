@@ -248,6 +248,25 @@ Date:   Wed Mar 13 10:22:59 2013 +0900
         
         
         <tr style="background-color:#ff9999">
+          <td><a href="#netbsd_arm_nb6">netbsd_arm_nb6</a></td>
+          <td>failed</td>
+          <td>failed</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          
+            <td style="text-align:right;"></td>
+          
+            <td style="text-align:right;"></td>
+          
+        </tr>
+      
+        
+        
+        <tr style="background-color:#ff9999">
           <td><a href="#openbsd32bit">openbsd32bit</a></td>
           <td>failed</td>
           <td>failed</td>
@@ -503,6 +522,14 @@ Written by Robert Corbett and Richard Stallman.
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd_arm_nb6</td>
+          <td><b>gcc</b><br/><pre></pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre></pre></td></tr>
+        <tr><td><b>bison</b><br/><pre></pre></td></tr>
       
         
         <tr>
@@ -920,6 +947,68 @@ rake aborted!
 Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-time/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include" -MMD -o "/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/src/error.c"]</textarea></td>
           <td><textarea>/home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/src/error.c: In function 'mrb_sys_fail':
 /home/mruby/mruby-test-tool/tmp/20130314130819-20890-build/mruby-mruby-00cf5e3/src/error.c:412: error: implicit declaration of function 'mrb_str_new2'</textarea></td>
+        </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd_arm_nb6">netbsd_arm_nb6</a> <span style="font-size:small;"><a href="#top">#top</a></span></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>(in /home/mruby/arm-nb6/mruby-mruby-00cf5e3)
+CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+CC    src/range.c -> build/host/src/range.o
+CC    src/array.c -> build/host/src/array.o
+CC    src/numeric.c -> build/host/src/numeric.o
+CC    src/pool.c -> build/host/src/pool.o
+CC    src/compar.c -> build/host/src/compar.o
+CC    src/crc.c -> build/host/src/crc.o
+CC    src/proc.c -> build/host/src/proc.o
+CC    src/state.c -> build/host/src/state.o
+CC    src/print.c -> build/host/src/print.o
+CC    src/vm.c -> build/host/src/vm.o
+CC    src/class.c -> build/host/src/class.o
+CC    src/load.c -> build/host/src/load.o
+CC    src/codegen.c -> build/host/src/codegen.o
+CC    src/symbol.c -> build/host/src/symbol.o
+CC    src/etc.c -> build/host/src/etc.o
+CC    src/gc.c -> build/host/src/gc.o
+CC    src/init.c -> build/host/src/init.o
+CC    src/dump.c -> build/host/src/dump.o
+CC    src/kernel.c -> build/host/src/kernel.o
+CC    src/hash.c -> build/host/src/hash.o
+CC    src/string.c -> build/host/src/string.o
+CC    src/variable.c -> build/host/src/variable.o
+CC    src/object.c -> build/host/src/object.o
+CC    src/enum.c -> build/host/src/enum.o
+CC    src/error.c -> build/host/src/error.o
+rake aborted!
+Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-time/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include" -MMD -o "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c"]
+
+</textarea></td>
+          <td><textarea>/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c: In function 'mrb_sys_fail':
+/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c:412:7: error: implicit declaration of function 'mrb_str_new2'
+</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>(in /home/mruby/arm-nb6/mruby-mruby-00cf5e3)
+CC    test/driver.c -> build/host/test/driver.o
+CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+CC    src/error.c -> build/host/src/error.o
+rake aborted!
+Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-time/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include" -MMD -o "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c"]
+
+</textarea></td>
+          <td><textarea>/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c: In function 'mrb_sys_fail':
+/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c:412:7: error: implicit declaration of function 'mrb_str_new2'
+</textarea></td>
         </tr>
         
       </table>
