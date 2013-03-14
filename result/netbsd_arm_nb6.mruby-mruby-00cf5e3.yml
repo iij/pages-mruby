@@ -1,0 +1,129 @@
+---
+:date: ''
+:hostname: netbsd_arm_nb6
+:id: mruby-mruby-00cf5e3
+:ball_id: mruby-mruby-00cf5e3
+:zipball_url: https://github.com/mruby/mruby/zipball/00cf5e3
+:repository: mruby/mruby
+:commit: 00cf5e3
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! '(in /home/mruby/arm-nb6/mruby-mruby-00cf5e3)
+
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+
+    CC    src/range.c -> build/host/src/range.o
+
+    CC    src/array.c -> build/host/src/array.o
+
+    CC    src/numeric.c -> build/host/src/numeric.o
+
+    CC    src/pool.c -> build/host/src/pool.o
+
+    CC    src/compar.c -> build/host/src/compar.o
+
+    CC    src/crc.c -> build/host/src/crc.o
+
+    CC    src/proc.c -> build/host/src/proc.o
+
+    CC    src/state.c -> build/host/src/state.o
+
+    CC    src/print.c -> build/host/src/print.o
+
+    CC    src/vm.c -> build/host/src/vm.o
+
+    CC    src/class.c -> build/host/src/class.o
+
+    CC    src/load.c -> build/host/src/load.o
+
+    CC    src/codegen.c -> build/host/src/codegen.o
+
+    CC    src/symbol.c -> build/host/src/symbol.o
+
+    CC    src/etc.c -> build/host/src/etc.o
+
+    CC    src/gc.c -> build/host/src/gc.o
+
+    CC    src/init.c -> build/host/src/init.o
+
+    CC    src/dump.c -> build/host/src/dump.o
+
+    CC    src/kernel.c -> build/host/src/kernel.o
+
+    CC    src/hash.c -> build/host/src/hash.o
+
+    CC    src/string.c -> build/host/src/string.o
+
+    CC    src/variable.c -> build/host/src/variable.o
+
+    CC    src/object.c -> build/host/src/object.o
+
+    CC    src/enum.c -> build/host/src/enum.o
+
+    CC    src/error.c -> build/host/src/error.o
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-time/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include"
+    -MMD -o "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c"]
+
+
+'
+  :stderr: ! '/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c: In function ''mrb_sys_fail'':
+
+    /home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c:412:7: error: implicit declaration
+    of function ''mrb_str_new2''
+
+'
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/arm-nb6/mruby-mruby-00cf5e3)
+
+    CC    test/driver.c -> build/host/test/driver.o
+
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+
+    CC    src/error.c -> build/host/src/error.o
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-time/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include"
+    -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/home/mruby/arm-nb6/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include"
+    -MMD -o "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c"]
+
+
+'
+  :stderr: ! '/home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c: In function ''mrb_sys_fail'':
+
+    /home/mruby/arm-nb6/mruby-mruby-00cf5e3/src/error.c:412:7: error: implicit declaration
+    of function ''mrb_str_new2''
+
+'
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
+:filesize: {}
