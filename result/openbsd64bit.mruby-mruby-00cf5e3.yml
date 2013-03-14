@@ -1,0 +1,144 @@
+---
+:date: 2013-03-14 13:08:35.150205188 +09:00
+:id: mruby-mruby-00cf5e3
+:zipball_url: https://github.com/mruby/mruby/zipball/00cf5e3
+:make:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3)
+
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+
+    CC    src/array.c -> build/host/src/array.o
+
+    CC    src/class.c -> build/host/src/class.o
+
+    CC    src/codegen.c -> build/host/src/codegen.o
+
+    CC    src/compar.c -> build/host/src/compar.o
+
+    CC    src/crc.c -> build/host/src/crc.o
+
+    CC    src/dump.c -> build/host/src/dump.o
+
+    CC    src/enum.c -> build/host/src/enum.o
+
+    CC    src/error.c -> build/host/src/error.o
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-math/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-time/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include"
+    -MMD -o "/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/build/host/src/error.o"
+    -c "/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c"]'
+  :stderr: ! '/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:
+    In function ''get_syms_block_size'':
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:285:
+    warning: passing argument 1 of ''str_dump_len'' discards qualifiers from pointer
+    target type
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:
+    In function ''write_syms_block'':
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:427:
+    warning: passing argument 1 of ''str_dump_len'' discards qualifiers from pointer
+    target type
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:435:
+    warning: passing argument 1 of ''str_dump'' discards qualifiers from pointer target
+    type
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:
+    In function ''write_irep_record'':
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/dump.c:598:
+    warning: ''crc'' may be used uninitialized in this function
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c:
+    In function ''mrb_sys_fail'':
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c:412:
+    error: implicit declaration of function ''mrb_str_new2'''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3)
+
+    CC    test/driver.c -> build/host/test/driver.o
+
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+
+    CC    src/error.c -> build/host/src/error.o
+
+    rake aborted!
+
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-math/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-time/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include"
+    -I"/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include"
+    -MMD -o "/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/build/host/src/error.o"
+    -c "/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c"]'
+  :stderr: ! '/home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c:
+    In function ''mrb_sys_fail'':
+
+    /home/mruby/mruby-test-tool/tmp/20130314130837-6359-build/mruby-mruby-00cf5e3/src/error.c:412:
+    error: implicit declaration of function ''mrb_str_new2'''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:filesize: {}
+:repository: mruby/mruby
+:commit: 00cf5e3
+:ball_id: mruby-mruby-00cf5e3
+:hostname: openbsd64bit
+:env:
+  :gcc:
+    :stdout: ! "gcc (GCC) 4.2.1 20070719 \nCopyright (C) 2007 Free Software Foundation,
+      Inc.\nThis is free software; see the source for copying conditions.  There is
+      NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for x86_64-unknown-openbsd5.1
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2006 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison

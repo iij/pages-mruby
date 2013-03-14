@@ -1,0 +1,88 @@
+--- 
+:date: 2013-03-14 13:08:43.870763 +09:00
+:id: mruby-mruby-00cf5e3
+:zipball_url: https://github.com/mruby/mruby/zipball/00cf5e3
+:make: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3)
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+    CC    src/array.c -> build/host/src/array.o
+    CC    src/class.c -> build/host/src/class.o
+    CC    src/codegen.c -> build/host/src/codegen.o
+    CC    src/compar.c -> build/host/src/compar.o
+    CC    src/crc.c -> build/host/src/crc.o
+    CC    src/dump.c -> build/host/src/dump.o
+    CC    src/enum.c -> build/host/src/enum.o
+    CC    src/error.c -> build/host/src/error.o
+    rake aborted!
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-time/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include" -MMD -o "/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c"]
+  :stderr: |-
+    /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c: In function 'mrb_sys_fail':
+    /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c:412: error: implicit declaration of function 'mrb_str_new2'
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: |-
+    (in /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3)
+    CC    test/driver.c -> build/host/test/driver.o
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+    CC    src/error.c -> build/host/src/error.o
+    rake aborted!
+    Command Failed: ["gcc" -g -O3 -Wall -Werror-implicit-function-declaration -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-math/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-time/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-struct/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-sprintf/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-string-ext/include" -I"/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/mrbgems/mruby-numeric-ext/include" -MMD -o "/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/build/host/src/error.o" -c "/Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c"]
+  :stderr: |-
+    /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c: In function 'mrb_sys_fail':
+    /Users/mruby/mruby-test-tool/tmp/20130314130847-7448-build/mruby-mruby-00cf5e3/src/error.c:412: error: implicit declaration of function 'mrb_str_new2'
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:filesize: {}
+
+:repository: mruby/mruby
+:commit: 00cf5e3
+:ball_id: mruby-mruby-00cf5e3
+:hostname: mac-ppc
+:env: 
+  :gcc: 
+    :stdout: |-
+      powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+      Copyright (C) 2005 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for powerpc-apple-darwin9.0
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.3
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2006 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison
