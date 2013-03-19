@@ -1,0 +1,55 @@
+---
+:date: ''
+:hostname: netbsd_arm_nb6
+:id: mruby-mruby-b79a411
+:ball_id: mruby-mruby-b79a411
+:zipball_url: https://github.com/mruby/mruby/zipball/b79a411
+:repository: mruby/mruby
+:commit: b79a411
+:env:
+  :gcc:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ''
+    :stderr: ''
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison
+:make:
+  :stdout: ! '(in /home/mruby/arm-nb6/mruby-mruby-b79a411)
+
+    rake aborted!
+
+    Can''t find /home/mruby/arm-nb6/mruby-mruby-b79a411/mrbgems/mruby-enum-ext/mrbgem.rake
+
+    ./Rakefile:14:in `load''
+
+'
+  :stderr: ''
+  :status: failed
+:make_test:
+  :stdout: ! '(in /home/mruby/arm-nb6/mruby-mruby-b79a411)
+
+    rake aborted!
+
+    Can''t find /home/mruby/arm-nb6/mruby-mruby-b79a411/mrbgems/mruby-enum-ext/mrbgem.rake
+
+    ./Rakefile:14:in `load''
+
+'
+  :stderr: ''
+  :status: failed
+  :mrubytest_rb: ''
+  :mrubytest_mrb: ''
+:filesize: {}
