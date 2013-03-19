@@ -1,0 +1,237 @@
+--- 
+:date: 2013-03-19 23:14:01.455887 +09:00
+:id: mruby-mruby-4454576
+:zipball_url: https://github.com/mruby/mruby/zipball/4454576
+:make: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130319231405-1772-build/mruby-mruby-4454576)
+    CC    tools/mruby/mruby.c -> build/host/tools/mruby/mruby.o
+    CC    src/etc.c -> build/host/src/etc.o
+    CC    src/crc.c -> build/host/src/crc.o
+    CC    src/numeric.c -> build/host/src/numeric.o
+    CC    src/class.c -> build/host/src/class.o
+    CC    src/range.c -> build/host/src/range.o
+    CC    src/codegen.c -> build/host/src/codegen.o
+    CC    src/compar.c -> build/host/src/compar.o
+    CC    src/variable.c -> build/host/src/variable.o
+    CC    src/state.c -> build/host/src/state.o
+    CC    src/proc.c -> build/host/src/proc.o
+    CC    src/load.c -> build/host/src/load.o
+    CC    src/gc.c -> build/host/src/gc.o
+    CC    src/symbol.c -> build/host/src/symbol.o
+    CC    src/error.c -> build/host/src/error.o
+    CC    src/hash.c -> build/host/src/hash.o
+    CC    src/enum.c -> build/host/src/enum.o
+    CC    src/kernel.c -> build/host/src/kernel.o
+    CC    src/string.c -> build/host/src/string.o
+    CC    src/pool.c -> build/host/src/pool.o
+    CC    src/dump.c -> build/host/src/dump.o
+    CC    src/print.c -> build/host/src/print.o
+    CC    src/vm.c -> build/host/src/vm.o
+    CC    src/array.c -> build/host/src/array.o
+    CC    src/init.c -> build/host/src/init.o
+    CC    src/object.c -> build/host/src/object.o
+    YACC  src/parse.y -> build/host/src/y.tab.c
+    CC    build/host/src/y.tab.c -> build/host/src/y.tab.o
+    CC    tools/mrbc/mrbc.c -> build/host/tools/mrbc/mrbc.o
+    AR    build/host/lib/libmruby_core.a 
+    LD    build/host/bin/mrbc 
+    GEN   *.rb -> build/host/mrblib/mrblib.c
+          MRBC mrblib/range.rb 
+          MRBC mrblib/class.rb 
+          MRBC mrblib/compar.rb 
+          MRBC mrblib/print.rb 
+          MRBC mrblib/numeric.rb 
+          MRBC mrblib/array.rb 
+          MRBC mrblib/hash.rb 
+          MRBC mrblib/string.rb 
+          MRBC mrblib/error.rb 
+          MRBC mrblib/enum.rb 
+          MRBC mrblib/kernel.rb 
+    CC    build/host/mrblib/mrblib.c -> build/host/mrblib/mrblib.o
+    CC    mrbgems/mruby-math/src/math.c -> build/host/mrbgems/mruby-math/src/math.o
+    CC    build/host/mrbgems/mruby-math/gem_init.c -> build/host/mrbgems/mruby-math/gem_init.o
+    CC    mrbgems/mruby-time/src/time.c -> build/host/mrbgems/mruby-time/src/time.o
+    CC    build/host/mrbgems/mruby-time/gem_init.c -> build/host/mrbgems/mruby-time/gem_init.o
+    CC    mrbgems/mruby-struct/src/struct.c -> build/host/mrbgems/mruby-struct/src/struct.o
+          MRBC mrbgems/mruby-struct/mrblib/struct.rb 
+    CC    build/host/mrbgems/mruby-struct/gem_init.c -> build/host/mrbgems/mruby-struct/gem_init.o
+    CC    mrbgems/mruby-sprintf/src/sprintf.c -> build/host/mrbgems/mruby-sprintf/src/sprintf.o
+    CC    mrbgems/mruby-sprintf/src/kernel.c -> build/host/mrbgems/mruby-sprintf/src/kernel.o
+    CC    build/host/mrbgems/mruby-sprintf/gem_init.c -> build/host/mrbgems/mruby-sprintf/gem_init.o
+          MRBC mrbgems/mruby-enum-ext/mrblib/enum.rb 
+    CC    build/host/mrbgems/mruby-enum-ext/gem_init.c -> build/host/mrbgems/mruby-enum-ext/gem_init.o
+    CC    mrbgems/mruby-string-ext/src/string.c -> build/host/mrbgems/mruby-string-ext/src/string.o
+          MRBC mrbgems/mruby-string-ext/mrblib/string.rb 
+    CC    build/host/mrbgems/mruby-string-ext/gem_init.c -> build/host/mrbgems/mruby-string-ext/gem_init.o
+    CC    mrbgems/mruby-numeric-ext/src/numeric_ext.c -> build/host/mrbgems/mruby-numeric-ext/src/numeric_ext.o
+    CC    build/host/mrbgems/mruby-numeric-ext/gem_init.c -> build/host/mrbgems/mruby-numeric-ext/gem_init.o
+    CC    mrbgems/mruby-array-ext/src/array.c -> build/host/mrbgems/mruby-array-ext/src/array.o
+    CC    build/host/mrbgems/mruby-array-ext/gem_init.c -> build/host/mrbgems/mruby-array-ext/gem_init.o
+    CC    build/host/mrbgems/gem_init.c -> build/host/mrbgems/gem_init.o
+    AR    build/host/lib/libmruby.a 
+    LD    build/host/bin/mruby 
+    CC    tools/mirb/mirb.c -> build/host/tools/mirb/mirb.o
+    LD    build/host/bin/mirb 
+    
+    Build summary:
+    
+    ================================================
+          Config Name: host
+     Output Directory: build/host
+             Binaries: mruby, mrbc, mirb
+        Included Gems:
+                 mruby-math
+                 mruby-time
+                 mruby-struct
+                 mruby-sprintf
+                 mruby-enum-ext
+                 mruby-string-ext
+                 mruby-numeric-ext
+                 mruby-array-ext
+    ================================================
+  :stderr: |-
+    ar: creating /home/mruby/mruby-test-tool/tmp/20130319231405-1772-build/mruby-mruby-4454576/build/host/lib/libmruby_core.a
+    ar: creating /home/mruby/mruby-test-tool/tmp/20130319231405-1772-build/mruby-mruby-4454576/build/host/lib/libmruby.a
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: success
+:make_test: 
+  :stdout: |-
+    (in /home/mruby/mruby-test-tool/tmp/20130319231405-1772-build/mruby-mruby-4454576)
+    CC    test/driver.c -> build/host/test/driver.o
+    GEN   *.rb -> build/host/test/mrbtest.c
+          MRBC test/assert.rb 
+          MRBC test/t/bs_block.rb 
+          MRBC test/t/range.rb 
+          MRBC test/t/proc.rb 
+          MRBC test/t/runtimeerror.rb 
+          MRBC test/t/class.rb 
+          MRBC test/t/object.rb 
+          MRBC test/t/argumenterror.rb 
+          MRBC test/t/false.rb 
+          MRBC test/t/gc.rb 
+          MRBC test/t/localjumperror.rb 
+          MRBC test/t/numeric.rb 
+          MRBC test/t/array.rb 
+          MRBC test/t/enumerable.rb 
+          MRBC test/t/basicobject.rb 
+          MRBC test/t/hash.rb 
+          MRBC test/t/module.rb 
+          MRBC test/t/syntax.rb 
+          MRBC test/t/symbol.rb 
+          MRBC test/t/true.rb 
+          MRBC test/t/regexperror.rb 
+          MRBC test/t/float.rb 
+          MRBC test/t/comparable.rb 
+          MRBC test/t/nomethoderror.rb 
+          MRBC test/t/bs_literal.rb 
+          MRBC test/t/literals.rb 
+          MRBC test/t/typeerror.rb 
+          MRBC test/t/string.rb 
+          MRBC test/t/nameerror.rb 
+          MRBC test/t/indexerror.rb 
+          MRBC test/t/standarderror.rb 
+          MRBC test/t/rangeerror.rb 
+          MRBC test/t/integer.rb 
+          MRBC test/t/exception.rb 
+          MRBC test/t/nil.rb 
+          MRBC test/t/kernel.rb 
+    CC    build/host/test/mrbtest.c -> build/host/test/mrbtest.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-math/test/math.rb 
+    CC    build/host/mrbgems/mruby-math/gem_test.c -> build/host/mrbgems/mruby-math/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-time/test/time.rb 
+    CC    build/host/mrbgems/mruby-time/gem_test.c -> build/host/mrbgems/mruby-time/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-struct/test/struct.rb 
+    CC    build/host/mrbgems/mruby-struct/gem_test.c -> build/host/mrbgems/mruby-struct/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-sprintf/test/sprintf.rb 
+    CC    build/host/mrbgems/mruby-sprintf/gem_test.c -> build/host/mrbgems/mruby-sprintf/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-enum-ext/test/enum.rb 
+    CC    build/host/mrbgems/mruby-enum-ext/gem_test.c -> build/host/mrbgems/mruby-enum-ext/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-string-ext/test/string.rb 
+    CC    build/host/mrbgems/mruby-string-ext/gem_test.c -> build/host/mrbgems/mruby-string-ext/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-numeric-ext/test/numeric.rb 
+    CC    build/host/mrbgems/mruby-numeric-ext/gem_test.c -> build/host/mrbgems/mruby-numeric-ext/gem_test.o
+          MRBC test/assert.rb 
+          MRBC mrbgems/mruby-array-ext/test/array.rb 
+    CC    build/host/mrbgems/mruby-array-ext/gem_test.c -> build/host/mrbgems/mruby-array-ext/gem_test.o
+    AR    build/host/test/mrbtest.a 
+    LD    build/host/test/mrbtest 
+    >>> Test host <<<
+    mrbtest - Embeddable Ruby Test
+    
+    This is a very early version, please test and report errors.
+    Thanks :)
+    
+    ...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+    Total: 539
+       OK: 539
+       KO: 0
+    Crash: 0
+     Time: 0.780738 seconds
+  :stderr: "ar: creating /home/mruby/mruby-test-tool/tmp/20130319231405-1772-build/mruby-mruby-4454576/build/host/test/mrbtest.a"
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: success
+:filesize: 
+  bin/mruby: 452592
+  bin/mrbc: 384952
+  bin/mirb: 450988
+  lib/libmruby.a: 480256
+  lib/libmruby_core.a: 404688
+  test/mrbtest: 620444
+:repository: mruby/mruby
+:commit: "4454576"
+:ball_id: mruby-mruby-4454576
+:hostname: centos32bit
+:env: 
+  :gcc: 
+    :stdout: |-
+      gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+      Copyright (C) 2010 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for i386-redhat-linux-gnu
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.4.1
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2008 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :ruby: ruby
+  :gcc: gcc
+  :make: make
+  :bison: bison

@@ -1,0 +1,80 @@
+---
+:date: 2013-03-19 22:17:03.199237029 +09:00
+:id: mruby-mruby-b79a411
+:zipball_url: https://github.com/mruby/mruby/zipball/b79a411
+:make:
+  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20130319221706-65161-build/mruby-mruby-b79a411)
+
+    rake aborted!
+
+    Can''t find /usr/home/mruby/mruby-test-tool/tmp/20130319221706-65161-build/mruby-mruby-b79a411/mrbgems/mruby-enum-ext/mrbgem.rake
+
+    Rakefile:14:in `load'''
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:make_test:
+  :stdout: ! '(in /usr/home/mruby/mruby-test-tool/tmp/20130319221706-65161-build/mruby-mruby-b79a411)
+
+    rake aborted!
+
+    Can''t find /usr/home/mruby/mruby-test-tool/tmp/20130319221706-65161-build/mruby-mruby-b79a411/mrbgems/mruby-enum-ext/mrbgem.rake
+
+    Rakefile:14:in `load'''
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: failed
+:filesize: {}
+:repository: mruby/mruby
+:commit: b79a411
+:ball_id: mruby-mruby-b79a411
+:hostname: freebsd32bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+
+      Copyright (C) 2007 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for i386-portbld-freebsd9.0
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.4.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2010 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :ruby: ruby
+  :gcc: gcc
+  :make: gmake
+  :bison: bison
